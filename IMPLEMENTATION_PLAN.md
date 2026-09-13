@@ -556,7 +556,8 @@ Dev dependencies: `tsx`, `zod`, `@material/material-color-utilities`, `fast-chec
   - Route 24 Charmander is a Yellow-only gift.
   - Each game has 3 Game Corner Pokémon in each of its left and middle windows.
   - Mew is event-only. Alakazam, Machamp, Golem and Gengar are unobtainable without trading.
-- **Report** (`reports/rby.md`): obtainable counts per game, added or removed encounters per location versus the previous build, and all warnings.
+- **Report** (`scripts/data/reports/rby.md`, written by `core/report.ts` next to the data files, committed): obtainable counts per game with "max in one save" and counts per unobtainable reason, the unobtainable species with their reasons, added or removed encounters per location versus the previous data file, and all warnings and notes. It has no timestamp, so it only changes when the data does.
+- **Implementation** (`core/validate.ts`, run by `build.ts` after assembly; its errors stop the write like assembly errors): strict zod schemas for `rby.json` and `rby.pokedex.json` (unknown keys are errors, at most 25 schema messages), then cross-references (registry games, known methods, species, exclusive groups, evolution and learnset species, duplicate location ids), then `buildChecklist` for every game. A species whose reason is the `not-in-game` fallback is an error.
 
 ### 7.9 Output format — `public/data/<versionGroup>.json`
 One file per version group, written as compact JSON (the example below is pretty-printed for reading). The first `rby.json` build (without shop, trade and static overrides) is 244 KB, 21 KB gzipped; `rby.pokedex.json` is 203 KB, 27 KB gzipped. It's loaded lazily, only when one of its games is opened.
@@ -904,6 +905,13 @@ Algorithm:
    - `not-in-game`: the fallback.
 
 Marking one exclusive-group member as caught **doesn't block** the others. They show a hint: "you chose Kabuto".
+
+Implementation notes (2026-09-13):
+- `maxInOneSave(data, game, features, entries?)` reruns source collection once per group choice, dropping the other members' group encounters, and subtracts the smallest loss per group. Groups are assumed independent. rby: Red/Blue lose 9 (starter 6, fossil 2, Dojo 1), Yellow loses 3.
+- A trade is an `encounter` source with `fromDex`; its part is the later of the location part and the given species' earliest part. Parts are relaxed to a fixed point, so a cheaper source found later lowers dependent parts.
+- `exclusiveGroupIds` come from group encounter sources and are inherited through evolution sources.
+- Reasons are checked in this order: `event-only`, `trade-evolution` (a `requiresTrade` edge from an obtainable species; detail names it), `other-version` (detail lists the games), then the `not-in-game` fallback. `requires-other-game` is never inferred yet: it needs data that says which species come from another game (FireRed/LeafGreen).
+- Breeding: the offspring is the family root. A partner is Ditto (when obtainable) or the parent species itself when its `genderRatio` is strictly between 0 and 1. Offspring with baby-item requirements aren't bred until items are modelled as obtainable.
 
 ---
 

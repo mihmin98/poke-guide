@@ -22,7 +22,10 @@ import {
 import { PageCache, PageSource, loadFixtures, type CachedPage, type FetchMode } from './core/cache';
 import { MediaWikiClient } from './core/mediawiki-client';
 import { fixturesDir, rawCacheDir, repoRoot } from './core/paths';
+import type { VersionGroupData } from '../../src/app/core/domain/models';
+import { renderReport } from './core/report';
 import { NATIONAL_DEX_LIST_PAGE } from './core/species-list';
+import { validateVersionGroup } from './core/validate';
 import { VERSION_GROUP_CONFIGS } from './version-groups';
 import type { VersionGroupConfig } from './version-groups/types';
 
@@ -87,7 +90,12 @@ async function buildGroup(
       categoryMembers,
     },
   );
+  const validation = validateVersionGroup(data, pokedex);
+  issues.push(...validation.issues);
   printIssues(issues);
+  for (const { game, entries, maxInOneSave } of validation.checklists) {
+    console.log(`${game}: ${entries.filter((e) => e.obtainable).length}/${entries.length} obtainable, ${maxInOneSave} max in one save`);
+  }
 
   const errors = issues.filter((i) => i.level === 'error').length;
   const warnings = issues.filter((i) => i.level === 'warning').length;
@@ -105,6 +113,7 @@ async function buildGroup(
 
   const dataFile = join(repoRoot(), 'public', getVersionGroup(config.id).dataFile);
   const pokedexFile = dataFile.replace(/\.json$/, '.pokedex.json');
+  const previous = existsSync(dataFile) ? (JSON.parse(readFileSync(dataFile, 'utf8')) as VersionGroupData) : null;
   mkdirSync(dirname(dataFile), { recursive: true });
   for (const [file, content] of [
     [dataFile, data],
@@ -117,6 +126,10 @@ async function buildGroup(
       `Wrote ${relative(repoRoot(), file)} (${Math.round(Buffer.byteLength(json) / 1024)} KB)`,
     );
   }
+  const reportFile = join(repoRoot(), 'scripts', 'data', 'reports', `${config.id}.md`);
+  mkdirSync(dirname(reportFile), { recursive: true });
+  writeFileSync(reportFile, renderReport({ data, previous, issues, checklists: validation.checklists }));
+  console.log(`Wrote ${relative(repoRoot(), reportFile)}`);
   return true;
 }
 
