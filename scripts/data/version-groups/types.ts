@@ -14,6 +14,8 @@ import type {
 import type { CatchTemplateAdapter } from '../adapters/catch-template-adapter';
 import type { CatchRateNoteClassification } from '../core/catch-rate-history';
 import type { ItemOverrides } from '../core/location-items';
+import type { TitleMatcher } from '../core/sections';
+import type { TradePageConfig } from '../core/trades';
 
 export interface LocationConfig {
   /** Region-scoped, stable id (`route-1` is Kanto Route 1). Reused by later games visiting the same place. */
@@ -54,6 +56,10 @@ export interface VersionGroupConfig {
   itemGameFlags: Record<string, GameId[]>;
   /** Item spelling variants → the name used in the data (`Elixer` → `Elixir`). */
   itemAliases: Record<string, string>;
+  /** Prize shops on location pages (plan §7.7); their rows become `prize` encounters at that location. */
+  prizeShops?: { locationId: string; sectionPath: TitleMatcher[]; requires: string[] }[];
+  /** In-game trade tables, diffed against the location tables' trade rows (plan §7.7). */
+  tradePage?: TradePageConfig;
   overrides: {
     /** Authoritative evolution graph; parsed evolution boxes are only diffed against it. */
     evolutions: readonly EvolutionEdge[];

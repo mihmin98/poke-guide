@@ -34,6 +34,8 @@ import {
 } from './location-items';
 import { wikiUrl } from './mediawiki-client';
 import { mergeRows } from './merge';
+import { parsePrizeShops } from './shop';
+import { diffTrades, parseTradeTables } from './trades';
 import { slugify } from './slug';
 import {
   NATIONAL_DEX_LIST_PAGE,
@@ -83,6 +85,7 @@ export function listPageTitles(config: VersionGroupConfig): string[] {
     CATCH_RATE_LIST_PAGE,
     ...config.locations.map((l) => l.page),
     ...walkthroughPartTitles(config).map((w) => w.page),
+    ...(config.tradePage ? [config.tradePage.page] : []),
   ];
 }
 
@@ -376,7 +379,16 @@ export function assembleVersionGroup(
     for (const found of itemWalk.issues) issue(found.level, found.message, found.page);
     if (location.itemsOnly && !itemWalk.found)
       issue('error', 'No "Items" section on an items-only location', location.page);
-    if (!walk.found && !location.expectEmpty) {
+    const shopConfig = config.prizeShops?.find((s) => s.locationId === location.id);
+    const shop = shopConfig
+      ? parsePrizeShops(page.wikitext, { pageTitle: location.page, games: config.games, ...shopConfig })
+      : null;
+    if (shop) {
+      for (const found of shop.issues) issue(found.level, found.message, found.page);
+      for (const note of shop.notes) issue('note', note, location.page);
+      if (!shop.found) issue('error', 'No prize shop section on a configured prize shop', location.page);
+    }
+    if (!walk.found && !shop?.found && !location.expectEmpty) {
       issue('warning', `No "Pokémon → ${config.generationHeading}" section`, location.page);
     }
     if (location.expectEmpty && walk.rows.length > 0) {
@@ -387,7 +399,7 @@ export function assembleVersionGroup(
       );
     }
     const rows: WalkedRow[] = [];
-    for (const walked of walk.rows) {
+    for (const walked of [...walk.rows, ...(shop?.rows ?? [])]) {
       const { row } = walked;
       const known = listByDex.get(row.dex);
       if (!known) {
@@ -436,6 +448,23 @@ export function assembleVersionGroup(
       items: itemWalk.items,
       itemNotes: itemWalk.notes,
     });
+  }
+
+  // In-game trades: the trade page is diffed against the location tables and adds nicknames (plan §7.7).
+  if (config.tradePage) {
+    const page = use(config.tradePage.page, mainSources);
+    if (page) {
+      const parsed = parseTradeTables(page.wikitext, {
+        pageTitle: config.tradePage.page,
+        generationHeading: config.generationHeading,
+        tables: config.tradePage.tables,
+      });
+      for (const found of parsed.issues) issue(found.level, found.message, found.page);
+      const idByPage = new Map(config.locations.map((l) => [l.page, l.id]));
+      const diff = diffTrades(locations, parsed.trades, idByPage);
+      for (const message of diff.errors) issue('error', message, config.tradePage.page);
+      for (const message of diff.warnings) issue('warning', message, config.tradePage.page);
+    }
   }
 
   // Items: overrides, prerequisites against unlocks, and the walkthrough cross-check (plan §7.13).

@@ -189,6 +189,34 @@ describe('rby data: items (plan §7.13)', () => {
   });
 });
 
+describe('rby data: prizes and trades (plan §7.7)', () => {
+  const encounters = (locationId: string) =>
+    data.locations.find((l) => l.id === locationId)!.subAreas.flatMap((s) => s.encounters);
+
+  it('has the Game Corner prizes per game, with coins, levels and the Coin Case', () => {
+    const prizes = encounters('celadon-game-corner').filter((e) => e.method === 'prize');
+    const forGame = (game: 'red' | 'blue' | 'yellow') =>
+      prizes.filter((e) => e.games[game]).map((e) => e.dex).sort((a, b) => a - b);
+    expect(forGame('red')).toEqual([30, 35, 63, 123, 137, 147]);
+    expect(forGame('blue')).toEqual([33, 35, 63, 127, 137, 147]);
+    expect(forGame('yellow')).toEqual([37, 40, 63, 123, 127, 137]);
+    const abra = prizes.find((e) => e.dex === 63)!;
+    expect(abra.requires).toEqual(['coin-case']);
+    expect(abra.games.red).toEqual([{ levels: { min: 9, max: 9 }, rate: { kind: 'coins', value: 180 } }]);
+    expect(abra.games.yellow).toEqual([{ levels: { min: 15, max: 15 }, rate: { kind: 'coins', value: 230 } }]);
+  });
+
+  it('names every in-game trade from the trade page', () => {
+    const trades = data.locations.flatMap((l) => l.subAreas.flatMap((s) => s.encounters)).filter((e) => e.method === 'trade');
+    expect(trades).toHaveLength(16);
+    expect(trades.every((e) => e.trade?.nickname)).toBe(true);
+    expect(encounters('route-2').filter((e) => e.method === 'trade').map((e) => e.trade)).toEqual([
+      { giveDex: 63, nickname: 'MARCEL' },
+      { giveDex: 35, nickname: 'MILES' },
+    ]);
+  });
+});
+
 describe('rby data: species (plan §7.11, §7.12)', () => {
   it('uses Generation I catch rates, including per-game values', () => {
     expect(species(1).catchRate).toBe(45);

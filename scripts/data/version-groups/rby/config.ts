@@ -27,6 +27,14 @@ export const rbyConfig: VersionGroupConfig = {
   learnsetLevelColumns: { RGB: ['red', 'blue'], RB: ['red', 'blue'], Y: ['yellow'] },
   itemGameFlags: { R: ['red'], B: ['blue'], Y: ['yellow'] },
   itemAliases: { Elixer: 'Elixir', 'Max Elixer': 'Max Elixir' },
+  prizeShops: [{ locationId: 'celadon-game-corner', sectionPath: [/^Prize corner/i, 'Generation I'], requires: ['coin-case'] }],
+  tradePage: {
+    page: 'In-game trade',
+    tables: [
+      { heading: 'Pokémon Red and Green (Japan), Pokémon Red and Blue (Western)', games: ['red', 'blue'] },
+      { heading: 'Pokémon Yellow', games: ['yellow'] },
+    ],
+  },
   overrides: {
     evolutions: RBY_EVOLUTIONS,
     catchRateNotes: RBY_CATCH_RATE_NOTES,
