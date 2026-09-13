@@ -144,11 +144,12 @@ What varies from page to page:
 | In-game trades | `In-game trade` → `===Generation I===` → wikitable rows with `{{rt|2|Kanto}}` / `{{MSP/3|063|Abra}}` | A reusable **trade-table parser**, keyed by generation section, with a curated fallback file |
 | Static encounters and legendaries (Snorlax ×2, Articuno, Zapdos, Moltres, Mewtwo, Power Plant Voltorb/Electrode) | Prose or infoboxes. For example, Victory Road says *"A Moltres appears on 2F on the first visit"*. Route 16's Gen I table has no Snorlax. | **Curated override file** that links to the source page |
 | Fossils (Helix/Dome choice at Mt. Moon, Old Amber at Pewter Museum, revived at Cinnabar Lab) | `Mt. Moon`, `Pewter Museum of Science`, `Cinnabar Lab`. The museum page only has a Gen IV table. | **Curated override** |
-| Starters (Red/Blue choice, Yellow Pikachu), Eevee (Celadon Condominiums), Hitmonlee/Hitmonchan (Fighting Dojo) | Various pages | Use the table when one exists (e.g. Yellow Bulbasaur in Cerulean City, Charmander on Route 24, Lapras in Silph Co., Magikarp purchase on Route 4). Otherwise use a **curated override**. |
+| Starters (Red/Blue choice, Yellow Pikachu), Eevee (Celadon Condominiums), Hitmonlee/Hitmonchan (Fighting Dojo) | Various pages. The starters are in Professor Oak's Laboratory's Gen I table (`First partner Pokémon` group), not Pallet Town's. | Use the table when one exists (e.g. Yellow Bulbasaur in Cerulean City, Charmander on Route 24, Lapras in Silph Co., Magikarp purchase on Route 4). Otherwise use a **curated override**. |
 | Species list and types | `List of Pokémon by National Pokédex number` → `{{ndex|0001|Bulbasaur|Grass|Poison}}` | Parse. **These are current types**, so apply the per-generation type history in §7.5. |
 | Evolutions | Each species page's evolution box | Parse, then check against a curated table per version group (§7.6) |
 | Sprites | `archives.bulbagarden.net` (e.g. `File:Spr_1y_025.png` for Yellow) | Download when building, per sprite set |
 | Visit order | `Walkthrough:Pokémon Red and Blue` and `Walkthrough:Pokémon Yellow` contents tables (16 parts plus post-game). Other games have `Walkthrough:Pokémon <Game>` pages. | Hand-written ordered config per game (§10), checked against the walkthrough part lists |
+| Items per location (§7.13) | Location page `Items` section (`==Items==`, or `===Items===` under `In the core series games`) → `{{Itemlist\|<sprite key>\|<where>\|R=yes\|B=yes\|Y=yes\|display=…}}`, 203 Gen I rows over 37 of the 57 original locations, plus Oak's Lab, Sea Cottage and Celadon Department Store. Gym leader TMs and the Department Store rooftop drink TMs are only on the walkthrough part pages, which use the same `{{itemlist}}` rows. | **Item-list parser** plus curated overrides for missing items and unstated prerequisites; walkthrough rows are a cross-check (warnings) |
 
 ### 3.5 Catch rates, base stats, shiny odds and IVs (confirmed available)
 | Data | Where | Format and caveats |
@@ -398,7 +399,9 @@ export interface VersionGroupConfig {
   catchAdapters: CatchTemplateAdapter[];       // [entry1Adapter]
   locationCategory: string;                    // 'Category:Red, Blue and Yellow locations'
   ignoredCategoryPages: string[];
-  locations: LocationConfig[];                 // page, id, kind, region, per-game {part, order}
+  locations: LocationConfig[];                 // page, id, kind, region, per-game {part, order}, itemsOnly? (§7.13)
+  itemGameFlags: Record<string, GameId[]>;     // { R: ['red'], B: ['blue'], Y: ['yellow'] } on {{Itemlist}} rows (§7.13)
+  itemAliases: Record<string, string>;         // spelling variants → item name ('Elixer' → 'Elixir')
   walkthroughs: Partial<Record<GameId, string>>; // 'Walkthrough:Pokémon Red and Blue'
   speciesRange: [number, number];              // [1, 151]
   extraParsers: ExtraParser[];                 // shop (prizes), trades
@@ -411,6 +414,7 @@ export interface VersionGroupConfig {
     unlocks: Unlock[];
     eventOnly: number[];
     patches: Patch[];
+    items: ItemOverrides;                      // add, requires, patch, requirementPhrases, choiceGroups (§7.13)
   };
   sprites: Partial<Record<GameId, { setId: string; filePattern: string }>>; // 'Spr_1y_{dex3}.png'
 }
@@ -511,8 +515,8 @@ Dev dependencies: `tsx`, `zod`, `@material/material-color-utilities`, `fast-chec
   - Power Plant Voltorb and Electrode that look like item balls.
   - **Not catchable, excluded:** the Pokémon Tower ghost Marowak and glitch Pokémon.
 - **Gifts and choices:**
-  - **Exclusive group** `rby-starter` = {Bulbasaur, Charmander, Squirtle}, Red/Blue only, Pallet Town.
-  - Yellow starter: Pikachu (from the table's "Special/Attacking Oak" row). Yellow gifts Bulbasaur (Cerulean City), Charmander (Route 24) and Squirtle (Vermilion City, after defeating Lt. Surge; confirmed in its Gen I table). All three come from the tables.
+  - **Exclusive group** `rby-starter` = {Bulbasaur, Charmander, Squirtle}, Red/Blue only, Professor Oak's Laboratory (its Gen I table's `First partner Pokémon` rows → method `starter`).
+  - Yellow starter: Pikachu, from the same table. Route 1's "Attacking Oak" row may then be a duplicate (open question 10). Yellow gifts Bulbasaur (Cerulean City), Charmander (Route 24) and Squirtle (Vermilion City, after defeating Lt. Surge; confirmed in its Gen I table). All three come from the tables.
   - **Exclusive group** `mt-moon-fossil` = {Omanyte, Kabuto}. Aerodactyl comes from Old Amber (Pewter Museum). Cinnabar Lab's Gen I table lists the revivals (method column `Helix`/`Dome`/`Amber` → `fossil`), so the encounters are parsed there. The exclusive group, and notes on where each fossil is found, come from overrides.
   - **Exclusive group** `fighting-dojo` = {Hitmonlee, Hitmonchan}.
   - Eevee: Celadon Condominiums. Lapras: Silph Co. (from its table). Magikarp purchase on Route 4 (from its table).
@@ -661,10 +665,67 @@ A Gold/Silver/Crystal slot would look like `{ "levels": {…}, "rate": {"kind":"
 - **Output:** `public/data/<versionGroup>.pokedex.json` (`PokedexData` in §8: `moves`, `learnsets` and `entries` keyed by National Dex number, plus `sources`). It is a separate file so the guide and checklist don't download about 4,000 learnset rows; it's loaded lazily by Pokémon detail.
 - **Golden assertions (§7.12):** Pikachu learns Thunder Wave at 9 in Red/Blue and 8 in Yellow, and Tail Whip only in Yellow; Gen I has 55 TM/HM moves and 164 learnable moves; Mew learns every TM/HM; Pikachu's Gen I base experience is 82.
 
-### 7.13 Items per area (requested 2026-09-13, not designed yet)
-- **Goal:** each location lists the items found there (visible and hidden, per game) and each item's **prerequisites**, e.g. Cut, Surf or Strength, a badge, an event, or a key item.
-- **To research first:** where Bulbapedia lists Gen I items per location (e.g. an `Items` section on location pages and its templates, or walkthroughs), how hidden items and requirements are marked, and whether Red/Blue and Yellow differ.
-- **To design:** the parser (a generic core plus per-generation adapters, like encounters), a prerequisite vocabulary (reusing the unlock ids from §7.7 where possible), the data model in §8, the output location (`rby.json` locations or a separate file), validation and golden assertions. Then the location page UI in §13.5.
+### 7.13 Items per area (requested and designed 2026-09-13)
+- **Goal:** each location lists the items found there for the selected game and each item's **prerequisites** beyond reaching the location in walkthrough order (Cut, Surf, Strength, a key item, an event).
+  - Included: visible pickups, hidden items, gifts, rewards, trainer drops, choices, and Game Corner coins. Fake item balls become a location note.
+  - Out of scope (user choice): Poké Mart stock and temporary items (Safari Balls).
+  - Items are informational and not tracked in profiles.
+- **Research (Red/Blue/Yellow):**
+  - **Where:** location pages have an `Items` section (`==Items==`, or `===Items===` under `In the core series games` / `In the games`). It holds `{{Itemlist|<sprite key>|<where>|<game flags>|display=…}}` rows between `{{itlisth}}` and `{{itlistfoot}}`. There are 203 Gen I rows (flags `R`/`B`/`Y`) over 37 of the 57 original locations; the other 20 only have rows for later games (checked).
+  - **Names:** the first parameter is a sprite key (`TM Water`, `Old Rod III`, `Card Key III`). The item name is `display=` when present (`{{TM|12|Water Gun}}`, `[[Potion]] ×2`, `10 {{OBP|Coin|Game Corner}}s`), otherwise the key. `{{Itemlist/N|item1|…|itemN|<where>|flags}}` exists but has no Gen I rows.
+  - **`<where>` text:** it can hold `*` bullets (one spot each, e.g. Mt. Moon `Potion ×2`), `''(hidden)''` (62 rows), a floor prefix (`B2F, …`), `{{sup/1|RBY}}` notes, and `(requires …)`.
+  - **Stated prerequisites:** only 18 rows have a `(requires …)`: Cut ×7, Surf ×4, Lift Key ×3, Strength, "Cut or Surf", "defeating the Jr. Trainer♂ or Cut", and a Cut/Chop Down mix.
+  - **Sub-headings:** sub-areas (`===Ship===`, `====2F====`), version splits (`===Pokémon Red and Blue===` / `===Pokémon Yellow===` in Cerulean Cave, where the flags already say it), or `===Fake items===` (Power Plant Voltorb ×6 and Electrode ×2, item `None`). `{{main|X#Items}}` points to another page.
+  - **Game differences:** Red/Blue and Yellow differ only in Cerulean Cave and one Viridian Forest spot (Antidote vs Potion).
+  - **Walkthroughs:** the part pages (`Walkthrough:Pokémon Red and Blue/Part N`, `Walkthrough:Pokémon Yellow/Part N`) use the same rows (212 for Red/Blue, 215 for Yellow). Compared with the location pages, they add the 8 Gym leader TMs (Gym pages are ignored locations) and the 3 Department Store rooftop drink TMs (a game-column wikitable on the store page). They disagree on Cerulean Cave in Yellow and on Route 15's Exp. All (the location page says Exp. Share).
+- **Parser (`core/items.ts`, a generic walker for the Gen I–IV `Itemlist` rows):**
+  1. Find the `Items` section (path `Items`, or `In the core series games` / `In the games` → `Items`). An `itemsOnly` location without one is an error; other locations without Gen I rows are fine.
+  2. Walk headings and `itemlist` / `itemlist/N` rows in order.
+     - Headings that name a game (matched through the registry) don't change the sub-area.
+     - `Fake items` rows become `itemNotes`.
+     - `{{main|…}}` becomes a note-level issue.
+  3. Games come from the flag keys through `config.itemGameFlags`. Rows without one of the version group's flags are skipped (this covers the Japanese `JR`/`JG` flags).
+  4. **Item name:** render `display` (`{{TM|28|Dig}}` → `TM28 Dig`, `{{HM|01|Cut}}` → `HM01 Cut`, coins → `Coins`) and strip `×N`. Without `display`, use the key minus a trailing roman sprite suffix. Spelling variants (`Elixer`) go through `config.itemAliases`, and the id is `slugify(name)`.
+  5. **Spots:** split `<where>` on top-level `*` bullets.
+     - Each spot gets `hidden` and a floor (`^(B?\d+F|Rooftop)`). The floor becomes the sub-area when no heading gives one.
+     - It keeps plain text without the `(requires …)`, `(hidden)` and other-game `{{sup}}` markers.
+     - Quantity: `×N` is split one per spot when N equals the spot count, or applied to a single spot; anything else is a warning.
+  6. **`obtain`:** ordered English rules on the plain text, matching the rest of the pipeline:
+     - `choice`: `choice between`.
+     - `drop`: `dropped by`.
+     - `reward`: `reward`, `after defeating`, `for defeating`.
+     - `gift`: `received from`, `obtained from`, `gift from`, or a leading `From`.
+     - Otherwise `pickup`.
+  7. **Prerequisites:** `(requires A or B)` / `(requires A and B)`.
+     - `{{m|Cut}}` → `cut`; `[[Lift Key]]` / `{{ka|Card Key}}` → `lift-key` / `card-key`.
+     - Any other term (e.g. `defeating {{tc|Camper|Jr. Trainer♂}}`) must be mapped in `overrides/items.ts` → `requirementPhrases`, or the build **fails**.
+     - "after …" / "for giving …" clauses stay in `where`.
+- **Prerequisite vocabulary:** prerequisite ids **are unlock ids** (§7.7). Encounters and items share one list, and the location page can say where each prerequisite is obtained.
+  - `Unlock` gains `kind: 'move' | 'key-item' | 'badge' | 'story'`. `move` is an HM field move and includes the badge needed to use it.
+  - Every id used by an item or encounter must exist in that game's `unlocks`, or the build fails.
+  - Red/Blue/Yellow adds at least `cut`, `strength`, `flash`, `lift-key`, `card-key`, `secret-key`, `silph-scope`, `ss-ticket` and `bicycle` to the §7.7 list.
+- **Overrides (`version-groups/rby/overrides/items.ts`):** each has a source page, a revid and a reason. An override that matches nothing is an error.
+  - `add`:
+    - Gym leader TMs on their city (`subArea: 'Gym'`, sourced from the walkthrough parts). Viridian Gym's TM27 gets `fromPart: 14`.
+    - The rooftop TMs on Celadon Department Store (`gift`, "give her a Fresh Water / Soda Pop / Lemonade").
+  - `requires`: unstated gates, matched by `(locationId, itemId, where substring)`, e.g. Silph Co. rooms behind Card Key doors. Curated from the walkthrough text and checked against the pret disassembly maps.
+  - `patch`: name and quantity corrections (Route 15 `Exp. Share` → `Exp. All` once confirmed; open question 17).
+  - `requirementPhrases`: non-standard `(requires …)` terms → unlock ids.
+  - `choiceGroups`: Mt. Moon Helix/Dome Fossil → the `mt-moon-fossil` exclusive group id.
+- **New locations** (§10): Professor Oak's Laboratory (Part 1), Sea Cottage (Part 5) and Celadon Department Store (Part 9).
+  - `LocationConfig.itemsOnly` skips the encounter walk and the "no Generation I section" warning (Sea Cottage, Celadon Department Store).
+  - Oak's Lab's Gen I table is walked and provides the starters.
+- **Walkthrough cross-check:** parse the `{{itemlist}}` rows of each game's walkthrough parts (34 pages, one batched request). Compare the multiset of `(part, itemId)` with the location items placed in that part (`fromPart` wins). Differences are **warnings**, triaged in `reports/rby.md`.
+- **Output:** in the main `rby.json` as `GameLocation.items` and `GameLocation.itemNotes` (§8). The location page needs them, and they're small (about 230 items, roughly 35 KB raw). Walkthrough pages used are added to `sources`.
+- **Golden assertions:**
+  - Route 12 `TM16 Pay Day` requires `surf`.
+  - Team Rocket Hideout `Silph Scope` is a `drop` requiring `lift-key`.
+  - Viridian Forest has an Antidote (Red/Blue only) and a Potion (Yellow only) at the same spot.
+  - Mt. Moon's `Potion ×2` is two spots, and the Helix/Dome Fossils are a `choice`.
+  - Route 25 `TM19 Seismic Toss` requires the Jr. Trainer♂ story unlock or `cut`.
+  - Celadon Game Corner has 14 coin entries.
+  - Power Plant has an item note for 6 Voltorb and 2 Electrode.
+  - Per-game item totals match the report.
 
 ---
 
@@ -730,6 +791,24 @@ export interface GameLocation {
   source: { title: string; revid: number };
   notes: string[];
   subAreas: SubArea[];
+  items: LocationItem[];                                // §7.13
+  itemNotes: string[];                                  // e.g. fake item balls
+}
+
+export type ItemObtainMethod = 'pickup' | 'gift' | 'reward' | 'drop' | 'choice';
+
+export interface LocationItem {
+  itemId: string; name: string;                         // name as spelled for the generation: "TM28 Dig", "Coins"
+  quantity: number;
+  games: GameId[];
+  obtain: ItemObtainMethod;
+  hidden?: true;
+  subArea: string | null;                               // heading or floor ("B4F")
+  where: string;                                        // plain text, without the parsed markers
+  requires?: string[][];                                // AND of alternatives, unlock ids: [['cut','surf']] = Cut or Surf
+  fromPart?: Partial<Record<GameId, number>>;           // reachable only later than the location's part
+  choiceGroupId?: string;                               // e.g. 'mt-moon-fossil'
+  source?: { title: string; revid: number };            // only on override items from another page
 }
 
 export type StatId = 'hp' | 'atk' | 'def' | 'spa' | 'spd' | 'spe' | 'spc';   // 'spc' = Gen I Special
@@ -754,7 +833,7 @@ export interface EvolutionEdge {
 }
 
 export interface ExclusiveGroup { id: string; label: string; games: GameId[]; members: number[] }
-export interface Unlock { id: string; label: string; locationId: string; part: number }
+export interface Unlock { id: string; label: string; kind: 'move' | 'key-item' | 'badge' | 'story'; locationId: string; part: number }
 export interface WalkthroughPart { part: number; title: string; region: RegionId }
 
 export interface VersionGroupData {
@@ -830,15 +909,15 @@ For Red, Blue and Yellow, Bulbapedia's walkthrough parts are **the same**:
 
 | Part | Walkthrough title | Locations in order (Bulbapedia page) | Pokémon-relevant notes |
 |---|---|---|---|
-| 1 | Introduction, Pallet Town | Pallet Town | R/B starter choice; Yellow Pikachu |
+| 1 | Introduction, Pallet Town | Pallet Town, Professor Oak's Laboratory ◆ | R/B starter choice; Yellow Pikachu |
 | 2 | Route 1, Viridian City, Route 2 (West) | Route 1, Viridian City, **Route 22** ★, Route 2 | ★ Route 22 is reachable here (the walkthrough lists it in Part 15). Listing it early helps catching. |
 | 3 | Viridian Forest, Pewter City | Viridian Forest, Pewter City | – |
 | 4 | Route 3, Mt. Moon, Route 4 | Route 3, Mt. Moon (1F/B1F/B2F), Route 4 | Fossil choice; Magikarp purchase |
-| 5 | Cerulean City, Route 24/25/5, Underground Path | Cerulean City, Route 24, Route 25, Route 5, Underground Path (Routes 5–6) | Yellow Bulbasaur and Charmander; trades |
+| 5 | Cerulean City, Route 24/25/5, Underground Path | Cerulean City, Route 24, Route 25, Sea Cottage ◆, Route 5, Underground Path (Routes 5–6) | Yellow Bulbasaur and Charmander; trades |
 | 6 | Route 6, Vermilion City, S.S. Anne | Route 6, Vermilion City, S.S. Anne | Old Rod; Yellow Squirtle |
 | 7 | Route 11, Diglett's Cave, Route 2 (East), Museum, Route 9, Route 10 (North) | Route 11, Diglett's Cave, *(Route 2 revisit)*, Pewter Museum of Science, Route 9, Route 10 | Old Amber; Route 2 trade (shown as a "revisit" link) |
 | 8 | Rock Tunnel, Lavender Town, Route 8, Underground Path, Route 7 | Rock Tunnel, Lavender Town, Route 8, Underground Path (Routes 7–8), Route 7 | – |
-| 9 | Celadon City, Rocket Hideout, Pokémon Tower | Celadon City, Celadon Condominiums, Celadon Game Corner, Team Rocket Hideout, Pokémon Tower | Eevee; prizes; Poké Flute |
+| 9 | Celadon City, Rocket Hideout, Pokémon Tower | Celadon City, Celadon Department Store ◆, Celadon Condominiums, Celadon Game Corner, Team Rocket Hideout, Pokémon Tower | Eevee; prizes; Poké Flute |
 | 10 | Saffron City, Silph Co. | Saffron City, Fighting Dojo, Silph Co. | Hitmon choice; Lapras |
 | 11 | Routes 16–18, Fuchsia City, Safari Zone | Route 16, Route 17, Route 18, Fuchsia City, Safari Zone (Center/Areas 1–3) | Snorlax #1; Good Rod; Surf |
 | 12 | Routes 12–15, 19–20, Seafoam | Route 12, Route 13, Route 14, Route 15, Route 19, Route 20, Seafoam Islands | Snorlax #2; Super Rod; Articuno |
@@ -848,8 +927,9 @@ For Red, Blue and Yellow, Bulbapedia's walkthrough parts are **the same**:
 | 16 | Indigo Plateau | Indigo Plateau | Old/Good Rod fishing in Lorelei's room (from its Gen I table; not empty as first assumed) |
 | 17 | Cerulean Cave (post-game) | Cerulean Cave (1F/2F/B1F) | Mewtwo |
 
-- Ignored category pages for Red/Blue/Yellow: `Kanto`, `Hometown`, `Player's house`, `Poké Mart`, `Pokémon Center`, `Pokémon Day Care`, `Professor Oak's Laboratory` (starters go on Pallet Town), `Celadon Department Store`, `Pokémon League Reception Gate`, `Sea Cottage`, `Category:Kanto Gyms`.
-- Locations with no Pokémon for the selected game are **hidden by default**. A setting shows them all.
+- ◆ **Added 2026-09-13** for items (§7.13, at the user's request): Professor Oak's Laboratory, Sea Cottage and Celadon Department Store. Oak's Lab is a normal location: its Gen I table holds the starters (Pallet Town's table only has fishing). Sea Cottage and the Department Store have no Gen I table and are marked `itemsOnly`.
+- Ignored category pages for Red/Blue/Yellow: `Kanto`, `Hometown`, `Player's house`, `Poké Mart`, `Pokémon Center`, `Pokémon Day Care`, `Pokémon League Reception Gate`, `Category:Kanto Gyms` (Gym leader TMs are item overrides on the city, §7.13).
+- Locations with neither Pokémon nor items for the selected game are **hidden by default**. A setting shows them all.
 - **Location ids are region-scoped and stable** (`route-1` is Kanto Route 1). They're reused by FireRed/LeafGreen and by Crystal's Kanto section. A future Johto location gets its own id, e.g. `route-29`.
 
 ---
@@ -1041,6 +1121,16 @@ Binary layout, before encoding (all integers little-endian):
 - Rows are sorted by rate descending, then Dex number (a setting switches to Dex order).
 - **Quick actions:** "Mark all here as caught" (with a confirmation step) and "Show only missing".
 - Previous/next location buttons in walkthrough order.
+- **Items section** (§7.13), after the Pokémon sections, for the current game only. It follows the sub-area tabs, and rows are in page order:
+  ```
+  [item icon] TM28 Dig        Gift     Received from the Team Rocket Grunt after defeating him
+  [item icon] Rare Candy      Hidden   One square south and three squares west of …        [Cut]
+  [item icon] Iron            Pickup   B4F, in the southwest area of the floor             [Lift Key]
+  ```
+  - Badges from `obtain` (Pickup · Gift · Reward · Drop · Choice) plus Hidden. Prerequisites are chips from the prerequisite vocabulary, and a "from Part N" chip appears when an item is only reachable later than the location's part (Viridian Gym TM).
+  - A "Show hidden items" toggle (on by default) and a "Choose one" chip for choice groups (Helix / Dome Fossil).
+  - Fake item balls (Power Plant Voltorb/Electrode) are a note that links to the encounter rows.
+  - Items are **not** tracked (no checkbox); the checklist stays Pokémon-only.
 
 ### 13.6 Checklist page (`/:game/checklist`)
 - **Summary card:**
@@ -1147,6 +1237,7 @@ Each phase ends with a working local state and its acceptance criteria met. **No
 - [ ] Species list, type history (Gen I entries), evolution override plus parsed diff.
 - [ ] Species-page parsing (catch rate, base stats with generation ranges), catch-rate history with classified notes, and a read-through of the `Stat` page.
 - [ ] Pokédex details (§7.12): infobox extras, Pokédex entries, per-generation learnset subpages and move data, written to `public/data/rby.pokedex.json`.
+- [ ] Items per area (§7.13): `Itemlist` parser, prerequisite vocabulary, items-only locations, item overrides (Gym TMs, rooftop TMs, unstated prerequisites, name patches), walkthrough cross-check, golden assertions.
 - [ ] Shop and trade parsers (plus the override fallback).
 - [ ] Overrides: statics, gifts and choices, unlocks, event-only, patches. **Check each against the Bulbapedia text** and record the revid.
 - [ ] Validation, golden assertions, `reports/rby.md`.
@@ -1163,7 +1254,7 @@ Each phase ends with a working local state and its acceptance criteria met. **No
 ### Phase 3 — Guide and location pages
 - [ ] Shared components: sprite, type badge, level range, rate, condition chips, method icon, catch toggle, progress ring.
 - [ ] Guide page: region and part sections, location cards, sprite strips, search, filters, hide completed.
-- [ ] Location page: sub-area tabs, method sections from the registry, encounter, trade and prize rows, exclusive group chips, source link, previous/next.
+- [ ] Location page: sub-area tabs, method sections from the registry, encounter, trade and prize rows, exclusive group chips, source link, previous/next, and the items section with kind badges and prerequisite chips (§7.13).
 - [ ] Desktop two-pane layout and mobile full-screen navigation with scroll restoration.
 - [ ] Game-mismatch banner.
 - **Accept when:** all locations render correctly for each game at 360 px and 1440 px, and toggles update the guide counts immediately.
