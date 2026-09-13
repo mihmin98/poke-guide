@@ -1003,6 +1003,7 @@ export const appConfig: ApplicationConfig = {
 - One key: `poke-guide/state`. `JSON.parse` and `setItem` are wrapped in try/catch (private mode, quota errors). Corrupted JSON is backed up to `poke-guide/state.corrupt.<timestamp>`, and a toast offers to copy the backup.
 - **Cross-tab sync** via the `storage` event.
 - `navigator.storage.persist()` is requested when the first profile is created.
+- Implementation (2026-09-13): `core/storage/storage.service.ts` **owns** the state signal and is the only writer. `update(fn)` debounces writes (300 ms), and the pending write is flushed on `visibilitychange` → hidden and on `pagehide`. `ProfileStore` and `SettingsStore` derive from `state` and call `update` (the `ProfileStore` sketch below shows its API, not where the state lives). State from a newer `schemaVersion` is backed up like corrupt JSON and never overwritten in place. `recovery` and `saveError` signals feed the UI, and without `localStorage` the state lives in memory. Types, defaults and field-by-field repair are in the framework-free `core/domain/persisted-state.ts`.
 
 **`ProfileStore`** (signals)
 ```ts
