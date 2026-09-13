@@ -1019,6 +1019,7 @@ setActive(id); setProgressPart(part); importProfile(p, mode: 'new' | 'replace', 
 - An `effect()` persists state, debounced to 300 ms, and flushes on `visibilitychange` to hidden and on `pagehide`.
 - **Undo:** the last 20 changes are kept in memory, and toggles show a snackbar "Marked Pidgey as caught · Undo".
 - Profiles whose `game` isn't in the registry (e.g. data from a newer app version) are kept but shown as "unsupported game".
+- Implementation (2026-09-13, `core/profiles/profile.store.ts`): catch methods take the URL game — `toggleCaught(game, dex, label?)`, `setCaught(game, dex, caught, label?)`, `bulkSetCaught(game, dexes, caught, label?)` — and return `false` without changing anything unless `canEditCatches(game)` (active profile for that game, game in the registry) and every dex is in `1..nationalDexMax`. Invalid names (1–32 characters after trimming), unknown games and unknown ids throw `ProfileError`. Undo: `lastChange` / `undo()` over the last 20 profile changes; an outside change to the profiles (another tab) clears the history.
 
 **`SettingsStore`**
 - `theme: 'system' | 'light' | 'dark'`, `showRates`, `showCatchRates`, `showEmptyLocations`, `hideUnavailable` (uses `progressPart`), `spriteScale: 2 | 3`, `compactRows`, `checklistSort`.
@@ -1265,7 +1266,7 @@ Each phase ends with a working local state and its acceptance criteria met. **No
 
 ### Phase 2 — Core domain, storage and profiles
 - [x] `models.ts`, `obtainability.ts` (including breeding with synthetic tests), `GameDataService` with lazy loading per version group.
-- [ ] `StorageService`, `migrations.ts`, `ProfileStore`, `SettingsStore`, undo.
+- [x] `StorageService`, `migrations.ts`, `ProfileStore`, `SettingsStore`, undo.
 - [ ] Game picker, onboarding, profile switcher, Profiles page.
 - **Accept when:** you can create and switch profiles for different games, and state survives reloads and syncs across tabs.
 

@@ -40,6 +40,12 @@ export function defaultState(): PersistedState {
 
 export const PROFILE_NAME_MAX = 32;
 
+/** A trimmed profile name, or `null` when it is empty or longer than `PROFILE_NAME_MAX`. */
+export function validProfileName(name: string): string | null {
+  const trimmed = name.trim();
+  return trimmed.length >= 1 && trimmed.length <= PROFILE_NAME_MAX ? trimmed : null;
+}
+
 type Json = Record<string, unknown>;
 const isObject = (value: unknown): value is Json => typeof value === 'object' && value !== null && !Array.isArray(value);
 const pick = <T>(value: unknown, allowed: readonly T[], fallback: T): T =>
