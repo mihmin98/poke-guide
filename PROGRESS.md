@@ -139,7 +139,7 @@ Phase 1. Items per area is implemented (plan §7.13; see the session log). Next,
 
 | # | Item | Where it matters | Status |
 |---|---|---|---|
-| 1 | Red/Blue sprite file naming `Spr_1b_###.png` on Bulbagarden Archives (`Spr_1y_###.png` is confirmed) | Phase 1 sprites | Open |
+| 1 | Red/Blue sprite file naming `Spr_1b_###.png` on Bulbagarden Archives (`Spr_1y_###.png` is confirmed) | Phase 1 sprites | **Resolved:** `Spr_1b_001`–`151` exist (56×56 PNG); `Spr_1g` is Japanese Green |
 | 2 | Yellow Squirtle gift location (Vermilion City?) | Phase 1 overrides | **Resolved:** Vermilion City, after defeating Lt. Surge (its Gen I table) |
 | 3 | Fetch and review the Bulbapedia `Stat` page (formulas for the IV/DV calculator) | Phase 1 / 6 | Open. Now cached (rev 4605719), along with `Effort values` and `Experience`. |
 | 4 | Angular 22 `ng new` flags and defaults (zoneless, Vitest), and the Node version it supports | Phase 0 | **Resolved:** CLI 22.1.8 requires Node `^22.22.3 \|\| ^24.15.0 \|\| >=26.0.0`. Standalone, strict and Vitest are defaults; zoneless is the default runtime (no zone.js). |
@@ -210,6 +210,7 @@ Phase 1. Items per area is implemented (plan §7.13; see the session log). Next,
 | 2026-09-13 | **Encounter overrides** (plan §7.1, §7.7 updated): one `overrides.encounters` object (`encounters`, `patches`, `exclusiveGroups`, `eventOnly`) replaces the planned separate `staticEncounters`/`giftsAndChoices`/`patches` lists. Statics and patches act on walked rows before the merge; exclusive groups tag merged encounters. Static levels come from pret (location pages only have prose). The Route 1 "Attacking Oak" Pikachu is dropped as a duplicate of Yellow's Oak's Lab starter. |
 | 2026-09-13 | **Validation and obtainability** (plan §7.8, §9 updated): the §9 engine (`src/app/core/domain/obtainability.ts`) was written in Phase 1 because coverage validation needs it; the pipeline and the app share it. zod schemas are strict (unknown keys fail). The `not-in-game` fallback reason is a build error; `requires-other-game` is not inferred yet. The report lives in `scripts/data/reports/<group>.md`, has no timestamp, and is committed. |
 | 2026-09-13 | Catch-rate notes: `N prior to Generation X` and `N prior to <later-generation game>` apply automatically. `N in <games>` notes that only name games outside the version group are ignored. Everything else must be classified (with a `reason` and source), and classifications that match no note are errors too. |
+| 2026-09-13 | **Sprites** (plan §7.1, §7.2, §7.10 updated): the config holds `spriteSets` keyed by the registry's `spriteSetId` instead of a per-game map, so game → set isn't duplicated. The CLI is `scripts/data/sprites.ts` (next to `build.ts`) rather than `core/sprites.ts`, keeping `core/` importable by tests. There is no cache or `--refresh`: a local file is skipped when its SHA-1 matches the archive's `imageinfo` SHA-1, and every download is verified. `MediaWikiClient.getImageUrls` became `getImageInfo` (URL + SHA-1), and `download()` shares the throttle and retries. |
 
 ## Session log
 

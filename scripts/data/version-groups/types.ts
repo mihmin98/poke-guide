@@ -61,6 +61,11 @@ export interface VersionGroupConfig {
   prizeShops?: { locationId: string; sectionPath: TitleMatcher[]; requires: string[] }[];
   /** In-game trade tables, diffed against the location tables' trade rows (plan §7.7). */
   tradePage?: TradePageConfig;
+  /**
+   * Bulbagarden Archives file pattern per sprite set (plan §7.10), keyed by the registry's `spriteSetId`;
+   * `{dex3}` is the zero-padded National Dex number. Every game's set must be listed.
+   */
+  spriteSets: Record<string, { filePattern: string }>;
   overrides: {
     /** Authoritative evolution graph; parsed evolution boxes are only diffed against it. */
     evolutions: readonly EvolutionEdge[];

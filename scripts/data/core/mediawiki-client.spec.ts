@@ -118,6 +118,39 @@ describe('MediaWikiClient.request retries', () => {
   });
 });
 
+describe('MediaWikiClient files', () => {
+  it('resolves image URLs and SHA-1s through normalization, with null for missing files', async () => {
+    const { client, calls } = setup([
+      () =>
+        json({
+          query: {
+            normalized: [{ from: 'File:Spr_1b_001.png', to: 'File:Spr 1b 001.png' }],
+            pages: [
+              { title: 'File:Spr 1b 001.png', imageinfo: [{ url: 'https://a/Spr_1b_001.png', sha1: 'abc' }] },
+              { title: 'File:Nope.png', missing: true },
+            ],
+          },
+        }),
+    ]);
+    const infos = await client.getImageInfo(['File:Spr_1b_001.png', 'File:Nope.png']);
+    expect(infos.get('File:Spr_1b_001.png')).toEqual({ url: 'https://a/Spr_1b_001.png', sha1: 'abc' });
+    expect(infos.get('File:Nope.png')).toBeNull();
+    expect(calls[0]!.url.searchParams.get('iiprop')).toBe('url|sha1');
+  });
+
+  it('downloads bytes with the User-Agent, throttling and retries', async () => {
+    const { client, calls, sleeps } = setup([
+      () => new Response('', { status: 503 }),
+      () => new Response(new Uint8Array([1, 2, 3])),
+    ]);
+    await expect(client.download('https://a/Spr_1b_001.png')).resolves.toEqual(new Uint8Array([1, 2, 3]));
+    expect(calls).toHaveLength(2);
+    expect(calls[1]!.headers['User-Agent']).toBe(USER_AGENT);
+    expect(calls[1]!.url.searchParams.has('format')).toBe(false);
+    expect(sleeps).toEqual([1000]);
+  });
+});
+
 describe('wikiUrl', () => {
   it('builds article URLs', () => {
     expect(wikiUrl('Kanto Route 1')).toBe('https://bulbapedia.bulbagarden.net/wiki/Kanto_Route_1');

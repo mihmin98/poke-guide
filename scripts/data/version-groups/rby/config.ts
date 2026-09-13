@@ -36,6 +36,11 @@ export const rbyConfig: VersionGroupConfig = {
       { heading: 'Pokémon Yellow', games: ['yellow'] },
     ],
   },
+  // Both confirmed on Bulbagarden Archives (56×56 PNGs, #001–#151); `Spr_1g` is Japanese Green.
+  spriteSets: {
+    'gen1-rb': { filePattern: 'Spr_1b_{dex3}.png' },
+    'gen1-y': { filePattern: 'Spr_1y_{dex3}.png' },
+  },
   overrides: {
     evolutions: RBY_EVOLUTIONS,
     catchRateNotes: RBY_CATCH_RATE_NOTES,

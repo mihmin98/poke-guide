@@ -6,6 +6,8 @@ import { z } from 'zod';
 
 export const BULBAPEDIA_API = 'https://bulbapedia.bulbagarden.net/w/api.php';
 export const BULBAPEDIA_WIKI = 'https://bulbapedia.bulbagarden.net/wiki/';
+/** Bulbagarden Archives hosts the sprite files (plan §7.10). */
+export const ARCHIVES_API = 'https://archives.bulbagarden.net/w/api.php';
 // TODO(Phase 8): add the repository URL once it exists.
 export const USER_AGENT =
   'poke-guide-data-builder/0.1 (non-commercial fan companion app; build-time data fetch, cached)';
@@ -24,6 +26,12 @@ export interface FetchedPage {
   revid: number;
   timestamp: string;
   wikitext: string;
+}
+
+export interface ImageInfo {
+  url: string;
+  /** Lowercase hex SHA-1 of the current file version. */
+  sha1: string;
 }
 
 export interface MediaWikiClientOptions {
@@ -80,7 +88,7 @@ const imageInfoResponse = z.object({
           z.object({
             title: z.string(),
             missing: z.boolean().optional(),
-            imageinfo: z.array(z.object({ url: z.string() })).optional(),
+            imageinfo: z.array(z.object({ url: z.string(), sha1: z.string() })).optional(),
           }),
         )
         .default([]),
@@ -181,26 +189,33 @@ export class MediaWikiClient {
     return result;
   }
 
-  /** Direct file URLs for `File:` titles; `null` for missing files. */
-  async getImageUrls(fileTitles: readonly string[]): Promise<Map<string, string | null>> {
-    const result = new Map<string, string | null>();
+  /** Direct URL and SHA-1 (hex) of the current version of `File:` titles; `null` for missing files. */
+  async getImageInfo(fileTitles: readonly string[]): Promise<Map<string, ImageInfo | null>> {
+    const result = new Map<string, ImageInfo | null>();
     for (const batch of chunk([...new Set(fileTitles)], MAX_TITLES_PER_REQUEST)) {
       const body = imageInfoResponse.parse(
         await this.request({
           action: 'query',
           prop: 'imageinfo',
-          iiprop: 'url',
+          iiprop: 'url|sha1',
           titles: batch.join('|'),
         }),
       );
       const normalized = new Map((body.query?.normalized ?? []).map((n) => [n.from, n.to]));
       const pages = new Map((body.query?.pages ?? []).map((p) => [p.title, p]));
       for (const title of batch) {
-        const page = pages.get(normalized.get(title) ?? title);
-        result.set(title, page?.imageinfo?.[0]?.url ?? null);
+        const info = pages.get(normalized.get(title) ?? title)?.imageinfo?.[0];
+        result.set(title, info ? { url: info.url, sha1: info.sha1 } : null);
       }
     }
     return result;
+  }
+
+  /** Downloads a file (e.g. an `imageinfo` URL) with the same throttling, User-Agent and retries. */
+  async download(url: string): Promise<Uint8Array> {
+    return this.send(new URL(url), '*/*', async (response) => ({
+      value: new Uint8Array(await response.arrayBuffer()),
+    }));
   }
 
   /** Main-namespace (and category-namespace) member titles of a category. */
@@ -229,6 +244,25 @@ export class MediaWikiClient {
     const query = { format: 'json', formatversion: '2', maxlag: '5', ...params };
     for (const [key, value] of Object.entries(query)) url.searchParams.set(key, value);
 
+    return this.send(url, 'application/json', async (response) => {
+      const body = (await response.json()) as { error?: { code?: string; info?: string } };
+      if (body.error?.code === 'maxlag') return { retry: 'Server lagged (maxlag)' };
+      if (body.error) {
+        throw new MediaWikiError(`API error ${body.error.code}: ${body.error.info ?? ''}`);
+      }
+      return { value: body };
+    });
+  }
+
+  /**
+   * One throttled GET with retries on network errors, 429, 5xx and whatever `read` asks to retry
+   * (honoring `Retry-After`, otherwise exponential backoff).
+   */
+  private async send<T>(
+    url: URL,
+    accept: string,
+    read: (response: Response) => Promise<{ value: T } | { retry: string }>,
+  ): Promise<T> {
     for (let attempt = 0; ; attempt++) {
       await this.throttle();
       const retry = async (reason: string, retryAfterMs: number | null) => {
@@ -244,7 +278,7 @@ export class MediaWikiClient {
       try {
         this.requestCount++;
         response = await this.fetchImpl(url, {
-          headers: { 'User-Agent': this.userAgent, Accept: 'application/json' },
+          headers: { 'User-Agent': this.userAgent, Accept: accept },
         });
       } catch (error) {
         await retry(`Network error (${(error as Error).message})`, null);
@@ -258,15 +292,12 @@ export class MediaWikiClient {
       }
       if (!response.ok) throw new MediaWikiError(`HTTP ${response.status}: ${url}`);
 
-      const body = (await response.json()) as { error?: { code?: string; info?: string } };
-      if (body.error?.code === 'maxlag') {
-        await retry('Server lagged (maxlag)', retryAfter);
+      const outcome = await read(response);
+      if ('retry' in outcome) {
+        await retry(outcome.retry, retryAfter);
         continue;
       }
-      if (body.error) {
-        throw new MediaWikiError(`API error ${body.error.code}: ${body.error.info ?? ''}`);
-      }
-      return body;
+      return outcome.value;
     }
   }
 

@@ -412,7 +412,7 @@ export interface VersionGroupConfig {
     unlocks: Unlock[];
     items: ItemOverrides;                      // add, requires, patch, requirementPhrases, choiceGroups, walkthroughAccepted, walkthroughGames (§7.13)
   };
-  sprites: Partial<Record<GameId, { setId: string; filePattern: string }>>; // 'Spr_1y_{dex3}.png'
+  spriteSets: Record<string, { filePattern: string }>; // keyed by registry spriteSetId: 'gen1-y' → 'Spr_1y_{dex3}.png'
 }
 
 export interface CatchTemplateAdapter {
@@ -432,7 +432,7 @@ export interface CatchTemplateAdapter {
 "data:offline":  "tsx scripts/data/build.ts --group rby --offline", // fixtures/cache only, category from the snapshot
 // build.ts also accepts --dry-run (print the report, write nothing). Files are never written when there are errors.
 // Golden tests read the generated public/data files, so rebuild after pipeline changes.
-"data:sprites":  "tsx scripts/data/core/sprites.ts --group rby",
+"data:sprites":  "tsx scripts/data/sprites.ts --group rby", // or --all; skips files whose SHA-1 matches the archive
 "data:validate": "tsx scripts/data/core/validate.ts",
 "theme:games":   "tsx scripts/theme/generate-game-themes.ts"
 ```
@@ -622,8 +622,10 @@ One file per version group, written as compact JSON (the example below is pretty
 A Gold/Silver/Crystal slot would look like `{ "levels": {…}, "rate": {"kind":"percent","value":45}, "conditions": [{"kind":"time","value":"morning"}] }`. No schema change is needed.
 
 ### 7.10 Sprites
-- Resolve URLs with `api.php?action=query&titles=File:…&prop=imageinfo&iiprop=url`. That returns `archives.bulbagarden.net/media/upload/…` URLs (confirmed for `File:Spr_1y_025.png`).
-- Sprite sets for Red/Blue/Yellow: `gen1-rb` (`Spr_1b_{dex3}.png`, **confirm the naming in Phase 1**) and `gen1-y` (`Spr_1y_{dex3}.png`). Later sets (e.g. Crystal `Spr_2c_…`, Emerald `Spr_3e_…`) are configured per game.
+- Resolve URLs with `archives.bulbagarden.net/w/api.php?action=query&titles=File:…&prop=imageinfo&iiprop=url|sha1` (the same polite `MediaWikiClient`, pointed at `ARCHIVES_API`). That returns `archives.bulbagarden.net/media/upload/…` URLs. Downloads go through the same throttle and User-Agent (`client.download`).
+- Sprite sets for Red/Blue/Yellow: `gen1-rb` (`Spr_1b_{dex3}.png`, confirmed 2026-09-13; `Spr_1g` is Japanese Green) and `gen1-y` (`Spr_1y_{dex3}.png`). All are 56×56 PNGs. Later sets (e.g. Crystal `Spr_2c_…`, Emerald `Spr_3e_…`) are configured per version group.
+- Config: `spriteSets: Record<setId, { filePattern }>`, keyed by the registry's `spriteSetId` (the registry already maps game → set, so the config doesn't repeat it). A game whose set has no pattern is an error.
+- `scripts/data/sprites.ts` (CLI) + `core/sprites.ts` (`spriteJobs`, `syncSprites`): a local file whose SHA-1 matches the archive is skipped, so there is no cache or `--refresh`. Every download is checked against the SHA-1; missing files and mismatches exit 1.
 - Save them to `public/sprites/<setId>/<dex3>.png` and commit them. Render with `image-rendering: pixelated`. Fallback: a Poké Ball SVG.
 
 ### 7.11 Catch rates, base stats and extra encounter details
