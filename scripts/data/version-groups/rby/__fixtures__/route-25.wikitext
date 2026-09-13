@@ -1,0 +1,444 @@
+<!-- poke-guide fixture: {"title":"Kanto Route 25","resolvedTitle":"Kanto Route 25","revid":4618423,"timestamp":"2026-08-26T02:10:14Z","fetchedAt":"2026-09-12T22:07:07.408Z"} -->
+{{Route infobox
+|number=25
+|image=Kanto Route 25 PE.png
+|imageI=Kanto Route 25 RBY.png
+|imageII=Kanto Route 25 GSC.png
+|imageIII=Kanto Route 25 FRLG.png
+|type=land
+|west=Route 24
+|westalt=Route 24{{tt|*|Generations I, III, and VII}}
+|regionwest=Kanto
+|south=Route 24
+|southalt=Route 24{{tt|*|Generations II and IV}}
+|regionsouth=Kanto
+|region=Kanto
+|mapdesc=A path that winds through the forest and comes out overlooking the sea.
+}}
+
+'''Route 25''' (Japanese: '''２５{{tt|番道路|ばんどうろ}}''' ''Route 25'') is a [[route]] located in northeastern [[Kanto]]. It connects to {{rt|24|Kanto}} in the west. The [[Sea Cottage]] is located on this route, at the eastern end.
+
+==Route description==
+Heading from west to east, Route 25 initially begins as an extension to {{rt|24|Kanto}}. To the east, Route 25 comes to a maze of trees{{sup/1}}{{sup/2}}{{sup/4|HGSS}} or shrubs.{{sup/3|FRLG}}{{sup/7|PE}} Regardless of the Generation, the maze is full of {{pkmn|Trainer}}s ready to battle. Note that if the {{player}} loses to Cooltrainer{{sup/2}}/Ace Trainer Kevin{{sup/4|HGSS}} at the end of the route, he cannot be rematched; however, since he gives the player a Nugget before the battle begins, there's no extra benefit by defeating him besides the [[prize money]], which all Trainers give. To the northwest of the maze is a patch of grass containing [[wild Pokémon]].
+
+Near the east end of the maze, there is a [[Cuttable plant|cuttable tree]] blocking an area that contains an [[item]]. By removing the tree with {{m|Cut}}{{sup/1}}{{sup/2}}{{sup/3|FRLG}}{{sup/4|HGSS}} or the [[Secret Technique]] Chop Down,{{sup/7|PE}} Trainers can collect a certain item. In [[Generation I|Generations I]] and {{gen|III}}, the item can also be accessed by challenging the {{tc|Camper|Jr. Trainer♂}}{{sup/1}}/{{tc|Camper}}{{sup/3|FRLG}} blocking the alternative path to a battle and making him move out of the way.
+
+East of the maze, the [[route]] opens up to its widest point before condensing slightly near a pair of Trainers{{sup/1}}{{sup/3|FRLG}}{{sup/7|PE}} or a single Trainer{{sup/2}} and the first of two ponds near the east end of the route, known as '''Cerulean Cape''' (Japanese: '''{{tt|ハナダのみさき|Hanada no Misaki}}''' ''{{tt|Hanada|Cerulean}} Cape''). To the north of a land bridge between the two ponds is the [[Sea Cottage]], the home of Pokémon expert [[Bill]].
+
+Route 25 continues east, turning south at the ocean shoreline and passing along a narrow strip of land between the ocean and the eastern pond. At the southern tip of the pond, the route turns west, intersecting the land bridge as it runs along the southern edge of the ponds. Just to the west of the pond, the route turns north for a yard before doubling back to the west, running along the southern edge of the route's main path as it feeds into the "express route", one way portion of Route 24. The existence of the long, narrow bypass south of Route 25 allows for quick, hassle-free travel between Cerulean Cape and its namesake city. However, due to a [[ledge]] at the southern terminus of Route 24 in [[Cerulean City]], the reverse is not possible.
+
+In Generations {{gen|I}}, {{gen|III}}, and {{gen|VII}}, the corner connecting Routes 24 and 25 is considered a part of Route 24. In Generations {{gen|II}} and {{gen|IV}}, it's included with Route 25.
+
+==Items==
+{{Itlisth|land}}
+{{Itemlist|Elixir|Two squares east and three squares north of the westernmost {{tc|Hiker}}, on the wall ''(hidden)''|R=yes|B=yes|Y=yes|display=[[Elixir|Elixer]]}}
+{{Itemlist|Elixir|Three squares east and two squares north of {{tc|Hiker}} Franklin, in the northwest area of the route ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Super Potion|Northeast of {{tc|Youngster}} Chad|LP=yes|LE=yes}}
+{{Itemlist|TM Fighting|Northwest of the {{m|cut}}table tree (requires defeating {{tc|Camper|Jr. Trainer♂}} or {{m|Cut}})|R=yes|B=yes|Y=yes|display={{TM|19|Seismic Toss}}}}
+{{Itemlist|TM Normal|Northwest of the {{m|cut}}table tree (requires defeating {{tc|Camper}} Flint or {{m|Cut}})|FR=yes|LG=yes|display={{TM|43|Secret Power}}}}
+{{Itemlist|TM Electric VI|North of the [[Secret Technique|Chop Down]] tree (requires defeating {{tc|Camper}} Dustin or [[Secret Technique|Chop Down]])|LP=yes|LE=yes|display={{TM|16|Thunder Wave}}}}
+{{Itemlist|Oran Berry|Southwest of {{tc|Youngster}} Chad, on a marked square  ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Bluk Berry|Northeast of {{tc|Youngster}} Chad, on a marked square ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Ether|One square east and one square north of the easternmost {{tc|Lass}}, on the fence ''(hidden)''|R=yes|B=yes|Y=yes}}
+{{Itemlist|Ether|Two squares south and seven squares east of the entrance to the [[Sea Cottage]] ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Ether|Next to a fence southwest of {{tc|Lass}} Haley|LP=yes|LE=yes}}
+{{Itemlist|TM Fighting VI|Reward for defeating {{tc|Coach Trainer}} Amala|LP=yes|LE=yes|display={{TM|15|Seismic Toss}}}}
+{{Itemlist|Lure|Southeast of the [[Sea Cottage]]|LP=yes|LE=yes}}
+{{Itemlist|Nanab Berry|In a bush southwest of the two ponds to the south of Sea Cottage ''(hidden)'' (daily) |LP=yes|LE=yes|display=[[Nanab Berry]] ×3}}
+{{Itemlist|Potion|In the lone western tree ''(hidden)''|G=yes|S=yes|C=yes}}
+{{Itemlist|Protein|Northeast corner of the tree maze (requires {{m|Cut}})|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Nugget|From {{tc|Ace Trainer|Cooltrainer}}{{sup/2|GSC}}/{{tc|Ace Trainer}}{{sup/4|HGSS}} Kevin before battling him|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Revive|On the ledge in the northwest corner of the route ''(hidden)''|HG=yes|SS=yes}}
+{{Itlistfoot|land}}
+
+===Sea Cottage===
+{{main|Sea_Cottage#Items|Sea Cottage → Items}}
+
+==Pokémon==
+===Generation I===
+<!--Wild Pokémon Encounter Data<ref>[https://github.com/pret/pokered/tree/master/data/wild Pokémon Red and Blue Disassembly Wild Encounter Data - Pret]</ref><ref>[https://github.com/pret/pokeyellow/tree/master/data/wild Pokémon Yellow Disassembly Wild Encounter Data - Pret]</ref><ref>[https://shinyfinder.github.io/encounter-slots/blue-japanese/Land%20&%20Surf.html Pokémon Blue (Japanese) Wild Encounter Data - Shinyfinder]</ref>-->
+{{Catch/header|land|no}}
+{{Catch/entry1|010|Caterpie|yes|no|no|Grass|8|1%|type1=Bug}}
+{{Catch/entry1|010|Caterpie|no|yes|no|Grass|8|20%|type1=Bug}}
+{{Catch/entry1|011|Metapod|yes|no|no|Grass|7|4%|type1=Bug}}
+{{Catch/entry1|011|Metapod|no|yes|no|Grass|9|20%|type1=Bug}}
+{{Catch/entry1|013|Weedle|yes|no|no|Grass|8|20%|type1=Bug|type2=Poison}}
+{{Catch/entry1|013|Weedle|no|yes|no|Grass|8|1%|type1=Bug|type2=Poison}}
+{{Catch/entry1|014|Kakuna|yes|no|no|Grass|9|20%|type1=Bug|type2=Poison}}
+{{Catch/entry1|014|Kakuna|no|yes|no|Grass|7|4%|type1=Bug|type2=Poison}}
+{{Catch/entry1|016|Pidgey|yes|yes|no|Grass|13|15%|type1=Normal|type2=Flying}}
+{{Catch/entry1|016|Pidgey|no|no|yes|Grass|13, 15, 17|29%|type1=Normal|type2=Flying}}
+{{Catch/entry1|017|Pidgeotto|no|no|yes|Grass|17|1%|type1=Normal|type2=Flying}}
+{{Catch/entry1|043|Oddish|yes|no|no|Grass|12-14|25%|type1=Grass|type2=Poison}}
+{{Catch/entry1|043|Oddish|no|no|yes|Grass|12, 14|30%|type1=Grass|type2=Poison}}
+{{Catch/entry1|048|Venonat|no|no|yes|Grass|13, 16|10%|type1=Bug|type2=Poison}}
+{{Catch/entry1|063|Abra|yes|yes|no|Grass|10, 12|15%|type1=Psychic}}
+{{Catch/entry1|069|Bellsprout|no|yes|no|Grass|12-14|25%|type1=Grass|type2=Poison}}
+{{Catch/entry1|069|Bellsprout|no|no|yes|Grass|12, 14|30%|type1=Grass|type2=Poison}}
+{{catch/div|water|Fishing}}
+{{Catch/entry1|129|Magikarp|yes|yes|yes|Fish Old|5|100%|type1=Water}}
+{{Catch/entry1|060|Poliwag|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{Catch/entry1|118|Goldeen|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{Catch/entry1|054|Psyduck|yes|yes|no|Fish Super|15|33%|type1=Water}}
+{{Catch/entry1|098|Krabby|yes|yes|no|Fish Super|15|33%|type1=Water}}
+{{Catch/entry1|098|Krabby|no|no|yes|Fish Super|10, 15|70%|type1=Water}}
+{{Catch/entry1|099|Kingler|no|no|yes|Fish Super|15, 25|30%|type1=Water}}
+{{Catch/entry1|118|Goldeen|yes|yes|no|Fish Super|15|33%|type1=Water}}
+{{Catch/footer|land}}
+
+===Generation II===
+{{Catch/header|land}}
+{{Catch/entry2|010|Caterpie|no|no|yes|Grass|10|30%|30%|0%|type1=Bug|11=k}}
+{{Catch/entry2|011|Metapod|no|no|yes|Grass|12|10%|10%|0%|type1=Bug|11=k}}
+{{Catch/entry2|012|Butterfree|no|no|yes|Grass|14|5%|5%|0%|type1=Bug|type2=Flying|11=k}}
+{{Catch/entry2|016|Pidgey|yes|yes|no|Grass|8|30%|0%|0%|type1=Normal|type2=Flying|11=k}}
+{{Catch/entry2|016|Pidgey|yes|yes|no|Grass|8,10|0%|50%|0%|type1=Normal|type2=Flying|11=k}}
+{{Catch/entry2|016|Pidgey|no|no|yes|Grass|10|30%|30%|0%|type1=Normal|type2=Flying|11=k}}
+{{Catch/entry2|017|Pidgeotto|yes|yes|no|Grass|10|5%|0%|0%|type1=Normal|type2=Flying|11=k}}
+{{Catch/entry2|017|Pidgeotto|yes|yes|no|Grass|12|0%|5%|0%|type1=Normal|type2=Flying|11=k}}
+{{Catch/entry2|017|Pidgeotto|no|no|yes|Grass|12|20%|20%|0%|type1=Normal|type2=Flying|11=k}}
+{{Catch/entry2|043|Oddish|yes|yes|yes|Grass|10|0%|0%|30%|type1=Grass|type2=Poison|11=k}}
+{{Catch/entry2|048|Venonat|yes|yes|no|Grass|8|20%|0%|30%|type1=Bug|type2=Poison|11=k}}
+{{Catch/entry2|048|Venonat|no|no|yes|Grass|10|0%|0%|20%|type1=Bug|type2=Poison|11=k}}
+{{Catch/entry2|049|Venomoth|yes|yes|no|Grass|10|0%|0%|20%|type1=Bug|type2=Poison|11=k}}
+{{Catch/entry2|063|Abra|yes|yes|no|Grass|9|all=10%|type1=Psychic}}
+{{Catch/entry2|069|Bellsprout|yes|yes|no|Grass|10|30%|30%|5%|type1=Grass|type2=Poison|11=k}}
+{{Catch/entry2|069|Bellsprout|no|no|yes|Grass|10|all=5%|type1=Grass|type2=Poison|11=k}}
+{{Catch/entry2|070|Weepinbell|yes|yes|no|Grass|14|all=5%|type1=Grass|type2=Poison|11=k}}
+{{Catch/entry2|163|Hoothoot|no|no|yes|Grass|10|0%|0%|30%|type1=Normal|type2=Flying|11=k}}
+{{Catch/entry2|164|Noctowl|no|no|yes|Grass|12,14|0%|0%|15%|type1=Normal|type2=Flying|11=k}}
+{{catch/div|water|Surfing}}
+{{Catch/entry2|118|Goldeen|yes|yes|yes|Surf|5-14|all=90%|type1=Water}}
+{{Catch/entry2|119|Seaking|yes|yes|yes|Surf|10-14|all=10%|type1=Water}}
+{{catch/div|water|Fishing}}
+{{Catch/entry2|118|Goldeen|yes|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entry2|118|Goldeen|yes|yes|yes|Fish Good|20|all=65%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=Water}}
+{{Catch/entry2|118|Goldeen|yes|yes|yes|Fish Super|40|all=70%|type1=Water}}
+{{Catch/entry2|119|Seaking|yes|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{Catch/footer|land}}
+
+===Generation III===
+{{catch/header|land|no}}
+{{catch/entryfl|010|Caterpie|yes|yes|Grass|8|20%|type1=Bug}}
+{{catch/entryfl|011|Metapod|yes|no|Grass|9|1%|type1=Bug}}
+{{catch/entryfl|011|Metapod|no|yes|Grass|9|4%|type1=Bug}}
+{{catch/entryfl|013|Weedle|yes|yes|Grass|8|20%|type1=Bug|type2=Poison}}
+{{catch/entryfl|014|Kakuna|yes|no|Grass|9|4%|type1=Bug|type2=Poison}}
+{{catch/entryfl|014|Kakuna|no|yes|Grass|9|1%|type1=Bug|type2=Poison}}
+{{catch/entryfl|016|Pidgey|yes|yes|Grass|11, 13|15%|type1=Normal|type2=Flying}}
+{{Catch/entryfl|043|Oddish|yes|no|Grass|12-14|25%|type1=Grass|type2=Poison}}
+{{Catch/entryfl|063|Abra|yes|yes|Grass|9, 11, 13|15%|type1=Psychic}}
+{{Catch/entryfl|069|Bellsprout|no|yes|Grass|12-14|25%|type1=Grass|type2=Poison}}
+{{catch/div|water|Surfing}}
+{{Catch/entryfl|054|Psyduck|yes|no|Surf|20-40|100%|type1=Water}}
+{{Catch/entryfl|079|Slowpoke|no|yes|Surf|20-40|100%|type1=Water|type2=Psychic}}
+{{catch/div|water|Fishing}}
+{{Catch/entryfl|129|Magikarp|yes|yes|Fish Old|5|100%|type1=Water}}
+{{Catch/entryfl|060|Poliwag|yes|yes|Fish Good|5-15|60%|type1=Water}}
+{{Catch/entryfl|118|Goldeen|yes|yes|Fish Good|5-15|20%|type1=Water}}
+{{Catch/entryfl|129|Magikarp|yes|yes|Fish Good|5-15|20%|type1=Water}}
+{{Catch/entryfl|060|Poliwag|yes|yes|Fish Super|15-25|40%|type1=Water}}
+{{Catch/entryfl|061|Poliwhirl|yes|yes|Fish Super|20-30|40%|type1=Water}}
+{{Catch/entryfl|130|Gyarados|yes|yes|Fish Super|15-25|15%|type1=Water|type2=Flying}}
+{{Catch/entryfl|054|Psyduck|yes|no|Fish Super|15-35|5%|type1=Water}}
+{{Catch/entryfl|079|Slowpoke|no|yes|Fish Super|15-35|5%|type1=Water|type2=Psychic}}
+{{catch/footer|land}}
+
+===Generation IV===
+{{catch/header|land}}
+{{catch/entryhs|063|Abra|yes|yes|Grass|9|all=10%|type1=Psychic}}
+{{catch/entryhs|016|Pidgey|yes|yes|Grass|8|30%|50%|0%|type1=Normal|type2=Flying}}
+{{catch/entryhs|069|Bellsprout|yes|yes|Grass|10|30%|30%|0%|type1=Grass|type2=Poison}}
+{{catch/entryhs|069|Bellsprout|yes|yes|Grass|14|0%|0%|5%|type1=Grass|type2=Poison}}
+{{catch/entryhs|048|Venonat|yes|yes|Grass|10|20%|0%|0%|type1=Bug|type2=Poison}}
+{{catch/entryhs|048|Venonat|yes|yes|Grass|8|0%|0%|30%|type1=Bug|type2=Poison}}
+{{catch/entryhs|017|Pidgeotto|yes|yes|Grass|10|5%|5%|0%|type1=Normal|type2=Flying}}
+{{catch/entryhs|070|Weepinbell|yes|yes|Grass|14|5%|5%|0%|type1=Grass|type2=Poison}}
+{{catch/entryhs|070|Weepinbell|yes|yes|Grass|10|0%|0%|5%|type1=Grass|type2=Poison}}
+{{catch/entryhs|043|Oddish|yes|yes|Grass|10|0%|0%|30%|type1=Grass|type2=Poison}}
+{{catch/entryhs|049|Venomoth|yes|yes|Grass|8|0%|0%|20%|type1=Bug|type2=Poison}}
+{{catch/div|water|Surfing}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Surf|5-10|all=90%|type1=Water}}
+{{Catch/entryhs|119|Seaking|yes|yes|Surf|10|all=10%|type1=Water}}
+{{catch/div|water|Fishing}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=60%|type1=Water}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Fish Super|40|all=70%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{Catch/entryhs|119|Seaking|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{catch/div|land|Headbutt<br><small>Group A</small>}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|10-11|all=50%|type1=Normal|type2=Flying|10=k}}
+{{Catch/entryhs|204|Pineco|yes|yes|Headbutt|10-11|all=30%|type1=Bug|10=k}}
+{{Catch/entryhs|415|Combee|yes|yes|Headbutt|10-11|all=20%|type1=Bug|type2=Flying|10=k}}
+{{catch/div|land|Headbutt<br><small>Group B</small>}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|13-14|all=80%|type1=Normal|type2=Flying|10=k}}
+{{Catch/entryhs|415|Combee|yes|yes|Headbutt|13-14|all=20%|type1=Bug|type2=Flying|10=k}}
+{{catch/div|land|Headbutt<br><small>The four trees at the northwest corner of Route 25.</small>}}
+{{Catch/entryhs|287|Slakoth|yes|yes|Headbutt|10-14|all=30%|type1=Normal|10=k}}
+{{Catch/entryhs|287|Slakoth|yes|yes|Headbutt|15-18|all=5%|type1=Normal|10=k}}
+{{Catch/entryhs|415|Combee|yes|yes|Headbutt|10-14|all=65%|type1=Bug|type2=Flying|10=k}}
+{{catch/div|land|Swarm}}
+{{catch/entryhs|427|Buneary|yes|yes|Swarm|8, 10|all=40%|type1=Normal}}
+{{catch/div|land|Special}}
+{{catch/entryhs|264|Linoone|yes|yes|Hoenn|8|all=20%|type1=Normal}}
+{{catch/entryhs|293|Whismur|yes|yes|Hoenn|8, 10|all=20%|type1=Normal}}
+{{catch/entryhs|399|Bidoof|yes|yes|Sinnoh|8|all=20%|type1=Normal}}
+{{catch/entryhs|418|Buizel|yes|yes|Sinnoh|8, 10|all=20%|type1=Water}}
+{{catch/footer|land}}
+
+===Generation VII===
+{{Catch/header|land|no}}
+{{Catch/entrype|016|Pidgey|yes|no|Grass|9-14|30%|type1=Normal|type2=Flying}}
+{{Catch/entrype|016|Pidgey|no|yes|Grass|9-14|20%|type1=Normal|type2=Flying}}
+{{Catch/entrype|043|Oddish|yes|no|Grass|9-14|20%|type1=Grass|type2=Poison}}
+{{Catch/entrype|048|Venonat|yes|no|Grass|9-14|30%|type1=Bug|type2=Poison}}
+{{Catch/entrype|048|Venonat|no|yes|Grass|9-14|20%|type1=Bug|type2=Poison}}
+{{Catch/entrype|052|Meowth|no|yes|Grass|9-14|20%|type1=Normal}}
+{{Catch/entrype|054|Psyduck|yes|yes|Grass|9-14|20%|type1=Water}}
+{{Catch/entrype|069|Bellsprout|no|yes|Grass|9-14|20%|type1=Grass|type2=Poison}}
+{{Catch/div|land|Rare Spawns}}
+{{Catch/entrype|007|Squirtle|yes|yes|Grass|9-14|-|type1=Water}}
+{{Catch/div|water|Sea Skim}}
+{{Catch/entrype|060|Poliwag|yes|yes|Surf|9-14|45%|type1=Water}}
+{{Catch/entrype|061|Poliwhirl|yes|yes|Surf|9-14|10%|type1=Water}}
+{{Catch/entrype|129|Magikarp|yes|yes|Surf|9-14|45%|type1=Water}}
+{{Catch/div|flying|While riding a Flying Pokémon<br><small>After becoming {{color2|000|Pokémon Champion|Champion}}}}
+{{Catch/entrype|016|Pidgey|yes|yes|Sky|3-56|60%|type1=Normal|type2=Flying}}
+{{Catch/entrype|017|Pidgeotto|yes|yes|Sky|3-56|35%|type1=Normal|type2=Flying}}
+{{Catch/entrype|018|Pidgeot|yes|yes|Sky|3-56|5%|type1=Normal|type2=Flying}}
+{{Catch/div|flying|Rare Spawns}}
+{{Catch/entrype|006|Charizard|yes|yes|Sky|3-56|-|type1=Fire|type2=Flying}}
+{{Catch/entrype|144|Articuno|yes|yes|Sky|3-56|-|type1=Ice|type2=Flying}}
+{{Catch/entrype|145|Zapdos|yes|yes|Sky|3-56|-|type1=Electric|type2=Flying}}
+{{Catch/entrype|146|Moltres|yes|yes|Sky|3-56|-|type1=Fire|type2=Flying}}
+{{Catch/entrype|149|Dragonite|yes|yes|Sky|3-56|-|type1=Dragon|type2=Flying}}
+{{Catch/footer|land|2}}
+
+==Special encounters==
+===Generation IV===
+A {{p|Suicune}} appears here after being seen at the [[Burned Tower]], [[Cianwood City]], {{rt|42|Johto}}, [[Vermilion City]], and {{rt|14|Kanto}} in that order, and after [[Misty|Misty's]] [[Badge]] has been obtained. If defeated or run from, it respawns on B1F of the Burned Tower after entering the [[Hall of Fame]].
+
+{{Pokémon
+|gen=4
+|ndex=0245
+|pokemon=Suicune
+|type1=Water
+|ability=Pressure
+|level=40
+|move1=Rain Dance|move1type=Water|move1cat=Status
+|move2=Gust|move2type=Flying|move2cat=Special
+|move3=Aurora Beam|move3type=Ice|move3cat=Special
+|move4=Mist|move4type=Ice|move4cat=Status}}
+
+==Trainers==
+===Generation I===
+{{Trainerheader}}
+{{Trainerentry|Spr RG Hiker.png|game=1|Hiker||525|2|066|Machop||15||074|Geodude||15||}}
+{{Trainerdiv}}
+{{Trainerentry|Spr RG Hiker.png|game=1|Hiker||595|1|095|Onix||17||}}
+{{Trainerdiv}}
+{{Trainerentry|Spr RG Youngster.png|game=1|Youngster||225|2|019|Rattata||15||021|Spearow||15||}}
+{{Trainerdiv}}
+{{Trainerentry|Spr RG Youngster.png|game=1|Youngster||255|1|079|Slowpoke||17||}}
+{{Trainerdiv}}
+{{Trainerentry|Spr RG Lass.png|game=1|Lass||225|2|032|Nidoran♂||15||029|Nidoran♀||15||}}
+{{Trainerdiv}}
+{{Trainerentry|Spr RG Hiker.png|game=1|Hiker||455|4|074|Geodude||13||074|Geodude||13||066|Machop||13||074|Geodude||13||}}
+{{Trainerdiv}}
+{{Trainerentry|Spr RG Jr Trainer M.png|game=1|Jr. Trainer♂||280|2|019|Rattata||14||023|Ekans||14||}}
+{{Trainerdiv}}
+{{Trainerentry|Spr RG Youngster.png|game=1|Youngster||210|2|023|Ekans||14||027|Sandshrew||14||}}
+{{Trainerdiv}}
+{{Trainerentry|Spr RG Lass.png|game=1|Lass||195|3|043|Oddish||13||016|Pidgey||13||043|Oddish||13||}}
+{{Trainerfooter|land|I}}
+
+===Generation II===
+{{trainerheader}}
+{{Trainerentry|Spr GS Schoolboy.png|Schoolboy|Dudley|1120|1|043|Oddish|♂|35|None|36=ケンジ|37=Kenji}}
+{{trainerdiv}}
+{{Trainerentry|Spr GS Lass.png|Lass|Ellen|816|2|040|Wigglytuff|♀|30|None|210|Granbull|♀|34|None|36=ユナ|37=Yuna}}
+{{trainerdiv}}
+{{Trainerentry|Spr GS Schoolboy.png|Schoolboy|Joe|1056|2|114|Tangela|♂|33|None|134|Vaporeon|♂|33|None|36=シンスケ|37=Shinsuke}}
+{{trainerdiv}}
+{{Trainerentry|Spr GS Lass.png|Lass|Laura|744|3|044|Gloom|♀|28|None|017|Pidgeotto|♀|31|None|182|Bellossom|♀|31|None|36=ミーナ|37=Meena}}
+{{trainerdiv}}
+{{Trainerentry|Spr GS Camper.png|Camper|Lloyd|680|1|034|Nidoking|♂|34|None|36=ヤスキ|37=Yasuki}}
+{{trainerdiv}}
+{{Trainerentry|Spr GS Lass.png|Lass|Shannon|768|3|046|Paras|♀|29|None|046|Paras|♀|29|None|047|Parasect|♀|32|None|36=チエ|37=Chie}}
+{{trainerdiv}}
+{{Trainerentry|Spr GS Super Nerd.png|Super Nerd|Pat|1152|1|137|Porygon||36|None|36=ケンゾウ|37=Kenzō}}
+{{trainerdiv}}
+{{Trainerentry|Spr GS Cooltrainer M.png|Cooltrainer|Kevin|1680|3|111|Rhyhorn|♂|38|None|005|Charmeleon|♂|35|None|008|Wartortle|♂|35|None|36=カズキ|37=Kazuki}}
+{{Trainerfooter|land|GSC}}
+
+===Generation III===
+{{trainerheader}}
+{{Trainerentry|Spr FRLG Hiker.png|Hiker|Franklin|540|2|066|Machop|♂|15|None|074|Geodude|♂|15|None|36=シゲオ|37=Shigeo|38=Vs. Seeker}}
+{{trainerdiv}}
+{{Trainerentry|Spr FRLG Hiker.png|Hiker|Wayne|612|1|095|Onix|♂|17|None|36=コウサク|37=Kōsaku}}
+{{trainerdiv}}
+{{Trainerentry|Spr FRLG Youngster.png|Youngster|Joey|240|2|019|Rattata|♂|15|None|021|Spearow|♂|15|None|36=タケオ|37=Takeo}}
+{{trainerdiv}}
+{{Trainerentry|Spr FRLG Youngster.png|Youngster|Dan|272|1|079|Slowpoke|♂|17|None|36=アツシ|37=Atsushi}}
+{{trainerdiv}}
+{{Trainerentry|Spr FRLG Picnicker.png|Picnicker|Kelsey|300|2|032|Nidoran♂||15|None|029|Nidoran♀||15|None|36=ミサ|37=Misa|38=Vs. Seeker}}
+{{trainerdiv}}
+{{Trainerentry|Spr FRLG Hiker.png|Hiker|Nob|468|4|074|Geodude|♂|13|None|074|Geodude|♂|13|None|066|Machop|♂|13|None|074|Geodude|♂|13|None|36=ゴロウ|37=Gorō}}
+{{trainerdiv}}
+{{Trainerentry|Spr FRLG Camper.png|Camper|Flint|280|2|019|Rattata|♂|14|None|023|Ekans|♂|14|None|36=テルオ|37=Teruo}}
+{{trainerdiv}}
+{{Trainerentry|Spr FRLG Youngster.png|Youngster|Chad|224|2|023|Ekans|♂|14|None|027|Sandshrew|♂|14|None|36=カツユキ|37=Katsuyuki|38=Vs. Seeker}}
+{{trainerdiv}}
+{{Trainerentry|Spr FRLG Lass.png|Lass|Haley|208|3|043|Oddish|♀|13|None|016|Pidgey|♀|13|None|043|Oddish|♀|13|None|36=マキ|37=Maki}}
+{{trainerdiv|land|Rematch}}
+{{Trainerentry|Spr FRLG Hiker.png|Hiker|Franklin|900<br/><small>After reaching [[Celadon City]]</small>|2|067|Machoke|♂|25|None|075|Graveler|♂|25|None|36=シゲオ|37=Shigeo|38=Vs. Seeker}}
+{{trainerdiv}}
+{{Trainerentry|Spr FRLG Picnicker.png|Picnicker|Kelsey|360|2|032|Nidoran♂||21|None|029|Nidoran♀||21|None|36=ミサ|37=Misa|38=Vs. Seeker}}
+{{Trainerentry|Spr FRLG Picnicker.png|Picnicker|Kelsey|420<br/><small>After reaching [[Fuchsia City]]<br/>and defeating the previous team</small>|2|033|Nidorino|♂|29|None|030|Nidorina|♀|29|None|36=ミサ|37=Misa|38=Vs. Seeker}}
+{{Trainerentry|Spr FRLG Picnicker.png|Picnicker|Kelsey|980<br/><small>After becoming {{pkmn|Champion}}<br/>and defeating the previous team</small>|2|033|Nidorino|♂|49|None|030|Nidorina|♀|49|None|36=ミサ|37=Misa|38=Vs. Seeker}}
+{{trainerdiv}}
+{{Trainerentry|Spr FRLG Youngster.png|Youngster|Chad|320|2|023|Ekans|♂|20|None|027|Sandshrew|♂|20|None|36=カツユキ|37=Katsuyuki|38=Vs. Seeker}}
+{{Trainerentry|Spr FRLG Youngster.png|Youngster|Chad|448<br/><small>After reaching [[Fuchsia City]]<br/>and defeating the previous team</small>|2|024|Arbok|♂|28|None|027|Sandshrew|♂|28|None|36=カツユキ|37=Katsuyuki|38=Vs. Seeker}}
+{{Trainerentry|Spr FRLG Youngster.png|Youngster|Chad|768<br/><small>After becoming {{pkmn|Champion}}<br/>and defeating the previous team</small>|2|024|Arbok|♂|48|None|028|Sandslash|♂|48|None|36=カツユキ|37=Katsuyuki|38=Vs. Seeker}}
+{{Trainerfooter}}
+
+===Generation IV===
+{{trainerheader}}
+{{Trainerentry|Spr HGSS School Kid.png|School Kid|Dudley|900|1|043|Oddish|♂|45|Sitrus Berry|36=ケンジ|37=Kenji}}
+{{trainerdiv}}
+{{Trainerentry|Spr HGSS Lass.png|Lass|Ellen|704|2|040|Wigglytuff|♀|40|None|210|Granbull|♀|44|None|36=ユナ|37=Yuna}}
+{{trainerdiv}}
+{{Trainerentry|Spr HGSS School Kid.png|School Kid|Joe|840|2|114|Tangela|♂|44|Sitrus Berry|134|Vaporeon|♂|42|None|36=シンスケ|37=Shinsuke}}
+{{trainerdiv}}
+{{Trainerentry|Spr DP Camper.png|Camper|Lloyd|736|1|034|Nidoking|♂|46|None|36=ヤスキ|37=Yasuki}}
+{{trainerdiv}}
+{{Trainerentry|Spr HGSS Lass.png|Lass|Laura|656<br><sup>[[Double Battle]] with Shannon</sup>|3|044|Gloom|♀|38|Sitrus Berry|182|Bellossom|♀|41|None|017|Pidgeotto|♀|41|None|36=ミーナ|37=Meena}}
+{{Trainerentry|Spr HGSS Lass.png|Lass|Shannon|672<br><sup>[[Double Battle]] with Laura</sup>|3|046|Paras|♀|38|None|046|Paras|♀|38|None|047|Parasect|♀|42|None|36=チエ|37=Chie}}
+{{trainerdiv}}
+{{Trainerentry|Spr HGSS Super Nerd.png|Super Nerd|Pat|2256|1|137|Porygon||47|None|36=ケンゾウ|37=Kenzō}}
+{{trainerdiv}}
+{{Trainerentry|Spr HGSS Ace Trainer M.png|Ace Trainer|Kevin|2760|3|111|Rhyhorn|♂|48|None|005|Charmeleon|♂|46|None|008|Wartortle|♂|46|None|36=カズキ|37=Kazuki}}
+{{Trainerfooter|land|HGSS}}
+
+===Generation VII===
+{{trainerheader}}
+{{Trainerentry|VSHiker PE.png{{!}}90px|game=PE|Hiker|Franklin|560<br/>3 {{i|Poké Ball}}s|1|095|Onix|♂|14|None|36=シゲオ|37=Shigeo}}
+{{trainerdiv}}
+{{Trainerentry|VSYoungster PE.png{{!}}90px|game=PE|Youngster|Chad|240<br/>3 {{i|Poké Ball}}s|1|050|Diglett|♂|12|None|36=カツユキ|37=Katsuyuki}}
+{{trainerdiv}}
+{{Trainerentry|VSBird Keeper PE.png{{!}}90px|game=PE|Bird Keeper|Joey|900<br/>3 {{i|Poké Ball}}s|1|017|Pidgeotto|♂|15|None|36=タケオ|37=Takeo}}
+{{trainerdiv}}
+{{Trainerentry|VSYoungster PE.png{{!}}90px|game=PE|Youngster|Dan|240<br/>3 {{i|Poké Ball}}s|2|023|Ekans|♂|12|None|019|Rattata|♂|12|None|36=アツシ|37=Atsushi}}
+{{trainerdiv}}
+{{Trainerentry|VSHiker PE.png{{!}}90px|game=PE|Hiker|Nob|560<br/>3 {{i|Poké Ball}}s|2|074|Geodude|♂|14|None|066|Machop|♂|14|None|36=ゴロウ|37=Gorō}}
+{{trainerdiv}}
+{{Trainerentry|VSPicnicker PE.png{{!}}90px|game=PE|Picnicker|Kelsey|260<br/>2 [[Great Ball]]s|1|118|Goldeen|♀|13|None|36=ミサ|37=Misa}}
+{{trainerdiv}}
+{{Trainerentry|VSCamper PE.png{{!}}90px|game=PE|Camper|Dustin|260<br/>2 [[Great Ball]]s|1|007|Squirtle|♂|13|None|36=テルオ|37=Teruo}}
+{{trainerdiv}}
+{{Trainerentry|VSLass PE.png{{!}}90px|game=PE|Lass|Haley|240<br/>3 {{i|Poké Ball}}s|2|043|Oddish|♂|12|None|016|Pidgey|♀|12|None|36=エリコ|37=Eriko}}
+{{trainerdiv}}
+{{Trainerentry|VSFisherman PE.png{{!}}90px|game=PE|Fisherman|Wayne|560<br/>3 {{i|Poké Ball}}s|2|129|Magikarp|♂|14|None|098|Krabby|♂|14|None|36=コウサク|37=Kōsaku}}
+{{trainerdiv}}
+{{Trainerentry|VSCoach Trainer F PE.png{{!}}90px|game=PE|Coach Trainer|Amala|1,600|1|066|Machop|♂|16|None|36=ハリマヤ|37=Harimaya}}
+{{trainerdiv|land|After becoming Champion}}
+{{Trainerentry/master|VSPsychic Master PE.png{{!}}90px|Psychic|Harrison|121|Starmie||75|Normal|Minimize|Psychic|Psywave|Psychic|Light Screen|36=ケント|37=Kent}}
+{{Trainerfooter|land|PE}}
+
+==Differences among generations==
+[[File:Kanto Route 25 HGSS.png|thumb|340px|Route 25 in {{game|HeartGold and SoulSilver|s}}]]
+===Generations I and III===
+The [[route]] layout in [[Generation]]s {{gen|I}} and {{gen|III}} is nearly identical. The only change is the closing of the hill behind the [[Sea Cottage]] in Generation III.
+
+===Generation II===
+In [[Generation II]], the maze was reduced in size and more {{pkmn|Trainer}}s were added to the west side of Route 25. This move was made due to the loss of the Nugget Bridge in Generation II. To compensate, the challenge has been moved from the bridge on {{rt|24|Kanto}} to the maze on Route 25. At the end of the maze, the reward for defeating all of the Trainers in the maze is a [[Nugget]].
+
+===Generation IV=== 
+The route is nearly identical in structure to Generation III with the exception of a few minor changes. The move of the Nugget Bridge challenge to Route 25 still remains from Generation II and the territory that Route 25 occupies is the same as Generation II. The hedge that goes along the bottom of the maze is now a fence and the maze area is elevated, making the bottom half of the loop below the mountain appear at a lower level. There is also a cliff to the right of Bill's house, where {{p|Suicune}} can be found and caught after roaming throughout [[Johto]] and [[Kanto]]. [[Misty]] appears here as well during the evening, if Suicune is not there. The two ponds have also been replaced by one large pond, which is surrounded by a fence.
+
+==Music==
+{| class="roundtable" style="margin:auto; text-align: center; background: #{{locationcolor/med|land}}; border: 3px solid #{{locationcolor/dark|land}}"
+|- style="background:#{{locationcolor/light|land}}"
+! Games
+! Song name (Japanese) 
+! Song name (English) 
+! Composition
+! Arrangement
+|- style="background:#FFF"
+! {{GameIcon|R}}{{GameIcon|Gr}}{{GameIcon|B}}{{GameIcon|Y}}
+| ハナダへの道－オツキミ山より
+| [[Pokémon Red & Pokémon Green: Super Music Collection|To Bill: Leaving Cerulean City]]
+| [[Junichi Masuda]]
+| [[Junichi Masuda]]
+|- style="background:#FFF"
+! {{GameIcon|G}}{{GameIcon|S}}{{GameIcon|C}}
+| 3ばんどうろ
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Route 3]]
+| [[Junichi Masuda]]
+| [[Go Ichinose]]
+|- style="background:#FFF"
+! {{GameIcon|FR}}{{GameIcon|LG}}
+| ポケモンの世界へようこそ！
+| [[Pokémon FireRed & Pokémon LeafGreen: Super Music Collection|Welcome to the World of Pokémon!]] 
+| [[Junichi Masuda]] 
+| [[Go Ichinose]]
+|- style="background:#FFF"
+! {{GameIcon|HG}}{{GameIcon|SS}}
+| 24ばんどうろ|| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Route 24]] || [[Junichi Masuda]] || [[Takuto Kitsuta]]
+|- style="background:#FFF"
+! {{GameIcon|LGP}}{{GameIcon|LGE}}
+| ハナダへの道－オツキミ山より || [[Pokémon: Let's Go, Pikachu! & Pokémon: Let's Go, Eevee! Super Music Collection|To Bill: Leaving Cerulean City]] || [[Junichi Masuda]] || [[Shota Kageyama]]
+|}
+
+==In animation==
+[[File:Kanto Route 25 anime.png|thumb|250px|Route 25 in {{aniseries|OS}}]]
+===''Pokémon the Series''===
+===={{aniseries|OS}}====
+Route 25 appeared in ''[[EP012|Here Comes the Squirtle Squad]]'' and ''[[EP013|Mystery at the Lighthouse]]'', where it seems to lead to [[Vermilion City]], instead of {{rt|6|Kanto}}. A small town is shown to be located somewhere on the route in ''Here Comes the Squirtle Squad''. [[Bill's Lighthouse]] is also located somewhere on this route, as shown in ''Mystery at the Lighthouse''. This route is near the sea, and there is a beach where Ash {{pkmn2|caught}} his {{AP|Krabby}}.
+{{-}}
+
+==In the manga==
+[[File:Kanto Routes 24-25 Adventures.png|thumb|230px|Route 25 in [[Pokémon Adventures]]]]
+[[File:Kanto Route 25 Zensho.png|thumb|left|x200px|Route 25 in [[Pokémon Zensho]]]]
+===Pokémon Adventures===
+===={{MangaArc|Red, Green & Blue}}====
+Route 25 debuted in ''[[PS009|...But Fearow Itself!]]'' as the place where {{adv|Bill}}'s [[Sea Cottage]] is located and where {{adv|Red}} first met him.
+
+===Pokémon Zensho===
+Route 25 appeared in [[PZ04]] when {{Zensho|Satoshi}} visited [[Bill]] at the Sea Cottage.
+{{-}}
+
+==Trivia==
+[[File:Mistysdate.png|thumb|200px|Misty on a date]]
+* Route 25 is one of only four numbered routes in the [[Pokémon world]] that is a dead end, the others being {{rt|18|Unova}} in [[Unova]], {{rt|224|Sinnoh}} in [[Sinnoh]] (if the {{player}} does not have [[Oak's Letter]]), and {{rt|2|Galar}} in [[Galar]].
+* The increase of {{p|Krabby}}'s encounter rate from 33% to 70% and the addition of {{p|Kingler}} between {{2v2|Red|Blue}} and {{v2|Yellow}} can be taken as a [[List of cross-canon references|reference]] to the {{aniseries|OS}} episode ''[[EP013|Mystery at the Lighthouse]]'', considering the fact that Route 25 is the place where Ash caught his Krabby.
+* [[Misty]], the [[Cerulean City]] [[Gym Leader]], likes to bring her dates to the Cerulean Cape on the east side of Route 25. One such date is interrupted in [[Generation II]] when the {{player}} encounters Misty at the land bridge between the two ponds following the restoration of power to Kanto. In {{game|HeartGold and SoulSilver|s}}, the date instead takes place on the hill located just east of the cottage.
+* In HeartGold and SoulSilver, Misty mentions how she loves watching the sunset when talking to her, yet she is on the east coast staring off into the east, while the sun would set in the west.
+
+==Related articles==
+* [[Sea Cottage]]
+* [[Bill's Lighthouse]]
+
+{{Kanto}}
+{{legendarylocations|kanto}}<br>
+{{Project Routes notice}}
+
+[[Category:Kanto locations|Route 025]]
+[[Category:Routes|Route 025]]
+[[Category:Red, Blue and Yellow locations|Route 025]]
+[[Category:Gold, Silver and Crystal locations|Route 025]]
+[[Category:FireRed and LeafGreen locations|Route 025]]
+[[Category:HeartGold and SoulSilver locations|Route 025]]
+[[Category:Let's Go, Pikachu! and Let's Go, Eevee! locations|Route 025]]
+
+[[de:Route 25 (Kanto)]]
+[[es:Ruta 25 (Kanto)]]
+[[fr:Route 25 (Kanto)]]
+[[it:Percorso 25 (Kanto)]]
+[[ja:25ばんどうろ (カントー地方)]]
+[[zh:２５号道路（关都）]]

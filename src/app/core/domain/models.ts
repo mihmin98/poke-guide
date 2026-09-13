@@ -68,6 +68,33 @@ export interface GameLocation {
   source: { title: string; revid: number };
   notes: string[];
   subAreas: SubArea[];
+  /** Items found here (plan §7.13), in page order. */
+  items: LocationItem[];
+  /** Item-related notes, e.g. fake item balls. */
+  itemNotes: string[];
+}
+
+export type ItemObtainMethod = 'pickup' | 'gift' | 'reward' | 'drop' | 'choice';
+
+export interface LocationItem {
+  itemId: string;
+  /** As spelled for the generation: "TM28 Dig", "Coins". */
+  name: string;
+  quantity: number;
+  games: GameId[];
+  obtain: ItemObtainMethod;
+  hidden?: true;
+  /** A heading or floor ("B4F"). */
+  subArea: string | null;
+  /** Plain text, without the parsed markers. */
+  where: string;
+  /** AND of alternatives, as unlock ids: `[['cut', 'surf']]` is Cut or Surf. */
+  requires?: string[][];
+  /** Only reachable later than the location's part (Viridian Gym TM). */
+  fromPart?: Partial<Record<GameId, number>>;
+  choiceGroupId?: string;
+  /** Only on override items taken from another page. */
+  source?: { title: string; revid: number };
 }
 
 export type GrowthRate = 'erratic' | 'fast' | 'medium-fast' | 'medium-slow' | 'slow' | 'fluctuating';
@@ -168,6 +195,8 @@ export interface ExclusiveGroup {
 export interface Unlock {
   id: string;
   label: string;
+  /** `move` is an HM field move, including the badge needed to use it. */
+  kind: 'move' | 'key-item' | 'badge' | 'story';
   locationId: string;
   part: number;
 }

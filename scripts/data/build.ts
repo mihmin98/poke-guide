@@ -92,8 +92,9 @@ async function buildGroup(
   const errors = issues.filter((i) => i.level === 'error').length;
   const warnings = issues.filter((i) => i.level === 'warning').length;
   const encounters = data.locations.flatMap((l) => l.subAreas.flatMap((a) => a.encounters)).length;
+  const items = data.locations.flatMap((l) => l.items).length;
   console.log(
-    `\n${data.species.length} species, ${data.locations.length} locations, ${encounters} encounters, ` +
+    `\n${data.species.length} species, ${data.locations.length} locations, ${encounters} encounters, ${items} items, ` +
       `${pokedex.moves.length} moves · ${errors} error(s), ${warnings} warning(s)`,
   );
   if (errors > 0) {

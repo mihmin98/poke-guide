@@ -1,0 +1,122 @@
+<!-- poke-guide fixture: {"title":"Sea Cottage","resolvedTitle":"Sea Cottage","revid":4606397,"timestamp":"2026-08-05T09:39:09Z","fetchedAt":"2026-09-13T09:40:47.729Z"} -->
+{{missing image|2=Missing interior images for Gen II and IV}}
+{{Infobox location
+|image=Bill's House Exterior LGPE.png
+|size=250px
+|type=land
+|location_name=Sea Cottage 
+|japanese_name={{tt|岬の小屋|みさきのこや}}
+|translated_name=Cape Cottage
+|location=Northeast of [[Cerulean City]] on {{rt|25|Kanto}}
+|region=Kanto
+|generation={{Gen|I}}, {{Gen|II}}, {{Gen|III}}, {{Gen|IV}}, {{Gen|VII}}
+|map=Kanto Route 25 Map.png
+}}
+The '''Sea Cottage''' (Japanese: '''{{tt|岬の小屋|みさきのこや}}''' ''Cape Cottage'') is a small building located in the northeast of [[Kanto]] on {{rt|25|Kanto}}. It is on Cerulean Cape and is home to [[Bill]].
+
+==In the core series games==
+In [[Generation I|Generations I]], {{gen|III}}, and {{gen|VII}}, the Sea Cottage is home to Bill. While experimenting with his Teleporter, he was accidentally combined with a {{p|Clefairy}}{{sup/3|FRLG}}/{{p|Nidorino}}{{sup/7|PE}}, and he asks the {{player}} to help him by running the Cell Separation System for him. After he is back to normal, he rewards the player with a [[S.S. Ticket|ticket]] for the [[S.S. Anne]].
+
+In Generations I and III, Bill's computer contains info about {{p|Eevee}}, {{p|Flareon}}, {{p|Jolteon}}, and {{p|Vaporeon}}, allowing the player to add their seen entries to their [[Pokédex]], while in Generation VII, it instead contains info regarding the [[legendary birds]] and their habitats.
+
+In [[Generation II|Generations II]] and {{gen|IV}}, [[Bill's grandfather]] is house-sitting the Sea Cottage and will ask the player to show him certain Pokémon. In return, he will give out related [[Evolution stone]]s; in {{game|Gold and Silver|s}}, this is the only way to get those items outside of [[Mystery Gift]] or trading with another game.
+{{left clear}}
+
+===Items===
+{{Itlisth|land}}
+{{Itemlist|S.S. Ticket|Reward for helping [[Bill]] turn back to normal|R=yes|B=yes|Y=yes|FR=yes|LG=yes|LP=yes|LE=yes}}
+{{Itemlist|Everstone|From [[Bill's grandfather]] for showing him a {{p|Lickitung}}|G=yes|S=yes|C=yes|SS=yes}}
+{{Itemlist|Everstone|From Bill's grandfather for showing him a {{p|Jigglypuff}}|HG=yes}}
+{{Itemlist|Fire Stone|From Bill's grandfather for showing him a {{p|Growlithe}}|G=yes|C=yes|HG=yes}}
+{{Itemlist|Fire Stone|From Bill's grandfather for showing him a {{p|Vulpix}}|S=yes|SS=yes}}
+{{Itemlist|Leaf Stone|From Bill's grandfather for showing him an {{p|Oddish}}|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Thunder Stone|From Bill's grandfather for showing him a {{p|Pichu}}|G=yes|S=yes|C=yes|HG=yes|SS=yes|display=[[Thunder Stone|Thunderstone]]}}
+{{Itemlist|Water Stone|From Bill's grandfather for showing him a {{p|Staryu}}|G=yes|S=yes|C=yes|SS=yes}}
+{{Itemlist|Water Stone|From Bill's grandfather for showing him a {{p|Marill}}|HG=yes}}
+{{Itlistfoot|land}}
+
+===Layout===
+====Outside====
+<gallery>
+Cerulean Cape RBY.png|Sea Cottage exterior ({{game|Red and Blue|s}})
+Cerulean Cape GSC.png|Sea Cottage exterior ({{game|Gold and Silver|s}})
+Sea Cottage FRLG.png|Sea Cottage ({{game|FireRed and LeafGreen|s}})
+Cerulean Cape HGSS.png|Sea Cottage exterior ({{game|HeartGold and SoulSilver|s}})
+Bill's House Exterior LGPE.png|Sea Cottage ({{LGPE}})
+</gallery>
+
+====Inside====
+<gallery>
+Sea Cottage interior RBY.png|Sea Cottage interior ({{game|Red and Blue|s}})
+Sea Cottage interior FRLG.png|Sea Cottage interior ({{game|FireRed and LeafGreen|s}})
+Bill's House Entrance LGPE.png|Sea Cottage interior ({{LGPE}})
+</gallery>
+
+==In the spin-off games==
+===Pokémon Pokopia===
+In [[Pokémon Pokopia Expansion Pass]], the ruins of the Sea Cottage can be found at [[Bubbly Basin]].
+
+==In animation==
+[[File:Bill Lighthouse.png|thumb|250px|[[Bill's Lighthouse]] in {{aniseries|OS}}]]
+===''Pokémon the Series''===
+{{main|Bill's Lighthouse}}
+===={{aniseries|OS}}====
+While the Sea Cottage does not appear in {{aniseries|PTS}}, the [[Bill's Lighthouse|lighthouse]] in ''[[EP013|Mystery at the Lighthouse]]'' fills the same purpose as the home of Bill.
+
+{{Ash}} and {{ashfr}} first stumbled across the lighthouse after Ash {{pkmn2|caught}} a {{AP|Krabby}} and it disappeared. When {{an|Brock}} explained that Krabby was sent to [[Professor Oak's Laboratory]] due to Ash already having six Pokémon [[party|on hand]], Ash immediately wanted to call {{an|Professor Oak}} to see if Krabby made it safely. Spotting the lighthouse, the group decided to visit it in the hopes of being able to use a phone there. At the lighthouse, the group met Bill, who told them about the history of the [[Pokémon world]]. He also told them about a {{pkmn2|giant}}, {{p|Dragonite|mysterious Pokémon}} that he had been researching. Coincidentally, that giant Pokémon ended up showing up at the lighthouse that night, but due to {{TRT}} attacking it, the Pokémon ended up destroying the lighthouse and leaving almost immediately, despite Bill's pleas for it to stay.
+{{-}}
+
+==In the manga==
+[[File:Sea Cottage Adventures.png|thumb|230px|Sea Cottage in [[Pokémon Adventures]]]]
+===Pokémon Adventures===
+===={{MangaArc|Red, Green & Blue}}====
+The Sea Cottage debuted in ''[[PS009|...But Fearow Itself!]]'' as {{adv|Bill}}'s home and the place where he makes all of his inventions. Bill was transformed into a mutated {{p|Rattata}} by accident when he was fixing one of his two Pokémon Transporters. As a Rattata, Bill got snatched by a {{pkmn2|wild}} {{p|Fearow}}, which {{adv|Red}} saved him from before {{pkmn2|caught|catching}} it. Later Red helped Bill to turn back to normal, and as a thanks, Bill offered Red the chance to use the [[Pokémon Storage System]] to lessen the amount of Pokémon he had to carry around with him.
+
+===={{MangaArc|Yellow}}====
+In ''[[PS059|Hitmonlee, Baby! (One More Time)]]'', {{adv|Green}} snuck into the Sea Cottage in order to find information about the missing Red, believing the culprits behind his disappearance also having been behind her own childhood kidnapping. Bill, thinking she was a burglar, tried to attack her with his {{p|Vulpix}}, but was quickly overpowered by Green's {{p|Blastoise}}, [[Blasty]]. Green managed to convince Bill into helping her, but before they could find out anything other than that Red had withdrawn his [[Vee|Eevee]] from the Storage System after his disappearance, they were attacked by a {{p|Hitmonlee}}, which the [[Elite Four]] had sent after them, forcing the two to escape.
+
+===={{MangaArc|Omega Ruby & Alpha Sapphire}}====
+In ''[[PS607|Blastoise Transforms]]'', it was revealed that Bill had kept the {{i|Ruby}} and {{i|Sapphire}} gems retrieved from [[Team Rocket]] during the {{MangaArc|FireRed & LeafGreen}} at the Sea Cottage. Bill noticed that the gems had started changing back into the [[Colored orbs|orbs]] they had been before, and called Red and Green to his cottage to investigate, because {{adv|Blue}} was away from Kanto at the time. However, before the two [[Pokédex holder]]s could reach the Sea Cottage, Bill was attacked by [[Maxie]] and [[Archie]], who stole the reforming orbs and headed towards [[Hoenn]] on Bill's boat, with Red and Green giving pursuit.
+{{-}}
+
+===Pokémon Zensho===
+[[File:Sea Cottage Zensho.png|thumb|230px|Sea Cottage in [[Pokémon Zensho]]]]
+The Sea Cottage appeared in [[PZ04]]. After finding out that the [[Pokémon Storage System]] was not working, {{Zensho|Satoshi}} went to meet [[Bill]] at his home. Outside Bill's house, he spotted a peculiar {{p|Nidoran♂}} and {{pkmn2|caught}} it, thinking it was a new [[Pokémon (species)|species]], only for it turn out to be Bill, who had accidentally fused himself with a Pokémon. After Satoshi had helped him to undo the fusion, Bill rewarded him by showing him pictures of {{p|Eevee}} and [[Eeveelution|its Evolutions]], as well as giving him a [[S.S. Ticket|ticket]] for the [[S.S. Anne]].
+
+When Satoshi jokingly mentioned that Bill was lucky to not have accidentally fused himself with a {{p|Nidoran♀}}, Bill became genuinely curious about the idea; Satoshi later received a message from Bill in [[Vermilion City]], asking for his help in undoing an unsuccessful fusion with a Nidoran♀, much to Satoshi's exasperation.
+{{-}}
+
+==In other languages==
+{{langtable|color={{locationcolor/med|land}}|bordercolor={{locationcolor/dark|land}}
+| zh_yue = 海角小屋 ''{{tt|Hóigok Síu'ūk|Cape Cottage}}'' {{tt|*|Games}}<br>海岸小屋 ''{{tt|Hóingohn Síu'ūk|Seaside Cottage}}'' {{tt|*|Adventures}}<br>北之岬小屋 ''{{tt|Bāk jī Gaap Síu'ūk|North Cape Cottage}}'' {{tt|*|GS Guidebook & GS Pokédex}}<br>岬之屋 ''{{tt|Gaap jī Ūk|Cape Cottage}}'' {{tt|*|RGB Guidebook}}
+| zh_cmn = 海角小屋 ''{{tt|Hǎijiǎo Xiǎowū|Cape Cottage}}'' {{tt|*|Games}}<br>海岸小屋 ''{{tt|Hǎi'àn Xiǎowū|Seaside Cottage}}'' {{tt|*|Adventures}}
+| cs = Chata na mysu
+| fr = Villa du Cap
+| de = Küstenhaus
+| it = Miramare
+| ko = 호수공원의 오두막 ''{{tt|Hosugongwon-ui Odumak|Lake Park Cottage}}''
+| pt_br = Casebre do Litoral (manga)<br>Chalé do Mar (The Official Pokémon Handbook)<br>Mar Cottage (Red and Blue Manual)<br>Cabana do Mar (Yellow Manual)
+| ru = Дом на побережье ''Dom na poberezh'ye''
+| es = Casa del Mar<br>Casa del mar{{sup/4|HGSS}}
+| vi = Căn hộ trên mũi đất
+}}
+
+==Related articles==
+* {{rt|25|Kanto}}
+
+{{Kanto}}
+{{Project Locations notice}}
+
+[[Category:Kanto locations]]
+[[Category:Red, Blue and Yellow locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:FireRed and LeafGreen locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Let's Go, Pikachu! and Let's Go, Eevee! locations]]
+[[Category:Dwellings]]
+
+[[de:Küstenhaus]]
+[[es:Ruta 25 (Kanto)#Casa del Mar]]
+[[it:Miramare]]
+[[ja:みさきのこや]]
+[[zh:海角小屋]]

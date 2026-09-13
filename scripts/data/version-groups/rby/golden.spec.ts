@@ -93,10 +93,92 @@ describe('rby data: encounters (plan §7.8)', () => {
     }
   });
 
+  it("Professor Oak's Lab has the starters: Bulbasaur/Charmander/Squirtle in Red/Blue, Pikachu in Yellow", () => {
+    for (const dex of [1, 4, 7]) expect(gamesOf('oaks-lab', dex)).toEqual(['red', 'blue']);
+    expect(gamesOf('oaks-lab', 25)).toEqual(['yellow']);
+    expect(gamesOf('pallet-town', 1)).toEqual([]);
+  });
+
   it('Route 24 Charmander is a Yellow-only gift', () => {
     expect(encounters('route-24', 4).map((e) => [e.method, Object.keys(e.games)])).toEqual([
       ['gift', ['yellow']],
     ]);
+  });
+});
+
+describe('rby data: items (plan §7.13)', () => {
+  const items = (locationId: string) => data.locations.find((l) => l.id === locationId)!.items;
+  const find = (locationId: string, itemId: string) => items(locationId).filter((i) => i.itemId === itemId);
+
+  it('has per-game item totals, including the overrides', () => {
+    const all = data.locations.flatMap((l) => l.items);
+    expect(Object.fromEntries(data.games.map((g) => [g, all.filter((i) => i.games.includes(g)).length]))).toEqual({
+      red: 214,
+      blue: 214,
+      yellow: 219,
+    });
+  });
+
+  it('parses stated prerequisites, trainer drops and alternatives', () => {
+    expect(find('route-12', 'tm16-pay-day')[0]).toMatchObject({ requires: [['surf']], obtain: 'pickup' });
+    expect(find('team-rocket-hideout', 'silph-scope')[0]).toMatchObject({ obtain: 'drop', requires: [['lift-key']] });
+    expect(find('route-25', 'tm19-seismic-toss')[0]!.requires).toEqual([['route-25-jr-trainer', 'cut']]);
+  });
+
+  it('keeps per-game spots apart (Viridian Forest) and splits bulleted spots (Mt. Moon)', () => {
+    expect(find('viridian-forest', 'antidote').map((i) => i.games)).toEqual([['red', 'blue', 'yellow'], ['red', 'blue']]);
+    expect(find('viridian-forest', 'potion').map((i) => i.games)).toEqual([
+      ['yellow'],
+      ['red', 'blue', 'yellow'],
+      ['red', 'blue', 'yellow'],
+    ]);
+    expect(find('mt-moon', 'potion').map((i) => i.quantity)).toEqual([1, 1]);
+    expect(
+      items('mt-moon')
+        .filter((i) => i.obtain === 'choice')
+        .map((i) => [i.itemId, i.choiceGroupId]),
+    ).toEqual([
+      ['dome-fossil', 'mt-moon-fossil'],
+      ['helix-fossil', 'mt-moon-fossil'],
+    ]);
+  });
+
+  it('has Game Corner coins and the Power Plant fake item balls', () => {
+    expect(find('celadon-game-corner', 'coins')).toHaveLength(14);
+    expect(data.locations.find((l) => l.id === 'power-plant')!.itemNotes).toEqual([
+      'Fake item balls: Voltorb ×6',
+      'Fake item balls: Electrode ×2',
+    ]);
+  });
+
+  it('adds Gym leader and rooftop TMs from their source pages, and walkthrough-only gates', () => {
+    expect(find('viridian-city', 'tm27-fissure')[0]).toMatchObject({
+      subArea: 'Gym',
+      obtain: 'reward',
+      fromPart: { red: 14, blue: 14, yellow: 14 },
+      source: { title: 'Walkthrough:Pokémon Red and Blue/Part 2' },
+    });
+    expect(find('vermilion-city', 'tm24-thunderbolt')[0]!.requires).toEqual([['cut']]);
+    expect(items('celadon-department-store').map((i) => i.name)).toEqual([
+      'TM18 Counter',
+      'TM13 Ice Beam',
+      'TM48 Rock Slide',
+      'TM49 Tri Attack',
+    ]);
+    expect(find('silph-co', 'tm03-swords-dance')[0]!.requires).toEqual([['card-key']]);
+    expect(find('victory-road', 'tm43-sky-attack')[0]!.requires).toEqual([['strength']]);
+    expect(items('sea-cottage').map((i) => i.name)).toEqual(['S.S. Ticket']);
+  });
+
+  it('only requires unlocks of the item’s games, and lists walkthrough pages as sources', () => {
+    for (const item of data.locations.flatMap((l) => l.items)) {
+      for (const id of (item.requires ?? []).flat()) {
+        for (const game of item.games) expect(data.unlocks[game]!.map((u) => u.id)).toContain(id);
+      }
+    }
+    const titles = data.sources.map((s) => s.title);
+    expect(titles).toContain('Walkthrough:Pokémon Yellow/Part 17');
+    expect(titles).toContain('Celadon Department Store');
   });
 });
 

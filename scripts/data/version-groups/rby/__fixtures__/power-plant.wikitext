@@ -1,0 +1,409 @@
+<!-- poke-guide fixture: {"title":"Kanto Power Plant","resolvedTitle":"Kanto Power Plant","revid":4593711,"timestamp":"2026-07-21T19:58:59Z","fetchedAt":"2026-09-12T22:07:07.408Z"} -->
+{{search|Power Plant in [[Kanto]]|other uses|Power Plant}}
+{{Infobox location
+|image=Power Plant PE.png
+|type=building
+|mapdesc=A power plant that was abandoned years ago, though some of the machines still work. It is infested with electric {{ScPkmn}}.{{sup/3|FRLG}}<br/>The plant that generates all the energy for the Kanto region.{{sup/4|HGSS}}<br>A technological complex where Electric-type Pokémon are commonly found.{{sup/7|PE}}
+|location_name=Power Plant
+|japanese_name={{tt|無人発電所|むじんはつでんしょ}} / {{tt|発電所|はつでんしょ}}
+|translated_name=Abandoned Power Plant / Power Plant
+|location=South of {{rt|10|Kanto}}'s [[Pokémon Center]]
+|region=Kanto
+|generation={{gen|I}}, {{gen|II}}, {{gen|III}}, {{gen|IV}}, {{gen|VII}}
+|map=Kanto Power Plant Map.png
+}}
+
+The '''Power Plant''' (Japanese: '''{{tt|無人発電所|むじんはつでんしょ}}''' ''Abandoned Power Plant'' in [[Generation]]s {{gen|I}}, {{gen|III}}, and {{gen|VII}}, '''{{tt|発電所|はつでんしょ}}''' ''Power Plant'' in Generations {{gen|II}} and {{gen|IV}}), occasionally referred to as the '''Kanto Power Plant''' (Japanese: '''カントーはつでんしょ''' ''Kanto Power Plant'') in Generations II and IV, is a facility located on {{rt|10|Kanto}} in [[Kanto]].
+
+In some early guidebooks, this was also referred to as '''Power Station'''.<ref>''"After you have fixed the problem at the '''Power Station''' in Kanto, [...]"'' - ''[[Pokémon Gold and Silver: Official Nintendo Player's Guide]]'', page 34; ''[[Pokémon Crystal: Official Nintendo Player's Guide]]'', page 40</ref>
+
+==Description==
+The Power Plant was abandoned years before the events of the [[Generation I]], {{gen|III}}, and {{gen|VII}} games, though some of the machinery still works. It was refurbished at some time before Generations {{gen|II}} and {{gen|IV}} to provide power for the [[Magnet Train]]. In Generations I, III, and VII, it is a home for {{type|Electric}} {{OBP|Pokémon|species}}. {{m|Surf}}ing{{sup/1}}{{sup/2}}{{sup/3|FRLG}}{{sup/4|HGSS}} or [[Secret Technique|Sea Skimming]]{{sup/7|PE}} from {{rt|10|Kanto}} is required to reach it.
+
+Many [[item]] balls located inside of the Power Plant are actually {{p|Voltorb}} or {{p|Electrode}}, making it somewhat hazardous to look for treasure here.
+
+It is the roost of the [[Legendary Pokémon]] {{p|Zapdos}} in Generations I, III, and VII.
+
+* In the [[Generation II]] games, it is no longer found here, making it completely unobtainable without [[Trade|trading]] from the Generation I games.
+* In {{game|HeartGold and SoulSilver|s}}, it appears outside of the Power Plant after all sixteen [[Badge]]s of [[Kanto]] and [[Johto]] have been obtained.
+
+{{p|Grimer}} and {{p|Muk}} can be found here in {{game|Yellow}} and Let's Go, Pikachu!, a direct [[List of cross-canon references|reference]] to the {{aniseries|PTS}} episode ''[[EP030|Sparks Fly for Magnemite]]'', where a group of Grimer and a {{AP|Muk}} took over a power plant in [[Gringey City]].
+
+In Generation I, the back exit found near Zapdos transports the player back to the front door. In Generation III, the exit leads to a small area next to the facility cut off by a [[ledge]] and can be reentered as long as the player doesn't jump over the ledge. In Generation VII, the back exit is replaced with a one-way [[warp panel]] that transports the player back to the front door.
+
+==Items==
+{{itlisth|building}}
+{{Itemlist|TM Electric|In the southeast area of the facility|R=yes|B=yes|Y=yes|FR=yes|LG=yes|display={{TM|25|Thunder}}}}
+{{Itemlist|Thunder Stone|In the northeast room|FR=yes|LG=yes|LP=yes|LE=yes}}
+{{Itemlist|Carbos|Northeast of the entrance|R=yes|B=yes|Y=yes}}
+{{Itemlist|Max Elixir|On a rock northwest of a {{p|Voltorb}} and an {{p|Electrode}}, in the long horizontal area near the center of the facility ''(hidden)''|R=yes|B=yes|Y=yes|display=[[Max Elixir|Max Elixer]]}}
+{{Itemlist|TM Psychic|In the area east of the south entrance, northwest of a Voltorb|R=yes|B=yes|Y=yes|display={{TM|33|Reflect}}}}
+{{Itemlist|Rare Candy|In the northeast area of the facility|R=yes|B=yes|Y=yes}}
+{{Itemlist|HP Up|In the northeast area of the facility|R=yes|B=yes|Y=yes}}
+{{Itemlist|PP Up|On a rock north of the east indent of the two indents between the rocks, in the area east of the northwestmost area ''(hidden)''|R=yes|B=yes|Y=yes}}
+{{Itemlist|Max Potion|Northeast of the south entrance|FR=yes|LG=yes}}
+{{Itemlist|TM Normal|In the long horizontal area near the center of the facility|FR=yes|LG=yes|display={{TM|17|Protect}}}}
+{{Itemlist|Elixir|In the long horizontal area near the center of the facility|FR=yes|LG=yes}}
+{{Itemlist|Max Elixir|In the small room with three machines just north of the long area near the center of the facility ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Thunder Stone|One square south and three squares east of {{p|Zapdos}} ''(hidden)''|FR=yes|LG=yes|display=[[Thunder Stone|Thunderstone]]}}
+{{Itemlist|Max Revive|Northeast of the entrance|LP=yes|LE=yes}}
+{{Itemlist|Rare Candy|
+* Reward for defeating {{tc|Coach Trainer}} Mable (×5)
+* In the southwest room, next to the large machine|LP=yes|LE=yes|display=[[Rare Candy]] ×6}}
+{{Itemlist|X Sp. Def|Southeast of Coach Trainer Mable|LP=yes|LE=yes}}
+{{Itemlist|Max Potion|
+* In the northeast corner of the long horizontal area near the center of the facility
+* In the northeast corner of the northeast room|LP=yes|LE=yes|display=[[Max Potion]] ×2}}
+{{Itemlist|Candy Red|In the long horizontal area near the center of the facility ''(hidden)'' (daily)|LP=yes|LE=yes|display=[[Candy|Voltorb Candy]]}}
+{{Itemlist|TM Electric VI|In the southeast area of the facility|LP=yes|LE=yes|display={{TM|38|Thunder}}}}
+{{Itemlist|Paralyze Heal|In the small area north of the long horizontal area near the center of the facility, near an Electrode|LP=yes|LE=yes}}
+{{Itemlist|TM Electric|From the Power Plant manager once the [[Machine Part]] is recovered|G=yes|S=yes|C=yes|display={{TM|07|Zap Cannon}}}}
+{{Itemlist|TM Electric|From the Power Plant manager once the Machine Part is recovered|HG=yes|SS=yes|display={{TM|57|Charge Beam}}}}
+{{Itemlist|Metal Coat|Held by Maggie, a {{p|Magneton}} the player receives in a [[In-game trade|trade]]|C=yes|HG=yes|SS=yes}}
+{{itlistfoot|building}}
+
+===Fake items===
+In [[Generation VII]], the fake item balls are upside down.
+
+{{itlisth|building}}
+{{Itemlist|None|sprite=100MS|
+* Northeast of the [[Carbos]]
+* In the long horizontal area near the center of the facility
+* In the area east of the south entrance, southeast of {{TM|33|Reflect}}
+* In the area south of the long horizontal area near the center of the facility ×2
+* Far east of {{TM|25|Thunder}}, in the southeast area of the facility|R=yes|B=yes|Y=yes|display={{p|Voltorb}} ×6}}
+{{Itemlist|None|sprite=101MS|
+* In the long horizontal area near the center of the facility
+* In the small area north of the long horizontal area near the center of the facility
+|R=yes|B=yes|Y=yes|display={{p|Electrode}} ×2}}
+{{Itemlist|None|sprite=101MS|
+* In the area east of the south entrance
+* In the northeast area of the facility|FR=yes|LG=yes|display={{p|Electrode}} ×2}}
+{{Itemlist|None|sprite=101MS|
+* In the long horizontal area near the center of the facility
+* In the southeast area of the facility
+* In the area east of {{p|Zapdos}}
+* In the small area north of the long horizontal area near the center of the facility|LP=yes|LE=yes|display={{p|Electrode}} ×4}}
+{{itlistfoot|building}}
+
+==Pokémon==
+===Generation I===
+<!--Wild Pokémon Encounter Data<ref>[https://github.com/pret/pokered/tree/master/data/wild Pokémon Red and Blue Disassembly Wild Encounter Data - Pret]</ref><ref>[https://github.com/pret/pokeyellow/tree/master/data/wild Pokémon Yellow Disassembly Wild Encounter Data - Pret]</ref><ref>[https://shinyfinder.github.io/encounter-slots/blue-japanese/Land%20&%20Surf.html Pokémon Blue (Japanese) Wild Encounter Data - Shinyfinder]</ref>-->
+{{catch/header|building|no}}
+{{Catch/entry1|025|Pikachu|yes|yes|no|Building|20, 24|25%|type1=Electric}}
+{{Catch/entry1|026|Raichu|no|yes|no|Building|33, 36|5%|type1=Electric}}
+{{Catch/entry1|081|Magnemite|yes|yes|no|Building|21, 23|30%|type1=Electric}}
+{{Catch/entry1|081|Magnemite|no|no|yes|Building|30, 35|40%|type1=Electric}}
+{{Catch/entry1|082|Magneton|yes|yes|no|Building|32, 35|10%|type1=Electric}}
+{{Catch/entry1|082|Magneton|no|no|yes|Building|33, 38|20%|type1=Electric}}
+{{Catch/entry1|088|Grimer|no|no|yes|Building|33, 37|15%|type1=Poison}}
+{{Catch/entry1|089|Muk|no|no|yes|Building|33, 37|5%|type1=Poison}}
+{{Catch/entry1|100|Voltorb|yes|yes|no|Building|21, 23|30%|type1=Electric}}
+{{Catch/entry1|100|Voltorb|no|no|yes|Building|33, 37|20%|type1=Electric}}
+{{Catch/entry1|125|Electabuzz|yes|no|no|Building|33, 36|5%|type1=Electric}}
+{{Catch/footer|building}}
+
+===Generation II===
+{{catch/header|building|4}}
+{{catch/div|building|Special}}
+{{Catch/entry2|082|Magneton|no|no|yes|Trade|The same as the traded Pokémon|all=One|tradenum=051|tradename=Dugtrio|type1=Electric|type2=Steel}}
+{{Catch/footer|building}}
+
+===Generation III===
+{{catch/header|building|no}}
+{{Catch/entryfl|025|Pikachu|yes|yes|Building|22, 24, 26|25%|type1=Electric}}
+{{Catch/entryfl|081|Magnemite|yes|yes|Building|22, 25|30%|type1=Electric|type2=Steel}}
+{{Catch/entryfl|082|Magneton|yes|no|Building|31, 34|10%|type1=Electric|type2=Steel}}
+{{Catch/entryfl|082|Magneton|no|yes|Building|31, 34|15%|type1=Electric|type2=Steel}}
+{{Catch/entryfl|100|Voltorb|yes|yes|Building|22, 25|30%|type1=Electric}}
+{{Catch/entryfl|125|Electabuzz|yes|no|Building|32, 35|5%|type1=Electric}}
+{{Catch/footer|building}}
+
+===Generation IV===
+{{catch/header|building|4}}
+{{catch/div|building|Special}}
+{{catch/entryhs|082|Magneton|yes|yes|Trade|The same as the traded Pokémon|all=One|tradenum=051|tradename=Dugtrio|type1=Electric|type2=Steel}}
+{{Catch/footer|building}}
+
+===Generation VII===
+{{Catch/header|building|no}}
+{{Catch/entrype|081|Magnemite|yes|yes|Building|37-42|23%|type1=Electric|type2=Steel}}
+{{Catch/entrype|082|Magneton|yes|yes|Building|37-42|5%|type1=Electric|type2=Steel}}
+{{Catch/entrype|088|Grimer|yes|no|Building|37-42|25%|type1=Poison}}
+{{Catch/entrype|089|Muk|yes|no|Building|37-42|5%|type1=Poison}}
+{{Catch/entrype|100|Voltorb|yes|yes|Building|37-42|23%|type1=Electric}}
+{{Catch/entrype|101|Electrode|yes|yes|Building|37-42|5%|type1=Electric}}
+{{Catch/entrype|109|Koffing|no|yes|Building|37-42|25%|type1=Poison}}
+{{Catch/entrype|110|Weezing|no|yes|Building|37-42|5%|type1=Poison}}
+{{Catch/entrype|125|Electabuzz|yes|yes|Building|37-42|14%|type1=Electric}}
+{{Catch/div|building|Rare Spawns}}
+{{Catch/entrype|113|Chansey|yes|yes|Building|37-42|-}}
+{{Catch/footer|building|2}}
+
+==Special encounters==
+===Generation I===
+A {{p|Zapdos}} appears here on the first visit.
+
+{{Pokémon
+|gen=1
+|game=Blue
+|ndex=0145
+|pokemon=Zapdos
+|type1=Electric
+|type2=Flying
+|level=50
+|move1=ThunderShock|move1type=Electric
+|move2=Drill Peck|move2type=Flying}}
+
+Six {{p|Voltorb}} and two {{p|Electrode}} appear here as {{DL|Item|fake items}}.
+{{Pokémon/Grid}}
+{{Pokémon
+|gen=1
+|game=Blue
+|ndex=0100
+|pokemon=Voltorb
+|type1=Electric
+|level=40
+|move1=SonicBoom|move1type=Normal
+|move2=Selfdestruct|move2type=Normal
+|move3=Light Screen|move3type=Psychic
+|move4=Swift|move4type=Normal}}
+{{Pokémon
+|gen=1
+|game=Blue
+|ndex=0101
+|pokemon=Electrode
+|type1=Electric
+|level=43
+|move1=SonicBoom|move1type=Normal
+|move2=Selfdestruct|move2type=Normal
+|move3=Light Screen|move3type=Psychic
+|move4=Swift|move4type=Normal}}
+{{Pokémon/Grid/end}}
+
+===Generation III===
+A {{p|Zapdos}} appears here on the first visit. If run from, it respawns upon leaving the area.
+{{Pokémon
+|gen=3
+|game=FireRed
+|ndex=0145
+|pokemon=Zapdos
+|type1=Electric
+|type2=Flying
+|ability=Pressure
+|level=50
+|move1=Thunder Wave|move1type=Electric
+|move2=Agility|move2type=Psychic
+|move3=Detect|move3type=Fighting
+|move4=Drill Peck|move4type=Flying}}
+
+Two {{p|Electrode}} appear here as {{DL|Item|fake items}}.
+
+{{Pokémon
+|gen=3
+|game=FireRed
+|ndex=0101
+|pokemon=Electrode
+|type1=Electric
+|ability=Soundproof
+|ability2=Static
+|level=34
+|move1=SonicBoom|move1type=Normal
+|move2=Spark|move2type=Electric
+|move3=Selfdestruct|move3type=Normal
+|move4=Rollout|move4type=Rock}}
+
+===Generation VII===
+A {{p|Zapdos}} appears here on the first visit. If run from, it respawns after entering the [[Hall of Fame]].
+
+{{Pokémon
+|gen=PE
+|ndex=0145
+|pokemon=Zapdos
+|type1=Electric
+|type2=Flying
+|level=50
+|move1=Drill Peck|move1type=Flying|move1cat=Physical
+|move2=Thunderbolt|move2type=Electric|move2cat=Special
+|move3=Agility|move3type=Psychic|move3cat=Status
+|move4=Light Screen|move4type=Psychic|move4cat=Status}}
+
+Four {{p|Electrode}} appear here as {{DL|Item|fake items}}.
+
+{{Pokémon
+|gen=PE
+|ndex=0101
+|pokemon=Electrode
+|type1=Electric
+|level=42
+|move1=Swift|move1type=Normal|move1cat=Special
+|move2=Self-Destruct|move2type=Normal|move2cat=Physical
+|move3=Screech|move3type=Normal|move3cat=Status
+|move4=Thunderbolt|move4type=Electric|move4cat=Special}}
+
+==Trainers==
+===Generation VII===
+{{trainerheader|building}}
+{{Trainerentry|VSCoach Trainer F PE.png{{!}}90px|game=PE|Coach Trainer|Mable|4,500|3|139|Omastar|♂|44|None|141|Kabutops|♂|44|None|142|Aerodactyl|♂|45|None|36=カモベ|37=Kamobe}}
+{{trainerdiv|building|After becoming Champion}}
+{{Trainerentry/master|VSScientist Master PE.png{{!}}90px|Scientist|Humphrey|100|Voltorb||70|Psychic|Light Screen|Normal|Swift|36=ヒデヒコ|37=Hidehiko}}
+{{trainerfooter|building|PE}}
+
+==Walking Pokémon effects==
+When interacting with [[walking Pokémon]] in {{v2|HeartGold and SoulSilver|s}}, the Pokémon may occasionally show an altered mood specific to this location.
+
+{| class="roundtable" style="margin: auto; text-align: center; background-color: #{{locationcolor/med|cave}}; border: 3px solid #{{locationcolor/dark|cave}}"
+|- style="background:#{{locationcolor/light|cave}}"
+! Games
+! Pokémon
+! Area
+! Quote
+|- style="background-color: #FFF"
+! rowspan="3" | {{GameIcon|HG}}{{GameIcon|SS}}
+|- style="background-color: #FFF"
+| [[File:Ani025OD.png]][[File:Ani026OD.png]]<br>[[File:Ani172OD.png]][[File:Ani172ODSp.png]]<br>{{p|Pikachu}}, {{p|Raichu}} and {{p|Pichu}} (both forms)
+| Anywhere
+| <Pokémon's name> is so happy, it began to dance!
+|- style="background-color: #FFF"
+| [[File:Ani025OD.png]][[File:Ani026OD.png]]<br>[[File:Ani172OD.png]][[File:Ani172ODSp.png]]<br>{{p|Pikachu}}, {{p|Raichu}} and {{p|Pichu}} (both forms)
+| Anywhere
+| <Pokémon's name> had fun dancing a dance!
+|}
+
+==Differences between generations==
+===Generations I, III, and VII===
+The Power Plant is littered with machinery that has fallen into disrepair. Many of the changes throughout the three generations are simply cosmetic, the most notable one being Generation III changing the exit in Zapdos's room to lead to the side of the Power Plant instead of back to the entrance, and Generation VII having no back exit in the room and instead having a [[warp panel]] that leads to the entrance. The background music differs among generations. In Generation I, the BGM is the same as the [[Team Rocket Hideout|Rocket Hideout]] and [[Cerulean Cave]]; in Generation III, it instead plays the {{ka|Pokémon Mansion}}'s theme; and in Generation VII, it plays the theme of the [[Silph Co.]] Also, all the Voltorb disguised as items in Generation I are removed in Generation III, with only the two disguised Electrode being retained. Generation VII does the same and also adds two more disguised Electrode.
+
+===Generation II===
+The inside is reduced drastically, and is taken up by scientists working at various computers as well as in a separate generator room. The [[wild Pokémon]] found here in [[Generation I]] instead reside outside, while {{p|Zapdos}} has apparently fled.
+
+===Generation IV===
+In {{game|HeartGold and SoulSilver|s}}, the inside is redesigned yet again to be a single room, with the generator in the middle and the scientists at their computers spread around the room. Wild Pokémon reside outside like in [[Generation II]], including Zapdos, which returns after the [[Machine Part]] is restored and all 16 [[Badge]]s have been earned.
+
+==Layout==
+===Inside design===
+{{Mapgen
+|hv=v
+|colordark={{locationcolor/dark|building}}
+|colorlight={{locationcolor/light|building}}
+|genI=Power Plant interior RBY.png
+|sizeI=176px
+|genII=Power Plant interior GSC.png
+|sizeII=160px
+|genIII=Power Plant interior FRLG.png
+|sizeIII=196px
+|genIV=Power Plant interior HGSS.png
+|sizeIV=168px
+|genVII=Power Plant Interior LGPE.png 
+|sizeVII=250px
+}}
+
+===Outside design===
+{{Mapgen
+|hv=v
+|colordark={{locationcolor/dark|building}}
+|colorlight={{locationcolor/light|building}}
+|genI=Power Plant exterior RBY.png
+|sizeI=128px
+|genII=Power Plant exterior GSC.png
+|sizeII=160px
+|genIII=Power Plant exterior FRLG.png
+|sizeIII=176px
+|genIV=Power Plant exterior HGSS.png
+|sizeIV=210px
+|genVII=Power Plant Exterior LGPE.png
+|sizeVII=250px
+}}
+
+==In the spin-off games==
+===Pokémon Trading Card Game Pocket===
+In [[Pokémon Trading Card Game Pocket]], the Kanto Power Plant is depicted twice: the illustration rare print of {{TCG ID|Genetic Apex|Electrode|235}} depicts the interior, while the special illustration rare print of {{TCG ID|Genetic Apex|Zapdos ex|276}} depicts the exterior.
+
+<gallery>
+File:ElectrodeGeneticApex235 artwork.png|{{TCG ID|Genetic Apex|Electrode|235}}
+File:ZapdosexGeneticApex276 artwork.png|{{TCG ID|Genetic Apex|Zapdos ex|276}}
+</gallery>
+
+==In animation==
+[[File:Kanto Power Plant anime.png|thumb|250px|The Kanto Power Plant in {{aniseries|JN}}]]
+===''Pokémon the Series''===
+In {{aniseries|PTS}}, the Kanto Power Plant is an unmanned facility located near [[Vermilion City]], which provides the [[Cerise Laboratory]] with electricity.
+
+===={{aniseries|JN}}====
+The Kanto Power Plant appeared in ''[[JN040|A Crackling Raid Battle!]]''. When [[Professor Cerise]] detected signs of a {{p|Zapdos}} appearing at Vermilion Port, [[Goh]] deduced that the thunderclouds Professor Cerise had detected were not surrounding Zapdos, but were just being created by it. Following this deduction, he led {{Ash}} to the Power Plant, where they encountered {{TRT}}, who had been scouting the building as a potential base and was surprised to learn that Zapdos could be there too.
+
+[[File:Red Tauros PO.png|thumb|left|250px|The Power Plant in [[Pokémon Origins]]]]
+Goh's deduction turned out to be correct, and the group found Zapdos absorbing energy from the Power Plant's generator. They engaged the [[Legendary Pokémon]] in a {{OBP|Raid Battle|GO}}, but when Zapdos headed outside, Team Rocket stopped Ash from following Goh to the roof in an attempt to steal {{AP|Pikachu}}. Goh battled Zapdos with {{TP|Goh|Raboot}} and {{TP|Goh|Flygon}}, but despite managing to land some hits on it, he ultimately failed to {{pkmn2|caught|catch}} it like he had hoped.
+
+===Pokémon Origins===
+The Power Plant appeared in ''[[PO04|File 4: Charizard]]''. {{OBP|Red|Origins}} battled {{p|Zapdos}} inside with his {{p|Tauros}}, eventually {{pkmn2|caught|catching}} the [[Legendary birds|Legendary bird]] off-screen.
+{{-}}
+
+==In the manga==
+===Pokémon Adventures===
+[[File:Kanto Power Plant Adventures.png|thumb|250px|The Power Plant in Pokémon Adventures]]
+In [[Pokémon Adventures]], the Power Plant is a building project that was never completed. The industrial waste from the construction site has affected the lives of many Pokémon living in the surrounding areas, including on {{rt|9|Kanto}}, where the waste has killed off most of the local plant life, sending many Pokémon wandering around in search for food.
+
+===={{MangaArc|Red, Green & Blue}}====
+In ''[[PS026|Holy Moltres]]'', [[Team Rocket]] Commander [[Lt. Surge]] reported to {{adv|Giovanni}} that he had {{pkmn2|caught}} {{p|Zapdos}} at the Power Plant.
+
+===={{MangaArc|Yellow}}====
+In ''[[PS050|Lapras Lazily]]'', {{adv|Blue}} revealed how he had encountered [[Agatha]] of the [[Elite Four]] at the Power Plant before the start of the [[Indigo Plateau]]'s [[Pokémon League]] tournament.
+
+===Pokémon Pocket Monsters===
+{{PPM|Red}} and his {{OBP|Pokémon|species}} visited the Power Plant in ''[[PM017|Regain the Deserted Power Plant!]]''. Like many places that he visits, the Power Plant ended up being destroyed by [[Red's Clefairy]].
+{{-}}
+
+==In the TCG==
+The following gallery is of cards named, mentioning or featuring the Power Plant in the [[Pokémon Trading Card Game]].<gallery>
+File:VoltorbTriumphant83.jpg|[[Voltorb (Triumphant 83)|Voltorb]] ([[Triumphant (TCG)|Triumphant]] 83/102)
+File:Power Plant Aquapolis.jpg|[[Power Plant (Aquapolis 139)|Power Plant]] ([[Aquapolis (TCG)|Aquapolis]] 139/147)
+File:PowerPlantUnbrokenBonds183.jpg|[[Power Plant (Unbroken Bonds 183)|Power Plant]] ([[Unbroken Bonds (TCG)|Unbroken Bonds]] 183/214)
+File:PowerPlantCosmicEclipse269.jpg|[[Power Plant (Unbroken Bonds 183)|Power Plant]] ([[Cosmic Eclipse (TCG)|Cosmic Eclipse]] 269/236)
+</gallery>
+
+==Trivia==
+* In [[Generation I]], if the {{player}} is currently at the Power Plant and opens the [[Town Map]], pressing down will do nothing at first, as the selection will go from the Power Plant (the current location) to Power Plant again due to [[List of glitches in Generation I#Town Map selection oversight|an oversight]]. The player will need to press down twice to select the previous location, which is [[Indigo Plateau]]. Similarly, the player will need to press up twice on {{rt|1|Kanto}} to go to the next location on the Town Map.
+
+==In other languages==
+{{Langtable
+| color = {{locationcolor/light|building}}
+| bordercolor = {{locationcolor/dark|building}}
+| ca = Central Elèctrica
+| zh_yue = 無人發電廠 ''{{tt|Mòuhyàhn Faatdihnchóng|Abandoned Power Plant}}''
+| zh_cmn = 無人發電廠 / 无人发电厂 ''{{tt|Wúrén Fādiànchǎng|Abandoned Power Plant}}'' {{tt|*|Games, Pokémon Pocket Monsters}}<br>無人發電場 / 无人发电场 ''{{tt|Wúrén Fādiànchǎng|Abandoned Power Plant}}'' {{tt|*|Adventures (Taiwan), PS026 (mainland China)}}<br>无人发电站 ''{{tt|Wúrén Fàdiànzhàn|Abandoned Power Plant}}'' {{tt|*|PS050, Let's Find Pokémon! (mainland China)}}
+| cs = Opuštěná elektrárna
+| fi = Voimala
+| fr = Centrale abandonnée ({{gen|VII}})<br>Centrale ({{gen|I}}-{{gen|IV}})
+| de = Kraftwerk
+| it = Centrale Elettrica
+| ko = 무인발전소 ''{{tt|Muin Baljeonso|Abandoned Power Plant}}'' ({{gen|VII}})<br>발전소 ''{{tt|Baljeonso|Power Plant}}'' ({{gen|II}}, {{gen|IV}})<br>무인 발전소 ''{{tt|Muin Baljeonso|Abandoned Power Plant}}'' {{tt|*|Manga}}
+| pt_br = Usina Elétrica (Pokémon the Series, TCG)<br>Usina Elétrica Abandonada ([[PS049]]-present)<br>Usina Abandonada ([[PS026]]-[[PS029]])<br>Usina de Energia (Red, Blue and Yellow manuals)<br>Usina de Força (Pokémon: Official Nintendo Player's Guide)
+| pt_eu = Central Elétrica
+| es = Central de Energía ({{gen|VII}})<br>Central Energía ({{gen|I}}-{{gen|IV}})
+| vi = Nhà máy điện
+}}
+
+==References==
+<references/>
+
+==Related articles==
+{{Kanto}}
+{{legendarylocations|kanto}}
+{{Project Locations notice}}
+
+[[Category:Kanto locations]]
+[[Category:Red, Blue and Yellow locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:FireRed and LeafGreen locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Let's Go, Pikachu! and Let's Go, Eevee! locations]]
+[[Category:Abandoned buildings]]
+[[Category:Power plants]]
+
+[[de:Kraftwerk (Kanto)]]
+[[es:Central de Energía]]
+[[fr:Centrale abandonnée]]
+[[it:Centrale Elettrica]]
+[[ja:むじんはつでんしょ]]
+[[zh:无人发电厂]]

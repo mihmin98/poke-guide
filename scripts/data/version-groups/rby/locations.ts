@@ -23,6 +23,8 @@ const route = (n: number, part: number, kind: LocationKind = 'route') =>
 export const RBY_LOCATIONS: LocationConfig[] = [
   // Part 1
   kanto('pallet-town', 'Pallet Town', 'Pallet Town', 'town', 1),
+  // The starters are in the lab's Gen I table, not Pallet Town's.
+  kanto('oaks-lab', "Professor Oak's Laboratory", "Professor Oak's Lab", 'building', 1),
   // Part 2
   route(1, 2),
   kanto('viridian-city', 'Viridian City', 'Viridian City', 'town', 2),
@@ -39,6 +41,7 @@ export const RBY_LOCATIONS: LocationConfig[] = [
   kanto('cerulean-city', 'Cerulean City', 'Cerulean City', 'town', 5),
   route(24, 5),
   route(25, 5),
+  kanto('sea-cottage', 'Sea Cottage', 'Sea Cottage', 'building', 5, { itemsOnly: true }),
   route(5, 5),
   kanto('underground-path-5-6', 'Underground Path (Kanto Routes 5–6)', 'Underground Path (Routes 5–6)', 'building', 5),
   // Part 6
@@ -59,6 +62,9 @@ export const RBY_LOCATIONS: LocationConfig[] = [
   route(7, 8),
   // Part 9
   kanto('celadon-city', 'Celadon City', 'Celadon City', 'town', 9),
+  kanto('celadon-department-store', 'Celadon Department Store', 'Celadon Department Store', 'building', 9, {
+    itemsOnly: true,
+  }),
   kanto('celadon-condominiums', 'Celadon Condominiums', 'Celadon Condominiums', 'building', 9),
   kanto('celadon-game-corner', 'Celadon Game Corner', 'Celadon Game Corner', 'building', 9),
   kanto('team-rocket-hideout', 'Team Rocket Hideout', 'Team Rocket Hideout', 'building', 9),
@@ -106,9 +112,7 @@ export const RBY_IGNORED_CATEGORY_PAGES: string[] = [
   'Poké Mart',
   'Pokémon Center',
   'Pokémon Day Care',
-  "Professor Oak's Laboratory",
-  'Celadon Department Store',
   'Pokémon League Reception Gate',
-  'Sea Cottage',
+  // Gym leader TMs are item overrides on their city (plan §7.13).
   'Category:Kanto Gyms',
 ];

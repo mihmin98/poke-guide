@@ -7,11 +7,13 @@ import type {
   GameId,
   LocationKind,
   RegionId,
+  Unlock,
   VersionGroupId,
   WalkthroughPart,
 } from '../../../src/app/core/domain/models';
 import type { CatchTemplateAdapter } from '../adapters/catch-template-adapter';
 import type { CatchRateNoteClassification } from '../core/catch-rate-history';
+import type { ItemOverrides } from '../core/location-items';
 
 export interface LocationConfig {
   /** Region-scoped, stable id (`route-1` is Kanto Route 1). Reused by later games visiting the same place. */
@@ -26,6 +28,8 @@ export interface LocationConfig {
   placement: Partial<Record<GameId, { part: number }>>;
   /** The page has no encounters for this generation; any row found is an error. */
   expectEmpty?: boolean;
+  /** Listed for its items only (plan §7.13): the encounter section is not walked. */
+  itemsOnly?: boolean;
 }
 
 export interface VersionGroupConfig {
@@ -46,10 +50,18 @@ export interface VersionGroupConfig {
   speciesRange: [number, number];
   /** Level column labels (`{{learnlist/levelh/1|…|RGB|Y}}`) and row game flags (`RB`) on learnset subpages → games. */
   learnsetLevelColumns: Record<string, GameId[]>;
+  /** Game flag keys on `{{Itemlist}}` rows (`R=yes`) → games (plan §7.13). */
+  itemGameFlags: Record<string, GameId[]>;
+  /** Item spelling variants → the name used in the data (`Elixer` → `Elixir`). */
+  itemAliases: Record<string, string>;
   overrides: {
     /** Authoritative evolution graph; parsed evolution boxes are only diffed against it. */
     evolutions: readonly EvolutionEdge[];
     /** Catch-rate list notes that concern this version group's games; unclassified ones fail the build. */
     catchRateNotes: readonly CatchRateNoteClassification[];
+    /** Prerequisites and progression gates per game; item and encounter requirements must name one (plan §7.13). */
+    unlocks: Partial<Record<GameId, readonly Unlock[]>>;
+    /** Items missing from location pages, unstated prerequisites and choice groups (plan §7.13). */
+    items: ItemOverrides;
   };
 }

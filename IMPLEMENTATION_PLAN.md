@@ -696,27 +696,34 @@ A Gold/Silver/Crystal slot would look like `{ "levels": {…}, "rate": {"kind":"
      - `reward`: `reward`, `after defeating`, `for defeating`.
      - `gift`: `received from`, `obtained from`, `gift from`, or a leading `From`.
      - Otherwise `pickup`.
+     - Hidden items are always `pickup` (a hidden coin stack "two squares east from the Gym guide" is not a gift). "after defeating" wins over "from", so Gym TMs and Oak's Poké Balls (after the optional rival battle) are `reward`.
   7. **Prerequisites:** `(requires A or B)` / `(requires A and B)`.
      - `{{m|Cut}}` → `cut`; `[[Lift Key]]` / `{{ka|Card Key}}` → `lift-key` / `card-key`.
      - Any other term (e.g. `defeating {{tc|Camper|Jr. Trainer♂}}`) must be mapped in `overrides/items.ts` → `requirementPhrases`, or the build **fails**.
      - "after …" / "for giving …" clauses stay in `where`.
+     - A leading article is dropped ("requires the {{ka|Card Key}}" on walkthroughs).
+  8. Rows whose text says "cannot be kept" (Safari Balls) are skipped. A `None` row displayed as a Pokémon (`{{p|Voltorb}} ×6`) is a fake item note even without a `Fake items` heading (walkthroughs).
 - **Prerequisite vocabulary:** prerequisite ids **are unlock ids** (§7.7). Encounters and items share one list, and the location page can say where each prerequisite is obtained.
   - `Unlock` gains `kind: 'move' | 'key-item' | 'badge' | 'story'`. `move` is an HM field move and includes the badge needed to use it.
-  - Every id used by an item or encounter must exist in that game's `unlocks`, or the build fails.
+  - Every id used by an item or encounter must exist in that game's `unlocks`, or the build fails. Unlocks are in `version-groups/<id>/overrides/unlocks.ts`; `part` is the walkthrough part where the unlock is obtained, and `locationId` must be a configured location.
   - Red/Blue/Yellow adds at least `cut`, `strength`, `flash`, `lift-key`, `card-key`, `secret-key`, `silph-scope`, `ss-ticket` and `bicycle` to the §7.7 list.
 - **Overrides (`version-groups/rby/overrides/items.ts`):** each has a source page, a revid and a reason. An override that matches nothing is an error.
   - `add`:
     - Gym leader TMs on their city (`subArea: 'Gym'`, sourced from the walkthrough parts). Viridian Gym's TM27 gets `fromPart: 14`.
     - The rooftop TMs on Celadon Department Store (`gift`, "give her a Fresh Water / Soda Pop / Lemonade").
   - `requires`: unstated gates, matched by `(locationId, itemId, where substring)`, e.g. Silph Co. rooms behind Card Key doors. Curated from the walkthrough text and checked against the pret disassembly maps.
-  - `patch`: name and quantity corrections (Route 15 `Exp. Share` → `Exp. All` once confirmed; open question 17).
+  - `patch` (not implemented yet): name and quantity corrections, e.g. Route 15 `Exp. Share` → `Exp. All` once confirmed (open question 17).
+  - Additions and requirement overrides name a `sourcePage`; the build fetches it and records its revid (in the item's `source` and in `sources`).
   - `requirementPhrases`: non-standard `(requires …)` terms → unlock ids.
   - `choiceGroups`: Mt. Moon Helix/Dome Fossil → the `mt-moon-fossil` exclusive group id.
 - **New locations** (§10): Professor Oak's Laboratory (Part 1), Sea Cottage (Part 5) and Celadon Department Store (Part 9).
   - `LocationConfig.itemsOnly` skips the encounter walk and the "no Generation I section" warning (Sea Cottage, Celadon Department Store).
   - Oak's Lab's Gen I table is walked and provides the starters.
-- **Walkthrough cross-check:** parse the `{{itemlist}}` rows of each game's walkthrough parts (34 pages, one batched request). Compare the multiset of `(part, itemId)` with the location items placed in that part (`fromPart` wins). Differences are **warnings**, triaged in `reports/rby.md`.
-- **Output:** in the main `rby.json` as `GameLocation.items` and `GameLocation.itemNotes` (§8). The location page needs them, and they're small (about 230 items, roughly 35 KB raw). Walkthrough pages used are added to `sources`.
+- **Walkthrough cross-check (`core/location-items.ts`):** parse the `{{itemlist}}` rows of each game's walkthrough parts (34 pages, one batched request).
+  - Compare each item's **total quantity per game** with the location data, and report walkthrough requirements that no location item with that id has. Differences are **warnings**, triaged in `PROGRESS.md` until `reports/rby.md` exists.
+  - Totals are compared, not parts (changed 2026-09-13): the walkthrough groups some places in other parts (Route 2's east side in Part 7, the Pewter Museum's Old Amber in Part 3). A per-part diff gave 41 placement-only warnings.
+  - The first rby build has 13 item warnings: Potion, Revive and Poké Ball counts, Yellow's Viridian Forest Antidote, Safari Balls (excluded on purpose), and Exp. All vs Exp. Share.
+- **Output:** in the main `rby.json` as `GameLocation.items` and `GameLocation.itemNotes` (§8). The location page needs them, and they're small: the first build has 230 items, and `rby.json` grew from 247 to 300 KB raw. Walkthrough pages used are added to `sources`.
 - **Golden assertions:**
   - Route 12 `TM16 Pay Day` requires `surf`.
   - Team Rocket Hideout `Silph Scope` is a `drop` requiring `lift-key`.

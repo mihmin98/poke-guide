@@ -17,7 +17,7 @@ import { GAMES, getVersionGroup } from '../../../src/app/core/games/registry';
 import type { LocationConfig, VersionGroupConfig } from '../version-groups/types';
 import type { CachedPage } from './cache';
 import { CATCH_RATE_LIST_PAGE, parseCatchRateList, resolveCatchRates } from './catch-rate-history';
-import { walkEncounterSection, type WalkedRow } from './encounter-walker';
+import { walkEncounterSection, type WalkedRow, type WalkResult } from './encounter-walker';
 import { diffEvolutionBoxes, type EvolutionBoxPage } from './evolution-boxes';
 import {
   collectMoves,
@@ -25,6 +25,13 @@ import {
   parseLearnsetPage,
   type ParsedLearnset,
 } from './learnsets';
+import { collectItemRows, walkItemSection, type ItemWalkOptions, type ItemWalkResult } from './items';
+import {
+  applyItemOverrides,
+  checkItemRequirements,
+  diffWalkthroughItems,
+  type WalkthroughItems,
+} from './location-items';
 import { wikiUrl } from './mediawiki-client';
 import { mergeRows } from './merge';
 import { slugify } from './slug';
@@ -69,9 +76,25 @@ export interface AssembleResult {
 
 // ---- page lists (the build fetches these in two rounds) ----
 
-/** Pages needed before the species are known: the two species lists and every location page. */
+/** Pages needed before the species are known: the two species lists, every location page and walkthrough part. */
 export function listPageTitles(config: VersionGroupConfig): string[] {
-  return [NATIONAL_DEX_LIST_PAGE, CATCH_RATE_LIST_PAGE, ...config.locations.map((l) => l.page)];
+  return [
+    NATIONAL_DEX_LIST_PAGE,
+    CATCH_RATE_LIST_PAGE,
+    ...config.locations.map((l) => l.page),
+    ...walkthroughPartTitles(config).map((w) => w.page),
+  ];
+}
+
+/** Walkthrough part pages per game (`Walkthrough:Pokémon Red and Blue/Part 3`), for the item cross-check. */
+export function walkthroughPartTitles(
+  config: VersionGroupConfig,
+): { game: GameId; part: number; page: string }[] {
+  return config.games.flatMap((game) => {
+    const base = config.walkthroughPages[game];
+    if (!base) return [];
+    return (config.walkthroughs[game] ?? []).map(({ part }) => ({ game, part, page: `${base}/Part ${part}` }));
+  });
 }
 
 export function speciesForConfig(
@@ -323,6 +346,13 @@ export function assembleVersionGroup(
   for (const message of evolutionDiff.notes) issue('note', message);
 
   // Locations.
+  const itemOptions = (pageTitle: string): ItemWalkOptions => ({
+    pageTitle,
+    games: config.games,
+    gameFlags: config.itemGameFlags,
+    aliases: config.itemAliases,
+    requirementPhrases: config.overrides.items.requirementPhrases,
+  });
   const ids = new Set<string>();
   for (const location of config.locations) {
     if (ids.has(location.id)) issue('error', `Duplicate location id "${location.id}"`);
@@ -333,13 +363,19 @@ export function assembleVersionGroup(
   for (const location of config.locations) {
     const page = use(location.page, mainSources);
     if (!page) continue;
-    const walk = walkEncounterSection(page.wikitext, {
-      pageTitle: location.page,
-      generationHeading: config.generationHeading,
-      locationKind: location.kind,
-      adapters: config.catchAdapters,
-    });
+    const walk: WalkResult = location.itemsOnly
+      ? { found: true, rows: [], notes: [], issues: [] }
+      : walkEncounterSection(page.wikitext, {
+          pageTitle: location.page,
+          generationHeading: config.generationHeading,
+          locationKind: location.kind,
+          adapters: config.catchAdapters,
+        });
     for (const found of walk.issues) issue(found.level, found.message, found.page);
+    const itemWalk = walkItemSection(page.wikitext, itemOptions(location.page));
+    for (const found of itemWalk.issues) issue(found.level, found.message, found.page);
+    if (location.itemsOnly && !itemWalk.found)
+      issue('error', 'No "Items" section on an items-only location', location.page);
     if (!walk.found && !location.expectEmpty) {
       issue('warning', `No "Pokémon → ${config.generationHeading}" section`, location.page);
     }
@@ -397,8 +433,34 @@ export function assembleVersionGroup(
       source: { title: page.resolvedTitle, revid: page.revid },
       notes: walk.notes,
       subAreas: mergeRows(rows, config.games),
+      items: itemWalk.items,
+      itemNotes: itemWalk.notes,
     });
   }
+
+  // Items: overrides, prerequisites against unlocks, and the walkthrough cross-check (plan §7.13).
+  const sourceOf = (title: string) => {
+    const page = use(title, mainSources);
+    return page ? { title: page.resolvedTitle, revid: page.revid } : null;
+  };
+  for (const message of applyItemOverrides(locations, config.overrides.items, sourceOf))
+    issue('error', message);
+  for (const message of checkItemRequirements(locations, config.overrides.unlocks))
+    issue('error', message);
+  const walkthroughRows = new Map<string, ItemWalkResult | null>();
+  const walkthroughItems: WalkthroughItems[] = [];
+  for (const { game, part, page: title } of walkthroughPartTitles(config)) {
+    if (!walkthroughRows.has(title)) {
+      const page = use(title, mainSources);
+      const rows = page ? collectItemRows(page.wikitext, itemOptions(title)) : null;
+      for (const found of rows?.issues ?? []) issue(found.level, found.message, found.page);
+      walkthroughRows.set(title, rows);
+    }
+    const rows = walkthroughRows.get(title);
+    if (rows) walkthroughItems.push({ page: title, part, game, items: rows.items });
+  }
+  for (const { page, message } of diffWalkthroughItems(locations, walkthroughItems))
+    issue('warning', message, page);
 
   if (options.categoryMembers)
     issues.push(...diffLocationCategory(options.categoryMembers, config));
@@ -417,8 +479,10 @@ export function assembleVersionGroup(
     evolutions,
     breeding: null,
     walkthroughs: config.walkthroughs,
-    // Filled by the override files (statics, gifts and choices, unlocks, event-only) in a later Phase 1 task.
-    unlocks: {},
+    unlocks: Object.fromEntries(
+      Object.entries(config.overrides.unlocks).map(([game, list]) => [game, [...(list ?? [])]]),
+    ),
+    // Filled by the override files (statics, gifts and choices, event-only) in a later Phase 1 task.
     exclusiveGroups: [],
     eventOnly: [],
     locations,

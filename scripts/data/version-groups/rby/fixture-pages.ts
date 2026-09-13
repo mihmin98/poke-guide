@@ -18,6 +18,15 @@ export const RBY_FIXTURE_PAGES: readonly FixturePage[] = [
   { name: 'cerulean-city', title: 'Cerulean City' },
   { name: 'celadon-game-corner', title: 'Celadon Game Corner' },
   { name: 'in-game-trade', title: 'In-game trade' },
+  // Items (plan §7.13)
+  { name: 'viridian-forest', title: 'Viridian Forest' },
+  { name: 'route-25', title: 'Kanto Route 25' },
+  { name: 'team-rocket-hideout', title: 'Team Rocket Hideout' },
+  { name: 'power-plant', title: 'Kanto Power Plant' },
+  { name: 'cerulean-cave', title: 'Cerulean Cave' },
+  { name: 'oaks-lab', title: "Professor Oak's Laboratory" },
+  { name: 'sea-cottage', title: 'Sea Cottage' },
+  { name: 'walkthrough-rb-part-10', title: 'Walkthrough:Pokémon Red and Blue/Part 10' },
   // Species data
   { name: 'national-dex-list', title: 'List of Pokémon by National Pokédex number' },
   { name: 'catch-rate-list', title: 'List of Pokémon by catch rate' },

@@ -1,0 +1,917 @@
+<!-- poke-guide fixture: {"title":"Cerulean Cave","resolvedTitle":"Cerulean Cave","revid":4607703,"timestamp":"2026-08-07T01:46:00Z","fetchedAt":"2026-09-12T22:07:07.408Z"} -->
+{{redirect|Nameless Cave|the location in [[Hoenn]] with a similar name|Nameless Cavern}}
+----
+{{Infobox location
+|image=Cerulean Cave Exterior LGPE.png
+|image_size=300
+|type=cave
+|mapdesc=A mysterious cave that is filled with terribly tough {{ScPkmn}}. It is so dangerous, the <sc>Pok</sc>é<sc>mon League</sc> is in charge of it.{{sup/3|FRLG}}<br/>A cave that had collapsed once. It has been reconstructed.{{sup/4|HGSS}}
+|location_name=Cerulean Cave
+|japanese_name=ハナダの{{tt|洞窟|どうくつ}}
+|translated_name=Hanada Cave
+|other_info=Unknown Dungeon
+|location=[[Cerulean City]]
+|region=Kanto
+|generation={{gen|I}}, {{gen|III}}, {{gen|IV}}, {{gen|VII}}
+}}
+
+'''Cerulean Cave''' (Japanese: '''ハナダの{{tt|洞窟|どうくつ}}''' ''Hanada Cave''), introduced as '''Unknown Dungeon''' (Japanese: '''ななしのどうくつ''' ''Nameless Cave''), is a [[cave]] located in the northwest corner of [[Cerulean City]] in [[Kanto]].
+
+The cave's moniker would later be reused for the {{kal|Unknown Dungeon}} in [[Kalos]], which is a direct reference to Cerulean Cave.
+
+==Terminology==
+===Unknown Dungeon===
+The name ''Unknown Dungeon'' never appears in-game. It is present in [[Pokémon Stadium]]’s data but not selectable on the {{OBP|Pokédex|Stadium}} map. The term appears in [[Generation I]] manuals and guidebooks, including ''[[Pokémon: Official Nintendo Player's Guide]]'', ''[[Pokémon: Special Edition for Yellow, Red and Blue: Official Nintendo Player's Guide]]'', ''[[Pokémon Red and Blue: Prima's Official Strategy Guide]]'', and the board game ''[[Pokémon Master Trainer (1999)]]''.
+
+In Japanese, the location is called 「ななしのどうくつ」 (''Nameless Cave'') in [[Generation I]]. This appears on the [[Town Map]] in the Japanese versions of {{game4|Red|Green|Blue|Yellow}} (translated as ''Cerulean Cave'' in English), and in {{jpn|Pokémon Stadium|Japanese Pokémon Stadium}} and the Japanese version of [[Pokémon Stadium]]’s game data, but is also not selectable on the {{OBP|Pokédex|Stadium}} map.
+
+===Cerulean Cave===
+The English name ''Cerulean Cave'' is used in all games that reference this location from [[Generation I]] onward, including at the {{OBP|Pokédex|Stadium}} in [[Pokémon Stadium 2]]. In {{game2|Red|Blue|Yellow}}, it is used by the [[Non-player character|NPC]] blocking the entrance and on the [[Town Map]] (visible only inside the cave), though the Japanese map name is 「ななしのどうくつ」 (''Nameless Cave''). In {{game2|Gold|Silver|Crystal}}, the name appears in game data but is unused as the cave does not appear; the [[Poké Seer]] in Crystal can read this location for Pokémon data, though this is unobtainable in normal gameplay.
+
+The Japanese name 「ハナダ どうくつ」 (''Hanada Cave'') is used in {{game4|Red|Green|Blue|Yellow}}, appearing in NPC dialogue and an email in [[Cinnabar Lab]] (translated in English as "the cavern close to Cerulean"). 
+
+From [[Generation II]] onward, it is 「ハナダのどうくつ」, including at the {{OBP|Pokédex|Stadium}} in the Japanese version of [[Pokémon Stadium 2]], with the kanji form 「ハナダの{{Ruby|洞窟|どうくつ}}」 introduced in [[Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!]].
+
+==Role==
+Cerulean Cave is home to a wide variety of high-[[level]] [[wild Pokémon]]. {{p|Mewtwo}} inhabits the deepest part of the cave.
+
+The cave is managed by the [[Pokémon League]] and can only be entered after the player has entered the [[Hall of Fame]]{{sup/1|RBY}}{{sup/7|PE}}/restored the Network Machine of the [[Pokémon Network Center]] on the [[Sevii Islands]] to operational status{{sup/3|FRLG}}/earned all the [[Kanto]] [[Badge]]s{{sup/4|HGSS}}.
+
+In Pokémon FireRed and LeafGreen, more Pokémon can be found only by [[fishing]], while there are fewer different species of wild Pokémon found by walking around in the cave.
+
+In [[Generation II]], Cerulean Cave completely collapsed but the leftovers of Mewtwo's presence remain and are found in the lake near the cave, in the form of the item [[Berserk Gene]]. In {{game|HeartGold and SoulSilver|s}}, Cerulean Cave has been rebuilt and Mewtwo can once again be found inside. In Pokémon HeartGold and SoulSilver, if Mew is [[Walking Pokémon|brought along]], it will sense Mewtwo's presence and act apprehensive.
+
+==Geography==
+Cerulean Cave is a large underground complex of maze-like tunnels which extend out from [[Cerulean City]] to the mountains beyond. With the dark entrance positioned on the outskirts of Cerulean City, only accessible by {{m|surf}}ing down {{rt|24|Kanto}} to the entrance near the northern border of [[Cerulean City]], the [[cave]] has been renowned for its mystery. The entrance to the cave looks like it has been carved out from a hillside, forming an indented entrance into the hill. An [[Non-player character|NPC]] guards the entrance to the cave and only allows {{pkmn|Trainer}}s who own all eight Kanto Gym [[Badge]]s and have entered the [[Hall of Fame]] to enter.
+
+At the deepest point of the cave lives {{p|Mewtwo}}, a {{OBP|Pokémon|species}} that can only be found in Cerulean Cave. Mewtwo was artificially created in the {{ka|Pokémon Mansion}} before it became too powerful and escaped, exiling itself to the cave, never to be seen again.
+
+Cerulean Cave has had many different layouts over time, getting a change from not only one [[generation]] to the next but also from one game release to the next. Despite these changes, the first floor is mostly unaffected and has a large underground lake which covers most of the area. Using the complex of stairs and ladders, Trainers can make their way around the lake and the first floor of the cave. They will reach the upper floor, which has no underground river, but a like maze-like structure formed by large boulders and rocks that must be maneuvered around in order to reach the end. Once Trainers get through the maze formation, they are able to climb the ladders and get around the underground lake on the basement floor, which will lead them straight to a dead end and to Mewtwo.
+{{-}}
+
+==Items==
+===Pokémon Red and Green===
+{{Itlisth|cave}}
+{{Itemlist|Nugget|1F, in the northwest area of the floor|JR=yes|JG=yes}}
+{{Itemlist|Full Restore|
+*1F, in the southwest area of the floor
+*2F, in the eastern area of the floor; accessible from the ladder on the plateau north of the entrance|JR=yes|JG=yes|display=[[Full Restore]] ×2}}
+{{Itemlist|Max Elixer|1F, northernmost point of the large middle plateau|JR=yes|JG=yes|display=[[Max Elixir|Max Elixer]]|sprite=Bag Max Elixir Sprite}}
+{{Itemlist|Rare Candy|1F, on a rock southwest of [[Max Elixir|Max Elixer]] ''(hidden, [[Broken hidden items|broken]])''|JR=yes|JG=yes}}
+{{Itemlist|Ultra Ball|
+*2F, in the southeast area of the floor, accessible from the ladder on the large middle plateau on 1F
+*B1F, in the eastern area on the plateau
+*B1F, on a lone rock near [[Max Revive]] ''(hidden, [[Broken hidden items|broken]])''|JR=yes|JG=yes|display=[[Ultra Ball]] ×3}}
+{{Itemlist|PP Up|2F, in the southwest area of the floor, accessible from the south ladder on the western plateau on 1F|JR=yes|JG=yes}}
+{{Itemlist|Max Revive|B1F, in the northeast area of the floor|JR=yes|JG=yes}}
+{{Itlistfoot|cave}}
+
+===Pokémon Red and Blue===
+The Japanese {{game|Blue| (Japanese)}} has the same map and item locations as the international {{game|Red and Blue|s}}.
+{{Itlisth|cave}}
+{{Itemlist|Max Elixer|1F, southwest of the northeasternmost ladder|R=yes|B=yes|display=[[Max Elixir|Max Elixer]]|sprite=Bag Max Elixir Sprite}}
+{{Itemlist|Nugget|1F, in the northwest area of the floor|R=yes|B=yes}}
+{{Itemlist|Rare Candy|1F, on a rock on the plateau east of the [[Full Restore]] ''(hidden)''|R=yes|B=yes}}
+{{Itemlist|Full Restore|
+*1F, in the southwest area of the floor
+*2F, northwest of the center of the floor, accessible from the ladder on a plateau in the northwest area of 1F|R=yes|B=yes|display=[[Full Restore]] ×2}}
+{{Itemlist|PP Up|2F, in the east area of the floor, accessible from the ladder on the plateau north of the entrance on 1F|R=yes|B=yes}}
+{{Itemlist|Ultra Ball|
+*2F, in the southwest area of the floor, accessible from the southwesternmost ladder on 1F
+*B1F, near the center of the floor
+*B1F, on a rock that stands out in the northeast area of the floor ''(hidden)''|R=yes|B=yes|display=[[Ultra Ball]] ×3}}
+{{Itemlist|Max Revive|B1F, in the northeast area of the floor|R=yes|B=yes}}
+{{Itlistfoot|cave}}
+
+===Pokémon Yellow===
+{{Itlisth|cave}}
+{{Itemlist|Max Elixir|
+*1F, northeast of the southwesternmost ladder
+*B1F, in the north area of the floor|Y=yes|display=[[Max Elixir|Max Elixer]] ×2}}
+{{Itemlist|Rare Candy|
+*1F, near the southeast corner of the floor
+*2F, in the west area of the floor, accessible from the easternmost ladder in the northeast area of 1F|Y=yes|display=[[Rare Candy]] ×2}}
+{{Itemlist|Ultra Ball|
+*1F, northeast of the center of the floor
+*2F, near the center of the floor, accessible from the southwesternmost ladder on 1F
+*B1F, on the southwesternmost plateau
+*B1F, near the northeast corner of the floor|Y=yes|display=[[Ultra Ball]] ×4}}
+{{Itemlist|Max Revive|
+*1F, in the east area of the floor
+*2F, southeast of the center of the floor, accessible from the southwesternmost ladder on 1F
+*B1F, on the southwesternmost plateau|Y=yes|display=[[Max Revive]] ×3}}
+{{Itemlist|PP Up|
+*1F, on a lone rock south of the [[Ultra Ball]] ''(hidden)''
+*2F, on the lone rock south of the center of the floor, accessible from the southwesternmost ladder on 1F ''(hidden)''
+*B1F, on a rock that stands out close to the waterway to the southwesternmost plateau ''(hidden)''|Y=yes|display=[[PP Up]] ×3}}
+{{Itemlist|Full Restore|2F, in the east area of the floor, accessible from the ladder in the east area of 1F|Y=yes}}
+{{Itlistfoot|cave}}
+
+===Pokémon FireRed and LeafGreen===
+{{Itlisth|cave}}
+{{Itemlist|Nugget|1F, in the northwest area of the floor|FR=yes|LG=yes}}
+{{Itemlist|Ultra Ball|
+*1F, two squares east of the ladder closest to the [[Nugget]] ''(hidden)''
+*2F, in the southeast area of the floor, accessible from the ladder in the east area of 1F (requires {{m|Rock Smash}})
+*B1F, northeast of the center of the map, on a plateau|FR=yes|LG=yes|display=[[Ultra Ball]] ×3}}
+{{Itemlist|Max Elixir|1F, northeast of the center of the floor, on a plateau|FR=yes|LG=yes}}
+{{Itemlist|Full Restore|
+*1F, in the southwest area of the floor
+*2F, in the east area of the floor, accessible from the northeasternmost ladder on 1F (requires {{m|Rock Smash}})|FR=yes|LG=yes|display=[[Full Restore]] ×2}}
+{{Itemlist|PP Up|2F, in the southwest area of the floor, accessible from the southwesternmost ladder on 1F (requires {{m|Rock Smash}})|FR=yes|LG=yes}}
+{{Itemlist|Max Revive|B1F, in the northeast area of the floor|FR=yes|LG=yes}}
+{{Itlistfoot|cave}}
+
+===Pokémon HeartGold and SoulSilver===
+{{Itlisth|cave}}
+{{Itemlist|Nugget|
+*1F, near the northwest corner
+*B1F, behind a lone [[breakable rock]] northeast of the rocks in the center ''(hidden)''|HG=yes|SS=yes|display=[[Nugget]] ×2}}
+{{Itemlist|Hyper Potion|1F, on the wall behind the [[breakable rock]]s in the southwest corner ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Full Restore|1F, along the south wall|HG=yes|SS=yes}}
+{{Itemlist|Revive|1F, on a small crystal in the middle ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Max Elixir|1F, near the center, at the end of a bridge|HG=yes|SS=yes}}
+{{Itemlist|Sea Incense|1F, north edge|HG=yes|SS=yes}}
+{{Itemlist|Rare Candy|1F, in the far southeast corner ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|TM Electric|2F, northeast corner (requires {{m|Rock Smash}})|HG=yes|SS=yes|display={{TM|24|Thunderbolt}}}}
+{{Itemlist|PP Up|
+*2F, west side of 2F
+*2F, in the large open area on the east side ''(hidden)''|HG=yes|SS=yes|display=[[PP Up]] ×2}}
+{{Itemlist|Zinc|2F, in the large open area on the east side ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Full Heal|2F, in the large open area on the east side ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Big Pearl|2F, in the large open area on the east side ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Ultra Ball|
+*2F, west side
+*2F, in the large open area on the east side ''(hidden)''
+*B1F, west of the [[breakable rock]]s in the center ''(hidden)''
+*B1F, near the southwest corner|HG=yes|SS=yes|display=[[Ultra Ball]] ×4}}
+{{Itemlist|Odd Incense|2F, near the center (requires {{m|Rock Smash}})|HG=yes|SS=yes}}
+{{Itemlist|Protein|2F, near the northwest corner ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Max Revive|
+*B1F, among the [[breakable rock]]s on the west side ''(hidden)''
+*B1F, northwest of the [[breakable rock]]s in the center|HG=yes|SS=yes|display=[[Max Revive]] ×2}}
+{{Itemlist|Dusk Stone|B1F, center (requires {{m|Rock Climb}})|HG=yes|SS=yes}}
+{{Itemlist|Electirizer|B1F, northeast corner (requires {{m|Rock Climb}})|HG=yes|SS=yes}}
+{{Itemlist|Black Sludge|B1F, southeast corner|HG=yes|SS=yes}}
+{{Itlistfoot|cave}}
+
+====Rock Smash====
+If the rock contains an item, the game will pick one of the following:
+{{Itlisth|cave}}
+{{Itemlist|Max Ether|Found by smashing [[breakable rock]]s (25%)|HG=yes|SS=yes}}
+{{Itemlist|Revive|Found by smashing [[breakable rock]]s (20%)|HG=yes|SS=yes}}
+{{Itemlist/5|Red Shard|Blue Shard|Yellow Shard|Green Shard|Heart Scale|Found by smashing [[breakable rock]]s (10% each)|HG=yes|SS=yes}}
+{{Itemlist|Star Piece|Found by smashing [[breakable rock]]s (5%)|HG=yes|SS=yes}}
+{{Itlistfoot|cave}}
+
+===Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!===
+{{Itlisth|cave}}
+{{Itemlist|PP Max|1F, near the ladder in the northeast corner of the floor|LP=yes|LE=yes}}
+{{Itemlist|Full Heal|1F, at the end of the water|LP=yes|LE=yes}}
+{{Itemlist|Full Restore|1F, on the plateau near the entrance ''(hidden)'' (daily)|LP=yes|LE=yes}}
+{{Itemlist|Max Revive|1F, northwest of the eastern ladder|LP=yes|LE=yes}}
+{{Itemlist|Max Repel|1F, southwest of the northern ladder|LP=yes|LE=yes}}
+{{Itemlist|Rare Candy|1F, south of the visible but inaccessible ladders to 2F and B1F in the northwest corner ''(hidden)'' (daily)|LP=yes|LE=yes}}
+{{Itemlist|Max Lure|2F, northwest of the pair of ladders|LP=yes|LE=yes}}
+{{Itemlist|Ultra Ball|2F, near some rocks along the southern wall|LP=yes|LE=yes|display=[[Ultra Ball]] ×5}}
+{{Itemlist|Rare Candy|2F, northwest of the Ultra Balls|LP=yes|LE=yes}}
+{{Itemlist|Max Revive|2F, in the southeast corner of the floor|LP=yes|LE=yes}}
+{{Itemlist|Full Restore|
+* 2F, near the east wall, east of the pair of ladders
+* B1F southwest of the [[Escape Rope]], on a plateau|LP=yes|LE=yes|display=[[Full Restore]] ×2}}
+{{Itemlist|Escape Rope|B1F, near the northeast corner of the floor|LP=yes|LE=yes}}
+{{Itemlist|Max Elixir|B1F, in the south area of the floor|LP=yes|LE=yes}}
+{{Itemlist|Max Revive|B1F, southeast of the pair of ladders ''(hidden)'' (daily)|LP=yes|LE=yes}}
+{{Itemlist|PP Max|B1F, at the end of the water west of {{p|Mewtwo}}'s plateau ''(hidden)'' (daily)|LP=yes|LE=yes}}
+{{Itemlist|Mewtwonite X|B1F, received from {{ga|Green}} after defeating her|LP=yes|LE=yes}}
+{{Itemlist|Mewtwonite Y|B1F, received from {{ga|Green}} after defeating her|LP=yes|LE=yes}}
+{{Itemlist|Poké Ball|B1F, on the ground after defeating {{ga|Green}}|LP=yes|LE=yes|display={{i|Poké Ball}} ×5}}
+{{Itlistfoot|cave}}
+
+====Water====
+{{Itlisth|water}}
+{{Itemlist/3|Pearl|display={{i|Pearl}}|Big Pearl|Heart Scale|B1F, sometimes found by the {{player}}'s {{pkmn2|walking}} {{type|Water}} Pokémon from the edge of the small pool of water (daily)|LP=yes|LE=yes}}
+{{Itlistfoot|water}}
+
+====Glittering Ground====
+{{Itlisth|Cave}}
+{{Itemlist/2|Pearl|display={{i|Pearl}}|Big Pearl|
+*1F, sometimes found by the {{player}}'s [[walking Pokémon]] from a glowing spot near the western ladder to 2F (daily)
+*2F, sometimes found by the player's walking Pokémon from a glowing spot west of the large central crystal (daily)|LP=yes|LE=yes}}
+{{Itemlist/2|Stardust|Star Piece|
+*2F, sometimes found by the player's walking Pokémon from a glowing spot in the northeastern corner of the floor (daily)
+*B1F, sometimes found by the player's walking Pokémon from a glowing spot immediately northeast of the central plateau east of {{p|Mewtwo}}'s plateau (daily)|LP=yes|LE=yes}}
+{{Itlistfoot|Cave}}
+
+====Recurring hidden items====
+These items are hidden at certain spots of the cave and [[recurring item|respawn]] occasionally or daily. The item received is not determined until it is picked up, so what item is found can be affected by [[Soft resetting|resetting]]. Unlike [[Celadon Game Corner]], where the game will only respawn the item every midnight, in Cerulean Cave most items will try to reappear every 256 steps; to respawn the items after collecting them, the player must leave the floor and also take enough steps (the player can accomplish this by going down a ladder, coming back up the ladder, and walking around until the items respawn).
+
+The item on B1F plateau next to Mewtwo's respawns every midnight like in Celadon Game Corner; the spots on 2F respawn based on steps with following odds:<ref>https://twitter.com/Sibuna_Switch/status/1856587218246098944</ref><ref>https://twitter.com/Sibuna_Switch/status/1836272561719574956</ref>
+
+=====Poké Balls=====
+*Northern spot next to a pair of ladders on 2F (20%)
+*Northeastern spot next to a pair of ladders on 2F (15%)
+*Northwestern spot next to a pair of ladders on 2F (15%)
+*Southwestern spot next to a ladder on 2F (15%)
+*Southern spot on 2F (20%)
+{{Itlisth|cave}}
+{{Itemlist|Poké Ball|50/301 chance|LP=yes|LE=yes|display={{i|Poké Ball}}}}
+{{Itemlist|Great Ball|100/301 chance|LP=yes|LE=yes}}
+{{Itemlist|Ultra Ball|125/301 chance|LP=yes|LE=yes}}
+{{Itemlist|Ultra Ball|25/301 chance|LP=yes|LE=yes|display=[[Ultra Ball]] ×10}}
+{{Itemlist|Master Ball|1/301 chance|LP=yes|LE=yes}}
+{{Itlistfoot|cave}}
+=====Berries=====
+*Southeastern spot on 2F, right side of the rock (20%)
+*Southeastern spot on 2F, left side of the rock (30%)
+*Spot in middle of 2F, next to large crystal (30%)
+*Northwestern spot between pair of ladders on 2F(20%)
+*Eastern spot next to a pair of ladders on 2F (30%)
+{{Itlisth|cave}}
+{{Itemlist|Golden Razz Berry|1/2 chance|LP=yes|LE=yes}}
+{{Itemlist|Golden Nanab Berry|1/3 chance|LP=yes|LE=yes}}
+{{Itemlist|Golden Pinap Berry|1/6 chance|LP=yes|LE=yes}}
+{{Itlistfoot|cave}}
+
+=====2F crystal=====
+10% chance to generate an item.
+{{Itlisth|cave}}
+{{Itemlist|Max Revive|2F, sometimes found by large crystal (50% chance)|LP=yes|LE=yes}}
+{{Itemlist/2|Dome Fossil|Helix Fossil|2F, sometimes found by large crystal (20% chance each)|LP=yes|LE=yes}}
+{{Itemlist|Old Amber|2F, sometimes found by large crystal (10% chance)|LP=yes|LE=yes}}
+{{Itlistfoot|cave}}
+
+=====B1F plateau=====
+{{Itlisth|cave}}
+{{Itemlist/2|Dome Fossil|Helix Fossil|B1F, sometimes found on the central plateau east of {{p|Mewtwo}}'s plateau (40% chance each)|LP=yes|LE=yes}}
+{{Itemlist|Old Amber|B1F, sometimes found on the central plateau east of {{p|Mewtwo}}'s plateau (20% chance)|LP=yes|LE=yes}}
+{{Itlistfoot|cave}}
+
+==Pokémon==
+===Generation I===
+In this generation, no wild Pokémon is found while {{m|surf}}ing here.
+<!--Wild Pokémon Encounter Data<ref>[https://github.com/pret/pokered/tree/master/data/wild Pokémon Red and Blue Disassembly Wild Encounter Data - Pret]</ref><ref>[https://github.com/pret/pokeyellow/tree/master/data/wild Pokémon Yellow Disassembly Wild Encounter Data - Pret]</ref><ref>[https://shinyfinder.github.io/encounter-slots/blue-japanese/Land%20&%20Surf.html Pokémon Blue (Japanese) Wild Encounter Data - Shinyfinder]</ref>-->
+====1F====
+{{catch/header|cave|no}}
+{{catch/entry1|024|Arbok|yes|no|no|Cave|52|10%|type1=Poison}}
+{{catch/entry1|026|Raichu|yes|yes|no|Cave|53|4%|type1=Electric}}
+{{catch/entry1|028|Sandslash|no|yes|yes|Cave|52|10%|type1=Ground}}
+{{catch/entry1|042|Golbat|yes|yes|no|Cave|46|20%|type1=Poison|type2=Flying}}
+{{catch/entry1|042|Golbat|no|no|yes|Cave|50, 55|40%|type1=Poison|type2=Flying}}
+{{catch/entry1|044|Gloom|no|no|yes|Cave|55|10%|type1=Grass|type2=Poison}}
+{{catch/entry1|047|Parasect|yes|yes|no|Cave|52|5%|type1=Bug|type2=Grass}}
+{{catch/entry1|047|Parasect|no|no|yes|Cave|54|5%|type1=Bug|type2=Grass}}
+{{catch/entry1|049|Venomoth|yes|yes|no|Cave|49|10%|type1=Bug|type2=Poison}}
+{{catch/entry1|049|Venomoth|no|no|yes|Cave|54|5%|type1=Bug|type2=Poison}}
+{{catch/entry1|064|Kadabra|yes|yes|no|Cave|49|5%|type1=Psychic}}
+{{catch/entry1|070|Weepinbell|no|no|yes|Cave|55|10%|type1=Grass|type2=Poison}}
+{{catch/entry1|075|Graveler|no|no|yes|Cave|45|15%|type1=Rock|type2=Ground}}
+{{catch/entry1|082|Magneton|yes|yes|no|Cave|46|15%|type1=Electric}}
+{{catch/entry1|085|Dodrio|yes|yes|no|Cave|49|10%|type1=Normal|type2=Flying}}
+{{catch/entry1|097|Hypno|yes|yes|no|Cave|46|20%|type1=Psychic}}
+{{catch/entry1|132|Ditto|yes|yes|no|Cave|53|1%|type1=Normal}}
+{{catch/entry1|132|Ditto|no|no|yes|Cave|55, 60|5%|type1=Normal}}
+{{catch/div|water|Fishing}}
+{{catch/entry1|129|Magikarp|yes|yes|yes|Fish Old|5|100%|type1=Water}}
+{{catch/entry1|060|Poliwag|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{catch/entry1|118|Goldeen|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{catch/entry1|080|Slowbro|yes|yes|no|Fish Super|23|25%|type1=Water|type2=Psychic}}
+{{catch/entry1|099|Kingler|yes|yes|no|Fish Super|23|25%|type1=Water}}
+{{catch/entry1|117|Seadra|yes|yes|no|Fish Super|23|25%|type1=Water}}
+{{catch/entry1|118|Goldeen|no|no|yes|Fish Super|25|40%|type1=Water}}
+{{catch/entry1|119|Seaking|yes|yes|no|Fish Super|23|25%|type1=Water}}
+{{catch/entry1|119|Seaking|no|no|yes|Fish Super|35, 45, 55|60%|type1=Water}}
+{{catch/footer|cave}}
+
+====2F====
+{{catch/header|cave|no}}
+{{catch/entry1|028|Sandslash|no|no|yes|Cave|56|10%|type1=Ground}}
+{{catch/entry1|040|Wigglytuff|yes|yes|no|Cave|54|5%|type1=Normal}}
+{{catch/entry1|042|Golbat|no|no|yes|Cave|52, 57|40%|type1=Poison|type2=Flying}}
+{{catch/entry1|044|Gloom|no|no|yes|Cave|58|5%|type1=Grass|type2=Poison}}
+{{catch/entry1|049|Venomoth|yes|yes|no|Cave|51|20%|type1=Bug|type2=Poison}}
+{{catch/entry1|064|Kadabra|yes|yes|no|Cave|51|15%|type1=Psychic}}
+{{catch/entry1|070|Weepinbell|no|no|yes|Cave|58|5%|type1=Grass|type2=Poison}}
+{{catch/entry1|075|Graveler|no|no|yes|Cave|50|15%|type1=Rock|type2=Ground}}
+{{catch/entry1|085|Dodrio|yes|yes|no|Cave|51|20%|type1=Normal|type2=Flying}}
+{{catch/entry1|101|Electrode|yes|yes|no|Cave|52|10%|type1=Electric}}
+{{catch/entry1|105|Marowak|yes|yes|no|Cave|52|10%|type1=Ground}}
+{{catch/entry1|111|Rhyhorn|no|no|yes|Cave|50|10%|type1=Rock|type2=Ground}}
+{{catch/entry1|112|Rhydon|yes|yes|no|Cave|52|10%|type1=Rock|type2=Ground}}
+{{catch/entry1|112|Rhydon|no|no|yes|Cave|58, 60|5%|type1=Rock|type2=Ground}}
+{{catch/entry1|113|Chansey|yes|yes|no|Cave|56|5%|type1=Normal}}
+{{catch/entry1|132|Ditto|yes|yes|no|Cave|55, 60|5%|type1=Normal}}
+{{catch/entry1|132|Ditto|no|no|yes|Cave|60|10%|type1=Normal}}
+{{catch/footer|cave}}
+
+====B1F====
+{{catch/header|cave|no}}
+{{catch/entry1|024|Arbok|yes|no|no|Cave|57|5%|type1=Poison}}
+{{catch/entry1|026|Raichu|yes|yes|no|Cave|64|10%|type1=Electric}}
+{{catch/entry1|028|Sandslash|no|yes|no|Cave|57|5%|type1=Ground}}
+{{catch/entry1|042|Golbat|no|no|yes|Cave|54, 59|40%|type1=Poison|type2=Flying}}
+{{catch/entry1|047|Parasect|yes|yes|no|Cave|64|10%|type1=Bug|type2=Grass}}
+{{catch/entry1|075|Graveler|no|no|yes|Cave|55|15%|type1=Rock|type2=Ground}}
+{{catch/entry1|101|Electrode|yes|yes|no|Cave|55|15%|type1=Electric}}
+{{catch/entry1|105|Marowak|yes|yes|no|Cave|55|20%|type1=Ground}}
+{{catch/entry1|108|Lickitung|no|no|yes|Cave|50, 55|5%|type1=Normal}}
+{{catch/entry1|111|Rhyhorn|no|no|yes|Cave|52|10%|type1=Rock|type2=Ground}}
+{{catch/entry1|112|Rhydon|yes|yes|no|Cave|55|20%|type1=Rock|type2=Ground}}
+{{catch/entry1|112|Rhydon|no|no|yes|Cave|62|10%|type1=Rock|type2=Ground}}
+{{catch/entry1|113|Chansey|yes|yes|no|Cave|64|10%|type1=Normal}}
+{{catch/entry1|113|Chansey|no|no|yes|Cave|56|5%|type1=Normal}}
+{{catch/entry1|132|Ditto|yes|yes|no|Cave|63, 65, 67|10%|type1=Normal}}
+{{catch/entry1|132|Ditto|no|no|yes|Cave|60, 65|15%|type1=Normal}}
+{{catch/div|water|Fishing}}
+{{catch/entry1|129|Magikarp|yes|yes|yes|Fish Old|5|100%|type1=Water}}
+{{catch/entry1|060|Poliwag|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{catch/entry1|118|Goldeen|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{catch/entry1|080|Slowbro|yes|yes|no|Fish Super|23|25%|type1=Water|type2=Psychic}}
+{{catch/entry1|099|Kingler|yes|yes|no|Fish Super|23|25%|type1=Water}}
+{{catch/entry1|117|Seadra|yes|yes|no|Fish Super|23|25%|type1=Water}}
+{{catch/entry1|118|Goldeen|no|no|yes|Fish Super|30|40%|type1=Water}}
+{{catch/entry1|119|Seaking|yes|yes|no|Fish Super|23|25%|type1=Water}}
+{{catch/entry1|119|Seaking|no|no|yes|Fish Super|40, 50, 60|60%|type1=Water}}
+{{catch/footer|cave}}
+
+===Generation III===
+====1F====
+{{catch/header|cave|no}}
+{{catch/entryfl|047|Parasect|yes|yes|Cave|49, 58|25%|type1=Bug|type2=Grass}}
+{{catch/entryfl|082|Magneton|yes|yes|Cave|49|20%|type1=Electric|type2=Steel}}
+{{catch/entryfl|042|Golbat|yes|yes|Cave|46, 55|14%|type1=Poison|type2=Flying}}
+{{catch/entryfl|057|Primeape|yes|yes|Cave|52, 61|11%|type1=Fighting}}
+{{catch/entryfl|132|Ditto|yes|yes|Cave|52, 61|11%|type1=Normal}}
+{{catch/entryfl|067|Machoke|yes|yes|Cave|46|10%|type1=Fighting}}
+{{catch/entryfl|101|Electrode|yes|yes|Cave|58|5%|type1=Electric}}
+{{catch/entryfl|202|Wobbuffet|yes|yes|Cave|55|4%|type1=Psychic}}
+{{catch/div|water|Surfing}}
+{{catch/entryfl|054|Psyduck|yes|no|Surf|30-50|65%|type1=Water}}
+{{catch/entryfl|079|Slowpoke|no|yes|Surf|30-50|65%|type1=Water|type2=Psychic}}
+{{catch/entryfl|055|Golduck|yes|no|Surf|40-55|35%|type1=Water}}
+{{catch/entryfl|080|Slowbro|no|yes|Surf|40-55|35%|type1=Water|type2=Psychic}}
+{{catch/div|water|Fishing}}
+{{catch/entryfl|129|Magikarp|yes|yes|Fish Old|5|100%|type1=Water}}
+{{catch/entryfl|060|Poliwag|yes|yes|Fish Good|5-15|60%|type1=Water}}
+{{catch/entryfl|118|Goldeen|yes|yes|Fish Good|5-15|20%|type1=Water}}
+{{catch/entryfl|129|Magikarp|yes|yes|Fish Good|5-15|20%|type1=Water}}
+{{catch/entryfl|060|Poliwag|yes|yes|Fish Super|15-25|40%|type1=Water}}
+{{catch/entryfl|061|Poliwhirl|yes|yes|Fish Super|20-30|40%|type1=Water}}
+{{catch/entryfl|130|Gyarados|yes|yes|Fish Super|15-25|15%|type1=Water|type2=Flying}}
+{{catch/entryfl|054|Psyduck|yes|no|Fish Super|15-35|5%|type1=Water}}
+{{catch/entryfl|079|Slowpoke|no|yes|Fish Super|15-35|5%|type1=Water|type2=Psychic}}
+{{catch/div|cave|Rock Smash}}
+{{catch/entryfl|074|Geodude|yes|yes|Rock Smash|30-50|65%|type1=Rock|type2=Ground}}
+{{catch/entryfl|075|Graveler|yes|yes|Rock Smash|40-55|35%|type1=Rock|type2=Ground}}
+{{catch/footer|cave}}
+
+====2F====
+{{catch/header|cave|no}}
+{{catch/entryfl|042|Golbat|yes|yes|Cave|49, 58|25%|type1=Poison|type2=Flying}}
+{{catch/entryfl|067|Machoke|yes|yes|Cave|49|20%|type1=Fighting}}
+{{catch/entryfl|047|Parasect|yes|yes|Cave|52, 61|14%|type1=Bug|type2=Grass}}
+{{catch/entryfl|064|Kadabra|yes|yes|Cave|55, 64|11%|type1=Psychic}}
+{{catch/entryfl|132|Ditto|yes|yes|Cave|55, 64|11%|type1=Normal}}
+{{catch/entryfl|082|Magneton|yes|yes|Cave|52|10%|type1=Electric|type2=Steel}}
+{{catch/entryfl|202|Wobbuffet|yes|yes|Cave|58|5%|type1=Psychic}}
+{{catch/entryfl|101|Electrode|yes|yes|Cave|61|4%|type1=Electric}}
+{{catch/div|cave|Rock Smash}}
+{{catch/entryfl|074|Geodude|yes|yes|Rock Smash|35-55|65%|type1=Rock|type2=Ground}}
+{{catch/entryfl|075|Graveler|yes|yes|Rock Smash|45-60|35%|type1=Rock|type2=Ground}}
+{{catch/footer|cave}}
+
+====B1F====
+{{catch/header|cave|no}}
+{{catch/entryfl|064|Kadabra|yes|yes|Cave|58, 67|25%|type1=Psychic}}
+{{catch/entryfl|132|Ditto|yes|yes|Cave|58, 67|25%|type1=Normal}}
+{{catch/entryfl|047|Parasect|yes|yes|Cave|55, 64|14%|type1=Bug|type2=Grass}}
+{{catch/entryfl|042|Golbat|yes|yes|Cave|52, 61|11%|type1=Poison|type2=Flying}}
+{{catch/entryfl|067|Machoke|yes|yes|Cave|52|10%|type1=Fighting}}
+{{catch/entryfl|082|Magneton|yes|yes|Cave|55|10%|type1=Electric|type2=Steel}}
+{{catch/entryfl|101|Electrode|yes|yes|Cave|64|4%|type1=Electric}}
+{{catch/entryfl|202|Wobbuffet|yes|yes|Cave|61|1%|type1=Psychic}}
+{{catch/div|water|Surfing}}
+{{catch/entryfl|054|Psyduck|yes|no|Surf|40-60|65%|type1=Water}}
+{{catch/entryfl|079|Slowpoke|no|yes|Surf|40-60|65%|type1=Water|type2=Psychic}}
+{{catch/entryfl|055|Golduck|yes|no|Surf|50-65|35%|type1=Water}}
+{{catch/entryfl|080|Slowbro|no|yes|Surf|50-65|35%|type1=Water|type2=Psychic}}
+{{catch/div|water|Fishing}}
+{{catch/entryfl|129|Magikarp|yes|yes|Fish Old|5|100%|type1=Water}}
+{{catch/entryfl|060|Poliwag|yes|yes|Fish Good|5-15|60%|type1=Water}}
+{{catch/entryfl|118|Goldeen|yes|yes|Fish Good|5-15|20%|type1=Water}}
+{{catch/entryfl|129|Magikarp|yes|yes|Fish Good|5-15|20%|type1=Water}}
+{{catch/entryfl|060|Poliwag|yes|yes|Fish Super|15-25|40%|type1=Water}}
+{{catch/entryfl|061|Poliwhirl|yes|yes|Fish Super|20-30|40%|type1=Water}}
+{{catch/entryfl|130|Gyarados|yes|yes|Fish Super|15-35|16%|type1=Water|type2=Flying}}
+{{catch/entryfl|054|Psyduck|yes|no|Fish Super|15-25|4%|type1=Water}}
+{{catch/entryfl|079|Slowpoke|no|yes|Fish Super|15-25|4%|type1=Water|type2=Psychic}}
+{{catch/div|cave|Rock Smash}}
+{{catch/entryfl|074|Geodude|yes|yes|Rock Smash|40-60|65%|type1=Rock|type2=Ground}}
+{{catch/entryfl|075|Graveler|yes|yes|Rock Smash|50-65|35%|type1=Rock|type2=Ground}}
+{{catch/footer|cave}}
+
+===Generation IV===
+====1F====
+{{catch/header|cave}}
+{{catch/entryhs|101|Electrode|yes|yes|Cave|40|all=5%|type1=Electric}}
+{{catch/entryhs|202|Wobbuffet|yes|yes|Cave|37|all=5%|type1=Psychic}}
+{{catch/entryhs|067|Machoke|yes|yes|Cave|39-40|24%|24%|6%|type1=Fighting}}
+{{catch/entryhs|047|Parasect|yes|yes|Cave|38|20%|20%|10%|type1=Bug|type2=Grass}}
+{{catch/entryhs|057|Primeape|yes|no|Cave|38-39|14%|14%|0%|type1=Fighting}}
+{{catch/entryhs|057|Primeape|yes|no|Cave|39|0%|0%|4%|type1=Fighting}}
+{{catch/entryhs|053|Persian|no|yes|Cave|38-39|14%|14%|0%|type1=Normal}}
+{{catch/entryhs|053|Persian|no|yes|Cave|39|0%|0%|4%|type1=Normal}}
+{{catch/entryhs|082|Magneton|yes|yes|Cave|39-40|11%|11%|0%|type1=Electric|type2=Steel}}
+{{catch/entryhs|082|Magneton|yes|yes|Cave|40|0%|0%|10%|type1=Electric|type2=Steel}}
+{{catch/entryhs|132|Ditto|yes|yes|Cave|39-40|11%|11%|0%|type1=Normal}}
+{{catch/entryhs|132|Ditto|yes|yes|Cave|39|0%|0%|10%|type1=Normal}}
+{{catch/entryhs|042|Golbat|yes|yes|Cave|38|10%|10%|0%|type1=Poison|type2=Flying}}
+{{catch/entryhs|042|Golbat|yes|yes|Cave|38-39|0%|0%|50%|type1=Poison|type2=Flying}}
+{{catch/div|water|Surfing}}
+{{catch/entryhs|054|Psyduck|yes|yes|Surf|35-40|all=90%|type1=Water}}
+{{catch/entryhs|055|Golduck|yes|yes|Surf|40|all=10%|type1=Water}}
+{{catch/div|water|Fishing}}
+{{catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=100%|type1=Water}}
+{{catch/entryhs|060|Poliwag|yes|yes|Fish Good|20|all=45%|type1=Water}}
+{{catch/entryhs|118|Goldeen|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=15%|type1=Water}}
+{{catch/entryhs|060|Poliwag|yes|yes|Fish Super|40|all=40%|type1=Water}}
+{{catch/entryhs|061|Poliwhirl|yes|yes|Fish Super|40|all=30%|type1=Water}}
+{{catch/entryhs|130|Gyarados|yes|yes|Fish Super|40|all=30%|type1=Water|type2=Flying}}
+{{catch/div|cave|Rock Smash}}
+{{catch/entryhs|074|Geodude|yes|yes|Rock Smash|22-24|all=80%|type1=Rock|type2=Ground}}
+{{catch/entryhs|075|Graveler|yes|yes|Rock Smash|26-30|all=20%|type1=Rock|type2=Ground}}
+{{catch/div|cave|Special}}
+{{catch/entryhs|296|Makuhita|yes|yes|Hoenn|39-40|all=20%|type1=Fighting}}
+{{catch/entryhs|359|Absol|yes|yes|Hoenn|38|all=20%|type1=Dark}}
+{{catch/entryhs|433|Chingling|yes|yes|Sinnoh|39-40|all=20%|type1=Psychic}}
+{{catch/entryhs|436|Bronzor|yes|yes|Sinnoh|38|all=20%|type1=Steel|type2=Psychic}}
+{{catch/footer|cave}}
+
+====2F====
+{{catch/header|cave}}
+{{catch/entryhs|042|Golbat|yes|yes|Cave|41|10%|10%|0%|type1=Poison|type2=Flying}}
+{{catch/entryhs|042|Golbat|yes|yes|Cave|41-42|0%|0%|20%|type1=Poison|type2=Flying}}
+{{catch/entryhs|047|Parasect|yes|yes|Cave|40|all=20%|type1=Bug|type2=Grass}}
+{{catch/entryhs|064|Kadabra|yes|yes|Cave|42|all=20%|type1=Psychic}}
+{{catch/entryhs|067|Machoke|yes|yes|Cave|39, 41-42|20%|20%|0%|type1=Fighting}}
+{{catch/entryhs|067|Machoke|yes|yes|Cave|39|0%|0%|10%|type1=Fighting}}
+{{catch/entryhs|082|Magneton|yes|yes|Cave|41|all=10%|type1=Electric|type2=Steel}}
+{{catch/entryhs|101|Electrode|yes|yes|Cave|41|all=5%|type1=Electric}}
+{{catch/entryhs|132|Ditto|yes|yes|Cave|42|all=10%|type1=Normal}}
+{{catch/entryhs|202|Wobbuffet|yes|yes|Cave|42|all=5%|type1=Psychic}}
+{{catch/div|water|Fishing}}
+{{catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=100%|type1=Water}}
+{{catch/entryhs|060|Poliwag|yes|yes|Fish Good|20|all=45%|type1=Water}}
+{{catch/entryhs|118|Goldeen|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=15%|type1=Water}}
+{{catch/entryhs|060|Poliwag|yes|yes|Fish Super|40|all=40%|type1=Water}}
+{{catch/entryhs|061|Poliwhirl|yes|yes|Fish Super|40|all=30%|type1=Water}}
+{{catch/entryhs|130|Gyarados|yes|yes|Fish Super|40|all=30%|type1=Water|type2=Flying}}
+{{catch/div|cave|Special}}
+{{catch/entryhs|296|Makuhita|yes|yes|Hoenn|41-42|all=20%|type1=Fighting}}
+{{catch/entryhs|359|Absol|yes|yes|Hoenn|39, 41|all=20%|type1=Dark}}
+{{catch/entryhs|433|Chingling|yes|yes|Sinnoh|41-42|all=20%|type1=Psychic}}
+{{catch/entryhs|436|Bronzor|yes|yes|Sinnoh|39, 41|all=20%|type1=Steel|type2=Psychic}}
+{{catch/footer|cave}}
+
+====B1F====
+{{catch/header|cave|no}}
+{{catch/entryhs|047|Parasect|yes|yes|Cave|45, 47|all=25%|type1=Bug|type2=Grass}}
+{{catch/entryhs|064|Kadabra|yes|yes|Cave|46|all=20%|type1=Psychic}}
+{{catch/entryhs|082|Magneton|yes|yes|Cave|45, 47|all=15%|type1=Electric|type2=Steel}}
+{{catch/entryhs|042|Golbat|yes|yes|Cave|47|all=10%|type1=Poison|type2=Flying}}
+{{catch/entryhs|067|Machoke|yes|yes|Cave|45|all=10%|type1=Fighting}}
+{{catch/entryhs|132|Ditto|yes|yes|Cave|45|all=10%|type1=Normal}}
+{{catch/entryhs|101|Electrode|yes|yes|Cave|46|all=5%|type1=Electric}}
+{{catch/entryhs|202|Wobbuffet|yes|yes|Cave|49|all=5%|type1=Psychic}}
+{{catch/div|water|Surfing}}
+{{catch/entryhs|054|Psyduck|yes|yes|Surf|35-40|all=90%|type1=Water}}
+{{catch/entryhs|055|Golduck|yes|yes|Surf|40|all=10%|type1=Water}}
+{{catch/div|water|Fishing}}
+{{catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=100%|type1=Water}}
+{{catch/entryhs|060|Poliwag|yes|yes|Fish Good|20|all=45%|type1=Water}}
+{{catch/entryhs|118|Goldeen|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=15%|type1=Water}}
+{{catch/entryhs|060|Poliwag|yes|yes|Fish Super|40|all=40%|type1=Water}}
+{{catch/entryhs|061|Poliwhirl|yes|yes|Fish Super|40|all=30%|type1=Water}}
+{{catch/entryhs|130|Gyarados|yes|yes|Fish Super|40|all=30%|type1=Water|type2=Flying}}
+{{catch/div|cave|Rock Smash}}
+{{catch/entryhs|074|Geodude|yes|yes|Rock Smash|22-24|all=80%|type1=Rock|type2=Ground}}
+{{catch/entryhs|075|Graveler|yes|yes|Rock Smash|26-30|all=20%|type1=Rock|type2=Ground}}
+{{catch/div|cave|Special}}
+{{catch/entryhs|296|Makuhita|yes|yes|Hoenn|45|all=20%|type1=Fighting}}
+{{catch/entryhs|359|Absol|yes|yes|Hoenn|45, 47|all=20%|type1=Dark}}
+{{catch/entryhs|433|Chingling|yes|yes|Sinnoh|45|all=20%|type1=Psychic}}
+{{catch/entryhs|436|Bronzor|yes|yes|Sinnoh|45, 47|all=20%|type1=Steel|type2=Psychic}}
+{{catch/footer|cave}}
+
+===Generation VII===
+====1F====
+{{Catch/header|cave|no}}
+{{Catch/entrype|041|Zubat|yes|yes|Cave|51-56|10%|type1=Poison|type2=Flying}}
+{{Catch/entrype|042|Golbat|yes|yes|Cave|51-56|15%|type1=Poison|type2=Flying}}
+{{Catch/entrype|054|Psyduck|yes|yes|Cave|51-56|5%|type1=Water}}
+{{Catch/entrype|055|Golduck|yes|yes|Cave|51-56|15%|type1=Water}}
+{{Catch/entrype|074|Geodude|yes|yes|Cave|51-56|10%|type1=Rock|type2=Ground}}
+{{Catch/entrype|075|Graveler|yes|yes|Cave|51-56|15%|type1=Rock|type2=Ground}}
+{{Catch/entrype|108|Lickitung|yes|yes|Cave|51-56|10%|type1=Normal}}
+{{Catch/entrype|111|Rhyhorn|yes|yes|Cave|51-56|10%|type1=Ground|type2=Rock}}
+{{Catch/entrype|112|Rhydon|yes|yes|Cave|51-56|5%|type1=Ground|type2=Rock}}
+{{Catch/entrype|132|Ditto|yes|yes|Cave|51-56|5%|type1=Normal}}
+{{Catch/div|cave|Rare Spawns}}
+{{Catch/entrype|143|Snorlax|yes|yes|Cave|51-56|-}}
+{{catch/div|water|Sea Skim}}
+{{Catch/entrype|060|Poliwag|yes|yes|Surf|51-56|45%|type1=Water}}
+{{Catch/entrype|061|Poliwhirl|yes|yes|Surf|51-56|9%|type1=Water}}
+{{Catch/entrype|062|Poliwrath|yes|yes|Surf|51-56|1%|type1=Water|type2=Fighting}}
+{{Catch/entrype|129|Magikarp|yes|yes|Surf|51-56|45%|type1=Water}}
+{{Catch/footer|cave|2}}
+
+====2F====
+{{Catch/header|cave|no}}
+{{Catch/entrype|041|Zubat|yes|yes|Cave|51-56|5%|type1=Poison|type2=Flying}}
+{{Catch/entrype|042|Golbat|yes|yes|Cave|51-56|20%|type1=Poison|type2=Flying}}
+{{Catch/entrype|074|Geodude|yes|yes|Cave|51-56|5%|type1=Rock|type2=Ground}}
+{{Catch/entrype|075|Graveler|yes|yes|Cave|51-56|20%|type1=Rock|type2=Ground}}
+{{Catch/entrype|108|Lickitung|yes|yes|Cave|51-56|15%|type1=Normal}}
+{{Catch/entrype|111|Rhyhorn|yes|yes|Cave|51-56|10%|type1=Ground|type2=Rock}}
+{{Catch/entrype|112|Rhydon|yes|yes|Cave|51-56|10%|type1=Ground|type2=Rock}}
+{{Catch/entrype|113|Chansey|yes|yes|Cave|51-56|10%|type1=Normal}}
+{{Catch/entrype|132|Ditto|yes|yes|Cave|51-56|5%|type1=Normal}}
+{{Catch/div|cave|Rare Spawns}}
+{{Catch/entrype|143|Snorlax|yes|yes|Cave|51-56|-}}
+{{Catch/footer|cave|2}}
+
+====B1F====
+{{Catch/header|cave|no}}
+{{Catch/entrype|041|Zubat|yes|yes|Cave|51-56|10%|type1=Poison|type2=Flying}}
+{{Catch/entrype|042|Golbat|yes|yes|Cave|51-56|15%|type1=Poison|type2=Flying}}
+{{Catch/entrype|054|Psyduck|yes|yes|Cave|51-56|5%|type1=Water}}
+{{Catch/entrype|055|Golduck|yes|yes|Cave|51-56|15%|type1=Water}}
+{{Catch/entrype|074|Geodude|yes|yes|Cave|51-56|10%|type1=Rock|type2=Ground}}
+{{Catch/entrype|075|Graveler|yes|yes|Cave|51-56|15%|type1=Rock|type2=Ground}}
+{{Catch/entrype|108|Lickitung|yes|yes|Cave|51-56|10%|type1=Normal}}
+{{Catch/entrype|111|Rhyhorn|yes|yes|Cave|51-56|10%|type1=Ground|type2=Rock}}
+{{Catch/entrype|112|Rhydon|yes|yes|Cave|51-56|5%|type1=Ground|type2=Rock}}
+{{Catch/entrype|132|Ditto|yes|yes|Cave|51-56|5%|type1=Normal}}
+{{Catch/div|cave|Rare Spawns}}
+{{Catch/entrype|143|Snorlax|yes|yes|Cave|51-56|-}}
+{{catch/div|water|Sea Skim}}
+{{Catch/entrype|060|Poliwag|yes|yes|Surf|51-56|45%|type1=Water}}
+{{Catch/entrype|061|Poliwhirl|yes|yes|Surf|51-56|9%|type1=Water}}
+{{Catch/entrype|062|Poliwrath|yes|yes|Surf|51-56|1%|type1=Water|type2=Fighting}}
+{{Catch/entrype|129|Magikarp|yes|yes|Surf|51-56|45%|type1=Water}}
+{{Catch/footer|cave|2}}
+
+==Special encounters==
+[[File:Mewtwo Cerulean Cave FRLG.png|thumb|Encountering Mewtwo in Pokémon FireRed and LeafGreen]]
+[[File:PE Mewtwo scene.png|250px|thumb|Encountering Mewtwo in Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!]]
+
+===Generation I===
+A {{p|Mewtwo}} appears on B1F on the first visit.
+
+{{Pokémon
+|gen=1
+|ndex=0150
+|pokemon=Mewtwo
+|type1=Psychic
+|level=70
+|move1=Swift|move1type=Normal
+|move2=Psychic|move2type=Psychic
+|move3=Barrier|move3type=Psychic
+|move4=Recover|move4type=Normal}}
+
+===Generation III===
+A {{p|Mewtwo}} appears on B1F on the first visit. If run from, it respawns after leaving the area.
+
+{{Pokémon
+|gen=3
+|ndex=0150
+|pokemon=Mewtwo
+|type1=Psychic
+|ability=Pressure
+|level=70
+|move1=Swift|move1type=Normal
+|move2=Recover|move2type=Normal
+|move3=Safeguard|move3type=Normal
+|move4=Psychic|move4type=Psychic}}
+
+===Generation IV===
+A {{p|Mewtwo}} appears on B1F on the first visit. If defeated or run from, it respawns after entering the [[Hall of Fame]].
+
+{{Pokémon
+|gen=4
+|ndex=0150
+|pokemon=Mewtwo
+|type1=Psychic
+|ability=Pressure
+|level=70
+|move1=Psycho Cut|move1type=Psychic|move1cat=Physical
+|move2=Amnesia|move2type=Psychic|move2cat=Status
+|move3=Power Swap|move3type=Psychic|move3cat=Status
+|move4=Guard Swap|move4type=Psychic|move4cat=Status}}
+
+===Generation VII===
+A {{p|Mewtwo}} appears on B1F on the first visit. If defeated or run from, it respawns after entering the [[Hall of Fame]].
+
+{{Pokémon
+|gen=PE
+|ndex=150
+|pokemon=Mewtwo
+|type1=Psychic
+|level=70
+|move1=Swift|move1type=Normal|move1cat=Special
+|move2=Amnesia|move2type=Psychic|move2cat=Status
+|move3=Recover|move3type=Normal|move3cat=Status
+|move4=Psychic|move4type=Psychic|move4cat=Special}}
+
+==Trainers==
+===Generation VII===
+{{Party
+| background = {{green color}}
+| border = {{blue color dark}}
+| headcolor = {{green color light}}
+| sprite = VSGreen PE.png
+| size = x75px
+| prize = {{PDollar}}19,040
+| class = Pokémon Trainer
+| name = {{color2|000|Green (game)|Green}}
+| location = Cerulean Cave
+| game = PE
+| pokemon = 6
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0036
+| pokemon = Clefable
+| gender = female
+| level = 66
+| type1 = Fairy
+| move1 = Moonblast | move1type = Fairy | move1cat = Special
+| move2 = Light Screen | move2type = Psychic | move2cat = Status
+| move3 = Reflect | move3type = Psychic | move3cat = Status
+| move4 = Tri Attack | move4type = Normal | move4cat = Special
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0094
+| pokemon = Gengar
+| gender = male
+| level = 66
+| type1 = Ghost
+| type2 = Poison
+| move1 = Dark Pulse | move1type = Dark | move1cat = Special
+| move2 = Shadow Ball | move2type = Ghost | move2cat = Special
+| move3 = Sludge Bomb | move3type = Poison | move3cat = Special
+| move4 = Will-O-Wisp | move4type = Fire | move4cat = Status
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0071
+| pokemon = Victreebel
+| gender = male
+| level = 66
+| type1 = Grass
+| type2 = Poison
+| move1 = Power Whip | move1type = Grass | move1cat = Physical
+| move2 = Poison Jab | move2type = Poison | move2cat = Physical
+| move3 = Sucker Punch | move3type = Dark | move3cat = Physical
+| move4 = Leech Life | move4type = Bug | move4cat = Physical
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0038
+| pokemon = Ninetales
+| gender = female
+| level = 66
+| type1 = Fire
+| move1 = Fire Blast | move1type = Fire | move1cat = Special
+| move2 = Dark Pulse | move2type = Dark | move2cat = Special
+| move3 = Foul Play | move3type = Dark | move3cat = Physical
+| move4 = Hyper Beam | move4type = Normal | move4cat = Special
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0115
+| pokemon = Kangaskhan
+| gender = female
+| level = 66
+| type1 = Normal
+| move1 = Dizzy Punch | move1type = Normal | move1cat = Physical
+| move2 = Sucker Punch | move2type = Dark | move2cat = Physical
+| move3 = Thunder Punch | move3type = Electric | move3cat = Physical
+| move4 = Brick Break | move4type = Fighting | move4cat = Physical
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0009
+| pokemon = Blastoise
+| gender = male
+| level = 68
+| type1 = Water
+| megastone = Blastoisinite
+| icon = mega
+| move1 = Hydro Pump | move1type = Water | move1cat = Special
+| move2 = Flash Cannon | move2type = Steel | move2cat = Special
+| move3 = Ice Beam | move3type = Ice | move3cat = Special
+| move4 = Fake Out | move4type = Normal | move4cat = Physical
+}}
+{{Party/end}}
+
+==Walking Pokémon effects==
+When interacting with [[walking Pokémon]] in {{v2|HeartGold and SoulSilver|s}}, the Pokémon may occasionally show an altered mood specific to this location.
+
+{| class="roundtable" style="margin: auto; text-align: center; background-color: #{{locationcolor/med|cave}}; border: 3px solid #{{locationcolor/dark|cave}}"
+|- style="background:#{{locationcolor/light|cave}}"
+! Games
+! Pokémon
+! Area
+! Quote
+|- style="background-color: #FFF"
+! rowspan="7" | {{GameIcon|HG}}{{GameIcon|SS}}
+|- style="background-color: #FFF"
+| [[File:Ani150OD.png]]<br>{{p|Mewtwo}}
+| Anywhere
+| <Pokémon's name> suddenly shouted!
+|- style="background-color: #FFF"
+| [[File:Ani150OD.png]]<br>{{p|Mewtwo}}
+| Anywhere
+| <Pokémon's name> looked up at the ceiling and howled!
+|- style="background-color: #FFF"
+| [[File:Ani150OD.png]]<br>{{p|Mewtwo}}
+| Anywhere
+| <Pokémon's name> slapped at the ground!
+|- style="background-color: #FFF"
+| [[File:Ani151OD.png]]<br>{{p|Mew}}
+| Anywhere
+| <Pokémon's name> suddenly started spinning around!
+|- style="background-color: #FFF"
+| [[File:Ani151OD.png]]<br>{{p|Mew}}
+| Anywhere
+| <Pokémon's name> suddenly started shouting!
+|- style="background-color: #FFF"
+| [[File:Ani151OD.png]]<br>{{p|Mew}}
+| Anywhere
+| <Pokémon's name> trembled.
+|}
+
+==Layout==
+The layout of the cave has been tweaked several times in the past, particularly in [[Generation I]].
+
+In {{game|FireRed and LeafGreen|s}}, it has been restored to the original layout found in {{game|Red and Green|s}}, with the addition of [[breakable rock]]s.
+
+In {{game|HeartGold and SoulSilver|s}}, the layout of the first and second floors is based on the equivalent layout from Pokémon FireRed and LeafGreen, while the layout of the basement is based on the respective layout from {{game|Yellow}}. Breakable rocks are also present and {{m|Rock Climb}} surfaces were added.
+
+In {{LGPE}}, the layout of the entire cave is based on the original Red and Green layout, though the top floor has been modified to be an open space with no walls.
+
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{Locationcolor/dark|cave}}"
+|-
+! style="background:#{{Locationcolor/light|cave}}; {{roundytl|5px}}" | Version
+! style="background:#{{Locationcolor/light|cave}}" | 1F
+! style="background:#{{Locationcolor/light|cave}}" | 2F
+! style="background:#{{Locationcolor/light|cave}}; {{roundytr|5px}}" | B1F
+|-
+! style="background:#{{red color}}" | {{color2|000|Pokémon Red and Green Versions|Red (J)}}
+| rowspan="2" | [[File:Unknown Dungeon 1F RG.png|180px]]
+| rowspan="2" | [[File:Unknown Dungeon 2F RG.png|180px]]
+| rowspan="2" | [[File:Unknown Dungeon B1F RG.png|180px]]
+|-
+! style="background:#{{green color}}" | {{color2|000|Pokémon Red and Green Versions|Green}}
+|-
+! style="background:#{{red color}}" | {{color2|000|Pokémon Red and Blue Versions|Red}}
+| rowspan="2" | [[File:Unknown Dungeon 1F RB.png|180px]]
+| rowspan="2" | [[File:Unknown Dungeon 2F RB.png|180px]]
+| rowspan="2" | [[File:Unknown Dungeon B1F RB.png|180px]]
+|-
+! style="background:#{{blue color}}" | {{color2|fff|Pokémon Red and Blue Versions|Blue}}<br>{{color2|fff|Pokémon Blue Version (Japanese)|Blue (J)}}
+|-
+! style="background:#{{yellow color}}" | {{color2|000|Pokémon Yellow Version|Yellow}}
+| [[File:Unknown Dungeon 1F Y.png|180px]]
+| [[File:Unknown Dungeon 2F Y.png|180px]]
+| [[File:Unknown Dungeon B1F Y.png|180px]]
+|-
+! style="background:#{{firered color}}" | {{color2|000|Pokémon FireRed and LeafGreen Versions|FireRed}}
+| rowspan="2" | [[File:Cerulean Cave 1F FRLG.png|180px]]
+| rowspan="2" | [[File:Cerulean Cave 2F FRLG.png|180px]]
+| rowspan="2" | [[File:Cerulean Cave B1F FRLG.png|180px]]
+|-
+! style="background:#{{leafgreen color}}" | {{color2|000|Pokémon FireRed and LeafGreen Versions|LeafGreen}}
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+| rowspan="2" | [[File:Cerulean Cave 1F HGSS.png|180px]]
+| rowspan="2" | [[File:Cerulean Cave 2F HGSS.png|180px]]
+| rowspan="2" | [[File:Cerulean Cave B1F HGSS.png|180px]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan="4" style="background:#{{Locationcolor/light|cave}}; {{roundybottom|5px}}" | &nbsp; 
+|}
+
+==[[Location preview|Preview]]==
+<gallery>
+File:FL Cerulean Cave.png|FRLG
+File:HGSS Cerulean Cave-Morning.png|HGSS Morning (Ditto)
+File:HGSS Cerulean Cave-Day.png|HGSS Day/Evening (Ditto)
+File:HGSS Cerulean Cave-Night.png|HGSS Night (Magneton)
+</gallery>
+
+==Artwork==
+{| style="margin:auto; text-align:center; {{roundy|20px}} border:2px solid #{{ground color dark}}; background:#{{ground color}}; font-size:80%; color:#fff;"
+|style="{{roundy|20px}} border:2px solid #{{ground color dark}}; background:#{{ground color light}}; overflow:hidden;"| [[File:Cerulean Cave LGPE Concept Art.jpg|x250px]]
+|-
+|Concept art from the {{color2|fff|Pokémon: Let's Go, Pikachu! & Pokémon: Let's Go, Eevee! Super Music Collection|Let's Go, Pikachu and Eevee! Super Music Collection}} 
+|}
+
+==In the spin-off games==
+===Pokémon Pokopia===
+In [[Pokémon Pokopia Expansion Pass]], Cerulean Cave can be found at [[Bubbly Basin]]. Despite most of the area being located underwater, parts of the cave contain air pockets with dry land.
+
+==In animation==
+[[File:Cerulean Cave inside PO.png|thumb|250px|Cerulean Cave's interior in Pokémon Origins]]
+===Pokémon Origins===
+[[File:Cerulean Cave entrance PO.png|thumb|left|250px|Cerulean Cave's entrance in [[Pokémon Origins]]]]
+Cerulean Cave appeared in ''[[PO04|File 4: Charizard]]''. It was first mentioned by {{OBP|Blue|Origins}}, who had gone to the cave after hearing rumors of an extremely strong Pokémon living in there. He intended to catch it, but got badly injured while battling it when his {{p|Blastoise}} was sent flying and crashed on top of him. After he had told [[Professor Oak]] and {{OBP|Red|Origins}} about this, Red soon recalled the {{FB|Pokémon Mansion|journals}} he had found at the {{ka|Pokémon Mansion}} at [[Cinnabar Island]], and understood that the mysterious Pokémon was in fact {{p|Mewtwo}}, an [[artificial Pokémon]] created by enhancing the powers of {{p|Mew}}.
+
+Wanting to help Professor Oak to complete the [[Pokédex]], Red then headed to Cerulean Cave, where he encountered Mewtwo. Being amazingly strong and {{m|Recover|durable}}, Mewtwo was capable of defeating almost all of Red's Pokémon, excluding only his {{TP|Red|Charizard}}. At first, even Charizard was losing, and was sent into the waters of the cave, along with Red. However, Red's [[Key Stone]] and Charizard's [[Mega Stone]] then activated, [[Mega Evolution|Mega Evolving]] Charizard into Mega Charizard X and making it able to defeat Mewtwo, allowing Red to catch it.
+{{left clear}}
+
+===Pokémon Evolutions===
+[[File:Cerulean Cave Evolutions.png|thumb|250px|Cerulean Cave in [[Pokémon Evolutions]]]]
+Cerulean Cave appeared in ''[[PE08|The Discovery]]'', where {{ga|Trace}} and {{ga|Green}} both entered it in order to find and catch {{p|Mewtwo}}. When Trace's {{p|Pidgeot}} was badly hurt by a swarm of {{p|Zubat}} and {{p|Golbat}}, he was forced to give up the race, allowing Green to reach the end of the cave first. There, however, she was upset to find out that {{ga|Elaine}} had managed to catch Mewtwo first, and challenged her to a battle over it. However, despite using her {{me|Blastoise}}, Green was still defeated when Elaine used Mewtwo against her. Green then handed Elaine Mewtwo's [[Mega Stone]]s as a prize and jokingly suggested that she and Mewtwo should become her Pokémon, before leaving.
+{{-}}
+
+==In the manga==
+===Pokémon Adventures===
+[[File:Cerulean Cave Adventures.png|thumb|250px|Cerulean Cave in [[Pokémon Adventures]]]]
+===={{MangaArc|Red, Green & Blue}}====
+Cerulean Cave appeared in ''[[PS034|And Mewtwo Too?!]]'' and ''[[PS035|And Mewtwo... Three!]]''. Upon hearing from {{adv|Bill}} about a monster that had caused massive destruction in the northwest sector of Cerulean City, {{adv|Red}} went to investigate Cerulean Cave, where the monster was said to have fled to. Once Red arrived at the cave, he and {{cat|Red's Pokémon|his Pokémon}} were soon caught in a tornado, which seemed to originate from inside the cave. Red and his Pokémon were saved from being blown away by {{adv|Blaine}} and his {{p|Rapidash}}. Blaine explained that the tornado was actually {{m|Psywave}}, a {{type|Psychic}} [[move]] capable of both attacking and defending at the same time, and the user of the move was {{adv|Mewtwo}}, the "beast" sighted in Cerulean City.
+
+Blaine revealed that he, while working as a [[Team Rocket scientist|scientist]] in [[Team Rocket]], had been involved in Mewtwo's creation. Since Team Rocket had been unable to get enough of {{adv|Mew}}'s DNA to complete the {{pkmn|category|Genetic Pokémon}}, Blaine had finished it by using cells from his own arm. In the process, some of Mewtwo's cells had ended up in his arm, causing it to become horribly mutatated, much to Red's horror. This also gave both Blaine and Mewtwo the ability to sense each other's presence. However, the mutated cells in his arm were slowly spreading to the rest of his body, and would eventually kill him. Realizing what kind of an abomination he had created, Blaine had subsequently left Team Rocket.
+
+[[File:Cerulean Cave Zensho.png|thumb|left|150px|Cerulean Cave in [[Pokémon Zensho]]]]
+Blaine was determined to destroy the monster he himself had created, even if it would cost him his life. After putting Red inside of a protective fireball, he and Rapidash charged through the Psywave tornado at Mewtwo, creating a massive explosion. Despite the hit, Mewtwo was still capable of fighting. As Blaine was down for the count, Red tried to battle Mewtwo himself, sending out his [[Poli]]wrath. However, Mewtwo easily knocked the Tadpole Pokémon back with a giant spoon it created. Blaine explained that Mewtwo would form its Psywave into a tornado while fighting multiple enemies at once, and into a spoon for a single enemy. This gave Red an idea, and he sent out all of his Pokémon, causing Mewtwo to switch into its tornado tactic again. However, before the tornado got to full power, Red dived into the eye of the storm with his [[Aero]]dactyl, and sent his [[Pika]]chu diving further down into Mewtwo itself, catching it with the [[Master Ball]] that Blaine had given to Red just moments earlier. Afterwards, Red gave Mewtwo to Blaine and asked him to teach it the kindness of humans.
+
+===Pokémon Zensho===
+Cerulean Cave was mentioned in [[PZ10]], where [[Professor Oak]] showed {{Zensho|Satoshi}} and {{Zensho|Shigeru}} a photo of {{p|Mewtwo}} taken within the cave. The two young Trainers subsequently headed for the cave to capture Mewtwo together.
+{{-}}
+
+==Trivia==
+===Cerulean Cave on the map===
+In the [[Generation I]] games, Cerulean Cave is only listed in the [[Town Map]] if the player uses this item while inside the cave. However, Cerulean Cave is not listed at all in the Pokémon location map from the [[Pokédex]], likely to keep its existence as a secret until the player beats the game. For instance, {{p|Rhydon}} is only available at the Cerulean Cave in {{game|Red and Blue|s}}, but Rhydon's Pokédex map simply says "Area unknown". Similarly, {{p|Golbat}} is available in multiple places including the Cerulean Cave, but only the other places are shown in the Pokédex map.
+
+Cerulean Cave is also absent from the Pokémon location map in the {{OBP|Pokédex|Stadium}} from both the [[Pokémon Stadium (Japanese)|Japanese Pokémon Stadium]] and [[Pokémon Stadium]], but it is present in [[Pokémon Stadium 2]]. As a result, the player may connect any [[Generation I]] or [[Generation II|II]] [[core series]] game to Pokémon Stadium 2 via [[Transfer Pak]] and check their location in the Pokédex normally, including those Pokémon available in the Cerulean Cave.
+
+==In other languages==
+{|
+|- style="vertical-align:top"
+|
+''Cerulean Cave''
+{{langtable|color={{locationcolor/light|cave}}|bordercolor={{locationcolor/dark|cave}}
+|zh_yue=華藍洞窟 ''{{tt|Wàhlàahm Duhngfāt|Huálán Cave}}''
+|zh_cmn=華藍洞窟 / 华蓝洞窟 ''{{tt|Huálán Dòngkū|Huálán Cave}}''
+|cs=Ceruleanská jeskyně
+|fr=Caverne Azurée
+|de=Azuria-Höhle
+|it=Grotta Celeste
+|ko=블루시티동굴 ''{{tt|Blue City Donggul|Blue City Cave}}''
+|pt_br=Caverna de Cerulean
+|es=Cueva Celeste
+|vi=Hang động Hanada
+}}
+|
+''Unknown Dungeon''
+{{langtable
+| color = {{locationcolor/light|cave}}
+| bordercolor = {{locationcolor/dark|cave}}
+| da = Det Ukendte Tårn{{tt|*|Danish version of The Official Pokémon Handbook}}
+| fr_ca = Grotte Inconnue
+| fr_eu = Grotte Inconnue
+| de = Geheimdungeon
+| it = Grotta Ignota
+| pt_br = Calabouço Desconhecido<br>Labirinto Desconhecido
+| es = Mazmorra Rara
+}}
+|}
+==References==
+<references/>
+
+==Related articles==
+{{League}}
+{{Kanto}}
+{{legendarylocations|kanto}}
+{{Project Locations notice}}
+
+[[Category:Kanto locations]]
+[[Category:Red, Blue and Yellow locations]]
+[[Category:FireRed and LeafGreen locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Let's Go, Pikachu! and Let's Go, Eevee! locations]]
+[[Category:Caves]]
+
+[[de:Azuria-Höhle]]
+[[es:Cueva Celeste]]
+[[fr:Caverne Azurée]]
+[[it:Grotta Celeste]]
+[[ja:ハナダのどうくつ]]
+[[zh:华蓝洞窟]]

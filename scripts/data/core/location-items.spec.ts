@@ -1,0 +1,164 @@
+import type { GameLocation, LocationItem, Unlock } from '../../../src/app/core/domain/models';
+import {
+  applyItemOverrides,
+  checkItemRequirements,
+  diffWalkthroughItems,
+  type ItemOverrides,
+} from './location-items';
+import { slugify } from './slug';
+
+const item = (name: string, extra: Partial<LocationItem> = {}): LocationItem => ({
+  itemId: slugify(name),
+  name,
+  quantity: 1,
+  games: ['red', 'blue', 'yellow'],
+  obtain: 'pickup',
+  subArea: null,
+  where: 'Somewhere',
+  ...extra,
+});
+
+const location = (id: string, items: LocationItem[], part = 1): GameLocation => ({
+  id,
+  name: id,
+  region: 'kanto',
+  kind: 'route',
+  placement: {
+    red: { part, order: part * 100 },
+    blue: { part, order: part * 100 },
+    yellow: { part, order: part * 100 },
+  },
+  source: { title: id, revid: 1 },
+  notes: [],
+  subAreas: [],
+  items,
+  itemNotes: [],
+});
+
+const sourceOf = (title: string) => (title === 'Missing' ? null : { title, revid: 42 });
+const overrides = (extra: Partial<ItemOverrides>): ItemOverrides => ({
+  requirementPhrases: {},
+  add: [],
+  requires: [],
+  choiceGroups: [],
+  ...extra,
+});
+
+describe('applyItemOverrides', () => {
+  it('adds items with their source, and rejects duplicates, unknown locations and missing pages silently', () => {
+    const locations = [location('pewter-city', [item('Potion')])];
+    const gymTm = { name: 'TM34 Bide', quantity: 1, games: ['red' as const], obtain: 'reward' as const, subArea: 'Gym', where: 'From Brock' };
+    const errors = applyItemOverrides(
+      locations,
+      overrides({
+        add: [
+          { locationId: 'pewter-city', item: gymTm, sourcePage: 'Walkthrough', reason: 'Gym' },
+          { locationId: 'pewter-city', item: { ...gymTm, name: 'Potion' }, sourcePage: 'Walkthrough', reason: 'dup' },
+          { locationId: 'nowhere', item: gymTm, sourcePage: 'Walkthrough', reason: 'typo' },
+          { locationId: 'pewter-city', item: { ...gymTm, name: 'Ether' }, sourcePage: 'Missing', reason: 'gone' },
+        ],
+      }),
+      sourceOf,
+    );
+    expect(errors).toEqual([
+      'Item override adds Potion to pewter-city, but the page already lists it',
+      'Item override for TM34 Bide names unknown location "nowhere"',
+    ]);
+    expect(locations[0]!.items.map((i) => i.itemId)).toEqual(['potion', 'tm34-bide']);
+    expect(locations[0]!.items[1]).toMatchObject({ source: { title: 'Walkthrough', revid: 42 }, subArea: 'Gym' });
+  });
+
+  it('adds unstated requirements to exactly one item', () => {
+    const locations = [
+      location('silph-co', [
+        item('Protein', { subArea: '5F' }),
+        item('HP Up', { subArea: '6F' }),
+        item('HP Up', { subArea: '7F' }),
+        item('Iron', { requires: [['card-key']] }),
+      ]),
+    ];
+    const rule = { locationId: 'silph-co', requires: [['card-key']], sourcePage: 'Walkthrough', reason: 'door' };
+    const errors = applyItemOverrides(
+      locations,
+      overrides({
+        requires: [
+          { ...rule, itemId: 'protein' },
+          { ...rule, itemId: 'hp-up' },
+          { ...rule, itemId: 'hp-up', subArea: '6F' },
+          { ...rule, itemId: 'iron' },
+          { ...rule, itemId: 'nugget' },
+        ],
+      }),
+      sourceOf,
+    );
+    expect(errors).toEqual([
+      'Requirement override for hp-up in silph-co matches 2 items, expected 1',
+      'Requirement override for iron in silph-co is already stated by the page',
+      'Requirement override for nugget in silph-co matches 0 items, expected 1',
+    ]);
+    expect(locations[0]!.items.map((i) => i.requires ?? null)).toEqual([
+      [['card-key']],
+      [['card-key']],
+      null,
+      [['card-key']],
+    ]);
+  });
+
+  it('marks choice groups', () => {
+    const locations = [
+      location('mt-moon', [item('Dome Fossil', { obtain: 'choice' }), item('Helix Fossil', { obtain: 'choice' })]),
+    ];
+    const errors = applyItemOverrides(
+      locations,
+      overrides({
+        choiceGroups: [{ locationId: 'mt-moon', itemIds: ['dome-fossil', 'helix-fossil', 'old-amber'], groupId: 'mt-moon-fossil' }],
+      }),
+      sourceOf,
+    );
+    expect(errors).toEqual(['Choice group mt-moon-fossil has no choice item old-amber in mt-moon']);
+    expect(locations[0]!.items.map((i) => i.choiceGroupId)).toEqual(['mt-moon-fossil', 'mt-moon-fossil']);
+  });
+});
+
+describe('checkItemRequirements', () => {
+  it('reports requirements that are not unlocks in every game, and unlocks at unknown locations', () => {
+    const cut: Unlock = { id: 'cut', label: 'Cut', kind: 'move', locationId: 'ss-anne', part: 6 };
+    const locations = [location('ss-anne', []), location('route-2', [item('HP Up', { requires: [['cut', 'surf']] })])];
+    expect(
+      checkItemRequirements(locations, {
+        red: [cut],
+        blue: [cut],
+        yellow: [cut, { id: 'surf', label: 'Surf', kind: 'move', locationId: 'safari-zone', part: 11 }],
+      }),
+    ).toEqual([
+      'Unlock "surf" (yellow) is at unknown location "safari-zone"',
+      'HP Up in route-2 requires "surf", which is not an unlock in red, blue',
+    ]);
+  });
+});
+
+describe('diffWalkthroughItems', () => {
+  it('compares total quantities and requirements per item, once per shared page', () => {
+    const locations = [
+      location('route-1', [
+        item('Potion', { quantity: 2 }),
+        item('TM27 Fissure', { fromPart: { red: 14, blue: 14 } }),
+        item('Old Amber', { requires: [['cut']] }),
+      ]),
+      location('route-3', [item('Nugget')], 3),
+    ];
+    const part1 = [item('Potion'), item('Iron', { requires: [['cut']] }), item('TM27 Fissure')];
+    // Listed in another part than the location data, with a requirement the data already has.
+    const part2 = [item('Old Amber', { requires: [['cut']] })];
+    const walkthrough = (['red', 'blue'] as const).flatMap((game) => [
+      { page: 'RB/Part 1', part: 1, game, items: part1 },
+      { page: 'RB/Part 2', part: 2, game, items: part2 },
+    ]);
+    expect(diffWalkthroughItems(locations, walkthrough)).toEqual([
+      { page: 'RB/Part 1', message: 'Potion: ×1 in the walkthrough, ×2 in the location data' },
+      { page: 'RB/Part 1', message: 'Iron: ×1 in the walkthrough, ×0 in the location data' },
+      { page: 'RB/Part 1', message: 'Iron: the walkthrough says it requires cut ("Somewhere")' },
+      { page: 'Part 3', message: 'Nugget: ×0 in the walkthrough, ×1 in the location data' },
+    ]);
+  });
+});
