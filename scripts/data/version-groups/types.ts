@@ -13,6 +13,7 @@ import type {
 } from '../../../src/app/core/domain/models';
 import type { CatchTemplateAdapter } from '../adapters/catch-template-adapter';
 import type { CatchRateNoteClassification } from '../core/catch-rate-history';
+import type { EncounterOverrides } from '../core/encounter-overrides';
 import type { ItemOverrides } from '../core/location-items';
 import type { TitleMatcher } from '../core/sections';
 import type { TradePageConfig } from '../core/trades';
@@ -69,5 +70,7 @@ export interface VersionGroupConfig {
     unlocks: Partial<Record<GameId, readonly Unlock[]>>;
     /** Items missing from location pages, unstated prerequisites and choice groups (plan §7.13). */
     items: ItemOverrides;
+    /** Statics, encounter patches, exclusive groups and event-only species (plan §7.7). */
+    encounters: EncounterOverrides;
   };
 }

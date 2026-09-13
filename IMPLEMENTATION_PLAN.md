@@ -406,14 +406,10 @@ export interface VersionGroupConfig {
   speciesRange: [number, number];              // [1, 151]
   extraParsers: ExtraParser[];                 // shop (prizes), trades
   overrides: {
-    staticEncounters: OverrideEncounter[];
-    giftsAndChoices: OverrideEncounter[];
-    exclusiveGroups: ExclusiveGroup[];
+    encounters: EncounterOverrides;            // encounters (statics), patches, exclusiveGroups, eventOnly (§7.7)
     evolutions: EvolutionEdge[];
     breeding?: BreedingRules;                  // gen 2+
     unlocks: Unlock[];
-    eventOnly: number[];
-    patches: Patch[];
     items: ItemOverrides;                      // add, requires, patch, requirementPhrases, choiceGroups, walkthroughAccepted, walkthroughGames (§7.13)
   };
   sprites: Partial<Record<GameId, { setId: string; filePattern: string }>>; // 'Spr_1y_{dex3}.png'
@@ -513,10 +509,11 @@ Dev dependencies: `tsx`, `zod`, `@material/material-color-utilities`, `fast-chec
   - Snorlax: Route 12 and Route 16. Requires the Poké Flute. Two copies are obtainable.
   - Articuno: Seafoam Islands (lowest floor). Moltres: Victory Road. Zapdos: Power Plant. Mewtwo: Cerulean Cave (post-game).
   - Power Plant Voltorb and Electrode that look like item balls.
+  - Implemented in `overrides/encounters.ts` (`core/encounter-overrides.ts`): each static is a once-only walked row merged with the location's table rows (so floors such as `B4F` reuse the table's sub-areas). Levels are checked against pret `pokered`/`pokeyellow` (Snorlax 30 ×2 with the Poké Flute; Articuno 50 on B4F with Surf + Strength; Zapdos 50, Voltorb 40, Electrode 43 with Surf; Moltres 50 on 2F with Strength; Mewtwo 70 on B1F after the Hall of Fame). `sourcePage` defaults to the location page. Encounter requirements must be unlocks in every game of the encounter (error).
   - **Not catchable, excluded:** the Pokémon Tower ghost Marowak and glitch Pokémon.
 - **Gifts and choices:**
   - **Exclusive group** `rby-starter` = {Bulbasaur, Charmander, Squirtle}, Red/Blue only, Professor Oak's Laboratory (its Gen I table's `First partner Pokémon` rows → method `starter`).
-  - Yellow starter: Pikachu, from the same table. Route 1's "Attacking Oak" row may then be a duplicate (open question 10). Yellow gifts Bulbasaur (Cerulean City), Charmander (Route 24) and Squirtle (Vermilion City, after defeating Lt. Surge; confirmed in its Gen I table). All three come from the tables.
+  - Yellow starter: Pikachu, from the same table. Route 1's "Attacking Oak" row describes the same Pikachu, so a patch drops it (open question 10, resolved). Yellow gifts Bulbasaur (Cerulean City), Charmander (Route 24) and Squirtle (Vermilion City, after defeating Lt. Surge; confirmed in its Gen I table). All three come from the tables.
   - **Exclusive group** `mt-moon-fossil` = {Omanyte, Kabuto}. Aerodactyl comes from Old Amber (Pewter Museum). Cinnabar Lab's Gen I table lists the revivals (method column `Helix`/`Dome`/`Amber` → `fossil`), so the encounters are parsed there. The exclusive group, and notes on where each fossil is found, come from overrides.
   - **Exclusive group** `fighting-dojo` = {Hitmonlee, Hitmonchan}.
   - Eevee: Celadon Condominiums. Lapras: Silph Co. (from its table). Magikarp purchase on Route 4 (from its table).
@@ -531,7 +528,8 @@ Dev dependencies: `tsx`, `zod`, `@material/material-color-utilities`, `fast-chec
 
   Unlocks are defined **per game**, so a game where the Super Rod is found somewhere else just uses a different entry.
 - **Event-only:** Mew.
-- **Patches:** small, documented corrections keyed by `(locationId, dex, game)`. Each has a comment and a Bulbapedia or pret link.
+- **Patches:** small, documented corrections to walked rows before the merge, keyed by `locationId` and a match on `method` (plus optional `dex` and `label`). `set` changes the method or label, or `'drop'` removes the rows. A patch that matches no row is an error. Each has a `reason` with a Bulbapedia or pret link. rby: Oak's Lab `First partner Pokémon` gifts → `starter`; Route 1 `Attacking Oak` Pikachu dropped.
+- **Exclusive groups** name the locations and methods of their members; every member must be found for every game of the group (error), and matching encounters get `exclusiveGroupId`. The 7 pages without a Gen I Pokémon table (Pewter City, S.S. Anne, Pewter Museum, Lavender Town, Underground Path 7–8, Team Rocket Hideout, Saffron City) are `expectEmpty`.
 
 ### 7.8 Validation — the build fails on errors
 - **Generic errors:**

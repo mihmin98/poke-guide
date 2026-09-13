@@ -17,6 +17,13 @@ import { GAMES, getVersionGroup } from '../../../src/app/core/games/registry';
 import type { LocationConfig, VersionGroupConfig } from '../version-groups/types';
 import type { CachedPage } from './cache';
 import { CATCH_RATE_LIST_PAGE, parseCatchRateList, resolveCatchRates } from './catch-rate-history';
+import {
+  applyEncounterPatches,
+  applyExclusiveGroups,
+  checkEncounterRequirements,
+  checkOverrideLocations,
+  overrideRows,
+} from './encounter-overrides';
 import { walkEncounterSection, type WalkedRow, type WalkResult } from './encounter-walker';
 import { diffEvolutionBoxes, type EvolutionBoxPage } from './evolution-boxes';
 import {
@@ -361,6 +368,12 @@ export function assembleVersionGroup(
     if (ids.has(location.id)) issue('error', `Duplicate location id "${location.id}"`);
     ids.add(location.id);
   }
+  const sourceOf = (title: string) => {
+    const page = use(title, mainSources);
+    return page ? { title: page.resolvedTitle, revid: page.revid } : null;
+  };
+  const encounterOverrides = config.overrides.encounters;
+  for (const message of checkOverrideLocations(encounterOverrides, ids)) issue('error', message);
   const placements = placeLocations(config.locations, config.games);
   const locations: GameLocation[] = [];
   for (const location of config.locations) {
@@ -399,7 +412,15 @@ export function assembleVersionGroup(
       );
     }
     const rows: WalkedRow[] = [];
-    for (const walked of [...walk.rows, ...(shop?.rows ?? [])]) {
+    const patched = applyEncounterPatches(
+      location.id,
+      location.page,
+      [...walk.rows, ...(shop?.rows ?? []), ...overrideRows(location.id, location.page, encounterOverrides, sourceOf)],
+      encounterOverrides,
+      sourceOf,
+    );
+    for (const message of patched.errors) issue('error', message, location.page);
+    for (const walked of patched.rows) {
       const { row } = walked;
       const known = listByDex.get(row.dex);
       if (!known) {
@@ -467,11 +488,11 @@ export function assembleVersionGroup(
     }
   }
 
+  // Encounter overrides after the merge: exclusive groups and requirements (plan §7.7).
+  for (const message of applyExclusiveGroups(locations, encounterOverrides.exclusiveGroups)) issue('error', message);
+  for (const message of checkEncounterRequirements(locations, config.overrides.unlocks)) issue('error', message);
+
   // Items: overrides, prerequisites against unlocks, and the walkthrough cross-check (plan §7.13).
-  const sourceOf = (title: string) => {
-    const page = use(title, mainSources);
-    return page ? { title: page.resolvedTitle, revid: page.revid } : null;
-  };
   for (const message of applyItemOverrides(locations, config.overrides.items, sourceOf))
     issue('error', message);
   for (const message of checkItemRequirements(locations, config.overrides.unlocks))
@@ -518,9 +539,13 @@ export function assembleVersionGroup(
     unlocks: Object.fromEntries(
       Object.entries(config.overrides.unlocks).map(([game, list]) => [game, [...(list ?? [])]]),
     ),
-    // Filled by the override files (statics, gifts and choices, event-only) in a later Phase 1 task.
-    exclusiveGroups: [],
-    eventOnly: [],
+    exclusiveGroups: encounterOverrides.exclusiveGroups.map(({ id, label, games, members }) => ({
+      id,
+      label,
+      games: [...games],
+      members: [...members],
+    })),
+    eventOnly: [...encounterOverrides.eventOnly],
     locations,
     sources: byTitle(mainSources),
   };

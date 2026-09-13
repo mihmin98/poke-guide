@@ -106,6 +106,52 @@ describe('rby data: encounters (plan §7.8)', () => {
   });
 });
 
+describe('rby data: encounter overrides (plan §7.7)', () => {
+  const at = (locationId: string) =>
+    data.locations.find((l) => l.id === locationId)!.subAreas.flatMap((s) => s.encounters.map((e) => ({ ...e, subArea: s.id })));
+
+  it('makes the Oak’s Lab first partners starters, with the Red/Blue choice as an exclusive group', () => {
+    expect(at('oaks-lab').map((e) => [e.dex, e.method, e.exclusiveGroupId ?? null])).toEqual([
+      [1, 'starter', 'rby-starter'],
+      [4, 'starter', 'rby-starter'],
+      [7, 'starter', 'rby-starter'],
+      [25, 'starter', null],
+    ]);
+    expect(at('route-1').some((e) => e.dex === 25)).toBe(false);
+  });
+
+  it('adds the statics with pret levels and their requirements', () => {
+    const find = (locationId: string, dex: number) => at(locationId).find((e) => e.dex === dex && e.method === 'static')!;
+    const summary = (locationId: string, dex: number) => {
+      const e = find(locationId, dex);
+      return [e.subArea, e.games.yellow![0]!.levels!.min, e.requires, Object.keys(e.games)];
+    };
+    expect(summary('route-12', 143)).toEqual(['main', 30, ['poke-flute'], ['red', 'blue', 'yellow']]);
+    expect(summary('route-16', 143)).toEqual(['main', 30, ['poke-flute'], ['red', 'blue', 'yellow']]);
+    expect(summary('seafoam-islands', 144)).toEqual(['b4f', 50, ['surf', 'strength'], ['red', 'blue', 'yellow']]);
+    expect(summary('power-plant', 145)).toEqual(['main', 50, ['surf'], ['red', 'blue', 'yellow']]);
+    expect(summary('power-plant', 100)[1]).toBe(40);
+    expect(summary('power-plant', 101)[1]).toBe(43);
+    expect(summary('victory-road', 146)).toEqual(['2f', 50, ['strength'], ['red', 'blue', 'yellow']]);
+    expect(summary('cerulean-cave', 150)).toEqual(['b1f', 70, ['post-game'], ['red', 'blue', 'yellow']]);
+  });
+
+  it('has the exclusive groups on their encounters, and Mew as event-only', () => {
+    expect(data.exclusiveGroups.map((g) => [g.id, g.members])).toEqual([
+      ['rby-starter', [1, 4, 7]],
+      ['mt-moon-fossil', [138, 140]],
+      ['fighting-dojo', [106, 107]],
+    ]);
+    expect(at('cinnabar-lab').filter((e) => e.method === 'fossil').map((e) => [e.dex, e.exclusiveGroupId ?? null])).toEqual([
+      [138, 'mt-moon-fossil'],
+      [140, 'mt-moon-fossil'],
+      [142, null],
+    ]);
+    expect(at('fighting-dojo').map((e) => e.exclusiveGroupId)).toEqual(['fighting-dojo', 'fighting-dojo']);
+    expect(data.eventOnly).toEqual([151]);
+  });
+});
+
 describe('rby data: items (plan §7.13)', () => {
   const items = (locationId: string) => data.locations.find((l) => l.id === locationId)!.items;
   const find = (locationId: string, itemId: string) => items(locationId).filter((i) => i.itemId === itemId);

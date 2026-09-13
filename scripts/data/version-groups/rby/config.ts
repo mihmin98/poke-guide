@@ -2,6 +2,7 @@ import { entry1Adapter } from '../../adapters/entry1';
 import type { VersionGroupConfig } from '../types';
 import { RBY_IGNORED_CATEGORY_PAGES, RBY_LOCATIONS } from './locations';
 import { RBY_CATCH_RATE_NOTES } from './overrides/catch-rate-notes';
+import { RBY_ENCOUNTER_OVERRIDES } from './overrides/encounters';
 import { RBY_EVOLUTIONS } from './overrides/evolutions';
 import { RBY_ITEM_OVERRIDES } from './overrides/items';
 import { RBY_UNLOCKS } from './overrides/unlocks';
@@ -40,5 +41,6 @@ export const rbyConfig: VersionGroupConfig = {
     catchRateNotes: RBY_CATCH_RATE_NOTES,
     unlocks: { red: RBY_UNLOCKS, blue: RBY_UNLOCKS, yellow: RBY_UNLOCKS },
     items: RBY_ITEM_OVERRIDES,
+    encounters: RBY_ENCOUNTER_OVERRIDES,
   },
 };

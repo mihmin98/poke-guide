@@ -32,7 +32,7 @@ export const RBY_LOCATIONS: LocationConfig[] = [
   route(2, 2),
   // Part 3
   kanto('viridian-forest', 'Viridian Forest', 'Viridian Forest', 'route', 3),
-  kanto('pewter-city', 'Pewter City', 'Pewter City', 'town', 3),
+  kanto('pewter-city', 'Pewter City', 'Pewter City', 'town', 3, { expectEmpty: true }),
   // Part 4
   route(3, 4),
   kanto('mt-moon', 'Mt. Moon', 'Mt. Moon', 'cave', 4),
@@ -47,18 +47,18 @@ export const RBY_LOCATIONS: LocationConfig[] = [
   // Part 6
   route(6, 6),
   kanto('vermilion-city', 'Vermilion City', 'Vermilion City', 'town', 6),
-  kanto('ss-anne', 'S.S. Anne', 'S.S. Anne', 'building', 6),
+  kanto('ss-anne', 'S.S. Anne', 'S.S. Anne', 'building', 6, { expectEmpty: true }),
   // Part 7
   route(11, 7),
   kanto('digletts-cave', "Diglett's Cave", "Diglett's Cave", 'cave', 7),
-  kanto('pewter-museum', 'Pewter Museum of Science', 'Pewter Museum of Science', 'building', 7),
+  kanto('pewter-museum', 'Pewter Museum of Science', 'Pewter Museum of Science', 'building', 7, { expectEmpty: true }),
   route(9, 7),
   route(10, 7),
   // Part 8
   kanto('rock-tunnel', 'Rock Tunnel', 'Rock Tunnel', 'cave', 8),
-  kanto('lavender-town', 'Lavender Town', 'Lavender Town', 'town', 8),
+  kanto('lavender-town', 'Lavender Town', 'Lavender Town', 'town', 8, { expectEmpty: true }),
   route(8, 8),
-  kanto('underground-path-7-8', 'Underground Path (Kanto Routes 7–8)', 'Underground Path (Routes 7–8)', 'building', 8),
+  kanto('underground-path-7-8', 'Underground Path (Kanto Routes 7–8)', 'Underground Path (Routes 7–8)', 'building', 8, { expectEmpty: true }),
   route(7, 8),
   // Part 9
   kanto('celadon-city', 'Celadon City', 'Celadon City', 'town', 9),
@@ -67,10 +67,10 @@ export const RBY_LOCATIONS: LocationConfig[] = [
   }),
   kanto('celadon-condominiums', 'Celadon Condominiums', 'Celadon Condominiums', 'building', 9),
   kanto('celadon-game-corner', 'Celadon Game Corner', 'Celadon Game Corner', 'building', 9),
-  kanto('team-rocket-hideout', 'Team Rocket Hideout', 'Team Rocket Hideout', 'building', 9),
+  kanto('team-rocket-hideout', 'Team Rocket Hideout', 'Team Rocket Hideout', 'building', 9, { expectEmpty: true }),
   kanto('pokemon-tower', 'Pokémon Tower', 'Pokémon Tower', 'building', 9),
   // Part 10
-  kanto('saffron-city', 'Saffron City', 'Saffron City', 'town', 10),
+  kanto('saffron-city', 'Saffron City', 'Saffron City', 'town', 10, { expectEmpty: true }),
   kanto('fighting-dojo', 'Fighting Dojo', 'Fighting Dojo', 'building', 10),
   kanto('silph-co', 'Silph Co.', 'Silph Co.', 'building', 10),
   // Part 11
