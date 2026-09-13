@@ -1,6 +1,11 @@
 import type { GenerationFeatures } from '../games/types';
-import type { Encounter, GameLocation, Species, VersionGroupData } from './models';
 import { buildChecklist, maxInOneSave } from './obtainability';
+import {
+  testData as data,
+  testEncounter as encounter,
+  testLocation as location,
+  testSpecies as species,
+} from './testing/test-data';
 
 const OFF: GenerationFeatures = {
   breeding: false,
@@ -12,65 +17,6 @@ const OFF: GenerationFeatures = {
   abilities: false,
 };
 const ON: GenerationFeatures = { ...OFF, breeding: true };
-
-const once = [{ levels: { min: 5, max: 5 }, rate: { kind: 'once' as const } }];
-
-function species(dex: number, extra: Partial<Species> = {}): Species {
-  return {
-    dex,
-    name: `Mon${dex}`,
-    slug: `mon${dex}`,
-    types: ['normal'],
-    catchRate: 45,
-    baseStats: {},
-    category: 'Test',
-    heightM: 1,
-    weightKg: 1,
-    baseExp: 50,
-    growthRate: 'fast',
-    ...extra,
-  };
-}
-
-function encounter(dex: number, games: string[], extra: Partial<Encounter> = {}): Encounter {
-  return { dex, method: 'walk-grass', games: Object.fromEntries(games.map((g) => [g, once])), ...extra };
-}
-
-function location(id: string, part: number, encounters: Encounter[], games = ['red', 'blue']): GameLocation {
-  return {
-    id,
-    name: id,
-    region: 'kanto',
-    kind: 'route',
-    placement: Object.fromEntries(games.map((g, i) => [g, { part, order: part * 100 + i }])),
-    source: { title: id, revid: 1 },
-    notes: [],
-    subAreas: [{ id: 'main', name: null, encounters }],
-    items: [],
-    itemNotes: [],
-  };
-}
-
-function data(extra: Partial<VersionGroupData>): VersionGroupData {
-  return {
-    schemaVersion: 1,
-    versionGroupId: 'rby',
-    generation: 1,
-    games: ['red', 'blue'],
-    builtAt: '',
-    types: ['normal'],
-    species: Array.from({ length: 10 }, (_, i) => species(i + 1)),
-    evolutions: [],
-    breeding: null,
-    walkthroughs: {},
-    unlocks: {},
-    exclusiveGroups: [],
-    eventOnly: [],
-    locations: [],
-    sources: [],
-    ...extra,
-  };
-}
 
 const red = { id: 'red' as const, nationalDexMax: 10 };
 const entry = (entries: ReturnType<typeof buildChecklist>, dex: number) => entries.find((e) => e.dex === dex)!;

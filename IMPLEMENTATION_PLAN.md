@@ -997,6 +997,7 @@ export const appConfig: ApplicationConfig = {
 - Keeps a lazily created `httpResource<VersionGroupData>` **per version group** (`data/rby.json`), so opening Red loads the shared Red/Blue/Yellow file only once.
 - `forGame(gameId)` returns a signal-based view: `species`, `speciesByDex`, `speciesBySlug`, `locations` (filtered to those with `placement[gameId]`, sorted by order), `locationById`, `evolutionsFrom/To`, `unlocks`, `walkthrough`, `groupsByDex`, and `checklist` (a memoized `computed` over `buildChecklist`).
 - `encountersFor(locationId, gameId)`: filters to `games[gameId]` and groups by the method registry's `sectionOrder`.
+- Implementation (2026-09-13): the pure indexing (`buildGameView`) and grouping (`encountersFor`, per sub-area then method section, with slots narrowed to the game) live in the framework-free `core/domain/game-view.ts`. `core/data/game-data.service.ts` holds the lazy resources and exposes `forGame(gameId)` → a cached `GameDataView` of `computed` signals (empty until loaded), plus `pokedex()` (the `data/<group>.pokedex.json` resource, requested on first call), `checklist` and `maxInOneSave`. A `parse` check rejects a file whose `schemaVersion` or `versionGroupId` doesn't match.
 
 **`StorageService`**
 - One key: `poke-guide/state`. `JSON.parse` and `setItem` are wrapped in try/catch (private mode, quota errors). Corrupted JSON is backed up to `poke-guide/state.corrupt.<timestamp>`, and a toast offers to copy the backup.
@@ -1262,7 +1263,7 @@ Each phase ends with a working local state and its acceptance criteria met. **No
 - **Accept when:** `npm run data:build` finishes with 0 errors, warnings are triaged, the golden assertions pass, a spot check of 10 random locations against Bulbapedia matches, and every species 1–151 is either obtainable or has a documented reason in all three games.
 
 ### Phase 2 — Core domain, storage and profiles
-- [ ] `models.ts`, `obtainability.ts` (including breeding with synthetic tests), `GameDataService` with lazy loading per version group.
+- [x] `models.ts`, `obtainability.ts` (including breeding with synthetic tests), `GameDataService` with lazy loading per version group.
 - [ ] `StorageService`, `migrations.ts`, `ProfileStore`, `SettingsStore`, undo.
 - [ ] Game picker, onboarding, profile switcher, Profiles page.
 - **Accept when:** you can create and switch profiles for different games, and state survives reloads and syncs across tabs.
