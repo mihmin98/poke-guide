@@ -1257,8 +1257,8 @@ Each phase ends with a working local state and its acceptance criteria met. **No
 - [ ] Shop and trade parsers (plus the override fallback).
 - [ ] Overrides: statics, gifts and choices, unlocks, event-only, patches. **Check each against the Bulbapedia text** and record the revid.
 - [ ] Validation, golden assertions, `reports/rby.md`.
-- [ ] Sprite downloader for `gen1-rb` and `gen1-y` (confirm the file naming first).
-- [ ] Generate `public/data/rby.json` and the sprites (the user commits them).
+- [x] Sprite downloader for `gen1-rb` and `gen1-y` (confirm the file naming first).
+- [x] Generate `public/data/rby.json` and the sprites (the user commits them).
 - **Accept when:** `npm run data:build` finishes with 0 errors, warnings are triaged, the golden assertions pass, a spot check of 10 random locations against Bulbapedia matches, and every species 1–151 is either obtainable or has a documented reason in all three games.
 
 ### Phase 2 — Core domain, storage and profiles

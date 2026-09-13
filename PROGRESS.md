@@ -15,7 +15,7 @@ How to use it:
 
 ## Current status
 
-- **Phase:** Phase 0 complete. **Phase 1 in progress.** Done:
+- **Phase:** Phase 0 complete. **Phase 1 complete** (acceptance met 2026-09-13; only the optional Game Corner TM prizes remain). Phase 2 next. Done in Phase 1:
   - Parsing core, `entry1`/`entry2` adapters, walker, merge, and the ordered `rby` location config.
   - Species master data: National Dex list, Gen I type history, slugs.
   - Species pages: infobox extras, base stats by generation, Pokédex entries.
@@ -26,6 +26,8 @@ How to use it:
     - `core/items.ts` parser and `core/location-items.ts` (overrides, requirement check, walkthrough cross-check).
     - rby unlocks and item overrides (Gym TMs, rooftop TMs, Card Key and Strength gates, fossil choice).
     - 3 new locations: Oak's Lab, which restores the starters, plus Sea Cottage and Celadon Department Store.
+  - Sprites: `npm run data:sprites` → 302 SHA-1-verified sprites in `public/sprites/gen1-rb` and `gen1-y`.
+  - The 10-location spot check against Bulbapedia.
 - **Last updated:** 2026-09-13
 - **Repo state:** `npm run verify` passes (theme check, lint, scripts typecheck, 276 pipeline tests, 20 app tests, production build).
   - The build now validates its output (zod schemas, cross-references, obtainability coverage) and writes `scripts/data/reports/rby.md`. Obtainable: Red 135/151 (max 126 in one save), Blue 135/151 (126), Yellow 134/151 (131); unobtainable species all have a reason.
@@ -39,9 +41,8 @@ How to use it:
 
 ## Next step
 
-Phase 1. Items per area is implemented (plan §7.13; see the session log). Next, in this order:
-1. Sprite downloader (open question 1). With it, the Phase 1 acceptance check is left: the 10-location manual spot check against Bulbapedia.
-2. Optional: Game Corner TM prizes as location items (currently a build note).
+Phase 2 (plan §8, §9, §11, §12.1; checklist below). Start with `GameDataService` (lazy per-version-group loading of `rby.json` / `rby.pokedex.json`), then `StorageService` + `migrations.ts`, `ProfileStore`, `SettingsStore`.
+- Optional Phase 1 leftover: Game Corner TM prizes as location items (currently a build note).
 
 ---
 
@@ -78,9 +79,10 @@ Phase 1. Items per area is implemented (plan §7.13; see the session log). Next,
 - [x] Overrides: statics, gifts and choices, unlocks, event-only, patches (each checked against Bulbapedia with its revid recorded). `core/encounter-overrides.ts` + `rby/overrides/encounters.ts` (8 statics checked against pret, 2 patches, 3 exclusive groups, Mew event-only); 7 pages marked `expectEmpty`.
 - [x] `build.ts` wiring: placement/order, `sources[]`, output JSON (`rby.json` + `rby.pokedex.json`). Pure assembly lives in `core/assemble.ts`; `npm run data:build` / `data:refresh` / `data:offline` / `data:build:all`, plus `--dry-run`.
 - [x] Validation, golden assertions, `reports/rby.md`. `core/validate.ts` (zod schemas, cross-references, coverage), `core/report.ts`, `rby/obtainability.golden.spec.ts`. Done: build errors (missing pages, infobox vs species list and catch-rate list, catch-rate notes, learnset and move conflicts, out-of-range rows and trades, `expectEmpty`, duplicate ids) and warnings (no section, table types, evolution boxes, category). Also done: `version-groups/rby/golden.spec.ts` (structure, §7.8 encounters, §7.11 catch rates and stats, §7.12 learnsets/moves/entries). Also done (2026-09-13): zod schema, obtainability coverage, report, and the golden assertions that needed shop/overrides.
-- [ ] Sprite downloader (`gen1-rb`, `gen1-y`)
-- [~] Generate `public/data/rby.json`, `public/data/rby.pokedex.json` and sprites (the user commits them). Both data files are generated (without the pending overrides); sprites are pending.
-- **Accept when:** 0 errors, warnings triaged, golden assertions pass, 10-location spot check matches, and every species 1–151 is either obtainable or has a documented reason in all three games.
+- [x] Sprite downloader (`gen1-rb`, `gen1-y`): `scripts/data/sprites.ts` + `core/sprites.ts` (SHA-1 checked).
+- [x] Generate `public/data/rby.json`, `public/data/rby.pokedex.json` and sprites (the user commits them). 302 sprites in `public/sprites/gen1-rb` and `gen1-y`.
+- [x] 10-location spot check (2026-09-13, seeded random): Celadon City, Route 13, Victory Road, Route 5, Seafoam Islands, Oak's Lab, Route 24, Mt. Moon, Route 9, Fuchsia City. Every Gen I row matches the page at the recorded revid (all still current); Victory Road 2F Graveler 1% / Marowak 4% confirmed against pret.
+- **Accept when:** 0 errors, warnings triaged, golden assertions pass, 10-location spot check matches, and every species 1–151 is either obtainable or has a documented reason in all three games. **Met 2026-09-13.**
 
 ### Phase 2 — Core domain, storage and profiles (plan §8, §9, §11, §12.1)
 - [~] `models.ts` (written early; the pipeline needs it; now includes `Move`, `Learnset`, `PokedexData` and species extras), `obtainability.ts` (including synthetic breeding tests; **done 2026-09-13**, used by the pipeline validator), `GameDataService` with lazy loading per version group (plus the lazily loaded `.pokedex.json`)
@@ -231,3 +233,4 @@ Phase 1. Items per area is implemented (plan §7.13; see the session log). Next,
 | 2026-09-13 | Phase 1 shop and trade parsers: `core/shop.ts` (`{{shop}}`/`{{shopmon}}` blocks → `prize` rows with coins, levels and the Coin Case; other-version shops skipped) and `core/trades.ts` (Generation I trade tables, location cells with rowspan carry-over, Japanese-only rows skipped, diff against location trade rows, nicknames). New config fields `prizeShops` and `tradePage`, new golden assertions. Recorded the user's option (a) for item prerequisites (open question 18 resolved). **Verification: `npm run data:build` gives 0 errors, 8 warnings, 6 notes, 753 encounters (10 prize species; Red/Blue/Yellow 6 prizes each), 16 trades all matched with nicknames. `npm run verify` passes (256 pipeline tests, 14 app tests, build OK).** |
 | 2026-09-13 | Phase 1 encounter overrides: `core/encounter-overrides.ts` (override rows, patches, exclusive groups, requirement and location checks) and `rby/overrides/encounters.ts` (Snorlax ×2, Articuno, Zapdos, Power Plant Voltorb/Electrode, Moltres, Mewtwo, levels checked against pret; Oak's Lab starters; Route 1 Pikachu dropped; `rby-starter`, `mt-moon-fossil`, `fighting-dojo`; Mew event-only). 7 pages marked `expectEmpty`. Open questions 9 and 10 resolved. **Verification: `npm run data:build` gives 0 errors, 1 warning, 6 notes, 760 encounters. Unsourced species per game are only version exclusives, trade evolutions and Mew. `npm run verify` passes (264 pipeline tests, 14 app tests, build OK).** |
 | 2026-09-13 | Phase 1 validation: `src/app/core/domain/obtainability.ts` (`buildChecklist`, `maxInOneSave`; direct sources with unlock parts, fixed-point trades/evolutions/breeding, reasons, exclusive-group maximum) with synthetic tests including breeding; `scripts/data/core/validate.ts` (strict zod schemas for both files, cross-references, coverage per game), `core/report.ts` (`scripts/data/reports/rby.md`), wired into `build.ts`; `rby/obtainability.golden.spec.ts`. **Verification: `npm run data:build` gives 0 errors, 1 warning; Red 135/151 (max 126), Blue 135/151 (126), Yellow 134/151 (131), 0 species without a reason. `npm run verify` passes (276 pipeline tests, 20 app tests, build OK).** |
+| 2026-09-13 | Phase 1 finished: sprite downloader (`core/sprites.ts`, `scripts/data/sprites.ts`, `data:sprites`; client `getImageInfo` with SHA-1 and throttled `download`; `spriteSets` config), open question 1 resolved. Downloaded 302 sprites (the first background run stopped at 168; the rerun skipped the 181 matching files and fetched the rest). Spot check of 10 seeded-random locations against the Gen I wikitext at the recorded revids: all match, live revids unchanged, one suspicious R/B rate order confirmed against pret. **Verification: `npm run data:sprites` gives 0 missing, 0 SHA-1 failures. `npm run verify` passes (283 pipeline tests, 20 app tests, build OK).** |
