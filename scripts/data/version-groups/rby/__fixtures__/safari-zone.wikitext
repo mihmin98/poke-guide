@@ -1,0 +1,672 @@
+<!-- poke-guide fixture: {"title":"Kanto Safari Zone","resolvedTitle":"Kanto Safari Zone","revid":4625484,"timestamp":"2026-09-08T14:55:10Z","fetchedAt":"2026-09-12T21:57:28.705Z"} -->
+{{move|Safari Zone (Kanto)}}
+{{missing image|2=Missing entrance images and interior images for the Secret House}}
+{{Infobox location
+|image=FL Safari Zone.png
+|image_size=240
+|type=land
+|location_name=Safari Zone
+|japanese_name={{tt|サファリゾーン|Safari Zōn}}
+|translated_name=Safari Zone
+|location=North of [[Fuchsia City]]
+|mapdesc=An amusement park outside Fuchsia City where many rare Pokémon can be observed in the wild. Catch them in a popular game!{{sup/3|FRLG}}
+|region=Kanto
+|map=Kanto Safari Zone Map.png
+|generation={{Gen|I}}, {{Gen|III}}
+}}
+
+The Kanto '''[[Safari Zone]]''' (Japanese: '''サファリゾーン''' ''Safari Zone'') is a special {{OBP|Pokémon|species}} preserve in [[Kanto]] that {{pkmn|Trainer}}s can enter to {{pkmn2|caught|catch}} wild Pokémon. It is owned by [[Baoba]].
+
+For {{PDollar}}500, the {{player}} can play the '''Safari Game''' (Japanese: '''サファリゲーム''' ''Safari Game'') and receive 30 [[Safari Ball]]s. Trainers are limited to 500{{sup/1|RBY}}/600{{sup/3|FRLG}} steps in the Safari Zone before the Game is over. A Zone Exploration Campaign is also taking place, where the goal is for Trainers to find the '''Secret House''' (Japanese: '''トレジャーハウス''' ''Treasure House''), located in the deepest area, Area 3. The prize for finding the house is {{HM|03|Surf}}.
+
+In the Safari Zone, when a [[wild Pokémon]] appears, Trainers cannot send out Pokémon to battle it. Instead, Trainers must face Pokémon only with simple tools, and catching a Pokémon becomes much more reliant on luck, as Pokémon are able to run away from the Trainer at any time. Trainers may throw Bait to make a Pokémon less likely to run, but this also makes it harder to catch. Conversely, throwing Rocks will make a Pokémon easier to catch but more likely to run.
+
+In [[Generation II]], the Safari Zone has closed down while Baoba takes a vacation. In the contemporaneous [[Generation IV]] games, he has opened {{Safari|Johto|another one}} in [[Johto]] and Kanto's [[Pal Park]] is located here. In {{LGPE}}, [[GO Park]] is located here.
+
+==Areas==
+The Safari Zone is divided into four areas:
+* The Center Area(Japanese: '''ちゅうおう ひろば''' ''Central Plaza''): where the player enters the Safari Zone
+* Area 1(Japanese: '''だい1 エリア''' ''First Area''): east from the Center Area
+* Area 2(Japanese: '''だい2 エリア''' ''Second Area''): north from the Center Area
+* Area 3(Japanese: '''だい3 エリア''' ''Third Area''): west from the Center Area
+
+In the [[Generation I]] games, "Center Area" is actually used to refer to both the entrance area that acts as a hub to all the other areas, and the area east from this hub.
+
+==Safari Game==
+As with other Safari Games, Pokémon are made easier or harder to capture by modifying the Pokémon's [[catch rate]]. Pokémon can be in any of three states&mdash;angry, eating or neutral&mdash;with the angry state making them more likely to run but the eating state making them less likely to.
+
+===Generation I===
+At the start of an encounter, two counters&mdash;an "angry counter" and an "eating counter"&mdash;are set to 0. Whenever Bait is thrown, the angry counter is reset while the eating counter increases by a random value between 1 and 5 (but to no more than 255). The opposite occurs if a Rock is thrown: the eating counter is reset and the angry counter increases on the same basis. The catch rate is doubled (to no more than 255) whenever a Rock is thrown, but halved (rounded down) whenever Bait is thrown.
+
+At the end of each turn, if either the angry or eating counter is nonzero, it is decreased by 1; if the angry counter is decreased to 0, the modified catch rate resets to the Pokémon's initial catch rate. A random value between 0 and 255 inclusive is generated, and if this is less than half of the Pokémon's Speed rounded down (if the Pokémon is eating), double the Speed (if the Pokémon is in a neutral state), or four times the Speed (if the Pokémon is angry), the Pokémon escapes. A Pokémon will also always escape if its Speed is 128 or more, even if it is eating.
+
+===Generation III===
+The Safari Game mechanics were overhauled to more closely resemble the one in the [[Hoenn Safari Zone]]. Like it, there is an additional "catch factor" that begins at 100/1275 of the Pokémon's catch rate (rounded down). Each species of Pokémon that appears in the Safari Zone also has its own "escape rate", unlike in the [[Hoenn Safari Zone]], which is never modified. Bait cannot reduce the "catch factor" of a Pokémon below 3 and rocks cannot increase it above 20. Because of this, Chansey becomes easier to catch after being baited as its catch factor increases from 2 to 3, Pokémon with a base catch rate of 45 will not become harder to catch after bait has been thrown as their catch factor remains at 3, and Magikarp cannot become any easier to catch by throwing rocks as its catch factor is already 20.
+
+Like Generation I, a Pokémon will be angry or eating whenever Bait or Rocks are thrown. If Bait is thrown, it will be "eating" for 1-5 turns, during which the catch factor is halved. If Rocks are thrown, it will be "angry" for 1-5 turns, during which the catch factor is doubled. Being "angry" or "eating" is mutually exclusive, though modifications to the catch factors will stack. Whenever a Safari Ball is thrown, the catch factor is converted back to a catch rate by multiplying by 1275/100 and rounding down. The amount of bait or anger a Pokémon has can stack if multiple rocks or bait are thrown. The amount cannot surpass 5 turns worth of either. 
+
+At the beginning of each turn a flee check will be completed. A random number from 0 to 99 is generated, and is compared to 5 times its "modified escape factor" if the random value is less, the Pokémon will escape at the end of the turn unless it is captured.
+During a flee check turn the game will determine a Pokémon's "modified escape factor" 1275/100 of the escape rate (rounded down), which is doubled if the Pokémon is "angry" or quartered (rounded down) if the Pokémon is "eating". This value cannot be reduced below 1 which is equal to a 5% chance to flee. When a Pokémon is first encountered, its flee rate cannot be lower than 2.
+
+
+
+{| style="margin:left; text-align:center; {{roundy|10px}} border: 2px solid #{{platinum color dark}}; background: #{{platinum color}};"</noinclude>
+|-
+! colspan="4" style="background:#ccffcc; {{roundytop|5px}}" | FR/LG Flee Rates<br>(These are the base flee rates and can be affected by bait or rocks)
+|-
+! style="background:#e6ffe6;" | Pokémon
+! style="background:#e6ffe6;" | Base Flee Rate
+! style="background:#e6ffe6;" | Baited Flee Factor
+! style="background:#e6ffe6;" | Angered Flee Factor
+|-
+| style="background:#FFFFFF;" |{{MSP/3|129|Magikarp}}
+| style="background:#FFFFFF;" | 25 (10%)
+| style="background:#FFFFFF;" | 1 (5%)
+| style="background:#FFFFFF;" | 2 (10%)
+|-
+| style="background:#FFFFFF;" |  {{MSP/3|029|Nidoran♀}}{{MSP/3|032|Nidoran♂}}{{MSP/3|046|Paras}}{{MSP/3|048|Venonat}}{{MSP/3|054|Psyduck}}{{MSP/3|060|Poliwag}}{{MSP/3|079|Slowpoke}}{{MSP/3|084|Doduo}}{{MSP/3|118|Goldeen}}
+| style="background:#FFFFFF;" | 50 (15%)
+| style="background:#FFFFFF;" | 1 (5%)
+| style="background:#FFFFFF;" | 6 (30%)
+|-
+| style="background:#FFFFFF; |  {{MSP/3|033|Nidorino}}{{MSP/3|030|Nidorina}}{{MSP/3|047|Parasect}}{{MSP/3|049|Venomoth}}{{MSP/3|102|Exeggcute}}{{MSP/3|111|Rhyhorn}}{{MSP/3|119|Seaking}}
+| style="background:#FFFFFF;" | 75 (25%)
+| style="background:#FFFFFF;" | 1 (5%)
+| style="background:#FFFFFF;" | 10 (50%)
+|-
+| style="background:#FFFFFF;" |{{MSP/3|147|Dratini}}
+| style="background:#FFFFFF;" | 100 (35%)
+| style="background:#FFFFFF;" | 1 (5%)
+| style="background:#FFFFFF;" | 14 (70%)
+|-
+| style="background:#FFFFFF; {{roundybl|5px}}" | {{MSP/3|113|Chansey}}{{MSP/3|115|Kangaskhan}}{{MSP/3|123|Scyther}}{{MSP/3|127|Pinsir}}{{MSP/3|128|Tauros}}{{MSP/3|148|Dragonair}}
+| style="background:#FFFFFF;" | 125 (45%)
+| style="background:#FFFFFF;" | 2 (10%)
+| style="background:#FFFFFF; {{roundybr|5px}}" | 18 (90%)
+|}
+{{-}}
+
+<noinclude></noinclude>
+{|style="margin:left; text-align:center; {{roundy|10px}} border: 2px solid #{{platinum color dark}}; background: #{{platinum color}};"</noinclude>
+|-
+! colspan="4" style="background:#ccffcc; {{roundytop|5px}}" | FR/LG Base Catch Rates<br>(These are the base catch rates and can be affected by bait or rocks)
+|-
+! style="background:#e6ffe6;" |Pokémon
+! style="background:#e6ffe6;" | Base Catch Rate
+! style="background:#e6ffe6;" | Catch Factor
+! style="background:#e6ffe6;" | Base Safari Catch Rate<br>(Per Ball){{tt|*|% Values are taking into account the use of a Safari Ball}}
+|-
+| style="background:#FFFFFF;" |{{MSP/3|113|Chansey}}
+| style="background:#FFFFFF;" | 30
+| style="background:#FFFFFF;" | 2
+| style="background:#FFFFFF;" | 25 (4.9%)
+|-
+| style="background:#FFFFFF;" |{{MSP/3|115|Kangaskhan}}{{MSP/3|123|Scyther}}{{MSP/3|127|Pinsir}}{{MSP/3|128|Tauros}}{{MSP/3|148|Dragonair}}{{MSP/3|147|Dratini}}
+| style="background:#FFFFFF;" | 45
+| style="background:#FFFFFF;" | 3 
+| style="background:#FFFFFF;" | 38 (8.1%)
+|-
+| style="background:#FFFFFF;" |{{MSP/3|119|Seaking}}
+| style="background:#FFFFFF;" | 60
+| style="background:#FFFFFF;" | 4
+| style="background:#FFFFFF;" | 51 (10.7%)
+|-
+| style="background:#FFFFFF;" |{{MSP/3|047|Parasect}}{{MSP/3|049|Venomoth}}
+| style="background:#FFFFFF;" | 75
+| style="background:#FFFFFF;" | 5
+| style="background:#FFFFFF;" | 63 (12.3%)
+|-
+| style="background:#FFFFFF;" |{{MSP/3|102|Exeggcute}}
+| style="background:#FFFFFF;" | 90
+| style="background:#FFFFFF;" | 7
+| style="background:#FFFFFF;" | 89 (19.8%)
+|-
+| style="background:#FFFFFF;" |{{MSP/3|033|Nidorino}}{{MSP/3|030|Nidorina}}{{MSP/3|111|Rhyhorn}}
+| style="background:#FFFFFF;" | 120
+| style="background:#FFFFFF;" | 9
+| style="background:#FFFFFF;" | 114 (23.4%)
+|-
+| style="background:#FFFFFF;" |{{MSP/3|046|Paras}}{{MSP/3|048|Venonat}}{{MSP/3|054|Psyduck}}{{MSP/3|079|Slowpoke}}{{MSP/3|084|Doduo}}
+| style="background:#FFFFFF;" | 190
+| style="background:#FFFFFF;" | 14
+| style="background:#FFFFFF;" | 178 (40.1%)
+|-
+| style="background:#FFFFFF;" |{{MSP/3|118|Goldeen}}
+| style="background:#FFFFFF;" | 225
+| style="background:#FFFFFF;" | 17
+| style="background:#FFFFFF;" | 216 (50.3%)
+|-
+| style="background:#FFFFFF;" |{{MSP/3|029|Nidoran♀}}{{MSP/3|032|Nidoran♂}}
+| style="background:#FFFFFF;" | 235
+| style="background:#FFFFFF;" | 18
+| style="background:#FFFFFF;" | 229 (50.3%)
+|-
+| style="background:#FFFFFF; {{roundybl|5px}}" |{{MSP/3|129|Magikarp}}{{MSP/3|060|Poliwag}}
+| style="background:#FFFFFF;" | 255
+| style="background:#FFFFFF;" | 20
+| style="background:#FFFFFF; {{roundybr|5px}}" | 255 (50.3%)
+|-
+|}
+
+====Quirks====
+A restriction that causes a Pokémon's catch factor to be a minimum of 3 after bait has been thrown, causes {{p|Chansey}}'s [[catch rate]] to be increased from 25 (4.9% per Safari Ball) to 38 (8.09% per Safari Ball) after throwing bait. This means that throwing bait makes Chansey both easier to catch and less likely to flee. Similarly {{p|Kangaskhan}}, {{p|Scyther}}, {{p|Pinsir}}, {{p|Tauros}}, {{p|Dratini}}, and {{p|Dragonair}} all have catch rates that are unaffected by the use of bait. Due to this oddity, using bait and throwing Safari Balls in specific sequences allows the player to optimize their odds of catching the rare Pokémon. 
+
+However, as Pokémon's flee check is performed at the beginning of the turn, this means bait and rock will only come into effect the turn after it has been thrown. This leaves an inherent risk of a Pokémon fleeing before any Safari Ball has been thrown if the player chooses to use bait on first turn; conversely, if the player has only one Safari Ball, the penalty for throwing rock the turn before using it will be effectively ignored due to the player's Safari Game ending on the turn it would come into the effect. 
+
+Additionally, in Japanese versions of the games, bait and rock do not work correctly and only affect the catch factor, meaning that outside of the above mentioned species, bait actually hinders player's odds of catching the Pokémon, while rocks increase them with no downsides.
+
+{{youtubevid|Sri4SYdwLdw|@ProfessorRex|Green}}
+
+==Closing notices==
+In [[Generation II]], the sign outside the Safari Zone contains a notice about it being closed in that reads:
+
+{{sign|RBY|header}}
+{{sign|RBY|The WARDEN is}}
+{{sign|RBY|traveling abroad.}}
+{{sign|RBY|Therefore, the}}
+{{sign|RBY|SAFARI ZONE is}}
+{{sign|RBY|closed.}}
+{{sign|RBY|footer}}
+
+In {{2v2|HeartGold|SoulSilver}}, the sign informs that since the Safari Zone is closed, the facility houses [[Pal Park]] instead.
+
+{{sign|DPcity|header}}
+{{sign|DPcity|There's a notice here...}}
+{{sign|DPcity|The Safari Zone is closed.}}
+{{sign|DPcity|Instead, we have Pal Park.}}
+{{sign|DPcity|footer}}
+
+==Items==
+{{Itlisth}}
+{{Itemlist|Safari Ball|Entrance, for the Safari Game; cannot be kept|R=yes|B=yes|Y=yes|FR=yes|LG=yes|display=[[Safari Ball]] ×30}}
+{{Itemlist|Nugget|Center Area (hub), on the island (requires {{m|Surf}})|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Leaf Stone|
+* Center Area, three squares east of the [[Nugget]] (requires {{m|Surf}}) ''(hidden)''
+* Area 1, southwest of the rest house, on the southern plateau|FR=yes|LG=yes|display=[[Leaf Stone]] ×2}}
+{{Itemlist|Carbos|Center Area (east), southwest of the rest house, on the southern plateau|R=yes|B=yes|Y=yes}}
+{{Itemlist|TM Normal|Center Area (east), in the patch of [[tall grass|grass]] beside the water|R=yes|B=yes|Y=yes|display={{TM|37|Egg Bomb}}}}
+{{Itemlist|TM Fire|Area 1, in the patch of [[tall grass|grass]] beside the water|FR=yes|LG=yes|display={{TM|11|Sunny Day}}}}
+{{Itemlist|Max Potion|Center Area (east){{sup/1|RGBY}}/Area 1{{sup/3|FRLG}}, west of the northern plateau|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Full Restore|Center Area (east){{sup/1|RGBY}}/Area 1{{sup/3|FRLG}}, southwest of the rest house|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Quick Claw|Area 2, near the center of the zone|FR=yes|LG=yes}}
+{{Itemlist|TM Normal|Area 2, southwest of the rest house|R=yes|B=yes|Y=yes|display={{TM|40|Skull Bash}}}}
+{{Itemlist|TM Steel|Area 2, southwest of the rest house|FR=yes|LG=yes|display={{TM|47|Steel Wing}}}}
+{{Itemlist|Protein|Area 2, northwest of the rest house|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Max Revive|Area 3, northwest of the Area 3 sign|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Max Potion|Area 3, in the patch of [[tall grass|grass]] in the southwest area of the zone|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|TM Normal|Area 3, southeast of the Secret House|R=yes|B=yes|Y=yes|FR=yes|LG=yes|display={{TM|32|Double Team}}}}
+{{Itemlist|Revive|Area 3, on the statue southeast of the Secret House ''(hidden)''|R=yes|B=yes|Y=yes}}
+{{Itemlist|HM Water|Area 3, from the man in the Secret House|R=yes|B=yes|Y=yes|FR=yes|LG=yes|display={{HM|03|Surf}}}}
+{{Itemlist|Revive|Area 3, four squares south and one square east of the door to the Secret House ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Gold Teeth III|Area 3, southeast of the sign asking to find them|R=yes|B=yes|Y=yes|FR=yes|LG=yes|display=[[Gold Teeth]]}}
+{{Itlistfoot}}
+
+==Pokémon==
+===Generation I===
+In this generation, no wild Pokémon is found while {{m|surf}}ing here.
+<!--Wild Pokémon Encounter Data<ref>[https://github.com/pret/pokered/tree/master/data/wild Pokémon Red and Blue Disassembly Wild Encounter Data - Pret]</ref><ref>[https://github.com/pret/pokeyellow/tree/master/data/wild Pokémon Yellow Disassembly Wild Encounter Data - Pret]</ref><ref>[https://shinyfinder.github.io/encounter-slots/blue-japanese/Land%20&%20Surf.html Pokémon Blue (Japanese) Wild Encounter Data - Shinyfinder]</ref>-->
+====Center Area====
+{{Catch/header|land|no}}
+{{Catch/entry1|029|Nidoran♀|no|yes|no|Grass|22|20%|type1=Poison}}
+{{Catch/entry1|029|Nidoran♀|no|no|yes|Grass|36|20%|type1=Poison}}
+{{Catch/entry1|030|Nidorina|yes|no|no|Grass|31|5%|type1=Poison}}
+{{Catch/entry1|030|Nidorina|no|yes|no|Grass|31|10%|type1=Poison}}
+{{Catch/entry1|032|Nidoran♂|yes|no|no|Grass|22|20%|type1=Poison}}
+{{Catch/entry1|032|Nidoran♂|no|no|yes|Grass|14|20%|type1=Poison}}
+{{Catch/entry1|033|Nidorino|yes|no|no|Grass|31|10%|type1=Poison}}
+{{Catch/entry1|033|Nidorino|no|yes|no|Grass|31|5%|type1=Poison}}
+{{Catch/entry1|033|Nidorino|no|no|yes|Grass|23|10%|type1=Poison}}
+{{Catch/entry1|046|Paras|no|no|yes|Grass|27|5%|type1=Bug|type2=Grass}}
+{{Catch/entry1|047|Parasect|yes|yes|no|Grass|30|5%|type1=Bug|type2=Grass}}
+{{Catch/entry1|047|Parasect|no|no|yes|Grass|27, 32|15%|type1=Bug|type2=Grass}}
+{{Catch/entry1|048|Venonat|yes|yes|no|Grass|22|15%|type1=Bug|type2=Poison}}
+{{Catch/entry1|102|Exeggcute|yes|yes|no|Grass|24-25|20%|type1=Grass|type2=Psychic}}
+{{Catch/entry1|102|Exeggcute|no|no|yes|Grass|24|15%|type1=Grass|type2=Psychic}}
+{{Catch/entry1|111|Rhyhorn|yes|yes|no|Grass|25|20%|type1=Ground|type2=Rock}}
+{{Catch/entry1|111|Rhyhorn|no|no|yes|Grass|20|10%|type1=Ground|type2=Rock}}
+{{Catch/entry1|113|Chansey|yes|yes|no|Grass|23|1%|type1=Normal}}
+{{Catch/entry1|113|Chansey|no|no|yes|Grass|7|1%|type1=Normal}}
+{{Catch/entry1|114|Tangela|no|no|yes|Grass|22|4%|type1=Grass}}
+{{Catch/entry1|123|Scyther|yes|no|no|Grass|23|4%|type1=Bug|type2=Flying}}
+{{Catch/entry1|127|Pinsir|no|yes|no|Grass|23|4%|type1=Bug}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry1|129|Magikarp|yes|yes|yes|Fish Old|5|100%|type1=Water}}
+{{Catch/entry1|060|Poliwag|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{Catch/entry1|118|Goldeen|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{Catch/entry1|054|Psyduck|yes|yes|no|Fish Super|15|25%|type1=Water}}
+{{Catch/entry1|079|Slowpoke|yes|yes|no|Fish Super|15|25%|type1=Water|type2=Psychic}}
+{{Catch/entry1|098|Krabby|yes|yes|no|Fish Super|15|25%|type1=Water}}
+{{Catch/entry1|129|Magikarp|no|no|yes|Fish Super|5, 10|70%|type1=Water}}
+{{Catch/entry1|147|Dratini|yes|yes|no|Fish Super|15|25%|type1=Dragon}}
+{{Catch/entry1|147|Dratini|no|no|yes|Fish Super|10|20%|type1=Dragon}}
+{{Catch/entry1|148|Dragonair|no|no|yes|Fish Super|15|10%|type1=Dragon}}
+{{Catch/footer|land}}
+
+====Area 1 - East====
+{{Catch/header|land|no}}
+{{Catch/entry1|029|Nidoran♀|yes|no|no|Grass|24|5%|type1=Poison}}
+{{Catch/entry1|029|Nidoran♀|no|yes|no|Grass|24|20%|type1=Poison}}
+{{Catch/entry1|029|Nidoran♀|no|no|yes|Grass|29|20%|type1=Poison}}
+{{Catch/entry1|030|Nidorina|no|yes|no|Grass|33|10%|type1=Poison}}
+{{Catch/entry1|030|Nidorina|no|no|yes|Grass|32|10%|type1=Poison}}
+{{Catch/entry1|032|Nidoran♂|yes|no|no|Grass|24|20%|type1=Poison}}
+{{Catch/entry1|032|Nidoran♂|no|yes|no|Grass|24|5%|type1=Poison}}
+{{Catch/entry1|032|Nidoran♂|no|no|yes|Grass|21|20%|type1=Poison}}
+{{Catch/entry1|033|Nidorino|yes|no|no|Grass|33|10%|type1=Poison}}
+{{Catch/entry1|046|Paras|yes|yes|no|Grass|22|15%|type1=Bug|type2=Grass}}
+{{Catch/entry1|047|Parasect|yes|yes|no|Grass|25|5%|type1=Bug|type2=Grass}}
+{{Catch/entry1|084|Doduo|yes|yes|no|Grass|26|20%|type1=Normal|type2=Flying}}
+{{Catch/entry1|102|Exeggcute|yes|yes|no|Grass|23, 25|20%|type1=Grass|type2=Psychic}}
+{{Catch/entry1|102|Exeggcute|no|no|yes|Grass|22, 26|20%|type1=Grass|type2=Psychic}}
+{{Catch/entry1|104|Cubone|no|no|yes|Grass|19|10%|type1=Ground}}
+{{Catch/entry1|105|Marowak|no|no|yes|Grass|24|5%|type1=Ground}}
+{{Catch/entry1|113|Chansey|no|no|yes|Grass|21|4%|type1=Normal}}
+{{Catch/entry1|115|Kangaskhan|yes|yes|no|Grass|25|4%|type1=Normal}}
+{{Catch/entry1|123|Scyther|yes|no|no|Grass|28|1%|type1=Bug|type2=Flying}}
+{{Catch/entry1|123|Scyther|no|no|yes|Grass|15|1%|type1=Bug|type2=Flying}}
+{{Catch/entry1|127|Pinsir|no|yes|no|Grass|28|1%|type1=Bug}}
+{{Catch/entry1|128|Tauros|no|no|yes|Grass|21|10%|type1=Normal}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry1|129|Magikarp|yes|yes|yes|Fish Old|5|100%|type1=Water}}
+{{Catch/entry1|060|Poliwag|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{Catch/entry1|118|Goldeen|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{Catch/entry1|054|Psyduck|yes|yes|no|Fish Super|15|25%|type1=Water}}
+{{Catch/entry1|079|Slowpoke|yes|yes|no|Fish Super|15|25%|type1=Water|type2=Psychic}}
+{{Catch/entry1|098|Krabby|yes|yes|no|Fish Super|15|25%|type1=Water}}
+{{Catch/entry1|129|Magikarp|no|no|yes|Fish Super|5, 10, 15|90%|type1=Water}}
+{{Catch/entry1|147|Dratini|yes|yes|no|Fish Super|15|25%|type1=Dragon}}
+{{Catch/entry1|147|Dratini|no|no|yes|Fish Super|15|10%|type1=Dragon}}
+{{Catch/footer|land}}
+
+====Area 2 - North====
+{{Catch/header|land|no}}
+{{Catch/entry1|029|Nidoran♀|no|yes|no|Grass|22|20%|type1=Poison}}
+{{Catch/entry1|029|Nidoran♀|no|no|yes|Grass|14|20%|type1=Poison}}
+{{Catch/entry1|030|Nidorina|yes|no|no|Grass|30|5%|type1=Poison}}
+{{Catch/entry1|030|Nidorina|no|yes|no|Grass|30|10%|type1=Poison}}
+{{Catch/entry1|030|Nidorina|no|no|yes|Grass|23|10%|type1=Poison}}
+{{Catch/entry1|032|Nidoran♂|yes|no|no|Grass|22|20%|type1=Poison}}
+{{Catch/entry1|032|Nidoran♂|no|no|yes|Grass|36|20%|type1=Poison}}
+{{Catch/entry1|033|Nidorino|yes|no|no|Grass|30|10%|type1=Poison}}
+{{Catch/entry1|033|Nidorino|no|yes|no|Grass|30|5%|type1=Poison}}
+{{Catch/entry1|046|Paras|yes|yes|no|Grass|23|15%|type1=Bug|type2=Grass}}
+{{Catch/entry1|049|Venomoth|yes|yes|no|Grass|32|5%|type1=Bug|type2=Poison}}
+{{Catch/entry1|102|Exeggcute|yes|yes|no|Grass|25, 27|20%|type1=Grass|type2=Psychic}}
+{{Catch/entry1|102|Exeggcute|no|no|yes|Grass|20|15%|type1=Grass|type2=Psychic}}
+{{Catch/entry1|104|Cubone|no|no|yes|Grass|16|5%|type1=Ground}}
+{{Catch/entry1|111|Rhyhorn|yes|yes|no|Grass|26|20%|type1=Ground|type2=Rock}}
+{{Catch/entry1|111|Rhyhorn|no|no|yes|Grass|25|10%|type1=Ground|type2=Rock}}
+{{Catch/entry1|113|Chansey|yes|yes|no|Grass|26|4%|type1=Normal}}
+{{Catch/entry1|115|Kangaskhan|no|no|yes|Grass|28, 33|15%|type1=Normal}}
+{{Catch/entry1|123|Scyther|no|no|yes|Grass|25|4%|type1=Bug|type2=Flying}}
+{{Catch/entry1|127|Pinsir|no|no|yes|Grass|15|1%|type1=Bug}}
+{{Catch/entry1|128|Tauros|yes|yes|no|Grass|28|1%|type1=Normal}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry1|129|Magikarp|yes|yes|yes|Fish Old|5|100%|type1=Water}}
+{{Catch/entry1|060|Poliwag|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{Catch/entry1|118|Goldeen|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{Catch/entry1|054|Psyduck|yes|yes|no|Fish Super|15|25%|type1=Water}}
+{{Catch/entry1|079|Slowpoke|yes|yes|no|Fish Super|15|25%|type1=Water|type2=Psychic}}
+{{Catch/entry1|098|Krabby|yes|yes|no|Fish Super|15|25%|type1=Water}}
+{{Catch/entry1|129|Magikarp|no|no|yes|Fish Super|5, 10, 15|90%|type1=Water}}
+{{Catch/entry1|147|Dratini|yes|yes|no|Fish Super|15|25%|type1=Dragon}}
+{{Catch/entry1|147|Dratini|no|no|yes|Fish Super|15|10%|type1=Dragon}}
+{{Catch/footer|land}}
+
+====Area 3 - West====
+{{Catch/header|land|no}}
+{{Catch/entry1|029|Nidoran♀|yes|no|no|Grass|25|5%|type1=Poison}}
+{{Catch/entry1|029|Nidoran♀|no|yes|no|Grass|25|20%|type1=Poison}}
+{{Catch/entry1|029|Nidoran♀|no|no|yes|Grass|21|20%|type1=Poison}}
+{{Catch/entry1|030|Nidorina|no|yes|no|Grass|33|10%|type1=Poison}}
+{{Catch/entry1|032|Nidoran♂|yes|no|no|Grass|25|20%|type1=Poison}}
+{{Catch/entry1|032|Nidoran♂|no|yes|no|Grass|25|5%|type1=Poison}}
+{{Catch/entry1|032|Nidoran♂|no|no|yes|Grass|29|20%|type1=Poison}}
+{{Catch/entry1|033|Nidorino|yes|no|no|Grass|33|10%|type1=Poison}}
+{{Catch/entry1|033|Nidorino|no|no|yes|Grass|32|10%|type1=Poison}}
+{{Catch/entry1|048|Venonat|yes|yes|no|Grass|23|15%|type1=Bug|type2=Poison}}
+{{Catch/entry1|049|Venomoth|yes|yes|no|Grass|31|5%|type1=Bug|type2=Poison}}
+{{Catch/entry1|084|Doduo|yes|yes|no|Grass|26|20%|type1=Normal|type2=Flying}}
+{{Catch/entry1|102|Exeggcute|yes|yes|no|Grass|24, 26|20%|type1=Grass|type2=Psychic}}
+{{Catch/entry1|102|Exeggcute|no|no|yes|Grass|22, 26|20%|type1=Grass|type2=Psychic}}
+{{Catch/entry1|104|Cubone|no|no|yes|Grass|19|10%|type1=Ground}}
+{{Catch/entry1|105|Marowak|no|no|yes|Grass|24|5%|type1=Ground}}
+{{Catch/entry1|114|Tangela|no|no|yes|Grass|27|1%|type1=Grass}}
+{{Catch/entry1|115|Kangaskhan|yes|yes|no|Grass|28|1%|type1=Normal}}
+{{Catch/entry1|127|Pinsir|no|no|yes|Grass|25|4%|type1=Bug}}
+{{Catch/entry1|128|Tauros|yes|yes|no|Grass|26|4%|type1=Normal}}
+{{Catch/entry1|128|Tauros|no|no|yes|Grass|21|10%|type1=Normal}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry1|129|Magikarp|yes|yes|yes|Fish Old|5|100%|type1=Water}}
+{{Catch/entry1|060|Poliwag|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{Catch/entry1|118|Goldeen|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{Catch/entry1|054|Psyduck|yes|yes|no|Fish Super|15|25%|type1=Water}}
+{{Catch/entry1|079|Slowpoke|yes|yes|no|Fish Super|15|25%|type1=Water|type2=Psychic}}
+{{Catch/entry1|098|Krabby|yes|yes|no|Fish Super|15|25%|type1=Water}}
+{{Catch/entry1|129|Magikarp|no|no|yes|Fish Super|5, 10, 15|90%|type1=Water}}
+{{Catch/entry1|147|Dratini|yes|yes|no|Fish Super|15|25%|type1=Dragon}}
+{{Catch/entry1|147|Dratini|no|no|yes|Fish Super|15|10%|type1=Dragon}}
+{{Catch/footer|land}}
+
+===Generation III===
+====Center Area====
+{{Catch/header|land|no}}
+{{Catch/entryfl|029|Nidoran♀|no|yes|Grass|22|20%|type1=Poison}}
+{{Catch/entryfl|030|Nidorina|yes|no|Grass|31|5%|type1=Poison}}
+{{Catch/entryfl|030|Nidorina|no|yes|Grass|31|10%|type1=Poison}}
+{{Catch/entryfl|032|Nidoran♂|yes|no|Grass|22|20%|type1=Poison}}
+{{Catch/entryfl|033|Nidorino|yes|no|Grass|31|10%|type1=Poison}}
+{{Catch/entryfl|033|Nidorino|no|yes|Grass|31|5%|type1=Poison}}
+{{Catch/entryfl|047|Parasect|yes|yes|Grass|30|5%|type1=Bug|type2=Grass}}
+{{Catch/entryfl|048|Venonat|yes|yes|Grass|22|15%|type1=Bug|type2=Poison}}
+{{Catch/entryfl|102|Exeggcute|yes|yes|Grass|24-25|20%|type1=Grass|type2=Psychic}}
+{{Catch/entryfl|111|Rhyhorn|yes|yes|Grass|25|20%|type1=Ground|type2=Rock}}
+{{Catch/entryfl|113|Chansey|yes|yes|Grass|23|1%|type1=Normal}}
+{{Catch/entryfl|123|Scyther|yes|no|Grass|23|4%|type1=Bug|type2=Flying}}
+{{Catch/entryfl|127|Pinsir|no|yes|Grass|23|4%|type1=Bug}}
+{{Catch/div|water|Surfing}}
+{{catch/entryfl|054|Psyduck|yes|no|Surf|20-40|100%|type1=Water}}
+{{catch/entryfl|079|Slowpoke|no|yes|Surf|20-40|100%|type1=Water|type2=Psychic}}
+{{Catch/div|water|Fishing}}
+{{catch/entryfl|129|Magikarp|yes|yes|Fish Old|5|100%|type1=Water}}
+{{catch/entryfl|060|Poliwag|yes|yes|Fish Good|5-15|20%|type1=Water}}
+{{catch/entryfl|118|Goldeen|yes|yes|Fish Good|5-15|60%|type1=Water}}
+{{catch/entryfl|129|Magikarp|yes|yes|Fish Good|5-15|20%|type1=Water}}
+{{catch/entryfl|054|Psyduck|yes|no|Fish Super|15-35|4%|type1=Water}}
+{{catch/entryfl|079|Slowpoke|no|yes|Fish Super|15-35|4%|type1=Water|type2=Psychic}}
+{{catch/entryfl|118|Goldeen|yes|yes|Fish Super|15-25|40%|type1=Water}}
+{{catch/entryfl|119|Seaking|yes|yes|Fish Super|20-30|40%|type1=Water}}
+{{catch/entryfl|147|Dratini|yes|yes|Fish Super|15-25|15%|type1=Dragon}}
+{{catch/entryfl|148|Dragonair|yes|yes|Fish Super|25-35|1%|type1=Dragon}}
+{{Catch/footer|land}}
+
+====Area 1 - East====
+{{Catch/header|land|no}}
+{{catch/entryfl|029|Nidoran♀|yes|no|Grass|24|5%|type1=Poison}}
+{{Catch/entryfl|029|Nidoran♀|no|yes|Grass|24|20%|type1=Poison}}
+{{Catch/entryfl|030|Nidorina|no|yes|Grass|33|10%|type1=Poison}}
+{{Catch/entryfl|032|Nidoran♂|yes|no|Grass|24|20%|type1=Poison}}
+{{catch/entryfl|032|Nidoran♂|no|yes|Grass|24|5%|type1=Poison}}
+{{Catch/entryfl|033|Nidorino|yes|no|Grass|33|10%|type1=Poison}}
+{{Catch/entryfl|046|Paras|yes|yes|Grass|22|15%|type1=Bug|type2=Grass}}
+{{Catch/entryfl|047|Parasect|yes|yes|Grass|25|5%|type1=Bug|type2=Grass}}
+{{Catch/entryfl|084|Doduo|yes|yes|Grass|26|20%|type1=Normal|type2=Flying}}
+{{Catch/entryfl|102|Exeggcute|yes|yes|Grass|23, 25|20%|type1=Grass|type2=Psychic}}
+{{Catch/entryfl|115|Kangaskhan|yes|yes|Grass|25|4%|type1=Normal}}
+{{Catch/entryfl|123|Scyther|yes|no|Grass|28|1%|type1=Bug|type2=Flying}}
+{{Catch/entryfl|127|Pinsir|no|yes|Grass|28|1%|type1=Bug}}
+{{Catch/div|water|Surfing}}
+{{catch/entryfl|054|Psyduck|yes|no|Surf|20-40|100%|type1=Water}}
+{{catch/entryfl|079|Slowpoke|no|yes|Surf|20-40|100%|type1=Water|type2=Psychic}}
+{{Catch/div|water|Fishing}}
+{{catch/entryfl|129|Magikarp|yes|yes|Fish Old|5|100%|type1=Water}}
+{{catch/entryfl|060|Poliwag|yes|yes|Fish Good|5-15|20%|type1=Water}}
+{{catch/entryfl|118|Goldeen|yes|yes|Fish Good|5-15|60%|type1=Water}}
+{{catch/entryfl|129|Magikarp|yes|yes|Fish Good|5-15|20%|type1=Water}}
+{{catch/entryfl|054|Psyduck|yes|no|Fish Super|15-35|4%|type1=Water}}
+{{catch/entryfl|079|Slowpoke|no|yes|Fish Super|15-35|4%|type1=Water|type2=Psychic}}
+{{catch/entryfl|118|Goldeen|yes|yes|Fish Super|15-25|40%|type1=Water}}
+{{catch/entryfl|119|Seaking|yes|yes|Fish Super|20-30|40%|type1=Water}}
+{{catch/entryfl|147|Dratini|yes|yes|Fish Super|15-25|15%|type1=Dragon}}
+{{catch/entryfl|148|Dragonair|yes|yes|Fish Super|25-35|1%|type1=Dragon}}
+{{Catch/footer|land}}
+
+====Area 2 - North====
+{{Catch/header|land|no}}
+{{Catch/entryfl|029|Nidoran♀|no|yes|Grass|30|20%|type1=Poison}}
+{{catch/entryfl|030|Nidorina|yes|no|Grass|30|5%|type1=Poison}}
+{{Catch/entryfl|030|Nidorina|no|yes|Grass|30|10%|type1=Poison}}
+{{Catch/entryfl|032|Nidoran♂|yes|no|Grass|30|20%|type1=Poison}}
+{{Catch/entryfl|033|Nidorino|yes|no|Grass|30|10%|type1=Poison}}
+{{catch/entryfl|033|Nidorino|no|yes|Grass|30|5%|type1=Poison}}
+{{Catch/entryfl|046|Paras|yes|yes|Grass|23|15%|type1=Bug|type2=Grass}}
+{{Catch/entryfl|049|Venomoth|yes|yes|Grass|32|5%|type1=Bug|type2=Poison}}
+{{Catch/entryfl|102|Exeggcute|yes|yes|Grass|25, 27|20%|type1=Grass|type2=Psychic}}
+{{Catch/entryfl|111|Rhyhorn|yes|yes|Grass|26|20%|type1=Ground|type2=Rock}}
+{{Catch/entryfl|113|Chansey|yes|yes|Grass|26|4%|type1=Normal}}
+{{Catch/entryfl|128|Tauros|yes|yes|Grass|28|1%|type1=Normal}}
+{{Catch/div|water|Surfing}}
+{{catch/entryfl|054|Psyduck|yes|no|Surf|20-40|100%|type1=Water}}
+{{catch/entryfl|079|Slowpoke|no|yes|Surf|20-40|100%|type1=Water|type2=Psychic}}
+{{Catch/div|water|Fishing}}
+{{catch/entryfl|129|Magikarp|yes|yes|Fish Old|5|100%|type1=Water}}
+{{catch/entryfl|060|Poliwag|yes|yes|Fish Good|5-15|20%|type1=Water}}
+{{catch/entryfl|118|Goldeen|yes|yes|Fish Good|5-15|60%|type1=Water}}
+{{catch/entryfl|129|Magikarp|yes|yes|Fish Good|5-15|20%|type1=Water}}
+{{catch/entryfl|054|Psyduck|yes|no|Fish Super|15-35|4%|type1=Water}}
+{{catch/entryfl|079|Slowpoke|no|yes|Fish Super|15-35|4%|type1=Water|type2=Psychic}}
+{{catch/entryfl|118|Goldeen|yes|yes|Fish Super|15-25|40%|type1=Water}}
+{{catch/entryfl|119|Seaking|yes|yes|Fish Super|20-30|40%|type1=Water}}
+{{catch/entryfl|147|Dratini|yes|yes|Fish Super|15-25|15%|type1=Dragon}}
+{{catch/entryfl|148|Dragonair|yes|yes|Fish Super|25-35|1%|type1=Dragon}}
+{{Catch/footer|land}}
+
+====Area 3 - West====
+{{Catch/header|land|no}}
+{{catch/entryfl|029|Nidoran♀|yes|no|Grass|30|5%|type1=Poison}}
+{{Catch/entryfl|029|Nidoran♀|no|yes|Grass|22|20%|type1=Poison}}
+{{Catch/entryfl|030|Nidorina|no|yes|Grass|30|10%|type1=Poison}}
+{{Catch/entryfl|032|Nidoran♂|yes|no|Grass|22|20%|type1=Poison}}
+{{catch/entryfl|032|Nidoran♂|no|yes|Grass|30|5%|type1=Poison}}
+{{Catch/entryfl|033|Nidorino|yes|no|Grass|30|10%|type1=Poison}}
+{{Catch/entryfl|048|Venonat|yes|yes|Grass|23|15%|type1=Bug|type2=Poison}}
+{{Catch/entryfl|049|Venomoth|yes|yes|Grass|32|5%|type1=Bug|type2=Poison}}
+{{Catch/entryfl|084|Doduo|yes|yes|Grass|26|20%|type1=Normal|type2=Flying}}
+{{Catch/entryfl|102|Exeggcute|yes|yes|Grass|25, 27|20%|type1=Grass|type2=Psychic}}
+{{Catch/entryfl|115|Kangaskhan|yes|yes|Grass|28|1%|type1=Normal}}
+{{Catch/entryfl|128|Tauros|yes|yes|Grass|25|4%|type1=Normal}}
+{{Catch/div|water|Surfing}}
+{{catch/entryfl|054|Psyduck|yes|no|Surf|20-40|100%|type1=Water}}
+{{catch/entryfl|079|Slowpoke|no|yes|Surf|20-40|100%|type1=Water|type2=Psychic}}
+{{Catch/div|water|Fishing}}
+{{catch/entryfl|129|Magikarp|yes|yes|Fish Old|5|100%|type1=Water}}
+{{catch/entryfl|060|Poliwag|yes|yes|Fish Good|5-15|20%|type1=Water}}
+{{catch/entryfl|118|Goldeen|yes|yes|Fish Good|5-15|60%|type1=Water}}
+{{catch/entryfl|129|Magikarp|yes|yes|Fish Good|5-15|20%|type1=Water}}
+{{catch/entryfl|054|Psyduck|yes|no|Fish Super|15-35|4%|type1=Water}}
+{{catch/entryfl|079|Slowpoke|no|yes|Fish Super|15-35|4%|type1=Water|type2=Psychic}}
+{{catch/entryfl|118|Goldeen|yes|yes|Fish Super|15-25|40%|type1=Water}}
+{{catch/entryfl|119|Seaking|yes|yes|Fish Super|20-30|40%|type1=Water}}
+{{catch/entryfl|147|Dratini|yes|yes|Fish Super|15-25|15%|type1=Dragon}}
+{{catch/entryfl|148|Dragonair|yes|yes|Fish Super|25-35|1%|type1=Dragon}}
+{{Catch/footer|land}}
+
+==Layout==
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{locationcolor/dark|land}}"
+|-
+! style="background:#{{locationcolor/light|land}}; {{roundytl|5px}}" | Version
+! style="background:#{{locationcolor/light|land}}" | Center Area (hub)
+! style="background:#{{locationcolor/light|land}}" | Center Area (east)<sup>RGBY</sup><br>Area 1<sup>FRLG</sup>
+! style="background:#{{locationcolor/light|land}}" | Area 2
+! style="background:#{{locationcolor/light|land}}; {{roundytr|5px}}" | Area 3
+|-
+! style="background:#{{red color}}" | {{color2|000|Pokémon Red and Blue Versions|Red}}
+| rowspan="3" | [[File:Safari Zone entrance RBY.png|150px]]
+| rowspan="3" | [[File:Safari Zone area 1 RBY.png|150px]]
+| rowspan="3" | [[File:Safari Zone area 2 RBY.png|150px]]
+| rowspan="3" | [[File:Safari Zone area 3 RBY.png|150px]]
+|-
+! style="background:#{{blue color}}" | {{color2|FFF|Pokémon Red and Blue Versions|Blue}}
+|-
+! style="background:#{{yellow color}}" | {{color2|000|Pokémon Yellow Version|Yellow}}
+|-
+! style="background:#{{firered color}}" | {{color2|000|Pokémon FireRed and LeafGreen Versions|FireRed}}
+| rowspan="2" | [[File:Safari Zone entrance FRLG.png|150px]]
+| rowspan="2" | [[File:Safari Zone area 1 FRLG.png|150px]]
+| rowspan="2" | [[File:Safari Zone area 2 FRLG.png|150px]]
+| rowspan="2" | [[File:Safari Zone area 3 FRLG.png|150px]]
+|-
+! style="background:#{{leafgreen color}}" | {{color2|000|Pokémon FireRed and LeafGreen Versions|LeafGreen}}
+|-
+| colspan="5" style="background:#{{locationcolor/light|land}}; {{roundybottom|5px}}" | &nbsp;
+|}
+
+==In the spin-off games==
+===Pokémon Pinball===
+In {{g|Pinball}}, the Safari Zone appears on the Red and Blue tables; catchable {{OBP|Pokémon|species}} include {{p|Nidoran♀}}, {{p|Nidoran♂}}, {{p|Paras}}, {{p|Doduo}}, {{p|Grimer}}, {{p|Rhyhorn}}, {{p|Chansey}}, {{p|Scyther}}, {{p|Pinsir}}, and {{p|Tauros}}.
+
+==In animation==
+[[File:Safari Zone anime.png|thumb|250px|The Safari Zone entrance in {{aniseries|OS}}]]
+===''Pokémon the Series''===
+In the {{pkmn|animated series}}, the Safari Zone is run by a gun-toting warden, [[Kaiser]]. Like in the {{pkmn|games}}, Trainers are restricted to only thirty [[Safari Ball]]s per challenge. It is explained that this is the result of an incident decades ago where a rumor of the extremely rare Pokémon {{p|Dratini}} being spotted in the Safari Zone caused countless {{pkmn|Trainer}}s to recklessly catch excessive amounts of Pokémon in the area and completely wreck it in the process.
+
+===={{aniseries|OS}}====
+The Safari Zone only appeared in the [[Banned episodes|banned episode]] [[EP035]]. Due to this episode's international ban outside of Asia, the Safari Zone has never appeared in the English [[dub]], although it was mentioned in the preceding episodes ''[[EP033|The Flame Pokémon-Athon!]]'' and ''[[EP034|The Kangaskhan Kid]]'', as well as in the later episode ''[[EP065|Showdown at the Po-ké Corral]]''.
+
+Upon entering the Safari Zone, {{Ash}} and {{ashfr}} encountered {{TRT}}, who challenged them to a contest to see who could catch the most Pokémon. However, while Ash was busy catching Pokémon, Team Rocket forced Kaiser to reveal Dratini's location. Ash and his friends managed to stop Team Rocket's plan to detonate a bomb in Dratini's home lagoon and discovered that the Dratini which Kaiser had met decades earlier had evolved into {{p|Dragonair}} and now had its own child Dratini. Before leaving the Safari Zone, Ash sent the Pokémon he had caught, namely a herd of {{AP|Tauros}} and nothing else, to [[Professor Oak's Laboratory]].
+
+The Safari Zone is also seen in an early trailer for the [[M02|second movie]], where it is experiencing a harsh blizzard thanks to the unstable weather patterns caused by the fighting between the {{OBP|legendary birds|M02}}. The scene, like most scenes from initial [[Pokémon movie]] trailers, was never actually used in the movie.
+
+====Pokémon====
+{| width="100%"
+|-
+| {{ActivePoké|Ash|Tauros|Tauros Herd.png|Normal|disp=Tauros (×30)}} ♂
+| {{ActivePoké|Safari Zone|Dratini|Dratini anime.png|Dragon|link=no}}
+| {{ActivePoké|Safari Zone|Dragonair|Kaiser Dragonair.png|Dragon|link=no|fir=Dratini}}
+|-
+| {{ActivePoké|Safari Zone|Nidorino|Safari Zone Nidorino Nidorina.png|Poison|link=no}} ♂
+| {{ActivePoké|Safari Zone|Nidorina|Safari Zone Nidorino Nidorina.png|Poison|link=no}} ♀
+| {{ActivePoké|Safari Zone|Rhyhorn|Safari Zone Rhyhorn.png|Ground|Rock|link=no}}
+|-
+| {{ActivePoké|Safari Zone|Rhydon|Safari Zone Rhydon.png|Ground|Rock|link=no}}
+| {{ActivePoké|Safari Zone|Magikarp|Safari Zone Magikarp.png|Water|link=no}}
+| {{ActivePoké|Safari Zone|Gyarados|Safari Zone Gyarados.png|Water|Flying|link=no}}
+|-
+| {{ActivePoké|Safari Zone|Horsea|Safari Zone Horsea Poliwag Goldeen Slowpoke.png|Water|link=no}}
+| {{ActivePoké|Safari Zone|Poliwag|Safari Zone Horsea Poliwag Goldeen Slowpoke.png|Water|link=no}}
+| {{ActivePoké|Safari Zone|Goldeen|Safari Zone Horsea Poliwag Goldeen Slowpoke.png|Water|link=no}}
+|-
+| {{ActivePoké|Safari Zone|Slowpoke|Safari Zone Horsea Poliwag Goldeen Slowpoke.png|Water|Psychic|link=no}}
+|}
+
+===Pokémon Origins===
+The Kanto Safari Zone appeared in ''[[PO04|File 4: Charizard]]'', when {{OBP|Red|Origins}} was seen confronting {{p|Chansey}} in there. Initially, he had trouble choosing between throwing a rock or a bait, almost causing the Chansey to run away, but eventually, he managed to catch it and add its data to his [[Pokédex]].
+
+====Pokémon====
+{| width="100%"
+|-
+| {{ActivePoké|Red|Chansey|Red Chansey PO.png|Normal|link=no}} ♀
+|
+|
+|}
+
+==In the manga==
+===Pokémon Adventures===
+[[File:Kanto Safari Zone Adventures.png|thumb|250px|Safari Zone in [[Pokémon Adventures]]]]
+The Safari Zone appeared in ''[[PS021|Long Live the Nidoking!]]'' and ''[[PS022|A Hollow Victreebel]]'', where {{adv|Red}} visited it. Like all visitors, Red was forced to leave his Pokémon and [[Poké Ball]]s to the entrance before starting his tour. Guided by two robotic {{p|Pidgey}} called [[Pidgebot]]s, Red started a ride on a raft in a river running through the Safari Zone. When he noticed two {{p|Nidoking}} fighting over the love of a {{p|Nidoqueen}}, Red secretly pulled out a Poké Ball he had smuggled in and tried to catch one of the Nidoking with it. However, the ball missed the Nidoking and caught Nidoqueen instead. Enraged by this, the two Nidoking attacked Red's raft, destroying it and one of the Pidgebots.
+
+While on the run, Red ended up getting caught by a group of {{p|Victreebel}}, who intended to eat him as a part of their nightly [[Evolution]] ritual. However, thanks to his [[Poké Flute]] and a [[Poké Doll]], Red managed to escape. Coming across one of the Nidoking from before again, Red caught one of the Victreebel and used it to weaken Nidoking enough for capture. The next morning, when Red was found by the Safari Zone officials, he was revealed to have caught a huge herd of Pokémon.
+
+====Pokémon====
+{| width="100%"
+|-
+| {{InactivePoké|Safari Zone|Parasect|Safari Zone Dragonair Parasect Exeggcute Adventures.png|Bug|Grass|link=no}}
+| {{InactivePoké|Safari Zone|Exeggcute|Safari Zone Dragonair Parasect Exeggcute Adventures.png|Grass|Psychic|disp=Exeggcute (multiple)|link=no}}
+| {{InactivePoké|Safari Zone|Dragonair|Safari Zone Dragonair Parasect Exeggcute Adventures.png|Dragon|link=no}}
+| {{InactivePoké|Safari Zone|Nidoking|Safari Zone Nidoking Nidoqueen Adventures.png|Poison|Ground|disp=Nidoking (multiple)|link=no}} ♂
+|-
+| {{InactivePoké|Safari Zone|Nidoqueen|Safari Zone Nidoking Nidoqueen Adventures.png|Poison|Ground|link=no}} ♀
+| {{InactivePoké|Safari Zone|Victreebel|Safari Zone Victreebel Adventures.png|Grass|Poison|disp=Victreebel (multiple)|link=no}}
+| {{InactivePoké|Safari Zone|Weepinbell|Safari Zone Weepinbell Bellsprout Adventures.png|Grass|Poison|disp=Weepinbell (multiple)|link=no}}
+| {{InactivePoké|Safari Zone|Bellsprout|Safari Zone Weepinbell Bellsprout Adventures.png|Grass|Poison|disp=Bellsprout (multiple)|link=no}}
+|}
+
+===Pokémon Pocket Monsters===
+[[File:Safari Zone PM.png|thumb|200px|The Safari Zone in [[Pokémon Pocket Monsters]]]]
+{{PPM|Red}} and his Pokémon visited the Safari Zone in ''[[PM014|Rampage At The Safari Zone?!]]''. Like many other places they visit, it ended up getting wrecked by {{TP|Red|Clefairy}}.
+{{sectionstub}}
+
+====Pokémon====
+{| width="75%"
+|-
+| {{InactivePoké|Safari Zone|Nidoran♀|Safari Zone Nidoran f PM.png|Poison|link=no}}
+| {{InactivePoké|Red|Tauros|Red Tauros PM.png|Normal|link=no}} ♂
+| {{InactivePoké|Safari Zone|Omanyte|Safari Zone Kabuto Omanyte PM.png|Rock|Water|link=no}}
+|-
+| {{InactivePoké|Safari Zone|Omastar|Safari Zone Omastar PM.png|Rock|Water|link=no}}
+| {{InactivePoké|Safari Zone|Kabuto|Safari Zone Kabuto Omanyte PM.png|Rock|Water|link=no}}
+| {{InactivePoké|Safari Zone|Kabutops|Safari Zone Kabutops PM.png|Rock|Water|link=no}}
+|-
+| {{InactivePoké|Safari Zone|Aerodactyl|Safari Zone Aerodactyl PM.png|Rock|Flying|link=no}}
+|
+|
+|}
+
+===Pokémon Zensho===
+[[File:Safari Zone Zensho.png|thumb|200px|Safari Zone in [[Pokémon Zensho]]]]
+The Safari Zone appeared in [[PZ04]], where {{zensho|Satoshi}} entered it. After saving a {{p|Ditto}} from a {{p|Tauros}}, Satoshi met {{zensho|Shigeru}}, who showed off all the Pokémon he had managed to catch at the Safari Zone. Soon after, Satoshi came across a {{tc|Fisher}}man, who gave him a fishing rod. To the Fisherman's astonishment, Satoshi managed to reel in a rare {{p|Dratini}}, and asked him to [[trade]] it for him. At first, Satoshi was reluctant, but when he noticed the [[Baoba|Safari Zone Warden]]'s [[Gold Teeth|missing dentures]] inside one of the Fisherman's [[Poké Ball]]s, he accepted the offer.
+
+On his way to return the dentures, Satoshi was ambushed and challenged to a {{pkmn|battle}} by [[Gym Leader]] [[Koga]]. Satoshi's Ditto {{m|transform}}ed into a duplicate of Koga, resulting in his {{p|Weezing}} getting confused and {{m|Self-Destruct|self-destructing}}, earning Satoshi the {{badge|Soul}}. Koga also admitted that he had been the one who stole the Warden's dentures as a petty protest on him having built the Safari Zone on the site that used to be a ninja village.
+
+====Pokémon====
+{| width="75%"
+|-
+| {{InactivePoké|Safari Zone|Chansey|Safari Zone Chansey Zensho.png|Normal|link=no}} ♀
+| {{InactivePoké|Safari Zone|Doduo|Safari Zone Doduo Rhyhorn Zensho.png|Normal|Flying|link=no}}
+| {{InactivePoké|Safari Zone|Rhyhorn|Safari Zone Doduo Rhyhorn Zensho.png|Ground|Rock|link=no}}
+|-
+| {{InactivePoké|Safari Zone|Kangaskhan|Safari Zone Kangaskhan Zensho.png|Normal|link=no}} ♀
+| {{InactivePoké|Safari Zone|Tauros|Safari Zone Tauros Zensho.png|Normal|link=no}} ♂
+| {{InactivePoké|Safari Zone|Ditto|Satoshi Ditto Zensho.png|Normal|link=no}}
+|-
+| {{InactivePoké|Safari Zone|Dratini|Satoshi Dratini Zensho.png|Dragon|link=no}}
+| {{InactivePoké|Safari Zone|Slowpoke|Satoshi Slowpoke Krabby Psyduck Zensho.png|Water|Psychic|link=no}}
+| {{InactivePoké|Safari Zone|Krabby|Satoshi Slowpoke Krabby Psyduck Zensho.png|Water|link=no}}
+|-
+| {{InactivePoké|Safari Zone|Psyduck|Satoshi Slowpoke Krabby Psyduck Zensho.png|Water|link=no}}
+| {{InactivePoké|Safari Zone|Magikarp|Satoshi Magikarp Zensho.png|Water|link=no}}
+|
+|}
+
+==Trivia==
+[[File:Kanto Safari Zone unused GSC.png|thumb|200px|The unused Safari Zone in Generation II, which uses {{pkmn|HeartGold & Pokémon SoulSilver: Super Music Collection|Evolution}} as its background music]]
+* The background music is {{pkmn|FireRed & Pokémon LeafGreen: Super Music Collection|Evolution}}.
+* In [[Generation I]] [[core series]] games, [[Viridian Forest]] and Safari Zone are the only areas with [[tall grass]] that is not always arranged in 2×2 tile patches.
+** They are also the only areas where it is not possible to remove tall grass by using {{m|Cut}}. However, tall grass can be removed normally from these areas in {{game|FireRed and LeafGreen|s}}.
+* In the [[Generation II]] games, there is some data for a {{DL|Pokémon Gold and Silver beta|Safari Zone|beta Safari Zone}} in [[Fuchsia City]], but it was ultimately unused.
+* In {{game|Yellow}}, {{p|Tauros}}'s encounter rate at the Safari Zone is 10%, as opposed to the other [[Generation I]]-based games, where its encounter rate is only 1% or 4%, depending on the Area. As the Yellow Version is highly based on the animated series, this can be taken as a [[List of cross-canon references|reference]] to the animated series episode [[EP035]], where {{AP|Tauros}} were seen in large numbers around the Safari Zone, as opposed to its rarity in {{game|Red and Blue|s|the previous games}}.
+** Another reference to the aforementioned episode in Yellow may be the fact that {{p|Dragonair}}, which also appeared in EP035, is available in the Yellow Version, but not in the Red and Blue Versions.
+* In Generation I, a scientist in a house in the top-right corner of Area 2 states, "''You can keep any item you find on the ground here. But, you'll run out of time if you try for all of them at once!''". However, so long as the player can use {{HM|03|Surf}} as soon as they pick it up, it is actually possible to collect all possible items in the Safari Zone in one visit.
+* Although bait makes Pokémon harder to catch, an NPC in the Area 3 rest house in Generation I says it makes them ''easier'' to catch.
+* In the Western Generation I games, though the player receives 30 Safari Balls, it is only possible to catch 25 Pokémon: 5 to fill the [[party]] and 20 to fill a {{pkmn|Storage System|Box}}. In the Japanese games, however, the Box capacity is 30 Pokémon.
+* In Pokémon Yellow, if the player has less than {{PDollar}}500, they can enter the Safari Zone for all of their remaining money, but they get a number of Safari Balls proportional to the amount paid. If they have no money, they can enter for free with one Safari Ball after multiple attempts. This might have been done to prevent a situation where it becomes impossible to progress further in the story because the player has no money.
+** As this doesn't happen in Red and Blue, the player will be unable to get HM03 (Surf) nor the [[Gold Teeth]] if they run out of money.
+{{youtubevid|aM9lRcEZ3Ig|ChickasaurusGL|Yellow}}
+* In {{game4|SMUSUM}}, a man in [[Aether Paradise]] states that after inspecting the facility he believes that the goals of the [[Aether Foundation]] are directly opposed to those of the Kanto Safari Zone.
+
+==In other languages==
+{{Langtable|color={{locationcolor/light|land}}|bordercolor={{locationcolor/dark|land}}
+|zh_yue=狩獵地帶 ''{{tt|Sáulihp Deihdaai|Hunting Zone}}'' {{tt|*|Games}}<br>野生原野區 ''{{tt|Yéhsāang Yùhnyéhkēui|Wildlife Zone}}'' {{tt|*|animated series}}<br>野生原野區域 ''{{tt|Yéhsāang Yùhnyéh Kēuiwihk|Wildlife Zone}}'' {{tt|*|Adventures}}<br>野生動物園 ''{{tt|Yéhsāang Duhngmahtyún|Wildlife Zoo}}'' {{tt|*|Zensho}}<br>野生公園 ''{{tt|Yéhsāang Gūngyún|Wildlife Park}}'' {{tt|*|Pokémon Pocket Monsters}}
+|zh_cmn=狩獵地帶 / 狩猎地带 ''{{tt|Shòuliè Dìdài|Hunting Zone}}'' {{tt|*|Games}}<br>野生原野區 / 野生原野区 ''{{tt|Yěshēng Yuányěqū|Wildlife Zone}}'' {{tt|*|animated series (Taiwan), PS021 (Taiwan), Adventures (mainland China), Let's Find Pokémon! (mainland China)}}<br>丛林村 ''{{tt|Cónglín Cūn|Jungle Village}}'' {{tt|*|animated series (mainland China)}}<br>草野區 ''{{tt|Cǎoyěqū|Grassland Zone}}'' {{tt|*|PS016 (Taiwan)}}<br>野生動物園 ''{{tt|Yěshēng Dòngwùyuán|Wildlife Zoo}}'' {{tt|*|Zensho (Taiwan)}}<br>神奇寶貝遊樂中心 ''{{tt|Shénqí Bǎobèi Yóulè Zhōngxīn|Pokémon Amusement Center}}'' {{tt|*|Pokémon Pocket Monsters (Taiwan)}}<br>神奇宝贝游戏城 ''{{tt|Shénqí Bǎobèi Yóuxì Chéng|Pokémon Game City}}'' {{tt|*|Pokémon Pocket Monsters (mainland China)}}
+|fi=Safarivyöhyke
+|fr=Parc Safari
+|da=Safarizonen
+|de=Safarizone
+|it=Zona Safari
+|ko=사파리존 ''Safari Zone''
+|no=Safarisonen
+|pl=Strefa Safari ([[EP033]]-[[EP065]]) {{tt|*|Also used for Safari Land}}
+|pt_br=Zona de Safári (manga)<br>Safari Zone (The Official Pokémon Handbook)<br>Zona Safári (The Official Pokémon Handbook)
+|pt_eu=Zona de Safari{{tt|*|animated series}}
+|es=Zona Safari
+|sv=Safarizonen
+|th=ซาฟารีโซน ''Safari Zone''
+|vi=Vùng Safari
+}}
+==Related articles==
+{{SafariNav|Kanto}}
+{{Kanto}}
+{{Project Locations notice}}
+
+[[Category:Kanto locations]]
+[[Category:Red, Blue and Yellow locations]]
+[[Category:FireRed and LeafGreen locations]]
+[[Category:Pokémon Pinball locations]]
+[[Category:Parks]]
+
+[[de:Safari-Zone (Kanto)]]
+[[es:Zona Safari (Kanto)]]
+[[fr:Parc Safari (Kanto)]]
+[[it:Zona Safari (Kanto)]]
+[[ja:サファリゾーン (カントー地方)]]
+[[zh:狩猎地带（关都）]]

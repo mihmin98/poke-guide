@@ -1,0 +1,437 @@
+/**
+ * Assembles a version group's data files from fetched pages (plan §7.4–§7.12). Pure: pages in, data and
+ * issues out. `build.ts` fetches the pages, prints the issues and writes the files.
+ */
+import type {
+  GameId,
+  GameLocation,
+  Learnset,
+  PokedexData,
+  PokedexEntryText,
+  SourceRef,
+  Species,
+  VersionGroupData,
+} from '../../../src/app/core/domain/models';
+import { POKEMON_TYPES } from '../../../src/app/core/games/pokemon-types';
+import { GAMES, getVersionGroup } from '../../../src/app/core/games/registry';
+import type { LocationConfig, VersionGroupConfig } from '../version-groups/types';
+import type { CachedPage } from './cache';
+import { CATCH_RATE_LIST_PAGE, parseCatchRateList, resolveCatchRates } from './catch-rate-history';
+import { walkEncounterSection, type WalkedRow } from './encounter-walker';
+import { diffEvolutionBoxes, type EvolutionBoxPage } from './evolution-boxes';
+import {
+  collectMoves,
+  learnsetPageTitle,
+  parseLearnsetPage,
+  type ParsedLearnset,
+} from './learnsets';
+import { wikiUrl } from './mediawiki-client';
+import { mergeRows } from './merge';
+import { slugify } from './slug';
+import {
+  NATIONAL_DEX_LIST_PAGE,
+  parseNationalDexList,
+  speciesInRange,
+  type SpeciesListEntry,
+} from './species-list';
+import {
+  baseExpIn,
+  baseStatsIn,
+  parseBaseStats,
+  parseInfobox,
+  parsePokedexEntries,
+  pokedexEntriesForGames,
+  speciesPageTitle,
+} from './species-pages';
+import { typeExistsIn, typesInGeneration } from './type-history';
+
+export interface BuildIssue {
+  /** Errors fail the build; warnings are triaged in the report; notes are informational. */
+  level: 'error' | 'warning' | 'note';
+  page?: string;
+  message: string;
+}
+
+/** A fetched page by requested title, or `null` when it doesn't exist or isn't available. */
+export type PageLookup = (title: string) => CachedPage | null;
+
+export interface AssembleOptions {
+  builtAt: string;
+  /** Members of `config.locationCategory`; `null` skips the category check (with a note). */
+  categoryMembers: readonly string[] | null;
+}
+
+export interface AssembleResult {
+  data: VersionGroupData;
+  pokedex: PokedexData;
+  issues: BuildIssue[];
+}
+
+// ---- page lists (the build fetches these in two rounds) ----
+
+/** Pages needed before the species are known: the two species lists and every location page. */
+export function listPageTitles(config: VersionGroupConfig): string[] {
+  return [NATIONAL_DEX_LIST_PAGE, CATCH_RATE_LIST_PAGE, ...config.locations.map((l) => l.page)];
+}
+
+export function speciesForConfig(
+  nationalDexList: CachedPage,
+  config: VersionGroupConfig,
+): SpeciesListEntry[] {
+  return speciesInRange(parseNationalDexList(nationalDexList.wikitext), config.speciesRange);
+}
+
+/** Species pages and this generation's learnset subpages. */
+export function speciesPageTitles(
+  config: VersionGroupConfig,
+  species: readonly SpeciesListEntry[],
+): string[] {
+  return species.flatMap((s) => [
+    speciesPageTitle(s.name),
+    learnsetPageTitle(s.name, config.generation),
+  ]);
+}
+
+// ---- helpers ----
+
+/**
+ * Placement per game: `order = part × 100 + index`, where `index` counts the game's earlier locations in the
+ * same part (config list order is visit order). Throws when a part holds more than 100 locations.
+ */
+export function placeLocations(
+  locations: readonly LocationConfig[],
+  games: readonly GameId[],
+): Map<string, GameLocation['placement']> {
+  const placements = new Map<string, GameLocation['placement']>();
+  const counts = new Map<string, number>();
+  for (const location of locations) {
+    const placement: GameLocation['placement'] = {};
+    for (const game of games) {
+      const entry = location.placement[game];
+      if (!entry) continue;
+      const key = `${game}|${entry.part}`;
+      const index = counts.get(key) ?? 0;
+      if (index >= 100)
+        throw new Error(`Part ${entry.part} of ${game} has more than 100 locations`);
+      counts.set(key, index + 1);
+      placement[game] = { part: entry.part, order: entry.part * 100 + index };
+    }
+    placements.set(location.id, placement);
+  }
+  return placements;
+}
+
+/** Warnings for category pages missing from the config, and configured or ignored pages no longer in the category. */
+export function diffLocationCategory(
+  members: readonly string[],
+  config: VersionGroupConfig,
+): BuildIssue[] {
+  const issues: BuildIssue[] = [];
+  const inCategory = new Set(members);
+  const configured = new Set(config.locations.map((l) => l.page));
+  const ignored = new Set(config.ignoredCategoryPages);
+  const category = config.locationCategory;
+  for (const member of members) {
+    if (!configured.has(member) && !ignored.has(member)) {
+      issues.push({
+        level: 'warning',
+        message: `"${member}" is in ${category} but not in the location config`,
+      });
+    }
+  }
+  for (const page of configured) {
+    if (!inCategory.has(page))
+      issues.push({ level: 'warning', message: `Location "${page}" is not in ${category}` });
+  }
+  for (const page of ignored) {
+    if (!inCategory.has(page)) {
+      issues.push({
+        level: 'warning',
+        message: `Ignored page "${page}" is no longer in ${category}`,
+      });
+    }
+  }
+  return issues;
+}
+
+const byTitle = (sources: Map<string, SourceRef>) =>
+  [...sources.values()].sort((a, b) => a.title.localeCompare(b.title));
+
+// ---- assembly ----
+
+export function assembleVersionGroup(
+  config: VersionGroupConfig,
+  getPage: PageLookup,
+  options: AssembleOptions,
+): AssembleResult {
+  const issues: BuildIssue[] = [];
+  const issue = (level: BuildIssue['level'], message: string, page?: string) =>
+    issues.push({ level, message, ...(page ? { page } : {}) });
+  const generation = config.generation;
+  const group = getVersionGroup(config.id);
+  const gameDefs = GAMES.filter((g) => config.games.includes(g.id));
+  const mainSources = new Map<string, SourceRef>();
+  const pokedexSources = new Map<string, SourceRef>();
+
+  /** Looks a page up and records it as a source; a missing page is an error. */
+  const use = (title: string, ...sources: Map<string, SourceRef>[]): CachedPage | null => {
+    const page = getPage(title);
+    if (!page) {
+      issue(
+        'error',
+        'Page is not available (missing on Bulbapedia, or not cached in offline mode)',
+        title,
+      );
+      return null;
+    }
+    const ref = { title: page.resolvedTitle, revid: page.revid, url: wikiUrl(page.resolvedTitle) };
+    for (const map of sources) map.set(ref.title, ref);
+    return page;
+  };
+  const required = (title: string, ...sources: Map<string, SourceRef>[]): CachedPage => {
+    const page = use(title, ...sources);
+    if (!page) throw new Error(`Required page "${title}" is not available`);
+    return page;
+  };
+
+  // Species master data and catch rates.
+  const list = speciesForConfig(required(NATIONAL_DEX_LIST_PAGE, mainSources), config);
+  const listByDex = new Map(list.map((e) => [e.dex, e]));
+  const catchRateRows = parseCatchRateList(required(CATCH_RATE_LIST_PAGE, mainSources).wikitext);
+  const catchRates = resolveCatchRates(catchRateRows, {
+    generation,
+    games: config.games,
+    speciesRange: config.speciesRange,
+    classifications: config.overrides.catchRateNotes,
+  });
+  for (const message of catchRates.errors) issue('error', message, CATCH_RATE_LIST_PAGE);
+
+  const species: Species[] = [];
+  const entries: Record<string, PokedexEntryText[]> = {};
+  const evolutionPages: EvolutionBoxPage[] = [];
+  const parsedLearnsets: [number, ParsedLearnset][] = [];
+
+  for (const entry of list) {
+    const title = speciesPageTitle(entry.name);
+    const page = use(title, mainSources, pokedexSources);
+    if (page) {
+      try {
+        const info = parseInfobox(page.wikitext);
+        if (info.dex !== entry.dex)
+          issue('error', `Infobox is #${info.dex}, the species list says #${entry.dex}`, title);
+        const listRow = catchRateRows.find((r) => r.dex === entry.dex && r.form === null);
+        if (listRow && listRow.catchRate !== info.catchRate) {
+          issue(
+            'error',
+            `Catch-rate list has ${listRow.catchRate}, the infobox has ${info.catchRate}`,
+            title,
+          );
+        }
+        const types = typesInGeneration(entry.dex, entry.types, generation);
+        for (const type of types) {
+          if (!typeExistsIn(type, generation))
+            issue('error', `Type ${type} doesn't exist in generation ${generation}`, title);
+        }
+        const rate = catchRates.rates.get(entry.dex);
+        if (rate) {
+          species.push({
+            dex: entry.dex,
+            name: entry.name,
+            slug: entry.slug,
+            types: types as Species['types'],
+            catchRate: rate.catchRate,
+            ...(rate.catchRateByGame ? { catchRateByGame: rate.catchRateByGame } : {}),
+            ...(rate.note ? { catchRateNote: rate.note } : {}),
+            baseStats: baseStatsIn(parseBaseStats(page.wikitext, entry.name), generation),
+            category: info.category,
+            heightM: info.heightM,
+            weightKg: info.weightKg,
+            baseExp: baseExpIn(info, generation),
+            growthRate: info.growthRate,
+            // Effort values exist from Generation III; earlier stat experience is a mechanics rule.
+            ...(generation >= 3 ? { evYield: info.evYield } : {}),
+            ...(group.features.breeding
+              ? {
+                  eggGroups: info.eggGroups,
+                  ...(info.genderCode !== null
+                    ? {
+                        genderRatio:
+                          info.genderCode === 255 ? ('genderless' as const) : info.genderCode,
+                      }
+                    : {}),
+                }
+              : {}),
+          });
+        }
+        const dexEntries = pokedexEntriesForGames(
+          parsePokedexEntries(page.wikitext, generation),
+          gameDefs,
+        );
+        for (const game of config.games) {
+          if (!dexEntries.some((e) => e.games.includes(game)))
+            issue('warning', `No Pokédex entry for ${game}`, title);
+        }
+        entries[String(entry.dex)] = dexEntries;
+        evolutionPages.push({ dex: entry.dex, name: entry.name, wikitext: page.wikitext });
+      } catch (error) {
+        issue('error', error instanceof Error ? error.message : String(error), title);
+      }
+    }
+
+    const learnsetTitle = learnsetPageTitle(entry.name, generation);
+    const learnsetPage = use(learnsetTitle, pokedexSources);
+    if (learnsetPage) {
+      const parsed = parseLearnsetPage(learnsetPage.wikitext, {
+        generation,
+        games: config.games,
+        levelColumns: config.learnsetLevelColumns,
+      });
+      for (const message of parsed.issues) issue('error', message, learnsetTitle);
+      parsedLearnsets.push([entry.dex, parsed]);
+    }
+  }
+
+  // Moves and learnsets.
+  const collected = collectMoves(parsedLearnsets.map(([, parsed]) => parsed));
+  for (const message of collected.issues) issue('error', message);
+  const learnsets: Record<string, Learnset> = {};
+  for (const [dex, parsed] of parsedLearnsets) {
+    learnsets[String(dex)] = {
+      levelUp: parsed.levelUp.map((row) => ({ move: slugify(row.move), levels: row.levels })),
+      machines: [...new Set(parsed.machines.map((m) => slugify(m.move)))],
+      prevo: parsed.prevo.map((row) => ({ ...row, move: slugify(row.move) })),
+    };
+  }
+
+  // Evolutions: the override is authoritative; the boxes only produce warnings.
+  const [minDex, maxDex] = config.speciesRange;
+  const evolutions = config.overrides.evolutions.map((edge) => ({ ...edge }));
+  for (const edge of evolutions) {
+    if (!listByDex.has(edge.from) || !listByDex.has(edge.to)) {
+      issue(
+        'error',
+        `Evolution override #${edge.from} → #${edge.to} is outside #${minDex}–#${maxDex}`,
+      );
+    }
+  }
+  const evolutionDiff = diffEvolutionBoxes(
+    evolutionPages,
+    config.overrides.evolutions,
+    config.speciesRange,
+  );
+  for (const message of evolutionDiff.warnings) issue('warning', message);
+  for (const message of evolutionDiff.notes) issue('note', message);
+
+  // Locations.
+  const ids = new Set<string>();
+  for (const location of config.locations) {
+    if (ids.has(location.id)) issue('error', `Duplicate location id "${location.id}"`);
+    ids.add(location.id);
+  }
+  const placements = placeLocations(config.locations, config.games);
+  const locations: GameLocation[] = [];
+  for (const location of config.locations) {
+    const page = use(location.page, mainSources);
+    if (!page) continue;
+    const walk = walkEncounterSection(page.wikitext, {
+      pageTitle: location.page,
+      generationHeading: config.generationHeading,
+      locationKind: location.kind,
+      adapters: config.catchAdapters,
+    });
+    for (const found of walk.issues) issue(found.level, found.message, found.page);
+    if (!walk.found && !location.expectEmpty) {
+      issue('warning', `No "Pokémon → ${config.generationHeading}" section`, location.page);
+    }
+    if (location.expectEmpty && walk.rows.length > 0) {
+      issue(
+        'error',
+        `${walk.rows.length} encounter row(s) on a page marked expectEmpty`,
+        location.page,
+      );
+    }
+    const rows: WalkedRow[] = [];
+    for (const walked of walk.rows) {
+      const { row } = walked;
+      const known = listByDex.get(row.dex);
+      if (!known) {
+        issue('error', `#${row.dex} ${row.name} is outside #${minDex}–#${maxDex}`, location.page);
+        continue;
+      }
+      if (slugify(row.name) !== known.slug) {
+        issue(
+          'error',
+          `Row name "${row.name}" doesn't match #${row.dex} ${known.name}`,
+          location.page,
+        );
+      }
+      // Species types come from the species list and type history; table types are only a cross-check, and some
+      // rows swap the order (Cerulean Cave Rhyhorn "Rock/Ground") or drop a type (Vermilion City Tentacool).
+      const expected = typesInGeneration(row.dex, known.types, generation);
+      if (
+        row.types.length > 0 &&
+        [...row.types].sort().join('/') !== [...expected].sort().join('/')
+      ) {
+        issue(
+          'warning',
+          `${known.name} has types ${row.types.join('/')} here, expected ${expected.join('/')}`,
+          location.page,
+        );
+      }
+      if (row.trade && !listByDex.has(row.trade.giveDex)) {
+        issue(
+          'error',
+          `${known.name} trade asks for #${row.trade.giveDex}, outside #${minDex}–#${maxDex}`,
+          location.page,
+        );
+        continue;
+      }
+      rows.push(walked);
+    }
+    locations.push({
+      id: location.id,
+      name: location.name,
+      region: location.region,
+      kind: location.kind,
+      placement: placements.get(location.id) ?? {},
+      source: { title: page.resolvedTitle, revid: page.revid },
+      notes: walk.notes,
+      subAreas: mergeRows(rows, config.games),
+    });
+  }
+
+  if (options.categoryMembers)
+    issues.push(...diffLocationCategory(options.categoryMembers, config));
+  else issue('note', `Location category check skipped (${config.locationCategory} not available)`);
+  if (group.features.breeding)
+    issue('warning', 'Breeding rules are not configured yet; breeding is left out');
+
+  const data: VersionGroupData = {
+    schemaVersion: 1,
+    versionGroupId: config.id,
+    generation,
+    games: [...config.games],
+    builtAt: options.builtAt,
+    types: POKEMON_TYPES.map((t) => t.id).filter((type) => typeExistsIn(type, generation)),
+    species,
+    evolutions,
+    breeding: null,
+    walkthroughs: config.walkthroughs,
+    // Filled by the override files (statics, gifts and choices, unlocks, event-only) in a later Phase 1 task.
+    unlocks: {},
+    exclusiveGroups: [],
+    eventOnly: [],
+    locations,
+    sources: byTitle(mainSources),
+  };
+  const pokedex: PokedexData = {
+    schemaVersion: 1,
+    versionGroupId: config.id,
+    builtAt: options.builtAt,
+    moves: collected.moves,
+    learnsets,
+    entries,
+    sources: byTitle(pokedexSources),
+  };
+  return { data, pokedex, issues };
+}

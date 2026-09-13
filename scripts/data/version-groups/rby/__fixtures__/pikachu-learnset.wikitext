@@ -1,0 +1,70 @@
+<!-- poke-guide fixture: {"title":"Pikachu (Pokémon)/Generation I learnset","resolvedTitle":"Pikachu (Pokémon)/Generation I learnset","revid":4047780,"timestamp":"2024-07-01T01:15:16Z","fetchedAt":"2026-09-13T06:30:11.241Z"} -->
+{{pokelinkback|025|Pikachu|1}}
+__NOTOC__
+====By [[Level|leveling up]]====
+{{learnlist/levelh/1|Pikachu|Electric|Electric|RGB|Y}}
+{{learnlist/levelI|1|1|ThunderShock|Electric|40|100|30|'''}}
+{{learnlist/levelI|1|1|Growl|Normal|—|100|40}}
+{{learnlist/levelI|N/A|6|Tail Whip|Normal|—|100|30}}
+{{learnlist/levelI|9|8|Thunder Wave|Electric|—|100|20}}
+{{learnlist/levelI|16|11|Quick Attack|Normal|40|100|30}}
+{{learnlist/levelI|N/A|15|Double Team|Normal|—|—|15}}
+{{learnlist/levelI|N/A|20|Slam|Normal|80|75|20}}
+{{learnlist/levelI|N/A|26|Thunderbolt|Electric|95|100|15|'''}}
+{{learnlist/levelI|33|33|Agility|Psychic|—|—|30}}
+{{learnlist/levelI|43|41|Thunder|Electric|120|70|10|'''|}}
+{{learnlist/levelI|N/A|50|Light Screen|Psychic|—|—|30}}
+{{learnlist/levelI|26|N/A|Swift|Normal|60|—|20}}
+{{learnlist/levelf|Pikachu|Electric|Electric|1|1}}
+
+====By [[TM]]/[[HM]]====
+{{learnlist/tmh|Pikachu|Electric|Electric|1|1}}
+{{learnlist/tm1|TM01|Mega Punch|Normal|80|85|20}}
+{{learnlist/tm1|TM05|Mega Kick|Normal|120|75|5}}
+{{learnlist/tm1|TM06|Toxic|Poison|—|85|10}}
+{{learnlist/tm1|TM08|Body Slam|Normal|85|100|15}}
+{{learnlist/tm1|TM09|Take Down|Normal|90|85|20}}
+{{learnlist/tm1|TM10|Double-Edge|Normal|100|100|15}}
+{{learnlist/tm1|TM16|Pay Day|Normal|40|100|20}}
+{{learnlist/tm1|TM17|Submission|Fighting|80|80|25}}
+{{learnlist/tm1|TM19|Seismic Toss|Fighting|—|100|20}}
+{{learnlist/tm1|TM20|Rage|Normal|20|100|20}}
+{{learnlist/tm1|TM24|Thunderbolt|Electric|95|100|15||'''}}
+{{learnlist/tm1|TM25|Thunder|Electric|120|70|10||'''}}
+{{learnlist/tm1|TM31|Mimic|Normal|—|100|10}}
+{{learnlist/tm1|TM32|Double Team|Normal|—|—|15}}
+{{learnlist/tm1|TM33|Reflect|Psychic|—|—|20}}
+{{learnlist/tm1|TM34|Bide|Normal|—|—|10}}
+{{learnlist/tm1|TM39|Swift|Normal|60|—|20}}
+{{learnlist/tm1|TM40|Skull Bash|Normal|100|100|15}}
+{{learnlist/tm1|TM44|Rest|Psychic|—|—|10}}
+{{learnlist/tm1|TM45|Thunder Wave|Electric|—|100|20}}
+{{learnlist/tm1|TM50|Substitute|Normal|—|—|10}}
+{{learnlist/tm1|HM05|Flash|Normal|—|70|20}}
+{{learnlist/tmf|Pikachu|Electric|Electric|1|1}}
+
+====By [[Move Tutor|tutoring]]====
+{{learnlist/tutorh|Pikachu|Electric|Electric|1|1}}
+{{learnlist/tutor1|Surf|Water|95|100|15||}}
+{{learnlist/tutorf|Pikachu|Electric|Electric|1|1}}
+
+====By [[transfer]] from another generation====
+{{learnlist/prevgenh/1|Pikachu|Electric|Electric|1}}
+{{learnlist/prevgen1|Pikachu|1|Defense Curl|Normal|—|—|40|II=yes<!--TM-->}}
+{{learnlist/prevgen1|Pikachu|1|Dizzy Punch|Normal|70|100|10|II=yes<!--prevo-->}}
+{{learnlist/prevgen1|Pikachu|1|DoubleSlap|Normal|15|85|10|II=yes<!--breed-->}}
+{{learnlist/prevgen1|Pikachu|1|Headbutt|Normal|70|100|15|II=yes<!--TM-->}}
+{{learnlist/prevgen1|Pikachu|1|Petal Dance|Grass|70|100|20|II=event<!--prevo-->}}
+{{learnlist/prevgen1|Pikachu|1|Sing|Normal|—|55|15|II=event<!--prevo-->}}
+{{learnlist/prevgen1|Pikachu|1|Strength|Normal|80|100|15|II=yes<!--TM-->}}
+{{learnlist/prevgen1|Pikachu|1|ThunderPunch|Electric|75|100|15||'''|II=yes<!--TM-->}}
+{{learnlist/prevgenf/1|Pikachu|Electric|Electric|1}}
+
+====By {{pkmn2|event}}s====
+{{learnlist/eventh|Pikachu|Electric|Electric|1|1}}
+{{learnlist/event1|[[List of Japanese event Pokémon distributions in Generation I#Flying Pikachu|CoroCoro Comics]]|Fly|Flying|70|95|15||}}
+{{learnlist/event1|[[List of Japanese event Pokémon distributions in Generation I#Surfing Pikachu|CoroCoro Comics]]<br>[[List of Japanese event Pokémon distributions in Generation I#Nintendo 64 Pikachu|Nintendo 64]]<br>[[List of European language event Pokémon distributions in Generation I#Nintendo Power Pikachu|Nintendo Power]]|Surf|Water|95|100|15||}}
+{{learnlist/eventf|Pikachu|Electric|Electric|1|1}}
+
+[[it:Pikachu/Mosse apprese in prima generazione]]
+[[zh:皮卡丘/第一世代招式表]]

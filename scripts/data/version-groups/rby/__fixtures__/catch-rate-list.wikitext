@@ -1,0 +1,6662 @@
+<!-- poke-guide fixture: {"title":"List of Pokémon by catch rate","resolvedTitle":"List of Pokémon by catch rate","revid":4609622,"timestamp":"2026-08-10T14:50:28Z","fetchedAt":"2026-09-12T22:13:00.445Z"} -->
+This is a '''list of Pokémon by their catch rate'''. {{OBP|Pokémon|species}} with higher [[catch rate]]s are easier to {{pkmn2|caught|capture}} than Pokémon with lower catch rates.
+
+__TOC__
+==Changes to catch rate==
+In {{g|Colosseum}} and {{g|XD: Gale of Darkness}}; the catch rates of most [[Shadow Pokémon]] [[List of Shadow Pokémon|were changed]] to make them easier or harder to capture.
+
+In {{g|Omega Ruby and Alpha Sapphire}}, the catch rates of {{p|Kyogre}}, {{p|Groudon}}, {{p|Dialga}}, {{p|Palkia}}, {{p|Reshiram}}, and {{p|Zekrom}}, the [[game mascot]]s made obtainable in those games that did not already have a catch rate of 3, were changed to 3 (previously having 5, 5, 30, 30, 45, and 45, respectively), while the catch rate of {{p|Rayquaza}} was raised from 3 to 45 due to being a mandatory story catch.
+
+In {{g|Ultra Sun and Ultra Moon}}, the catch rates of {{p|Buzzwole}}, {{p|Pheromosa}}, {{p|Xurkitree}}, {{p|Celesteela}}, {{p|Kartana}}, and {{p|Guzzlord}}, six of the [[Ultra Beast]]s previously available in {{pkmn|Sun and Moon}}, were all changed from 25, 255, 30, 25, 255, and 15, respectively, to 45, while the catch rate of {{p|Necrozma}} was raised from 3 to 255.
+
+In [[Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!]], the catch rate of {{p|Bulbasaur}} was raised from 45 to 120.
+
+In {{g|Sword and Shield}}, the catch rate of {{p|Bulbasaur}} was changed back to 45. The catch rates of {{p|Poipole}}, {{p|Naganadel}}, {{p|Stakataka}}, and {{p|Blacephalon}} were changed from 3 to 45, 45, 30, and 30, respectively.
+
+In {{g|Scarlet and Violet}}, the catch rates of {{p|Rayquaza}} and {{p|Necrozma}} were changed back to 3. The catch rates of {{p|Cosmog}}, {{p|Cosmoem}}, {{p|Solgaleo}}, and {{p|Lunala}} were all changed from 45 to 3. In {{g|Scarlet and Violet}}'s 2.0.1 update, the catch rate of {{p|Basculin}} was raised from 25 to 190.
+
+In {{g|Legends: Z-A}}, the catch rate of {{p|Zygarde}} was raised from 3 to 255. All other Pokémon with catch rates of 3 were changed to either 20 (for {{p|Mewtwo}}, {{p|Beldum}}, {{p|Metang}}, {{p|Metagross}}, and {{p|Diancie}}) or 45 (for {{p|Latias}}, {{p|Latios}}, {{p|Kyogre}}, {{p|Groudon}}, {{p|Rayquaza}}, {{p|Heatran}}, {{p|Darkrai}}, {{p|Cobalion}}, {{p|Terrakion}}, {{p|Virizion}}, {{p|Keldeo}}, {{p|Meloetta}}, {{p|Genesect}}, {{p|Hoopa}}, {{p|Volcanion}}, {{p|Magearna}}, {{p|Marshadow}}, {{p|Zeraora}}, {{p|Meltan}}, and {{p|Melmetal}}). Additionally, {{p|Kleavor}}'s catch rate was raised from 15 to 20.
+
+==Generation I held items==
+In {{game|Yellow}}, four Pokémon will have different [[held item]]s than their Red/Blue counterparts [[List of Pokémon by wild held item (Generation II)|when traded to Generation II]]. [[Pikachu (Yellow)|The partner Pikachu]]'s "catch rate" value is set to 163 (as opposed to 190), which causes it to hold a [[Light Ball]] when traded over. A wild {{p|Kadabra}}'s catch rate value is set to 96 upon capture (as opposed to 100), which gives it a [[Twisted Spoon|TwistedSpoon]] when traded over. A wild {{p|Dragonair}}'s catch rate is 27 (as opposed to 45), which gives it a [[Protein]] when traded over. Finally, a wild {{p|Dragonite}}'s catch rate is 9 (as opposed to 45), which gives it an [[Antidote]] when traded over. However, wild Dragonite cannot normally be encountered in Pokémon Yellow, and Dragonite that were [[Evolution|evolved]] will not be holding an Antidote when transferred.
+
+The [[gift Pokémon]] from [[Pokémon Stadium]] will have exclusive [[held item]]s when traded to Generation II. If obtained in Round 1, they will hold the [[Normal Box]]; if obtained in Round 2, they will hold the [[Gorgeous Box]]. Every [[Pokémon_Stadium#Amnesia_Psyduck|Amnesia Psyduck]] will hold the [[Gorgeous Box]].
+
+==List of Pokémon==
+Unless the form is specified, every alternate form of the species shares the same catch rate as its original form.
+
+{| class="roundy" style="margin:auto; background:#{{red color light}}; border:5px solid #{{red color}}"
+|
+{| class="sortable" border="1" width="100%" style="background:#FFF; border:1px solid #{{red color light}}; border-collapse:collapse" || 
+|- style="background:#{{red color light}}"
+! #
+! Image
+! Name
+! data-sort-type="number" | Catch rate
+! width="200px" |  Note
+|- style="background:#fff"
+|style="font-family:monospace,monospace" | 0001
+| class="c" | {{ArtP|0001|Bulbasaur}}
+| {{p|Bulbasaur}}
+| class="r" | 45 || 120 in Let's Go Pikachu and Eevee
+|-
+|style="font-family:monospace,monospace" | 0002
+| class="c" | {{ArtP|0002|Ivysaur}}
+| {{p|Ivysaur}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0003
+| class="c" | {{ArtP|0003|Venusaur}}
+| {{p|Venusaur}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0004
+| class="c" | {{ArtP|0004|Charmander}}
+| {{p|Charmander}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0005
+| class="c" | {{ArtP|0005|Charmeleon}}
+| {{p|Charmeleon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0006
+| class="c" | {{ArtP|0006|Charizard}}
+| {{p|Charizard}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0007
+| class="c" | {{ArtP|0007|Squirtle}}
+| {{p|Squirtle}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0008
+| class="c" | {{ArtP|0008|Wartortle}}
+| {{p|Wartortle}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0009
+| class="c" | {{ArtP|0009|Blastoise}}
+| {{p|Blastoise}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0010
+| class="c" | {{ArtP|0010|Caterpie}}
+| {{p|Caterpie}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0011
+| class="c" | {{ArtP|0011|Metapod}}
+| {{p|Metapod}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0012
+| class="c" | {{ArtP|0012|Butterfree}}
+| {{p|Butterfree}}
+| class="r" | 45 || 90 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0013
+| class="c" | {{ArtP|0013|Weedle}}
+| {{p|Weedle}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0014
+| class="c" | {{ArtP|0014|Kakuna}}
+| {{p|Kakuna}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0015
+| class="c" | {{ArtP|0015|Beedrill}}
+| {{p|Beedrill}}
+| class="r" | 45 || 90 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0016
+| class="c" | {{ArtP|0016|Pidgey}}
+| {{p|Pidgey}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0017
+| class="c" | {{ArtP|0017|Pidgeotto}}
+| {{p|Pidgeotto}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0018
+| class="c" | {{ArtP|0018|Pidgeot}}
+| {{p|Pidgeot}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0019
+| class="c" | {{ArtP|0019|Rattata}}
+| {{p|Rattata}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0020
+| class="c" | {{ArtP|0020|Raticate}}
+| {{p|Raticate}}
+| class="r" | 127 || 90 prior to Generation III
+|-
+|style="font-family:monospace,monospace" | 0021
+| class="c" | {{ArtP|0021|Spearow}}
+| {{p|Spearow}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0022
+| class="c" | {{ArtP|0022|Fearow}}
+| {{p|Fearow}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0023
+| class="c" | {{ArtP|0023|Ekans}}
+| {{p|Ekans}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0024
+| class="c" | {{ArtP|0024|Arbok}}
+| {{p|Arbok}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0025
+| class="c" | {{ArtP|0025|Pikachu}}
+| {{p|Pikachu}}
+| class="r" | 190 || The first partner Pikachu in Yellow has its catch rate value set to 163
+|-
+|style="font-family:monospace,monospace" | 0025
+| class="c" | {{ArtP|0025|Pikachu|form=-Partner}}
+| {{p|Pikachu}}<br><small>{{OBP|Partner Pokémon|Let's Go, Pikachu! and Let's Go, Eevee!|Partner}}</small>
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0026
+| class="c" | {{ArtP|0026|Raichu}}
+| {{p|Raichu}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0027
+| class="c" | {{ArtP|0027|Sandshrew}}
+| {{p|Sandshrew}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0028
+| class="c" | {{ArtP|0028|Sandslash}}
+| {{p|Sandslash}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0029
+| class="c" | {{ArtP|0029|Nidoran♀}}
+| {{p|Nidoran♀}}
+| class="r" | 235 || 
+|-
+|style="font-family:monospace,monospace" | 0030
+| class="c" | {{ArtP|0030|Nidorina}}
+| {{p|Nidorina}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0031
+| class="c" | {{ArtP|0031|Nidoqueen}}
+| {{p|Nidoqueen}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0032
+| class="c" | {{ArtP|0032|Nidoran♂}}
+| {{p|Nidoran♂}}
+| class="r" | 235 || 
+|-
+|style="font-family:monospace,monospace" | 0033
+| class="c" | {{ArtP|0033|Nidorino}}
+| {{p|Nidorino}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0034
+| class="c" | {{ArtP|0034|Nidoking}}
+| {{p|Nidoking}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0035
+| class="c" | {{ArtP|0035|Clefairy}}
+| {{p|Clefairy}}
+| class="r" | 150 || 
+|-
+|style="font-family:monospace,monospace" | 0036
+| class="c" | {{ArtP|0036|Clefable}}
+| {{p|Clefable}}
+| class="r" | 25 || 
+|-
+|style="font-family:monospace,monospace" | 0037
+| class="c" | {{ArtP|0037|Vulpix}}
+| {{p|Vulpix}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0038
+| class="c" | {{ArtP|0038|Ninetales}}
+| {{p|Ninetales}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0039
+| class="c" | {{ArtP|0039|Jigglypuff}}
+| {{p|Jigglypuff}}
+| class="r" | 170 || 
+|-
+|style="font-family:monospace,monospace" | 0040
+| class="c" | {{ArtP|0040|Wigglytuff}}
+| {{p|Wigglytuff}}
+| class="r" | 50 || 
+|-
+|style="font-family:monospace,monospace" | 0041
+| class="c" | {{ArtP|0041|Zubat}}
+| {{p|Zubat}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0042
+| class="c" | {{ArtP|0042|Golbat}}
+| {{p|Golbat}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0043
+| class="c" | {{ArtP|0043|Oddish}}
+| {{p|Oddish}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0044
+| class="c" | {{ArtP|0044|Gloom}}
+| {{p|Gloom}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0045
+| class="c" | {{ArtP|0045|Vileplume}}
+| {{p|Vileplume}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0046
+| class="c" | {{ArtP|0046|Paras}}
+| {{p|Paras}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0047
+| class="c" | {{ArtP|0047|Parasect}}
+| {{p|Parasect}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0048
+| class="c" | {{ArtP|0048|Venonat}}
+| {{p|Venonat}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0049
+| class="c" | {{ArtP|0049|Venomoth}}
+| {{p|Venomoth}}
+| class="r" | 75 || 120 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0050
+| class="c" | {{ArtP|0050|Diglett}}
+| {{p|Diglett}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0051
+| class="c" | {{ArtP|0051|Dugtrio}}
+| {{p|Dugtrio}}
+| class="r" | 50 || 100 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0052
+| class="c" | {{ArtP|0052|Meowth}}
+| {{p|Meowth}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0053
+| class="c" | {{ArtP|0053|Persian}}
+| {{p|Persian}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0054
+| class="c" | {{ArtP|0054|Psyduck}}
+| {{p|Psyduck}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0055
+| class="c" | {{ArtP|0055|Golduck}}
+| {{p|Golduck}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0056
+| class="c" | {{ArtP|0056|Mankey}}
+| {{p|Mankey}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0057
+| class="c" | {{ArtP|0057|Primeape}}
+| {{p|Primeape}}
+| class="r" | 75 || 80 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0058
+| class="c" | {{ArtP|0058|Growlithe}}
+| {{p|Growlithe}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0059
+| class="c" | {{ArtP|0059|Arcanine}}
+| {{p|Arcanine}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0060
+| class="c" | {{ArtP|0060|Poliwag}}
+| {{p|Poliwag}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0061
+| class="c" | {{ArtP|0061|Poliwhirl}}
+| {{p|Poliwhirl}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0062
+| class="c" | {{ArtP|0062|Poliwrath}}
+| {{p|Poliwrath}}
+| class="r" | 45 || 90 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0063
+| class="c" | {{ArtP|0063|Abra}}
+| {{p|Abra}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0064
+| class="c" | {{ArtP|0064|Kadabra}}
+| {{p|Kadabra}}
+| class="r" | 100 || Wild Kadabra in Yellow have their catch rate value set to 96 after capture
+|-
+|style="font-family:monospace,monospace" | 0065
+| class="c" | {{ArtP|0065|Alakazam}}
+| {{p|Alakazam}}
+| class="r" | 50 || 
+|-
+|style="font-family:monospace,monospace" | 0066
+| class="c" | {{ArtP|0066|Machop}}
+| {{p|Machop}}
+| class="r" | 180 || 
+|-
+|style="font-family:monospace,monospace" | 0067
+| class="c" | {{ArtP|0067|Machoke}}
+| {{p|Machoke}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0068
+| class="c" | {{ArtP|0068|Machamp}}
+| {{p|Machamp}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0069
+| class="c" | {{ArtP|0069|Bellsprout}}
+| {{p|Bellsprout}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0070
+| class="c" | {{ArtP|0070|Weepinbell}}
+| {{p|Weepinbell}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0071
+| class="c" | {{ArtP|0071|Victreebel}}
+| {{p|Victreebel}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0072
+| class="c" | {{ArtP|0072|Tentacool}}
+| {{p|Tentacool}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0073
+| class="c" | {{ArtP|0073|Tentacruel}}
+| {{p|Tentacruel}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0074
+| class="c" | {{ArtP|0074|Geodude}}
+| {{p|Geodude}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0075
+| class="c" | {{ArtP|0075|Graveler}}
+| {{p|Graveler}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0076
+| class="c" | {{ArtP|0076|Golem}}
+| {{p|Golem}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0077
+| class="c" | {{ArtP|0077|Ponyta}}
+| {{p|Ponyta}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0078
+| class="c" | {{ArtP|0078|Rapidash}}
+| {{p|Rapidash}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0079
+| class="c" | {{ArtP|0079|Slowpoke}}
+| {{p|Slowpoke}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0080
+| class="c" | {{ArtP|0080|Slowbro}}
+| {{p|Slowbro}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0081
+| class="c" | {{ArtP|0081|Magnemite}}
+| {{p|Magnemite}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0082
+| class="c" | {{ArtP|0082|Magneton}}
+| {{p|Magneton}}
+| class="r" | 60 || 110 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0083
+| class="c" | {{ArtP|0083|Farfetch'd}}
+| {{p|Farfetch'd}}
+| class="r" | 45 || 80 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0084
+| class="c" | {{ArtP|0084|Doduo}}
+| {{p|Doduo}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0085
+| class="c" | {{ArtP|0085|Dodrio}}
+| {{p|Dodrio}}
+| class="r" | 45 || 90 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0086
+| class="c" | {{ArtP|0086|Seel}}
+| {{p|Seel}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0087
+| class="c" | {{ArtP|0087|Dewgong}}
+| {{p|Dewgong}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0088
+| class="c" | {{ArtP|0088|Grimer}}
+| {{p|Grimer}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0089
+| class="c" | {{ArtP|0089|Muk}}
+| {{p|Muk}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0090
+| class="c" | {{ArtP|0090|Shellder}}
+| {{p|Shellder}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0091
+| class="c" | {{ArtP|0091|Cloyster}}
+| {{p|Cloyster}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0092
+| class="c" | {{ArtP|0092|Gastly}}
+| {{p|Gastly}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0093
+| class="c" | {{ArtP|0093|Haunter}}
+| {{p|Haunter}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0094
+| class="c" | {{ArtP|0094|Gengar}}
+| {{p|Gengar}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0095
+| class="c" | {{ArtP|0095|Onix}}
+| {{p|Onix}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0096
+| class="c" | {{ArtP|0096|Drowzee}}
+| {{p|Drowzee}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0097
+| class="c" | {{ArtP|0097|Hypno}}
+| {{p|Hypno}}
+| class="r" | 75 || 80 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0098
+| class="c" | {{ArtP|0098|Krabby}}
+| {{p|Krabby}}
+| class="r" | 225 || 
+|-
+|style="font-family:monospace,monospace" | 0099
+| class="c" | {{ArtP|0099|Kingler}}
+| {{p|Kingler}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0100
+| class="c" | {{ArtP|0100|Voltorb}}
+| {{p|Voltorb}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0101
+| class="c" | {{ArtP|0101|Electrode}}
+| {{p|Electrode}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0102
+| class="c" | {{ArtP|0102|Exeggcute}}
+| {{p|Exeggcute}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0103
+| class="c" | {{ArtP|0103|Exeggutor}}
+| {{p|Exeggutor}}
+| class="r" | 45 || 80 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0104
+| class="c" | {{ArtP|0104|Cubone}}
+| {{p|Cubone}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0105
+| class="c" | {{ArtP|0105|Marowak}}
+| {{p|Marowak}}
+| class="r" | 75 || 110 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0106
+| class="c" | {{ArtP|0106|Hitmonlee}}
+| {{p|Hitmonlee}}
+| class="r" | 45 || 90 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0107
+| class="c" | {{ArtP|0107|Hitmonchan}}
+| {{p|Hitmonchan}}
+| class="r" | 45 || 90 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0108
+| class="c" | {{ArtP|0108|Lickitung}}
+| {{p|Lickitung}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0109
+| class="c" | {{ArtP|0109|Koffing}}
+| {{p|Koffing}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0110
+| class="c" | {{ArtP|0110|Weezing}}
+| {{p|Weezing}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0111
+| class="c" | {{ArtP|0111|Rhyhorn}}
+| {{p|Rhyhorn}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0112
+| class="c" | {{ArtP|0112|Rhydon}}
+| {{p|Rhydon}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0113
+| class="c" | {{ArtP|0113|Chansey}}
+| {{p|Chansey}}
+| class="r" | 30 || 70 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0114
+| class="c" | {{ArtP|0114|Tangela}}
+| {{p|Tangela}}
+| class="r" | 45 || 90 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0115
+| class="c" | {{ArtP|0115|Kangaskhan}}
+| {{p|Kangaskhan}}
+| class="r" | 45 || 90 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0116
+| class="c" | {{ArtP|0116|Horsea}}
+| {{p|Horsea}}
+| class="r" | 225 || 
+|-
+|style="font-family:monospace,monospace" | 0117
+| class="c" | {{ArtP|0117|Seadra}}
+| {{p|Seadra}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0118
+| class="c" | {{ArtP|0118|Goldeen}}
+| {{p|Goldeen}}
+| class="r" | 225 || 
+|-
+|style="font-family:monospace,monospace" | 0119
+| class="c" | {{ArtP|0119|Seaking}}
+| {{p|Seaking}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0120
+| class="c" | {{ArtP|0120|Staryu}}
+| {{p|Staryu}}
+| class="r" | 225 || 
+|-
+|style="font-family:monospace,monospace" | 0121
+| class="c" | {{ArtP|0121|Starmie}}
+| {{p|Starmie}}
+| class="r" | 60 || 110 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0122
+| class="c" | {{ArtP|0122|Mr. Mime}}
+| {{p|Mr. Mime}}
+| class="r" | 45 || 90 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0123
+| class="c" | {{ArtP|0123|Scyther}}
+| {{p|Scyther}}
+| class="r" | 45 || 90 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0124
+| class="c" | {{ArtP|0124|Jynx}}
+| {{p|Jynx}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0125
+| class="c" | {{ArtP|0125|Electabuzz}}
+| {{p|Electabuzz}}
+| class="r" | 45 || 90 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0126
+| class="c" | {{ArtP|0126|Magmar}}
+| {{p|Magmar}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0127
+| class="c" | {{ArtP|0127|Pinsir}}
+| {{p|Pinsir}}
+| class="r" | 45 || 90 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0128
+| class="c" | {{ArtP|0128|Tauros}}
+| {{p|Tauros}}
+| class="r" | 45 || 80 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0129
+| class="c" | {{ArtP|0129|Magikarp}}
+| {{p|Magikarp}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0130
+| class="c" | {{ArtP|0130|Gyarados}}
+| {{p|Gyarados}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0131
+| class="c" | {{ArtP|0131|Lapras}}
+| {{p|Lapras}}
+| class="r" | 45 || 80 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0132
+| class="c" | {{ArtP|0132|Ditto}}
+| {{p|Ditto}}
+| class="r" | 35 || 
+|-
+|style="font-family:monospace,monospace" | 0133
+| class="c" | {{ArtP|0133|Eevee}}
+| {{p|Eevee}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0133
+| class="c" | {{ArtP|0133|Eevee|form=-Partner}}
+| {{p|Eevee}}<br><small>{{OBP|Partner Pokémon|Let's Go, Pikachu! and Let's Go, Eevee!|Partner}}</small>
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0134
+| class="c" | {{ArtP|0134|Vaporeon}}
+| {{p|Vaporeon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0135
+| class="c" | {{ArtP|0135|Jolteon}}
+| {{p|Jolteon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0136
+| class="c" | {{ArtP|0136|Flareon}}
+| {{p|Flareon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0137
+| class="c" | {{ArtP|0137|Porygon}}
+| {{p|Porygon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0138
+| class="c" | {{ArtP|0138|Omanyte}}
+| {{p|Omanyte}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0139
+| class="c" | {{ArtP|0139|Omastar}}
+| {{p|Omastar}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0140
+| class="c" | {{ArtP|0140|Kabuto}}
+| {{p|Kabuto}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0141
+| class="c" | {{ArtP|0141|Kabutops}}
+| {{p|Kabutops}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0142
+| class="c" | {{ArtP|0142|Aerodactyl}}
+| {{p|Aerodactyl}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0143
+| class="c" | {{ArtP|0143|Snorlax}}
+| {{p|Snorlax}}
+| class="r" | 25 || 70 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0144
+| class="c" | {{ArtP|0144|Articuno}}
+| {{p|Articuno}}
+| class="r" | 3 || 25 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0145
+| class="c" | {{ArtP|0145|Zapdos}}
+| {{p|Zapdos}}
+| class="r" | 3 || 25 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0146
+| class="c" | {{ArtP|0146|Moltres}}
+| {{p|Moltres}}
+| class="r" | 3 || 25 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0147
+| class="c" | {{ArtP|0147|Dratini}}
+| {{p|Dratini}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0148
+| class="c" | {{ArtP|0148|Dragonair}}
+| {{p|Dragonair}}
+| class="r" | 45 || 27 in Pokémon Yellow
+|-
+|style="font-family:monospace,monospace" | 0149
+| class="c" | {{ArtP|0149|Dragonite}}
+| {{p|Dragonite}}
+| class="r" | 45 || 9 in Pokémon Yellow
+|-
+|style="font-family:monospace,monospace" | 0150
+| class="c" | {{ArtP|0150|Mewtwo}}
+| {{p|Mewtwo}}
+| class="r" | 3 || 20 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0151
+| class="c" | {{ArtP|0151|Mew}}
+| {{p|Mew}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0152
+| class="c" | {{ArtP|0152|Chikorita}}
+| {{p|Chikorita}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0153
+| class="c" | {{ArtP|0153|Bayleef}}
+| {{p|Bayleef}}
+| class="r" | 45 || 180 in Colosseum
+|-
+|style="font-family:monospace,monospace" | 0154
+| class="c" | {{ArtP|0154|Meganium}}
+| {{p|Meganium}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0155
+| class="c" | {{ArtP|0155|Cyndaquil}}
+| {{p|Cyndaquil}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0156
+| class="c" | {{ArtP|0156|Quilava}}
+| {{p|Quilava}}
+| class="r" | 45 || 180 in Colosseum
+|-
+|style="font-family:monospace,monospace" | 0157
+| class="c" | {{ArtP|0157|Typhlosion}}
+| {{p|Typhlosion}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0158
+| class="c" | {{ArtP|0158|Totodile}}
+| {{p|Totodile}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0159
+| class="c" | {{ArtP|0159|Croconaw}}
+| {{p|Croconaw}}
+| class="r" | 45 || 180 in Colosseum
+|-
+|style="font-family:monospace,monospace" | 0160
+| class="c" | {{ArtP|0160|Feraligatr}}
+| {{p|Feraligatr}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0161
+| class="c" | {{ArtP|0161|Sentret}}
+| {{p|Sentret}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0162
+| class="c" | {{ArtP|0162|Furret}}
+| {{p|Furret}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0163
+| class="c" | {{ArtP|0163|Hoothoot}}
+| {{p|Hoothoot}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0164
+| class="c" | {{ArtP|0164|Noctowl}}
+| {{p|Noctowl}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0165
+| class="c" | {{ArtP|0165|Ledyba}}
+| {{p|Ledyba}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0166
+| class="c" | {{ArtP|0166|Ledian}}
+| {{p|Ledian}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0167
+| class="c" | {{ArtP|0167|Spinarak}}
+| {{p|Spinarak}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0168
+| class="c" | {{ArtP|0168|Ariados}}
+| {{p|Ariados}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0169
+| class="c" | {{ArtP|0169|Crobat}}
+| {{p|Crobat}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0170
+| class="c" | {{ArtP|0170|Chinchou}}
+| {{p|Chinchou}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0171
+| class="c" | {{ArtP|0171|Lanturn}}
+| {{p|Lanturn}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0172
+| class="c" | {{ArtP|0172|Pichu}}
+| {{p|Pichu}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0173
+| class="c" | {{ArtP|0173|Cleffa}}
+| {{p|Cleffa}}
+| class="r" | 150 || 
+|-
+|style="font-family:monospace,monospace" | 0174
+| class="c" | {{ArtP|0174|Igglybuff}}
+| {{p|Igglybuff}}
+| class="r" | 170 || 
+|-
+|style="font-family:monospace,monospace" | 0175
+| class="c" | {{ArtP|0175|Togepi}}
+| {{p|Togepi}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0176
+| class="c" | {{ArtP|0176|Togetic}}
+| {{p|Togetic}}
+| class="r" | 75 || 45 in Colosseum
+|-
+|style="font-family:monospace,monospace" | 0177
+| class="c" | {{ArtP|0177|Natu}}
+| {{p|Natu}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0178
+| class="c" | {{ArtP|0178|Xatu}}
+| {{p|Xatu}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0179
+| class="c" | {{ArtP|0179|Mareep}}
+| {{p|Mareep}}
+| class="r" | 235 || 45 in Colosseum: Japanese e-Room exclusive
+|-
+|style="font-family:monospace,monospace" | 0180
+| class="c" | {{ArtP|0180|Flaaffy}}
+| {{p|Flaaffy}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0181
+| class="c" | {{ArtP|0181|Ampharos}}
+| {{p|Ampharos}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0182
+| class="c" | {{ArtP|0182|Bellossom}}
+| {{p|Bellossom}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0183
+| class="c" | {{ArtP|0183|Marill}}
+| {{p|Marill}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0184
+| class="c" | {{ArtP|0184|Azumarill}}
+| {{p|Azumarill}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0185
+| class="c" | {{ArtP|0185|Sudowoodo}}
+| {{p|Sudowoodo}}
+| class="r" | 65 || 
+|-
+|style="font-family:monospace,monospace" | 0186
+| class="c" | {{ArtP|0186|Politoed}}
+| {{p|Politoed}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0187
+| class="c" | {{ArtP|0187|Hoppip}}
+| {{p|Hoppip}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0188
+| class="c" | {{ArtP|0188|Skiploom}}
+| {{p|Skiploom}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0189
+| class="c" | {{ArtP|0189|Jumpluff}}
+| {{p|Jumpluff}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0190
+| class="c" | {{ArtP|0190|Aipom}}
+| {{p|Aipom}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0191
+| class="c" | {{ArtP|0191|Sunkern}}
+| {{p|Sunkern}}
+| class="r" | 235 || 
+|-
+|style="font-family:monospace,monospace" | 0192
+| class="c" | {{ArtP|0192|Sunflora}}
+| {{p|Sunflora}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0193
+| class="c" | {{ArtP|0193|Yanma}}
+| {{p|Yanma}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0194
+| class="c" | {{ArtP|0194|Wooper}}
+| {{p|Wooper}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0195
+| class="c" | {{ArtP|0195|Quagsire}}
+| {{p|Quagsire}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0196
+| class="c" | {{ArtP|0196|Espeon}}
+| {{p|Espeon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0197
+| class="c" | {{ArtP|0197|Umbreon}}
+| {{p|Umbreon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0198
+| class="c" | {{ArtP|0198|Murkrow}}
+| {{p|Murkrow}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0199
+| class="c" | {{ArtP|0199|Slowking}}
+| {{p|Slowking}}
+| class="r" | 70 || 
+|-
+|style="font-family:monospace,monospace" | 0200
+| class="c" | {{ArtP|0200|Misdreavus}}
+| {{p|Misdreavus}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0201
+| class="c" | {{ArtP|0201|Unown}}
+| {{p|Unown}}
+| class="r" | 225 || 
+|-
+|style="font-family:monospace,monospace" | 0202
+| class="c" | {{ArtP|0202|Wobbuffet}}
+| {{p|Wobbuffet}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0203
+| class="c" | {{ArtP|0203|Girafarig}}
+| {{p|Girafarig}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0204
+| class="c" | {{ArtP|0204|Pineco}}
+| {{p|Pineco}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0205
+| class="c" | {{ArtP|0205|Forretress}}
+| {{p|Forretress}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0206
+| class="c" | {{ArtP|0206|Dunsparce}}
+| {{p|Dunsparce}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0207
+| class="c" | {{ArtP|0207|Gligar}}
+| {{p|Gligar}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0208
+| class="c" | {{ArtP|0208|Steelix}}
+| {{p|Steelix}}
+| class="r" | 25 || 
+|-
+|style="font-family:monospace,monospace" | 0209
+| class="c" | {{ArtP|0209|Snubbull}}
+| {{p|Snubbull}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0210
+| class="c" | {{ArtP|0210|Granbull}}
+| {{p|Granbull}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0211
+| class="c" | {{ArtP|0211|Qwilfish}}
+| {{p|Qwilfish}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0212
+| class="c" | {{ArtP|0212|Scizor}}
+| {{p|Scizor}}
+| class="r" | 25 || 45 in Colosseum: Japanese e-Room exclusive
+|-
+|style="font-family:monospace,monospace" | 0213
+| class="c" | {{ArtP|0213|Shuckle}}
+| {{p|Shuckle}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0214
+| class="c" | {{ArtP|0214|Heracross}}
+| {{p|Heracross}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0215
+| class="c" | {{ArtP|0215|Sneasel}}
+| {{p|Sneasel}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0216
+| class="c" | {{ArtP|0216|Teddiursa}}
+| {{p|Teddiursa}}
+| class="r" | 120 || Always succeeds in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0217
+| class="c" | {{ArtP|0217|Ursaring}}
+| {{p|Ursaring}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0218
+| class="c" | {{ArtP|0218|Slugma}}
+| {{p|Slugma}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0219
+| class="c" | {{ArtP|0219|Magcargo}}
+| {{p|Magcargo}}
+| class="r" | 75 || 120 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0220
+| class="c" | {{ArtP|0220|Swinub}}
+| {{p|Swinub}}
+| class="r" | 225 || 
+|-
+|style="font-family:monospace,monospace" | 0221
+| class="c" | {{ArtP|0221|Piloswine}}
+| {{p|Piloswine}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0222
+| class="c" | {{ArtP|0222|Corsola}}
+| {{p|Corsola}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0223
+| class="c" | {{ArtP|0223|Remoraid}}
+| {{p|Remoraid}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0224
+| class="c" | {{ArtP|0224|Octillery}}
+| {{p|Octillery}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0225
+| class="c" | {{ArtP|0225|Delibird}}
+| {{p|Delibird}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0226
+| class="c" | {{ArtP|0226|Mantine}}
+| {{p|Mantine}}
+| class="r" | 25 || 
+|-
+|style="font-family:monospace,monospace" | 0227
+| class="c" | {{ArtP|0227|Skarmory}}
+| {{p|Skarmory}}
+| class="r" | 25 || 15 in Colosseum
+|-
+|style="font-family:monospace,monospace" | 0228
+| class="c" | {{ArtP|0228|Houndour}}
+| {{p|Houndour}}
+| class="r" | 120 || 225 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0229
+| class="c" | {{ArtP|0229|Houndoom}}
+| {{p|Houndoom}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0230
+| class="c" | {{ArtP|0230|Kingdra}}
+| {{p|Kingdra}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0231
+| class="c" | {{ArtP|0231|Phanpy}}
+| {{p|Phanpy}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0232
+| class="c" | {{ArtP|0232|Donphan}}
+| {{p|Donphan}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0233
+| class="c" | {{ArtP|0233|Porygon2}}
+| {{p|Porygon2}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0234
+| class="c" | {{ArtP|0234|Stantler}}
+| {{p|Stantler}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0235
+| class="c" | {{ArtP|0235|Smeargle}}
+| {{p|Smeargle}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0236
+| class="c" | {{ArtP|0236|Tyrogue}}
+| {{p|Tyrogue}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0237
+| class="c" | {{ArtP|0237|Hitmontop}}
+| {{p|Hitmontop}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0238
+| class="c" | {{ArtP|0238|Smoochum}}
+| {{p|Smoochum}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0239
+| class="c" | {{ArtP|0239|Elekid}}
+| {{p|Elekid}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0240
+| class="c" | {{ArtP|0240|Magby}}
+| {{p|Magby}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0241
+| class="c" | {{ArtP|0241|Miltank}}
+| {{p|Miltank}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0242
+| class="c" | {{ArtP|0242|Blissey}}
+| {{p|Blissey}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0243
+| class="c" | {{ArtP|0243|Raikou}}
+| {{p|Raikou}}
+| class="r" | 3 || 15 in Colosseum
+|-
+|style="font-family:monospace,monospace" | 0244
+| class="c" | {{ArtP|0244|Entei}}
+| {{p|Entei}}
+| class="r" | 3 || 15 in Colosseum
+|-
+|style="font-family:monospace,monospace" | 0245
+| class="c" | {{ArtP|0245|Suicune}}
+| {{p|Suicune}}
+| class="r" | 3 || 15 in Colosseum
+|-
+|style="font-family:monospace,monospace" | 0246
+| class="c" | {{ArtP|0246|Larvitar}}
+| {{p|Larvitar}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0247
+| class="c" | {{ArtP|0247|Pupitar}}
+| {{p|Pupitar}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0248
+| class="c" | {{ArtP|0248|Tyranitar}}
+| {{p|Tyranitar}}
+| class="r" | 45 || 10 in Colosseum
+|-
+|style="font-family:monospace,monospace" | 0249
+| class="c" | {{ArtP|0249|Lugia}}
+| {{p|Lugia}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0250
+| class="c" | {{ArtP|0250|Ho-Oh}}
+| {{p|Ho-Oh}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0251
+| class="c" | {{ArtP|0251|Celebi}}
+| {{p|Celebi}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0252
+| class="c" | {{ArtP|0252|Treecko}}
+| {{p|Treecko}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0253
+| class="c" | {{ArtP|0253|Grovyle}}
+| {{p|Grovyle}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0254
+| class="c" | {{ArtP|0254|Sceptile}}
+| {{p|Sceptile}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0255
+| class="c" | {{ArtP|0255|Torchic}}
+| {{p|Torchic}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0256
+| class="c" | {{ArtP|0256|Combusken}}
+| {{p|Combusken}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0257
+| class="c" | {{ArtP|0257|Blaziken}}
+| {{p|Blaziken}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0258
+| class="c" | {{ArtP|0258|Mudkip}}
+| {{p|Mudkip}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0259
+| class="c" | {{ArtP|0259|Marshtomp}}
+| {{p|Marshtomp}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0260
+| class="c" | {{ArtP|0260|Swampert}}
+| {{p|Swampert}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0261
+| class="c" | {{ArtP|0261|Poochyena}}
+| {{p|Poochyena}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0262
+| class="c" | {{ArtP|0262|Mightyena}}
+| {{p|Mightyena}}
+| class="r" | 127 || 
+|-
+|style="font-family:monospace,monospace" | 0263
+| class="c" | {{ArtP|0263|Zigzagoon}}
+| {{p|Zigzagoon}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0264
+| class="c" | {{ArtP|0264|Linoone}}
+| {{p|Linoone}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0265
+| class="c" | {{ArtP|0265|Wurmple}}
+| {{p|Wurmple}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0266
+| class="c" | {{ArtP|0266|Silcoon}}
+| {{p|Silcoon}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0267
+| class="c" | {{ArtP|0267|Beautifly}}
+| {{p|Beautifly}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0268
+| class="c" | {{ArtP|0268|Cascoon}}
+| {{p|Cascoon}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0269
+| class="c" | {{ArtP|0269|Dustox}}
+| {{p|Dustox}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0270
+| class="c" | {{ArtP|0270|Lotad}}
+| {{p|Lotad}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0271
+| class="c" | {{ArtP|0271|Lombre}}
+| {{p|Lombre}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0272
+| class="c" | {{ArtP|0272|Ludicolo}}
+| {{p|Ludicolo}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0273
+| class="c" | {{ArtP|0273|Seedot}}
+| {{p|Seedot}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0274
+| class="c" | {{ArtP|0274|Nuzleaf}}
+| {{p|Nuzleaf}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0275
+| class="c" | {{ArtP|0275|Shiftry}}
+| {{p|Shiftry}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0276
+| class="c" | {{ArtP|0276|Taillow}}
+| {{p|Taillow}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0277
+| class="c" | {{ArtP|0277|Swellow}}
+| {{p|Swellow}}
+| class="r" | 45 || 90 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0278
+| class="c" | {{ArtP|0278|Wingull}}
+| {{p|Wingull}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0279
+| class="c" | {{ArtP|0279|Pelipper}}
+| {{p|Pelipper}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0280
+| class="c" | {{ArtP|0280|Ralts}}
+| {{p|Ralts}}
+| class="r" | 235 || 
+|-
+|style="font-family:monospace,monospace" | 0281
+| class="c" | {{ArtP|0281|Kirlia}}
+| {{p|Kirlia}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0282
+| class="c" | {{ArtP|0282|Gardevoir}}
+| {{p|Gardevoir}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0283
+| class="c" | {{ArtP|0283|Surskit}}
+| {{p|Surskit}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0284
+| class="c" | {{ArtP|0284|Masquerain}}
+| {{p|Masquerain}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0285
+| class="c" | {{ArtP|0285|Shroomish}}
+| {{p|Shroomish}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0286
+| class="c" | {{ArtP|0286|Breloom}}
+| {{p|Breloom}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0287
+| class="c" | {{ArtP|0287|Slakoth}}
+| {{p|Slakoth}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0288
+| class="c" | {{ArtP|0288|Vigoroth}}
+| {{p|Vigoroth}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0289
+| class="c" | {{ArtP|0289|Slaking}}
+| {{p|Slaking}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0290
+| class="c" | {{ArtP|0290|Nincada}}
+| {{p|Nincada}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0291
+| class="c" | {{ArtP|0291|Ninjask}}
+| {{p|Ninjask}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0292
+| class="c" | {{ArtP|0292|Shedinja}}
+| {{p|Shedinja}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0293
+| class="c" | {{ArtP|0293|Whismur}}
+| {{p|Whismur}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0294
+| class="c" | {{ArtP|0294|Loudred}}
+| {{p|Loudred}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0295
+| class="c" | {{ArtP|0295|Exploud}}
+| {{p|Exploud}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0296
+| class="c" | {{ArtP|0296|Makuhita}}
+| {{p|Makuhita}}
+| class="r" | 180 || Always succeed in Colosseum
+|-
+|style="font-family:monospace,monospace" | 0297
+| class="c" | {{ArtP|0297|Hariyama}}
+| {{p|Hariyama}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0298
+| class="c" | {{ArtP|0298|Azurill}}
+| {{p|Azurill}}
+| class="r" | 150 || 
+|-
+|style="font-family:monospace,monospace" | 0299
+| class="c" | {{ArtP|0299|Nosepass}}
+| {{p|Nosepass}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0300
+| class="c" | {{ArtP|0300|Skitty}}
+| {{p|Skitty}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0301
+| class="c" | {{ArtP|0301|Delcatty}}
+| {{p|Delcatty}}
+| class="r" | 60 || 120 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0302
+| class="c" | {{ArtP|0302|Sableye}}
+| {{p|Sableye}}
+| class="r" | 45 || 90 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0303
+| class="c" | {{ArtP|0303|Mawile}}
+| {{p|Mawile}}
+| class="r" | 45 || 120 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0304
+| class="c" | {{ArtP|0304|Aron}}
+| {{p|Aron}}
+| class="r" | 180 || 
+|-
+|style="font-family:monospace,monospace" | 0305
+| class="c" | {{ArtP|0305|Lairon}}
+| {{p|Lairon}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0306
+| class="c" | {{ArtP|0306|Aggron}}
+| {{p|Aggron}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0307
+| class="c" | {{ArtP|0307|Meditite}}
+| {{p|Meditite}}
+| class="r" | 180 || 
+|-
+|style="font-family:monospace,monospace" | 0308
+| class="c" | {{ArtP|0308|Medicham}}
+| {{p|Medicham}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0309
+| class="c" | {{ArtP|0309|Electrike}}
+| {{p|Electrike}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0310
+| class="c" | {{ArtP|0310|Manectric}}
+| {{p|Manectric}}
+| class="r" | 45 || 80 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0311
+| class="c" | {{ArtP|0311|Plusle}}
+| {{p|Plusle}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0312
+| class="c" | {{ArtP|0312|Minun}}
+| {{p|Minun}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0313
+| class="c" | {{ArtP|0313|Volbeat}}
+| {{p|Volbeat}}
+| class="r" | 150 || 
+|-
+|style="font-family:monospace,monospace" | 0314
+| class="c" | {{ArtP|0314|Illumise}}
+| {{p|Illumise}}
+| class="r" | 150 || 
+|-
+|style="font-family:monospace,monospace" | 0315
+| class="c" | {{ArtP|0315|Roselia}}
+| {{p|Roselia}}
+| class="r" | 150 || 
+|-
+|style="font-family:monospace,monospace" | 0316
+| class="c" | {{ArtP|0316|Gulpin}}
+| {{p|Gulpin}}
+| class="r" | 225 || 
+|-
+|style="font-family:monospace,monospace" | 0317
+| class="c" | {{ArtP|0317|Swalot}}
+| {{p|Swalot}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0318
+| class="c" | {{ArtP|0318|Carvanha}}
+| {{p|Carvanha}}
+| class="r" | 225 || 
+|-
+|style="font-family:monospace,monospace" | 0319
+| class="c" | {{ArtP|0319|Sharpedo}}
+| {{p|Sharpedo}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0320
+| class="c" | {{ArtP|0320|Wailmer}}
+| {{p|Wailmer}}
+| class="r" | 125 || 
+|-
+|style="font-family:monospace,monospace" | 0321
+| class="c" | {{ArtP|0321|Wailord}}
+| {{p|Wailord}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0322
+| class="c" | {{ArtP|0322|Numel}}
+| {{p|Numel}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0323
+| class="c" | {{ArtP|0323|Camerupt}}
+| {{p|Camerupt}}
+| class="r" | 150 || 
+|-
+|style="font-family:monospace,monospace" | 0324
+| class="c" | {{ArtP|0324|Torkoal}}
+| {{p|Torkoal}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0325
+| class="c" | {{ArtP|0325|Spoink}}
+| {{p|Spoink}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0326
+| class="c" | {{ArtP|0326|Grumpig}}
+| {{p|Grumpig}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0327
+| class="c" | {{ArtP|0327|Spinda}}
+| {{p|Spinda}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0328
+| class="c" | {{ArtP|0328|Trapinch}}
+| {{p|Trapinch}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0329
+| class="c" | {{ArtP|0329|Vibrava}}
+| {{p|Vibrava}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0330
+| class="c" | {{ArtP|0330|Flygon}}
+| {{p|Flygon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0331
+| class="c" | {{ArtP|0331|Cacnea}}
+| {{p|Cacnea}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0332
+| class="c" | {{ArtP|0332|Cacturne}}
+| {{p|Cacturne}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0333
+| class="c" | {{ArtP|0333|Swablu}}
+| {{p|Swablu}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0334
+| class="c" | {{ArtP|0334|Altaria}}
+| {{p|Altaria}}
+| class="r" | 45 || 80 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0335
+| class="c" | {{ArtP|0335|Zangoose}}
+| {{p|Zangoose}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0336
+| class="c" | {{ArtP|0336|Seviper}}
+| {{p|Seviper}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0337
+| class="c" | {{ArtP|0337|Lunatone}}
+| {{p|Lunatone}}
+| class="r" | 45 || 100 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0338
+| class="c" | {{ArtP|0338|Solrock}}
+| {{p|Solrock}}
+| class="r" | 45 || 90 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0339
+| class="c" | {{ArtP|0339|Barboach}}
+| {{p|Barboach}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0340
+| class="c" | {{ArtP|0340|Whiscash}}
+| {{p|Whiscash}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0341
+| class="c" | {{ArtP|0341|Corphish}}
+| {{p|Corphish}}
+| class="r" | 205 || 
+|-
+|style="font-family:monospace,monospace" | 0342
+| class="c" | {{ArtP|0342|Crawdaunt}}
+| {{p|Crawdaunt}}
+| class="r" | 155 || 
+|-
+|style="font-family:monospace,monospace" | 0343
+| class="c" | {{ArtP|0343|Baltoy}}
+| {{p|Baltoy}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0344
+| class="c" | {{ArtP|0344|Claydol}}
+| {{p|Claydol}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0345
+| class="c" | {{ArtP|0345|Lileep}}
+| {{p|Lileep}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0346
+| class="c" | {{ArtP|0346|Cradily}}
+| {{p|Cradily}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0347
+| class="c" | {{ArtP|0347|Anorith}}
+| {{p|Anorith}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0348
+| class="c" | {{ArtP|0348|Armaldo}}
+| {{p|Armaldo}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0349
+| class="c" | {{ArtP|0349|Feebas}}
+| {{p|Feebas}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0350
+| class="c" | {{ArtP|0350|Milotic}}
+| {{p|Milotic}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0351
+| class="c" | {{ArtP|0351|Castform}}
+| {{p|Castform}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0352
+| class="c" | {{ArtP|0352|Kecleon}}
+| {{p|Kecleon}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0353
+| class="c" | {{ArtP|0353|Shuppet}}
+| {{p|Shuppet}}
+| class="r" | 225 || 
+|-
+|style="font-family:monospace,monospace" | 0354
+| class="c" | {{ArtP|0354|Banette}}
+| {{p|Banette}}
+| class="r" | 45 || 90 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0355
+| class="c" | {{ArtP|0355|Duskull}}
+| {{p|Duskull}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0356
+| class="c" | {{ArtP|0356|Dusclops}}
+| {{p|Dusclops}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0357
+| class="c" | {{ArtP|0357|Tropius}}
+| {{p|Tropius}}
+| class="r" | 200 || 45 in Colosseum
+|-
+|style="font-family:monospace,monospace" | 0358
+| class="c" | {{ArtP|0358|Chimecho}}
+| {{p|Chimecho}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0359
+| class="c" | {{ArtP|0359|Absol}}
+| {{p|Absol}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0360
+| class="c" | {{ArtP|0360|Wynaut}}
+| {{p|Wynaut}}
+| class="r" | 125 || 
+|-
+|style="font-family:monospace,monospace" | 0361
+| class="c" | {{ArtP|0361|Snorunt}}
+| {{p|Snorunt}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0362
+| class="c" | {{ArtP|0362|Glalie}}
+| {{p|Glalie}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0363
+| class="c" | {{ArtP|0363|Spheal}}
+| {{p|Spheal}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0364
+| class="c" | {{ArtP|0364|Sealeo}}
+| {{p|Sealeo}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0365
+| class="c" | {{ArtP|0365|Walrein}}
+| {{p|Walrein}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0366
+| class="c" | {{ArtP|0366|Clamperl}}
+| {{p|Clamperl}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0367
+| class="c" | {{ArtP|0367|Huntail}}
+| {{p|Huntail}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0368
+| class="c" | {{ArtP|0368|Gorebyss}}
+| {{p|Gorebyss}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0369
+| class="c" | {{ArtP|0369|Relicanth}}
+| {{p|Relicanth}}
+| class="r" | 25 || 
+|-
+|style="font-family:monospace,monospace" | 0370
+| class="c" | {{ArtP|0370|Luvdisc}}
+| {{p|Luvdisc}}
+| class="r" | 225 || 
+|-
+|style="font-family:monospace,monospace" | 0371
+| class="c" | {{ArtP|0371|Bagon}}
+| {{p|Bagon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0372
+| class="c" | {{ArtP|0372|Shelgon}}
+| {{p|Shelgon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0373
+| class="c" | {{ArtP|0373|Salamence}}
+| {{p|Salamence}}
+| class="r" | 45 || 80 in XD: Gale of Darkness
+|-
+|style="font-family:monospace,monospace" | 0374
+| class="c" | {{ArtP|0374|Beldum}}
+| {{p|Beldum}}
+| class="r" | 3 || 20 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0375
+| class="c" | {{ArtP|0375|Metang}}
+| {{p|Metang}}
+| class="r" | 3 || 20 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0376
+| class="c" | {{ArtP|0376|Metagross}}
+| {{p|Metagross}}
+| class="r" | 3 || 15 in Colosseum<br>20 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0377
+| class="c" | {{ArtP|0377|Regirock}}
+| {{p|Regirock}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0378
+| class="c" | {{ArtP|0378|Regice}}
+| {{p|Regice}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0379
+| class="c" | {{ArtP|0379|Registeel}}
+| {{p|Registeel}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0380
+| class="c" | {{ArtP|0380|Latias}}
+| {{p|Latias}}
+| class="r" | 3 || 45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0381
+| class="c" | {{ArtP|0381|Latios}}
+| {{p|Latios}}
+| class="r" | 3 || 45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0382
+| class="c" | {{ArtP|0382|Kyogre}}
+| {{p|Kyogre}}
+| class="r" | 3 || 5 prior to ORAS<br>45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0383
+| class="c" | {{ArtP|0383|Groudon}}
+| {{p|Groudon}}
+| class="r" | 3 || 5 prior to ORAS<br>45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0384
+| class="c" | {{ArtP|0384|Rayquaza}}
+| {{p|Rayquaza}}
+| class="r" | 3 || 45 in ORAS, USUM, SwSh, BDSP, and Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0385
+| class="c" | {{ArtP|0385|Jirachi}}
+| {{p|Jirachi}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0386
+| class="c" | {{ArtP|0386|Deoxys}}
+| {{p|Deoxys}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0387
+| class="c" | {{ArtP|0387|Turtwig}}
+| {{p|Turtwig}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0388
+| class="c" | {{ArtP|0388|Grotle}}
+| {{p|Grotle}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0389
+| class="c" | {{ArtP|0389|Torterra}}
+| {{p|Torterra}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0390
+| class="c" | {{ArtP|0390|Chimchar}}
+| {{p|Chimchar}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0391
+| class="c" | {{ArtP|0391|Monferno}}
+| {{p|Monferno}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0392
+| class="c" | {{ArtP|0392|Infernape}}
+| {{p|Infernape}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0393
+| class="c" | {{ArtP|0393|Piplup}}
+| {{p|Piplup}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0394
+| class="c" | {{ArtP|0394|Prinplup}}
+| {{p|Prinplup}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0395
+| class="c" | {{ArtP|0395|Empoleon}}
+| {{p|Empoleon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0396
+| class="c" | {{ArtP|0396|Starly}}
+| {{p|Starly}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0397
+| class="c" | {{ArtP|0397|Staravia}}
+| {{p|Staravia}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0398
+| class="c" | {{ArtP|0398|Staraptor}}
+| {{p|Staraptor}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0399
+| class="c" | {{ArtP|0399|Bidoof}}
+| {{p|Bidoof}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0400
+| class="c" | {{ArtP|0400|Bibarel}}
+| {{p|Bibarel}}
+| class="r" | 127 || 
+|-
+|style="font-family:monospace,monospace" | 0401
+| class="c" | {{ArtP|0401|Kricketot}}
+| {{p|Kricketot}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0402
+| class="c" | {{ArtP|0402|Kricketune}}
+| {{p|Kricketune}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0403
+| class="c" | {{ArtP|0403|Shinx}}
+| {{p|Shinx}}
+| class="r" | 235 || 
+|-
+|style="font-family:monospace,monospace" | 0404
+| class="c" | {{ArtP|0404|Luxio}}
+| {{p|Luxio}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0405
+| class="c" | {{ArtP|0405|Luxray}}
+| {{p|Luxray}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0406
+| class="c" | {{ArtP|0406|Budew}}
+| {{p|Budew}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0407
+| class="c" | {{ArtP|0407|Roserade}}
+| {{p|Roserade}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0408
+| class="c" | {{ArtP|0408|Cranidos}}
+| {{p|Cranidos}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0409
+| class="c" | {{ArtP|0409|Rampardos}}
+| {{p|Rampardos}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0410
+| class="c" | {{ArtP|0410|Shieldon}}
+| {{p|Shieldon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0411
+| class="c" | {{ArtP|0411|Bastiodon}}
+| {{p|Bastiodon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0412
+| class="c" | {{ArtP|0412|Burmy}}
+| {{p|Burmy}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0413
+| class="c" | {{ArtP|0413|Wormadam}}
+| {{p|Wormadam}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0414
+| class="c" | {{ArtP|0414|Mothim}}
+| {{p|Mothim}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0415
+| class="c" | {{ArtP|0415|Combee}}
+| {{p|Combee}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0416
+| class="c" | {{ArtP|0416|Vespiquen}}
+| {{p|Vespiquen}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0417
+| class="c" | {{ArtP|0417|Pachirisu}}
+| {{p|Pachirisu}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0418
+| class="c" | {{ArtP|0418|Buizel}}
+| {{p|Buizel}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0419
+| class="c" | {{ArtP|0419|Floatzel}}
+| {{p|Floatzel}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0420
+| class="c" | {{ArtP|0420|Cherubi}}
+| {{p|Cherubi}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0421
+| class="c" | {{ArtP|0421|Cherrim}}
+| {{p|Cherrim}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0422
+| class="c" | {{ArtP|0422|Shellos}}
+| {{p|Shellos}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0423
+| class="c" | {{ArtP|0423|Gastrodon}}
+| {{p|Gastrodon}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0424
+| class="c" | {{ArtP|0424|Ambipom}}
+| {{p|Ambipom}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0425
+| class="c" | {{ArtP|0425|Drifloon}}
+| {{p|Drifloon}}
+| class="r" | 125 || 
+|-
+|style="font-family:monospace,monospace" | 0426
+| class="c" | {{ArtP|0426|Drifblim}}
+| {{p|Drifblim}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0427
+| class="c" | {{ArtP|0427|Buneary}}
+| {{p|Buneary}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0428
+| class="c" | {{ArtP|0428|Lopunny}}
+| {{p|Lopunny}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0429
+| class="c" | {{ArtP|0429|Mismagius}}
+| {{p|Mismagius}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0430
+| class="c" | {{ArtP|0430|Honchkrow}}
+| {{p|Honchkrow}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0431
+| class="c" | {{ArtP|0431|Glameow}}
+| {{p|Glameow}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0432
+| class="c" | {{ArtP|0432|Purugly}}
+| {{p|Purugly}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0433
+| class="c" | {{ArtP|0433|Chingling}}
+| {{p|Chingling}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0434
+| class="c" | {{ArtP|0434|Stunky}}
+| {{p|Stunky}}
+| class="r" | 225 || 
+|-
+|style="font-family:monospace,monospace" | 0435
+| class="c" | {{ArtP|0435|Skuntank}}
+| {{p|Skuntank}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0436
+| class="c" | {{ArtP|0436|Bronzor}}
+| {{p|Bronzor}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0437
+| class="c" | {{ArtP|0437|Bronzong}}
+| {{p|Bronzong}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0438
+| class="c" | {{ArtP|0438|Bonsly}}
+| {{p|Bonsly}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0439
+| class="c" | {{ArtP|0439|Mime Jr.}}
+| {{p|Mime Jr.}}
+| class="r" | 145 || 
+|-
+|style="font-family:monospace,monospace" | 0440
+| class="c" | {{ArtP|0440|Happiny}}
+| {{p|Happiny}}
+| class="r" | 130 || 
+|-
+|style="font-family:monospace,monospace" | 0441
+| class="c" | {{ArtP|0441|Chatot}}
+| {{p|Chatot}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0442
+| class="c" | {{ArtP|0442|Spiritomb}}
+| {{p|Spiritomb}}
+| class="r" | 100 || 
+|-
+|style="font-family:monospace,monospace" | 0443
+| class="c" | {{ArtP|0443|Gible}}
+| {{p|Gible}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0444
+| class="c" | {{ArtP|0444|Gabite}}
+| {{p|Gabite}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0445
+| class="c" | {{ArtP|0445|Garchomp}}
+| {{p|Garchomp}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0446
+| class="c" | {{ArtP|0446|Munchlax}}
+| {{p|Munchlax}}
+| class="r" | 50 || 
+|-
+|style="font-family:monospace,monospace" | 0447
+| class="c" | {{ArtP|0447|Riolu}}
+| {{p|Riolu}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0448
+| class="c" | {{ArtP|0448|Lucario}}
+| {{p|Lucario}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0449
+| class="c" | {{ArtP|0449|Hippopotas}}
+| {{p|Hippopotas}}
+| class="r" | 140 || 
+|-
+|style="font-family:monospace,monospace" | 0450
+| class="c" | {{ArtP|0450|Hippowdon}}
+| {{p|Hippowdon}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0451
+| class="c" | {{ArtP|0451|Skorupi}}
+| {{p|Skorupi}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0452
+| class="c" | {{ArtP|0452|Drapion}}
+| {{p|Drapion}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0453
+| class="c" | {{ArtP|0453|Croagunk}}
+| {{p|Croagunk}}
+| class="r" | 140 || 
+|-
+|style="font-family:monospace,monospace" | 0454
+| class="c" | {{ArtP|0454|Toxicroak}}
+| {{p|Toxicroak}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0455
+| class="c" | {{ArtP|0455|Carnivine}}
+| {{p|Carnivine}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0456
+| class="c" | {{ArtP|0456|Finneon}}
+| {{p|Finneon}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0457
+| class="c" | {{ArtP|0457|Lumineon}}
+| {{p|Lumineon}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0458
+| class="c" | {{ArtP|0458|Mantyke}}
+| {{p|Mantyke}}
+| class="r" | 25 || 
+|-
+|style="font-family:monospace,monospace" | 0459
+| class="c" | {{ArtP|0459|Snover}}
+| {{p|Snover}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0460
+| class="c" | {{ArtP|0460|Abomasnow}}
+| {{p|Abomasnow}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0461
+| class="c" | {{ArtP|0461|Weavile}}
+| {{p|Weavile}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0462
+| class="c" | {{ArtP|0462|Magnezone}}
+| {{p|Magnezone}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0463
+| class="c" | {{ArtP|0463|Lickilicky}}
+| {{p|Lickilicky}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0464
+| class="c" | {{ArtP|0464|Rhyperior}}
+| {{p|Rhyperior}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0465
+| class="c" | {{ArtP|0465|Tangrowth}}
+| {{p|Tangrowth}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0466
+| class="c" | {{ArtP|0466|Electivire}}
+| {{p|Electivire}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0467
+| class="c" | {{ArtP|0467|Magmortar}}
+| {{p|Magmortar}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0468
+| class="c" | {{ArtP|0468|Togekiss}}
+| {{p|Togekiss}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0469
+| class="c" | {{ArtP|0469|Yanmega}}
+| {{p|Yanmega}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0470
+| class="c" | {{ArtP|0470|Leafeon}}
+| {{p|Leafeon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0471
+| class="c" | {{ArtP|0471|Glaceon}}
+| {{p|Glaceon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0472
+| class="c" | {{ArtP|0472|Gliscor}}
+| {{p|Gliscor}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0473
+| class="c" | {{ArtP|0473|Mamoswine}}
+| {{p|Mamoswine}}
+| class="r" | 50 || 
+|-
+|style="font-family:monospace,monospace" | 0474
+| class="c" | {{ArtP|0474|Porygon-Z}}
+| {{p|Porygon-Z}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0475
+| class="c" | {{ArtP|0475|Gallade}}
+| {{p|Gallade}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0476
+| class="c" | {{ArtP|0476|Probopass}}
+| {{p|Probopass}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0477
+| class="c" | {{ArtP|0477|Dusknoir}}
+| {{p|Dusknoir}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0478
+| class="c" | {{ArtP|0478|Froslass}}
+| {{p|Froslass}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0479
+| class="c" | {{ArtP|0479|Rotom}}
+| {{p|Rotom}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0480
+| class="c" | {{ArtP|0480|Uxie}}
+| {{p|Uxie}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0481
+| class="c" | {{ArtP|0481|Mesprit}}
+| {{p|Mesprit}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0482
+| class="c" | {{ArtP|0482|Azelf}}
+| {{p|Azelf}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0483
+| class="c" | {{ArtP|0483|Dialga}}
+| {{p|Dialga}}
+| class="r" | 3 || 30 prior to ORAS
+|-
+|style="font-family:monospace,monospace" | 0484
+| class="c" | {{ArtP|0484|Palkia}}
+| {{p|Palkia}}
+| class="r" | 3 || 30 prior to ORAS
+|-
+|style="font-family:monospace,monospace" | 0485
+| class="c" | {{ArtP|0485|Heatran}}
+| {{p|Heatran}}
+| class="r" | 3 || 45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0486
+| class="c" | {{ArtP|0486|Regigigas}}
+| {{p|Regigigas}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0487
+| class="c" | {{ArtP|0487|Giratina}}
+| {{p|Giratina}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0488
+| class="c" | {{ArtP|0488|Cresselia}}
+| {{p|Cresselia}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0489
+| class="c" | {{ArtP|0489|Phione}}
+| {{p|Phione}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0490
+| class="c" | {{ArtP|0490|Manaphy}}
+| {{p|Manaphy}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0491
+| class="c" | {{ArtP|0491|Darkrai}}
+| {{p|Darkrai}}
+| class="r" | 3 || 45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0492
+| class="c" | {{ArtP|0492|Shaymin}}
+| {{p|Shaymin}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0493
+| class="c" | {{ArtP|0493|Arceus}}
+| {{p|Arceus}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0494
+| class="c" | {{ArtP|0494|Victini}}
+| {{p|Victini}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0495
+| class="c" | {{ArtP|0495|Snivy}}
+| {{p|Snivy}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0496
+| class="c" | {{ArtP|0496|Servine}}
+| {{p|Servine}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0497
+| class="c" | {{ArtP|0497|Serperior}}
+| {{p|Serperior}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0498
+| class="c" | {{ArtP|0498|Tepig}}
+| {{p|Tepig}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0499
+| class="c" | {{ArtP|0499|Pignite}}
+| {{p|Pignite}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0500
+| class="c" | {{ArtP|0500|Emboar}}
+| {{p|Emboar}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0501
+| class="c" | {{ArtP|0501|Oshawott}}
+| {{p|Oshawott}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0502
+| class="c" | {{ArtP|0502|Dewott}}
+| {{p|Dewott}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0503
+| class="c" | {{ArtP|0503|Samurott}}
+| {{p|Samurott}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0504
+| class="c" | {{ArtP|0504|Patrat}}
+| {{p|Patrat}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0505
+| class="c" | {{ArtP|0505|Watchog}}
+| {{p|Watchog}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0506
+| class="c" | {{ArtP|0506|Lillipup}}
+| {{p|Lillipup}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0507
+| class="c" | {{ArtP|0507|Herdier}}
+| {{p|Herdier}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0508
+| class="c" | {{ArtP|0508|Stoutland}}
+| {{p|Stoutland}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0509
+| class="c" | {{ArtP|0509|Purrloin}}
+| {{p|Purrloin}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0510
+| class="c" | {{ArtP|0510|Liepard}}
+| {{p|Liepard}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0511
+| class="c" | {{ArtP|0511|Pansage}}
+| {{p|Pansage}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0512
+| class="c" | {{ArtP|0512|Simisage}}
+| {{p|Simisage}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0513
+| class="c" | {{ArtP|0513|Pansear}}
+| {{p|Pansear}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0514
+| class="c" | {{ArtP|0514|Simisear}}
+| {{p|Simisear}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0515
+| class="c" | {{ArtP|0515|Panpour}}
+| {{p|Panpour}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0516
+| class="c" | {{ArtP|0516|Simipour}}
+| {{p|Simipour}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0517
+| class="c" | {{ArtP|0517|Munna}}
+| {{p|Munna}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0518
+| class="c" | {{ArtP|0518|Musharna}}
+| {{p|Musharna}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0519
+| class="c" | {{ArtP|0519|Pidove}}
+| {{p|Pidove}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0520
+| class="c" | {{ArtP|0520|Tranquill}}
+| {{p|Tranquill}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0521
+| class="c" | {{ArtP|0521|Unfezant}}
+| {{p|Unfezant}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0522
+| class="c" | {{ArtP|0522|Blitzle}}
+| {{p|Blitzle}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0523
+| class="c" | {{ArtP|0523|Zebstrika}}
+| {{p|Zebstrika}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0524
+| class="c" | {{ArtP|0524|Roggenrola}}
+| {{p|Roggenrola}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0525
+| class="c" | {{ArtP|0525|Boldore}}
+| {{p|Boldore}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0526
+| class="c" | {{ArtP|0526|Gigalith}}
+| {{p|Gigalith}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0527
+| class="c" | {{ArtP|0527|Woobat}}
+| {{p|Woobat}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0528
+| class="c" | {{ArtP|0528|Swoobat}}
+| {{p|Swoobat}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0529
+| class="c" | {{ArtP|0529|Drilbur}}
+| {{p|Drilbur}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0530
+| class="c" | {{ArtP|0530|Excadrill}}
+| {{p|Excadrill}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0531
+| class="c" | {{ArtP|0531|Audino}}
+| {{p|Audino}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0532
+| class="c" | {{ArtP|0532|Timburr}}
+| {{p|Timburr}}
+| class="r" | 180 || 
+|-
+|style="font-family:monospace,monospace" | 0533
+| class="c" | {{ArtP|0533|Gurdurr}}
+| {{p|Gurdurr}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0534
+| class="c" | {{ArtP|0534|Conkeldurr}}
+| {{p|Conkeldurr}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0535
+| class="c" | {{ArtP|0535|Tympole}}
+| {{p|Tympole}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0536
+| class="c" | {{ArtP|0536|Palpitoad}}
+| {{p|Palpitoad}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0537
+| class="c" | {{ArtP|0537|Seismitoad}}
+| {{p|Seismitoad}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0538
+| class="c" | {{ArtP|0538|Throh}}
+| {{p|Throh}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0539
+| class="c" | {{ArtP|0539|Sawk}}
+| {{p|Sawk}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0540
+| class="c" | {{ArtP|0540|Sewaddle}}
+| {{p|Sewaddle}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0541
+| class="c" | {{ArtP|0541|Swadloon}}
+| {{p|Swadloon}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0542
+| class="c" | {{ArtP|0542|Leavanny}}
+| {{p|Leavanny}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0543
+| class="c" | {{ArtP|0543|Venipede}}
+| {{p|Venipede}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0544
+| class="c" | {{ArtP|0544|Whirlipede}}
+| {{p|Whirlipede}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0545
+| class="c" | {{ArtP|0545|Scolipede}}
+| {{p|Scolipede}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0546
+| class="c" | {{ArtP|0546|Cottonee}}
+| {{p|Cottonee}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0547
+| class="c" | {{ArtP|0547|Whimsicott}}
+| {{p|Whimsicott}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0548
+| class="c" | {{ArtP|0548|Petilil}}
+| {{p|Petilil}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0549
+| class="c" | {{ArtP|0549|Lilligant}}
+| {{p|Lilligant}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0550
+| class="c" | {{ArtP|0550|Basculin}}
+| {{p|Basculin}}
+| class="r" | 190 || 25 prior to SV 2.0.1
+|-
+|style="font-family:monospace,monospace" | 0551
+| class="c" | {{ArtP|0551|Sandile}}
+| {{p|Sandile}}
+| class="r" | 180 || 
+|-
+|style="font-family:monospace,monospace" | 0552
+| class="c" | {{ArtP|0552|Krokorok}}
+| {{p|Krokorok}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0553
+| class="c" | {{ArtP|0553|Krookodile}}
+| {{p|Krookodile}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0554
+| class="c" | {{ArtP|0554|Darumaka}}
+| {{p|Darumaka}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0555
+| class="c" | {{ArtP|0555|Darmanitan}}
+| {{p|Darmanitan}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0556
+| class="c" | {{ArtP|0556|Maractus}}
+| {{p|Maractus}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0557
+| class="c" | {{ArtP|0557|Dwebble}}
+| {{p|Dwebble}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0558
+| class="c" | {{ArtP|0558|Crustle}}
+| {{p|Crustle}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0559
+| class="c" | {{ArtP|0559|Scraggy}}
+| {{p|Scraggy}}
+| class="r" | 180 || 
+|-
+|style="font-family:monospace,monospace" | 0560
+| class="c" | {{ArtP|0560|Scrafty}}
+| {{p|Scrafty}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0561
+| class="c" | {{ArtP|0561|Sigilyph}}
+| {{p|Sigilyph}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0562
+| class="c" | {{ArtP|0562|Yamask}}
+| {{p|Yamask}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0563
+| class="c" | {{ArtP|0563|Cofagrigus}}
+| {{p|Cofagrigus}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0564
+| class="c" | {{ArtP|0564|Tirtouga}}
+| {{p|Tirtouga}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0565
+| class="c" | {{ArtP|0565|Carracosta}}
+| {{p|Carracosta}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0566
+| class="c" | {{ArtP|0566|Archen}}
+| {{p|Archen}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0567
+| class="c" | {{ArtP|0567|Archeops}}
+| {{p|Archeops}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0568
+| class="c" | {{ArtP|0568|Trubbish}}
+| {{p|Trubbish}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0569
+| class="c" | {{ArtP|0569|Garbodor}}
+| {{p|Garbodor}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0570
+| class="c" | {{ArtP|0570|Zorua}}
+| {{p|Zorua}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0571
+| class="c" | {{ArtP|0571|Zoroark}}
+| {{p|Zoroark}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0572
+| class="c" | {{ArtP|0572|Minccino}}
+| {{p|Minccino}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0573
+| class="c" | {{ArtP|0573|Cinccino}}
+| {{p|Cinccino}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0574
+| class="c" | {{ArtP|0574|Gothita}}
+| {{p|Gothita}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0575
+| class="c" | {{ArtP|0575|Gothorita}}
+| {{p|Gothorita}}
+| class="r" | 100 || 
+|-
+|style="font-family:monospace,monospace" | 0576
+| class="c" | {{ArtP|0576|Gothitelle}}
+| {{p|Gothitelle}}
+| class="r" | 50 || 
+|-
+|style="font-family:monospace,monospace" | 0577
+| class="c" | {{ArtP|0577|Solosis}}
+| {{p|Solosis}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0578
+| class="c" | {{ArtP|0578|Duosion}}
+| {{p|Duosion}}
+| class="r" | 100 || 
+|-
+|style="font-family:monospace,monospace" | 0579
+| class="c" | {{ArtP|0579|Reuniclus}}
+| {{p|Reuniclus}}
+| class="r" | 50 || 
+|-
+|style="font-family:monospace,monospace" | 0580
+| class="c" | {{ArtP|0580|Ducklett}}
+| {{p|Ducklett}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0581
+| class="c" | {{ArtP|0581|Swanna}}
+| {{p|Swanna}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0582
+| class="c" | {{ArtP|0582|Vanillite}}
+| {{p|Vanillite}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0583
+| class="c" | {{ArtP|0583|Vanillish}}
+| {{p|Vanillish}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0584
+| class="c" | {{ArtP|0584|Vanilluxe}}
+| {{p|Vanilluxe}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0585
+| class="c" | {{ArtP|0585|Deerling}}
+| {{p|Deerling}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0586
+| class="c" | {{ArtP|0586|Sawsbuck}}
+| {{p|Sawsbuck}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0587
+| class="c" | {{ArtP|0587|Emolga}}
+| {{p|Emolga}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0588
+| class="c" | {{ArtP|0588|Karrablast}}
+| {{p|Karrablast}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0589
+| class="c" | {{ArtP|0589|Escavalier}}
+| {{p|Escavalier}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0590
+| class="c" | {{ArtP|0590|Foongus}}
+| {{p|Foongus}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0591
+| class="c" | {{ArtP|0591|Amoonguss}}
+| {{p|Amoonguss}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0592
+| class="c" | {{ArtP|0592|Frillish}}
+| {{p|Frillish}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0593
+| class="c" | {{ArtP|0593|Jellicent}}
+| {{p|Jellicent}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0594
+| class="c" | {{ArtP|0594|Alomomola}}
+| {{p|Alomomola}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0595
+| class="c" | {{ArtP|0595|Joltik}}
+| {{p|Joltik}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0596
+| class="c" | {{ArtP|0596|Galvantula}}
+| {{p|Galvantula}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0597
+| class="c" | {{ArtP|0597|Ferroseed}}
+| {{p|Ferroseed}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0598
+| class="c" | {{ArtP|0598|Ferrothorn}}
+| {{p|Ferrothorn}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0599
+| class="c" | {{ArtP|0599|Klink}}
+| {{p|Klink}}
+| class="r" | 130 || 
+|-
+|style="font-family:monospace,monospace" | 0600
+| class="c" | {{ArtP|0600|Klang}}
+| {{p|Klang}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0601
+| class="c" | {{ArtP|0601|Klinklang}}
+| {{p|Klinklang}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0602
+| class="c" | {{ArtP|0602|Tynamo}}
+| {{p|Tynamo}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0603
+| class="c" | {{ArtP|0603|Eelektrik}}
+| {{p|Eelektrik}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0604
+| class="c" | {{ArtP|0604|Eelektross}}
+| {{p|Eelektross}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0605
+| class="c" | {{ArtP|0605|Elgyem}}
+| {{p|Elgyem}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0606
+| class="c" | {{ArtP|0606|Beheeyem}}
+| {{p|Beheeyem}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0607
+| class="c" | {{ArtP|0607|Litwick}}
+| {{p|Litwick}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0608
+| class="c" | {{ArtP|0608|Lampent}}
+| {{p|Lampent}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0609
+| class="c" | {{ArtP|0609|Chandelure}}
+| {{p|Chandelure}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0610
+| class="c" | {{ArtP|0610|Axew}}
+| {{p|Axew}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0611
+| class="c" | {{ArtP|0611|Fraxure}}
+| {{p|Fraxure}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0612
+| class="c" | {{ArtP|0612|Haxorus}}
+| {{p|Haxorus}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0613
+| class="c" | {{ArtP|0613|Cubchoo}}
+| {{p|Cubchoo}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0614
+| class="c" | {{ArtP|0614|Beartic}}
+| {{p|Beartic}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0615
+| class="c" | {{ArtP|0615|Cryogonal}}
+| {{p|Cryogonal}}
+| class="r" | 25 || 
+|-
+|style="font-family:monospace,monospace" | 0616
+| class="c" | {{ArtP|0616|Shelmet}}
+| {{p|Shelmet}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0617
+| class="c" | {{ArtP|0617|Accelgor}}
+| {{p|Accelgor}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0618
+| class="c" | {{ArtP|0618|Stunfisk}}
+| {{p|Stunfisk}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0619
+| class="c" | {{ArtP|0619|Mienfoo}}
+| {{p|Mienfoo}}
+| class="r" | 180 || 
+|-
+|style="font-family:monospace,monospace" | 0620
+| class="c" | {{ArtP|0620|Mienshao}}
+| {{p|Mienshao}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0621
+| class="c" | {{ArtP|0621|Druddigon}}
+| {{p|Druddigon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0622
+| class="c" | {{ArtP|0622|Golett}}
+| {{p|Golett}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0623
+| class="c" | {{ArtP|0623|Golurk}}
+| {{p|Golurk}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0624
+| class="c" | {{ArtP|0624|Pawniard}}
+| {{p|Pawniard}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0625
+| class="c" | {{ArtP|0625|Bisharp}}
+| {{p|Bisharp}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0626
+| class="c" | {{ArtP|0626|Bouffalant}}
+| {{p|Bouffalant}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0627
+| class="c" | {{ArtP|0627|Rufflet}}
+| {{p|Rufflet}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0628
+| class="c" | {{ArtP|0628|Braviary}}
+| {{p|Braviary}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0629
+| class="c" | {{ArtP|0629|Vullaby}}
+| {{p|Vullaby}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0630
+| class="c" | {{ArtP|0630|Mandibuzz}}
+| {{p|Mandibuzz}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0631
+| class="c" | {{ArtP|0631|Heatmor}}
+| {{p|Heatmor}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0632
+| class="c" | {{ArtP|0632|Durant}}
+| {{p|Durant}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0633
+| class="c" | {{ArtP|0633|Deino}}
+| {{p|Deino}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0634
+| class="c" | {{ArtP|0634|Zweilous}}
+| {{p|Zweilous}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0635
+| class="c" | {{ArtP|0635|Hydreigon}}
+| {{p|Hydreigon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0636
+| class="c" | {{ArtP|0636|Larvesta}}
+| {{p|Larvesta}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0637
+| class="c" | {{ArtP|0637|Volcarona}}
+| {{p|Volcarona}}
+| class="r" | 15 || 
+|-
+|style="font-family:monospace,monospace" | 0638
+| class="c" | {{ArtP|0638|Cobalion}}
+| {{p|Cobalion}}
+| class="r" | 3 || 45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0639
+| class="c" | {{ArtP|0639|Terrakion}}
+| {{p|Terrakion}}
+| class="r" | 3 || 45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0640
+| class="c" | {{ArtP|0640|Virizion}}
+| {{p|Virizion}}
+| class="r" | 3 || 45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0641
+| class="c" | {{ArtP|0641|Tornadus}}
+| {{p|Tornadus}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0642
+| class="c" | {{ArtP|0642|Thundurus}}
+| {{p|Thundurus}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0643
+| class="c" | {{ArtP|0643|Reshiram}}
+| {{p|Reshiram}}
+| class="r" | 3 || 45 prior to ORAS
+|-
+|style="font-family:monospace,monospace" | 0644
+| class="c" | {{ArtP|0644|Zekrom}}
+| {{p|Zekrom}}
+| class="r" | 3 || 45 prior to ORAS
+|-
+|style="font-family:monospace,monospace" | 0645
+| class="c" | {{ArtP|0645|Landorus}}
+| {{p|Landorus}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0646
+| class="c" | {{ArtP|0646|Kyurem}}
+| {{p|Kyurem}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0647
+| class="c" | {{ArtP|0647|Keldeo}}
+| {{p|Keldeo}}
+| class="r" | 3 || 45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0648
+| class="c" | {{ArtP|0648|Meloetta}}
+| {{p|Meloetta}}
+| class="r" | 3 || 45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0649
+| class="c" | {{ArtP|0649|Genesect}}
+| {{p|Genesect}}
+| class="r" | 3 || 45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0650
+| class="c" | {{ArtP|0650|Chespin}}
+| {{p|Chespin}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0651
+| class="c" | {{ArtP|0651|Quilladin}}
+| {{p|Quilladin}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0652
+| class="c" | {{ArtP|0652|Chesnaught}}
+| {{p|Chesnaught}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0653
+| class="c" | {{ArtP|0653|Fennekin}}
+| {{p|Fennekin}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0654
+| class="c" | {{ArtP|0654|Braixen}}
+| {{p|Braixen}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0655
+| class="c" | {{ArtP|0655|Delphox}}
+| {{p|Delphox}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0656
+| class="c" | {{ArtP|0656|Froakie}}
+| {{p|Froakie}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0657
+| class="c" | {{ArtP|0657|Frogadier}}
+| {{p|Frogadier}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0658
+| class="c" | {{ArtP|0658|Greninja}}
+| {{p|Greninja}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0659
+| class="c" | {{ArtP|0659|Bunnelby}}
+| {{p|Bunnelby}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0660
+| class="c" | {{ArtP|0660|Diggersby}}
+| {{p|Diggersby}}
+| class="r" | 127 || 
+|-
+|style="font-family:monospace,monospace" | 0661
+| class="c" | {{ArtP|0661|Fletchling}}
+| {{p|Fletchling}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0662
+| class="c" | {{ArtP|0662|Fletchinder}}
+| {{p|Fletchinder}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0663
+| class="c" | {{ArtP|0663|Talonflame}}
+| {{p|Talonflame}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0664
+| class="c" | {{ArtP|0664|Scatterbug}}
+| {{p|Scatterbug}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0665
+| class="c" | {{ArtP|0665|Spewpa}}
+| {{p|Spewpa}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0666
+| class="c" | {{ArtP|0666|Vivillon}}
+| {{p|Vivillon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0667
+| class="c" | {{ArtP|0667|Litleo}}
+| {{p|Litleo}}
+| class="r" | 220 || 
+|-
+|style="font-family:monospace,monospace" | 0668
+| class="c" | {{ArtP|0668|Pyroar}}
+| {{p|Pyroar}}
+| class="r" | 65 || 
+|-
+|style="font-family:monospace,monospace" | 0669
+| class="c" | {{ArtP|0669|Flabébé}}
+| {{p|Flabébé}}
+| class="r" | 225 || 
+|-
+|style="font-family:monospace,monospace" | 0670
+| class="c" | {{ArtP|0670|Floette}}
+| {{p|Floette}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0671
+| class="c" | {{ArtP|0671|Florges}}
+| {{p|Florges}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0672
+| class="c" | {{ArtP|0672|Skiddo}}
+| {{p|Skiddo}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0673
+| class="c" | {{ArtP|0673|Gogoat}}
+| {{p|Gogoat}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0674
+| class="c" | {{ArtP|0674|Pancham}}
+| {{p|Pancham}}
+| class="r" | 220 || 
+|-
+|style="font-family:monospace,monospace" | 0675
+| class="c" | {{ArtP|0675|Pangoro}}
+| {{p|Pangoro}}
+| class="r" | 65 || 
+|-
+|style="font-family:monospace,monospace" | 0676
+| class="c" | {{ArtP|0676|Furfrou}}
+| {{p|Furfrou}}
+| class="r" | 160 || 
+|-
+|style="font-family:monospace,monospace" | 0677
+| class="c" | {{ArtP|0677|Espurr}}
+| {{p|Espurr}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0678
+| class="c" | {{ArtP|0678|Meowstic}}
+| {{p|Meowstic}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0679
+| class="c" | {{ArtP|0679|Honedge}}
+| {{p|Honedge}}
+| class="r" | 180 || 
+|-
+|style="font-family:monospace,monospace" | 0680
+| class="c" | {{ArtP|0680|Doublade}}
+| {{p|Doublade}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0681
+| class="c" | {{ArtP|0681|Aegislash}}
+| {{p|Aegislash}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0682
+| class="c" | {{ArtP|0682|Spritzee}}
+| {{p|Spritzee}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0683
+| class="c" | {{ArtP|0683|Aromatisse}}
+| {{p|Aromatisse}}
+| class="r" | 140 || 
+|-
+|style="font-family:monospace,monospace" | 0684
+| class="c" | {{ArtP|0684|Swirlix}}
+| {{p|Swirlix}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0685
+| class="c" | {{ArtP|0685|Slurpuff}}
+| {{p|Slurpuff}}
+| class="r" | 140 || 
+|-
+|style="font-family:monospace,monospace" | 0686
+| class="c" | {{ArtP|0686|Inkay}}
+| {{p|Inkay}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0687
+| class="c" | {{ArtP|0687|Malamar}}
+| {{p|Malamar}}
+| class="r" | 80 || 
+|-
+|style="font-family:monospace,monospace" | 0688
+| class="c" | {{ArtP|0688|Binacle}}
+| {{p|Binacle}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0689
+| class="c" | {{ArtP|0689|Barbaracle}}
+| {{p|Barbaracle}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0690
+| class="c" | {{ArtP|0690|Skrelp}}
+| {{p|Skrelp}}
+| class="r" | 225 || 
+|-
+|style="font-family:monospace,monospace" | 0691
+| class="c" | {{ArtP|0691|Dragalge}}
+| {{p|Dragalge}}
+| class="r" | 55 || 
+|-
+|style="font-family:monospace,monospace" | 0692
+| class="c" | {{ArtP|0692|Clauncher}}
+| {{p|Clauncher}}
+| class="r" | 225 || 
+|-
+|style="font-family:monospace,monospace" | 0693
+| class="c" | {{ArtP|0693|Clawitzer}}
+| {{p|Clawitzer}}
+| class="r" | 55 || 
+|-
+|style="font-family:monospace,monospace" | 0694
+| class="c" | {{ArtP|0694|Helioptile}}
+| {{p|Helioptile}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0695
+| class="c" | {{ArtP|0695|Heliolisk}}
+| {{p|Heliolisk}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0696
+| class="c" | {{ArtP|0696|Tyrunt}}
+| {{p|Tyrunt}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0697
+| class="c" | {{ArtP|0697|Tyrantrum}}
+| {{p|Tyrantrum}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0698
+| class="c" | {{ArtP|0698|Amaura}}
+| {{p|Amaura}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0699
+| class="c" | {{ArtP|0699|Aurorus}}
+| {{p|Aurorus}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0700
+| class="c" | {{ArtP|0700|Sylveon}}
+| {{p|Sylveon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0701
+| class="c" | {{ArtP|0701|Hawlucha}}
+| {{p|Hawlucha}}
+| class="r" | 100 || 
+|-
+|style="font-family:monospace,monospace" | 0702
+| class="c" | {{ArtP|0702|Dedenne}}
+| {{p|Dedenne}}
+| class="r" | 180 || 
+|-
+|style="font-family:monospace,monospace" | 0703
+| class="c" | {{ArtP|0703|Carbink}}
+| {{p|Carbink}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0704
+| class="c" | {{ArtP|0704|Goomy}}
+| {{p|Goomy}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0705
+| class="c" | {{ArtP|0705|Sliggoo}}
+| {{p|Sliggoo}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0706
+| class="c" | {{ArtP|0706|Goodra}}
+| {{p|Goodra}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0707
+| class="c" | {{ArtP|0707|Klefki}}
+| {{p|Klefki}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0708
+| class="c" | {{ArtP|0708|Phantump}}
+| {{p|Phantump}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0709
+| class="c" | {{ArtP|0709|Trevenant}}
+| {{p|Trevenant}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0710
+| class="c" | {{ArtP|0710|Pumpkaboo}}
+| {{p|Pumpkaboo}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0711
+| class="c" | {{ArtP|0711|Gourgeist}}
+| {{p|Gourgeist}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0712
+| class="c" | {{ArtP|0712|Bergmite}}
+| {{p|Bergmite}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0713
+| class="c" | {{ArtP|0713|Avalugg}}
+| {{p|Avalugg}}
+| class="r" | 55 || 
+|-
+|style="font-family:monospace,monospace" | 0714
+| class="c" | {{ArtP|0714|Noibat}}
+| {{p|Noibat}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0715
+| class="c" | {{ArtP|0715|Noivern}}
+| {{p|Noivern}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0716
+| class="c" | {{ArtP|0716|Xerneas}}
+| {{p|Xerneas}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0717
+| class="c" | {{ArtP|0717|Yveltal}}
+| {{p|Yveltal}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0718
+| class="c" | {{ArtP|0718|Zygarde}}
+| {{p|Zygarde}}
+| class="r" | 3 || 255 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0719
+| class="c" | {{ArtP|0719|Diancie}}
+| {{p|Diancie}}
+| class="r" | 3 || 20 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0720
+| class="c" | {{ArtP|0720|Hoopa}}
+| {{p|Hoopa}}
+| class="r" | 3 || 45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0721
+| class="c" | {{ArtP|0721|Volcanion}}
+| {{p|Volcanion}}
+| class="r" | 3 || 45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0722
+| class="c" | {{ArtP|0722|Rowlet}}
+| {{p|Rowlet}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0723
+| class="c" | {{ArtP|0723|Dartrix}}
+| {{p|Dartrix}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0724
+| class="c" | {{ArtP|0724|Decidueye}}
+| {{p|Decidueye}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0725
+| class="c" | {{ArtP|0725|Litten}}
+| {{p|Litten}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0726
+| class="c" | {{ArtP|0726|Torracat}}
+| {{p|Torracat}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0727
+| class="c" | {{ArtP|0727|Incineroar}}
+| {{p|Incineroar}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0728
+| class="c" | {{ArtP|0728|Popplio}}
+| {{p|Popplio}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0729
+| class="c" | {{ArtP|0729|Brionne}}
+| {{p|Brionne}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0730
+| class="c" | {{ArtP|0730|Primarina}}
+| {{p|Primarina}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0731
+| class="c" | {{ArtP|0731|Pikipek}}
+| {{p|Pikipek}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0732
+| class="c" | {{ArtP|0732|Trumbeak}}
+| {{p|Trumbeak}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0733
+| class="c" | {{ArtP|0733|Toucannon}}
+| {{p|Toucannon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0734
+| class="c" | {{ArtP|0734|Yungoos}}
+| {{p|Yungoos}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0735
+| class="c" | {{ArtP|0735|Gumshoos}}
+| {{p|Gumshoos}}
+| class="r" | 127 || 
+|-
+|style="font-family:monospace,monospace" | 0736
+| class="c" | {{ArtP|0736|Grubbin}}
+| {{p|Grubbin}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0737
+| class="c" | {{ArtP|0737|Charjabug}}
+| {{p|Charjabug}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0738
+| class="c" | {{ArtP|0738|Vikavolt}}
+| {{p|Vikavolt}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0739
+| class="c" | {{ArtP|0739|Crabrawler}}
+| {{p|Crabrawler}}
+| class="r" | 225 || 
+|-
+|style="font-family:monospace,monospace" | 0740
+| class="c" | {{ArtP|0740|Crabominable}}
+| {{p|Crabominable}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0741
+| class="c" | {{ArtP|0741|Oricorio}}
+| {{p|Oricorio}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0742
+| class="c" | {{ArtP|0742|Cutiefly}}
+| {{p|Cutiefly}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0743
+| class="c" | {{ArtP|0743|Ribombee}}
+| {{p|Ribombee}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0744
+| class="c" | {{ArtP|0744|Rockruff}}
+| {{p|Rockruff}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0745
+| class="c" | {{ArtP|0745|Lycanroc}}
+| {{p|Lycanroc}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0746
+| class="c" | {{ArtP|0746|Wishiwashi}}
+| {{p|Wishiwashi}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0747
+| class="c" | {{ArtP|0747|Mareanie}}
+| {{p|Mareanie}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0748
+| class="c" | {{ArtP|0748|Toxapex}}
+| {{p|Toxapex}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0749
+| class="c" | {{ArtP|0749|Mudbray}}
+| {{p|Mudbray}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0750
+| class="c" | {{ArtP|0750|Mudsdale}}
+| {{p|Mudsdale}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0751
+| class="c" | {{ArtP|0751|Dewpider}}
+| {{p|Dewpider}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0752
+| class="c" | {{ArtP|0752|Araquanid}}
+| {{p|Araquanid}}
+| class="r" | 100 || 
+|-
+|style="font-family:monospace,monospace" | 0753
+| class="c" | {{ArtP|0753|Fomantis}}
+| {{p|Fomantis}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0754
+| class="c" | {{ArtP|0754|Lurantis}}
+| {{p|Lurantis}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0755
+| class="c" | {{ArtP|0755|Morelull}}
+| {{p|Morelull}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0756
+| class="c" | {{ArtP|0756|Shiinotic}}
+| {{p|Shiinotic}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0757
+| class="c" | {{ArtP|0757|Salandit}}
+| {{p|Salandit}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0758
+| class="c" | {{ArtP|0758|Salazzle}}
+| {{p|Salazzle}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0759
+| class="c" | {{ArtP|0759|Stufful}}
+| {{p|Stufful}}
+| class="r" | 140 || 
+|-
+|style="font-family:monospace,monospace" | 0760
+| class="c" | {{ArtP|0760|Bewear}}
+| {{p|Bewear}}
+| class="r" | 70 || 
+|-
+|style="font-family:monospace,monospace" | 0761
+| class="c" | {{ArtP|0761|Bounsweet}}
+| {{p|Bounsweet}}
+| class="r" | 235 || 
+|-
+|style="font-family:monospace,monospace" | 0762
+| class="c" | {{ArtP|0762|Steenee}}
+| {{p|Steenee}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0763
+| class="c" | {{ArtP|0763|Tsareena}}
+| {{p|Tsareena}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0764
+| class="c" | {{ArtP|0764|Comfey}}
+| {{p|Comfey}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0765
+| class="c" | {{ArtP|0765|Oranguru}}
+| {{p|Oranguru}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0766
+| class="c" | {{ArtP|0766|Passimian}}
+| {{p|Passimian}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0767
+| class="c" | {{ArtP|0767|Wimpod}}
+| {{p|Wimpod}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0768
+| class="c" | {{ArtP|0768|Golisopod}}
+| {{p|Golisopod}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0769
+| class="c" | {{ArtP|0769|Sandygast}}
+| {{p|Sandygast}}
+| class="r" | 140 || 
+|-
+|style="font-family:monospace,monospace" | 0770
+| class="c" | {{ArtP|0770|Palossand}}
+| {{p|Palossand}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0771
+| class="c" | {{ArtP|0771|Pyukumuku}}
+| {{p|Pyukumuku}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0772
+| class="c" | {{ArtP|0772|Type: Null}}
+| {{p|Type: Null}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0773
+| class="c" | {{ArtP|0773|Silvally}}
+| {{p|Silvally}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0774
+| class="c" | {{ArtP|0774|Minior}}
+| {{p|Minior}}<br><small>({{fd|Minior|Meteor Form}})</small>
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0774
+| class="c" | {{ArtP|0774|Minior|form=-Core}}
+| {{p|Minior}}<br><small>({{fd|Minior|Core}})</small>
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0775
+| class="c" | {{ArtP|0775|Komala}}
+| {{p|Komala}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0776
+| class="c" | {{ArtP|0776|Turtonator}}
+| {{p|Turtonator}}
+| class="r" | 70 || 
+|-
+|style="font-family:monospace,monospace" | 0777
+| class="c" | {{ArtP|0777|Togedemaru}}
+| {{p|Togedemaru}}
+| class="r" | 180 || 
+|-
+|style="font-family:monospace,monospace" | 0778
+| class="c" | {{ArtP|0778|Mimikyu}}
+| {{p|Mimikyu}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0779
+| class="c" | {{ArtP|0779|Bruxish}}
+| {{p|Bruxish}}
+| class="r" | 80 || 
+|-
+|style="font-family:monospace,monospace" | 0780
+| class="c" | {{ArtP|0780|Drampa}}
+| {{p|Drampa}}
+| class="r" | 70 || 
+|-
+|style="font-family:monospace,monospace" | 0781
+| class="c" | {{ArtP|0781|Dhelmise}}
+| {{p|Dhelmise}}
+| class="r" | 25 || 
+|-
+|style="font-family:monospace,monospace" | 0782
+| class="c" | {{ArtP|0782|Jangmo-o}}
+| {{p|Jangmo-o}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0783
+| class="c" | {{ArtP|0783|Hakamo-o}}
+| {{p|Hakamo-o}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0784
+| class="c" | {{ArtP|0784|Kommo-o}}
+| {{p|Kommo-o}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0785
+| class="c" | {{ArtP|0785|Tapu Koko}}
+| {{p|Tapu Koko}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0786
+| class="c" | {{ArtP|0786|Tapu Lele}}
+| {{p|Tapu Lele}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0787
+| class="c" | {{ArtP|0787|Tapu Bulu}}
+| {{p|Tapu Bulu}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0788
+| class="c" | {{ArtP|0788|Tapu Fini}}
+| {{p|Tapu Fini}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0789
+| class="c" | {{ArtP|0789|Cosmog}}
+| {{p|Cosmog}}
+| class="r" | 3 || 45 prior to SV
+|-
+|style="font-family:monospace,monospace" | 0790
+| class="c" | {{ArtP|0790|Cosmoem}}
+| {{p|Cosmoem}}
+| class="r" | 3 || 45 prior to SV
+|-
+|style="font-family:monospace,monospace" | 0791
+| class="c" | {{ArtP|0791|Solgaleo}}
+| {{p|Solgaleo}}
+| class="r" | 3 || 45 prior to SV
+|-
+|style="font-family:monospace,monospace" | 0792
+| class="c" | {{ArtP|0792|Lunala}}
+| {{p|Lunala}}
+| class="r" | 3 || 45 prior to SV
+|-
+|style="font-family:monospace,monospace" | 0793
+| class="c" | {{ArtP|0793|Nihilego}}
+| {{p|Nihilego}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0794
+| class="c" | {{ArtP|0794|Buzzwole}}
+| {{p|Buzzwole}}
+| class="r" | 45 || 25 prior to USUM
+|-
+|style="font-family:monospace,monospace" | 0795
+| class="c" | {{ArtP|0795|Pheromosa}}
+| {{p|Pheromosa}}
+| class="r" | 45 || 255 prior to USUM
+|-
+|style="font-family:monospace,monospace" | 0796
+| class="c" | {{ArtP|0796|Xurkitree}}
+| {{p|Xurkitree}}
+| class="r" | 45 || 30 prior to USUM
+|-
+|style="font-family:monospace,monospace" | 0797
+| class="c" | {{ArtP|0797|Celesteela}}
+| {{p|Celesteela}}
+| class="r" | 45 || 25 prior to USUM
+|-
+|style="font-family:monospace,monospace" | 0798
+| class="c" | {{ArtP|0798|Kartana}}
+| {{p|Kartana}}
+| class="r" | 45 || 255 prior to USUM
+|-
+|style="font-family:monospace,monospace" | 0799
+| class="c" | {{ArtP|0799|Guzzlord}}
+| {{p|Guzzlord}}
+| class="r" | 45 || 15 prior to USUM
+|-
+|style="font-family:monospace,monospace" | 0800
+| class="c" | {{ArtP|0800|Necrozma}}
+| {{p|Necrozma}}
+| class="r" | 3 || 255 in USUM and SwSh
+|-
+|style="font-family:monospace,monospace" | 0801
+| class="c" | {{ArtP|0801|Magearna}}
+| {{p|Magearna}}
+| class="r" | 3 || 45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0802
+| class="c" | {{ArtP|0802|Marshadow}}
+| {{p|Marshadow}}
+| class="r" | 3 || 45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0803
+| class="c" | {{ArtP|0803|Poipole}}
+| {{p|Poipole}}
+| class="r" | 45 || 3 prior to SwSh
+|-
+|style="font-family:monospace,monospace" | 0804
+| class="c" | {{ArtP|0804|Naganadel}}
+| {{p|Naganadel}}
+| class="r" | 45 || 3 prior to SwSh
+|-
+|style="font-family:monospace,monospace" | 0805
+| class="c" | {{ArtP|0805|Stakataka}}
+| {{p|Stakataka}}
+| class="r" | 30 || 3 prior to SwSh
+|-
+|style="font-family:monospace,monospace" | 0806
+| class="c" | {{ArtP|0806|Blacephalon}}
+| {{p|Blacephalon}}
+| class="r" | 30 || 3 prior to SwSh
+|-
+|style="font-family:monospace,monospace" | 0807
+| class="c" | {{ArtP|0807|Zeraora}}
+| {{p|Zeraora}}
+| class="r" | 3 || 45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0808
+| class="c" | {{ArtP|0808|Meltan}}
+| {{p|Meltan}}
+| class="r" | 3 || 45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0809
+| class="c" | {{ArtP|0809|Melmetal}}
+| {{p|Melmetal}}
+| class="r" | 3 || 45 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0810
+| class="c" | {{ArtP|0810|Grookey}}
+| {{p|Grookey}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0811
+| class="c" | {{ArtP|0811|Thwackey}}
+| {{p|Thwackey}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0812
+| class="c" | {{ArtP|0812|Rillaboom}}
+| {{p|Rillaboom}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0813
+| class="c" | {{ArtP|0813|Scorbunny}}
+| {{p|Scorbunny}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0814
+| class="c" | {{ArtP|0814|Raboot}}
+| {{p|Raboot}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0815
+| class="c" | {{ArtP|0815|Cinderace}}
+| {{p|Cinderace}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0816
+| class="c" | {{ArtP|0816|Sobble}}
+| {{p|Sobble}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0817
+| class="c" | {{ArtP|0817|Drizzile}}
+| {{p|Drizzile}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0818
+| class="c" | {{ArtP|0818|Inteleon}}
+| {{p|Inteleon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0819
+| class="c" | {{ArtP|0819|Skwovet}}
+| {{p|Skwovet}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0820
+| class="c" | {{ArtP|0820|Greedent}}
+| {{p|Greedent}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0821
+| class="c" | {{ArtP|0821|Rookidee}}
+| {{p|Rookidee}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0822
+| class="c" | {{ArtP|0822|Corvisquire}}
+| {{p|Corvisquire}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0823
+| class="c" | {{ArtP|0823|Corviknight}}
+| {{p|Corviknight}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0824
+| class="c" | {{ArtP|0824|Blipbug}}
+| {{p|Blipbug}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0825
+| class="c" | {{ArtP|0825|Dottler}}
+| {{p|Dottler}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0826
+| class="c" | {{ArtP|0826|Orbeetle}}
+| {{p|Orbeetle}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0827
+| class="c" | {{ArtP|0827|Nickit}}
+| {{p|Nickit}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0828
+| class="c" | {{ArtP|0828|Thievul}}
+| {{p|Thievul}}
+| class="r" | 127 || 
+|-
+|style="font-family:monospace,monospace" | 0829
+| class="c" | {{ArtP|0829|Gossifleur}}
+| {{p|Gossifleur}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0830
+| class="c" | {{ArtP|0830|Eldegoss}}
+| {{p|Eldegoss}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0831
+| class="c" | {{ArtP|0831|Wooloo}}
+| {{p|Wooloo}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0832
+| class="c" | {{ArtP|0832|Dubwool}}
+| {{p|Dubwool}}
+| class="r" | 127 || 
+|-
+|style="font-family:monospace,monospace" | 0833
+| class="c" | {{ArtP|0833|Chewtle}}
+| {{p|Chewtle}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0834
+| class="c" | {{ArtP|0834|Drednaw}}
+| {{p|Drednaw}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0835
+| class="c" | {{ArtP|0835|Yamper}}
+| {{p|Yamper}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0836
+| class="c" | {{ArtP|0836|Boltund}}
+| {{p|Boltund}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0837
+| class="c" | {{ArtP|0837|Rolycoly}}
+| {{p|Rolycoly}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0838
+| class="c" | {{ArtP|0838|Carkol}}
+| {{p|Carkol}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0839
+| class="c" | {{ArtP|0839|Coalossal}}
+| {{p|Coalossal}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0840
+| class="c" | {{ArtP|0840|Applin}}
+| {{p|Applin}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0841
+| class="c" | {{ArtP|0841|Flapple}}
+| {{p|Flapple}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0842
+| class="c" | {{ArtP|0842|Appletun}}
+| {{p|Appletun}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0843
+| class="c" | {{ArtP|0843|Silicobra}}
+| {{p|Silicobra}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0844
+| class="c" | {{ArtP|0844|Sandaconda}}
+| {{p|Sandaconda}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0845
+| class="c" | {{ArtP|0845|Cramorant}}
+| {{p|Cramorant}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0846
+| class="c" | {{ArtP|0846|Arrokuda}}
+| {{p|Arrokuda}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0847
+| class="c" | {{ArtP|0847|Barraskewda}}
+| {{p|Barraskewda}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0848
+| class="c" | {{ArtP|0848|Toxel}}
+| {{p|Toxel}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0849
+| class="c" | {{ArtP|0849|Toxtricity}}
+| {{p|Toxtricity}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0850
+| class="c" | {{ArtP|0850|Sizzlipede}}
+| {{p|Sizzlipede}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0851
+| class="c" | {{ArtP|0851|Centiskorch}}
+| {{p|Centiskorch}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0852
+| class="c" | {{ArtP|0852|Clobbopus}}
+| {{p|Clobbopus}}
+| class="r" | 180 || 
+|-
+|style="font-family:monospace,monospace" | 0853
+| class="c" | {{ArtP|0853|Grapploct}}
+| {{p|Grapploct}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0854
+| class="c" | {{ArtP|0854|Sinistea}}
+| {{p|Sinistea}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0855
+| class="c" | {{ArtP|0855|Polteageist}}
+| {{p|Polteageist}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0856
+| class="c" | {{ArtP|0856|Hatenna}}
+| {{p|Hatenna}}
+| class="r" | 235 || 
+|-
+|style="font-family:monospace,monospace" | 0857
+| class="c" | {{ArtP|0857|Hattrem}}
+| {{p|Hattrem}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0858
+| class="c" | {{ArtP|0858|Hatterene}}
+| {{p|Hatterene}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0859
+| class="c" | {{ArtP|0859|Impidimp}}
+| {{p|Impidimp}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0860
+| class="c" | {{ArtP|0860|Morgrem}}
+| {{p|Morgrem}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0861
+| class="c" | {{ArtP|0861|Grimmsnarl}}
+| {{p|Grimmsnarl}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0862
+| class="c" | {{ArtP|0862|Obstagoon}}
+| {{p|Obstagoon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0863
+| class="c" | {{ArtP|0863|Perrserker}}
+| {{p|Perrserker}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0864
+| class="c" | {{ArtP|0864|Cursola}}
+| {{p|Cursola}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0865
+| class="c" | {{ArtP|0865|Sirfetch'd}}
+| {{p|Sirfetch'd}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0866
+| class="c" | {{ArtP|0866|Mr. Rime}}
+| {{p|Mr. Rime}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0867
+| class="c" | {{ArtP|0867|Runerigus}}
+| {{p|Runerigus}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0868
+| class="c" | {{ArtP|0868|Milcery}}
+| {{p|Milcery}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0869
+| class="c" | {{ArtP|0869|Alcremie}}
+| {{p|Alcremie}}
+| class="r" | 100 || 
+|-
+|style="font-family:monospace,monospace" | 0870
+| class="c" | {{ArtP|0870|Falinks}}
+| {{p|Falinks}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0871
+| class="c" | {{ArtP|0871|Pincurchin}}
+| {{p|Pincurchin}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0872
+| class="c" | {{ArtP|0872|Snom}}
+| {{p|Snom}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0873
+| class="c" | {{ArtP|0873|Frosmoth}}
+| {{p|Frosmoth}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0874
+| class="c" | {{ArtP|0874|Stonjourner}}
+| {{p|Stonjourner}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0875
+| class="c" | {{ArtP|0875|Eiscue}}
+| {{p|Eiscue}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0876
+| class="c" | {{ArtP|0876|Indeedee}}
+| {{p|Indeedee}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0877
+| class="c" | {{ArtP|0877|Morpeko}}
+| {{p|Morpeko}}
+| class="r" | 180 || 
+|-
+|style="font-family:monospace,monospace" | 0878
+| class="c" | {{ArtP|0878|Cufant}}
+| {{p|Cufant}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0879
+| class="c" | {{ArtP|0879|Copperajah}}
+| {{p|Copperajah}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0880
+| class="c" | {{ArtP|0880|Dracozolt}}
+| {{p|Dracozolt}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0881
+| class="c" | {{ArtP|0881|Arctozolt}}
+| {{p|Arctozolt}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0882
+| class="c" | {{ArtP|0882|Dracovish}}
+| {{p|Dracovish}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0883
+| class="c" | {{ArtP|0883|Arctovish}}
+| {{p|Arctovish}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0884
+| class="c" | {{ArtP|0884|Duraludon}}
+| {{p|Duraludon}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0885
+| class="c" | {{ArtP|0885|Dreepy}}
+| {{p|Dreepy}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0886
+| class="c" | {{ArtP|0886|Drakloak}}
+| {{p|Drakloak}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0887
+| class="c" | {{ArtP|0887|Dragapult}}
+| {{p|Dragapult}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0888
+| class="c" | {{ArtP|0888|Zacian}}
+| {{p|Zacian}}
+| class="r" | 10 || 
+|-
+|style="font-family:monospace,monospace" | 0889
+| class="c" | {{ArtP|0889|Zamazenta}}
+| {{p|Zamazenta}}
+| class="r" | 10 || 
+|-
+|style="font-family:monospace,monospace" | 0890
+| class="c" | {{ArtP|0890|Eternatus}}
+| {{p|Eternatus}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0891
+| class="c" | {{ArtP|0891|Kubfu}}
+| {{p|Kubfu}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0892
+| class="c" | {{ArtP|0892|Urshifu}}
+| {{p|Urshifu}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0893
+| class="c" | {{ArtP|0893|Zarude}}
+| {{p|Zarude}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0894
+| class="c" | {{ArtP|0894|Regieleki}}
+| {{p|Regieleki}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0895
+| class="c" | {{ArtP|0895|Regidrago}}
+| {{p|Regidrago}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0896
+| class="c" | {{ArtP|0896|Glastrier}}
+| {{p|Glastrier}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0897
+| class="c" | {{ArtP|0897|Spectrier}}
+| {{p|Spectrier}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0898
+| class="c" | {{ArtP|0898|Calyrex}}
+| {{p|Calyrex}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0899
+| class="c" | {{ArtP|0899|Wyrdeer}}
+| {{p|Wyrdeer}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0900
+| class="c" | {{ArtP|0900|Kleavor}}
+| {{p|Kleavor}}
+| class="r" | 15 || 20 in Legends: Z-A
+|-
+|style="font-family:monospace,monospace" | 0901
+| class="c" | {{ArtP|0901|Ursaluna}}
+| {{p|Ursaluna}}
+| class="r" | 20 || 
+|-
+|style="font-family:monospace,monospace" | 0901
+| class="c" | {{ArtP|0901|Ursaluna|form=-Bloodmoon}}
+| <small>{{form|Ursaluna|Bloodmoon}}</small><br>{{p|Ursaluna}}
+| class="r" | 5 || 
+|-
+|style="font-family:monospace,monospace" | 0902
+| class="c" | {{ArtP|0902|Basculegion}}
+| {{p|Basculegion}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0903
+| class="c" | {{ArtP|0903|Sneasler}}
+| {{p|Sneasler}}
+| class="r" | 20 || 
+|-
+|style="font-family:monospace,monospace" | 0904
+| class="c"| {{ArtP|0904|Overqwil}}
+| {{p|Overqwil}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0905
+| class="c"| {{ArtP|0905|Enamorus}}
+| {{p|Enamorus}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 0906
+| class="c"| {{ArtP|0906|Sprigatito}}
+| {{p|Sprigatito}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0907
+| class="c"| {{ArtP|0907|Floragato}}
+| {{p|Floragato}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0908
+| class="c"| {{ArtP|0908|Meowscarada}}
+| {{p|Meowscarada}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0909
+| class="c"| {{ArtP|0909|Fuecoco}}
+| {{p|Fuecoco}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0910
+| class="c"| {{ArtP|0910|Crocalor}}
+| {{p|Crocalor}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0911
+| class="c"| {{ArtP|0911|Skeledirge}}
+| {{p|Skeledirge}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0912
+| class="c"| {{ArtP|0912|Quaxly}}
+| {{p|Quaxly}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0913
+| class="c"| {{ArtP|0913|Quaxwell}}
+| {{p|Quaxwell}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0914
+| class="c"| {{ArtP|0914|Quaquaval}}
+| {{p|Quaquaval}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0915
+| class="c"| {{ArtP|0915|Lechonk}}
+| {{p|Lechonk}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0916
+| class="c"| {{ArtP|0916|Oinkologne}}
+| {{p|Oinkologne}}
+| class="r" | 100 || 
+|-
+|style="font-family:monospace,monospace" | 0917
+| class="c"| {{ArtP|0917|Tarountula}}
+| {{p|Tarountula}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0918
+| class="c"| {{ArtP|0918|Spidops}}
+| {{p|Spidops}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0919
+| class="c"| {{ArtP|0919|Nymble}}
+| {{p|Nymble}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0920
+| class="c"| {{ArtP|0920|Lokix}}
+| {{p|Lokix}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0921
+| class="c"| {{ArtP|0921|Pawmi}}
+| {{p|Pawmi}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0922
+| class="c"| {{ArtP|0922|Pawmo}}
+| {{p|Pawmo}}
+| class="r" | 80 || 
+|-
+|style="font-family:monospace,monospace" | 0923
+| class="c"| {{ArtP|0923|Pawmot}}
+| {{p|Pawmot}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0924
+| class="c"| {{ArtP|0924|Tandemaus}}
+| {{p|Tandemaus}}
+| class="r" | 150 || 
+|-
+|style="font-family:monospace,monospace" | 0925
+| class="c"| {{ArtP|0925|Maushold}}
+| {{p|Maushold}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0926
+| class="c"| {{ArtP|0926|Fidough}}
+| {{p|Fidough}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0927
+| class="c"| {{ArtP|0927|Dachsbun}}
+| {{p|Dachsbun}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0928
+| class="c"| {{ArtP|0928|Smoliv}}
+| {{p|Smoliv}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0929
+| class="c"| {{ArtP|0929|Dolliv}}
+| {{p|Dolliv}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0930
+| class="c"| {{ArtP|0930|Arboliva}}
+| {{p|Arboliva}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0931
+| class="c"| {{ArtP|0931|Squawkabilly}}
+| {{p|Squawkabilly}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0932
+| class="c"| {{ArtP|0932|Nacli}}
+| {{p|Nacli}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0933
+| class="c"| {{ArtP|0933|Naclstack}}
+| {{p|Naclstack}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0934
+| class="c"| {{ArtP|0934|Garganacl}}
+| {{p|Garganacl}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0935
+| class="c"| {{ArtP|0935|Charcadet}}
+| {{p|Charcadet}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0936
+| class="c"| {{ArtP|0936|Armarouge}}
+| {{p|Armarouge}}
+| class="r" | 25 || 
+|-
+|style="font-family:monospace,monospace" | 0937
+| class="c"| {{ArtP|0937|Ceruledge}}
+| {{p|Ceruledge}}
+| class="r" | 25 || 
+|-
+|style="font-family:monospace,monospace" | 0938
+| class="c"| {{ArtP|0938|Tadbulb}}
+| {{p|Tadbulb}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0939
+| class="c"| {{ArtP|0939|Bellibolt}}
+| {{p|Bellibolt}}
+| class="r" | 50 || 
+|-
+|style="font-family:monospace,monospace" | 0940
+| class="c"| {{ArtP|0940|Wattrel}}
+| {{p|Wattrel}}
+| class="r" | 180 || 
+|-
+|style="font-family:monospace,monospace" | 0941
+| class="c"| {{ArtP|0941|Kilowattrel}}
+| {{p|Kilowattrel}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0942
+| class="c"| {{ArtP|0942|Maschiff}}
+| {{p|Maschiff}}
+| class="r" | 150 || 
+|-
+|style="font-family:monospace,monospace" | 0943
+| class="c"| {{ArtP|0943|Mabosstiff}}
+| {{p|Mabosstiff}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0944
+| class="c"| {{ArtP|0944|Shroodle}}
+| {{p|Shroodle}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0945
+| class="c"| {{ArtP|0945|Grafaiai}}
+| {{p|Grafaiai}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0946
+| class="c"| {{ArtP|0946|Bramblin}}
+| {{p|Bramblin}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0947
+| class="c"| {{ArtP|0947|Brambleghast}}
+| {{p|Brambleghast}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0948
+| class="c"| {{ArtP|0948|Toedscool}}
+| {{p|Toedscool}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0949
+| class="c"| {{ArtP|0949|Toedscruel}}
+| {{p|Toedscruel}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0950
+| class="c"| {{ArtP|0950|Klawf}}
+| {{p|Klawf}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0951
+| class="c"| {{ArtP|0951|Capsakid}}
+| {{p|Capsakid}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0952
+| class="c"| {{ArtP|0952|Scovillain}}
+| {{p|Scovillain}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0953
+| class="c"| {{ArtP|0953|Rellor}}
+| {{p|Rellor}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0954
+| class="c"| {{ArtP|0954|Rabsca}}
+| {{p|Rabsca}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0955
+| class="c"| {{ArtP|0955|Flittle}}
+| {{p|Flittle}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0956
+| class="c"| {{ArtP|0956|Espathra}}
+| {{p|Espathra}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0957
+| class="c"| {{ArtP|0957|Tinkatink}}
+| {{p|Tinkatink}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0958
+| class="c"| {{ArtP|0958|Tinkatuff}}
+| {{p|Tinkatuff}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0959
+| class="c"| {{ArtP|0959|Tinkaton}}
+| {{p|Tinkaton}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0960
+| class="c"| {{ArtP|0960|Wiglett}}
+| {{p|Wiglett}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 0961
+| class="c"| {{ArtP|0961|Wugtrio}}
+| {{p|Wugtrio}}
+| class="r" | 50 || 
+|-
+|style="font-family:monospace,monospace" | 0962
+| class="c"| {{ArtP|0962|Bombirdier}}
+| {{p|Bombirdier}}
+| class="r" | 25 || 
+|-
+|style="font-family:monospace,monospace" | 0963
+| class="c"| {{ArtP|0963|Finizen}}
+| {{p|Finizen}}
+| class="r" | 200 || 
+|-
+|style="font-family:monospace,monospace" | 0964
+| class="c"| {{ArtP|0964|Palafin}}
+| {{p|Palafin}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0965
+| class="c"| {{ArtP|0965|Varoom}}
+| {{p|Varoom}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0966
+| class="c"| {{ArtP|0966|Revavroom}}
+| {{p|Revavroom}}
+| class="r" | 75 || 
+|-
+|style="font-family:monospace,monospace" | 0967
+| class="c"| {{ArtP|0967|Cyclizar}}
+| {{p|Cyclizar}}
+| class="r" | 190 || 
+|-
+|style="font-family:monospace,monospace" | 0968
+| class="c"| {{ArtP|0968|Orthworm}}
+| {{p|Orthworm}}
+| class="r" | 25 || 
+|-
+|style="font-family:monospace,monospace" | 0969
+| class="c"| {{ArtP|0969|Glimmet}}
+| {{p|Glimmet}}
+| class="r" | 70 || 
+|-
+|style="font-family:monospace,monospace" | 0970
+| class="c"| {{ArtP|0970|Glimmora}}
+| {{p|Glimmora}}
+| class="r" | 25 || 
+|-
+|style="font-family:monospace,monospace" | 0971
+| class="c"| {{ArtP|0971|Greavard}}
+| {{p|Greavard}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 0972
+| class="c"| {{ArtP|0972|Houndstone}}
+| {{p|Houndstone}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 0973
+| class="c"| {{ArtP|0973|Flamigo}}
+| {{p|Flamigo}}
+| class="r" | 100 || 
+|-
+|style="font-family:monospace,monospace" | 0974
+| class="c"| {{ArtP|0974|Cetoddle}}
+| {{p|Cetoddle}}
+| class="r" | 150 || 
+|-
+|style="font-family:monospace,monospace" | 0975
+| class="c"| {{ArtP|0975|Cetitan}}
+| {{p|Cetitan}}
+| class="r" | 50 || 
+|-
+|style="font-family:monospace,monospace" | 0976
+| class="c"| {{ArtP|0976|Veluza}}
+| {{p|Veluza}}
+| class="r" | 100 || 
+|-
+|style="font-family:monospace,monospace" | 0977
+| class="c"| {{ArtP|0977|Dondozo}}
+| {{p|Dondozo}}
+| class="r" | 25 || 
+|-
+|style="font-family:monospace,monospace" | 0978
+| class="c"| {{ArtP|0978|Tatsugiri}}
+| {{p|Tatsugiri}}
+| class="r" | 100 || 
+|-
+|style="font-family:monospace,monospace" | 0979
+| class="c"| {{ArtP|0979|Annihilape}}
+| {{p|Annihilape}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0980
+| class="c"| {{ArtP|0980|Clodsire}}
+| {{p|Clodsire}}
+| class="r" | 90 || 
+|-
+|style="font-family:monospace,monospace" | 0981
+| class="c"| {{ArtP|0981|Farigiraf}}
+| {{p|Farigiraf}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0982
+| class="c"| {{ArtP|0982|Dudunsparce}}
+| {{p|Dudunsparce}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0983
+| class="c"| {{ArtP|0983|Kingambit}}
+| {{p|Kingambit}}
+| class="r" | 25 || 
+|-
+|style="font-family:monospace,monospace" | 0984
+| class="c"| {{ArtP|0984|Great Tusk}}
+| {{p|Great Tusk}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0985
+| class="c"| {{ArtP|0985|Scream Tail}}
+| {{p|Scream Tail}}
+| class="r" | 50 || 
+|-
+|style="font-family:monospace,monospace" | 0986
+| class="c"| {{ArtP|0986|Brute Bonnet}}
+| {{p|Brute Bonnet}}
+| class="r" | 50 || 
+|-
+|style="font-family:monospace,monospace" | 0987
+| class="c"| {{ArtP|0987|Flutter Mane}}
+| {{p|Flutter Mane}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0988
+| class="c"| {{ArtP|0988|Slither Wing}}
+| {{p|Slither Wing}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0989
+| class="c"| {{ArtP|0989|Sandy Shocks}}
+| {{p|Sandy Shocks}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0990
+| class="c"| {{ArtP|0990|Iron Treads}}
+| {{p|Iron Treads}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0991
+| class="c"| {{ArtP|0991|Iron Bundle}}
+| {{p|Iron Bundle}}
+| class="r" | 50 || 
+|-
+|style="font-family:monospace,monospace" | 0992
+| class="c"| {{ArtP|0992|Iron Hands}}
+| {{p|Iron Hands}}
+| class="r" | 50 || 
+|-
+|style="font-family:monospace,monospace" | 0993
+| class="c"| {{ArtP|0993|Iron Jugulis}}
+| {{p|Iron Jugulis}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0994
+| class="c"| {{ArtP|0994|Iron Moth}}
+| {{p|Iron Moth}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0995
+| class="c"| {{ArtP|0995|Iron Thorns}}
+| {{p|Iron Thorns}}
+| class="r" | 30 || 
+|-
+|style="font-family:monospace,monospace" | 0996
+| class="c"| {{ArtP|0996|Frigibax}}
+| {{p|Frigibax}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 0997
+| class="c"| {{ArtP|0997|Arctibax}}
+| {{p|Arctibax}}
+| class="r" | 25 || 
+|-
+|style="font-family:monospace,monospace" | 0998
+| class="c"| {{ArtP|0998|Baxcalibur}}
+| {{p|Baxcalibur}}
+| class="r" | 10 || 
+|-
+|style="font-family:monospace,monospace" | 0999
+| class="c"| {{ArtP|0999|Gimmighoul}}
+| {{p|Gimmighoul}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 1000
+| class="c"| {{ArtP|1000|Gholdengo}}
+| {{p|Gholdengo}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 1001
+| class="c"| {{ArtP|1001|Wo-Chien}}
+| {{p|Wo-Chien}}
+| class="r" | 6 || 
+|-
+|style="font-family:monospace,monospace" | 1002
+| class="c"| {{ArtP|1002|Chien-Pao}}
+| {{p|Chien-Pao}}
+| class="r" | 6 || 
+|-
+|style="font-family:monospace,monospace" | 1003
+| class="c"| {{ArtP|1003|Ting-Lu}}
+| {{p|Ting-Lu}}
+| class="r" | 6 || 
+|-
+|style="font-family:monospace,monospace" | 1004
+| class="c"| {{ArtP|1004|Chi-Yu}}
+| {{p|Chi-Yu}}
+| class="r" | 6 || 
+|-
+|style="font-family:monospace,monospace" | 1005
+| class="c"| {{ArtP|1005|Roaring Moon}}
+| {{p|Roaring Moon}}
+| class="r" | 10 || 
+|-
+|style="font-family:monospace,monospace" | 1006
+| class="c"| {{ArtP|1006|Iron Valiant}}
+| {{p|Iron Valiant}}
+| class="r" | 10 || 
+|-
+|style="font-family:monospace,monospace" | 1007
+| class="c"| {{ArtP|1007|Koraidon}}
+| {{p|Koraidon}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 1008
+| class="c"| {{ArtP|1008|Miraidon}}
+| {{p|Miraidon}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 1009
+| class="c"| {{ArtP|1009|Walking Wake}}
+| {{p|Walking Wake}}
+| class="r" | 5 || 
+|-
+|style="font-family:monospace,monospace" | 1010
+| class="c"| {{ArtP|1010|Iron Leaves}}
+| {{p|Iron Leaves}}
+| class="r" | 5 || 
+|-
+|style="font-family:monospace,monospace" | 1011
+| class="c"| {{ArtP|1011|Dipplin}}
+| {{p|Dipplin}}
+| class="r" | 45 || 
+|-
+|style="font-family:monospace,monospace" | 1012
+| class="c"| {{ArtP|1012|Poltchageist}}
+| {{p|Poltchageist}}
+| class="r" | 120 || 
+|-
+|style="font-family:monospace,monospace" | 1013
+| class="c"| {{ArtP|1013|Sinistcha}}
+| {{p|Sinistcha}}
+| class="r" | 60 || 
+|-
+|style="font-family:monospace,monospace" | 1014
+| class="c"| {{ArtP|1014|Okidogi}}
+| {{p|Okidogi}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 1015
+| class="c"| {{ArtP|1015|Munkidori}}
+| {{p|Munkidori}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 1016
+| class="c"| {{ArtP|1016|Fezandipiti}}
+| {{p|Fezandipiti}}
+| class="r" | 3 || 
+|-
+|style="font-family:monospace,monospace" | 1017
+| class="c"| {{ArtP|1017|Ogerpon}}
+| {{p|Ogerpon}}
+| class="r" | 5 || 
+|-
+|style="font-family:monospace,monospace" | 1018
+| class="c"| {{ArtP|1018|Archaludon}}
+| {{p|Archaludon}}
+| class="r" | 10 || 
+|-
+|style="font-family:monospace,monospace" | 1019
+| class="c"| {{ArtP|1019|Hydrapple}}
+| {{p|Hydrapple}}
+| class="r" | 10 || 
+|-
+|style="font-family:monospace,monospace" | 1020
+| class="c"| {{ArtP|1020|Gouging Fire}}
+| {{p|Gouging Fire}}
+| class="r" | 10 || 
+|-
+|style="font-family:monospace,monospace" | 1021
+| class="c"| {{ArtP|1021|Raging Bolt}}
+| {{p|Raging Bolt}}
+| class="r" | 10 || 
+|-
+|style="font-family:monospace,monospace" | 1022
+| class="c"| {{ArtP|1022|Iron Boulder}}
+| {{p|Iron Boulder}}
+| class="r" | 10 || 
+|-
+|style="font-family:monospace,monospace" | 1023
+| class="c"| {{ArtP|1023|Iron Crown}}
+| {{p|Iron Crown}}
+| class="r" | 10 || 
+|-
+|style="font-family:monospace,monospace" | 1024
+| class="c"| {{ArtP|1024|Terapagos}}
+| {{p|Terapagos}}
+| class="r" | 255 || 
+|-
+|style="font-family:monospace,monospace" | 1025
+| class="c"| {{ArtP|1025|Pecharunt}}
+| {{p|Pecharunt}}
+| class="r" | 3
+|}
+|}
+
+==Catch rates in Legends: Arceus==
+In {{g|Legends: Arceus}}, accompanying with the unique catching mechanics in the game, many Pokémon were given heightened catch rates to make catching them outside of battle much easier.
+
+{| class="roundy" style="margin:auto; background:#{{legends arceus color}}; border:5px solid #{{legends arceus color}}"
+|
+{| class="sortable" border="1" width="100%" style="background:#FFF; border:1px solid #{{legends arceus color light}}; border-collapse:collapse"
+|- style="background:#{{legends arceus color light}}"
+!{{color2|000|List of Pokémon by Hisui Pokédex number|Hdex}}
+!{{color2|000|List of Pokémon by National Pokédex number|Ndex}}
+!
+!Pokémon
+!data-sort-type="number"|Catch rate
+|-
+|style="font-family:monospace,monospace" | #001
+|style="font-family:monospace,monospace" | #0722
+|class="c"|{{MSP/LA|722|Rowlet}}
+|{{p|Rowlet}}
+|class="r"|205
+|-
+|style="font-family:monospace,monospace" | #002
+|style="font-family:monospace,monospace" | #0723
+|class="c"|{{MSP/LA|723|Dartrix}}
+|{{p|Dartrix}}
+|class="r"|105
+|-
+|style="font-family:monospace,monospace" | #003
+|style="font-family:monospace,monospace" | #0724
+|class="c"|{{MSP/LA|724H|Decidueye}}
+|{{p|Decidueye}}
+|class="r"|55
+|-
+|style="font-family:monospace,monospace" | #004
+|style="font-family:monospace,monospace" | #0155
+|class="c"|{{MSP/LA|155|Cyndaquil}}
+|{{p|Cyndaquil}}
+|class="r"|205
+|-
+|style="font-family:monospace,monospace" | #005
+|style="font-family:monospace,monospace" | #0156
+|class="c"|{{MSP/LA|156|Quilava}}
+|{{p|Quilava}}
+|class="r"|105
+|-
+|style="font-family:monospace,monospace" | #006
+|style="font-family:monospace,monospace" | #0157
+|class="c"|{{MSP/LA|157H|Typhlosion}}
+|{{p|Typhlosion}}
+|class="r"|55
+|-
+|style="font-family:monospace,monospace" | #007
+|style="font-family:monospace,monospace" | #0501
+|class="c"|{{MSP/LA|501|Oshawott}}
+|{{p|Oshawott}}
+|class="r"|205
+|-
+|style="font-family:monospace,monospace" | #008
+|style="font-family:monospace,monospace" | #0502
+|class="c"|{{MSP/LA|502|Dewott}}
+|{{p|Dewott}}
+|class="r"|105
+|-
+|style="font-family:monospace,monospace" | #009
+|style="font-family:monospace,monospace" | #0503
+|class="c"|{{MSP/LA|503H|Samurott}}
+|{{p|Samurott}}
+|class="r"|55
+|-
+|style="font-family:monospace,monospace" | #010
+|style="font-family:monospace,monospace" | #0399
+|class="c"|{{MSP/LA|399|Bidoof}}
+|{{p|Bidoof}}
+|class="r"|255
+|-
+|style="font-family:monospace,monospace" | #011
+|style="font-family:monospace,monospace" | #0400
+|class="c"|{{MSP/LA|400|Bibarel}}
+|{{p|Bibarel}}
+|class="r"|155
+|-
+|style="font-family:monospace,monospace" | #012
+|style="font-family:monospace,monospace" | #0396
+|class="c"|{{MSP/LA|396|Starly}}
+|{{p|Starly}}
+|class="r"|245
+|-
+|style="font-family:monospace,monospace" | #013
+|style="font-family:monospace,monospace" | #0397
+|class="c"|{{MSP/LA|397|Staravia}}
+|{{p|Staravia}}
+|class="r"|145
+|-
+|style="font-family:monospace,monospace" | #014
+|style="font-family:monospace,monospace" | #0398
+|class="c"|{{MSP/LA|398|Staraptor}}
+|{{p|Staraptor}}
+|class="r"|95
+|-
+|style="font-family:monospace,monospace" | #015
+|style="font-family:monospace,monospace" | #0403
+|class="c"|{{MSP/LA|403|Shinx}}
+|{{p|Shinx}}
+|class="r"|225
+|-
+|style="font-family:monospace,monospace" | #016
+|style="font-family:monospace,monospace" | #0404
+|class="c"|{{MSP/LA|404|Luxio}}
+|{{p|Luxio}}
+|class="r"|125
+|-
+|style="font-family:monospace,monospace" | #017
+|style="font-family:monospace,monospace" | #0405
+|class="c"|{{MSP/LA|405|Luxray}}
+|{{p|Luxray}}
+|class="r"|75
+|-
+|style="font-family:monospace,monospace" | #018
+|style="font-family:monospace,monospace" | #0265
+|class="c"|{{MSP/LA|265|Wurmple}}
+|{{p|Wurmple}}
+|class="r"|245
+|-
+|style="font-family:monospace,monospace" | #019
+|style="font-family:monospace,monospace" | #0266
+|class="c"|{{MSP/LA|266|Silcoon}}
+|{{p|Silcoon}}
+|class="r"|195
+|-
+|style="font-family:monospace,monospace" | #020
+|style="font-family:monospace,monospace" | #0267
+|class="c"|{{MSP/LA|267|Beautifly}}
+|{{p|Beautifly}}
+|class="r"|145
+|-
+|style="font-family:monospace,monospace" | #021
+|style="font-family:monospace,monospace" | #0268
+|class="c"|{{MSP/LA|268|Cascoon}}
+|{{p|Cascoon}}
+|class="r"|195
+|-
+|style="font-family:monospace,monospace" | #022
+|style="font-family:monospace,monospace" | #0269
+|class="c"|{{MSP/LA|269|Dustox}}
+|{{p|Dustox}}
+|class="r"|145
+|-
+|style="font-family:monospace,monospace" | #023
+|style="font-family:monospace,monospace" | #0077
+|class="c"|{{MSP/LA|077|Ponyta}}
+|{{p|Ponyta}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #024
+|style="font-family:monospace,monospace" | #0078
+|class="c"|{{MSP/LA|078|Rapidash}}
+|{{p|Rapidash}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #025
+|style="font-family:monospace,monospace" | #0133
+|class="c"|{{MSP/LA|133|Eevee}}
+|{{p|Eevee}}
+|class="r"|215
+|-
+|style="font-family:monospace,monospace" | #026
+|style="font-family:monospace,monospace" | #0134
+|class="c"|{{MSP/LA|134|Vaporeon}}
+|{{p|Vaporeon}}
+|class="r"|115
+|-
+|style="font-family:monospace,monospace" | #027
+|style="font-family:monospace,monospace" | #0135
+|class="c"|{{MSP/LA|135|Jolteon}}
+|{{p|Jolteon}}
+|class="r"|115
+|-
+|style="font-family:monospace,monospace" | #028
+|style="font-family:monospace,monospace" | #0136
+|class="c"|{{MSP/LA|136|Flareon}}
+|{{p|Flareon}}
+|class="r"|115
+|-
+|style="font-family:monospace,monospace" | #029
+|style="font-family:monospace,monospace" | #0196
+|class="c"|{{MSP/LA|196|Espeon}}
+|{{p|Espeon}}
+|class="r"|115
+|-
+|style="font-family:monospace,monospace" | #030
+|style="font-family:monospace,monospace" | #0197
+|class="c"|{{MSP/LA|197|Umbreon}}
+|{{p|Umbreon}}
+|class="r"|115
+|-
+|style="font-family:monospace,monospace" | #031
+|style="font-family:monospace,monospace" | #0470
+|class="c"|{{MSP/LA|470|Leafeon}}
+|{{p|Leafeon}}
+|class="r"|115
+|-
+|style="font-family:monospace,monospace" | #032
+|style="font-family:monospace,monospace" | #0471
+|class="c"|{{MSP/LA|471|Glaceon}}
+|{{p|Glaceon}}
+|class="r"|115
+|-
+|style="font-family:monospace,monospace" | #033
+|style="font-family:monospace,monospace" | #0700
+|class="c"|{{MSP/LA|700|Sylveon}}
+|{{p|Sylveon}}
+|class="r"|115
+|-
+|style="font-family:monospace,monospace" | #034
+|style="font-family:monospace,monospace" | #0041
+|class="c"|{{MSP/LA|041|Zubat}}
+|{{p|Zubat}}
+|class="r"|245
+|-
+|style="font-family:monospace,monospace" | #035
+|style="font-family:monospace,monospace" | #0042
+|class="c"|{{MSP/LA|042|Golbat}}
+|{{p|Golbat}}
+|class="r"|145
+|-
+|style="font-family:monospace,monospace" | #036
+|style="font-family:monospace,monospace" | #0169
+|class="c"|{{MSP/LA|169|Crobat}}
+|{{p|Crobat}}
+|class="r"|95
+|-
+|style="font-family:monospace,monospace" | #037
+|style="font-family:monospace,monospace" | #0425
+|class="c"|{{MSP/LA|425|Drifloon}}
+|{{p|Drifloon}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #038
+|style="font-family:monospace,monospace" | #0426
+|class="c"|{{MSP/LA|426|Drifblim}}
+|{{p|Drifblim}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #039
+|style="font-family:monospace,monospace" | #0401
+|class="c"|{{MSP/LA|401|Kricketot}}
+|{{p|Kricketot}}
+|class="r"|255
+|-
+|style="font-family:monospace,monospace" | #040
+|style="font-family:monospace,monospace" | #0402
+|class="c"|{{MSP/LA|402|Kricketune}}
+|{{p|Kricketune}}
+|class="r"|205
+|-
+|style="font-family:monospace,monospace" | #041
+|style="font-family:monospace,monospace" | #0418
+|class="c"|{{MSP/LA|418|Buizel}}
+|{{p|Buizel}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #042
+|style="font-family:monospace,monospace" | #0419
+|class="c"|{{MSP/LA|419|Floatzel}}
+|{{p|Floatzel}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #043
+|style="font-family:monospace,monospace" | #0412
+|class="c"|{{MSP/LA|412|Burmy}}
+|{{p|Burmy}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #044
+|style="font-family:monospace,monospace" | #0413
+|class="c"|{{MSP/LA|413|Wormadam}}
+|{{p|Wormadam}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #045
+|style="font-family:monospace,monospace" | #0414
+|class="c"|{{MSP/LA|414|Mothim}}
+|{{p|Mothim}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #046
+|style="font-family:monospace,monospace" | #0074
+|class="c"|{{MSP/LA|074|Geodude}}
+|{{p|Geodude}}
+|class="r"|245
+|-
+|style="font-family:monospace,monospace" | #047
+|style="font-family:monospace,monospace" | #0075
+|class="c"|{{MSP/LA|075|Graveler}}
+|{{p|Graveler}}
+|class="r"|145
+|-
+|style="font-family:monospace,monospace" | #048
+|style="font-family:monospace,monospace" | #0076
+|class="c"|{{MSP/LA|076|Golem}}
+|{{p|Golem}}
+|class="r"|95
+|-
+|style="font-family:monospace,monospace" | #049
+|style="font-family:monospace,monospace" | #0234
+|class="c"|{{MSP/LA|234|Stantler}}
+|{{p|Stantler}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #050
+|style="font-family:monospace,monospace" | #0899
+|class="c"|{{MSP/LA|899|Wyrdeer}}
+|{{p|Wyrdeer}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #051
+|style="font-family:monospace,monospace" | #0446
+|class="c"|{{MSP/LA|446|Munchlax}}
+|{{p|Munchlax}}
+|class="r"|255
+|-
+|style="font-family:monospace,monospace" | #052
+|style="font-family:monospace,monospace" | #0143
+|class="c"|{{MSP/LA|143|Snorlax}}
+|{{p|Snorlax}}
+|class="r"|55
+|-
+|style="font-family:monospace,monospace" | #053
+|style="font-family:monospace,monospace" | #0046
+|class="c"|{{MSP/LA|046|Paras}}
+|{{p|Paras}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #054
+|style="font-family:monospace,monospace" | #0047
+|class="c"|{{MSP/LA|047|Parasect}}
+|{{p|Parasect}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #055
+|style="font-family:monospace,monospace" | #0172
+|class="c"|{{MSP/LA|172|Pichu}}
+|{{p|Pichu}}
+|class="r"|245
+|-
+|style="font-family:monospace,monospace" | #056
+|style="font-family:monospace,monospace" | #0025
+|class="c"|{{MSP/LA|025|Pikachu}}
+|{{p|Pikachu}}
+|class="r"|145
+|-
+|style="font-family:monospace,monospace" | #057
+|style="font-family:monospace,monospace" | #0026
+|class="c"|{{MSP/LA|026|Raichu}}
+|{{p|Raichu}}
+|class="r"|95
+|-
+|style="font-family:monospace,monospace" | #058
+|style="font-family:monospace,monospace" | #0063
+|class="c"|{{MSP/LA|063|Abra}}
+|{{p|Abra}}
+|class="r"|205
+|-
+|style="font-family:monospace,monospace" | #059
+|style="font-family:monospace,monospace" | #0064
+|class="c"|{{MSP/LA|064|Kadabra}}
+|{{p|Kadabra}}
+|class="r"|145
+|-
+|style="font-family:monospace,monospace" | #060
+|style="font-family:monospace,monospace" | #0065
+|class="c"|{{MSP/LA|065|Alakazam}}
+|{{p|Alakazam}}
+|class="r"|95
+|-
+|style="font-family:monospace,monospace" | #061
+|style="font-family:monospace,monospace" | #0390
+|class="c"|{{MSP/LA|390|Chimchar}}
+|{{p|Chimchar}}
+|class="r"|205
+|-
+|style="font-family:monospace,monospace" | #062
+|style="font-family:monospace,monospace" | #0391
+|class="c"|{{MSP/LA|391|Monferno}}
+|{{p|Monferno}}
+|class="r"|105
+|-
+|style="font-family:monospace,monospace" | #063
+|style="font-family:monospace,monospace" | #0392
+|class="c"|{{MSP/LA|392|Infernape}}
+|{{p|Infernape}}
+|class="r"|55
+|-
+|style="font-family:monospace,monospace" | #064
+|style="font-family:monospace,monospace" | #0427
+|class="c"|{{MSP/LA|427|Buneary}}
+|{{p|Buneary}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #065
+|style="font-family:monospace,monospace" | #0428
+|class="c"|{{MSP/LA|428|Lopunny}}
+|{{p|Lopunny}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #066
+|style="font-family:monospace,monospace" | #0420
+|class="c"|{{MSP/LA|420|Cherubi}}
+|{{p|Cherubi}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #067
+|style="font-family:monospace,monospace" | #0421
+|class="c"|{{MSP/LA|421|Cherrim}}
+|{{p|Cherrim}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #068
+|style="font-family:monospace,monospace" | #0054
+|class="c"|{{MSP/LA|054|Psyduck}}
+|{{p|Psyduck}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #069
+|style="font-family:monospace,monospace" | #0055
+|class="c"|{{MSP/LA|055|Golduck}}
+|{{p|Golduck}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #070
+|style="font-family:monospace,monospace" | #0415
+|class="c"|{{MSP/LA|415|Combee}}
+|{{p|Combee}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #071
+|style="font-family:monospace,monospace" | #0416
+|class="c"|{{MSP/LA|416|Vespiquen}}
+|{{p|Vespiquen}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #072
+|style="font-family:monospace,monospace" | #0123
+|class="c"|{{MSP/LA|123|Scyther}}
+|{{p|Scyther}}
+|class="r"|215
+|-
+|style="font-family:monospace,monospace" | #073
+|style="font-family:monospace,monospace" | #0900
+|class="c"|{{MSP/LA|900|Kleavor}}
+|{{p|Kleavor}}
+|class="r"|115
+|-
+|style="font-family:monospace,monospace" | #074
+|style="font-family:monospace,monospace" | #0212
+|class="c"|{{MSP/LA|212|Scizor}}
+|{{p|Scizor}}
+|class="r"|115
+|-
+|style="font-family:monospace,monospace" | #075
+|style="font-family:monospace,monospace" | #0214
+|class="c"|{{MSP/LA|214|Heracross}}
+|{{p|Heracross}}
+|class="r"|85
+|-
+|style="font-family:monospace,monospace" | #076
+|style="font-family:monospace,monospace" | #0439
+|class="c"|{{MSP/LA|439|Mime Jr.}}
+|{{p|Mime Jr.}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #077
+|style="font-family:monospace,monospace" | #0122
+|class="c"|{{MSP/LA|122|Mr. Mime}}
+|{{p|Mr. Mime}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #078
+|style="font-family:monospace,monospace" | #0190
+|class="c"|{{MSP/LA|190|Aipom}}
+|{{p|Aipom}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #079
+|style="font-family:monospace,monospace" | #0424
+|class="c"|{{MSP/LA|424|Ambipom}}
+|{{p|Ambipom}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #080
+|style="font-family:monospace,monospace" | #0129
+|class="c"|{{MSP/LA|129|Magikarp}}
+|{{p|Magikarp}}
+|class="r"|255
+|-
+|style="font-family:monospace,monospace" | #081
+|style="font-family:monospace,monospace" | #0130
+|class="c"|{{MSP/LA|130|Gyarados}}
+|{{p|Gyarados}}
+|class="r"|55
+|-
+|style="font-family:monospace,monospace" | #082
+|style="font-family:monospace,monospace" | #0422
+|class="c"|{{MSP/LA|422|Shellos}}
+|{{p|Shellos}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #083
+|style="font-family:monospace,monospace" | #0423
+|class="c"|{{MSP/LA|423|Gastrodon}}
+|{{p|Gastrodon}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #084
+|style="font-family:monospace,monospace" | #0211
+|class="c"|{{MSP/LA|211H|Qwilfish}}
+|{{p|Qwilfish}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #085
+|style="font-family:monospace,monospace" | #0904
+|class="c"|{{MSP/LA|904|Overqwil}}
+|{{p|Overqwil}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #086
+|style="font-family:monospace,monospace" | #0440
+|class="c"|{{MSP/LA|440|Happiny}}
+|{{p|Happiny}}
+|class="r"|205
+|-
+|style="font-family:monospace,monospace" | #087
+|style="font-family:monospace,monospace" | #0113
+|class="c"|{{MSP/LA|113|Chansey}}
+|{{p|Chansey}}
+|class="r"|105
+|-
+|style="font-family:monospace,monospace" | #088
+|style="font-family:monospace,monospace" | #0242
+|class="c"|{{MSP/LA|242|Blissey}}
+|{{p|Blissey}}
+|class="r"|55
+|-
+|style="font-family:monospace,monospace" | #089
+|style="font-family:monospace,monospace" | #0406
+|class="c"|{{MSP/LA|406|Budew}}
+|{{p|Budew}}
+|class="r"|225
+|-
+|style="font-family:monospace,monospace" | #090
+|style="font-family:monospace,monospace" | #0315
+|class="c"|{{MSP/LA|315|Roselia}}
+|{{p|Roselia}}
+|class="r"|125
+|-
+|style="font-family:monospace,monospace" | #091
+|style="font-family:monospace,monospace" | #0407
+|class="c"|{{MSP/LA|407|Roserade}}
+|{{p|Roserade}}
+|class="r"|75
+|-
+|style="font-family:monospace,monospace" | #092
+|style="font-family:monospace,monospace" | #0455
+|class="c"|{{MSP/LA|455|Carnivine}}
+|{{p|Carnivine}}
+|class="r"|185
+|-
+|style="font-family:monospace,monospace" | #093
+|style="font-family:monospace,monospace" | #0548
+|class="c"|{{MSP/LA|548|Petilil}}
+|{{p|Petilil}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #094
+|style="font-family:monospace,monospace" | #0549
+|class="c"|{{MSP/LA|549H|Lilligant}}
+|{{p|Lilligant}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #095
+|style="font-family:monospace,monospace" | #0114
+|class="c"|{{MSP/LA|114|Tangela}}
+|{{p|Tangela}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #096
+|style="font-family:monospace,monospace" | #0465
+|class="c"|{{MSP/LA|465|Tangrowth}}
+|{{p|Tangrowth}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #097
+|style="font-family:monospace,monospace" | #0339
+|class="c"|{{MSP/LA|339|Barboach}}
+|{{p|Barboach}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #098
+|style="font-family:monospace,monospace" | #0340
+|class="c"|{{MSP/LA|340|Whiscash}}
+|{{p|Whiscash}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #099
+|style="font-family:monospace,monospace" | #0453
+|class="c"|{{MSP/LA|453|Croagunk}}
+|{{p|Croagunk}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #100
+|style="font-family:monospace,monospace" | #0454
+|class="c"|{{MSP/LA|454|Toxicroak}}
+|{{p|Toxicroak}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #101
+|style="font-family:monospace,monospace" | #0280
+|class="c"|{{MSP/LA|280|Ralts}}
+|{{p|Ralts}}
+|class="r"|225
+|-
+|style="font-family:monospace,monospace" | #102
+|style="font-family:monospace,monospace" | #0281
+|class="c"|{{MSP/LA|281|Kirlia}}
+|{{p|Kirlia}}
+|class="r"|125
+|-
+|style="font-family:monospace,monospace" | #103
+|style="font-family:monospace,monospace" | #0282
+|class="c"|{{MSP/LA|282|Gardevoir}}
+|{{p|Gardevoir}}
+|class="r"|75
+|-
+|style="font-family:monospace,monospace" | #104
+|style="font-family:monospace,monospace" | #0475
+|class="c"|{{MSP/LA|475|Gallade}}
+|{{p|Gallade}}
+|class="r"|75
+|-
+|style="font-family:monospace,monospace" | #105
+|style="font-family:monospace,monospace" | #0193
+|class="c"|{{MSP/LA|193|Yanma}}
+|{{p|Yanma}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #106
+|style="font-family:monospace,monospace" | #0469
+|class="c"|{{MSP/LA|469|Yanmega}}
+|{{p|Yanmega}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #107
+|style="font-family:monospace,monospace" | #0449
+|class="c"|{{MSP/LA|449|Hippopotas}}
+|{{p|Hippopotas}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #108
+|style="font-family:monospace,monospace" | #0450
+|class="c"|{{MSP/LA|450|Hippowdon}}
+|{{p|Hippowdon}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #109
+|style="font-family:monospace,monospace" | #0417
+|class="c"|{{MSP/LA|417|Pachirisu}}
+|{{p|Pachirisu}}
+|class="r"|185
+|-
+|style="font-family:monospace,monospace" | #110
+|style="font-family:monospace,monospace" | #0434
+|class="c"|{{MSP/LA|434|Stunky}}
+|{{p|Stunky}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #111
+|style="font-family:monospace,monospace" | #0435
+|class="c"|{{MSP/LA|435|Skuntank}}
+|{{p|Skuntank}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #112
+|style="font-family:monospace,monospace" | #0216
+|class="c"|{{MSP/LA|216|Teddiursa}}
+|{{p|Teddiursa}}
+|class="r"|225
+|-
+|style="font-family:monospace,monospace" | #113
+|style="font-family:monospace,monospace" | #0217
+|class="c"|{{MSP/LA|217|Ursaring}}
+|{{p|Ursaring}}
+|class="r"|125
+|-
+|style="font-family:monospace,monospace" | #114
+|style="font-family:monospace,monospace" | #0901
+|class="c"|{{MSP/LA|901|Ursaluna}}
+|{{p|Ursaluna}}
+|class="r"|75
+|-
+|style="font-family:monospace,monospace" | #115
+|style="font-family:monospace,monospace" | #0704
+|class="c"|{{MSP/LA|704|Goomy}}
+|{{p|Goomy}}
+|class="r"|205
+|-
+|style="font-family:monospace,monospace" | #116
+|style="font-family:monospace,monospace" | #0705
+|class="c"|{{MSP/LA|705H|Sliggoo}}
+|{{p|Sliggoo}}
+|class="r"|105
+|-
+|style="font-family:monospace,monospace" | #117
+|style="font-family:monospace,monospace" | #0706
+|class="c"|{{MSP/LA|706H|Goodra}}
+|{{p|Goodra}}
+|class="r"|55
+|-
+|style="font-family:monospace,monospace" | #118
+|style="font-family:monospace,monospace" | #0095
+|class="c"|{{MSP/LA|095|Onix}}
+|{{p|Onix}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #119
+|style="font-family:monospace,monospace" | #0208
+|class="c"|{{MSP/LA|208|Steelix}}
+|{{p|Steelix}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #120
+|style="font-family:monospace,monospace" | #0111
+|class="c"|{{MSP/LA|111|Rhyhorn}}
+|{{p|Rhyhorn}}
+|class="r"|225
+|-
+|style="font-family:monospace,monospace" | #121
+|style="font-family:monospace,monospace" | #0112
+|class="c"|{{MSP/LA|112|Rhydon}}
+|{{p|Rhydon}}
+|class="r"|125
+|-
+|style="font-family:monospace,monospace" | #122
+|style="font-family:monospace,monospace" | #0464
+|class="c"|{{MSP/LA|464|Rhyperior}}
+|{{p|Rhyperior}}
+|class="r"|75
+|-
+|style="font-family:monospace,monospace" | #123
+|style="font-family:monospace,monospace" | #0438
+|class="c"|{{MSP/LA|438|Bonsly}}
+|{{p|Bonsly}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #124
+|style="font-family:monospace,monospace" | #0185
+|class="c"|{{MSP/LA|185|Sudowoodo}}
+|{{p|Sudowoodo}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #125
+|style="font-family:monospace,monospace" | #0108
+|class="c"|{{MSP/LA|108|Lickitung}}
+|{{p|Lickitung}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #126
+|style="font-family:monospace,monospace" | #0463
+|class="c"|{{MSP/LA|463|Lickilicky}}
+|{{p|Lickilicky}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #127
+|style="font-family:monospace,monospace" | #0175
+|class="c"|{{MSP/LA|175|Togepi}}
+|{{p|Togepi}}
+|class="r"|205
+|-
+|style="font-family:monospace,monospace" | #128
+|style="font-family:monospace,monospace" | #0176
+|class="c"|{{MSP/LA|176|Togetic}}
+|{{p|Togetic}}
+|class="r"|105
+|-
+|style="font-family:monospace,monospace" | #129
+|style="font-family:monospace,monospace" | #0468
+|class="c"|{{MSP/LA|468|Togekiss}}
+|{{p|Togekiss}}
+|class="r"|55
+|-
+|style="font-family:monospace,monospace" | #130
+|style="font-family:monospace,monospace" | #0387
+|class="c"|{{MSP/LA|387|Turtwig}}
+|{{p|Turtwig}}
+|class="r"|205
+|-
+|style="font-family:monospace,monospace" | #131
+|style="font-family:monospace,monospace" | #0388
+|class="c"|{{MSP/LA|388|Grotle}}
+|{{p|Grotle}}
+|class="r"|105
+|-
+|style="font-family:monospace,monospace" | #132
+|style="font-family:monospace,monospace" | #0389
+|class="c"|{{MSP/LA|389|Torterra}}
+|{{p|Torterra}}
+|class="r"|55
+|-
+|style="font-family:monospace,monospace" | #133
+|style="font-family:monospace,monospace" | #0137
+|class="c"|{{MSP/LA|137|Porygon}}
+|{{p|Porygon}}
+|class="r"|205
+|-
+|style="font-family:monospace,monospace" | #134
+|style="font-family:monospace,monospace" | #0233
+|class="c"|{{MSP/LA|233|Porygon2}}
+|{{p|Porygon2}}
+|class="r"|105
+|-
+|style="font-family:monospace,monospace" | #135
+|style="font-family:monospace,monospace" | #0474
+|class="c"|{{MSP/LA|474|Porygon-Z}}
+|{{p|Porygon-Z}}
+|class="r"|55
+|-
+|style="font-family:monospace,monospace" | #136
+|style="font-family:monospace,monospace" | #0092
+|class="c"|{{MSP/LA|092|Gastly}}
+|{{p|Gastly}}
+|class="r"|245
+|-
+|style="font-family:monospace,monospace" | #137
+|style="font-family:monospace,monospace" | #0093
+|class="c"|{{MSP/LA|093|Haunter}}
+|{{p|Haunter}}
+|class="r"|145
+|-
+|style="font-family:monospace,monospace" | #138
+|style="font-family:monospace,monospace" | #0094
+|class="c"|{{MSP/LA|094|Gengar}}
+|{{p|Gengar}}
+|class="r"|95
+|-
+|style="font-family:monospace,monospace" | #139
+|style="font-family:monospace,monospace" | #0442
+|class="c"|{{MSP/LA|442|Spiritomb}}
+|{{p|Spiritomb}}
+|class="r"|65
+|-
+|style="font-family:monospace,monospace" | #140
+|style="font-family:monospace,monospace" | #0198
+|class="c"|{{MSP/LA|198|Murkrow}}
+|{{p|Murkrow}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #141
+|style="font-family:monospace,monospace" | #0430
+|class="c"|{{MSP/LA|430|Honchkrow}}
+|{{p|Honchkrow}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #142
+|style="font-family:monospace,monospace" | #0201
+|class="c"|{{MSP/LA|201|Unown}}
+|{{p|Unown}}
+|class="r"|185
+|-
+|style="font-family:monospace,monospace" | #143
+|style="font-family:monospace,monospace" | #0363
+|class="c"|{{MSP/LA|363|Spheal}}
+|{{p|Spheal}}
+|class="r"|225
+|-
+|style="font-family:monospace,monospace" | #144
+|style="font-family:monospace,monospace" | #0364
+|class="c"|{{MSP/LA|364|Sealeo}}
+|{{p|Sealeo}}
+|class="r"|125
+|-
+|style="font-family:monospace,monospace" | #145
+|style="font-family:monospace,monospace" | #0365
+|class="c"|{{MSP/LA|365|Walrein}}
+|{{p|Walrein}}
+|class="r"|75
+|-
+|style="font-family:monospace,monospace" | #146
+|style="font-family:monospace,monospace" | #0223
+|class="c"|{{MSP/LA|223|Remoraid}}
+|{{p|Remoraid}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #147
+|style="font-family:monospace,monospace" | #0224
+|class="c"|{{MSP/LA|224|Octillery}}
+|{{p|Octillery}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #148
+|style="font-family:monospace,monospace" | #0451
+|class="c"|{{MSP/LA|451|Skorupi}}
+|{{p|Skorupi}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #149
+|style="font-family:monospace,monospace" | #0452
+|class="c"|{{MSP/LA|452|Drapion}}
+|{{p|Drapion}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #150
+|style="font-family:monospace,monospace" | #0058
+|class="c"|{{MSP/LA|058H|Growlithe}}
+|{{p|Growlithe}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #151
+|style="font-family:monospace,monospace" | #0059
+|class="c"|{{MSP/LA|059H|Arcanine}}
+|{{p|Arcanine}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #152
+|style="font-family:monospace,monospace" | #0431
+|class="c"|{{MSP/LA|431|Glameow}}
+|{{p|Glameow}}
+|class="r"|255
+|-
+|style="font-family:monospace,monospace" | #153
+|style="font-family:monospace,monospace" | #0432
+|class="c"|{{MSP/LA|432|Purugly}}
+|{{p|Purugly}}
+|class="r"|155
+|-
+|style="font-family:monospace,monospace" | #154
+|style="font-family:monospace,monospace" | #0066
+|class="c"|{{MSP/LA|066|Machop}}
+|{{p|Machop}}
+|class="r"|245
+|-
+|style="font-family:monospace,monospace" | #155
+|style="font-family:monospace,monospace" | #0067
+|class="c"|{{MSP/LA|067|Machoke}}
+|{{p|Machoke}}
+|class="r"|145
+|-
+|style="font-family:monospace,monospace" | #156
+|style="font-family:monospace,monospace" | #0068
+|class="c"|{{MSP/LA|068|Machamp}}
+|{{p|Machamp}}
+|class="r"|95
+|-
+|style="font-family:monospace,monospace" | #157
+|style="font-family:monospace,monospace" | #0441
+|class="c"|{{MSP/LA|441|Chatot}}
+|{{p|Chatot}}
+|class="r"|125
+|-
+|style="font-family:monospace,monospace" | #158
+|style="font-family:monospace,monospace" | #0355
+|class="c"|{{MSP/LA|355|Duskull}}
+|{{p|Duskull}}
+|class="r"|225
+|-
+|style="font-family:monospace,monospace" | #159
+|style="font-family:monospace,monospace" | #0356
+|class="c"|{{MSP/LA|356|Dusclops}}
+|{{p|Dusclops}}
+|class="r"|125
+|-
+|style="font-family:monospace,monospace" | #160
+|style="font-family:monospace,monospace" | #0477
+|class="c"|{{MSP/LA|477|Dusknoir}}
+|{{p|Dusknoir}}
+|class="r"|75
+|-
+|style="font-family:monospace,monospace" | #161
+|style="font-family:monospace,monospace" | #0393
+|class="c"|{{MSP/LA|393|Piplup}}
+|{{p|Piplup}}
+|class="r"|205
+|-
+|style="font-family:monospace,monospace" | #162
+|style="font-family:monospace,monospace" | #0394
+|class="c"|{{MSP/LA|394|Prinplup}}
+|{{p|Prinplup}}
+|class="r"|105
+|-
+|style="font-family:monospace,monospace" | #163
+|style="font-family:monospace,monospace" | #0395
+|class="c"|{{MSP/LA|395|Empoleon}}
+|{{p|Empoleon}}
+|class="r"|55
+|-
+|style="font-family:monospace,monospace" | #164
+|style="font-family:monospace,monospace" | #0458
+|class="c"|{{MSP/LA|458|Mantyke}}
+|{{p|Mantyke}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #165
+|style="font-family:monospace,monospace" | #0226
+|class="c"|{{MSP/LA|226|Mantine}}
+|{{p|Mantine}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #166
+|style="font-family:monospace,monospace" | #0550
+|class="c"|{{MSP/LA|550W|Basculin}}
+|{{p|Basculin}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #167
+|style="font-family:monospace,monospace" | #0902
+|class="c"|{{MSP/LA|902|Basculegion}}
+|{{p|Basculegion}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #168
+|style="font-family:monospace,monospace" | #0037
+|class="c"|{{MSP/LA|037|Vulpix}}
+|{{p|Vulpix}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #169
+|style="font-family:monospace,monospace" | #0038
+|class="c"|{{MSP/LA|038|Ninetales}}
+|{{p|Ninetales}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #170
+|style="font-family:monospace,monospace" | #0072
+|class="c"|{{MSP/LA|072|Tentacool}}
+|{{p|Tentacool}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #171
+|style="font-family:monospace,monospace" | #0073
+|class="c"|{{MSP/LA|073|Tentacruel}}
+|{{p|Tentacruel}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #172
+|style="font-family:monospace,monospace" | #0456
+|class="c"|{{MSP/LA|456|Finneon}}
+|{{p|Finneon}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #173
+|style="font-family:monospace,monospace" | #0457
+|class="c"|{{MSP/LA|457|Lumineon}}
+|{{p|Lumineon}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #174
+|style="font-family:monospace,monospace" | #0240
+|class="c"|{{MSP/LA|240|Magby}}
+|{{p|Magby}}
+|class="r"|225
+|-
+|style="font-family:monospace,monospace" | #175
+|style="font-family:monospace,monospace" | #0126
+|class="c"|{{MSP/LA|126|Magmar}}
+|{{p|Magmar}}
+|class="r"|125
+|-
+|style="font-family:monospace,monospace" | #176
+|style="font-family:monospace,monospace" | #0467
+|class="c"|{{MSP/LA|467|Magmortar}}
+|{{p|Magmortar}}
+|class="r"|75
+|-
+|style="font-family:monospace,monospace" | #177
+|style="font-family:monospace,monospace" | #0081
+|class="c"|{{MSP/LA|081|Magnemite}}
+|{{p|Magnemite}}
+|class="r"|225
+|-
+|style="font-family:monospace,monospace" | #178
+|style="font-family:monospace,monospace" | #0082
+|class="c"|{{MSP/LA|082|Magneton}}
+|{{p|Magneton}}
+|class="r"|125
+|-
+|style="font-family:monospace,monospace" | #179
+|style="font-family:monospace,monospace" | #0462
+|class="c"|{{MSP/LA|462|Magnezone}}
+|{{p|Magnezone}}
+|class="r"|75
+|-
+|style="font-family:monospace,monospace" | #180
+|style="font-family:monospace,monospace" | #0436
+|class="c"|{{MSP/LA|436|Bronzor}}
+|{{p|Bronzor}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #181
+|style="font-family:monospace,monospace" | #0437
+|class="c"|{{MSP/LA|437|Bronzong}}
+|{{p|Bronzong}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #182
+|style="font-family:monospace,monospace" | #0239
+|class="c"|{{MSP/LA|239|Elekid}}
+|{{p|Elekid}}
+|class="r"|225
+|-
+|style="font-family:monospace,monospace" | #183
+|style="font-family:monospace,monospace" | #0125
+|class="c"|{{MSP/LA|125|Electabuzz}}
+|{{p|Electabuzz}}
+|class="r"|125
+|-
+|style="font-family:monospace,monospace" | #184
+|style="font-family:monospace,monospace" | #0466
+|class="c"|{{MSP/LA|466|Electivire}}
+|{{p|Electivire}}
+|class="r"|75
+|-
+|style="font-family:monospace,monospace" | #185
+|style="font-family:monospace,monospace" | #0207
+|class="c"|{{MSP/LA|207|Gligar}}
+|{{p|Gligar}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #186
+|style="font-family:monospace,monospace" | #0472
+|class="c"|{{MSP/LA|472|Gliscor}}
+|{{p|Gliscor}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #187
+|style="font-family:monospace,monospace" | #0443
+|class="c"|{{MSP/LA|443|Gible}}
+|{{p|Gible}}
+|class="r"|205
+|-
+|style="font-family:monospace,monospace" | #188
+|style="font-family:monospace,monospace" | #0444
+|class="c"|{{MSP/LA|444|Gabite}}
+|{{p|Gabite}}
+|class="r"|105
+|-
+|style="font-family:monospace,monospace" | #189
+|style="font-family:monospace,monospace" | #0445
+|class="c"|{{MSP/LA|445|Garchomp}}
+|{{p|Garchomp}}
+|class="r"|55
+|-
+|style="font-family:monospace,monospace" | #190
+|style="font-family:monospace,monospace" | #0299
+|class="c"|{{MSP/LA|299|Nosepass}}
+|{{p|Nosepass}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #191
+|style="font-family:monospace,monospace" | #0476
+|class="c"|{{MSP/LA|476|Probopass}}
+|{{p|Probopass}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #192
+|style="font-family:monospace,monospace" | #0100
+|class="c"|{{MSP/LA|100H|Voltorb}}
+|{{p|Voltorb}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #193
+|style="font-family:monospace,monospace" | #0101
+|class="c"|{{MSP/LA|101H|Electrode}}
+|{{p|Electrode}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #194
+|style="font-family:monospace,monospace" | #0479
+|class="c"|{{MSP/LA|479|Rotom}}
+|{{p|Rotom}}
+|class="r"|85
+|-
+|style="font-family:monospace,monospace" | #195
+|style="font-family:monospace,monospace" | #0433
+|class="c"|{{MSP/LA|433|Chingling}}
+|{{p|Chingling}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #196
+|style="font-family:monospace,monospace" | #0358
+|class="c"|{{MSP/LA|358|Chimecho}}
+|{{p|Chimecho}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #197
+|style="font-family:monospace,monospace" | #0200
+|class="c"|{{MSP/LA|200|Misdreavus}}
+|{{p|Misdreavus}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #198
+|style="font-family:monospace,monospace" | #0429
+|class="c"|{{MSP/LA|429|Mismagius}}
+|{{p|Mismagius}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #199
+|style="font-family:monospace,monospace" | #0173
+|class="c"|{{MSP/LA|173|Cleffa}}
+|{{p|Cleffa}}
+|class="r"|225
+|-
+|style="font-family:monospace,monospace" | #200
+|style="font-family:monospace,monospace" | #0035
+|class="c"|{{MSP/LA|035|Clefairy}}
+|{{p|Clefairy}}
+|class="r"|125
+|-
+|style="font-family:monospace,monospace" | #201
+|style="font-family:monospace,monospace" | #0036
+|class="c"|{{MSP/LA|036|Clefable}}
+|{{p|Clefable}}
+|class="r"|75
+|-
+|style="font-family:monospace,monospace" | #202
+|style="font-family:monospace,monospace" | #0215
+|class="c"|{{MSP/LA|215|Sneasel}}
+|{{p|Sneasel}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #203
+|style="font-family:monospace,monospace" | #0903
+|class="c"|{{MSP/LA|903|Sneasler}}
+|{{p|Sneasler}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #204
+|style="font-family:monospace,monospace" | #0461
+|class="c"|{{MSP/LA|461|Weavile}}
+|{{p|Weavile}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #205
+|style="font-family:monospace,monospace" | #0361
+|class="c"|{{MSP/LA|361|Snorunt}}
+|{{p|Snorunt}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #206
+|style="font-family:monospace,monospace" | #0362
+|class="c"|{{MSP/LA|362|Glalie}}
+|{{p|Glalie}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #207
+|style="font-family:monospace,monospace" | #0478
+|class="c"|{{MSP/LA|478|Froslass}}
+|{{p|Froslass}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #208
+|style="font-family:monospace,monospace" | #0408
+|class="c"|{{MSP/LA|408|Cranidos}}
+|{{p|Cranidos}}
+|class="r"|215
+|-
+|style="font-family:monospace,monospace" | #209
+|style="font-family:monospace,monospace" | #0409
+|class="c"|{{MSP/LA|409|Rampardos}}
+|{{p|Rampardos}}
+|class="r"|115
+|-
+|style="font-family:monospace,monospace" | #210
+|style="font-family:monospace,monospace" | #0410
+|class="c"|{{MSP/LA|410|Shieldon}}
+|{{p|Shieldon}}
+|class="r"|215
+|-
+|style="font-family:monospace,monospace" | #211
+|style="font-family:monospace,monospace" | #0411
+|class="c"|{{MSP/LA|411|Bastiodon}}
+|{{p|Bastiodon}}
+|class="r"|115
+|-
+|style="font-family:monospace,monospace" | #212
+|style="font-family:monospace,monospace" | #0220
+|class="c"|{{MSP/LA|220|Swinub}}
+|{{p|Swinub}}
+|class="r"|225
+|-
+|style="font-family:monospace,monospace" | #213
+|style="font-family:monospace,monospace" | #0221
+|class="c"|{{MSP/LA|221|Piloswine}}
+|{{p|Piloswine}}
+|class="r"|125
+|-
+|style="font-family:monospace,monospace" | #214
+|style="font-family:monospace,monospace" | #0473
+|class="c"|{{MSP/LA|473|Mamoswine}}
+|{{p|Mamoswine}}
+|class="r"|75
+|-
+|style="font-family:monospace,monospace" | #215
+|style="font-family:monospace,monospace" | #0712
+|class="c"|{{MSP/LA|712|Bergmite}}
+|{{p|Bergmite}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #216
+|style="font-family:monospace,monospace" | #0713
+|class="c"|{{MSP/LA|713H|Avalugg}}
+|{{p|Avalugg}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #217
+|style="font-family:monospace,monospace" | #0459
+|class="c"|{{MSP/LA|459|Snover}}
+|{{p|Snover}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #218
+|style="font-family:monospace,monospace" | #0460
+|class="c"|{{MSP/LA|460|Abomasnow}}
+|{{p|Abomasnow}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #219
+|style="font-family:monospace,monospace" | #0570
+|class="c"|{{MSP/LA|570H|Zorua}}
+|{{p|Zorua}}
+|class="r"|215
+|-
+|style="font-family:monospace,monospace" | #220
+|style="font-family:monospace,monospace" | #0571
+|class="c"|{{MSP/LA|571H|Zoroark}}
+|{{p|Zoroark}}
+|class="r"|115
+|-
+|style="font-family:monospace,monospace" | #221
+|style="font-family:monospace,monospace" | #0627
+|class="c"|{{MSP/LA|627|Rufflet}}
+|{{p|Rufflet}}
+|class="r"|235
+|-
+|style="font-family:monospace,monospace" | #222
+|style="font-family:monospace,monospace" | #0628
+|class="c"|{{MSP/LA|628H|Braviary}}
+|{{p|Braviary}}
+|class="r"|135
+|-
+|style="font-family:monospace,monospace" | #223
+|style="font-family:monospace,monospace" | #0447
+|class="c"|{{MSP/LA|447|Riolu}}
+|{{p|Riolu}}
+|class="r"|215
+|-
+|style="font-family:monospace,monospace" | #224
+|style="font-family:monospace,monospace" | #0448
+|class="c"|{{MSP/LA|448|Lucario}}
+|{{p|Lucario}}
+|class="r"|115
+|-
+|style="font-family:monospace,monospace" | #225
+|style="font-family:monospace,monospace" | #0480
+|class="c"|{{MSP/LA|480|Uxie}}
+|{{p|Uxie}}
+|class="r"|45
+|-
+|style="font-family:monospace,monospace" | #226
+|style="font-family:monospace,monospace" | #0481
+|class="c"|{{MSP/LA|481|Mesprit}}
+|{{p|Mesprit}}
+|class="r"|45
+|-
+|style="font-family:monospace,monospace" | #227
+|style="font-family:monospace,monospace" | #0482
+|class="c"|{{MSP/LA|482|Azelf}}
+|{{p|Azelf}}
+|class="r"|45
+|-
+|style="font-family:monospace,monospace" | #228
+|style="font-family:monospace,monospace" | #0485
+|class="c"|{{MSP/LA|485|Heatran}}
+|{{p|Heatran}}
+|class="r"|45
+|-
+|style="font-family:monospace,monospace" | #229
+|style="font-family:monospace,monospace" | #0486
+|class="c"|{{MSP/LA|486|Regigigas}}
+|{{p|Regigigas}}
+|class="r"|3
+|-
+|style="font-family:monospace,monospace" | #230
+|style="font-family:monospace,monospace" | #0488
+|class="c"|{{MSP/LA|488|Cresselia}}
+|{{p|Cresselia}}
+|class="r"|45
+|-
+|style="font-family:monospace,monospace" | #231
+|style="font-family:monospace,monospace" | #641
+|class="c"|{{MSP/LA|641|Tornadus}}
+|{{p|Tornadus}}
+|class="r"|3
+|-
+|style="font-family:monospace,monospace" | #232
+|style="font-family:monospace,monospace" | #0642
+|class="c"|{{MSP/LA|642|Thundurus}}
+|{{p|Thundurus}}
+|class="r"|3
+|-
+|style="font-family:monospace,monospace" | #233
+|style="font-family:monospace,monospace" | #0645
+|class="c"|{{MSP/LA|645|Landorus}}
+|{{p|Landorus}}
+|class="r"|3
+|-
+|style="font-family:monospace,monospace" | #234
+|style="font-family:monospace,monospace" | #0905
+|class="c"|{{MSP/LA|905|Enamorus}}
+|{{p|Enamorus}}
+|class="r"|3
+|-
+|style="font-family:monospace,monospace" | #235
+|style="font-family:monospace,monospace" | #0483
+|class="c"|{{MSP/LA|483|Dialga}}
+|{{p|Dialga}}
+|class="r"|45
+|-
+|style="font-family:monospace,monospace" | #236
+|style="font-family:monospace,monospace" | #0484
+|class="c"|{{MSP/LA|484|Palkia}}
+|{{p|Palkia}}
+|class="r"|45
+|-
+|style="font-family:monospace,monospace" | #237
+|style="font-family:monospace,monospace" | #0487
+|class="c"|{{MSP/LA|487|Giratina}}
+|{{p|Giratina}}
+|class="r"|45
+|-
+|style="font-family:monospace,monospace" | #238
+|style="font-family:monospace,monospace" | #0493
+|class="c"|{{MSP/LA|493|Arceus}}
+|{{p|Arceus}}
+|class="r"|3
+|-
+|style="font-family:monospace,monospace" | #239
+|style="font-family:monospace,monospace" | #0489
+|class="c"|{{MSP/LA|489|Phione}}
+|{{p|Phione}}
+|class="r"|3
+|-
+|style="font-family:monospace,monospace" | #240
+|style="font-family:monospace,monospace" | #0490
+|class="c"|{{MSP/LA|490|Manaphy}}
+|{{p|Manaphy}}
+|class="r"|3
+|-
+|style="font-family:monospace,monospace" | #241
+|style="font-family:monospace,monospace" | #0492
+|class="c"|{{MSP/LA|492|Shaymin}}
+|{{p|Shaymin}}
+|class="r"|3
+|-
+|style="font-family:monospace,monospace" | #242
+|style="font-family:monospace,monospace" | #0491
+|class="c"|{{MSP/LA|491|Darkrai}}
+|{{p|Darkrai}}
+|class="r"|45
+|}
+|}
+
+==Trivia==
+* {{p|Marill}} and {{p|Hariyama}} are the only Pokémon to have higher catch rates than their lower evolutionary stages. Of the two, Marill received a pre-evolution in a [[Generation III|subsequent generation]].
+
+==Related articles==
+{{pokelist}}
+
+[[es:Lista de Pokémon según su ratio de captura]]
+[[fr:Liste des Pokémon par taux de capture]]
+[[it:Elenco Pokémon per tasso di cattura]]
+[[ja:被捕獲度一覧]]
+[[zh:宝可梦列表（按捕获率分类）]]

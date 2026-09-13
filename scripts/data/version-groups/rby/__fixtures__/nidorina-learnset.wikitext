@@ -1,0 +1,69 @@
+<!-- poke-guide fixture: {"title":"Nidorina (Pokémon)/Generation I learnset","resolvedTitle":"Nidorina (Pokémon)/Generation I learnset","revid":4315893,"timestamp":"2025-06-04T19:31:52Z","fetchedAt":"2026-09-13T06:30:46.043Z"} -->
+{{pokelinkback|030|Nidorina|1}}
+====By [[Level|leveling up]]====
+{{learnlist/levelh/1|Nidorina|Poison|Poison|RGB|Y}}
+{{learnlist/levelI|1|1|Growl|Normal|—|100|40}}
+{{learnlist/levelI|1|1|Tackle|Normal|35|95|35}}
+{{learnlist/levelI|1|1|Scratch|Normal|40|100|35}}
+{{learnlist/levelI|8|8|Scratch|Normal|40|100|35}}
+{{learnlist/levelI|50|12|Double Kick|Fighting|30|100|30}}
+{{learnlist/levelI|14|19|Poison Sting|Poison|15|100|35|'''}}
+{{learnlist/levelI|23|27|Tail Whip|Normal|—|100|30}}
+{{learnlist/levelI|32|36|Bite|Normal|60|100|25}}
+{{learnlist/levelI|41|46|Fury Swipes|Normal|18|80|15}}
+{{learnlist/levelf|Nidorina|Poison|Poison|1|1}}
+
+====By [[TM]]/[[HM]]====
+{{learnlist/tmh|Nidorina|Poison|Poison|1|1}}
+{{learnlist/tm1|TM06|Toxic|Poison|—|85|10}}
+{{learnlist/tm1|TM07|Horn Drill|Normal|—|30|5}}
+{{learnlist/tm1|TM08|Body Slam|Normal|85|100|15}}
+{{learnlist/tm1|TM09|Take Down|Normal|90|85|20}}
+{{learnlist/tm1|TM10|Double-Edge|Normal|100|100|15}}
+{{learnlist/tm1|TM11|BubbleBeam|Water|65|100|20}}
+{{learnlist/tm1|TM12|Water Gun|Water|40|100|25}}
+{{learnlist/tm1|TM13|Ice Beam|Ice|95|100|10}}
+{{learnlist/tm1|TM14|Blizzard|Ice|120|90|5}}
+{{learnlist/tm1|TM20|Rage|Normal|20|100|20}}
+{{learnlist/tm1|TM24|Thunderbolt|Electric|95|100|15}}
+{{learnlist/tm1|TM25|Thunder|Electric|120|70|10}}
+{{learnlist/tm1|TM31|Mimic|Normal|—|100|10}}
+{{learnlist/tm1|TM32|Double Team|Normal|—|—|15}}
+{{learnlist/tm1|TM33|Reflect|Psychic|—|—|20}}
+{{learnlist/tm1|TM34|Bide|Normal|—|—|10}}
+{{learnlist/tm1|TM40|Skull Bash|Normal|100|100|15}}
+{{learnlist/tm1|TM44|Rest|Psychic|—|—|10}}
+{{learnlist/tm1|TM50|Substitute|Normal|—|—|10}}
+{{learnlist/tmf|Nidorina|Poison|Poison|1|1}}
+
+====By [[Move Reminder]]====
+{{learnlist/remh|Nidorina|Poison|Poison|1|0|RGB|Y}}
+{{learnlist/levelI|1|1|Growl|Normal|—|100|40}}
+{{learnlist/levelI|1|1|Tackle|Normal|35|95|35}}
+{{learnlist/levelI|8|8|Scratch|Normal|40|100|35}}
+{{learnlist/levelI|50|12|Double Kick|Fighting|30|100|30}}
+{{learnlist/levelI|14|19|Poison Sting|Poison|15|100|35|'''}}
+{{learnlist/levelI|23|27|Tail Whip|Normal|—|100|30}}
+{{learnlist/levelI|32|36|Bite|Normal|60|100|25}}
+{{learnlist/levelI|41|46|Fury Swipes|Normal|18|80|15}}
+{{learnlist/levelf|Nidorina|Poison|Poison|1|1}}
+
+====By a prior [[Evolution]]====
+{{Learnlist/prevoh|Nidorina|Poison|Poison|1|1}}
+{{Learnlist/prevo1null}}
+{{Learnlist/prevof|Nidorina|Poison|Poison|1|1}}
+
+====By [[transfer]] from another generation====
+{{learnlist/prevgenh/1|Nidorina|Poison|Poison|1}}
+{{learnlist/prevgen1|Nidorina|1|Counter|Fighting|—|100|20|II=yes<!--breed-->}}
+{{learnlist/prevgen1|Nidorina|1|Defense Curl|Normal|—|—|40|II=yes<!--TM-->}}
+{{learnlist/prevgen1|Nidorina|1|Disable|Normal|—|55|20|II=yes<!--breed-->}}
+{{learnlist/prevgen1|Nidorina|1|Focus Energy|Normal|—|—|30|II=yes<!--breed-->}}
+{{learnlist/prevgen1|Nidorina|1|Headbutt|Normal|70|100|15|II=yes<!--TM-->}}
+{{learnlist/prevgen1|Nidorina|1|Lovely Kiss|Normal|—|75|10|II=event<!--prevo-->}}
+{{learnlist/prevgen1|Nidorina|1|Strength|Normal|80|100|15|II=yes<!--TM-->}}
+{{learnlist/prevgen1|Nidorina|1|Supersonic|Normal|—|55|20|II=yes<!--breed-->}}
+{{learnlist/prevgenf/1|Nidorina|Poison|Poison|1}}
+
+[[it:Nidorina/Mosse apprese in prima generazione]]
+[[zh:尼多娜/第一世代招式表]]

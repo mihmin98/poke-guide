@@ -1,0 +1,354 @@
+<!-- poke-guide fixture: {"title":"Kanto Route 4","resolvedTitle":"Kanto Route 4","revid":4618036,"timestamp":"2026-08-24T19:52:13Z","fetchedAt":"2026-09-12T21:57:28.705Z"} -->
+{{Route infobox
+|number=4
+|image=Kanto Route 4 PE.png
+|imageI=Kanto Route 4 RBY.png
+|imageII=Kanto Route 4 GSC.png
+|imageIII=Kanto Route 4 FRLG.png
+|type=mountain
+|north=Mt. Moon
+|east=Cerulean City
+|region=Kanto
+|south=Kanto Route 3
+|southalt=Route 3{{tt|*|Generations I, III, and VII}}
+|regionwest=Kanto
+|surf={{sup/1}}{{sup/3|FRLG}}
+|mapdesc=A one-way road down a hill that has a gentle slope and is fun to traverse.{{sup/4|HGSS}}<br>A one-way road down a hill from Mt. Moon that leads to Cerulean City.{{sup/7|PE}}
+}}
+'''Route 4''' (Japanese: '''４{{tt|番道路|ばんどうろ}}''' ''Route 4'') is a [[route]] located in northern [[Kanto]]. It connects {{rt|3|Kanto}} and [[Mt. Moon]] in the west to [[Cerulean City]] in the east.
+
+==Route description==
+===Western segment===
+[[File:Magikarp salesman FRLG.png|thumb|200px|left|The [[Magikarp salesman]] in the [[Pokémon Center]]]]
+In Generations {{gen|I}}, {{gen|III}}, and {{gen|VII}}, Route 4 is split into two sections by [[Mt. Moon]]. The western portion holds the first terminus to Mt. Moon as well as a [[Pokémon Center]]. Inside this Pokémon Center, there is a [[Magikarp salesman|shady man]] who sells the {{player}} a {{p|Magikarp}} for {{pdollar}}500. He is only present in Generations I, III, and VII.
+
+The western portion of Route 4 begins by traveling north from {{rt|3|Kanto}} towards the mountain. There are several small ledges lining both sides of the route; however, there is enough clearing in the center to pass through. There are also several rocks along the sides that apparently can be mistaken for {{p|Geodude}}, as a little girl explains when she trips on one. Straight ahead is a [[Pokémon Center]], one of only two Centers that can be found outside a populated area, the other being on {{rt|10|Kanto}}. The western terminus to [[Mt. Moon]] can also be found to the east of the Pokémon Center, which has been built into the mountainside.
+
+In the Pokémon Center, Trainers can heal their Pokémon after a hard journey through Route 3; however, a number of other things can be done in the Pokémon Center. In Generations I, III, and VII, a shady man, which happens to be the [[Magikarp salesman]], can be found in the corner of the Center selling Trainers a {{p|Magikarp}} for {{PDollar}}500 (but does not offer a refund). While this may seem as something of a ripoff, some players consider it very worthwhile to raise a Magikarp from such an early point in the game, allowing the player to train and evolve it into a {{p|Gyarados}} much earlier than if they had waited until they are given an [[Old Rod]]{{sup/1}}{{sup/3|FRLG}} or the {{OBP|Partner Pokémon|Let's Go, Pikachu! and Let's Go, Eevee!}} is taught the [[Secret Technique]] Sea Skim.{{sup/7|PE}} There is also a man reading a newspaper who says that [[Team Rocket]] are attacking {{ci|Cerulean}} citizens.
+
+===Eastern segment===
+[[File:Route4tutor.png|thumb|200px|The two [[Move Tutor]]s]]
+From [[Mt. Moon]], Route 4 travels to the east, swerving to the north and the south to avoid ledges along the route. The path turns north, then east near a large clump of trees surrounding a grassy area. The route is a very strange route as the [[ledge]]s form a contour down the mountainside, leading Trainers due east and then south to the end of the path and a ledge that will force Trainers to go down it into a large clump of trees surrounding a grassy area. After going down this ledge, there is no return and Trainers must go east to reach [[Cerulean City]].
+
+Route 4 can, in fact, be reached from Cerulean City, by using {{m|Surf}}{{sup/1}}{{sup/3|FRLG}} or Sea Skim{{sup/7|PE}}. Trainers can Surf or Sea Skim along to western part of Route 24, south to [[Cerulean Cave]]. Trainers can then travel west, past a {{tc|Lass}} on the highest hill,{{sup/1}}{{sup/3|FRLG}} and then jump down the remaining ledges to access this section of the route.
+
+Due to a ledge that separates Mt. Moon from [[Cerulean City]], Trainers in Generations I, III, and VII cannot return to the previous towns until they travel through [[Diglett's Cave]] and use {{m|Cut}}{{sup/1}}{{sup/3|FRLG}} or [[Secret Technique|Chop Down]]{{sup/7|PE}} on {{rt|2|Kanto}}, use {{m|Fly}}{{sup/1}}{{sup/3|FRLG}} or [[Secret Technique|Sky Dash]]{{sup/7|PE}} to return to the cities west of Mt. Moon, or use {{m|Surf}}{{sup/1}}{{sup/3|FRLG}} or Sea Skim{{sup/7|PE}} down from {{rt|24|Kanto}} or all the way around through [[Cinnabar Island]].
+
+In Generations {{gen|II}} and {{gen|IV}}, Trainers from [[Johto]] arrive in eastern [[Kanto]] by sea and can not access western Kanto from any route until after the [[Machine Part]] is returned to the [[Kanto Power Plant]]. Even after this, the path to the highest hill via Route 24 is inaccessible.
+
+The majority of the [[route]] is fairly straight-forward as there is only one true way to proceed on the path and there are no {{pkmn|Trainer}}s to battle (with the exception of the {{tc|Lass}} on the highest hill on the route in Generations I and III; however, she is reached only by way of the waterway that begins on {{rt|24|Kanto}}). 
+
+Depending on the [[Generation]], there are [[item]]s, [[Move Tutor]]s, or both along this path. In Generation III, two Move Tutors were added to the route. Located near the Mt. Moon entrance, these tutors will teach a {{OBP|Pokémon|species}} the [[move]]s {{m|Mega Punch}} and {{m|Mega Kick}}, but only once. Both tutors are jealous of the other's skills and will try to get Trainers to come to them instead of the other. In Generation VII, a {{tc|Coach Trainer}} located near the Mt. Moon entrance will give the {{player}} a {{TM|57|Pay Day}} for defeating him.
+
+==Items==
+{{Itlisth|mountain}}
+{{Itemlist|TM Normal VI|Reward for defeating {{tc|Coach Trainer}} Oberon|LP=yes|LE=yes|display={{TM|57|Pay Day}}}}
+{{Itemlist|Persim Berry|Between the three rocks west of the [[Pokémon Center]], on a marked square ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Escape Rope|Between the three rocks west of the Pokémon Center|LP=yes|LE=yes}}
+{{Itemlist|Paralyze Heal|Southwest of the eastern [[Mt. Moon]] entrance|LP=yes|LE=yes}}
+{{Itemlist|Great Ball|In the center of the plateau east of the eastern Mt. Moon entrance ''(hidden)''|R=yes|B=yes|Y=yes}}
+{{Itemlist|Great Ball|In the corner west of the plateau east of the eastern Mt. Moon entrance ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Poké Ball|In the center of the plateau east of the eastern Mt. Moon entrance|LP=yes|LE=yes|display={{i|Poké Ball}} ×5}}
+{{Itemlist|PP Up|Eastern side of the route, in a bush to the east of the central plateau ''(hidden)'' (daily)|LP=yes|LE=yes}}
+{{Itemlist|Razz Berry III|South of the easternmost [[ledge]] south of the road near the center of the route, on a marked square ''(hidden)''|FR=yes|LG=yes|display=[[Razz Berry]]}}
+{{Itemlist|TM Normal|On the second-highest plateau in the north area of the route, east of the eastern Mt. Moon entrance|R=yes|B=yes|Y=yes|display={{TM|04|Whirlwind}}}}
+{{Itemlist|TM Normal|On the second-highest plateau in the north area of the route, east of the eastern Mt. Moon entrance|FR=yes|LG=yes|display={{TM|05|Roar}}}}
+{{Itemlist|Repel|At the end of the southernmost part of the route|LP=yes|LE=yes}}
+{{Itemlist|Great Ball|Next to a bush near the entrance to [[Cerulean City]]|LP=yes|LE=yes|display=[[Great Ball]] ×3}}
+{{Itemlist|PP Max|On a plateau west of the [[Cerulean Cave]] entrance (requires [[Secret Technique|Sea Skim]])|LP=yes|LE=yes}}
+{{Itemlist|HP Up|On the highest plateau|G=yes|S=yes|C=yes}}
+{{Itemlist|Big Mushroom|Southeast of {{tc|Bird Keeper}} Hank ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|HP Up|On the ledge on the right side of the route|HG=yes|SS=yes}}
+{{Itemlist|Ultra Ball|Northeast of {{tc|Picnicker}} Hope ''(hidden)''|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itlistfoot|mountain}}
+
+===Berry plant===
+{{Itlisth}}
+{{Itemlist|Razz Berry|Sometimes found by the {{player}}'s [[walking Pokémon]] from the bush in between the plateaus|LP=yes|LE=yes}}
+{{Itemlist|Nanab Berry|Sometimes found by the {{player}}'s [[walking Pokémon]] from the bush in between the plateaus|LP=yes|LE=yes}}
+{{Itlistfoot}}
+
+==Pokémon==
+===Generation I===
+Although the channel of water at the eastern edge of the route has no adjacent land tiles from which the player can legitimately [[Fishing|fish]], there are still fishing encounters programmed for it.
+{{Catch/header|mountain|no}}
+{{Catch/entry1|019|Rattata|yes|yes|no|Grass|8, 10, 12|40%|type1=Normal}}
+{{Catch/entry1|019|Rattata|no|no|yes|Grass|10, 12|15%|type1=Normal}}
+{{Catch/entry1|021|Spearow|yes|yes|no|Grass|8, 10, 12|35%|type1=Normal|type2=Flying}}
+{{Catch/entry1|021|Spearow|no|no|yes|Grass|8-12|55%|type1=Normal|type2=Flying}}
+{{Catch/entry1|023|Ekans|yes|no|no|Grass|6, 8, 10, 12|25%|type1=Poison}}
+{{Catch/entry1|027|Sandshrew|no|yes|no|Grass|6, 8, 10, 12|25%|type1=Ground}}
+{{Catch/entry1|027|Sandshrew|no|no|yes|Grass|8, 10|15%|type1=Ground}}
+{{Catch/entry1|056|Mankey|no|no|yes|Grass|9|15%|type1=Fighting}}
+{{Catch/div|water|Fishing}}
+{{catch/entry1|129|Magikarp|yes|yes|yes|Fish Old|5|100%|type1=Water}}
+{{Catch/entry1|060|Poliwag|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{Catch/entry1|118|Goldeen|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{Catch/entry1|054|Psyduck|yes|yes|no|Fish Super|15|33%|type1=Water}}
+{{Catch/entry1|098|Krabby|yes|yes|no|Fish Super|15|33%|type1=Water}}
+{{Catch/entry1|118|Goldeen|yes|yes|no|Fish Super|15|33%|type1=Water}}
+{{Catch/entry1|118|Goldeen|no|no|yes|Fish Super|20, 25, 30|90%|type1=Water}}
+{{Catch/entry1|119|Seaking|no|no|yes|Fish Super|30|10%|type1=Water}}
+{{Catch/div|mountain|Gift Pokémon}}
+{{Catch/entry1|129|Magikarp|yes|yes|yes|Gift|5|Purchase for {{PDollar}}500|type1=Water}}
+{{Catch/footer|mountain}}
+
+===Generation II===
+{{Catch/header|mountain|yes}}
+{{Catch/entry2|019|Rattata|yes|no|no|Grass|5,10|35%|35%|0%|type1=Normal|11=k}}
+{{Catch/entry2|019|Rattata|yes|no|no|Grass|8,10|0%|0%|30%|type1=Normal|11=k}}
+{{Catch/entry2|019|Rattata|no|yes|yes|Grass|5|30%|30%|0%|type1=Normal|11=k}}
+{{Catch/entry2|019|Rattata|no|yes|no|Grass|5,8|0%|0%|35%|type1=Normal|11=k}}
+{{Catch/entry2|019|Rattata|no|no|yes|Grass|5,10|0%|0%|65%|type1=Normal|11=k}}
+{{Catch/entry2|020|Raticate|no|no|yes|Grass|10|10%|10%|20%|type1=Normal|11=k}}
+{{Catch/entry2|021|Spearow|yes|no|no|Grass|5,8|55%|55%|0%|type1=Normal|type2=Flying|11=k}}
+{{Catch/entry2|021|Spearow|yes|no|no|Grass|5|0%|0%|30%|type1=Normal|type2=Flying|11=k}}
+{{Catch/entry2|021|Spearow|no|yes|no|Grass|5,8|35%|35%|0%|type1=Normal|type2=Flying|11=k}}
+{{Catch/entry2|021|Spearow|no|no|yes|Grass|5|30%|30%|0%|type1=Normal|type2=Flying|11=k}}
+{{Catch/entry2|023|Ekans|no|yes|no|Grass|8|all=20%|type1=Poison|11=k}}
+{{Catch/entry2|023|Ekans|no|no|yes|Grass|8|20%|20%|0%|type1=Poison|11=k}}
+{{Catch/entry2|024|Arbok|no|yes|no|Grass|10|all=5%|type1=Poison|11=k}}
+{{Catch/entry2|024|Arbok|no|no|yes|Grass|10|5%|5%|0%|type1=Poison|11=k}}
+{{Catch/entry2|027|Sandshrew|no|no|yes|Grass|10|5%|5%|0%|type1=Ground|11=k}}
+{{Catch/entry2|035|Clefairy|no|no|yes|Grass|6|0%|0%|5%|type1=Normal|11=k}}
+{{Catch/entry2|039|Jigglypuff|yes|yes|no|Grass|6|all=10%|type1=Normal|11=k}}
+{{Catch/entry2|041|Zubat|yes|yes|no|Grass|5|0%|0%|30%|type1=Poison|type2=Flying|11=k}}
+{{Catch/entry2|041|Zubat|no|no|yes|Grass|6|0%|0%|10%|type1=Poison|type2=Flying|11=k}}
+{{Catch/div|water|Surfing}}
+{{Catch/entry2|118|Goldeen|yes|yes|yes|Surf|5-14|all=90%|type1=Water}}
+{{Catch/entry2|119|Seaking|yes|yes|yes|Surf|10-14|all=10%|type1=Water}}
+{{Catch/footer|mountain}}
+
+===Generation III===
+{{Catch/header|mountain|no}}
+{{Catch/entryfl|019|Rattata|yes|yes|Grass|8, 10, 12|35%|type1=Normal}}
+{{Catch/entryfl|021|Spearow|yes|yes|Grass|8, 10, 12|35%|type1=Normal|type2=Flying}}
+{{Catch/entryfl|023|Ekans|yes|no|Grass|6, 8, 10, 12|25%|type1=Poison}}
+{{Catch/entryfl|027|Sandshrew|no|yes|Grass|6, 8, 10, 12|25%|type1=Ground}}
+{{Catch/entryfl|056|Mankey|yes|yes|Grass|10, 12|5%|type1=Fighting}}
+{{Catch/div|water|Surfing}}
+{{Catch/entryfl|072|Tentacool|yes|yes|Surf|5-40|100%|type1=Water|type2=Poison}}
+{{Catch/div|water|Fishing}}
+{{Catch/entryfl|129|Magikarp|yes|yes|Fish Old|5|100%|type1=Water}}
+{{Catch/entryfl|098|Krabby|yes|no|Fish Good|5-15|20%|type1=Water}}
+{{Catch/entryfl|098|Krabby|no|yes|Fish Good|5-15|60%|type1=Water}}
+{{Catch/entryfl|116|Horsea|yes|no|Fish Good|5-15|60%|type1=Water}}
+{{Catch/entryfl|116|Horsea|no|yes|Fish Good|5-15|20%|type1=Water}}
+{{Catch/entryfl|129|Magikarp|yes|yes|Fish Good|5-15|20%|type1=Water}}
+{{Catch/entryfl|054|Psyduck|yes|no|Fish Super|25-35|1%|type1=Water}}
+{{Catch/entryfl|079|Slowpoke|no|yes|Fish Super|25-35|1%|type1=Water|type2=Psychic}}
+{{Catch/entryfl|098|Krabby|no|yes|Fish Super|15-35|84%|type1=Water}}
+{{Catch/entryfl|116|Horsea|yes|no|Fish Super|15-35|84%|type1=Water}}
+{{Catch/entryfl|130|Gyarados|yes|yes|Fish Super|15-25|15%|type1=Water|type2=Flying}}
+{{Catch/div|mountain|Gift Pokémon}}
+{{Catch/entryfl|129|Magikarp|yes|yes|Gift|5|Purchase for {{PDollar}}500|type1=Water}}
+{{Catch/footer|mountain|2}}
+
+===Generation IV===
+{{Catch/header|mountain|yes}}
+{{Catch/entryhs|019|Rattata|yes|no|Grass|5, 10|35%|35%|0%|type1=Normal}}
+{{Catch/entryhs|019|Rattata|yes|no|Grass|8, 10|0%|0%|30%|type1=Normal}}
+{{Catch/entryhs|019|Rattata|no|yes|Grass|5|30%|30%|0%|type1=Normal}}
+{{Catch/entryhs|019|Rattata|no|yes|Grass|5, 8|0%|0%|35%|type1=Normal}}
+{{Catch/entryhs|021|Spearow|yes|no|Grass|5, 8|55%|55%|0%|type1=Normal|type2=Flying}}
+{{Catch/entryhs|021|Spearow|yes|no|Grass|5|0%|0%|30%|type1=Normal|type2=Flying}}
+{{Catch/entryhs|021|Spearow|no|yes|Grass|5, 8|35%|35%|0%|type1=Normal|type2=Flying}}
+{{Catch/entryhs|023|Ekans|no|yes|Grass|8|all=20%|type1=Poison}}
+{{Catch/entryhs|024|Arbok|no|yes|Grass|10|all=5%|type1=Poison}}
+{{Catch/entryhs|039|Jigglypuff|yes|yes|Grass|6|all=10%|type1=Normal}}
+{{Catch/entryhs|041|Zubat|yes|yes|Grass|5|0%|0%|30%|type1=Poison|type2=Flying}}
+{{Catch/div|water|Surfing}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Surf|5-10|all=90%|type1=Water}}
+{{Catch/entryhs|119|Seaking|yes|yes|Surf|10|all=10%|type1=Water}}
+{{Catch/div|water|Fishing}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Fish Good|20|all=60%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Fish Super|40|all=70%|type1=Water}}
+{{Catch/entryhs|119|Seaking|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{catch/div|mountain|Headbutt<br><small>Group A</small>}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|6-7|all=50%|type1=Normal|type2=Flying|10=k}}
+{{Catch/entryhs|204|Pineco|yes|yes|Headbutt|6-7|all=30%|type1=Bug|10=k}}
+{{Catch/entryhs|265|Wurmple|yes|yes|Headbutt|6-7|all=20%|type1=Bug|10=k}}
+{{catch/div|mountain|Headbutt<br><small>Group B</small>}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|9-10|all=80%|type1=Normal|type2=Flying|10=k}}
+{{Catch/entryhs|265|Wurmple|yes|yes|Headbutt|9-10|all=20%|type1=Bug|10=k}}
+{{Catch/div|mountain|Special}}
+{{Catch/entryhs|264|Linoone|yes|yes|Hoenn|8|all=20%|type1=Normal}}
+{{Catch/entryhs|293|Whismur|yes|yes|Hoenn|5|all=20%|type1=Normal}}
+{{Catch/entryhs|399|Bidoof|yes|yes|Sinnoh|8|all=20%|type1=Normal}}
+{{Catch/entryhs|418|Buizel|yes|yes|Sinnoh|5|all=20%|type1=Water}}
+{{Catch/footer|mountain}}
+
+===Generation VII===
+{{Catch/header|mountain|no}}
+{{Catch/entrype|019|Rattata|yes|no|Grass|7-12|25%|type1=Normal}}
+{{Catch/entrype|019|Rattata|no|yes|Grass|7-12|35%|type1=Normal}}
+{{Catch/entrype|021|Spearow|yes|no|Grass|7-12|30%|type1=Normal|type2=Flying}}
+{{Catch/entrype|021|Spearow|no|yes|Grass|7-12|40%|type1=Normal|type2=Flying}}
+{{Catch/entrype|023|Ekans|no|yes|Grass|7-12|20%|type1=Poison}}
+{{Catch/entrype|027|Sandshrew|yes|no|Grass|7-12|20%|type1=Ground}}
+{{Catch/entrype|054|Psyduck|yes|yes|Grass|7-12|5%|type1=Water}}
+{{Catch/entrype|056|Mankey|yes|no|Grass|7-12|20%|type1=Fighting}}
+{{Catch/div|mountain|Rare Spawns}}
+{{Catch/entrype|004|Charmander|yes|yes|Grass|7-12|-|type1=Fire}}
+{{Catch/div|water|Sea Skim}}
+{{Catch/entrype|072|Tentacool|yes|yes|Surf|7-12|45%|type1=Water|type2=Poison}}
+{{Catch/entrype|073|Tentacruel|yes|yes|Surf|7-12|10%|type1=Water|type2=Poison}}
+{{Catch/entrype|129|Magikarp|yes|yes|Surf|7-12|45%|type1=Water}}
+{{Catch/div|flying|While riding a Flying Pokémon<br><small>After becoming {{color2|000|Pokémon Champion|Champion}}}}
+{{Catch/entrype|021|Spearow|yes|yes|Sky|3-56|60%|type1=Normal|type2=Flying}}
+{{Catch/entrype|022|Fearow|yes|yes|Sky|3-56|40%|type1=Normal|type2=Flying}}
+{{Catch/div|flying|Rare Spawns}}
+{{Catch/entrype|006|Charizard|yes|yes|Sky|3-56|-|type1=Fire|type2=Flying}}
+{{Catch/entrype|144|Articuno|yes|yes|Sky|3-56|-|type1=Ice|type2=Flying}}
+{{Catch/entrype|145|Zapdos|yes|yes|Sky|3-56|-|type1=Electric|type2=Flying}}
+{{Catch/entrype|146|Moltres|yes|yes|Sky|3-56|-|type1=Fire|type2=Flying}}
+{{Catch/entrype|149|Dragonite|yes|yes|Sky|3-56|-|type1=Dragon|type2=Flying}}
+{{Catch/div|mountain|Gift Pokémon}}
+{{Catch/entrype|129|Magikarp|yes|yes|Gift|5|Purchase for {{PDollar}}500|type1=Water}}
+{{Catch/footer|mountain|2}}
+
+==Trainers==
+===Generation I===
+{{trainerheader|mountain}}
+{{trainerdiv|mountain|Requires Surf}}
+{{Trainerentry|Spr RG Lass.png|game=1|Lass||465|3|046|Paras||31|None|046|Paras||31|None|047|Parasect||31|None||}}
+{{Trainerfooter|mountain|1}}
+
+===Generation II===
+{{trainerheader|mountain}}
+{{Trainerentry|Spr GS Picnicker.png|Picnicker|Hope|680|1|180|Flaaffy|F|34|None|36=チナミ|37=Chinami}}
+{{trainerdiv|mountain}}
+{{Trainerentry|Spr GS Bird Keeper.png|Bird Keeper|Hank|816|2|016|Pidgey|M|12|None|018|Pidgeot|M|34|None|36=ソラオ|37=Sorao}}
+{{trainerdiv|mountain}}
+{{Trainerentry|Spr GS Picnicker.png|Picnicker|Sharon|660|2|162|Furret|F|31|None|078|Rapidash|F|33|None|36=ミナコ|37=Minako}}
+{{Trainerfooter|mountain|II}}
+
+===Generation III===
+{{trainerheader|mountain}}
+{{trainerdiv|mountain|Requires Surf}}
+{{Trainerentry|Spr FRLG Lass.png|Lass|Crissy|496|3|046|Paras|♀|31|None|046|Paras|♀|31|None|047|Parasect|♀|31|None|36=メイ|37=May}}
+{{Trainerfooter|mountain}}
+
+===Generation IV===
+{{trainerheader|mountain}}
+{{Trainerentry|Spr DP Picnicker.png|Picnicker|Hope|704|1|180|Flaaffy|♀|44|None|36=チナミ|37=Chinami}}
+{{trainerdiv|mountain}}
+{{Trainerentry|Spr HGSS Bird Keeper.png|Bird Keeper|Hank|1408|2|016|Pidgey|♂|13|None|018|Pidgeot|♂|44|None|36=ソラオ|37=Sorao}}
+{{trainerdiv|mountain}}
+{{Trainerentry|Spr DP Picnicker.png|Picnicker|Sharon|688|2|162|Furret|♀|41|None|078|Rapidash|♀|43|None|36=ミナコ|37=Minako}}
+{{Trainerfooter|mountain|2}}
+
+===Generation VII===
+====Western segment====
+{{trainerheader|mountain}}
+{{trainerentry|VSCoach Trainer M PE.png{{!}}90px|game=PE|Coach Trainer|Oberon|1,300|1|052|Meowth|♀|13|None|36=ロダン|37=Rodin}}
+{{trainerdiv|mountain|After becoming Champion}}
+{{trainerentry/master|VSAce Trainer M Master PE.png{{!}}90px|Ace Trainer|Alvin|032|Nidoran♂||70|Steel|Iron Tail|Normal|Headbutt|36=ミノル|37=Minoru}}
+{{trainerdiv|mountain}}
+{{trainerentry/master|VSYoungster Master PE.png{{!}}90px|Youngster|Easton|129|Magikarp|♂|65|Normal|Tackle|Normal|Splash|36=タケル|37=Takeru}}
+{{Trainerfooter|mountain|PE}}
+
+====Eastern segment====
+{{trainerheader|mountain}}
+{{trainerdiv|mountain|After becoming Champion}}
+{{trainerentry/master|VSLass Master PE.png{{!}}90px|Lass|Rena|001|Bulbasaur|♀|65|Poison|Sludge Bomb|Normal|Take Down|Normal|Growth|36=リオ|37=Rio}}
+{{trainerdiv|mountain}}
+{{trainerentry/master|VSScientist Master PE.png{{!}}90px|Scientist|Herbert|023|Ekans|♂|70|Normal|Glare|Dark|Bite|Rock|Rock Slide|36=キヨシ|37=Kiyoshi}}
+{{trainerdiv|mountain|<small>Requires Sea Skim</small>}}
+{{trainerentry/master|VSBeauty 2 Master PE.png{{!}}90px|Beauty|Camille|055|Golduck|♀|75|Normal|Yawn|Psychic|Calm Mind|Psychic|Psychic|36=ヒロミ|37=Hiromi}}
+{{Trainerfooter|mountain|PE}}
+
+==Differences between generations==
+[[File:Kanto Route 4 HGSS.png|thumb|300px|Route 4 in {{game|HeartGold and SoulSilver|s}}]]
+===Generation I and III===
+Route 4 endured primarily minor cosmetic changes. The ramps in the western segment were widened significantly, while the patch of [[tall grass]] near the Cerulean City entrance has grown in size covering the entire area. In the western segment, rocks and boulders had been included in Generation III and VII for visual effect. Apart from this, most aesthetic features have been enhanced. Trees have become bigger, flowers are more visible, and most other sprites have been upgraded to the standards of later generations.
+
+In [[Generation III]] only, two [[Move Tutor]]s are found in the east portion of the route. Located near the Mt. Moon entrance, these tutors will teach a {{OBP|Pokémon|species}} the [[move]]s {{m|Mega Punch}} and {{m|Mega Kick}}. Both tutors are jealous of the other's skills and will try to get Trainers to come to them instead of the other.
+
+Other than this, only item positions and types were changed. {{TM|04|Whirlwind}}, located on the second-highest hill was changed to {{TM|05|Roar}} in Generation III, and five {{i|Poké Ball}}s in Generation VII. The [[Great Ball]] hidden in the west segment was replaced by two {{Berries}}; a {{b|Razz}} and a [[Persim Berry]] in similar locations.
+
+===Generation II===
+In Generation II, the western portion of Route 4 was cut off and changed to an extension of Route 3. Due to this, Route 4 western entry starts at the eastern entrance of [[Mt. Moon]], although most of the eastern portion remains the same. Along with this, the route was shortened significantly as the length between Mt. Moon and [[Cerulean City]] was slashed in half, as was the grassy area, however the layout and positioning of [[ledge]]s and [[signpost]]s remains mostly the same. There is no entrance to the [[Cerulean Cave]] from this route and the road is blocked off by barriers. The [[TM]] was replaced with an [[HP Up]] and three {{pkmn|Trainer}}s were added to the route. 
+
+From Mt. Moon, Route 4 travels to the east, swerving to the north and the south to avoid ledges along the route. The path turns north, then east near a large clump of trees surrounding a grassy area. The route is a very strange route as the [[ledge]]s form a contour down the mountainside, leading Trainers due east and then south to the end of the path and a ledge that will force Trainers to go down it into a large clump of trees surrounding a grassy area. After going down this ledge, there is no return and Trainers must go east to reach Cerulean City.
+
+===Generation IV===
+Other than graphical updates, the basic layout remains the same as previous generations, but the route is no longer flat, with hills leading down from Mt. Moon to add more depth to the route. Like Generation II, the western portion of Route 4 was cut off and changed to an extension of Route 3. Due to this, Route 4's western entry starts at the eastern entrance of Mt. Moon. Items and Trainers remain the same as in Generation II. Unlike in Generation II, Cerulean Cave remains in Cerulean City, however, unlike Generations I and III, there is no return to this route from the cave, likely to prevent the player from traveling to west Kanto without restoring the [[Kanto Power Plant|Power Plant]].
+
+==Music==
+{| class="roundtable" style="margin:auto; text-align: center; background: #{{locationcolor/med|mountain}}; border: 3px solid #{{locationcolor/dark|mountain}}"
+|- style="background:#{{locationcolor/light|mountain}}"
+! Games
+! Song name (Japanese) 
+! Song name (English) 
+! Composition
+! Arrangement
+|- style="background:#FFF"
+! {{GameIcon|R}}{{GameIcon|Gr}}{{GameIcon|B}}{{GameIcon|Y}}
+| ハナダへの道－オツキミ山より
+| [[Pokémon Red & Pokémon Green: Super Music Collection|Road to Cerulean City: Leaving Mt. Moon]]
+| [[Junichi Masuda]]
+| [[Junichi Masuda]]
+|- style="background:#FFF"
+! {{GameIcon|G}}{{GameIcon|S}}{{GameIcon|C}}
+| 3ばんどうろ
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Route 3]]
+| [[Junichi Masuda]]
+| [[Go Ichinose]]
+|- style="background:#FFF"
+! {{GameIcon|FR}}{{GameIcon|LG}}
+| ハナダへの道－オツキミ山より
+| [[Pokémon FireRed & Pokémon LeafGreen: Super Music Collection|Road to Cerulean City: Leaving Mt. Moon]] 
+| [[Junichi Masuda]] 
+| [[Go Ichinose]]
+|- style="background:#FFF"
+! {{GameIcon|HG}}{{GameIcon|SS}}
+| 3ばんどうろ|| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Route 3]] || [[Junichi Masuda]] || [[Takuto Kitsuta]]<br><small>[[GB Sounds]]:</small> [[Go Ichinose]]
+|- style="background:#FFF"
+! {{GameIcon|LGP}}{{GameIcon|LGE}}
+| ハナダへの道－オツキミ山より || [[Pokémon: Let's Go, Pikachu! & Pokémon: Let's Go, Eevee! Super Music Collection|Road to Cerulean City: Leaving Mt. Moon]] || [[Junichi Masuda]] || [[Shota Kageyama]]
+|}
+
+==In animation==
+[[File:Kanto Route 4 anime.png|thumb|250px|Route 4 in {{aniseries|OS}}]]
+===''Pokémon the Series''===
+===={{aniseries|OS}}====
+{{Ash}}, {{an|Misty}}, and {{an|Brock}} hiked along Route 4 at the end of ''[[EP006|Clefairy and the Moon Stone]]''. {{Gary}}, who had been through the area before Ash, had written "Gary was here! Ash is a loser!" on a local [[Signpost|road sign]], causing Ash to lose his temper and rush forward as the episode ended. The route reappeared in the [[EP007|following episode]], where Ash and {{ashfr}} finally reached its end and arrived at [[Cerulean City]]. Unlike in the games, Route 4 is a forested route, not a mountainous one.
+{{-}}
+
+==In the manga==
+[[File:Kanto Route 4 Adventures.png|thumb|250px|Route 4 in [[Pokémon Adventures]]]]
+===Pokémon Adventures===
+===={{MangaArc|Red, Green & Blue}}====
+Route 4 appeared in ''[[PS006|Gyarados Splashes In!]]'' and ''[[PS007|Raging Rhydon]]''. After helping [[Misty]] to recapture her rampaging [[Gyara]]dos, {{adv|Red}} made a phone call to {{adv|Professor Oak}} from a nearby [[Pokémon Center]]. He told Red that what had happened with Gyarados was likely caused by [[Team Rocket]]. Afterwards, Red and Misty headed to [[Mt. Moon]] in search for a [[Moon Stone]].
+
+After encountering Team Rocket inside the caves of Mt. Moon, Red and Misty exited the mountain on the eastern section of Route 4. Misty was frustrated for them failing to find a Moon Stone, until Red revealed that he had actually managed to find one when [[Pika]] had collapsed a part of the cave to prevent Team Rocket from following them.
+{{-}}
+
+==Trivia==
+* In ''[[Pokémon: Special Edition for Yellow, Red and Blue: Official Nintendo Player's Guide]]'', the western section of this route (to the west of Mt. Moon), including the Pokémon Center with the Magikarp Salesman, is shown as being part of {{rt|3|Kanto}}.
+
+==Related articles==
+* [[Mt. Moon]]
+
+{{Kanto}}<br>
+{{Project Routes notice}}
+
+[[Category:Kanto locations|Route 004]]
+[[Category:Routes|Route 004]]
+[[Category:Red, Blue and Yellow locations|Route 004]]
+[[Category:Gold, Silver and Crystal locations|Route 004]]
+[[Category:FireRed and LeafGreen locations|Route 004]]
+[[Category:HeartGold and SoulSilver locations|Route 004]]
+[[Category:Let's Go, Pikachu! and Let's Go, Eevee! locations|Route 004]]
+
+[[de:Route 4 (Kanto)]]
+[[es:Ruta 4 (Kanto)]]
+[[fr:Route 4 (Kanto)]]
+[[it:Percorso 4 (Kanto)]]
+[[ja:4ばんどうろ (カントー地方)]]
+[[zh:４号道路（关都）]]

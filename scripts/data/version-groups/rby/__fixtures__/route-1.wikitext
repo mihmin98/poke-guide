@@ -1,0 +1,322 @@
+<!-- poke-guide fixture: {"title":"Kanto Route 1","resolvedTitle":"Kanto Route 1","revid":4613202,"timestamp":"2026-08-15T14:26:20Z","fetchedAt":"2026-09-12T21:57:28.705Z"} -->
+{{Route infobox
+|number=1
+|generation=1
+|image=Kanto Route 1 PE.png
+|imageI=Kanto Route 1 RBY.png
+|imageII=Kanto Route 1 GSC.png
+|imageIII=Kanto Route 1 FRLG.png
+|imageIV=Kanto Route 1 HGSS.png
+|type=land
+|mapdesc=A country road full of greenery and rough paths.{{sup/4|HGSS}}<br>A calm country road full of greenery.{{sup/7|PE}}
+|north=Viridian City
+|south=Pallet Town
+|region=Kanto
+|prev=Route 10
+|regionprev=Galar
+}}
+'''Route 1''' (Japanese: '''１{{tt|番道路|ばんどうろ}}''' ''Route 1'') is a [[route]] located in western [[Kanto]]. It connects [[Pallet Town]] in the south to [[Viridian City]] in the north.
+
+==Route description==
+Heading north from [[Pallet Town]], {{pkmn|Trainer}}s must make their way around a large but very primitive route that will become the very first route they explore on their journey. The route is riddled with large patches of [[tall grass]] and [[ledge]]s that contour from far east to the far west, blocking off most of the route and making it hard to travel north, only to have small gaps by which the road has been broken into it.
+[[File:Poké Mart assistant Route 1 FRLG.png|thumb|left|200px|The [[Poké Mart]] assistant giving away free samples of [[Potion]]s]]
+From the narrow "gateway" into Route 1, the route will make its way west as a ledge will block the road; however, patches of tall grass can be found by traveling east. After traveling north past the gap in the ledge, there will be a small clearing, where a man working for a [[Poké Mart]] can be found giving out a free [[Potion]] to Trainers. Heading away from the small clearing, the route makes its way eastern and creates an "S" shape as it winds around tall ground, as well as long ledges. Route 1 then travels northerly through two consecutive patches of tall grass, one larger than the other. It then finishes off by curving westerly and then north as it enters [[Viridian City]].
+
+Heading south from Viridian City, Trainers can either hop down ledges to completely avoid any contact with wild {{OBP|Pokémon|species}} on their way to Pallet Town, or they can travel through the grass patches, the required path for northbound travel. Following the grass-lined path, the route turns east then south as it enters the first patch. After a small break, the path of the route enters another patch of grass as the route turns west. Route 1 then makes an "S", turning to the south, then to the east before returning south and west, passing through the third grassy area. The path then juts south, entering another patch before curving to the east and then to the south as it enters Pallet.
+
+There are no opponent Trainers on this route in Generations {{Gen|I}} and {{Gen|III}}. In [[Generation II]], two Trainers appear, while in [[Generation IV]], four Trainers are on the route. In [[Generation VII]], there is one Trainer here, although he cannot be challenged before delivering the [[Parcel]] to [[Professor Oak]]. A [[Bitter Berry]] grows here in Generation II, while a [[Black Apricorn|Blk Apricorn]] does so in Generation IV. The Poké Mart employee is not present in Generations II and IV.
+
+==Items==
+{{Itlisth}}
+{{itemlist|Potion|From the {{ci|Viridian}} [[Poké Mart]] employee|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{itemlist|Potion|From the {{ci|Viridian}} [[Poké Mart]] employee after delivering {{prof|Oak}}'s [[Parcel]]|LP=yes|LE=yes}}
+{{itemlist|None|South of the first ledge on the west side of the route (daily)|G=yes|S=yes|C=yes|display=[[Bitter Berry]]}}
+{{itemlist|Black Apricorn|South of the first ledge on the west side of the route (daily)|HG=yes|SS=yes|display=[[Black Apricorn|Blk Apricorn]]}}
+{{Itlistfoot}}
+
+===Berry plant===
+{{Itlisth}}
+{{Itemlist|Razz Berry|Sometimes found by the {{player}}'s [[walking Pokémon]] from the bush in the northeast corner of the route|LP=yes|LE=yes}}
+{{Itlistfoot}}
+
+==Pokémon==
+===Generation I===
+{{catch/header|land|no}}
+{{catch/entry1|016|Pidgey|yes|yes|no|Grass|2-5|50%|type1=Normal|type2=Flying}}
+{{catch/entry1|016|Pidgey|no|no|yes|Grass|2-7|70%|type1=Normal|type2=Flying}}
+{{catch/entry1|019|Rattata|yes|yes|no|Grass|2-4|50%|type1=Normal}}
+{{catch/entry1|019|Rattata|no|no|yes|Grass|2-4|30%|type1=Normal}}
+{{catch/div|land|Attacking Oak}}
+{{catch/entry1|025|Pikachu|no|no|yes|Special|5|One|type1=Electric}}
+{{catch/footer|land}}
+
+===Generation II===
+{{catch/header|land|yes}}
+{{catch/entry2|016|Pidgey|yes|yes|yes|Grass|2-4|45%|45%|0%|type1=normal|type2=flying|11=k}}
+{{catch/entry2|019|Rattata|yes|yes|yes|Grass|2|30%|30%|0%|type1=normal|11=k}}
+{{catch/entry2|019|Rattata|yes|yes|no|Grass|2, 3, 6|0%|0%|55%|type1=normal|11=k}}
+{{catch/entry2|019|Rattata|no|no|yes|Grass|2-3|0%|0%|50%|type1=normal|11=k}}
+{{catch/entry2|020|Raticate|no|no|yes|Grass|6|0%|0%|5%|type1=normal|11=k}}
+{{catch/entry2|161|Sentret|yes|yes|yes|Grass|3|20%|20%|0%|type1=normal|11=k}}
+{{catch/entry2|162|Furret|yes|yes|yes|Grass|6|5%|5%|0%|type1=normal|11=k}}
+{{catch/entry2|163|Hoothoot|yes|yes|yes|Grass|2-4|0%|0%|45%|type1=normal|type2=flying|11=k}}
+{{catch/footer|land}}
+
+===Generation III===
+{{catch/header|land|no}}
+{{catch/entryfl|016|Pidgey|yes|yes|Grass|2-5|50%|type1=normal|type2=flying}}
+{{catch/entryfl|019|Rattata|yes|yes|Grass|2-4|50%|type1=normal}}
+{{catch/footer|land}}
+
+===Generation IV===
+{{catch/header|land|yes}}
+{{catch/entryhs|016|Pidgey|yes|yes|Grass|2-4|45%|45%|0%|type1=normal|type2=flying}}
+{{catch/entryhs|019|Rattata|yes|yes|Grass|2|30%|30%|0%|type1=normal}}
+{{catch/entryhs|019|Rattata|yes|yes|Grass|2-3, 6|0%|0%|55%|type1=normal}}
+{{catch/entryhs|161|Sentret|yes|yes|Grass|3|20%|20%|0%|type1=normal}}
+{{catch/entryhs|162|Furret|yes|yes|Grass|6|5%|5%|0%|type1=normal}}
+{{catch/entryhs|163|Hoothoot|yes|yes|Grass|2-4|0%|0%|45%|type1=normal|type2=flying}}
+{{catch/div|land|Headbutt<br/><small>Group A</small>}}
+{{catch/entryhs|163|Hoothoot|yes|yes|Headbutt|2-3|all=50%|type1=Normal|type2=Flying|10=k}}
+{{catch/entryhs|204|Pineco|yes|yes|Headbutt|2-3|all=30%|type1=Bug|10=k}}
+{{catch/entryhs|265|Wurmple|yes|yes|Headbutt|2-3|all=20%|type1=Bug|10=k}}
+{{catch/div|land|Headbutt<br/><small>Group B</small>}}
+{{catch/entryhs|163|Hoothoot|yes|yes|Headbutt|5-6|all=50%|type1=Normal|type2=Flying|10=k}}
+{{catch/entryhs|165|Ledyba|no|yes|Headbutt|5-6|all=30%|type1=Bug|type2=Flying|10=k}}
+{{catch/entryhs|167|Spinarak|yes|no|Headbutt|5-6|all=30%|type1=Bug|type2=Poison|10=k}}
+{{catch/entryhs|265|Wurmple|yes|yes|Headbutt|5-6|all=20%|type1=Bug|10=k}}
+{{catch/div|land|Swarm}}
+{{catch/entryhs|261|Poochyena|yes|yes|Swarm|2|all=40%|type1=dark}}
+{{catch/div|land|Special}}
+{{catch/entryhs|311|Plusle|yes|yes|Hoenn|2|all=20%|type1=electric}}
+{{catch/entryhs|312|Minun|yes|yes|Hoenn|3|all=20%|type1=electric}}
+{{catch/entryhs|403|Shinx|yes|yes|Sinnoh|2-3|all=40%|type1=electric}}
+{{catch/footer|land}}
+
+===Generation VII===
+{{Catch/header|land|no}}
+{{Catch/entrype|016|Pidgey|yes|yes|Grass|3-4|40%|type1=Normal|type2=Flying}}
+{{Catch/entrype|019|Rattata|yes|yes|Grass|3-4|30%|type1=Normal}}
+{{Catch/entrype|043|Oddish|yes|no|Grass|3-4|30%|type1=Grass|type2=Poison}}
+{{Catch/entrype|069|Bellsprout|no|yes|Grass|3-4|30%|type1=Grass|type2=Poison}}
+{{Catch/div|flying|While riding a Flying Pokémon<br><small>After becoming {{color2|000|Pokémon Champion|Champion}}}}
+{{Catch/entrype|016|Pidgey|yes|yes|Sky|3-56|60%|type1=Normal|type2=Flying}}
+{{Catch/entrype|017|Pidgeotto|yes|yes|Sky|3-56|35%|type1=Normal|type2=Flying}}
+{{Catch/entrype|018|Pidgeot|yes|yes|Sky|3-56|5%|type1=Normal|type2=Flying}}
+{{Catch/div|flying|Rare Spawns}}
+{{Catch/entrype|006|Charizard|yes|yes|Sky|3-56|-|type1=Fire|type2=Flying}}
+{{Catch/entrype|144|Articuno|yes|yes|Sky|3-56|-|type1=Ice|type2=Flying}}
+{{Catch/entrype|145|Zapdos|yes|yes|Sky|3-56|-|type1=Electric|type2=Flying}}
+{{Catch/entrype|146|Moltres|yes|yes|Sky|3-56|-|type1=Fire|type2=Flying}}
+{{Catch/entrype|149|Dragonite|yes|yes|Sky|3-56|-|type1=Dragon|type2=Flying}}
+{{Catch/footer|land|2}}
+
+==Trainers==
+===Generation II===
+{{trainerheader}}
+{{Trainerentry|Spr GS Schoolboy.png|Schoolboy|Danny|992|3|124|Jynx|♀|31|None|125|Electabuzz|♂|31|None|126|Magmar|♂|31|None|36=ノリタカ|37=Noritaka}}
+{{Trainerdiv}}
+{{Trainerentry|Spr GS Cooltrainer F.png|Cooltrainer|Quinn|1824|2|002|Ivysaur|♂|38|None|121|Starmie||38|None|36=アイコ|37=Aiko}}
+{{trainerfooter|land|2}}
+
+===Generation IV===
+{{trainerheader}}
+{{Trainerentry|Spr HGSS School Kid.png|School Kid|Sherman|860|2|162|Furret|♂|43|None|018|Pidgeot|♂|43|None|36=マサクニ|37=Masakuni}}
+{{Trainerdiv}}
+{{Trainerentry|Spr HGSS School Kid.png|School Kid|Danny|860|3|124|Jynx|♀|43|None|125|Electabuzz|♂|43|None|126|Magmar|♂|43|None|36=ノリタカ|37=Noritaka}}
+{{Trainerdiv}}
+{{Trainerentry|Spr HGSS Ace Trainer M.png|Ace Trainer|French|2820|2|359|Absol|♂|47|None|065|Alakazam|♂|47|None|36=ナオズミ|37=Naozumi}}
+{{Trainerdiv}}
+{{Trainerentry|Spr HGSS Ace Trainer F.png|Ace Trainer|Quinn|2820|2|002|Ivysaur|♂|47|None|121|Starmie||47|None|36=アイコ|37=Aiko}}
+{{trainerfooter|land|2}}
+
+===Generation VII===
+{{trainerheader|land}}
+{{trainerdiv|land|After delivering Professor Oak's Parcel}}
+{{Trainerentry|VSYoungster PE.png{{!}}90px|game=PE|Youngster|Ronny|60<br/>3 {{i|Poké Ball}}s|1|019|Rattata|♂|3|None|36=タイチ|37=Taichi}}
+{{trainerfooter|land|PE}}
+
+==Differences among generations==
+===Generation I and III===
+The [[route]] layout in Generations {{Gen|I}} and {{Gen|III}} are nearly identical, however, the Generation I version has grassy patches to both the east and the west of the route itself. By using the [[Cheating|walk anywhere]] glitch, {{pkmn|Trainer}}s can enter the grass, but the game will freeze as the area contains no walkable data nor data for wild Pokémon.
+
+Apart from this, most aesthetic features have been enhanced. Trees have become bigger, flowers are more visible, and most other sprites have been upgraded to Generation III standards.
+
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{Locationcolor/dark|land}}"
+|-
+! style="background:#{{red color}}; {{roundytl|5px}}" | {{color2|fff|Pokémon_Red_and_Blue_Versions|Red}}
+! style="background:#{{blue color}}" | {{color2|fff|Pokémon_Red_and_Blue_Versions|Blue}}
+! style="background:#{{yellow color}}" | {{color2|000|Pokémon_Yellow_Version|Yellow}}
+! style="background:#{{green color}}" | {{color2|fff|Pokémon_Red_and_Green_Versions|Green (JP)}}
+! style="background:#{{firered color}}" | {{color2|000|Pokémon_FireRed_and_LeafGreen_Versions|FireRed}}
+! style="background:#{{leafgreen color}}; {{roundytr|5px}}" | {{color2|000|Pokémon_FireRed_and_LeafGreen_Versions|LeafGreen}}
+|-
+| colspan="4" | [[File:Kanto Route 1 RBY.png|200px]]
+| colspan="2" | [[File:Kanto Route 1 FRLG.png|200px]]
+|-
+| colspan="6" style="background:#{{locationcolor/light|land}}; {{roundybottom|5px}}" | &nbsp;
+|}
+
+===Generation II===
+The route remains mostly the same apart from a few minor changes to the gameplay. Heading south from [[Viridian City]], Trainers can either hop down ledges to completely avoid any contact with wild Pokémon (which now include {{p|Sentret}}, {{p|Furret}} and {{p|Hoothoot}}) on their way to [[Pallet Town]], or alternatively travel through the patches of grass.
+
+On their way down, there are two other Trainers waiting for battle. One can found near the northern side of the route, while the other can be found in the near the middle in the clearing. He has replaced the {{ci|Viridian}} [[Poké Mart]] employee who gives away Potions, however there is a [[Bitter Berry]] tree that sprouted along the northwest portion of the route. Lastly, the grass patches outside of the route have been removed but the spacing between the route and the surrounding forest still remains.
+
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{Locationcolor/dark|land}}"
+|-
+! style="background:#{{gold color}}; {{roundytl|5px}}" | {{color2|000|Pokémon_Gold_and_Silver_Versions|Gold}}
+! style="background:#{{silver color}}" | {{color2|000|Pokémon_Gold_and_Silver_Versions|Silver}}
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon_Crystal_Version|Crystal}}
+|-
+| colspan="3" | [[File:Kanto Route 1 GSC.png|200px]]
+|-
+| colspan="3" style="background:#{{locationcolor/light|land}}; {{roundybottom|5px}}" | &nbsp;
+|}
+
+===Generation IV===
+Other than graphical updates, the basic layout remains the same as previous generations, but the route is no longer flat, due to hills being added to give feeling of depth to the route. Heading south from [[Viridian City]], a [[gate]] has been added between the route and Viridian City, in order for the game to load the different tilesets used between the areas.
+
+The Bitter Berry tree has been changed into a [[Black Apricorn|Blk Apricorn]] tree, which can be found between the two ledges located on the northwestern side of the route. By traveling east, Trainers are able to battle a {{tc|School Kid|Schoolboy}}, and by jumping off the ledge and heading east, another Schoolboy can be challenged, with Pokémon similar to the other Schoolboy in Generation II.
+
+By jumping down the ledge and going through the tall grass, the route soon turns into the clearing. Like in Generation II, the Viridian Poké Mart employee is no longer present and is replaced by a Trainer. On Mondays, Tuesdays, and Saturdays there is a photographer here, who will take a picture of the {{player}} and their party.
+
+There is a male {{tc|Ace Trainer}} just south of the photographer, as well as another female {{tc|Ace Trainer}}, with Pokémon similar to the other Cooltrainer in Generation II. Route 1 makes the "S", turning to the south, then to the east before returning south and west, passing through the third grassy area. The path then juts south, entering another patch before curving to the east then to the south as it enters Pallet Town.
+
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{Locationcolor/dark|land}}"
+|-
+! style="background:#{{heartgold color}}; {{roundytl|5px}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan="2" | [[File:Kanto Route 1 HGSS.png|200px]]
+|-
+| colspan="2" style="background:#{{locationcolor/light|land}}; {{roundybottom|5px}}" | &nbsp;
+|}
+
+===Generation VII===
+The route remains mostly unchanged compared to previous generations. Only notable differences are the presence of a {{tc|Youngster}}, who will battle the player once [[Professor Oak]]'s [[Parcel]] has been delivered; a [[Berry]] bush in the northeast corner; and the inclusion of {{p|Oddish}}{{sup/7|P}}/{{p|Bellsprout}}{{sup/7|E}} into the selection of catchable Pokémon.
+
+==Music==
+{| class="roundtable" style="margin:auto; text-align: center; background: #{{locationcolor/med|land}}; border: 3px solid #{{locationcolor/dark|land}}"
+|- style="background:#{{locationcolor/light|land}}"
+! Games
+! Song name
+! Composition
+! Arrangement
+|- style="background:#FFF"
+! {{GameIcon|R}}{{GameIcon|Gr}}{{GameIcon|B}}{{GameIcon|Y}}
+| [[Pokémon Red & Pokémon Green: Super Music Collection|Road to Viridian City: Leaving Pallet Town]]
+| [[Junichi Masuda]]
+| [[Junichi Masuda]]
+|- style="background:#FFF"
+! {{GameIcon|G}}{{GameIcon|S}}{{GameIcon|C}}
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Route 1]]
+| [[Junichi Masuda]]
+| [[Go Ichinose]]
+|- style="background:#FFF"
+! {{GameIcon|FR}}{{GameIcon|LG}}
+| [[Pokémon FireRed & Pokémon LeafGreen: Super Music Collection|Road to Viridian City: Leaving Pallet Town]] || [[Junichi Masuda]] || [[Go Ichinose]]
+|- style="background:#FFF"
+! {{GameIcon|HG}}{{GameIcon|SS}}
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Route 1]] || [[Junichi Masuda]] || [[Takuto Kitsuta]]<br><small>[[GB Sounds]]:</small> [[Go Ichinose]]
+|- style="background:#FFF"
+! {{GameIcon|LGP}}{{GameIcon|LGE}}
+| [[Pokémon: Let's Go, Pikachu! & Pokémon: Let's Go, Eevee! Super Music Collection|Road to Viridian City: Leaving Pallet Town]] || [[Junichi Masuda]] || [[Shota Kageyama]]
+|}
+
+==In animation==
+===''Pokémon the Series''===
+[[File:Kanto Route 1 anime.png|250px|thumb|left|Route 1 in {{aniseries|BW}}]]
+[[File:Kanto Route 1 overview SM.png|250px|thumb|Route 1 overview in {{aniseries|SM}}]]
+===={{aniseries|OS}}====
+Route 1 was introduced in ''[[EP001|Pokémon - I Choose You!]]''. {{Ash}}, who had just received his {{AP|Pikachu}} and was still trying to get a handle on the rebellious Pokémon, set off on his journey, beginning with Route 1. He first found a {{p|Pidgey}} and was eager to {{pkmn2|caught|catch}} it, but Pikachu didn't want to help him and instead ran up a tree. Frustrated, Ash decided to try to catch the Pidgey without Pikachu's help. He threw a {{i|Poké Ball}} at it, but the Pidgey broke out easily and fled. Ash turned and saw a {{p|Rattata}} digging through his bag.
+
+Ash turned and saw a group of Pidgey in the field; he threw a rock at them, which only scared them away. However, he saw another bird Pokémon in the field, mistook it for another Pidgey, and threw another rock at it, which hit it in the back of its head. When it turned to look at him, however, he realized that he actually hit a {{p|Spearow}}. The Spearow swooped several times to attack him and Pikachu.
+
+As the Spearow chased Ash and Pikachu, two herds of Pokémon that do not appear on this route in the {{pkmn|games}} were seen: {{p|Mankey}} and {{p|Sandshrew}}.
+
+After jumping in the river, narrowly evading an attack from a {{p|Magikarp}} and {{p|Gyarados}}, Ash and Pikachu met {{an|Misty}}, who was [[fishing]] for {{t|Water}} Pokémon. He stole her [[Bicycle|bike]], putting the injured Pikachu in its basket, and rode away, promising that he would bring it back someday. They were attacked once again by the Spearow, but Pikachu used a massive electrical attack to take out the entire flock. Once the storm cleared, Ash and Pikachu both rose from where they were knocked back on the ground, exhausted but victorious. Ash looked up and saw {{an|Ho-Oh|an unknown Pokémon}} majestically flying through the sky, over the rainbow that had been left after the storm, but his Pokédex could not identify the species.
+
+===={{aniseries|BW}}====
+Route 1 was also briefly seen in ''[[BW142|The Dream Continues!]]'' while Ash and [[Alexa]] passed it on their way to Pallet Town.
+
+===={{aniseries|SM}}====
+Route 1 briefly appeared in ''[[SM042|Alola, Kanto!]]'' as Ash and {{ashcl}} from [[Alola]] visited Pallet Town.
+{{-}}
+
+====Pokémon====
+{| style="width: 100%"
+|-
+| {{ActivePoké|Kanto Route 1|Pidgey|Kanto Route 1 Pidgey.png|Normal|Flying|link=no}}
+| {{ActivePoké|Kanto Route 1|Rattata|Kanto Route 1 Rattata.png|Normal|link=no}}
+| {{ActivePoké|Kanto Route 1|Spearow|Kanto Route 1 Spearow.png|Normal|Flying|link=no|nick=Spearow (multiple)}}
+|-
+| {{ActivePoké|Kanto Route 1|Sandshrew|Kanto Route 1 Sandshrew.png|Ground|link=no}}
+| {{ActivePoké|Kanto Route 1|Diglett|Kanto Route 1 Diglett Poliwag.png|Ground|link=no}}
+| {{ActivePoké|Kanto Route 1|Mankey|Kanto Route 1 Mankey.png|Fighting|link=no|nick=Mankey (multiple)}}
+|-
+| {{ActivePoké|Kanto Route 1|Poliwag|Kanto Route 1 Diglett Poliwag.png|Water|link=no}}
+| {{ActivePoké|Kanto Route 1|Magikarp|Kanto Route 1 Magikarp.png|Water|link=no}}
+| {{ActivePoké|Kanto Route 1|Gyarados|Kanto Route 1 Gyarados.png|Water|Flying|link=no}}
+|-
+| {{ActivePoké|Kanto Route 1|Ho-Oh|Ho-Oh Debut.png|Fire|Flying|link=Ho-Oh (anime)}}
+|}
+
+===''I Choose You!''===
+Route 1 appeared in the opening of ''[[M20|I Choose You!]]''. [[Ash Ketchum (M20)|Ash]] left [[Pallet Town]] via this route at the start of his journey, with his newly obtained, disobedient [[Ash's Pikachu (M20)|Pikachu]]. Ash and Pikachu were attacked by a large flock of {{p|Spearow}} and attempted to escape in the midst of a rainstorm, culminating in Pikachu unleashing a powerful {{m|Thunderbolt}} on the Spearow, knocking himself and his Trainer out in the process. Ash and Pikachu woke up after the storm had passed to see {{p|Ho-Oh}} flying overhead, dropping a [[Rainbow Feather|Rainbow Wing]] as it flew. Ash picked up the feather and proclaimed to Pikachu that they would meet it again someday.
+
+====Pokémon====
+{| style="width: 50%"
+|-
+| {{InactivePoké|Kanto Route 1|Pidgey|Pidgey M20.png|Normal|Flying|link=Pidgey (Pokémon)}}
+| {{InactivePoké|Kanto Route 1|Spearow|021Spearow.png|Normal|Flying|link=no|nick=Spearow (multiple)}}
+| {{InactivePoké|Kanto Route 1|Gyarados|130Gyarados.png|Water|Flying|link=no}}
+| {{InactivePoké|Kanto Route 1|Ho-Oh|Ho-Oh M20.png|Fire|Flying|link=Ho-Oh (anime)}}
+|}
+
+===Pokémon Origins===
+[[File:Kanto Route 1 PO.png|250px|thumb|Route 1 in [[Pokémon Origins]]]]
+Route 1 appeared in ''[[PO01|File 1: Red]]'', where {{OBP|Red|Origins}} was seen traveling through it on his way to Viridian City. Soon after entering the Route, he encountered a wild {{p|Pidgey}}, and tried to catch it, but it got away. After a short while, he got the hang of catching Pokémon, and caught multiple different species, including a {{p|Spearow}}, {{p|Caterpie}}, and Pidgey.
+
+Along the way, he encountered a {{tc|Youngster}}, who challenged him to a battle with his {{p|Nidoran♀}}. Not knowing other Trainer's Pokémon couldn't be caught, Red tried to throw a {{i|Poké Ball}} at Nidoran♀, only to have it bounce off. The Youngster, however, agreed to tell Red where he could find a [[Nidoran]] of his own. Shortly before arriving in Viridian City, Red encountered {{OBP|Blue|Origins}}, who challenged him to a battle. Due to Blue's {{p|Squirtle}} having a type advantage over [[Red's Charmander]], Blue easily won the battle. Afterwards, Red met [[Brock]], who, having watched the battle, suggested Red that he should start challenging the [[Gym Leader]]s in order to learn how to battle.
+
+====Pokémon====
+{| style="width: 100%"
+|-
+| {{ActivePoké|Kanto Route 1|Pidgey|Pidgey Gust PO.png|Normal|Flying|link=no}}
+| {{ActivePoké|Kanto Route 1|Rattata|Kanto Route 1 Rattata PO.png|Normal|link=no}}
+| {{ActivePoké|Kanto Route 1|Spearow|Kanto Route 1 Spearow PO.png|Normal|Flying|link=no}}
+|-
+| {{ActivePoké|Kanto Route 1|Caterpie|Red Caterpie PO.png|Bug|link=no}}
+|}
+
+==In the manga==
+[[File:Kanto Route 1 Adventures.png|thumb|250px|Route 1 in [[Pokémon Adventures]]]]
+===Pokémon Adventures===
+===={{MangaArc|Red, Green & Blue}}====
+Route 1 made a brief appearance in ''[[PS002|Bulbasaur, Come Home!]]''. After {{adv|Red}} had accidentally let loose some {{OBP|Pokémon|species}} that {{adv|Professor Oak}} was keeping in his {{TP|Professor Oak|Laboratory}}, he and Professor Oak were forced to pursue them, with some of them having escaped all the way to Route 1 and [[Viridian City]].
+{{-}}
+
+==Trivia==
+* In [[Generation I]], if a player currently on Route 1 opens the [[Town Map]], pressing up will apparently do nothing at first, as the selection will go from Route 1 (the current place) to Route 1 again due to [[List of glitches in Generation I#Town Map selection oversight|an oversight]]. The player will need to press up twice to select the next place, which is [[Viridian City]]. Similarly, a player in the {{ka|Power Plant}} will need to press down twice to go to the previous place in the Town Map.
+* A remix of the theme on this [[route]] was used in [[Super Smash Bros. Brawl]]. It can also be found in [[Super Smash Bros. for Nintendo 3DS and Wii U]] and [[Super Smash Bros. Ultimate]].
+* In Generations II and IV, the remixed music track for this Route starts from the notes at the last few seconds of the original track's music.
+* The ''[[Primo|Poké Dude]] Show'' that airs on the [[Teachy TV]] is filmed here.
+
+==Related articles==
+{{Kanto}}<br>
+{{Project Routes notice}}
+
+[[Category:Kanto locations|Route 001]]
+[[Category:Routes|Route 001]]
+[[Category:Red, Blue and Yellow locations|Route 001]]
+[[Category:Gold, Silver and Crystal locations|Route 001]]
+[[Category:FireRed and LeafGreen locations|Route 001]]
+[[Category:HeartGold and SoulSilver locations|Route 001]]
+[[Category:Let's Go, Pikachu! and Let's Go, Eevee! locations|Route 001]]
+
+[[de:Route 1 (Kanto)]]
+[[es:Ruta 1 (Kanto)]]
+[[fr:Route 1 (Kanto)]]
+[[it:Percorso 1 (Kanto)]]
+[[ja:1ばんどうろ (カントー地方)]]
+[[zh:１号道路（关都）]]

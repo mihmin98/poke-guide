@@ -1,0 +1,95 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Start here
+
+- **`PROGRESS.md`** is the resume point. Read it first. It records the current phase, the next task, open questions and a session log. **Update it before ending any work session** (check off tasks, set "Next step", add a log entry).
+- **`IMPLEMENTATION_PLAN.md`** is the authoritative design (about 1,200 lines). Don't read it top to bottom. Jump to the section you need (table of contents at the top; the phase checklists are in §16). If an implementation has to differ from the plan, update the plan and record the decision in `PROGRESS.md`.
+
+## What this is
+
+**Poké Guide** is a companion web app for catching every Pokémon obtainable **without trading with another player**. It shows the Pokémon available in each area, in walkthrough order (levels, rates, types, catch rate), plus a checklist saved in `localStorage` with multiple named profiles and import/export codes. Red/Blue/Yellow ship first. The architecture must let Crystal, FireRed/LeafGreen, Emerald and later games be added **as data and config, not app changes**.
+
+Stack: TypeScript, Angular 22 (standalone components, signals, zoneless, `OnPush`, built-in control flow, lazy routes), Angular Material 3, Vitest (no Playwright or other e2e suite; browser behavior is checked by hand, plan §14). Hosted on GitHub Pages.
+
+## Commands
+
+Node 26.8.2 is managed with **nvm** (`.nvmrc`). Node is already on the PATH, including in Bash tool shells, so run `node`/`npm`/`npx` directly: don't run `source ~/.nvm/nvm.sh` or prefix commands with a PATH export.
+
+```bash
+npm start                       # ng serve (http://localhost:4200)
+npm run verify                  # local quality gate: theme check + lint + scripts typecheck + unit tests + production build
+npm test                        # Vitest via the Angular unit-test builder (watch mode in a TTY)
+npm run test:ci                 # same, single run
+npx ng test --watch=false --include src/app/core/games/registry.spec.ts --filter "codec"   # one file / tests matching a regex
+npm run lint                    # angular-eslint over src/ and scripts/
+npm run typecheck:scripts       # tsc -p tsconfig.scripts.json (scripts/ + framework-free core)
+npm run format                  # prettier
+npm run theme:games             # regenerate src/theme/*.generated.scss from registry seeds and type colors (--check in verify)
+```
+
+Planned, not yet implemented (plan §7.2):
+
+```bash
+npm run data:build              # scrape → parse → validate → write public/data/rby.json (uses cache)
+npm run data:refresh            # same, ignoring the cache
+npm run data:offline            # build from fixtures/cache only (what tests use)
+npm run data:sprites            # download sprites for the version group
+npm run data:validate           # validate committed data files
+```
+
+## Architecture (big picture)
+
+### Two halves share one framework-free core
+- **Build time (`scripts/data/`, run with `tsx`):** scrapes Bulbapedia wikitext through the MediaWiki API, parses it and applies curated overrides. It validates the result with zod and golden assertions, then writes **committed** JSON to `public/data/<versionGroup>.json` and sprites to `public/sprites/<setId>/`.
+- **Runtime (`src/app/`):** loads that JSON lazily and computes everything else. **The app never calls Bulbapedia.**
+- `src/app/core/games` (registry, method/condition vocabularies), `src/app/core/domain` (models, obtainability engine, export codec) and `src/app/core/mechanics` (per-generation rules) **must not import Angular**. The pipeline imports them through `tsconfig.scripts.json`.
+
+### Game model (plan §4)
+- **Generation** → **version group** (the unit of data files and pipeline config: `rby`, `gsc`, `frlg`, `rse`) → **game** (what a profile is tied to: `red`, `yellow`, `crystal`…).
+- `core/games/registry.ts` is the single source of truth for games: `codecId`, `nationalDexMax`, regions, accent seed, sprite set, `available` vs `planned`.
+- **Never add `if (game === 'yellow')` in app code.** Differences between games must be data, a `GenerationFeatures` flag, a vocabulary entry (encounter methods and conditions are registries), or a mechanics module.
+
+### Data pipeline (plan §7)
+- One Bulbapedia location page holds the encounter tables for **all** generations under `===Generation N===` headings, each in its own row template: `catch/entry1` (Red/Blue/Yellow), `catch/entry2` (Gold/Silver/Crystal, with morning/day/night rates), `catch/entryfl`, `catch/entryhs`…
+  - Parsing is split into a generic core (brace-matching template tokenizer, heading tree, encounter walker, merge) and per-template **`CatchTemplateAdapter`s**.
+  - Each version group has `scripts/data/version-groups/<id>/` with its config, per-game ordered locations, overrides, fixtures and golden tests.
+- Some data isn't in encounter tables: static encounters and legendaries, starters, fossils, exclusive choices, unlocks and event-only species. These live in **curated override files** with source page and revid. Bulbapedia errors are fixed via `patches.ts` (each patch documented with a link), never by editing generated JSON.
+- Parsing traps (details in plan §3.3):
+  - Template-name casing varies.
+  - Pokémon heading depth varies.
+  - Floors can appear as the method column (Pokémon Tower, Mansion).
+  - Several templates can share one line.
+  - `{{tt|…}}` notes can appear inside rates.
+  - `redirects=1` is required.
+- Types come from the current National Dex list plus `type-history.ts`, which holds per-generation types (e.g. Gen I: Clefairy line is Normal, Magnemite is Electric).
+- Catch rates come from species infoboxes plus the "List of Pokémon by catch rate" history. Unclassified notes there must **fail the build**. For example, Yellow "27" notes describe a held-item quirk, not a catch rate.
+- Be polite to Bulbapedia: batched `titles=` (≤50), ≤1 request/s, `maxlag=5`, a descriptive User-Agent, and the on-disk cache (`scripts/data/cache/`, gitignored). Bulbapedia content is CC BY-NC-SA 2.5, so the attribution in the app must stay.
+
+### Obtainability (plan §9)
+- `buildChecklist(data, game, features)` is a pure function:
+  - Direct encounter sources, then a fixed-point closure over evolutions where `!requiresTrade`.
+  - In-game trades only count if the species you give is obtainable.
+  - Breeding counts where the generation has it.
+- Exclusive groups (starter, fossil, Hitmon choice) stay obtainable but reduce the "max in one save" figure by the whole evolution family.
+- Every species `1..nationalDexMax` must be obtainable or carry an `unobtainableReason`. The validator enforces this.
+
+### App state (plan §11–12)
+- Signal stores. `ProfileStore` holds profiles: `{id, name, game, caught: number[] (National Dex), progressPart?}`. `SettingsStore` holds global settings. Both persist to the single `localStorage` key `poke-guide/state`, with `schemaVersion` and migrations, debounced writes and cross-tab sync.
+- The route `/:game/...` decides which data is shown. Catch toggles write only to the active profile **if its game matches**; otherwise a mismatch banner is shown.
+- **The `PKG1-` export code is a compatibility contract:** binary → CRC-16 → base64url, holding the game `codecId` (uint16), `dexCount` and a caught bitfield keyed by National Dex. **Never reuse or change a `codecId`**, and never key saved state on array indexes.
+- Catch status is **binary** (caught / not caught). There is intentionally no "seen" state.
+
+### Mechanics (plan §4.5, §13.11)
+Per-generation strategy modules (`core/mechanics/genN.ts`) provide the capture formula, stat formula, IV/DV system and shiny rules. They drive the generic catch-chance and IV/DV calculators. Implement formulas exactly as Bulbapedia's step-by-step algorithms describe, using integer math.
+
+## Project constraints (decided with the user)
+
+- **No license file** is added to the repo. The Bulbapedia attribution and the fan-project disclaimer in the About page are still required.
+- **The user handles all git manually** (init, staging, commits, branches, remotes, pushing, GitHub repo creation). Don't run git commands, and scaffold with `ng new --skip-git`. Where the plan says data or sprites are "committed", generate the files and leave committing to the user.
+- **Ask before installing anything outside the project.** Don't install global dependencies (`npm install -g`, global `npx` tool installs, `pip install --user`…) or additional programs (system packages, nvm Node versions, browsers, CLIs) without asking the user first.
+- **Ask before adding any new dependency**, including project-local ones in `package.json` (`dependencies` or `devDependencies`), even if the plan already names the package. `npm install`/`npm ci` of dependencies already in `package.json` is fine.
+- **Don't change files outside the project directory** (`/home/mih/Documents/Projects/poke-guide`). That includes dotfiles, shell profiles, global npm/git config and other projects. Allowed exceptions: Claude's memory folder (`~/.claude/projects/.../memory`), the session scratchpad under `/tmp/claude-*`, and tool caches such as `~/.npm`.
+- **GitHub Pages publishing is the last phase** (Phase 8). Until then everything runs locally. When deploying: build with `--base-href /<repo>/`, keep all asset/data URLs relative, copy `index.html` to `404.html`, and add `.nojekyll`.
+- The UI is English only. Sprites are the selected game's in-game sprites. Games are the international versions.

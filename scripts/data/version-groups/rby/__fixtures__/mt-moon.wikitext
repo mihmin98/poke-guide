@@ -1,0 +1,1239 @@
+<!-- poke-guide fixture: {"title":"Mt. Moon","resolvedTitle":"Mt. Moon","revid":4583696,"timestamp":"2026-07-02T08:50:32Z","fetchedAt":"2026-09-12T21:57:28.705Z"} -->
+{{missing image|needs=LGPE layout image}}
+{{Infobox location
+|image=Mt. Moon PE.png
+|type=mountain
+|location_name=Mt. Moon
+|japanese_name=お月見山
+|translated_name=Mount Otsukimi
+|location={{rt|3|Kanto|Routes 3}} and {{rtn|4|Kanto}}
+|region=Kanto
+|mapdesc=A mystical mountain that is known for its frequent meteor falls. The shards of stars that fall here are known as [[Moon Stone]]s.{{sup/3|FRLG}}<br>A mountain where a star fell. It now holds a mysterious power.{{sup/4|HGSS}}<br>A mountain where shooting stars are said to fall. It is apparently abundant with fossils.{{sup/7|PE}}
+|generation={{Gen|I}}, {{Gen|II}}, {{Gen|III}}, {{Gen|IV}}, {{Gen|VII}}
+|map=Kanto Mt Moon Map.png
+}}
+
+'''Mt. Moon''' (Japanese: '''お{{ruby|月見|つきみ}}{{ruby|山|やま}}''' ''Mount {{wp|Tsukimi|Otsukimi}}'')<ref>Formatted as オツキミやま ''Otsukimi-yama'' in {{4v2|Red|Green|Blue|Yellow}}, and {{2v2|FireRed|LeafGreen}} with the exception of certain dialogues where it is formatted fully in hiragana as おつきみやま ''Otsukimi-yama'' like in {{5v2|Gold|Silver|Crystal|HeartGold|SoulSilver}}. The name is rendered with kanji from {{pkmn|Black and White Versions 2|Black 2 and White 2}} onwards.</ref>, formatted as '''Mount Moon''' in [[Pokémon Brilliant Diamond and Shining Pearl]], is a mountain located in northern [[Kanto]], between [[Pewter City]] in the west and [[Cerulean City]] in the east. It also provides access to [[Mt. Moon Square]] in [[Generation II|Generations II]] and {{gen|IV}}. Climbing does not seem to be possible; to get past it, travelers always need to travel through the caves.
+
+Mt. Moon is known for being one of the few places where {{pkmn2|wild}} {{p|Clefairy}} can be found and for its frequent meteor falls. The shards of meteorites that fall here become [[Moon Stone]]s, which explains the mountain's name. The mountain is also known for being home to Pokémon [[Fossil]]s. [[Brock]] digs for Fossils here in his spare time.
+
+==Geography==
+===Generation I===
+In the [[Generation I]] games, Mt. Moon's interior is a large cave spanning three floors. Being the first cave that the {{player}} will come across with, Mt. Moon has a very long and complex structure. The first floor contains several ordinary {{pkmn|Trainer}}s, while the basement floor contains {{tc|Team Rocket Grunt|members of Team Rocket}} who are trying to steal [[Fossil]]s from Mt. Moon to market them for money. On the player's way out to [[Cerulean City]], the player will find two Fossils, the [[Dome Fossil]] and the [[Helix Fossil]] that a {{tc|Super Nerd}} claims to have found first. After being defeated in {{pkmn|battle}}, the Super Nerd lets the player choose one of the Fossils while he will take the other one. In {{game|Yellow}}, after the player obtains one of the Fossils, [[Jessie]] and [[James]] will appear for the first time and battle the player. However, they are not referred to as such in-game, sharing their {{DL|Pokémon Trainer|Trainer class}} with that of ordinary {{tc|Team Rocket Grunt}}s.
+
+Players will first encounter {{pkmn2|wild}} {{p|Clefairy}} here at Mt. Moon.
+
+===Generation II===
+In {{game2|Gold|Silver|Crystal}}, Mt. Moon has dramatically decreased in size from [[Pokémon Red and Green Versions|Pokémon Red, Green]], [[Pokémon Blue Version (Japanese)|Blue]], and {{v2|Yellow}}. It now has only one base floor with a couple of connectors. It is also a spot where the {{player}}'s {{ga|Silver|rival}} is training near the entrance and he will {{pkmn|battle}} the player for the sixth time during the game.
+
+When entering through the [[Pewter City]] entrance, there are two possible paths: one in the eastern direction and another one in the southern direction. By traveling south and then east, the [[Cerulean City]] entrance can be found. However, by traveling east from the Pewter City entrance, the player will end up at the northern side of Mt. Moon, where [[Mt. Moon Square]], its summit, is located. By traveling south in Mt. Moon Square, and entering the southern cavern, there will be a [[ledge]] which can be jumped to instantly access the Cerulean City entrance.
+
+Mt. Moon Square is an area in the heights of Mt. Moon. On {{DL|Days of the week|Monday}} [[Time|nights]], two {{p|Clefairy}} will dance and pray to a large [[Moon Stone]] in the square. By interrupting the dance and breaking the stone using {{m|Rock Smash}}, {{pkmn|Trainer}}s can always find a Moon Stone below the rock. There is also a small shop here that sells a variety of goods.
+
+===Generation III===
+Mt. Moon's incarnation in {{game|FireRed and LeafGreen|s}} is very similar to the original from the [[Generation I]] games. The only major change done for the remakes is the items found within the cave. Another addition is a man who is excavating for [[Fossil]]s in the north-eastern corner of the first floor. He is a friend of [[Brock]] and is a source of one of Brock's [[Fame Checker]] entries.
+
+===Generation IV===
+Mt. Moon's incarnation in {{game|HeartGold and SoulSilver|s}} is essentially intact from the [[Generation II]] games, but with updated graphics enhancing the scenery and depicting its mountainous nature more accurately. The only significant changes are in [[Mt. Moon Square]], where four {{p|Clefairy}} will appear instead of the only two that appear in the Generation II games, and the background music being changed to つながりのどうくつ [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|''Union Cave'']], a [[Johto]] theme, from イワヤマトンネル [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|''Rock Tunnel'']], a [[Kanto]] theme, which is the background music that plays here in the Generation II games (the latter being itself a remix of おつきみ{{tt|山|やま}}のどうくつ [[Game Boy: Entire Pokémon Sounds Collection CD|''Caves of Mt. Moon'']] from the [[Generation I]] games).
+
+==Items==
+{{itlisth|mountain}}
+{{Itemlist|TM Water|1F, near the southwest corner of the floor|R=yes|B=yes|Y=yes|display={{TM|12|Water Gun}}}}
+{{Itemlist|TM Grass|1F, southeast of {{tc|Bug Catcher}} Kent, in the southwest area of the floor|FR=yes|LG=yes|display={{TM|09|Bullet Seed}}}}
+{{Itemlist|Potion|1F, in the southwest area of the floor|LP=yes|LE=yes}}
+{{Itemlist|Great Ball|1F, northwest of the Potion, near {{tc|Bug Catcher}} Kent|LP=yes|LE=yes|display=[[Great Ball]] ×5}}
+{{Itemlist|Potion|
+* 1F, to the far northwest of [[TM12]], in the southwest area of the floor
+* 1F, southwest of the {{tc|Super Nerd}}, in the south area of the floor|R=yes|B=yes|Y=yes|display=[[Potion]] ×2}}
+{{Itemlist|Paralyze Heal|1F, northwest of {{tc|Bug Catcher}} Kent, in the southwest area of the floor|FR=yes|LG=yes|display=[[Paralyze Heal|Parlyz Heal]]}}
+{{Itemlist|Potion|1F, northwest of {{tc|Super Nerd}} Jovan, in the south area of the floor|FR=yes|LG=yes}}
+{{Itemlist|Rare Candy|1F, near the southeast corner of the floor|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Ether|1F, near the southeast corner of the floor|LP=yes|LE=yes}}
+{{Itemlist|Awakening|1F, northwest of the Ether, near {{tc|Super Nerd}} Jovan|LP=yes|LE=yes}}
+{{Itemlist|Escape Rope|1F, northeast of the [[Rare Candy]], in the east area of the floor|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Repel|1F, northeast of the [[Ether]], in the east area of the floor|LP=yes|LE=yes}}
+{{Itemlist|Stardust|1F, in a crater in the northeast corner of the floor ''(hidden)'' (daily)|LP=yes|LE=yes}}
+{{Itemlist|Moon Stone|1F, in the northwest area of the floor|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Pearl|1F, in the northwest area of the floor|LP=yes|LE=yes|display={{i|Pearl}}}}
+{{Itemlist|Poké Ball|1F, from a man in the northwest near the ladder to B1F, if the player has less than 10 {{i|Poké Ball}}s (repeatable)|LP=yes|LE=yes|display={{i|Poké Ball}}}}
+{{Itemlist|Tiny Mushroom|
+* B1F, down the easternmost ladder on 1F, on the second easternmost of the four rocks lined up horizontally ''(hidden [[recurring item]]; group B and C)''
+* B1F, down the ladder between the other two ladders on 1F, on the rock in the northeast corner ''(hidden [[recurring item]]; group B and C)''
+* B1F, up the ladder in the northwest corner of B2F, on a rock in the northeast corner ''(hidden [[recurring item]]; group B and C)''|FR=yes|LG=yes|display=[[Tiny Mushroom|TinyMushroom]] ×3}}
+{{Itemlist|Big Mushroom|
+* B1F, down the easternmost ladder on 1F, on the two faceable rocks northwest of the ladder that leads to B2F (×2) ''(hidden [[recurring item]]; group C)''
+* B1F, down the westernmost ladder on 1F, on the southernmost rock ''(hidden [[recurring item]]; group C)''|FR=yes|LG=yes|display=[[Big Mushroom]] ×3}}
+{{Itemlist|Big Mushroom|B1F, down the first ladder east of the western entrance, to the west of the second crater between two groups of rocks ''(hidden)'' (daily)|LP=yes|LE=yes}}
+{{Itemlist|HP Up|B2F, on a plateau to the far east of a {{tc|Team Rocket Grunt}} in a closed-off room accessible from the easternmost ladder on 1F|R=yes|B=yes|Y=yes}}
+{{Itemlist|Star Piece|B2F, on a plateau to the far east of a {{tc|Team Rocket Grunt}} in a closed-off room accessible from the easternmost ladder on 1F|FR=yes|LG=yes}}
+{{Itemlist|TM Normal|B2F, on a plateau north of a {{tc|Team Rocket Grunt}} in a closed-off room accessible from the ladder between the other two ladders on 1F|R=yes|B=yes|Y=yes|display={{TM|01|Mega Punch}}}}
+{{Itemlist|TM Dark|B2F, on a plateau north of a {{tc|Team Rocket Grunt}} in a closed-off room accessible from the ladder between the other two ladders on 1F|FR=yes|LG=yes|display={{TM|46|Thief}}}}
+{{Itemlist|Rare Candy|B2F, on a plateau northeast of the {{tc|Team Rocket Grunt}} in a closed-off room accessible from the eastern ladder on 1F|LP=yes|LE=yes}}
+{{Itemlist|Moon Stone|B2F, in a crater east of the {{tc|Team Rocket Grunt}} in a closed-off room accessible from the eastern ladder on 1F ''(hidden)'' (daily)|LP=yes|LE=yes}}
+{{Itemlist|Moon Stone|B2F, in a crater east of the ladder in a closed-off room accessible from the ladder exactly north of the entrance on 1F ''(hidden)'' (daily)|LP=yes|LE=yes}}
+{{Itemlist|Nugget|B2F, on a plateau in a closed-off room accessible from the ladder between the other two ladders on 1F|LP=yes|LE=yes}}
+{{Itemlist|Ether|B2F, on the rock northeast of a {{tc|Team Rocket Grunt}} in a closed-off room accessible from the ladder between the other two ladders on 1F ''(hidden)''|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Revive|B2F, north of the ladder in the center of the floor that leads to B1F|FR=yes|LG=yes|LP=yes|LE=yes}}
+{{Itemlist|Potion|B2F, northeast of the {{tc|Team Rocket Grunt}} northeast of the ladder in the center of the floor that leads to B1F|LP=yes|LE=yes}}
+{{Itemlist|Revive|B2F, southeast of the {{tc|Team Rocket Grunt}} in the west area of the floor|LP=yes|LE=yes}}
+{{Itemlist|Moon Stone|B2F, southeast of the {{tc|Super Nerd}}, on the wall{{sup/1|RBY}} or on a rock{{sup/3|FRLG}} ''(hidden)''|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Dome Fossil|B2F, choice between this or the [[Helix Fossil]] after defeating the {{tc|Super Nerd}}|R=yes|B=yes|Y=yes|FR=yes|LG=yes|LP=yes|LE=yes}}
+{{Itemlist|Helix Fossil|B2F, choice between this or the [[Dome Fossil]] after defeating the {{tc|Super Nerd}}|R=yes|B=yes|Y=yes|FR=yes|LG=yes|LP=yes|LE=yes}}
+{{Itemlist|Antidote|B2F, southwest of the ladder near the northwest corner of the floor|FR=yes|LG=yes}}
+{{Itemlist|Revive|On a rock southeast of the northern ladder ''(hidden)''|HG=yes|SS=yes}}
+{{itlistfoot|mountain}}
+
+===Walking Pokémon===
+{{itlisth|cave}}
+{{Itemlist/2|Tiny Mushroom|Big Mushroom|
+*B1F, found by {{pkmn2|walking}} {{p|Paras}} and {{p|Parasect}} down the first ladder east of the western entrance, east of the ladder to B2F
+*B1F, found by walking Paras and Parasect about midway between the ladders to 1F and B2F, in the area accessible from the central ladder on 1F 
+*B1F, found by walking Paras and Parasect just south of the ladder to 1F, in the area accessible from the northwestern ladder on 1F
+*B2F, found by walking Paras and Parasect east of the {{tc|Team Rocket Grunt}} in a closed-off room accessible from the eastern ladder on 1F
+*B2F, found by walking Paras and Parasect on the long western path, in the large area accessible from either the northwestern ladder on 1F or the eastern entrance to the cave|LP=yes|LE=yes}}
+{{itlistfoot|cave}}
+
+==Pokémon==
+===Generation I===
+<!--Wild Pokémon Encounter Data<ref>[https://github.com/pret/pokered/tree/master/data/wild Pokémon Red and Blue Disassembly Wild Encounter Data - Pret]</ref><ref>[https://github.com/pret/pokeyellow/tree/master/data/wild Pokémon Yellow Disassembly Wild Encounter Data - Pret]</ref><ref>[https://shinyfinder.github.io/encounter-slots/blue-japanese/Land%20&%20Surf.html Pokémon Blue (Japanese) Wild Encounter Data - Shinyfinder]</ref>-->
+====1F====
+{{catch/header|mountain|no}}
+{{catch/entry1|027|Sandshrew|no|no|yes|Cave|12|4%|type1=Ground}}
+{{catch/entry1|035|Clefairy|yes|yes|no|Cave|8|1%|type1=Normal}}
+{{catch/entry1|035|Clefairy|no|no|yes|Cave|11|1%|type1=Normal}}
+{{catch/entry1|041|Zubat|yes|yes|no|Cave|6-11|79%|type1=Poison|type2=Flying}}
+{{catch/entry1|041|Zubat|no|no|yes|Cave|6-11|75%|type1=Poison|type2=Flying}}
+{{catch/entry1|046|Paras|yes|yes|no|Cave|8|5%|type1=Bug|type2=Grass}}
+{{catch/entry1|074|Geodude|yes|yes|no|Cave|8, 10|15%|type1=Rock|type2=Ground}}
+{{catch/entry1|074|Geodude|no|no|yes|Cave|10|20%|type1=Rock|type2=Ground}}
+{{catch/footer|mountain}}
+
+====B1F====
+{{catch/header|mountain|no}}
+{{catch/entry1|035|Clefairy|yes|yes|no|Cave|9|4%|type1=Normal}}
+{{catch/entry1|035|Clefairy|no|no|yes|Cave|10, 12|5%|type1=Normal}}
+{{catch/entry1|041|Zubat|yes|yes|no|Cave|7-11|60%|type1=Poison|type2=Flying}}
+{{catch/entry1|041|Zubat|no|no|yes|Cave|8-11|65%|type1=Poison|type2=Flying}}
+{{catch/entry1|046|Paras|yes|yes|no|Cave|10|10%|type1=Bug|type2=Grass}}
+{{catch/entry1|046|Paras|no|no|yes|Cave|9, 11|10%|type1=Bug|type2=Grass}}
+{{catch/entry1|074|Geodude|yes|yes|no|Cave|7-9|26%|type1=Rock|type2=Ground}}
+{{catch/entry1|074|Geodude|no|no|yes|Cave|10-11|20%|type1=Rock|type2=Ground}}
+{{catch/footer|mountain}}
+
+====B2F====
+{{catch/header|mountain|no}}
+{{catch/entry1|035|Clefairy|yes|yes|no|Cave|10, 12|6%|type1=Normal}}
+{{catch/entry1|035|Clefairy|no|no|yes|Cave|9, 11, 13|10%|type1=Normal}}
+{{catch/entry1|041|Zubat|yes|yes|no|Cave|9-12|49%|type1=Poison|type2=Flying}}
+{{catch/entry1|041|Zubat|no|no|yes|Cave|10-13|55%|type1=Poison|type2=Flying}}
+{{catch/entry1|046|Paras|yes|yes|no|Cave|10, 12|15%|type1=Bug|type2=Grass}}
+{{catch/entry1|046|Paras|no|no|yes|Cave|13|15%|type1=Bug|type2=Grass}}
+{{catch/entry1|074|Geodude|yes|yes|no|Cave|9-10|30%|type1=Rock|type2=Ground}}
+{{catch/entry1|074|Geodude|no|no|yes|Cave|11|20%|type1=Rock|type2=Ground}}
+{{catch/footer|mountain}}
+
+===Generation II===
+{{catch/header|mountain|yes}}
+{{Catch/entry2|027|Sandshrew|yes|no|no|Cave|8|all=20%|type1=Ground}}
+{{Catch/entry2|027|Sandshrew|no|no|yes|Cave|8|20%|20%|0%|type1=Ground}}
+{{Catch/entry2|028|Sandslash|yes|no|no|Cave|10|all=5%|type1=Ground}}
+{{Catch/entry2|035|Clefairy|yes|yes|no|Cave|8|all=5%|type1=Normal}}
+{{Catch/entry2|035|Clefairy|no|no|yes|Cave|8|5%|5%|0%|type1=Normal}}
+{{Catch/entry2|035|Clefairy|no|no|yes|Cave|8, 12|0%|0%|25%|type1=Normal}}
+{{Catch/entry2|041|Zubat|yes|no|yes|Cave|6|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entry2|041|Zubat|no|yes|no|Cave|6, 8|all=50%|type1=Poison|type2=Flying}}
+{{Catch/entry2|046|Paras|yes|yes|yes|Cave|12|all=10%|type1=Bug|type2=Grass}}
+{{Catch/entry2|074|Geodude|yes|no|no|Cave|8|all=30%|type1=Rock|type2=Ground}}
+{{Catch/entry2|074|Geodude|no|yes|yes|Cave|8, 10|all=35%|type1=Rock|type2=Ground}}
+{{catch/footer|mountain}}
+
+===Generation III===
+====1F====
+{{catch/header|mountain|no}}
+{{Catch/entryfl|041|Zubat|yes|yes|Cave|7-10|69%|type1=Poison|type2=Flying}}
+{{Catch/entryfl|074|Geodude|yes|yes|Cave|7-9|25%|type1=Rock|type2=Ground}}
+{{Catch/entryfl|046|Paras|yes|yes|Cave|8|5%|type1=Bug|type2=Grass}}
+{{Catch/entryfl|035|Clefairy|yes|yes|Cave|8|1%|type1=Normal}}
+{{catch/footer|mountain}}
+
+====B1F====
+{{catch/header|mountain|no}}
+{{Catch/entryfl|046|Paras|yes|yes|Cave|5-10|100%|type1=Bug|type2=Grass}}
+{{catch/footer|mountain}}
+
+====B2F====
+{{catch/header|mountain|no}}
+{{Catch/entryfl|041|Zubat|yes|yes|Cave|8-11|49%|type1=Poison|type2=Flying}}
+{{Catch/entryfl|074|Geodude|yes|yes|Cave|9-10|30%|type1=Rock|type2=Ground}}
+{{Catch/entryfl|046|Paras|yes|yes|Cave|10, 12|15%|type1=Bug|type2=Grass}}
+{{Catch/entryfl|035|Clefairy|yes|yes|Cave|10, 12|6%|type1=Normal}}
+{{catch/footer|mountain}}
+
+===Generation IV===
+{{catch/header|mountain|4}}
+{{Catch/entryhs|041|Zubat|yes|no|Cave|6|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|041|Zubat|no|yes|Cave|6, 8|all=50%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|074|Geodude|yes|no|Cave|8|all=30%|type1=Rock|type2=Ground}}
+{{Catch/entryhs|074|Geodude|no|yes|Cave|6, 10|all=35%|type1=Rock|type2=Ground}}
+{{Catch/entryhs|027|Sandshrew|yes|no|Cave|8|all=20%|type1=Ground}}
+{{Catch/entryhs|046|Paras|yes|yes|Cave|12|all=10%|type1=Bug|type2=Grass}}
+{{Catch/entryhs|028|Sandslash|yes|no|Cave|10|all=5%|type1=Ground}}
+{{Catch/entryhs|035|Clefairy|yes|yes|Cave|8|all=5%|type1=Normal}}
+{{catch/div|mountain|Special}}
+{{catch/entryhs|296|Makuhita|yes|yes|Hoenn|8|all=20%|type1=Fighting}}
+{{catch/entryhs|359|Absol|yes|yes|Hoenn|6, 8|all=20%|type1=Dark}}
+{{catch/entryhs|433|Chingling|yes|yes|Sinnoh|8|all=20%|type1=Psychic}}
+{{catch/entryhs|436|Bronzor|yes|yes|Sinnoh|6, 8|all=20%|type1=Steel|type2=Psychic}}
+{{catch/footer|mountain}}
+
+===Generation VII===
+====1F and B1F====
+{{Catch/header|mountain|no}}
+{{Catch/entrype|035|Clefairy|yes|yes|Cave|5-10|4%|type1=Fairy}}
+{{Catch/entrype|041|Zubat|yes|yes|Cave|5-10|40%|type1=Poison|type2=Flying}}
+{{Catch/entrype|046|Paras|yes|yes|Cave|5-10|15%|type1=Bug|type2=Grass}}
+{{Catch/entrype|074|Geodude|yes|yes|Cave|5-10|40%|type1=Rock|type2=Ground}}
+{{Catch/entrype|095|Onix|yes|yes|Cave|5-10|1%|type1=Rock|type2=Ground}}
+{{catch/div|mountain|Rare Spawns}}
+{{Catch/entrype|113|Chansey|yes|yes|Cave|5-10|-}}
+{{Catch/footer|mountain|2}}
+
+====B2F====
+{{Catch/header|mountain|no}}
+{{Catch/entrype|035|Clefairy|yes|yes|Cave|5-10|9%|type1=Fairy}}
+{{Catch/entrype|036|Clefable|yes|yes|Cave|5-10|1%|type1=Fairy}}
+{{Catch/entrype|041|Zubat|yes|yes|Cave|5-10|40%|type1=Poison|type2=Flying}}
+{{Catch/entrype|046|Paras|yes|yes|Cave|5-10|15%|type1=Bug|type2=Grass}}
+{{Catch/entrype|074|Geodude|yes|yes|Cave|5-10|34%|type1=Rock|type2=Ground}}
+{{Catch/entrype|095|Onix|yes|yes|Cave|5-10|1%|type1=Rock|type2=Ground}}
+{{catch/div|mountain|Rare Spawns}}
+{{Catch/entrype|113|Chansey|yes|yes|Cave|5-10|-}}
+{{Catch/footer|mountain|2}}
+
+==Trainers==
+===Generation I===
+====1F====
+{{Trainerheader|mountain}}
+{{Trainerentry|Spr RG Lass.png|game=1|Lass||210|1|035|Clefairy||14|None|}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr RG Bug Catcher.png|game=1|Bug Catcher||110|2|013|Weedle||11|None|014|Kakuna||11|None|}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr RG Super Nerd.png|game=1|Super Nerd||275|2|081|Magnemite||11|None|100|Voltorb||11|None|}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr RG Bug Catcher.png|game=1|Bug Catcher||100|3|010|Caterpie||10|None|011|Metapod||10|None|010|Caterpie||10|None|}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr RG Lass.png|game=1|Lass||165|2|043|Oddish||11|None|069|Bellsprout||11|None|}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr RG Youngster.png|game=1|Youngster||150|3|019|Rattata||10|None|019|Rattata||10|None|041|Zubat||10|None|}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr RG Hiker.png|game=1|Hiker||350|3|074|Geodude||10|None|074|Geodude||10|None|095|Onix||10|None|}}
+{{Trainerfooter|mountain|1}}
+
+====B2F====
+{{Trainerheader|mountain}}
+{{Trainerentry|Spr RG Rocket.png|game=1|Rocket||330|3|027|Sandshrew||11|None|019|Rattata||11|None|041|Zubat||11|None|}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr RG Rocket.png|game=1|Rocket||360|2|041|Zubat||12|None|023|Ekans||12|None|}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr RG Rocket.png|game=1|Rocket|{{Sup/1|RB}}|480|1|020|Raticate||16|None|}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr RG Rocket.png|game=1|Rocket||390|2|019|Rattata||13|None|041|Zubat||13|None|}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr RG Super Nerd.png|game=1|Super Nerd||300|3|088|Grimer||12|None|100|Voltorb||12|None|109|Koffing||12|None|}}
+{{Trainerfooter|mountain|1}}
+
+====={{game|Yellow}}=====
+{{Party
+| background = 666666
+| border = CC0000
+| headcolor = CCCCCC
+| sprite = Spr Y Jessie James.png
+| prize = {{Pdollar}}420
+| name = {{color2|000|Team Rocket trio|Rocket}}
+| location = Mt. Moon
+| game = Yellow
+| pokemon = 3
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0023
+| pokemon = Ekans
+| level = 14
+| type1 = Poison
+| move1 = Wrap | move1type = Normal
+| move2 = Leer | move2type = Normal
+| move3 = Poison Sting | move3type = Poison
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0052
+| pokemon = Meowth
+| level = 14
+| type1 = Normal
+| move1 = Scratch | move1type = Normal
+| move2 = Growl | move2type = Normal
+| move3 = Bite | move3type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0109
+| pokemon = Koffing
+| level = 14
+| type1 = Poison
+| move1 = Tackle | move1type = Normal
+| move2 = Smog | move2type = Poison
+}}
+{{Party/end}}
+===Generation II===
+{{Party
+| caption = {{PlayerChoice|0152|Chikorita}}
+| background = {{silver color}}
+| border = {{silver color dark}}
+| headcolor = {{silver color light}}
+| sprite = Spr GS Silver 2.png
+| prize = {{PDollar}}4500
+| name = {{color2|000|Silver (game)|Silver}}
+| location = Mt. Moon
+| game = GSC
+| pokemon = 6
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0215
+| pokemon = Sneasel
+| gender = male
+| level = 41
+| type1 = Dark
+| type2 = Ice
+| move1 = Quick Attack | move1type = Normal
+| move2 = Screech | move2type = Normal
+| move3 = Faint Attack | move3type = Dark
+| move4 = Fury Cutter | move4type = Bug
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0042
+| pokemon = Golbat
+| gender = male
+| level = 42
+| type1 = Poison
+| type2 = Flying
+| move1 = Wing Attack | move1type = Flying
+| move2 = Confuse Ray | move2type = Ghost
+| move3 = Bite | move3type = Dark
+| move4 = Leech Life | move4type = Bug
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0082
+| pokemon = Magneton
+| gender = none
+| level = 41
+| type1 = Electric
+| type2 = Steel
+| move1 = SonicBoom | move1type = Normal
+| move2 = Thunder Wave | move2type = Electric
+| move3 = ThunderShock | move3type = Electric
+| move4 = Swift | move4type = Normal
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0094
+| pokemon = Gengar
+| gender = male
+| level = 43
+| type1 = Ghost
+| type2 = Poison
+| move1 = Shadow Ball | move1type = Ghost
+| move2 = Curse | move2type = ???
+| move3 = Mean Look | move3type = Normal
+| move4 = Confuse Ray | move4type = Ghost
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0065
+| pokemon = Alakazam
+| gender = male
+| level = 43
+| type1 = Psychic
+| move1 = Recover | move1type = Normal
+| move2 = Future Sight | move2type = Psychic
+| move3 = Disable | move3type = Normal
+| move4 = Psychic | move4type = Psychic
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0157
+| pokemon = Typhlosion
+| gender = male
+| level = 45
+| type1 = Fire
+| move1 = Swift | move1type = Normal
+| move2 = SmokeScreen | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Flame Wheel | move4type = Fire
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0155|Cyndaquil}}
+| background = {{silver color}}
+| border = {{silver color dark}}
+| headcolor = {{silver color light}}
+| sprite = Spr GS Silver 2.png
+| prize = {{PDollar}}4500
+| name = {{color2|000|Silver (game)|Silver}}
+| location = Mt. Moon
+| game = GSC
+| pokemon = 6
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0215
+| pokemon = Sneasel
+| gender = male
+| level = 41
+| type1 = Dark
+| type2 = Ice
+| move1 = Quick Attack | move1type = Normal
+| move2 = Screech | move2type = Normal
+| move3 = Faint Attack | move3type = Dark
+| move4 = Fury Cutter | move4type = Bug
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0042
+| pokemon = Golbat
+| gender = male
+| level = 42
+| type1 = Poison
+| type2 = Flying
+| move1 = Wing Attack | move1type = Flying
+| move2 = Confuse Ray | move2type = Ghost
+| move3 = Bite | move3type = Dark
+| move4 = Leech Life | move4type = Bug
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0082
+| pokemon = Magneton
+| gender = none
+| level = 41
+| type1 = Electric
+| type2 = Steel
+| move1 = SonicBoom | move1type = Normal
+| move2 = Thunder Wave | move2type = Electric
+| move3 = ThunderShock | move3type = Electric
+| move4 = Swift | move4type = Normal
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0094
+| pokemon = Gengar
+| gender = male
+| level = 43
+| type1 = Ghost
+| type2 = Poison
+| move1 = Shadow Ball | move1type = Ghost
+| move2 = Curse | move2type = ???
+| move3 = Mean Look | move3type = Normal
+| move4 = Confuse Ray | move4type = Ghost
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0065
+| pokemon = Alakazam
+| gender = male
+| level = 43
+| type1 = Psychic
+| move1 = Recover | move1type = Normal
+| move2 = Future Sight | move2type = Psychic
+| move3 = Disable | move3type = Normal
+| move4 = Psychic | move4type = Psychic
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0160
+| pokemon = Feraligatr
+| gender = male
+| level = 45
+| type1 = Water
+| move1 = Bite | move1type = Dark
+| move2 = Scary Face | move2type = Normal
+| move3 = Rage | move3type = Normal
+| move4 = Water Gun | move4type = Water
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0158|Totodile}}
+| background = {{silver color}}
+| border = {{silver color dark}}
+| headcolor = {{silver color light}}
+| sprite = Spr GS Silver 2.png
+| prize = {{PDollar}}4500
+| name = {{color2|000|Silver (game)|Silver}}
+| location = Mt. Moon
+| game = GSC
+| pokemon = 6
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0215
+| pokemon = Sneasel
+| gender = male
+| level = 41
+| type1 = Dark
+| type2 = Ice
+| move1 = Quick Attack | move1type = Normal
+| move2 = Screech | move2type = Normal
+| move3 = Faint Attack | move3type = Dark
+| move4 = Fury Cutter | move4type = Bug
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0042
+| pokemon = Golbat
+| gender = male
+| level = 42
+| type1 = Poison
+| type2 = Flying
+| move1 = Wing Attack | move1type = Flying
+| move2 = Confuse Ray | move2type = Ghost
+| move3 = Bite | move3type = Dark
+| move4 = Leech Life | move4type = Bug
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0082
+| pokemon = Magneton
+| gender = none
+| level = 41
+| type1 = Electric
+| type2 = Steel
+| move1 = SonicBoom | move1type = Normal
+| move2 = Thunder Wave | move2type = Electric
+| move3 = ThunderShock | move3type = Electric
+| move4 = Swift | move4type = Normal
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0094
+| pokemon = Gengar
+| gender = male
+| level = 43
+| type1 = Ghost
+| type2 = Poison
+| move1 = Shadow Ball | move1type = Ghost
+| move2 = Curse | move2type = ???
+| move3 = Mean Look | move3type = Normal
+| move4 = Confuse Ray | move4type = Ghost
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0065
+| pokemon = Alakazam
+| gender = male
+| level = 43
+| type1 = Psychic
+| move1 = Recover | move1type = Normal
+| move2 = Future Sight | move2type = Psychic
+| move3 = Disable | move3type = Normal
+| move4 = Psychic | move4type = Psychic
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0154
+| pokemon = Meganium
+| gender = male
+| level = 45
+| type1 = Grass
+| move1 = PoisonPowder | move1type = Poison
+| move2 = Razor Leaf | move2type = Grass
+| move3 = Body Slam | move3type = Normal
+| move4 = Light Screen | move4type = Psychic
+}}
+{{Party/end}}
+===Generation III===
+====1F====
+{{Trainerheader|mountain}}
+{{Trainerentry|Spr FRLG Bug Catcher.png|Bug Catcher|Kent|132|2|013|Weedle|♂|11|None|014|Kakuna|♂|11|None|36=トモミチ|37=Tomomichi}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr FRLG Lass.png|Lass|Iris|224|1|035|Clefairy|♀|14|None|36=ナホ|37=Naho}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr FRLG Super Nerd.png|Super Nerd|Jovan|264|2|081|Magnemite||11|None|100|Voltorb||11|None|36=キミタカ|37=Kimitaka}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr FRLG Bug Catcher.png|Bug Catcher|Robby|120|3|010|Caterpie|♂|10|None|011|Metapod|♂|10|None|010|Caterpie|♂|10|None|36=ノリオ|37=Norio}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr FRLG Lass.png|Lass|Miriam|176|2|043|Oddish|♀|11|None|069|Bellsprout|♀|11|None|36=ルリ|37=Ruri}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr FRLG Youngster.png|Youngster|Josh|160|3|019|Rattata|♂|10|None|019|Rattata|♂|10|None|041|Zubat|♂|10|None|36=タロウ|37=Tarō}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr FRLG Hiker.png|Hiker|Marcos|360|3|074|Geodude|♂|10|None|074|Geodude|♂|10|None|095|Onix|♂|10|None|36=カツト|37=Katsuto}}
+{{Trainerfooter|mountain}}
+
+====B2F====
+{{Trainerheader|mountain}}
+{{Trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||352|3|027|Sandshrew|♂|11|None|019|Rattata|♂|11|None|041|Zubat|♂|11|None}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||352|2|041|Zubat|♂|11|None|023|Ekans|♂|11|None}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||416|2|019|Rattata|♂|13|None|027|Sandshrew|♂|13|None}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||416|2|019|Rattata|♂|13|None|041|Zubat|♂|13|None}}
+{{Trainerdiv|mountain}}
+{{Trainerentry|Spr FRLG Super Nerd.png|Super Nerd|Miguel|288|3|088|Grimer|♂|12|None|100|Voltorb||12|None|109|Koffing|♂|12|None|36=ミツハル|37=Mitsuharu}}
+{{Trainerfooter|mountain}}
+
+===Generation IV===
+{{Party
+| caption = {{PlayerChoice|0152|Chikorita}}
+| background = {{silver color}}
+| border = {{silver color dark}}
+| headcolor = {{silver color light}}
+| sprite = Spr HGSS Silver.png
+| prize = {{pdollar}}3200
+| class = Rival
+| name = {{color2|000|Silver (game)|Silver}}
+| location = Mt. Moon
+| game = HGSS
+| pokemon = 6
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0215
+| pokemon = Sneasel
+| gender = male
+| level = 46
+| type1 = Dark
+| type2 = Ice
+| ability = Inner Focus
+| move1 = Faint Attack | move1type = Dark | move1cat = Physical
+| move2 = Icy Wind | move2type = Ice | move2cat = Special
+| move3 = Shadow Claw | move3type = Ghost | move3cat = Physical
+| move4 = Quick Attack | move4type = Normal | move4cat = Physical
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0042
+| pokemon = Golbat
+| gender = male
+| level = 47
+| type1 = Poison
+| type2 = Flying
+| ability = Inner Focus
+| move1 = Poison Fang | move1type = Poison | move1cat = Physical
+| move2 = Air Cutter | move2type = Flying | move2cat = Special
+| move3 = Confuse Ray | move3type = Ghost | move3cat = Status
+| move4 = Bite | move4type = Dark | move4cat = Physical
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0082
+| pokemon = Magneton
+| gender = none
+| level = 46
+| type1 = Electric
+| type2 = Steel
+| ability = Magnet Pull
+| move1 = Discharge | move1type = Electric | move1cat = Special
+| move2 = Thunder Wave | move2type = Electric | move2cat = Status
+| move3 = Magnet Bomb | move3type = Steel | move3cat = Physical
+| move4 = Supersonic | move4type = Normal | move4cat = Status
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0065
+| pokemon = Alakazam
+| gender = male
+| level = 48
+| type1 = Psychic
+| ability = Synchronize
+| move1 = Psychic | move1type = Psychic | move1cat = Special
+| move2 = Reflect | move2type = Psychic | move2cat = Status
+| move3 = Recover | move3type = Normal | move3cat = Status
+| move4 = Disable | move4type = Normal | move4cat = Status
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0094
+| pokemon = Gengar
+| gender = male
+| level = 48
+| type1 = Ghost
+| type2 = Poison
+| ability = Levitate
+| move1 = Shadow Ball | move1type = Ghost | move1cat = Special
+| move2 = Confuse Ray | move2type = Ghost | move2cat = Status
+| move3 = Curse | move3type = ??? | move3cat = Status
+| move4 = Mean Look | move4type = Normal | move4cat = Status
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0157
+| pokemon = Typhlosion
+| gender = male
+| level = 50
+| type1 = Fire
+| ability = Blaze
+| move1 = Flamethrower | move1type = Fire | move1cat = Special
+| move2 = Quick Attack | move2type = Normal | move2cat = Physical
+| move3 = Swift | move3type = Normal | move3cat = Special
+| move4 = Flame Wheel | move4type = Fire | move4cat = Physical
+}}
+{{Party/end}}
+
+{{Party
+| caption = {{PlayerChoice|0155|Cyndaquil}} 
+| background = {{silver color}}
+| border = {{silver color dark}}
+| headcolor = {{silver color light}}
+| sprite = Spr HGSS Silver.png
+| prize = {{pdollar}}3200
+| class = Rival
+| name = {{color2|000|Silver (game)|Silver}}
+| location = Mt. Moon
+| game = HGSS
+| pokemon = 6
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0215
+| pokemon = Sneasel
+| gender = male
+| level = 46
+| type1 = Dark
+| type2 = Ice
+| ability = Inner Focus
+| move1 = Faint Attack | move1type = Dark | move1cat = Physical
+| move2 = Icy Wind | move2type = Ice | move2cat = Special
+| move3 = Shadow Claw | move3type = Ghost | move3cat = Physical
+| move4 = Quick Attack | move4type = Normal | move4cat = Physical
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0042
+| pokemon = Golbat
+| gender = male
+| level = 47
+| type1 = Poison
+| type2 = Flying
+| ability = Inner Focus
+| move1 = Poison Fang | move1type = Poison | move1cat = Physical
+| move2 = Air Cutter | move2type = Flying | move2cat = Special
+| move3 = Confuse Ray | move3type = Ghost | move3cat = Status
+| move4 = Bite | move4type = Dark | move4cat = Physical
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0082
+| pokemon = Magneton
+| gender = none
+| level = 46
+| type1 = Electric
+| type2 = Steel
+| ability = Magnet Pull
+| move1 = Discharge | move1type = Electric | move1cat = Special
+| move2 = Thunder Wave | move2type = Electric | move2cat = Status
+| move3 = Magnet Bomb | move3type = Steel | move3cat = Physical
+| move4 = Supersonic | move4type = Normal | move4cat = Status
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0065
+| pokemon = Alakazam
+| gender = male
+| level = 48
+| type1 = Psychic
+| ability = Synchronize
+| move1 = Psychic | move1type = Psychic | move1cat = Special
+| move2 = Reflect | move2type = Psychic | move2cat = Status
+| move3 = Recover | move3type = Normal | move3cat = Status
+| move4 = Disable | move4type = Normal | move4cat = Status
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0094
+| pokemon = Gengar
+| gender = male
+| level = 48
+| type1 = Ghost
+| type2 = Poison
+| ability = Levitate
+| move1 = Shadow Ball | move1type = Ghost | move1cat = Special
+| move2 = Confuse Ray | move2type = Ghost | move2cat = Status
+| move3 = Curse | move3type = ??? | move3cat = Status
+| move4 = Mean Look | move4type = Normal | move4cat = Status
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0160
+| pokemon = Feraligatr
+| gender = male
+| level = 50
+| type1 = Water
+| ability = Torrent
+| move1 = Waterfall | move1type = Water | move1cat = Physical
+| move2 = Ice Fang | move2type = Ice | move2cat = Physical
+| move3 = Slash | move3type = Normal | move3cat = Physical
+| move4 = Crunch | move4type = Dark | move4cat = Physical
+}}
+{{Party/end}}
+
+{{Party
+| caption = {{PlayerChoice|0158|Totodile}}
+| background = {{silver color}}
+| border = {{silver color dark}}
+| headcolor = {{silver color light}}
+| sprite = Spr HGSS Silver.png
+| prize = {{pdollar}}3200
+| class = Rival
+| name = {{color2|000|Silver (game)|Silver}}
+| location = Mt. Moon
+| game = HGSS
+| pokemon = 6
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0215
+| pokemon = Sneasel
+| gender = male
+| level = 46
+| type1 = Dark
+| type2 = Ice
+| ability = Inner Focus
+| move1 = Faint Attack | move1type = Dark | move1cat = Physical
+| move2 = Icy Wind | move2type = Ice | move2cat = Special
+| move3 = Shadow Claw | move3type = Ghost | move3cat = Physical
+| move4 = Quick Attack | move4type = Normal | move4cat = Physical
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0042
+| pokemon = Golbat
+| gender = male
+| level = 47
+| type1 = Poison
+| type2 = Flying
+| ability = Inner Focus
+| move1 = Poison Fang | move1type = Poison | move1cat = Physical
+| move2 = Air Cutter | move2type = Flying | move2cat = Special
+| move3 = Confuse Ray | move3type = Ghost | move3cat = Status
+| move4 = Bite | move4type = Dark | move4cat = Physical
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0082
+| pokemon = Magneton
+| gender = none
+| level = 46
+| type1 = Electric
+| type2 = Steel
+| ability = Magnet Pull
+| move1 = Discharge | move1type = Electric | move1cat = Special
+| move2 = Thunder Wave | move2type = Electric | move2cat = Status
+| move3 = Magnet Bomb | move3type = Steel | move3cat = Physical
+| move4 = Supersonic | move4type = Normal | move4cat = Status
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0065
+| pokemon = Alakazam
+| gender = male
+| level = 48
+| type1 = Psychic
+| ability = Synchronize
+| move1 = Psychic | move1type = Psychic | move1cat = Special
+| move2 = Reflect | move2type = Psychic | move2cat = Status
+| move3 = Recover | move3type = Normal | move3cat = Status
+| move4 = Disable | move4type = Normal | move4cat = Status
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0094
+| pokemon = Gengar
+| gender = male
+| level = 48
+| type1 = Ghost
+| type2 = Poison
+| ability = Levitate
+| move1 = Shadow Ball | move1type = Ghost | move1cat = Special
+| move2 = Confuse Ray | move2type = Ghost | move2cat = Status
+| move3 = Curse | move3type = ??? | move3cat = Status
+| move4 = Mean Look | move4type = Normal | move4cat = Status
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0154
+| pokemon = Meganium
+| gender = male
+| level = 50
+| type1 = Grass
+| ability = Overgrow
+| move1 = PoisonPowder | move1type = Poison | move1cat = Status
+| move2 = Synthesis | move2type = Grass | move2cat = Status
+| move3 = Light Screen | move3type = Psychic | move3cat = Status
+| move4 = Petal Dance | move4type = Grass | move4cat = Special
+}}
+{{Party/end}}
+
+===Generation VII===
+====1F====
+{{trainerheader|mountain}}
+{{trainerentry|VSBug Catcher PE.png{{!}}90px|game=PE|Bug Catcher|Kent|84<br>3 {{i|Poké Ball}}s|1|012|Butterfree|♂|7|None|36=トモミチ|37=Tomomichi}}
+{{trainerdiv|mountain}}
+{{trainerentry|VSLass PE.png{{!}}90px|game=PE|Lass|Evelyn|160<br>3 {{i|Poké Ball}}s|1|069|Bellsprout|♀|8|None|36=ナホ|37=Naho}}
+{{trainerdiv|mountain}}
+{{trainerentry|VSSuper Nerd PE.png{{!}}90px|game=PE|Super Nerd|Jovan|400<br>3 {{i|Poké Ball}}s|1|088|Grimer|♂|10|None|36=キミタカ|37=Kimitaka}}
+{{trainerdiv|mountain}}
+{{trainerentry|VSYoungster PE.png{{!}}90px|game=PE|Youngster|Robby|160<br>3 {{i|Poké Ball}}s|1|056|Mankey|♂|8|None|36=ノリオ|37=Norio}}
+{{trainerdiv|mountain}}
+{{trainerentry|VSLass PE.png{{!}}90px|game=PE|Lass|Miriam|160<br>3 {{i|Poké Ball}}s|1|035|Clefairy|♀|8|None|36=ルリ|37=Ruri}}
+{{trainerdiv|mountain}}
+{{trainerentry|VSYoungster PE.png{{!}}90px|game=PE|Youngster|Josh|160<br>3 {{i|Poké Ball}}s|1|027|Sandshrew|♂|8|None|36=タロウ|37=Tarō}}
+{{trainerdiv|mountain}}
+{{trainerentry|VSHiker PE.png{{!}}90px|game=PE|Hiker|Marcos|400<br>3 {{i|Poké Ball}}s|2|074|Geodude|♂|10|None|074|Geodude|♂|10|None|36=カツト|37=Katsuto}}
+{{trainerdiv|mountain|After becoming Champion}}
+{{trainerentry/master|VSBug Catcher Master PE.png{{!}}90px|Bug Catcher|Evan|046|Paras|♂|70|Bug|X-Scissor|Poison|Sludge Bomb|36=トシミツ|37=Toshimitsu}}
+{{trainerfooter|mountain|PE}}
+
+====B1F====
+{{trainerheader|mountain}}
+{{trainerdiv|mountain|After becoming Champion}}
+{{trainerentry/master|VSLass Master PE.png{{!}}90px|Lass|Alexandra|036|Clefable|♀|80|Steel|Iron Tail|Fairy|Moonblast|Normal|Minimize|36=トモミ|37=Tomomi}}
+{{trainerfooter|mountain|PE}}
+
+====B2F====
+{{trainerheader|mountain}}
+{{trainerentry|VSTeam Rocket Grunt M PE.png{{!}}90px|game=PE|Team Rocket Grunt||252|1|019|Rattata|♂|9|None}}
+{{trainerdiv|mountain}}
+{{trainerentry|VSTeam Rocket Grunt M PE.png{{!}}90px|game=PE|Team Rocket Grunt||252|1|096|Drowzee|♂|9|None}}
+{{trainerdiv|mountain}}
+{{trainerentry|VSTeam Rocket Grunt F PE.png{{!}}90px|game=PE|Team Rocket Grunt||252|1|041|Zubat|♀|9|None}}
+{{trainerdiv|mountain}}
+{{trainerentry|VSSuper Nerd PE.png{{!}}90px|game=PE|Super Nerd|Miguel|400<br>3 {{i|Poké Ball}}s|2|100|Voltorb||10|None|081|Magnemite||10|None|36=ミツハル|37=Mitsuharu}}
+{{trainerfooter|mountain|PE}}
+
+{{Party/2
+| background = 666
+| bordercolor = C00
+| headcolor = CCC
+| location = Mt. Moon
+| game = LGPE
+| prize = {{Pdollar}}1,152
+| t-background = F5BCE2
+| t-border = E44EB2
+| sprite = VSJessie PE.png
+| size = 90px
+| class = Team Rocket
+| classlink = Team Rocket
+| name = {{color2|000|Jessie}}
+| pokemon = 1
+| t-background2 = CCDDFF
+| t-border2 = 4D88FF
+| sprite2 = VSJames PE.png
+| size2 = 90px
+| class2 = Team Rocket
+| classlink2 = Team Rocket
+| name2 = {{color2|000|James}}
+| pokemon2 = 1
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0023
+| pokemon = Ekans
+| gender = male
+| level = 12
+| type1 = Poison
+| move1 = Wrap | move1type = Normal | move1cat = Physical
+| move2 = Acid | move2type = Poison | move2cat = Special
+}}
+{{Party/2/div|t-background2 = CCDDFF}}
+{{Pokémon
+| gen = PE
+| ndex = 0109
+| pokemon = Koffing
+| gender = male
+| level = 12
+| type1 = Poison
+| move1 = Poison Gas | move1type = Poison | move1cat = Status
+| move2 = Tackle | move2type = Normal | move2cat = Physical
+}}
+{{Party/end}}{{-}}
+
+{{trainerheader|mountain}}
+{{trainerdiv|mountain|After becoming Champion}}
+{{trainerentry/master|VSHiker Master PE.png{{!}}90px|Hiker|Barnaby|140|Kabuto|♂|70|Psychic|Reflect|Ground|Sand Attack|Normal|Substitute|Bug|Leech Life|36=ユウジ|37=Yūji}}
+{{trainerdiv|mountain}}
+{{trainerentry/master|VSHiker Master PE.png{{!}}90px|Hiker|Colson|138|Omanyte|♂|70|Water|Scald|Ice|Blizzard|36=シンジ|37=Shinji}}
+{{trainerfooter|mountain|PE}}
+
+==Walking Pokémon effects==
+When interacting with [[walking Pokémon]] in {{v2|HeartGold and SoulSilver|s}}, the Pokémon may occasionally show an altered mood specific to this location.
+
+{| class="roundtable" style="margin: auto; text-align: center; background-color: #{{locationcolor/med|cave}}; border: 3px solid #{{locationcolor/dark|cave}}"
+|- style="background:#{{locationcolor/light|cave}}"
+! Games
+! Pokémon
+! Area
+! Quote
+|- style="background-color: #FFF"
+! rowspan="3" | {{GameIcon|HG}}{{GameIcon|SS}}
+|- style="background-color: #FFF"
+| [[File:Ani035OD.png]][[File:Ani036OD.png]][[File:Ani173OD.png]]<br>{{p|Clefairy}}, {{p|Clefable}} and {{p|Cleffa}}
+| Anywhere
+| <Pokémon's name> is looking up at the sky...
+|- style="background-color: #FFF"
+| [[File:Ani035OD.png]][[File:Ani036OD.png]][[File:Ani173OD.png]]<br>{{p|Clefairy}}, {{p|Clefable}} and {{p|Cleffa}}
+| Anywhere
+| <Pokémon's name> suddenly started dancing!
+|}
+
+==Layout==
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{Locationcolor/dark|mountain}}"
+|-
+! style="background:#{{Locationcolor/light|mountain}}; {{roundytl|5px}}" | Version
+! style="background:#{{Locationcolor/light|mountain}}" | 1F
+! style="background:#{{Locationcolor/light|mountain}}" | B1F
+! style="background:#{{Locationcolor/light|mountain}}; {{roundytr|5px}}" | B2F
+|-
+! style="background:#{{red color}}" | {{color2|000|Pokémon Red and Green Versions|Red (JP)}}
+| rowspan="6" | [[File:Mt Moon 1F RBY.png|180px]]
+| rowspan="6" | [[File:Mt Moon B1F RBY.png|180px]]
+| rowspan="6" | [[File:Mt Moon B2F RBY.png|180px]]
+|-
+! style="background:#{{green color}}" | {{color2|000|Pokémon Red and Green Versions|Green}}
+|-
+! style="background:#{{blue color}}" | {{color2|fff|Pokémon Blue Version (Japanese)|Blue (JP)}}
+|-
+! style="background:#{{red color}}" | {{color2|000|Pokémon Red and Blue Versions|Red}}
+|-
+! style="background:#{{blue color}}" | {{color2|fff|Pokémon Red and Blue Versions|Blue}}
+|-
+! style="background:#{{yellow color}}" | {{color2|000|Pokémon Yellow Version|Yellow}}
+|-
+! style="background:#{{gold color}}" | {{color2|000|Pokémon Gold and Silver Versions|Gold}}
+| rowspan="3" | [[File:Mt Moon 1F GSC.png|180px]]
+|-
+! style="background:#{{silver color}}" | {{color2|000|Pokémon Gold and Silver Versions|Silver}}
+|-
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon Crystal Version|Crystal}}
+|-
+! style="background:#{{firered color}}" | {{color2|000|Pokémon FireRed and LeafGreen Versions|FireRed}}
+| rowspan="2" | [[File:Mt Moon 1F FRLG.png|180px]]
+| rowspan="2" | [[File:Mt Moon B1F FRLG.png|180px]]
+| rowspan="2" | [[File:Mt Moon B2F FRLG.png|180px]]
+|-
+! style="background:#{{leafgreen color}}" | {{color2|000|Pokémon FireRed and LeafGreen Versions|LeafGreen}}
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+| rowspan="2" | [[File:Mt Moon 1F HGSS.png|180px]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan="4" style="background:#{{Locationcolor/light|mountain}}; {{roundybottom|5px}}" | &nbsp;
+|}
+
+==[[Location preview|Preview]]==
+<gallery>
+File:FL Mt Moon.png|In {{color2|000|Pokémon FireRed and LeafGreen Versions|FireRed and LeafGreen}}
+File:HGSS Mt. Moon-Morning.png|In {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold and SoulSilver}}, during the {{color2|000|Time|morning}} ({{color2|000|Clefairy (Pokémon)|Clefairy}})
+File:HGSS Mt. Moon-Day.png|In {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold and SoulSilver}}, during {{color2|000|Time|daytime}} ({{color2|000|Paras (Pokémon)|Paras}})
+File:HGSS Mt. Moon-Evening.png|In {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold and SoulSilver}}, during the {{color2|000|Time|evening}} ({{color2|000|Paras (Pokémon)|Paras}})
+File:HGSS Mt. Moon-Night.png|In {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold and SoulSilver}}, during {{color2|000|Time|nighttime}} ({{color2|000|Clefairy (Pokémon)|Clefairy}})
+</gallery>
+
+==In the side games==
+[[File:Pinball Blue Mt. Moon.png|thumb]]
+===Pokémon Pinball===
+Mt. Moon appears on the Blue Field as Area 1. Catchable Pokémon include {{p|Rattata}}, {{p|Ekans}}, {{p|Clefairy}}, {{p|Zubat}}, {{p|Paras}}, and {{p|Geodude}}.
+
+==In animation==
+[[File:Mt Moon anime.png|thumb|250px|Mt. Moon in {{aniseries|RS}}]]
+===''Pokémon the Series''===
+Mt. Moon is depicted as being bigger in {{aniseries|PTS}} than it is in the {{pkmn|games}}. It can be clearly seen from as far away as [[Pallet Town]]. 
+
+===={{aniseries|OS}}====
+Mt. Moon first appeared in ''[[EP006|Clefairy and the Moon Stone]]'', when {{Ash}}, {{an|Misty}}, and {{an|Brock}} encountered a scientist named [[Seymour]] and stopped {{TRT}} from stealing a giant [[Moon Stone]]. Brock also {{pkmn2|caught}} himself a {{TP|Brock|Zubat}} here.
+
+Mt. Moon was briefly mentioned in ''[[EP009|The School of Hard Knocks]]'', when Brock pulled out a bottle of Mt. Moon spring water from his [[Bag|backpack]].
+
+====''[[Pokémon the Series: Ruby and Sapphire]]''====
+In ''[[AG134|A Real Cleffa-Hanger]]'', Ash, Brock, Misty, {{an|May}}, and [[Max]] passed by Mt. Moon on the road to the {{gdis|Battle Factory|III}}. They helped a lost {{p|Cleffa}} reunite with the other [[Pokémon category|Fairy Pokémon]] before Misty headed to the [[Cerulean Gym]] and the rest of {{ashfr|the group}} resumed their journey to the Battle Factory.
+{{-}}
+
+====Pokémon====
+{| style="width: 100%"
+|-
+| {{ActivePoké|Mt Moon|Zubat|Mt Moon Zubat.png|disp=Zubat (multiple)|Poison|Flying|link=no}}
+| {{ActivePoké|Mt Moon|Paras|Mt Moon Paras.png|disp=Paras (multiple)|Bug|Grass|link=no}}
+| {{ActivePoké|Mt Moon|Sandshrew|Mt Moon Sandshrew.png|Ground|link=no}}
+|-
+| {{ActivePoké|Mt Moon|Cleffa|Mt Moon Cleffa.png|disp=Cleffa (multiple)| Normal|link=no}}
+| {{ActivePoké|Mt Moon|Clefairy|Mt Moon Clefairy.png|disp=Clefairy (multiple)| Normal|link=no}}
+| {{ActivePoké|Mt Moon|Clefable|Mt Moon Clefable.png|disp=Clefable (multiple)| Normal|link=no}}
+|}
+
+====Caught Pokémon====
+{| style="width: 25%"
+|-
+| {{InactivePoké|Brock|Zubat|Brock Zubat.png|disp=Brock's Zubat|Poison|Flying}}
+|}
+
+===Pokémon Origins===
+[[File:Super Nerd PO.png|thumb|250px|Mt. Moon in [[Pokémon Origins]]]]
+Mt. Moon was briefly seen in ''[[PO02|File 2: Cubone]]'', as {{OBP|Red|Origins}} recalled battling a [[Fossil]]-crazy {{tc|Super Nerd}} there.
+{{-}}
+
+==In the manga==
+[[File:Mt Moon Adventures.png|thumb|250px|Mt. Moon in [[Pokémon Adventures]]]]
+[[File:Mt Moon EToP.png|thumb|left|250px|Mt. Moon in [[The Electric Tale of Pikachu]]]]
+===Pokémon Adventures===
+===={{MangaArc|Red, Green & Blue}}====
+Mt. Moon was first mentioned by {{adv|Professor Oak}} in ''[[PS006|Gyarados Splashes In!]]'', telling {{adv|Red}} and [[Misty]] that [[Team Rocket]] was trying to find a [[Moon Stone]] from there. In ''[[PS007|Raging Rhydon]]'', Red and Misty entered the mountain, and encountered a group of {{tc|Team Rocket Grunt}}s led by [[Koga]]. During the battle that ensued, Koga forcibly [[Evolution|evolved]] his {{p|Rhyhorn}} into {{p|Rhydon}} to fight them, but the two Trainers were able to escape when Red collapsed part of the cave. Once he and Misty had exited Mt. Moon, Red revealed that he had found a Moon Stone from the rubble created when he had collapsed the cave.
+
+===={{MangaArc|Yellow}}====
+In ''[[PS041|Ponyta Tale]]'', Red received a challenge from [[Bruno]] to come battle him on Mt. Moon. However, when he didn't return in a month, [[Brock]] went to investigate the mountain in ''[[PS055|The Primeape Directive]]''. In ''[[PS064|Putting It on the Line...Against Arcanine]]'', Brock contacted {{adv|Blaine}}, informing him that he had discovered an empty ice mold in the shape of Red, with its backside broken open.
+
+In a series of flashbacks spread out across the arc, it was revealed that Red had battled against Bruno, feeling truly challenged and excited for the first time since becoming a [[Pokémon League]] {{pkmn|Champion}} two years earlier. However, the battle was interrupted by [[Lorelei]] and [[Agatha]], who placed Bruno under mind control and wanted to know if Red had the {{badge|Earth}}, which they needed for their plans. When Red refused to help them, the three [[Elite Four]] members attacked Red together, defeating all of {{cat|Red's Pokémon|his Pokémon}} and encasing him in ice. Only Red's {{p|Pikachu}}, [[Pika]], was able to escape. Red was later freed from his icy prison by {{adv|Giovanni}}, who also gave him a set of special unexpiring [[Evolution stone]]s to be used on his [[Vee|Eevee]].
+
+In ''[[PS076|Take a Chance on Chansey]]'', {{tc|Super Nerd}} {{adv|Miles}} revealed that he and his friends had found Red frozen in ice a month earlier, as well as a fragment of Red's glove. He had afterwards been approached by Agatha, who had tasked him with capturing Pika, but he had failed.
+
+===The Electric Tale of Pikachu===
+Mt. Moon appeared in ''[[ET03|Clefairy Tale]]'', where {{OBP|Ash Ketchum|EToP|Ash}} traveled there in the hopes of catching a {{p|Clefairy}}. After three agonizing weeks in the wilderness, Ash and {{AP|Pikachu|Pikachu (EToP)}} accidentally followed a Clefairy into an occupied {{p|Onix}} nest. After escaping from Onix, they encountered {{an|Professor Oak}} and [[Bill]], who had come to research the local Clefairy. Together, they witnessed a Clefairy [[Evolution]] ritual before parting ways, with Professor Oak giving Ash a [[Pokédex]] upgrade to commemorate their encounter.
+
+==In the novels==
+===Pokémon Tales===
+In ''[[PB01|Charmander Sees a Ghost]]'', there is a big empty house at the foot of Mt. Moon.
+
+==In the TCG==
+[[File:TCG Mount Moon.png|thumb|Mt. Moon as depicted in the {{pkmn|Trading Card Game|TCG}}]]
+In addition to its presence as a card, Mt. Moon has been featured in Area 3 of {{TCG|Expansion Sheet 1}} of the {{TCG|Vending Machine cards}}. The Pokémon shown in this area are {{TCG ID|Vending|Geodude|S1}}, {{TCG ID|Vending|Paras|S1}}, {{TCG ID|Vending|Clefairy|S1}}, and {{TCG ID|Vending|Zubat|S1}}.
+
+This listing is of cards mentioning and/or featuring Mt. Moon in the {{pkmn|Trading Card Game|Pokémon Trading Card Game}}.
+
+{{cardlist/header|Related cards|Trainer|char=yes}}
+{{cardlist/entry|cardname={{TCG ID|EX FireRed & LeafGreen|Mt. Moon|94}}|type=Trainer|type2=Stadium|enset=EX FireRed & LeafGreen|enrarity=Uncommon|ennum=94/112|jpsetlink=EX FireRed & LeafGreen|jpset=Flight of Legends|jprarity=Uncommon|jpnum=82/082}}
+{{cardlist/footer|Trainer}}
+
+==Trivia==
+* Mt. Moon is [[List of cross-generational references|mentioned]] by a visitor at [[Hotel Grand Lake]] in the [[Sinnoh]]-based games, mentioning the dance of the {{p|Clefairy}}.
+* In [[Pokémon Yellow Version|Yellow]], after defeating [[Jessie]] and [[James]], any unfought [[Team Rocket Grunt (Trainer class)|Rockets]] in Mt. Moon will not battle the [[Player character|player]] unless they talk to them.
+
+==Names==
+{| class="roundtable" style="background:#{{locationcolor/med|mountain}}; border:3px solid #{{locationcolor/dark|mountain}}"
+|-
+! style="background:#{{locationcolor/light|mountain}}" | Language
+! style="background:#{{locationcolor/light|mountain}}" | Name
+! style="background:#{{locationcolor/light|mountain}}" | Origin
+|-
+| Japanese
+| お月見山 ''Otsukimi-yama''
+| From お月見 ''{{wp|Tsukimi|o-tsukimi}}'', a tradition of viewing the {{wp|Full moon#Harvest moon|harvest moon}} in Japan
+|-
+| English
+| Mt. Moon<br>Mount Moon{{sup/8|BDSP}}
+| From ''{{wp|moon}}''
+|-
+| German
+| Mondberg
+| From ''Mond'' (moon) and ''Berg'' (mountain)
+|-
+| European Spanish
+| Monte Moon{{sup/7|PE}}{{sup/8|BDSP}}<br>Mt. Moon{{sup/1|RBY}}{{sup/2|GSC}}{{sup/3|FRLG}}{{sup/4|HGSS}}<br>Monte Luna{{sup/4|DPPt}}
+| From its English name<br>Same as English name<br>From ''luna'' (moon)
+|-
+| rowspan="2" | Latin American Spanish
+| Monte Luna
+| rowspan="2" | From ''luna'' (moon)
+|-
+| Montaña Luna<ref group=n>Pokémon animated series ([[AG134]], second part of the episode)</ref>
+|-
+| French
+| Mont Sélénite
+| From ''sélénite'' (lunar; {{wp|Selenite (gypsum)|selenite}})
+|-
+| Italian
+| Monte Luna
+| From ''luna'' (moon)
+|-
+| Korean
+| 달맞이산 ''Dalmaji San''
+| From 달맞이 ''dalmaji'', a tradition of viewing the first full moon of the lunar year on {{wp|Daeboreum}} in Korea
+|-
+| Chinese (Traditional)
+| 月見山 ''Yuèjiàn Shān'' / ''Yuhtgin Sāan''
+| rowspan="2" | From an orthographic borrowing of Japanese お月見 ''otsukimi'', formed with the characters 月 ''yuè / yuht'' (moon) and 見 ''jiàn / gin'' (to view)
+|-
+| Chinese (Simplified)
+| 月见山 ''Yuèjiàn Shān''
+|-
+| Chinese (Hong Kong)
+| 觀月山 ''Gūnyuht Sāan''
+| From 觀月 ''gūn yuht'' (to view the moon)
+|-
+| Brazilian Portuguese
+| Mt. Lua<ref group=n>Pokémon animated series, Yellow manual</ref><br>Montanha da Lua<ref group=n>[[Pokémon Adventures]], Red and Blue manual</ref><br>Monte Lua<ref group=n name=Handbook>[[The Official Pokémon Handbook]]</ref><br>Monte da Lua<ref group=n name=Handbook />
+| From ''lua'' (moon)
+|-
+| Czech
+| Měsíční hora
+| From ''měsíční'' (lunar)
+|-
+| Danish
+| Moonbjerget
+| From its English name and ''bjerg'' (mountain)
+|-
+| Finnish
+| Kuuvuori
+| From ''kuu'' (moon)
+|-
+| Dutch
+| Maanberg
+| From ''maan'' (moon)
+|-
+| Norwegian
+| Moon-fjellet<br>Mount Moon<ref group=n>Pokémon animated series (VHS description)</ref>
+| From ''maan'' (moon) and ''fjell'' (mountain)<br>Same as English name
+|-
+| Polish
+| Góra Księżycowa<ref group=n>Pokémon animated series ([[EP006]])</ref>
+| From ''księżycowy'' (lunar)
+|-
+| Russian
+| Лунная Гора ''Lunnaya Gora''
+| From лунная ''lunnaya'' (lunar)
+|-
+| Swedish
+| Mount Moon<ref group=n>Pokémon animated series</ref><br>Månberget<ref group=n>[[Song of Jigglypuff]]</ref><br>Moon-berget<ref group=n>[[Pokémon TV]] description</ref>
+| Same as English name<br>From ''måne'' (moon) and ''berg'' (mountain)<br>From its English name and ''berg'' (mountain)
+|-
+| Vietnamese
+| Núi Otsukimi
+| Transcription of its Japanese name
+|}
+{{-}}
+
+===Notes===
+{{reflist|group=n}}
+
+==Notes==
+{{reflist}}
+
+==Related articles==
+{{Kanto}}
+{{Project Locations notice}}
+
+[[Category:Kanto locations]]
+[[Category:Red, Blue and Yellow locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:FireRed and LeafGreen locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Let's Go, Pikachu! and Let's Go, Eevee! locations]]
+[[Category:Mountains|Moon]]
+[[Category:Caves]]
+
+[[de:Mondberg]]
+[[es:Monte Luna/Monte Moon]]
+[[fr:Mont Sélénite]]
+[[it:Monte Luna]]
+[[ja:おつきみやま]]
+[[zh:月见山]]

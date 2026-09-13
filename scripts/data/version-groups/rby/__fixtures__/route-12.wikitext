@@ -1,0 +1,500 @@
+<!-- poke-guide fixture: {"title":"Kanto Route 12","resolvedTitle":"Kanto Route 12","revid":4620546,"timestamp":"2026-08-29T18:02:43Z","fetchedAt":"2026-09-12T21:57:28.705Z"} -->
+{{Route infobox
+|number=12
+|image=Kanto Route 12 PE.png
+|imageI=Kanto Route 12 RBY.png
+|imageII=Kanto Route 12 GSC.png
+|imageIII=Kanto Route 12 FRLG.png
+|imageIV=Kanto Route 12 HGSS.png
+|type=water
+|north=Lavender Town
+|south=Route 13
+|west=Route 11
+|regionsouth=Kanto
+|regionwest=Kanto
+|region=Kanto
+|cut={{sup/1}}{{sup/2}}{{sup/3|FRLG}}{{sup/4|HGSS}}
+|surf={{sup/1}}{{sup/2}}{{sup/3|FRLG}}{{sup/4|HGSS}}
+|generation=1
+|mapdesc=A bridge known for its fishing. It's also called "Silence Bridge."{{sup/4|HGSS}}<br>A bridge where fishermen gather. It's also called Silence Bridge.{{sup/7|PE}}
+}}
+'''Route 12''' (Japanese: '''１２{{tt|番道路|ばんどうろ}}''' ''Route 12'') is a [[route]] located in eastern [[Kanto]]. It connects {{rt|11|Kanto}} in the west to [[Lavender Town]] in the north and {{rt|13|Kanto}} in the south. The portion of this route south of the gate near Lavender Town is also known as '''Silence Bridge''' (Japanese: '''サイレンズブリッジ'''{{sup/1|RGBY}}{{sup/2|GSC}}{{sup/3|FRLG}}{{sup/7|PE}} / '''サイレンスブリッジ'''{{sup/4|HGSS}} ''Silence Bridge'').
+
+==Route description==
+===Lavender to the gate===
+The bridge that holds the entire length of Route 12 begins just south of Lavender Town. Shortly after its starting point, the bridge comes to a three-way intersection, with the left fork leading to a dead end. The right fork turns south east of the intersection and comes to another intersection, leading to another dead end path holding a sign informing Trainers of Lavender Town to the north.
+
+South of this intersection is a [[gate]] separating the north portion of Route 12 from the Silence Bridge.
+
+===Silence Bridge===
+The Silence Bridge makes up most of Route 12. The first intersection on the Silence Bridge portion of Route 12 is yet another of the three-way variety. The left path leads to a dead end while the right path continues southward. After a brief southward stretch, the bridge turns southwest to avoid an island in the water, eventually intersecting a north–south bridge segment on the western edge of Route 12. The main path of the route uses a portion of this segment before turning east onto an east–west segment. Route 12 then makes a sharp south turn onto another continuous bridge piece. Route 12 gradually makes its way south, passing a fishing pier before arriving at an island, the first piece of solid land along the route's main path since Lavender.
+
+On the west shore of the island, the Silence Bridge resumes, making an upside-down "U" as it proceeds south. After a short time, the bridge makes a turn to the east. This segment of the bridge comes to an end roughly 15 paces east of this point, but Route 12 has already turned off onto another bridge segment, a north–south stretch, by this point. About eight paces south of the intersection between the two segments is the designated "Sport Fishing Area" at the intersection of Routes 11 and 12.
+
+Continuing south, the bridge turns to the southeast just ahead of another island. The home of the younger of the [[Fishing Brothers]]{{sup/1}}{{sup/2}}{{sup/3|FRLG}}{{sup/4|HGSS}}/Mr. Dazzling{{sup/7|PE}} is located on this island. West of his house, the bridge resumes, traveling to the south and east before coming to an end just after an intersection with another segment. This segment carries the route south to a series of intersections. The two westward routes in this area lead to a peninsula containing a forested area accessible only by using {{m|Cut}}{{sup/1}}{{sup/2}}{{sup/3|FRLG}}{{sup/4|HGSS}} or the [[Secret Technique]] Chop Down{{sup/7|PE}} on a [[cuttable plant]]. The lone eastward path leads to another fishing pier. Just south of the southern peninsula path, the route briefly turns to the east before returning south.
+
+At the next intersection, the main path of the route continues south while a westward path leads to the only grassy patch on Route 12. Cut/Chop Down is required for access, however.
+
+The main path of Route 12 continues south along a tree-lined shoreline before becoming Route 13 two paces south of the grassy patch.
+
+===Fishing Guru's/Mr. Dazzling's house===
+A house can be found on this route on an island south of the exit to Route 11.
+
+In [[Generation]]s {{gen|I}} to {{gen|IV}}, the house is home to the youngest of the [[Fishing Brothers]]. He gives a [[Super Rod]] to the player if they express a passion for fishing. In {{2v2|FireRed|LeafGreen}} only, after giving away the Super Rod, he also requests to see any large {{p|Magikarp}} that the player catches. If the player shows him a Magikarp, he will measure its [[Size and weight variation|size]] and reward the player with a [[Net Ball]]. After this, he will give away another Net Ball for each Magikarp the player shows him that sets a new size record. The current record is displayed on a chart on the back wall.
+
+In [[Generation VII]], the house is instead the home of Mr. Dazzling, a former [[Move Deleter]]. He will give the player {{TM|32|Dazzling Gleam}} once they remind him who he is.
+
+==Items==
+{{Itlisth|water}}
+{{Itemlist|TM Normal|From the girl on the second floor of the Lavender [[gate]]|R=yes|B=yes|Y=yes|display={{TM|39|Swift}}}}
+{{Itemlist|TM Normal|From the girl on the second floor of the Lavender [[gate]]|FR=yes|LG=yes|display={{TM|27|Return}}}}
+{{Itemlist|TM Flying VI|From the girl on the second floor of the Lavender [[gate]]|LP=yes|LE=yes|display={{TM|50|Roost}}}}
+{{Itemlist|Silver Pinap Berry|On the fence below the big tree to the east of the eastern entrance to Route 11 ''(hidden)''|LP=yes|LE=yes|display=[[Silver Pinap Berry]] ×5}}
+{{Itemlist|Lure|At a northern terminus of the pathway near the Lavender [[gate]]|LP=yes|LE=yes}}
+{{Itemlist|TM Normal|On the island southeast of the Lavender [[gate]] (requires {{m|Surf}})|R=yes|B=yes|Y=yes|display={{TM|16|Pay Day}}}}
+{{Itemlist|TM Psychic|On the island southeast of the Lavender [[gate]] (requires {{m|Surf}})|FR=yes|LG=yes|display={{TM|48|Skill Swap}}}}
+{{Itemlist|TM Bug|On the island southeast of the Lavender [[gate]] (requires [[Secret Technique|Sea Skim]])|LP=yes|LE=yes|display={{TM|24|X-Scissor}}}}
+{{Itemlist|Repel|On the platform jutting out east from the pathway, north of the Fishing Area|LP=yes|LE=yes}}
+{{Itemlist|Hyper Potion|Five squares east and two squares north of {{tc|Fisherman}} Elliot ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Ultra Ball|At the eastern terminus of the pathway northeast Snorlax|LP=yes|LE=yes|display=[[Ultra Ball]] ×3}}
+{{Itemlist|Leftovers|Where {{p|Snorlax}} was sleeping (requires using [[Dowsing Machine|Itemfinder]] at that spot) |FR=yes|LG=yes}}
+{{Itemlist|Hyper Potion|Eight squares west and one square south of {{p|Snorlax}}, on a tree ''(hidden)''|R=yes|B=yes|Y=yes}}
+{{Itemlist|Super Rod III|From the [[Fishing Brothers|Fishing Guru]]'s younger brother|R=yes|B=yes|Y=yes|G=yes|S=yes|C=yes|FR=yes|LG=yes|HG=yes|SS=yes|display=[[Super Rod]]}}
+{{Itemlist|Net Ball|From the [[Fishing Brothers|Fishing Guru]]'s younger brother for showing a record-breaking {{p|Magikarp}} (repeatable)|FR=yes|LG=yes}}
+{{Itemlist|TM Fairy|From Mr. Dazzling inside his house after reminding him who he is|LP=yes|LE=yes|display={{TM|32|Dazzling Gleam}}}}
+{{Itemlist|Iron|In the area enclosed by trees{{sup/1|RBY}}/bushes{{sup/3|FRLG}} southwest of the [[Fishing Brothers|Fishing Guru]]'s house (requires {{m|Cut}})|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Water Stone|In the area enclosed by bushes southwest of Mr. Dazzling's house (requires [[Secret Technique|Chop Down]])|LP=yes|LE=yes}}
+{{Itemlist|Awakening|On the board jutting out opposite the area enclosed by bushes|LP=yes|LE=yes}}
+{{Itemlist|TM Psychic VI|Reward for defeating Coach Trainer Priya|LP=yes|LE=yes|display={{TM|59|Dream Eater}}}}
+{{Itemlist|Rare Candy|In the [[tall grass|grass]] patch, one square east and two squares north from the southwestern corner (requires {{m|Cut}}) ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Max Lure|At the south end of the [[tall grass|grass]] patch|LP=yes|LE=yes}}
+{{Itemlist|Elixir|On the island southeast of the Lavender [[gate]] (requires {{m|Surf}}) ''(hidden)''|G=yes|S=yes|C=yes}}
+{{Itemlist|Elixir|Behind the fence north of the path to {{rt|11|Kanto}} (requires {{m|Surf}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Calcium|In the forested area near Route 13 (requires {{m|Cut}})|G=yes|S=yes|C=yes}}
+{{Itemlist|Calcium|Behind a tree northwest of Fisherman Kyler (requires {{m|Cut}})|HG=yes|SS=yes}}
+{{Itemlist|Nugget|In the former grassy area location just north of Route 13 (requires {{m|Cut}} and {{m|Surf}})|G=yes|S=yes|C=yes}}
+{{Itemlist|Yellow Flute|Behind a tree southwest of Fisherman Kyler (requires {{m|Surf}} and {{m|Cut}})|HG=yes|SS=yes}}
+{{Itlistfoot|water}}
+
+===Water===
+{{Itlisth|water}}
+{{Itemlist/3|Pearl|display={{i|Pearl}}|Big Pearl|Heart Scale|Sometimes found by the {{player}}'s {{pkmn2|walking}} {{type|Water}} Pokémon from the water east of Mr. Dazzling's house|LP=yes|LE=yes}}
+{{Itlistfoot|water}}
+
+==Pokémon==
+===Generation I===
+Prior to {{game|Yellow}}, no [[wild Pokémon]] appear while the player is {{m|surf|surfing}} here.
+<!--Wild Pokémon Encounter Data<ref>[https://github.com/pret/pokered/tree/master/data/wild Pokémon Red and Blue Disassembly Wild Encounter Data - Pret]</ref><ref>[https://github.com/pret/pokeyellow/tree/master/data/wild Pokémon Yellow Disassembly Wild Encounter Data - Pret]</ref><ref>[https://shinyfinder.github.io/encounter-slots/blue-japanese/Land%20&%20Surf.html Pokémon Blue (Japanese) Wild Encounter Data - Shinyfinder]</ref>-->
+{{Catch/header|water|no}}
+{{Catch/entry1|016|Pidgey|yes|yes|no|Grass|23, 25, 27|40%|type1=normal|type2=flying}}
+{{Catch/entry1|016|Pidgey|no|no|yes|Grass|28|15%|type1=normal|type2=flying}}
+{{Catch/entry1|017|Pidgeotto|no|no|yes|Grass|28|10%|type1=normal|type2=flying}}
+{{Catch/entry1|043|Oddish|yes|no|no|Grass|22, 24, 26|35%|type1=grass|type2=poison}}
+{{Catch/entry1|043|Oddish|no|no|yes|Grass|25, 27|30%|type1=grass|type2=poison}}
+{{Catch/entry1|044|Gloom|yes|no|no|Grass|28, 30|5%|type1=grass|type2=poison}}
+{{Catch/entry1|044|Gloom|no|no|yes|Grass|29|5%|type1=grass|type2=poison}}
+{{Catch/entry1|048|Venonat|yes|yes|no|Grass|24, 26|20%|type1=bug|type2=poison}}
+{{Catch/entry1|069|Bellsprout|no|yes|no|Grass|22, 24, 26|35%|type1=grass|type2=poison}}
+{{Catch/entry1|069|Bellsprout|no|no|yes|Grass|25, 27|30%|type1=grass|type2=poison}}
+{{Catch/entry1|070|Weepinbell|no|yes|no|Grass|28, 30|5%|type1=grass|type2=poison}}
+{{Catch/entry1|070|Weepinbell|no|no|yes|Grass|29|5%|type1=grass|type2=poison}}
+{{Catch/entry1|083|Farfetch'd|no|no|yes|Grass|26, 31|5%|type1=normal|type2=flying}}
+{{Catch/div|water|Surfing}}
+{{Catch/entry1|079|Slowpoke|no|no|yes|Surf|15|95%|type1=water|type2=psychic}}
+{{Catch/entry1|080|Slowbro|no|no|yes|Surf|15, 20|5%|type1=water|type2=psychic}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry1|129|Magikarp|yes|yes|yes|Fish Old|5|100%|type1=water}}
+{{Catch/entry1|060|Poliwag|yes|yes|yes|Fish Good|10|50%|type1=water}}
+{{Catch/entry1|118|Goldeen|yes|yes|yes|Fish Good|10|50%|type1=water}}
+{{Catch/entry1|072|Tentacool|yes|yes|no|Fish Super|5|25%|type1=water|type2=poison}}
+{{Catch/entry1|098|Krabby|yes|yes|no|Fish Super|15|25%|type1=water}}
+{{Catch/entry1|116|Horsea|no|no|yes|Fish Super|20, 25|70%|type1=water}}
+{{Catch/entry1|117|Seadra|no|no|yes|Fish Super|25, 35|30%|type1=water}}
+{{Catch/entry1|118|Goldeen|yes|yes|no|Fish Super|15|25%|type1=water}}
+{{Catch/entry1|129|Magikarp|yes|yes|no|Fish Super|15|25%|type1=water}}
+{{Catch/footer|water}}
+
+===Generation II===
+{{Catch/header|water|4}}
+{{Catch/div|water|Surfing}}
+{{Catch/entry2|072|Tentacool|yes|yes|yes|Surf|25-29|all=60%|type1=water|type2=poison}}
+{{Catch/entry2|073|Tentacruel|yes|yes|yes|Surf|25-29|all=10%|type1=water|type2=poison}}
+{{Catch/entry2|195|Quagsire|yes|yes|yes|Surf|25-29|all=30%|type1=water|type2=ground}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry2|072|Tentacool|yes|yes|yes|Fish Old|10|all=15%|type1=water|type2=poison}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=water}}
+{{Catch/entry2|072|Tentacool|yes|yes|yes|Fish Good|20|all=65%|type1=water|type2=poison}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=water}}
+{{Catch/entry2|072|Tentacool|yes|yes|yes|Fish Super|40|all=70%|type1=water|type2=poison}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Super|40|all=20%|type1=water}}
+{{Catch/entry2|211|Qwilfish|yes|yes|yes|Fish Super|40|all=10%|type1=water|type2=poison}}
+{{Catch/footer|water}}
+
+===Generation III===
+{{Catch/header|water|no}}
+{{catch/entryfl|016|Pidgey|yes|yes|Grass|23-27|30%|type1=normal|type2=flying}}
+{{catch/entryfl|043|Oddish|yes|no|Grass|22-26|35%|type1=grass|type2=poison}}
+{{catch/entryfl|044|Gloom|yes|no|Grass|28-30|5%|type1=grass|type2=poison}}
+{{catch/entryfl|048|Venonat|yes|yes|Grass|24-26|30%|type1=bug|type2=poison}}
+{{catch/entryfl|069|Bellsprout|no|yes|Grass|22-26|35%|type1=grass|type2=poison}}
+{{catch/entryfl|070|Weepinbell|no|yes|Grass|28-30|5%|type1=grass|type2=poison}}
+{{Catch/div|water|Surfing}}
+{{catch/entryfl|072|Tentacool|yes|yes|Surf|5-40|100%|type1=water|type2=poison}}
+{{Catch/div|water|Fishing}}
+{{catch/entryfl|129|Magikarp|yes|yes|Fish Old|5|100%|type1=water}}
+{{catch/entryfl|098|Krabby|yes|no|Fish Good|5-15|20%|type1=water}}
+{{catch/entryfl|098|Krabby|no|yes|Fish Good|5-15|60%|type1=water}}
+{{catch/entryfl|116|Horsea|yes|no|Fish Good|5-15|60%|type1=water}}
+{{catch/entryfl|116|Horsea|no|yes|Fish Good|5-15|20%|type1=water}}
+{{catch/entryfl|129|Magikarp|yes|yes|Fish Good|5-15|20%|type1=water}}
+{{catch/entryfl|054|Psyduck|yes|no|Fish Super|25-35|1%|type1=water}}
+{{catch/entryfl|079|Slowpoke|no|yes|Fish Super|25-35|1%|type1=water|type2=psychic}}
+{{catch/entryfl|098|Krabby|no|yes|Fish Super|15-35|84%|type1=water}}
+{{catch/entryfl|116|Horsea|yes|no|Fish Super|15-35|84%|type1=water}}
+{{catch/entryfl|130|Gyarados|yes|yes|Fish Super|15-25|15%|type1=water|type2=flying}}
+{{Catch/footer|water}}
+
+===Generation IV===
+{{Catch/header|water|4}}
+{{Catch/div|water|Surfing}}
+{{Catch/entryhs|072|Tentacool|yes|yes|Surf|25|all=60%|type1=water|type2=poison}}
+{{Catch/entryhs|073|Tentacruel|yes|yes|Surf|25|all=30%|type1=water|type2=poison}}
+{{Catch/entryhs|195|Quagsire|yes|yes|Surf|25|all=10%|type1=water|type2=ground}}
+{{Catch/div|water|Fishing}}
+{{Catch/entryhs|072|Tentacool|yes|yes|Fish Old|10|all=15%|type1=water|type2=poison}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=85%|type1=water}}
+{{Catch/entryhs|072|Tentacool|yes|yes|Fish Good|20|all=40%|type1=water|type2=poison}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=60%|type1=water}}
+{{Catch/entryhs|072|Tentacool|yes|yes|Fish Super|40|all=70%|type1=water|type2=poison}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Super|40|all=20%|type1=water}}
+{{Catch/entryhs|211|Qwilfish|yes|yes|Fish Super|40|all=10%|type1=water|type2=poison}}
+{{catch/div|water|Headbutt<br><small>Group A</small>}}
+{{catch/entryhs|163|Hoothoot|yes|yes|Headbutt|22-23|all=50%|type1=Normal|type2=Flying|10=k}}
+{{catch/entryhs|165|Ledyba|no|yes|Headbutt|22-23|all=30%|type1=Bug|type2=Flying|10=k}}
+{{catch/entryhs|167|Spinarak|yes|no|Headbutt|22-23|all=30%|type1=Bug|type2=Poison|10=k}}
+{{catch/entryhs|265|Wurmple|yes|yes|Headbutt|22-23|all=20%|type1=Bug|10=k}}
+{{catch/div|water|Headbutt<br><small>Group B</small>}}
+{{catch/entryhs|114|Tangela|yes|yes|Headbutt|24-25|all=15%|type1=Grass|10=k}}
+{{catch/entryhs|163|Hoothoot|yes|yes|Headbutt|24-25|all=65%|type1=Normal|type2=Flying|10=k}}
+{{catch/entryhs|265|Wurmple|yes|yes|Headbutt|24-25|all=20%|type1=Bug|10=k}}
+{{catch/div|water|Swarm}}
+{{catch/entryhs|369|Relicanth|yes|yes|Fish Old|10|all=15%|type1=water|type2=rock}}
+{{catch/entryhs|369|Relicanth|yes|yes|Fish Good|20|all=55%|type1=water|type2=rock}}
+{{catch/entryhs|369|Relicanth|yes|yes|Fish Super|40|all=100%|type1=water|type2=rock}}
+{{Catch/footer|water}}
+
+===Generation VII===
+{{Catch/header|water|no}}
+{{Catch/entrype|016|Pidgey|yes|yes|Grass|31-36|20%|type1=Normal|type2=Flying}}
+{{Catch/entrype|017|Pidgeotto|yes|yes|Grass|31-36|20%|type1=Normal|type2=Flying}}
+{{Catch/entrype|043|Oddish|yes|no|Grass|31-36|15%|type1=Grass|type2=Poison}}
+{{Catch/entrype|044|Gloom|yes|no|Grass|31-36|15%|type1=Grass|type2=Poison}}
+{{Catch/entrype|069|Bellsprout|no|yes|Grass|31-36|15%|type1=Grass|type2=Poison}}
+{{Catch/entrype|070|Weepinbell|no|yes|Grass|31-36|15%|type1=Grass|type2=Poison}}
+{{Catch/entrype|083|Farfetch'd|yes|yes|Grass|31-36|10%|type1=Normal|type2=Flying}}
+{{Catch/entrype|098|Krabby|yes|yes|Grass|31-36|15%|type1=Water}}
+{{Catch/entrype|099|Kingler|yes|yes|Grass|31-36|5%|type1=Water}}
+{{catch/div|water|Rare Spawns}}
+{{Catch/entrype|113|Chansey|yes|yes|Grass|31-36|-}}
+{{Catch/div|water|Sea Skim}}
+{{Catch/entrype|072|Tentacool|yes|yes|Surf|31-36|30%|type1=Water|type2=Poison}}
+{{Catch/entrype|073|Tentacruel|yes|yes|Surf|31-36|5%|type1=Water|type2=Poison}}
+{{Catch/entrype|116|Horsea|yes|yes|Surf|31-36|30%|type1=Water}}
+{{Catch/entrype|117|Seadra|yes|yes|Surf|31-36|5%|type1=Water}}
+{{Catch/entrype|129|Magikarp|yes|yes|Surf|31-36|30%|type1=Water}}
+{{Catch/div|flying|While riding a Flying Pokémon<br><small>After becoming {{color2|000|Pokémon Champion|Champion}}}}
+{{Catch/entrype|016|Pidgey|yes|yes|Sky|3-56|60%|type1=Normal|type2=Flying}}
+{{Catch/entrype|017|Pidgeotto|yes|yes|Sky|3-56|35%|type1=Normal|type2=Flying}}
+{{Catch/entrype|018|Pidgeot|yes|yes|Sky|3-56|5%|type1=Normal|type2=Flying}}
+{{Catch/div|flying|Rare Spawns}}
+{{Catch/entrype|006|Charizard|yes|yes|Sky|3-56|-|type1=Fire|type2=Flying}}
+{{Catch/entrype|144|Articuno|yes|yes|Sky|3-56|-|type1=Ice|type2=Flying}}
+{{Catch/entrype|145|Zapdos|yes|yes|Sky|3-56|-|type1=Electric|type2=Flying}}
+{{Catch/entrype|146|Moltres|yes|yes|Sky|3-56|-|type1=Fire|type2=Flying}}
+{{Catch/entrype|149|Dragonite|yes|yes|Sky|3-56|-|type1=Dragon|type2=Flying}}
+{{Catch/footer|water|2}}
+
+==Special encounters==
+===Generations I and III===
+[[File:Silence Bridge Ariga artwork.png|thumb|200px|Woodblock artwork by [[Hitoshi Ariga]] of {{ga|Red}} and his {{TP|Red|Pikachu}} battling the Snorlax]]
+[[File:Kanto Route 12 Snorlax FRLG.png|thumb|200px|{{p|Snorlax}} blocking the road in {{v2|FireRed and LeafGreen|s}}]]
+A {{p|Snorlax}} appears here on the first visit. The [[Poké Flute]] must be used in order to battle it.
+
+{{Pokémon/Grid}}
+{{Pokémon
+| caption = '''Generation I'''
+| gen = 1
+| ndex = 0143
+| pokemon = Snorlax
+| level = 30
+| type1 = Normal
+| move1 = Headbutt | move1type = Normal
+| move2 = Amnesia | move2type = Psychic
+| move3 = Rest | move3type = Psychic
+}}
+{{Pokémon
+| caption = '''FireRed and LeafGreen'''
+| gen = 3
+| ndex = 0143
+| pokemon = Snorlax
+| gender = both
+| level = 30
+| type1 = Normal
+| ability = Immunity
+| ability2 = Thick Fat
+| held = Chesto Berry
+| move1 = Headbutt | move1type = Normal
+| move2 = Yawn | move2type = Normal
+| move3 = Rest | move3type = Psychic
+| move4 = Snore | move4type = Normal
+}}
+{{Pokémon/Grid/end}}
+
+===Generation IV===
+A {{p|Snorlax}} appears here after entering the [[Hall of Fame]] if it was defeated or run from on {{rt|11|Kanto}}. The [[Pokégear]] (upgraded with the {{DL|Pokégear|Radio|EXPN Card}}) must be used in order to battle it. If defeated or run from, it respawns after entering the Hall of Fame again.
+{{Pokémon
+| gen = 4
+| ndex = 0143
+| pokemon = Snorlax
+| gender = both
+| level = 50
+| type1 = Normal
+| ability = Immunity
+| ability2 = Thick Fat
+| held = Leftovers
+| move1 = Block | move1type = Normal | move1cat = Status
+| move2 = Rollout | move2type = Rock | move2cat = Physical
+| move3 = Crunch | move3type = Dark | move3cat = Physical
+| move4 = Giga Impact | move4type = Normal | move4cat = Physical
+}}
+
+===Generation VII===
+A {{p|Snorlax}} appears here on the first visit. The [[Poké Flute]] must be used in order to battle it. Like other static encounters, the player must defeat it in 5 minutes in order to attempt to catch it. If run from, it respawns after entering the [[Hall of Fame]].
+{{Pokémon
+| gen = PE
+| ndex = 0143
+| pokemon = Snorlax
+| gender = both
+| level = 34
+| type1 = Normal
+| move1 = Yawn | move1type = Normal | move1cat = Status
+| move2 = Lick | move2type = Ghost | move2cat = Physical
+| move3 = Headbutt | move3type = Normal | move3cat = Physical
+| move4 = Rest | move4type = Psychic | move4cat = Status
+}}
+
+==Trainers==
+===Generation I===
+{{trainerheader|water}}
+{{Trainerdiv|water|North of Snorlax}}
+{{Trainerentry|Spr RG Fisherman.png|game=1|Fisherman||770|3|118|Goldeen||22|None|060|Poliwag||22|None|118|Goldeen||22|None}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr RG Fisherman.png|game=1|Fisherman||840|2|072|Tentacool||24|None|118|Goldeen||24|None}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr RG Fisherman.png|game=1|Fisherman||945|1|118|Goldeen||27|None}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr RG Fisherman.png|game=1|Fisherman||735|4|060|Poliwag||21|None|090|Shellder||21|None|118|Goldeen||21|None|116|Horsea||21|None}}
+{{Trainerdiv|water|South of Snorlax}}
+{{Trainerentry|Spr RG Rocker.png|game=1|Rocker||725|2|100|Voltorb||29|None|101|Electrode||29|None}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr RG Jr Trainer M.png|game=1|Jr. Trainer♂||840|2|032|Nidoran♂||29|None|033|Nidorino||29|None}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr RG Fisherman.png|game=1|Fisherman||840<br><small>Requires {{m|Cut}}</small>|2|129|Magikarp||24|None|129|Magikarp||24|None}}
+{{trainerfooter|water|I}}
+
+===Generation II===
+Trainers are listed from '''north''' to '''south'''
+{{trainerheader|water}}
+{{Trainerentry|Spr GS Fisher.png|Fisher|Kyle|1240|3|119|Seaking|♂|28||061|Poliwhirl|♂|31||119|Seaking|♂|31|None|36=ナオフミ|37=Naofumi}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr GS Fisher.png|Fisher|Martin|1280|2|223|Remoraid|♂|32|None|223|Remoraid|♂|32|None|36=ソウスケ|37=Sōsuke}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr GS Fisher.png|Fisher|Stephen|1240|4|129|Magikarp|♂|25|None|129|Magikarp|♂|25|None|211|Qwilfish|♂|31|None|073|Tentacruel|♂|31|None|36=トモヒト|37=Tomohito}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr GS Fisher.png|Fisher|Barney|1200|3|130|Gyarados|♂|30|None|130|Gyarados|♂|30|None|130|Gyarados|♂|30|None|36=エイイチ|37= Ei'ichi}}
+{{trainerfooter|water|2}}
+
+===Generation III===
+{{trainerheader|water}}
+{{Trainerdiv|water|North of Snorlax}}
+{{Trainerentry|Spr FRLG Fisherman.png|Fisherman|Ned|792|3|118|Goldeen|♂|22|None|060|Poliwag|♂|22|None|118|Goldeen|♂|22|None|36=トモカズ|37=Tomokazu}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr FRLG Fisherman.png|Fisherman|Chip|864|2|072|Tentacool|♂|24|None|118|Goldeen|♂|24|None|36=ケイイチ|37=Keiichi}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr FRLG Fisherman.png|Fisherman|Hank|972|1|118|Goldeen|♂|27|None|36=カズホ|37=Kazuho}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr FRLG Fisherman.png|Fisherman|Elliot|756|4|060|Poliwag|♂|21|None|090|Shellder|♂|21|None|118|Goldeen|♂|21|None|116|Horsea|♂|21|None|36=アキヒコ|37=Akihiko|38=Vs. Seeker}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr FRLG Young Couple.png|Young Couple|Gia & Jes|1344|2|032|Nidoran♂||24|None|029|Nidoran♀||24|None|36=アユとシゲ|37=Ayu and Shige|38=Vs. Seeker}}
+{{Trainerdiv|water|South of Snorlax}}
+{{Trainerentry|Spr FRLG Rocker.png|Rocker|Luca|696|2|100|Voltorb||29|None|101|Electrode||29|None|36=アヤキ|37=Ayaki|38=Vs. Seeker}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr FRLG Camper.png|Camper|Justin|580<br><small>Requires {{m|Cut}}</small>|2|032|Nidoran♂||29|None|033|Nidorino|♂|29|None|36=マサミチ|37=Masamichi}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr FRLG Fisherman.png|Fisherman|Andrew|864|2|129|Magikarp|♂|24|None|129|Magikarp|♂|24|None|36=カツノリ|37=Katsunori}}
+{{Trainerdiv|water|Rematch}}
+{{Trainerentry|Spr FRLG Fisherman.png|Fisherman|Elliot|1008<br/><small>After reaching [[Fuchsia City]]</small>|4|061|Poliwhirl|♂|28|None|091|Cloyster|♂|28|None|119|Seaking|♂|28|None|117|Seadra|♂|28|None|36=アキヒコ|37=Akihiko|38=Vs. Seeker}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr FRLG Young Couple.png|Young Couple|Gia & Jes|1680<br/><small>After reaching [[Fuchsia City]]</small>|2|033|Nidorino|♂|30|None|030|Nidorina|♀|30|None|36=アユとシゲ|37=Ayu and Shige|38=Vs. Seeker}}
+{{Trainerentry|Spr FRLG Young Couple.png|Young Couple|Gia & Jes|3080<br/><small>After delivering the {{i|Sapphire}} to [[Celio]]<br/>and defeating the previous team</small>|2|034|Nidoking|♂|55|None|031|Nidoqueen|♀|55|None|36=アユとシゲ|37=Ayu and Shige|38=Vs. Seeker}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr FRLG Rocker.png|Rocker|Luca|792<br/><small>After reaching [[Fuchsia City]]</small>|2|101|Electrode||33|None|101|Electrode||33|None|36=アヤキ|37=Ayaki|38=Vs. Seeker}}
+{{trainerfooter|water}}
+
+===Generation IV===
+{{trainerheader|water}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Kyle|1248|3|118|Goldeen|♂|39|None|211|Qwilfish|♂|35|None|118|Goldeen|♂|39|None|36=ナオフミ|37=Naofumi|38=phone}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr HGSS Bird Keeper.png|Bird Keeper|Justin|1248|2|178|Xatu|♂|44|None|164|Noctowl|♂|39|None|36=ケイジ|37=Cage}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Martin|1344|2|223|Remoraid|♂|36|None|224|Octillery|♂|42|None|36=ソウスケ|37=Sōsuke}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr HGSS Young Couple.png|Young Couple|Vic & Tara|5504|2|126|Magmar|♂|44|None|192|Sunflora|♂|43|None|36=カンとマキ|37=Kan and Maki}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Stephen|1216|3|195|Quagsire|♂|43|None|211|Qwilfish|♂|38|None|073|Tentacruel|♂|38|None|36=トモヒト|37=Tomohito}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr HGSS Bird Keeper.png|Bird Keeper|Gail|1248|2|022|Fearow|♂|42|None|021|Spearow|♂|39|None|36=ツネミ|37=Tsunemi}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Barney|1184|3|130|Gyarados|♂|40|None|130|Gyarados|♂|37|None|130|Gyarados|♂|37|None|36=エイイチ|37=Ei'ichi}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Kyler|576|3|129|Magikarp|♂|18|None|129|Magikarp|♂|18|None|129|Magikarp|♂|18|None|36=マキオ|37=Makio|38=phone}}
+{{Trainerdiv|water|Rematch}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Kyle{{tt|*|First rematch}}|1376<br/>{{dotw|We}}{{sup/t|D}}|3|119|Seaking|♂|40|None|119|Seaking|♂|43|None|211|Qwilfish|♂|38|None|36=ナオフミ|37=Naofumi|38=phone}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Kyle{{tt|*|Second rematch}}|1468<br/>{{dotw|We}}{{sup/t|D}}|4|119|Seaking|♂|43|None|119|Seaking|♂|47|None|211|Qwilfish|♂|41|None|098|Krabby|♂|39|None|36=ナオフミ|37=Naofumi|38=phone}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Kyle{{tt|*|Third rematch onwards}}|1523<br/>{{dotw|We}}{{sup/t|D}}|4|119|Seaking|♂|48|None|119|Seaking|♂|52|None|211|Qwilfish|♂|49|None|099|Kingler|♂|51|None|36=ナオフミ|37=Naofumi|38=phone}}
+{{Trainerdiv|water}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Kyler{{tt|*|First rematch}}|576<br/>{{dotw|Th}}{{sup/t|D}}|4|129|Magikarp|♂|18|None|129|Magikarp|♂|18|None|129|Magikarp|♂|18|None|129|Magikarp|♂|18|None|36=マキオ|37=Makio|38=phone}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Kyler{{tt|*|Second rematch}}|576<br/>{{dotw|Th}}{{sup/t|D}}|5|129|Magikarp|♂|18|None|129|Magikarp|♂|18|None|129|Magikarp|♂|18|None|129|Magikarp|♂|18|None|129|Magikarp|♂|18|None|36=マキオ|37=Makio|38=phone}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Kyler{{tt|*|Third rematch onwards}}|576<br/>{{dotw|Th}}{{sup/t|D}}|6|129|Magikarp|♂|18|None|129|Magikarp|♂|18|None|129|Magikarp|♂|18|None|129|Magikarp|♂|18|None|129|Magikarp|♂|18|None|129|Magikarp|♂|18|None|36=マキオ|37=Makio|38=phone}}
+{{trainerfooter|water|2}}
+
+===Generation VII===
+{{trainerheader|water}}
+{{Trainerdiv|water|North of Snorlax}}
+{{Trainerentry|VSFisherman PE.png{{!}}90px|game=PE|Fisherman|Ned|1,080<br/>3 {{i|Poké Ball}}s|1|120|Staryu||27|None|36=トモカズ|37=Tomokazu}}
+{{Trainerdiv|water}}
+{{Trainerentry|VSFisherman PE.png{{!}}90px|game=PE|Fisherman|Chip|1,080<br/>3 {{i|Poké Ball}}s|1|061|Poliwhirl|♂|27|None|36=ケイイチ|37=Keiichi}}
+{{Trainerdiv|water}}
+{{Trainerentry|VSFisherman PE.png{{!}}90px|game=PE|Fisherman|Hank|1,080<br/>3 {{i|Poké Ball}}s|3|129|Magikarp|♂|27|None|119|Seaking|♂|27|None|060|Poliwag|♀|27|None|36=カズホ|37=Kazuho}}
+{{Trainerdiv|water}}
+{{Trainerentry|VSFisherman PE.png{{!}}90px|game=PE|Fisherman|Elliot|1,080<br/>3 {{i|Poké Ball}}s|2|130|Gyarados|♂|27|None|129|Magikarp|♂|27|None|36=アキヒコ|37=Akihiko}}
+{{Trainerdiv|water}}
+{{Trainerentry|VSAce Trainer M PE.png{{!}}90px|game=PE|Ace Trainer|Zach|2,900<br/>5 [[Ultra Ball]]s|2|114|Tangela|♂|28|None|095|Onix|♂|29|None|36=エイイチ|37=Eiichi}}
+{{Trainerdiv|water|South of Snorlax}}
+{{Trainerentry|VSFisherman PE.png{{!}}90px|game=PE|Fisherman|Andrew|1,440<br/>3 {{i|Poké Ball}}s|2|072|Tentacool|♀|36|None|099|Kingler|♂|36|None|36=カツノリ|37=Katsunori}}
+{{Trainerdiv|water}}
+{{Trainerentry|VSRocker PE.png{{!}}90px|game=PE|Rocker|Luca|1,008<br/>3 {{i|Poké Ball}}s<br><small>Requires [[Secret Technique|Chop Down]]</small>|1|125|Electabuzz|♂|36|None|36=アヤキ|37=Ayaki}}
+{{Trainerdiv|water}}
+{{Trainerentry|VSCamper PE.png{{!}}90px|game=PE|Camper|Justin|700<br/>2 [[Great Ball]]s|2|032|Nidoran♂||35|None|033|Nidorino|♂|35|None|36=マサミチ|37=Masamichi}}
+{{Trainerdiv|water}}
+{{Trainerentry|VSCoach Trainer F PE.png{{!}}90px|game=PE|Coach Trainer|Priya|3,900|2|012|Butterfree|♀|38|None|036|Clefable|♀|39|None|36=リョウセ|37=Ryōse}}
+{{trainerdiv|water|After becoming Champion}}
+{{trainerentry/master|VSBeauty 2 Master PE.png{{!}}90px|Beauty|Suzy|007|Squirtle|♀|65|Normal|Headbutt|Dark|Bite|Water|Withdraw|36=リカコ|37=Rikako}}
+{{trainerdiv|water}}
+{{trainerentry/master|VSBird Keeper Master PE.png{{!}}90px|Bird Keeper|Wyatt|018|Pidgeot|♂|75|Flying|Sky Attack|Normal|Hyper Beam|Psychic|Reflect|Flying|Roost|36=トモヒサ|37=Tomohisa}}
+{{trainerdiv|water|<small>Requires Sea Skim</small>}}
+{{trainerentry/master|VSBeauty 2 Master PE.png{{!}}90px|Beauty|Lucy|117|Seadra|♀|75|Normal|Smokescreen|Normal|Hyper Beam|Normal|Substitute|36=ケイ|37=Kei}}
+{{trainerdiv|water}}
+{{trainerentry/master|VSBeauty 2 Master PE.png{{!}}90px|Beauty|Evette|118|Goldeen|♀|70|Psychic|Agility|Normal|Headbutt|Poison|Poison Jab|36=マリヤ|37=Mariya}}
+{{trainerdiv|water|<small>Requires Chop Down</small>}}
+{{trainerentry/master|VSLass Master PE.png{{!}}90px|Lass|Vicky|060|Poliwag|♂|65|Psychic|Hypnosis|Normal|Headbutt|Water|Hydro Pump|36=ユイ|37=Yui}}
+{{trainerfooter|water|PE}}
+
+==Differences among generations==
+[[File:Kanto Route 12 HGSS.png|thumb|125px|Route 12 in {{game|HeartGold and SoulSilver|s}}]]
+===Generations I and III===
+A sleeping {{p|Snorlax}} is often found blocking the intersection between Routes 11 and 12. To move it, a [[Poké Flute]] is required. Also, in [[Generation III]], {{TM|16|Pay Day}} was replaced with {{TM|48|Skill Swap}}, and after the Fishing Guru's younger brother gives the player a Super Rod, he will give away a [[Net Ball]] if he is shown a Magikarp of a certain size.
+
+===Generations II and IV===
+Some changes were made to this route in [[Generation II]], most of which were carried through to [[Generation IV]]. In particular, the route was shortened considerably and the grassy areas along the route were removed. The gate between Silence Bridge and [[Lavender Town]] was also removed and the number of Trainers on the route was reduced to three (although this remains eight in {{game|HeartGold and SoulSilver|s}}).
+
+In Generation II, the signpost at the north end of Route 12 now reads "Fishing spot". To compensate, the Route 12 notice present on this sign before was moved to the former "Sport fishing area" sign at Route 11. The signpost on Route 13 just southwest of Route 12's end, however, still reads "Route 13: North to Silence Bridge".
+
+In {{game|HeartGold and SoulSilver|s}}, if the [[List of in-game event Pokémon in Pokémon HeartGold and SoulSilver#Snorlax|Snorlax from Route 11]] is knocked out by the player, it will reappear outside of the Route 12 gate after the player defeats the [[Pokémon League]].
+{{-}}
+
+==Music==
+{| class="roundtable" style="margin:auto; text-align: center; background: #{{locationcolor/med|water}}; border: 3px solid #{{locationcolor/dark|water}}"
+|- style="background:#{{locationcolor/light|water}}"
+! Games
+! Song name (Japanese) 
+! Song name (English) 
+! Composition
+! Arrangement
+|- style="background:#FFF"
+! {{GameIcon|R}}{{GameIcon|Gr}}{{GameIcon|B}}{{GameIcon|Y}}
+| シオンへの道—クチバより
+| [[Pokémon Red & Pokémon Green: Super Music Collection|Road to Lavender Town: Leaving Vermilion City]]
+| [[Junichi Masuda]]
+| [[Junichi Masuda]]
+|- style="background:#FFF"
+! {{GameIcon|G}}{{GameIcon|S}}{{GameIcon|C}}
+| 11ばんどうろ
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Route 11]]
+| [[Junichi Masuda]]
+| [[Go Ichinose]]
+|- style="background:#FFF"
+! {{GameIcon|FR}}{{GameIcon|LG}}
+| セキチクへの道－シオンタウンより
+| [[Pokémon FireRed & Pokémon LeafGreen: Super Music Collection|Road to Fuchsia City: Leaving Lavender Town]] 
+| [[Junichi Masuda]] 
+| [[Go Ichinose]]
+|- style="background:#FFF"
+! {{GameIcon|HG}}{{GameIcon|SS}}
+| 11ばんどうろ|| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Route 11]] || [[Junichi Masuda]] || [[Takuto Kitsuta]]<br><small>[[GB Sounds]]:</small> [[Morikazu Aoki]]
+|- style="background:#FFF"
+! {{GameIcon|LGP}}{{GameIcon|LGE}}
+| シオンへの道—クチバより || [[Pokémon: Let's Go, Pikachu! & Pokémon: Let's Go, Eevee! Super Music Collection|Road to Lavender Town: Leaving Vermilion City]] || [[Junichi Masuda]] || [[Shota Kageyama]]
+|}
+
+==In animation==
+[[File:Mega Study with Instructor Starmie extra scene HZ146.png|thumb|250px|Route 12 in {{aniseries|HZ}}]]
+===''Pokémon the Series''===
+===={{aniseries|RS}}====
+Route 12 may have been featured briefly at the start of ''[[AG153|Tactics Theatrics!!]]'', since the [[Battle Dome]] is stated to lie just to the south of [[Lavender Town]], and the Dome appears to be situated at the edge of a large body of water.
+
+===''Pokémon Horizons: The Series''===
+In the extra scene for [[Mega Study with Instructor Starmie]] in [[HZ146]], [[Dot]] and [[Navi]] encountered a sleeping {{p|Snorlax}} on the bridge, much like in Kanto-based games. Dot attempted to wake it up with a [[Poké Flute]], but the Snorlax turned around on its stomach, almost crushing the two girls.
+
+===Pokémon Origins===
+Route 12 made a brief appearance in ''[[PO03|File 3: Giovanni]]'', where {{OBP|Red|Origins}} obtained the [[Super Rod]] from the {{DL|Fishing Brothers|Silence Bridge Fishing Guru}}.
+{{-}}
+
+==In the manga==
+[[File:Kanto Route 12 Adventures.png|thumb|250px|Route 12 in [[Pokémon Adventures]]]]
+===Pokémon Adventures===
+===={{MangaArc|Red, Green & Blue}}====
+Route 12 appeared in ''[[PS012|Wake Up—You're Snorlax!]]'', where a [[Bicycle|bike]] race was taking place through the route, but a [[Snor]]lax was blocking the road. A {{tc|Swimmer}} and a {{tc|Bug Catcher}} had already tried to make it move, but failed. {{adv|Red}} eventually figured out a solution by using the [[honey]] that had fallen from a {{p|Beedrill}} hive onto [[Saur]]'s head as a bait to get Snorlax to wake up and move. The plan worked, but it also caused Snorlax to follow Red all the way to the finish line, where he eventually {{pkmn2|caught}} it.
+{{-}}
+
+==In other languages==
+''Silence Bridge''
+{{langtable|color={{locationcolor/light|water}}|bordercolor={{locationcolor/dark|water}}
+|zh_yue=寂靜橋 ''{{tt|Jihkjihng Kìuh|Silence Bridge}}''
+|zh_cmn=寂靜橋 / 寂静桥 ''{{tt|Jíjìng Qiáo / Jìjìng Qiáo|Silence Bridge}}''
+|fr=Pont du Silence{{sup/1|RBY}}{{sup/2|GSC}}{{sup/3|FRLG}}{{sup/7|PE}}<br>Pont Silence{{sup/4|HGSS}}
+|de=Schweigebrücke{{sup/2|GSC}}{{sup/4|HGSS}}{{sup/7|PE}}<br>Stille Brücke{{sup/1|RBY}}{{sup/3|FRLG}}
+|it=Ponte Silenzio
+|ko=고요한 다리 ''{{tt|Goyohan Dari|Silence Bridge}}''
+|es=Puente Silencio
+}}
+
+==Related articles==
+{{Kanto}}<br>
+{{Project Routes notice}}
+
+[[Category:Kanto locations|Route 012]]
+[[Category:Routes|Route 012]]
+[[Category:Red, Blue and Yellow locations|Route 012]]
+[[Category:Gold, Silver and Crystal locations|Route 012]]
+[[Category:FireRed and LeafGreen locations|Route 012]]
+[[Category:HeartGold and SoulSilver locations|Route 012]]
+[[Category:Let's Go, Pikachu! and Let's Go, Eevee! locations|Route 012]]
+[[Category:Bridges|Silence Bridge]]
+
+[[de:Route 12 (Kanto)]]
+[[es:Ruta 12 (Kanto)]]
+[[fr:Route 12 (Kanto)]]
+[[it:Percorso 12 (Kanto)]]
+[[ja:12ばんどうろ (カントー地方)]]
+[[zh:１２号道路（关都）]]

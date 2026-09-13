@@ -1,0 +1,48 @@
+<!-- poke-guide fixture: {"title":"Butterfree (Pokémon)/Generation I learnset","resolvedTitle":"Butterfree (Pokémon)/Generation I learnset","revid":4059777,"timestamp":"2024-07-13T02:55:35Z","fetchedAt":"2026-09-13T06:30:46.043Z"} -->
+{{pokelinkback|012|Butterfree|1}}
+====By [[Level|leveling up]]====
+{{learnlist/levelh/1|Butterfree|Bug|Flying|RGB|Y}}
+{{learnlist/levelI|1|1|Confusion|Psychic|50|100|25}}
+{{learnlist/levelI|12|10|Confusion|Psychic|50|100|25}}
+{{learnlist/levelI|15|13|PoisonPowder|Poison|—|75|35}}
+{{learnlist/levelI|16|14|Stun Spore|Grass|—|75|30}}
+{{learnlist/levelI|17|15|Sleep Powder|Grass|—|75|15}}
+{{learnlist/levelI|21|18|Supersonic|Normal|—|55|20}}
+{{learnlist/levelI|26|23|Whirlwind|Normal|—|85|20}}
+{{learnlist/levelI|N/A|28|Gust|Normal|40|100|35}}
+{{learnlist/levelI|32|34|Psybeam|Psychic|65|100|20}}
+{{learnlist/levelf|Butterfree|Bug|Flying|1|1}}
+
+====By [[TM]]/[[HM]]====
+{{learnlist/tmh|Butterfree|Bug|Flying|1|1}}
+{{learnlist/tm1|TM02|Razor Wind|Normal|80|75|10}}
+{{learnlist/tm1|TM04|Whirlwind|Normal|—|85|20}}
+{{learnlist/tm1|TM06|Toxic|Poison|—|85|10}}
+{{learnlist/tm1|TM09|Take Down|Normal|90|85|20}}
+{{learnlist/tm1|TM10|Double-Edge|Normal|100|100|15}}
+{{learnlist/tm1|TM15|Hyper Beam|Normal|150|90|5}}
+{{learnlist/tm1|TM20|Rage|Normal|20|100|20}}
+{{learnlist/tm1|TM21|Mega Drain|Grass|40|100|10}}
+{{learnlist/tm1|TM22|SolarBeam|Grass|120|100|10}}
+{{learnlist/tm1|TM29|Psychic|Psychic|90|100|10}}
+{{learnlist/tm1|TM30|Teleport|Psychic|—|—|20}}
+{{learnlist/tm1|TM31|Mimic|Normal|—|100|10}}
+{{learnlist/tm1|TM32|Double Team|Normal|—|—|15}}
+{{learnlist/tm1|TM33|Reflect|Psychic|—|—|20}}
+{{learnlist/tm1|TM34|Bide|Normal|—|—|10}}
+{{learnlist/tm1|TM39|Swift|Normal|60|—|20}}
+{{learnlist/tm1|TM44|Rest|Psychic|—|—|10}}
+{{learnlist/tm1|TM46|Psywave|Psychic|—|80|15}}
+{{learnlist/tm1|TM50|Substitute|Normal|—|—|10}}
+{{learnlist/tm1|HM05|Flash|Normal|—|70|20|||Y}}
+{{learnlist/tmf|Butterfree|Bug|Flying|1|1}}
+
+====By a prior [[Evolution]]====
+{{Learnlist/prevoh|Butterfree|Bug|Flying|1|1}}
+{{Learnlist/prevo1|010|Caterpie|||||Tackle|Normal|35|95|35}}
+{{Learnlist/prevo1|010|Caterpie|||||String Shot|Bug|—|95|40}}
+{{Learnlist/prevo1|011|Metapod|||||Harden|Normal|—|—|30}}
+{{Learnlist/prevof|Butterfree|Bug|Flying|1|1}}
+
+[[it:Butterfree/Mosse apprese in prima generazione]]
+[[zh:巴大蝶/第一世代招式表]]

@@ -1,0 +1,2065 @@
+<!-- poke-guide fixture: {"title":"Silph Co.","resolvedTitle":"Silph Co.","revid":4620723,"timestamp":"2026-08-30T02:36:15Z","fetchedAt":"2026-09-12T21:57:28.705Z"} -->
+{{Infobox location
+|image=Silph Co. Exterior LGPE.png
+|image_size=300
+|type=building
+|location_name=Silph Company
+|japanese_name=シルフカンパニー
+|translated_name={{tt|Sylph|Silph}} Company
+|location=[[Saffron City]]
+|region=Kanto
+|generation={{Gen|I}}, {{Gen|II}}, {{Gen|III}}, {{Gen|IV}}, {{Gen|VII}}
+|map=Kanto Saffron City Map.png
+}}
+[[File:FL Silph Company.png|thumb|240px|Location preview of Silph Co. as seen in {{game|FireRed and LeafGreen|s}}]]
+The '''Silph Co.''' (Japanese: '''シルフカンパニー''' ''{{tt|Sylph|Silph}} Company''), also known as simply '''Silph''' (Japanese: '''シルフ''' ''{{tt|Sylph|Silph}}''), is a company headquartered at the '''Silph Co. Office Building''' or '''Silph Co. Head Office''' (Japanese: シルフ カンパニー ほんしゃ ビル ''{{tt|Sylph|Silph}} Company Main Office Building''; シルフほんしゃビル ''{{tt|Sylph|Silph}} Main Office Building''; シルフ カンパニー ほんしゃ ''{{tt|Sylph|Silph}} Company Main Office'') in [[Saffron City]]. The company manufactures a variety of goods, including the [[Silph Scope]], the [[Master Ball]], and the [[Upgrade]].
+
+==Terminology==
+===Japanese===
+Names used for Silph Co. in the Japanese games:
+
+* シルフカンパニー (''{{tt|Sylph|Silph}} Company'')
+*: This name is often used in the dialogue by multiple characters in several generations.
+*: This name is seen in the Pokémon's [[summary]] if it was originally met in this building (including the {{pkmn2|gift}} {{p|Lapras}}, as well as any {{pkmn|Egg}}s hatched here).
+*: In Generations {{gen|III}} and {{gen|VII}} (but not in {{game|Crystal}}, [[Pokémon HeartGold and SoulSilver Versions|HeartGold, or SoulSilver]]), this name is used when the player is entering the Silph Co.
+*: In Generation III, the floor number appears when the player enters the floor. Each floor is named as "シルフカンパニー 1F", "シルフカンパニー 2F", etc. The elevator is simply named "シルフカンパニー".
+* シルフ (''{{tt|Sylph|Silph}}'')
+*: Sometimes this name is used in character dialogue, such as "おおきく なったら シルフで はたらくと いいよ" ("Come work for <sc>Silph</sc> when you get older!")
+*: This name is used in "シルフスコープ", the Japanese name of [[Silph Scope]].
+*: This name is used in the Trainer class "シルフのチーフ" (''Sylph's Chief''), that is found in the [[Generation I]] game data but is not seen in-game. This Trainer class was translated as simply "Chief" in English.
+* シルフ カンパニー ほんしゃ ビル (''{{tt|Sylph|Silph}} Company Main Office Building'')
+*: This name is displayed on the sign at the side of the Silph Co. building, from [[Generation I]] to {{gen|IV}}.
+* シルフカンパニー {{Ruby|本社|ほんしゃ}}ビル (''{{tt|Sylph|Silph}} Company Main Office Building'')
+*: In [[Generation VII]], the name is written with kanji on the sign.
+* シルフほんしゃビル (''{{tt|Sylph|Silph}} Main Office Building'')
+*: This name is displayed in the [[Generation I]] [[Town Map]]. This may be a shortened version of "シルフ カンパニー ほんしゃ ビル", which would not fit in the Town Map due to the limit of 9 characters for each place name.
+* シルフ カンパニー ほんしゃ (''{{tt|Sylph|Silph}} Company Main Office'')
+*: In [[Generation III]], this name appears with the floor number, on the sign near the stars on each floor. For instance, "シルフ カンパニー ほんしゃ 4かい" (''Silph Company Main Office 4th Floor'').
+* Sylph Corpration{{sic}}
+*: This name appears in Romaji on the {{ka|Card Key}} in its official artwork from [[Generation I]].
+* Silf
+*: This name appears in Romaji in the Japanese version of ''[[Super Smash Bros.]]'', on the [[Saffron City (stage)|Saffron City stage]]. It is written "Sylph", consistent with how it is normally romanized, in the Japanese version of ''[[Super Smash Bros. Ultimate]]''.
+
+===English===
+Names used for Silph Co. in the English games:
+
+* Silph Co.
+*: This name is often used in the dialogue by multiple characters in several generations.
+*: This name is displayed on the [[Town Map]] in [[Generation I]]. From [[Generation II]] onwards, Silph Co. is not named in any form of [[map]] equipment.
+*: This name is seen in the Pokémon's [[summary]] if it was originally met in this building (including the {{pkmn2|gift}} {{p|Lapras}}, as well as any {{pkmn|Egg}}s hatched here).
+*: In Generations {{gen|III}} and {{gen|VII}} (but not in {{game|Crystal}}, [[Pokémon HeartGold and SoulSilver Versions|HeartGold, or SoulSilver]]), this name is used when the player is entering the Silph Co.
+*: In Generation III, the floor number appears when the player enters the floor. Each floor is named as "Silph Co. 1F", "Silph Co. 2F", etc. The elevator is simply named "Silph Co."
+* Silph
+*: Sometimes this name is used in character dialogue, such as "Come work for <sc>Silph</sc> when you get older!", "You mistook me for a <sc>Silph</sc> worker?", and "Thank you for saving <sc>Silph</sc>!" in Generations {{gen|I}} and {{gen|III}}.
+*: Used in the name of [[Silph Scope]].
+* Silph Co. Office Building
+*: This name is displayed on the sign at the side of the Silph Co., in all generations where this building appears.
+* Silph Co. Head Office
+*: In [[Generation III]], this name appears with the floor number, on the sign near the stairs on each floor. For instance, "Silph Co. Head Office 4F".
+
+For comparison, the name "Silph Company" is not used in any English [[core series]] games.
+
+==In the core series games==
+[[File:SugimoriMasterBall.png|thumb|150px|A Silph Co. Master Ball]]
+
+===Headquarters===
+The Silph Co. Office Building, based in [[Saffron City]], is an eleven-floor {{wp|skyscraper}} that is effectively a giant maze.
+
+====Generations I, III, and VII====
+In Generations {{gen|I}}, {{gen|III}}, and {{gen|VII}}, due to [[Team Rocket]] having invaded the Silph Co. headquarters in Saffron City, a {{tc|Team Rocket Grunt}} is initially guarding the front door, preventing entrance into the building. After the {{player}} has saved [[Mr. Fuji]] from Team Rocket at the [[Pokémon Tower]] in [[Lavender Town]], the guard will have fallen asleep{{sup/1|RB}}{{sup/3|FRLG}}, disappeared{{sup/1|Y}}, or been knocked out by [[Jessie]] and [[James]]{{sup/7|PE}}, allowing the player to enter the building.
+
+The {{player}} can navigate the building's interior by using [[warp panel]]s in order to reach the board room on the top floor. To do this, the player must obtain the {{ka|Card Key}}, which unlocks Silph's doors like a hotel key, on the fifth floor of the building. During this time, multiple {{pkmn|Trainer}}s occupy the building. These Trainers include numerous {{tc|Team Rocket Grunt}}s, including the four [[Rocket Siblings|Rocket Brothers]]{{sup/1|RBY}}{{sup/3|FRLG}}/[[Rocket Siblings|Rocket Sisters]]{{sup/7|PE}} and a {{tc|Juggler}}, who also appears to be a member of [[Team Rocket]], as well as several {{tc|Scientist}}s who have defected to Team Rocket. The bed at the bottom-left corner of the ninth floor can be used to heal the player's Pokémon without having to leave the building.
+
+On the second floor, a woman hiding from Team Rocket will give away a [[TM]] for {{m|Self-Destruct}} in [[Generation I]] and [[Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!]]. In {{game|FireRed and LeafGreen|s}}, she will instead [[Move Tutor|offer to teach]] the move {{m|Thunder Wave}} to one of the player's {{OBP|Pokémon|species}}.
+
+In Generations I and III, {{ga|Blue}} will challenge the player to a battle on the seventh floor, while in Generation VII, he challenges both the player and {{ga|Trace}} to a battle on the first floor. In Generation VII, Trace stays behind on the seventh floor to stall [[Archer]] and give the player time to reach [[Giovanni]].
+
+On the seventh floor, the player can receive a {{p|Lapras}} as a {{pkmn2|gift}} from a Silph employee. In the Generation I games, this was the only way to obtain a Lapras. Upon reaching the president's room on the top floor, the player must defeat Giovanni to stop him from stealing the [[Master Ball]]. After he is defeated, Team Rocket abandons their plans for Silph and withdraws from the building.
+
+====Generations II and IV====
+[[File:Pokégear HGSS m.png|thumb|150px|A Silph Co. Pokégear, bearing the company's logo]]
+In Generations {{gen|II}} and {{gen|IV}}, Silph Co. has increased security, and the {{player}} is not allowed to enter the upper floors. One of the guards will kindly give the player an [[Upgrade|Up-Grade]] for talking to him.
+
+In {{2v2|HeartGold|SoulSilver}}, the elevator has broken and is unsafe, denying the player access to the upper floors. However, upon defeating {{ga|Red}}, the player can meet the [[Hoenn League]] {{pkmn|Champion}} [[Steven Stone]] here and receive one of the [[Hoenn]] region's [[first partner Pokémon]] from him. He will also [[In-game trade|trade]] his {{p|Beldum}} for a {{p|Forretress}} after being interacted with at the [[Pewter Museum of Science]].
+
+[[Generation IV]] introduced a logo for the company that appears on the [[Pokégear]] and has a statue based on it in the company's building.
+
+====Rotom's Room====
+{{main|Rotom's Room}}
+The alternate forms of {{p|Rotom}} may also be accessed here in [[Generation IV]] via the broken elevator. When Rotom is in the party, the Silph Co. building will be deserted of all people, including {{Steven}}. The notebook present in the room indicates that [[Charon]] may have had a past connection to the company.
+
+===Russian branch===
+In the [[Generation I]] games and {{game|FireRed and LeafGreen|s}}, {{tc|Scientist}} Taylor mentions an alleged overseas branch of Silph Co. In the English versions, he states that the {{wp|Tiksi}} branch of the company is "in Russian no-man's-land". In the Japanese versions, he states that the "Ponaya Tunguska branch" ({{j|ポナヤツングスカしてん}}) is located "deep in Russia" ({{j|「ロシアの　おくの　ほうだよ」}}). Ponaya Tunguska appears to be a shortened form of the transliterated name of {{wp|Podkamennaya Tunguska (rural locality)|Podkamennaya Tunguska}} in Japanese ({{j|ポドカメンナヤツングースカ}}).
+
+In [[Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!]], the references to Russia were removed, and the English, Spanish, and Korean localizations further removed the name of the branch itself. In the English version, Taylor instead mentions having been sent "off to the boondocks". In the Japanese version, he still mentions the "Ponaya Tunguska branch" (rendered as {{j|ポナヤツングスカ支店}} when the Characters setting in [[Options]] is set to kanji), which was localized into Italian as "Ponayanguska", into German as "Ponayatunguska", and into both Simplified and Traditional Chinese as the "Ponaya Tungus River branch" ({{lang|zh|波拿耶通古斯河分公司}}). Ponaya Tungus River appears to be a shortened form of the name of the {{wp|Podkamennaya Tunguska}} River.
+
+===Discoveries and inventions===
+Within the company, there are three reports of discoveries that serve as in-game trivia for the player, labeled '''Pokémon Report''' (Japanese: ポケモン レポート).
+
+In the [[Generation I]] games, one report says that only four {{OBP|Pokémon|species}} [[Evolution|evolve]] when [[trade]]d, referring to {{p|Kadabra}}, {{p|Graveler}}, {{p|Machoke}}, and {{p|Haunter}}. In {{game|FireRed and LeafGreen|s}} and {{LGPE}}, it instead says that some Pokémon evolve when traded without specifying a number.
+
+Another report states the number of [[move]]s that Pokémon can learn, referred to as "techniques" in Generations I and III. This number is over 160 in the Generation I games, over 350 in the [[Generation III]] games, and over 200 in the [[Generation VII]] games.
+
+A third report informs the player that {{p|Porygon}} was created by the [[Cinnabar Lab|Pokémon Lab]] on [[Cinnabar Island]]. In Generation VII, this report instead states that Porygon was created by the research section. 
+
+===Items===
+One of the items below is in a different location in the original Red and Green version, and is listed separately. Other items are in the same location.
+{{itlisth|building}}
+{{Itemlist|X Sp. Atk|
+* 1F, between the fountains
+* 6F, in the central room|LP=yes|LE=yes|display=[[X Sp. Atk]] ×2}}
+{{Itemlist|Super Potion|
+* 2F, in the west area of the floor
+* 6F, next to the southernmost plant|LP=yes|LE=yes|display=[[Super Potion]] ×2}}
+{{Itemlist|TM Normal|2F, received from the woman in the northwest room|R=yes|B=yes|Y=yes|display={{TM|36|Selfdestruct}}}}
+{{Itemlist|TM Normal VI|2F, received from the woman in the northwest room|LP=yes|LE=yes|display={{TM|42|Self-Destruct}}}}
+{{Itemlist|Ultra Ball|
+* 2F, on the southern plant in the southwest area of the floor ''(hidden)''
+* 10F, in the southwest area of the floor|FR=yes|LG=yes|display=[[Ultra Ball]] ×2}}
+{{Itemlist|Fresh Water|
+* 2F, on the water dispenser in the south area of the floor ''(hidden)''
+* 4F, on the water dispenser in the middlemost room ''(hidden)''
+* 6F, on the water dispenser in the northwest room ''(hidden)''|LP=yes|LE=yes|display=[[Fresh Water]] ×3}}
+{{Itemlist|X Attack|
+* 2F, in the southeast area of the floor
+* 8F, north of the northern plant in the eastern room|LP=yes|LE=yes|display=[[X Attack]] ×2}}
+{{Itemlist|Hyper Potion|3F, northeast of the {{tc|Scientist}}|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Protein|3F, on the center plant of the three plants in the southeast area of the floor ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Silver Razz Berry|
+*3F, in the northwest corner on one of the three plants ''(hidden)'' (daily)
+*8F, on the plant in the southeast corner ''(hidden)'' (daily)|LP=yes|LE=yes|display=[[Silver Razz Berry]] ×6}}
+{{Itemlist|Max Lure|3F, in the first room to the west|LP=yes|LE=yes}}
+{{Itemlist|X Sp. Def|3F, in the eastern room|LP=yes|LE=yes}}
+{{Itemlist|Full Heal|4F, in the storage room in the west|R=yes|B=yes|Y=yes|FR=yes|LG=yes|LP=yes|LE=yes}}
+{{Itemlist|Escape Rope|4F, in the storage room in the west|R=yes|B=yes|Y=yes|FR=yes|LG=yes|LP=yes|LE=yes}}
+{{Itemlist|Max Revive|4F, in the storage room in the west|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|TM Dark|4F, in the southeast area of the floor|FR=yes|LG=yes|display={{TM|41|Torment}}}}
+{{Itemlist|Iron|4F, on the southernmost plant in the southeast area of the floor ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Dire Hit|4F, in the southeast area of the floor|LP=yes|LE=yes}}
+{{Itemlist|Star Piece|4F, in the storage room in the west|LP=yes|LE=yes}}
+{{Itemlist|Great Ball|
+* 4F, in the storage room in the west (×5)
+* 9F, on a shelf in the southern room (×3)|LP=yes|LE=yes|display=[[Great Ball]] ×8}}
+{{Itemlist|Revive|
+* 4F, in the storage room in the west
+* 8F, near the northwest corner of the floor
+* 9F, in between beds in the southwest corner|LP=yes|LE=yes|display=[[Revive]] ×3}}
+{{Itemlist|Card Key III|5F, east of the southernmost {{tc|Team Rocket Grunt}}|R=yes|B=yes|Y=yes|FR=yes|LG=yes|display={{ka|Card Key}}}}
+{{Itemlist|Protein|5F, in the northwest room|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Elixir|5F, on the first plant east of the {{tc|Scientist}} ''(hidden)''|JR=yes|JG=yes|display=[[Elixir|Elixer]]}}
+{{Itemlist|Elixir|5F, on the second plant east of the {{tc|Scientist}} ''(hidden)''|R=yes|B=yes|Y=yes|display=[[Elixir|Elixer]]}}
+{{Itemlist|TM Normal|5F, in the southwest area of the floor|R=yes|B=yes|Y=yes|display={{TM|09|Take Down}}}}
+{{Itemlist|TM Fighting|5F, in the southwest room|FR=yes|LG=yes|display={{TM|01|Focus Punch}}}}
+{{Itemlist|PP Up|5F, on the first plant south of the staircase leading to 6F ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Elixir|5F, on the southern plant of the two plants in the center area of the floor ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Card Key|5F, from {{ga|Trace}} after defeating [[Archer]] and a {{tc|Team Rocket Grunt}} in a [[Multi Battle]]|LP=yes|LE=yes|display={{ka|Card Key}}}}
+{{Itemlist|Silver Nanab Berry|5F, in the two plants on the northern wall, west of the elevator ''(hidden)'' (daily)|LP=yes|LE=yes|display=[[Silver Nanab Berry]] ×3}}
+{{Itemlist|Max Ether|5F, in the northwest room|LP=yes|LE=yes}}
+{{Itemlist|TM Steel VI|5F, in the southwest room|LP=yes|LE=yes|display={{TM|54|Flash Cannon}}}}
+{{Itemlist|Poké Ball|
+* 5F, in the southwest room (×5)
+* 9F, in the southern room (×3)|LP=yes|LE=yes|display={{i|Poké Ball}} ×8}}
+{{Itemlist|Nugget|5F, in the narrow corridor in the east|LP=yes|LE=yes}}
+{{Itemlist|Guard Spec.|5F, in the room in the middle of the floor|LP=yes|LE=yes}}
+{{Itemlist|X Accuracy|6F, in the southwest room|R=yes|B=yes|Y=yes}}
+{{Itemlist|HP Up|6F, in the southwest room|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Carbos|6F, on the western plant of the two plants in the northwest area of the floor ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|X Sp. Atk|6F, in the southwest room|FR=yes|LG=yes|display=[[X Sp. Atk|X Special]]}}
+{{Itemlist|Silver Pinap Berry|6F, on the plant in the southeast corner ''(hidden)'' (daily)|LP=yes|LE=yes|display=[[Silver Pinap Berry]] ×3}}
+{{Itemlist|Max Repel|6F, in the southwest room|LP=yes|LE=yes}}
+{{Itemlist|Hyper Potion|6F, in the southwest room|LP=yes|LE=yes}}
+{{Itemlist|PP Up|
+* 6F, in the eastern corridor
+* 7F, in the west area of the floor|LP=yes|LE=yes|display=[[PP Up]] ×2}}
+{{Itemlist|Calcium|7F, northwest of the {{tc|Scientist}}|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|TM Normal|7F, in the eastern room|R=yes|B=yes|Y=yes|display={{TM|03|Swords Dance}}}}
+{{Itemlist|TM Fighting|7F, in the eastern room|FR=yes|LG=yes|display={{TM|08|Bulk Up}}}}
+{{Itemlist|Zinc|7F, on the southern plant of the two plants in the east area of the floor  ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|TM Dragon VI|7F, in the eastern room|LP=yes|LE=yes|display={{TM|34|Dragon Pulse}}}}
+{{Itemlist|Nanab Berry|7F, on the southernmost plant in the central hallway ''(hidden)'' (daily)|LP=yes|LE=yes|display=[[Nanab Berry]] ×3}}
+{{Itemlist|Smart Candy|7F, in the southeast corner of the floor|LP=yes|LE=yes|display=[[Smart Candy]] ×3}}
+{{Itemlist|Rare Candy|7F, in the room south of the counter|LP=yes|LE=yes}}
+{{Itemlist|Iron|8F, east of the two beds south of the elevator|FR=yes|LG=yes}}
+{{Itemlist|Nugget|8F, on the northern plant of the two plants in the east area of the floor ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Max Potion|9F, one square south and one square west of the nurse, on the bed ''(hidden)''|R=yes|B=yes|Y=yes}}
+{{Itemlist|Max Potion|9F, one square east of the boxes ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Calcium|9F, on the eastern plant of the two plants in the northwest area of the floor ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Elixir|9F, between the northern two beds ''(hidden)'' (daily)|LP=yes|LE=yes}}
+{{Itemlist|Ultra Ball|9F, on a shelf in the southern room|LP=yes|LE=yes|display=[[Ultra Ball]] ×3}}
+{{Itemlist|Rare Candy|10F, in the southwest room|R=yes|B=yes|Y=yes|FR=yes|LG=yes|LP=yes|LE=yes}}
+{{Itemlist|Carbos|10F, in the southwest room|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|TM Ground|10F, in the southwest room|R=yes|B=yes|Y=yes|display={{TM|26|Earthquake}}}}
+{{Itemlist|HP Up|10F, on the plant in the eastern area of the floor ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|X Accuracy|10F, on a box in the northeast room ''(hidden)'' (daily)|LP=yes|LE=yes}}
+{{Itemlist|Full Heal|10F, in the northwest|LP=yes|LE=yes}}
+{{Itemlist|Max Revive|10F, in the southwest room|LP=yes|LE=yes}}
+{{Itemlist|TM Fire VI|10F, in the southwest room|LP=yes|LE=yes|display={{TM|37|Flamethrower}}}}
+{{Itemlist|Master Ball|11F, received from Silph Co.'s president after defeating [[Giovanni]]|R=yes|B=yes|Y=yes|FR=yes|LG=yes|LP=yes|LE=yes}}
+{{Itemlist|Zinc|11F, one square north of the southeast corner of the floor|FR=yes|LG=yes}}
+{{Itemlist|Revive|11F, on the center plant of the three plants in the south area of the floor ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Max Elixir|11F, near the southeast corner of the floor|LP=yes|LE=yes}}
+{{Itemlist|Up-Grade|Received from the guard|G=yes|S=yes|C=yes|HG=yes|SS=yes|display=[[Upgrade|Up-Grade]]}}
+{{Itemlist|Dawn Stone|Held by Iron, a {{p|Beldum}} the player can obtain in a [[In-game trade|trade]]|HG=yes|SS=yes}}
+{{itlistfoot|building}}
+
+===Pokémon===
+====Generation I====
+{{catch/header|building|no}}
+{{catch/div|building|Gift Pokémon}}
+{{catch/entry1|131|Lapras|yes|yes|yes|Gift|15|One|type1=water|type2=ice}}
+{{catch/footer|building}}
+
+====Generation III====
+{{catch/header|building|no}}
+{{catch/div|building|Gift Pokémon}}
+{{catch/entryfl|131|Lapras|yes|yes|Gift|25|One|type1=water|type2=ice}}
+{{catch/footer|building}}
+
+====Generation IV====
+{{catch/header|building|4}}
+{{catch/div|building|Gift Pokémon}}
+{{catch/entryhs|252|Treecko|yes|yes|Gift|5|all={{tt|One|Obtainable from Steven Stone after defeating Red; must select the choice of Green Stone}}|type1=grass}}
+{{catch/entryhs|255|Torchic|yes|yes|Gift|5|all={{tt|One|Obtainable from Steven Stone after defeating Red; must select the choice of Red Stone}}|type1=fire}}
+{{catch/entryhs|258|Mudkip|yes|yes|Gift|5|all={{tt|One|Obtainable from Steven Stone after defeating Red; must select the choice of Blue Stone}}|type1=water}}
+{{catch/div|building|Special}}
+{{catch/entryhs|374|Beldum|yes|yes|Trade|The same as the traded Pokémon|all=One|tradenum=205|tradename=Forretress|type1=steel|type2=psychic}}
+{{catch/footer|building}}
+
+====Generation VII====
+{{catch/header|building|no}}
+{{catch/div|building|Gift Pokémon}}
+{{catch/entrype|131|Lapras|yes|yes|Gift|34|One|type1=water|type2=ice}}
+{{catch/footer|building}}
+
+===Trainers===
+After [[Giovanni]] has been defeated, all the Trainers associated with [[Team Rocket]] will disappear from the building.
+
+====Generation I====
+=====2F=====
+{{trainerheader|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||750|5|042|Golbat||25||041|Zubat||25||041|Zubat||25||020|Raticate||25||041|Zubat||25||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Scientist.png|game=1|Scientist||1400|3|081|Magnemite||28||100|Voltorb||28||082|Magneton||28||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||870|2|104|Cubone||29||041|Zubat||29||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Scientist.png|game=1|Scientist||1300|4|088|Grimer||26||110|Weezing||26||109|Koffing||26||110|Weezing||26||}}
+{{trainerfooter|building|1}}
+
+=====3F=====
+{{trainerheader|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||840|3|020|Raticate||28||097|Hypno||28||020|Raticate||28||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Scientist.png|game=1|Scientist||1450|2|101|Electrode||29||110|Weezing||29||}}
+{{trainerfooter|building|1}}
+
+=====4F=====
+{{trainerheader|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||840|3|023|Ekans||28||041|Zubat||28||104|Cubone||28||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||870|2|066|Machop||29||096|Drowzee||29||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Scientist.png|game=1|Scientist||1650|1|101|Electrode||33||}}
+{{trainerfooter|building|1}}
+
+=====5F=====
+{{trainerheader|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||1015|1|097|Hypno||33| |}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Juggler.png|game=1|Juggler||1160|2|064|Kadabra||29| |122|Mr. Mime||29||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Scientist.png|game=1|Scientist||1450|4|082|Magneton||26||109|Koffing||26||110|Weezing||26||081|Magnemite||26||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||990|1|024|Arbok||33||}}
+{{trainerfooter|building|1}}
+
+=====6F=====
+{{trainerheader|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||870|2|066|Machop||29||067|Machoke||29||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||840|3|041|Zubat||28||041|Zubat||28||042|Golbat||28||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Scientist.png|game=1|Scientist||1250|5|100|Voltorb||25||109|Koffing||25||082|Magneton||25||081|Magnemite||25||109|Koffing||25||}}
+{{trainerfooter|building|1}}
+
+=====7F=====
+{{trainerheader|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||870|2|104|Cubone||29||104|Cubone||29||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||780|4|020|Raticate||26||024|Arbok||26||109|Koffing||26||042|Golbat||26||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Scientist.png|game=1|Scientist||1450|2|101|Electrode||29||089|Muk||29||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||840|2|027|Sandshrew||29||028|Sandslash||29||}}
+{{trainerfooter|building|1}}
+
+======{{game|Red and Blue|s}}======
+Blue has one [[Potion]] per Pokémon, using it 12.5% of the time if their HP falls below 20%.
+
+{{Party
+| caption = {{PlayerChoice|0001|Bulbasaur}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr RG Blue 2.png
+| prize = {{pdollar}}2600
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Silph Co.
+| game = RGB
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0018
+| pokemon = Pidgeot
+| level = 37
+| type1 = Normal
+| type2 = Flying
+| move1 = Wing Attack | move1type = Flying
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Whirlwind | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0102
+| pokemon = Exeggcute
+| level = 38
+| type1 = Grass
+| type2 = Psychic
+| move1 = Reflect | move1type = Psychic
+| move2 = PoisonPowder | move2type = Poison
+| move3 = Leech Seed | move3type = Grass
+| move4 = Stun Spore | move4type = Grass
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0130
+| pokemon = Gyarados
+| level = 35
+| type1 = Water
+| type2 = Flying
+| move1 = Dragon Rage | move1type = Dragon
+| move2 = Hydro Pump | move2type = Water
+| move3 = Bite | move3type = Normal
+| move4 = Leer | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0065
+| pokemon = Alakazam
+| level = 35
+| type1 = Psychic
+| move1 = Psybeam | move1type = Psychic
+| move2 = Confusion | move2type = Psychic
+| move3 = Disable | move3type = Normal
+| move4 = Recover | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0006
+| pokemon = Charizard
+| level = 40
+| type1 = Fire
+| type2 = Flying
+| move1 = Slash | move1type = Normal
+| move2 = Ember | move2type = Fire
+| move3 = Leer | move3type = Normal
+| move4 = Rage | move4type = Normal
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0004|Charmander}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr RG Blue 2.png
+| prize = {{pdollar}}2600
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Silph Co.
+| game = RGB
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0018
+| pokemon = Pidgeot
+| level = 37
+| type1 = Normal
+| type2 = Flying
+| move1 = Wing Attack | move1type = Flying
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Whirlwind | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0058
+| pokemon = Growlithe
+| level = 38
+| type1 = Fire
+| move1 = Roar | move1type = Normal
+| move2 = Ember | move2type = Fire
+| move3 = Leer | move3type = Normal
+| move4 = Take Down | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0102
+| pokemon = Exeggcute
+| level = 35
+| type1 = Grass
+| type2 = Psychic
+| move1 = Hypnosis | move1type = Psychic
+| move2 = Reflect | move2type = Psychic
+| move3 = Leech Seed | move3type = Grass
+| move4 = Stun Spore | move4type = Grass
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0065
+| pokemon = Alakazam
+| level = 35
+| type1 = Psychic
+| move1 = Psybeam | move1type = Psychic
+| move2 = Confusion | move2type = Psychic
+| move3 = Disable | move3type = Normal
+| move4 = Recover | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0009
+| pokemon = Blastoise
+| level = 40
+| type1 = Water
+| move1 = Bubble | move1type = Water
+| move2 = Water Gun | move2type = Water
+| move3 = Bite | move3type = Normal
+| move4 = Withdraw | move4type = Water
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0007|Squirtle}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr RG Blue 2.png
+| prize = {{pdollar}}2600
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Silph Co.
+| game = RGB
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0018
+| pokemon = Pidgeot
+| level = 37
+| type1 = Normal
+| type2 = Flying
+| move1 = Wing Attack | move1type = Flying
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Whirlwind | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0130
+| pokemon = Gyarados
+| level = 38
+| type1 = Water
+| type2 = Flying
+| move1 = Dragon Rage | move1type = Dragon
+| move2 = Hydro Pump | move2type = Water
+| move3 = Bite | move3type = Normal
+| move4 = Leer | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0058
+| pokemon = Growlithe
+| level = 35
+| type1 = Fire
+| move1 = Roar | move1type = Normal
+| move2 = Ember | move2type = Fire
+| move3 = Leer | move3type = Normal
+| move4 = Take Down | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0065
+| pokemon = Alakazam
+| level = 35
+| type1 = Psychic
+| move1 = Psybeam | move1type = Psychic
+| move2 = Confusion | move2type = Psychic
+| move3 = Disable | move3type = Normal
+| move4 = Recover | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0003
+| pokemon = Venusaur
+| level = 40
+| type1 = Grass
+| type2 = Poison
+| move1 = Leech Seed | move1type = Grass
+| move2 = Vine Whip | move2type = Grass
+| move3 = PoisonPowder | move3type = Poison
+| move4 = Razor Leaf | move4type = Grass
+}}
+{{Party/end}}
+======{{game|Yellow}}======
+Blue has one [[Potion]] per Pokémon, using it 12.5% of the time if their HP falls below 20%.
+
+{{Party
+| caption = {{BlueEevee|Vaporeon}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr Y Blue 2.png
+| prize = {{pdollar}}2600
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Silph Co.
+| game = Y
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0028
+| pokemon = Sandslash
+| level = 38
+| type1 = Ground
+| move1 = Slash | move1type = Normal
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Poison Sting | move3type = Poison
+| move4 = Swift | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0082
+| pokemon = Magneton
+| level = 35
+| type1 = Electric
+| move1 = Tackle | move1type = Normal
+| move2 = SonicBoom | move2type = Normal
+| move3 = ThunderShock | move3type = Electric
+| move4 = Supersonic | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0038
+| pokemon = Ninetales
+| level = 37
+| type1 = Fire
+| move1 = Ember | move1type = Fire
+| move2 = Tail Whip | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Roar | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0064
+| pokemon = Kadabra
+| level = 35
+| type1 = Psychic
+| move1 = Confusion | move1type = Psychic
+| move2 = Disable | move2type = Normal
+| move3 = Psybeam | move3type = Psychic
+| move4 = Recover | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0134
+| pokemon = Vaporeon
+| level = 40
+| type1 = Water
+| move1 = Water Gun | move1type = Water
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Bite | move3type = Normal
+| move4 = Aurora Beam | move4type = Ice
+}}
+{{Party/end}}
+{{Party
+| caption = {{BlueEevee|Jolteon}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr Y Blue 2.png
+| prize = {{pdollar}}2600
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Silph Co.
+| game = Y
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0028
+| pokemon = Sandslash
+| level = 38
+| type1 = Ground
+| move1 = Slash | move1type = Normal
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Poison Sting | move3type = Poison
+| move4 = Swift | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0038
+| pokemon = Ninetales
+| level = 35
+| type1 = Fire
+| move1 = Ember | move1type = Fire
+| move2 = Tail Whip | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Roar | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0091
+| pokemon = Cloyster
+| level = 37
+| type1 = Water
+| type2 = Ice
+| move1 = Withdraw | move1type = Water
+| move2 = Supersonic | move2type = Normal
+| move3 = Clamp | move3type = Water
+| move4 = Aurora Beam | move4type = Ice
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0064
+| pokemon = Kadabra
+| level = 35
+| type1 = Psychic
+| move1 = Confusion | move1type = Psychic
+| move2 = Disable | move2type = Normal
+| move3 = Psybeam | move3type = Psychic
+| move4 = Recover | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0135
+| pokemon = Jolteon
+| level = 40
+| type1 = Electric
+| move1 = ThunderShock | move1type = Electric
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Double Kick | move3type = Fighting
+| move4 = Pin Missile | move4type = Bug
+}}
+{{Party/end}}
+{{Party
+| caption = {{BlueEevee|Flareon}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr Y Blue 2.png
+| prize = {{pdollar}}2600
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Silph Co.
+| game = Y
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0028
+| pokemon = Sandslash
+| level = 38
+| type1 = Ground
+| move1 = Slash | move1type = Normal
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Poison Sting | move3type = Poison
+| move4 = Swift | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0091
+| pokemon = Cloyster
+| level = 35
+| type1 = Water
+| type2 = Ice
+| move1 = Withdraw | move1type = Water
+| move2 = Supersonic | move2type = Normal
+| move3 = Clamp | move3type = Water
+| move4 = Aurora Beam | move4type = Ice
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0082
+| pokemon = Magneton
+| level = 37
+| type1 = Electric
+| move1 = Tackle | move1type = Normal
+| move2 = SonicBoom | move2type = Normal
+| move3 = ThunderShock | move3type = Electric
+| move4 = Supersonic | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0064
+| pokemon = Kadabra
+| level = 35
+| type1 = Psychic
+| move1 = Confusion | move1type = Psychic
+| move2 = Disable | move2type = Normal
+| move3 = Psybeam | move3type = Psychic
+| move4 = Recover | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0136
+| pokemon = Flareon
+| level = 40
+| type1 = Fire
+| move1 = Ember | move1type = Fire
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Bite | move3type = Normal
+| move4 = Fire Spin | move4type = Fire
+}}
+{{Party/end}}
+=====8F=====
+{{trainerheader|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||780|4|020|Raticate||26||041|Zubat||26||042|Golbat||26||019|Rattata||26||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||840|3|110|Weezing||28||042|Golbat||28||109|Koffing||28||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Scientist.png|game=1|Scientist||1450|2|088|Grimer||29||101|Electrode||29||}}
+{{trainerfooter|building|1}}
+
+=====9F=====
+{{trainerheader|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||840|3|042|Golbat||28||096|Drowzee||28||097|Hypno||28||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||840|3|096|Drowzee||28||088|Grimer||28||066|Machop||28||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Scientist.png|game=1|Scientist||1400|3|100|Voltorb||28||109|Koffing||28||082|Magneton||28||}}
+{{trainerfooter|building|1}}
+
+=====10F=====
+{{trainerheader|building}}
+{{trainerentry|Spr RG Scientist.png|game=1|Scientist||1450|2|081|Magnemite||29||109|Koffing||29||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||840|1|067|Machoke||33||}}
+{{trainerfooter|building|1}}
+
+=====11F=====
+{{trainerheader|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||750|5|019|Rattata||25||019|Rattata||25||041|Zubat||25||019|Rattata||25||023|Ekans||25||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket|{{sup/1|RB}}|960|3|104|Cubone||32||096|Drowzee||32||105|Marowak||32||}}
+{{trainerfooter|building|1}}
+
+======{{game|Red and Blue|s}}======
+Giovanni has one [[Guard Spec.]] per Pokémon, using it randomly 25% of the time.
+{{Party
+| background = 666666
+| border = CC0000
+| headcolor = CCCCCC
+| sprite = Spr RG Giovanni.png
+| prize = {{pdollar}}4059
+| name = {{color2|000|Giovanni}}
+| location = Silph Co.
+| game = RGB
+| pokemon = 4
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0033
+| pokemon = Nidorino
+| level = 37
+| type1 = Poison
+| move1 = Horn Attack | move1type = Normal
+| move2 = Poison Sting | move2type = Poison
+| move3 = Focus Energy | move3type = Normal
+| move4 = Fury Attack | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0115
+| pokemon = Kangaskhan
+| level = 35
+| type1 = Normal
+| move1 = Comet Punch | move1type = Normal
+| move2 = Rage | move2type = Normal
+| move3 = Bite | move3type = Normal
+| move4 = Tail Whip | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0111
+| pokemon = Rhyhorn
+| level = 37
+| type1 = Ground
+| type2 = Rock
+| move1 = Horn Attack | move1type = Normal
+| move2 = Stomp | move2type = Normal
+| move3 = Tail Whip | move3type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0031
+| pokemon = Nidoqueen
+| level = 41
+| type1 = Poison
+| type2 = Ground
+| move1 = Scratch | move1type = Normal
+| move2 = Tail Whip | move2type = Normal
+| move3 = Body Slam | move3type = Normal
+| move4 = Poison Sting | move4type = Poison
+}}
+{{Party/end}}
+======{{game|Yellow}}======
+{{Party
+| background = 666666
+| border = CC0000
+| headcolor = CCCCCC
+| sprite = Spr Y Jessie James.png
+| prize = {{Pdollar}}930
+| name = {{color2|000|Team Rocket trio|Rocket}}
+| location = Silph Co.
+| game = Y
+| pokemon = 3
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0110
+| pokemon = Weezing
+| level = 31
+| type1 = Poison
+| move1 = Tackle | move1type = Normal
+| move2 = Smog | move2type = Poison
+| move3 = Sludge | move3type = Poison
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0024
+| pokemon = Arbok
+| level = 31
+| type1 = Poison
+| move1 = Leer | move1type = Normal
+| move2 = Poison Sting | move2type = Poison
+| move3 = Bite | move3type = Normal
+| move4 = Glare | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0052
+| pokemon = Meowth
+| level = 31
+| type1 = Normal
+| move1 = Growl | move1type = Normal
+| move2 = Bite | move2type = Normal
+| move3 = Pay Day | move3type = Normal
+| move4 = Screech | move4type = Normal
+}}
+{{Party/end}}
+Giovanni has one [[Guard Spec.]] per Pokémon, using it randomly 25% of the time.
+{{Party
+| background = 666666
+| border = CC0000
+| headcolor = CCCCCC
+| sprite = Spr Y Giovanni.png
+| prize = {{pdollar}}4059
+| name = {{color2|000|Giovanni}}
+| location = Silph Co.
+| game = Y
+| pokemon = 4
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0033
+| pokemon = Nidorino
+| level = 37
+| type1 = Poison
+| move1 = Double Kick | move1type = Fighting
+| move2 = Poison Sting | move2type = Poison
+| move3 = Focus Energy | move3type = Normal
+| move4 = Fury Attack | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0111
+| pokemon = Rhyhorn
+| level = 37
+| type1 = Ground
+| type2 = Rock
+| move1 = Horn Attack | move1type = Normal
+| move2 = Stomp | move2type = Normal
+| move3 = Tail Whip | move3type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0053
+| pokemon = Persian
+| level = 35
+| type1 = Normal
+| move1 = Growl | move1type = Normal
+| move2 = Bite | move2type = Normal
+| move3 = Screech | move3type = Normal
+| move4 = Pay Day | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0031
+| pokemon = Nidoqueen
+| level = 41
+| type1 = Poison
+| type2 = Ground
+| move1 = Scratch | move1type = Normal
+| move2 = Tail Whip | move2type = Normal
+| move3 = Body Slam | move3type = Normal
+| move4 = Double Kick | move4type = Fighting
+}}
+{{Party/end}}
+====Generation III====
+=====2F=====
+{{trainerheader|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||800|5|042|Golbat|♂|25||041|Zubat|♂|25||041|Zubat|♂|25||020|Raticate|♂|25||041|Zubat|♂|25||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Scientist.png|Scientist|Jerry|1344|3|081|Magnemite||28||100|Voltorb||28||082|Magneton||28|||36=ヒデオ|37=Hideo}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||928|2|104|Cubone|♂|29||041|Zubat|♂|29||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Scientist.png|Scientist|Connor|1248|4|088|Grimer|♂|26||110|Weezing|♂|26||109|Koffing|♂|26||110|Weezing|♂|26|||36=ユヅル|37=Yudzuru}}
+{{trainerfooter|building}}
+
+=====3F=====
+{{trainerheader|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||896|3|020|Raticate|♂|28||097|Hypno|♂|28||020|Raticate|♂|28||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Scientist.png|Scientist|Jose|1392|2|101|Electrode||29||110|Weezing|♂|29|||36=トモノリ|37=Tomonori}}
+{{trainerfooter|building}}
+
+=====4F=====
+{{trainerheader|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||896|3|023|Ekans|♂|28||041|Zubat|♂|28||104|Cubone|♂|28||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||928|2|066|Machop|♂|29||096|Drowzee|♂|29||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Scientist.png|Scientist|Rodney|1584|1|101|Electrode||33|||36=マサヒロ|37=Masahiro}}
+{{trainerfooter|building}}
+
+=====5F=====
+{{trainerheader|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||1056|1|097|Hypno|♂|33|None|}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Juggler.png|Juggler|Dalton|1160|2|064|Kadabra|♂|29|None|122|Mr. Mime|♂|29|None||36=テリー|37=Terry}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Scientist.png|Scientist|Beau|1248|4|082|Magneton||26||081|Magnemite||26||109|Koffing|♂|26||110|Weezing|♂|26|||36=カズユキ|37=Kazuyuki}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||1056|1|024|Arbok|♂|33||}}
+{{trainerfooter|building}}
+
+=====6F=====
+{{trainerheader|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||928|2|066|Machop|♂|29||067|Machoke|♂|29||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||896|3|041|Zubat|♂|28||041|Zubat|♂|28||042|Golbat|♂|28||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Scientist.png|Scientist|Taylor|1200|5|100|Voltorb||25||109|Koffing|♂|25||082|Magneton||25||081|Magnemite||25||109|Koffing|♂|25|||36=ソウスケ|37=Sōsuke}}
+{{trainerfooter|building}}
+
+=====7F=====
+{{trainerheader|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||928|2|104|Cubone|♂|29||104|Cubone|♂|29||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||832|4|020|Raticate|♂|26||041|Zubat|♂|26||042|Golbat|♂|26||019|Rattata|♂|26||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Scientist.png|Scientist|Joshua|1392|2|101|Electrode||29||089|Muk|♂|29|||36=シュウイチ|37=Shūichi}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||928|2|027|Sandshrew|♂|29||028|Sandslash|♂|29||}}
+{{trainerfooter|building}}
+
+{{Party
+| caption = {{PlayerChoice|0001|Bulbasaur}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr FRLG Blue 2.png
+| prize = {{PDollar}}1440
+| class = Rival
+| name = Blue
+| location = Silph Co.
+| game = FRLG
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0018
+| pokemon = Pidgeot
+| gender = male
+| level = 37
+| type1 = Normal
+| type2 = Flying
+| ability = Keen Eye
+| move1 = Quick Attack | move1type = Normal
+| move2 = Whirlwind | move2type = Normal
+| move3 = Wing Attack | move3type = Flying
+| move4 = FeatherDance | move4type = Flying
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0102
+| pokemon = Exeggcute
+| gender = male
+| level = 38
+| type1 = Grass
+| type2 = Psychic
+| ability = Chlorophyll
+| move1 = Confusion | move1type = Psychic
+| move2 = Stun Spore | move2type = Grass
+| move3 = PoisonPowder | move3type = Poison
+| move4 = Sleep Powder | move4type = Grass
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0130
+| pokemon = Gyarados
+| gender = male
+| level = 35
+| type1 = Water
+| type2 = Flying
+| ability = Intimidate
+| move1 = Bite | move1type = Dark
+| move2 = Dragon Rage | move2type = Dragon
+| move3 = Leer | move3type = Normal
+| move4 = Twister | move4type = Dragon
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0065
+| pokemon = Alakazam
+| gender = male
+| level = 35
+| type1 = Psychic
+| ability = Synchronize
+| move1 = Reflect | move1type = Psychic
+| move2 = Recover | move2type = Normal
+| move3 = Future Sight | move3type = Psychic
+| move4 = Calm Mind | move4type = Psychic
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0006
+| pokemon = Charizard
+| gender = male
+| level = 40
+| type1 = Fire
+| type2 = Flying
+| ability = Blaze
+| move1 = SmokeScreen | move1type = Normal
+| move2 = Scary Face | move2type = Normal
+| move3 = Flamethrower | move3type = Fire
+| move4 = Wing Attack | move4type = Flying
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0004|Charmander}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr FRLG Blue 2.png
+| prize = {{PDollar}}1440
+| class = Rival
+| name = Blue
+| location = Silph Co.
+| game = FRLG
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0018
+| pokemon = Pidgeot
+| gender = male
+| level = 37
+| type1 = Normal
+| type2 = Flying
+| ability = Keen Eye
+| move1 = Quick Attack | move1type = Normal
+| move2 = Whirlwind | move2type = Normal
+| move3 = Wing Attack | move3type = Flying
+| move4 = FeatherDance | move4type = Flying
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0058
+| pokemon = Growlithe
+| gender = male
+| level = 38
+| type1 = Fire
+| ability = Intimidate
+| move1 = Odor Sleuth | move1type = Normal
+| move2 = Take Down | move2type = Normal
+| move3 = Flame Wheel | move3type = Fire
+| move4 = Helping Hand | move4type = Normal
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0102
+| pokemon = Exeggcute
+| gender = male
+| level = 35
+| type1 = Grass
+| type2 = Psychic
+| ability = Chlorophyll
+| move1 = Leech Seed | move1type = Grass
+| move2 = Confusion | move2type = Psychic
+| move3 = Stun Spore | move3type = Grass
+| move4 = PoisonPowder | move4type = Poison
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0065
+| pokemon = Alakazam
+| gender = male
+| level = 35
+| type1 = Psychic
+| ability = Synchronize
+| move1 = Reflect | move1type = Psychic
+| move2 = Recover | move2type = Normal
+| move3 = Future Sight | move3type = Psychic
+| move4 = Calm Mind | move4type = Psychic
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0009
+| pokemon = Blastoise
+| gender = male
+| level = 40
+| type1 = Water
+| ability = Torrent
+| move1 = Water Gun | move1type = Water
+| move2 = Bite | move2type = Dark
+| move3 = Rapid Spin | move3type = Normal
+| move4 = Protect | move4type = Normal
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0007|Squirtle}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr FRLG Blue 2.png
+| prize = {{PDollar}}1440
+| class = Rival
+| name = Blue
+| location = Silph Co.
+| game = FRLG
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0018
+| pokemon = Pidgeot
+| gender = male
+| level = 37
+| type1 = Normal
+| type2 = Flying
+| ability = Keen Eye
+| move1 = Quick Attack | move1type = Normal
+| move2 = Whirlwind | move2type = Normal
+| move3 = Wing Attack | move3type = Flying
+| move4 = FeatherDance | move4type = Flying
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0130
+| pokemon = Gyarados
+| gender = male
+| level = 38
+| type1 = Water
+| type2 = Flying
+| ability = Intimidate
+| move1 = Bite | move1type = Dark
+| move2 = Dragon Rage | move2type = Dragon
+| move3 = Leer | move3type = Normal
+| move4 = Twister | move4type = Dragon
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0058
+| pokemon = Growlithe
+| gender = male
+| level = 35
+| type1 = Fire
+| ability = Intimidate
+| move1 = Leer | move1type = Normal
+| move2 = Odor Sleuth | move2type = Normal
+| move3 = Take Down | move3type = Normal
+| move4 = Flame Wheel | move4type = Fire
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0065
+| pokemon = Alakazam
+| gender = male
+| level = 35
+| type1 = Psychic
+| ability = Synchronize
+| move1 = Reflect | move1type = Psychic
+| move2 = Recover | move2type = Normal
+| move3 = Future Sight | move3type = Psychic
+| move4 = Calm Mind | move4type = Psychic
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0003
+| pokemon = Venusaur
+| gender = male
+| level = 40
+| type1 = Grass
+| type2 = Poison
+| ability = Overgrow
+| move1 = PoisonPowder | move1type = Poison
+| move2 = Sleep Powder | move2type = Grass
+| move3 = Razor Leaf | move3type = Grass
+| move4 = Sweet Scent | move4type = Normal
+}}
+{{Party/end}}
+=====8F=====
+{{trainerheader|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||832|4|020|Raticate|♂|26||042|Golbat|♂|26||024|Arbok|♂|26||109|Koffing|♂|26||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||896|3|110|Weezing|♂|28||042|Golbat|♂|28||109|Koffing|♂|28||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Scientist.png|Scientist|Parker|1392|2|088|Grimer|♂|29||101|Electrode||29|||36=ヒデキ|37=Hideki}}
+{{trainerfooter|building}}
+
+=====9F=====
+{{trainerheader|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||896|3|042|Golbat|♂|28||096|Drowzee|♂|28||097|Hypno|♂|28||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||896|3|096|Drowzee|♂|28||088|Grimer|♂|28||066|Machop|♂|28|None|}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Scientist.png|Scientist|Ed|1344|3|100|Voltorb||28||082|Magneton||28||109|Koffing|♂|28|||36=スグル|37=Suguru}}
+{{trainerfooter|building}}
+
+=====10F=====
+{{trainerheader|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||1056|1|067|Machoke|♂|33||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Scientist.png|Scientist|Travis|1392|2|081|Magnemite||29||109|Koffing|♂|29|||36=ヨシヤ|37=Yoshiya}}
+{{trainerfooter|building}}
+
+=====11F=====
+{{trainerheader|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||800|5|019|Rattata|♂|25||041|Zubat|♂|25||023|Ekans|♂|25||019|Rattata|♂|25||019|Rattata|♂|25||}}
+{{trainerdiv|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||1024|3|104|Cubone|♂|32||096|Drowzee|♂|32|None|105|Marowak|♂|32||}}
+{{trainerfooter|building}}
+
+{{Party
+| background = 666666
+| border = CC0000
+| headcolor = CCCCCC
+| sprite = Spr FRLG Giovanni.png
+| prize = {{pdollar}}4100
+| class = Boss
+| classlink = Giovanni
+| name = {{color2|000|Giovanni}}
+| location = Silph Co.
+| game = FRLG
+| pokemon = 4
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0033
+| pokemon = Nidorino
+| gender = male
+| level = 37
+| type1 = Poison
+| ability = Poison Point
+| move1 = Horn Attack | move1type = Normal
+| move2 = Poison Sting | move2type = Poison
+| move3 = Helping Hand | move3type = Normal
+| move4 = Fury Attack | move4type = Normal
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0111
+| pokemon = Rhyhorn
+| gender = male
+| level = 37
+| type1 = Ground
+| type2 = Rock
+| ability = Rock Head
+| move1 = Fury Attack | move1type = Normal
+| move2 = Scary Face | move2type = Normal
+| move3 = Stomp | move3type = Normal
+| move4 = Rock Blast | move4type = Rock
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0115
+| pokemon = Kangaskhan
+| gender = female
+| level = 35
+| type1 = Normal
+| ability = Early Bird
+| move1 = Fake Out | move1type = Normal
+| move2 = Rage | move2type = Normal
+| move3 = Mega Punch | move3type = Normal
+| move4 = Tail Whip | move4type = Normal
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0031
+| pokemon = Nidoqueen
+| gender = female
+| level = 41
+| type1 = Poison
+| type2 = Ground
+| ability = Poison Point
+| move1 = Double Kick | move1type = Fighting
+| move2 = Tail Whip | move2type = Normal
+| move3 = Poison Sting | move3type = Poison
+| move4 = Body Slam | move4type = Normal
+}}
+{{Party/end}}
+====Generation VII====
+=====1F=====
+{{Party
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = VSBlue PE.png
+| size = 90px
+| prize = {{PDollar}}11,200
+| class = Pokémon Trainer
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Silph Co.
+| game = PE
+| pokemon = 2
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0103
+| pokemon = Exeggutor
+| gender = male
+| level = 38
+| type1 = Grass
+| type2 = Psychic
+| move1 = Power Whip | move1type = Grass | move1cat = Physical
+| move2 = Psychic | move2type = Psychic | move2cat = Special
+| move3 = Light Screen | move3type = Psychic | move3cat = Status
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0006
+| pokemon = Charizard
+| gender = male
+| level = 40
+| type1 = Fire
+| type2 = Flying
+| move1 = Heat Wave | move1type = Fire | move1cat = Special
+| move2 = Air Slash | move2type = Flying | move2cat = Special
+| move3 = Slash | move3type = Normal | move3cat = Physical
+}}
+{{Party/end}}{{-}}
+
+{{trainerheader|building}}
+{{trainerdiv|building|After becoming Champion}}
+{{trainerentry/master|VSAce Trainer M Master PE.png{{!}}90px|Ace Trainer|Leopold|099|Kingler|♂|75|Psychic|Agility|Normal|Stomp|Water|Scald|Normal|Guillotine|36=ユウマ|37=Yūma}}
+{{trainerfooter|building|PE}}
+
+=====2F=====
+{{trainerheader|building}}
+{{trainerentry|VSTeam Rocket Grunt M PE.png{{!}}90px|game=PE|Team Rocket Grunt||924|1|020|Raticate|♂|33|None}}
+{{trainerdiv|building}}
+{{trainerentry|VSTeam Rocket Grunt M PE.png{{!}}90px|game=PE|Team Rocket Grunt||924|3|109|Koffing|♂|33|None|109|Koffing|♀|33|None|109|Koffing|♂|33|None}}
+{{trainerdiv|building}}
+{{trainerentry|VSScientist PE.png{{!}}90px|game=PE|Scientist|Jerry|2,100|1|125|Electabuzz|♂|35|None|36=ヒデオ|37=Hideo}}
+{{trainerdiv|building}}
+{{trainerentry|VSScientist PE.png{{!}}90px|game=PE|Scientist|Connor|2,100|1|110|Weezing|♂|35|None|36=ユヅル|37=Yudzuru}}
+{{trainerfooter|building|PE}}
+
+=====3F=====
+{{trainerheader|building}}
+{{trainerentry|VSScientist PE.png{{!}}90px|game=PE|Scientist|Jose|2,100|2|088|Grimer|♀|35|None|126|Magmar|♂|35|None|36=トモノリ|37=Tomonori}}
+{{trainerdiv|building}}
+{{trainerentry|VSTeam Rocket Grunt M PE.png{{!}}90px|game=PE|Team Rocket Grunt||924|1|093|Haunter|♀|33|None}}
+{{trainerfooter|building|PE}}
+
+=====4F=====
+{{trainerheader|building}}
+{{trainerentry|VSTeam Rocket Grunt M PE.png{{!}}90px|game=PE|Team Rocket Grunt||924|2|109|Koffing|♂|33|None|101|Electrode||33|None}}
+{{trainerdiv|building}}
+{{trainerentry|VSTeam Rocket Grunt M PE.png{{!}}90px|game=PE|Team Rocket Grunt||924|2|019|Rattata|♀|33|None|088|Grimer|♂|33|None}}
+{{trainerdiv|building}}
+{{trainerentry|VSScientist PE.png{{!}}90px|game=PE|Scientist|Rodney|2,100|3|100|Voltorb||35|None|100|Voltorb||35|None|101|Electrode||35|None|36=スグル|37=Suguru}}
+{{trainerdiv|building|After becoming Champion}}
+{{trainerentry/master|VSBlack Belt Master PE.png{{!}}90px|Black Belt|Masahiro|066|Machop|♂|65|Electric|Thunder Punch|Poison|Poison Jab|Fighting|Bulk Up|36=マサシゲ|37=Masashige}}
+{{trainerfooter|building|PE}}
+
+=====5F=====
+{{trainerheader|building}}
+{{trainerentry|VSJuggler PE.png{{!}}90px|game=PE|Juggler|Dalton|1,360<br>3 {{i|Poké Ball}}s|3|097|Hypno|♀|34|None|093|Haunter|♂|34|None|064|Kadabra|♂|34|None|36=テリー|37=Terry}}
+{{trainerdiv|building}}
+{{trainerentry|VSScientist PE.png{{!}}90px|game=PE|Scientist|Beau|2,100|1|089|Muk|♂|35|None|36=カズユキ|37=Kazuyuki}}
+{{trainerdiv|building}}
+{{trainerentry|VSTeam Rocket Grunt M PE.png{{!}}90px|game=PE|Team Rocket Grunt||924|2|023|Ekans|♂|33|None|097|Hypno|♂|33|None}}
+{{trainerdiv|building}}
+{{trainerentry|VSTeam Rocket Grunt F PE.png{{!}}90px|game=PE|Team Rocket Grunt||924|2|041|Zubat|♂|33|None|024|Arbok|♀|33|None}}
+{{trainerfooter|building|PE}}
+
+{{ga|Trace}} joins the {{player}} in a [[Multi Battle]] against [[Archer]] and a {{tc|Team Rocket Grunt}}.
+
+{{Party
+| caption = {{PlayerChoice|LGP}}
+| background = {{green color light}}
+| border = {{black color dark}}
+| headcolor = {{black color light}}
+| sprite = VSTrace.png
+| size = x90px
+| prize = none
+| class = Pokémon Trainer
+| name = {{color2|000|Trace (game)|Trace}}
+| location = Silph Co.
+| game = LGP
+| pokemon = 4
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0104
+| pokemon = Cubone
+| gender = male
+| level = 36
+| type1 = Ground
+| move1 = Focus Energy | move1type = Normal | move1cat = Status
+| move2 = Bonemerang | move2type = Ground | move2cat = Physical
+| move3 = Headbutt | move3type = Normal | move3cat = Physical
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0018
+| pokemon = Pidgeot
+| gender = male
+| level = 36
+| type1 = Normal
+| type2 = Flying
+| move1 = Quick Attack | move1type = Normal | move1cat = Physical
+| move2 = Air Slash | move2type = Flying | move2cat = Special
+| move3 = Sand Attack | move3type = Ground | move3cat = Status
+| move4 = Roost | move4type = Flying | move4cat = Status
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0044
+| pokemon = Gloom
+| gender = female
+| level = 36
+| type1 = Grass
+| type2 = Poison
+| move1 = Razor Leaf | move1type = Grass | move1cat = Physical
+| move2 = Toxic | move2type = Poison | move2cat = Status
+| move3 = Acid | move3type = Poison | move3cat = Special
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0135
+| pokemon = Jolteon
+| gender = male
+| level = 37
+| type1 = Electric
+| move1 = Thunder Shock | move1type = Electric | move1cat = Special
+| move2 = Quick Attack | move2type = Normal | move2cat = Physical
+| move3 = Pin Missile | move3type = Bug | move3cat = Physical
+| move4 = Double Kick | move4type = Fighting | move4cat = Physical
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|LGE}}
+| background = {{green color light}}
+| border = {{black color dark}}
+| headcolor = {{black color light}}
+| sprite = VSTrace.png
+| size = x90px
+| prize = none
+| class = Pokémon Trainer
+| name = {{color2|000|Trace (game)|Trace}}
+| location = Silph Co.
+| game = LGE
+| pokemon = 4
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0104
+| pokemon = Cubone
+| gender = male
+| level = 36
+| type1 = Ground
+| move1 = Focus Energy | move1type = Normal | move1cat = Status
+| move2 = Bonemerang | move2type = Ground | move2cat = Physical
+| move3 = Headbutt | move3type = Normal | move3cat = Physical
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0018
+| pokemon = Pidgeot
+| gender = male
+| level = 36
+| type1 = Normal
+| type2 = Flying
+| move1 = Quick Attack | move1type = Normal | move1cat = Physical
+| move2 = Air Slash | move2type = Flying | move2cat = Special
+| move3 = Sand Attack | move3type = Ground | move3cat = Status
+| move4 = Roost | move4type = Flying | move4cat = Status
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0044
+| pokemon = Gloom
+| gender = female
+| level = 36
+| type1 = Grass
+| type2 = Poison
+| move1 = Razor Leaf | move1type = Grass | move1cat = Physical
+| move2 = Toxic | move2type = Poison | move2cat = Status
+| move3 = Acid | move3type = Poison | move3cat = Special
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0026
+| pokemon = Raichu
+| gender = male
+| level = 37
+| type1 = Electric
+| move1 = Thunder Shock | move1type = Electric | move1cat = Special
+| move2 = Quick Attack | move2type = Normal | move2cat = Physical
+| move3 = Thunder Punch | move3type = Electric | move3cat = Physical
+| move4 = Slam | move4type = Normal | move4cat = Physical
+}}
+{{Party/end}}{{-}}
+
+{{Party/2
+| background = 666666
+| bordercolor = CC0000
+| headcolor = CCCCCC
+| location = Silph Co.
+| game = PE
+| prize = {{pdollar}}4,652
+| t-background = 8BB2FF
+| t-border = CC0000
+| sprite = VSArcher PE.png
+| size = x90px
+| class = Team Rocket Admin
+| classlink = Executive (Trainer class)
+| name = {{color2|000|Archer}}
+| pokemon = 3
+| t-background2 = CCCCCC
+| t-border2 = CC0000
+| sprite2 = VSTeam Rocket Grunt F PE.png
+| size2 = x90px
+| class2 = Team Rocket
+| classlink2 = Team Rocket Grunt (Trainer class)
+| name2 = {{color2|000|Team Rocket Grunt (Trainer class)|Grunt}}
+| pokemon2 = 2
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0101
+| pokemon = Electrode
+| gender = none
+| level = 37
+| type1 = Electric
+| move1 = Self-Destruct | move1type = Normal | move1cat = Physical
+| move2 = Thunderbolt | move2type = Electric | move2cat = Special
+| move3 = Swift | move3type = Normal | move3cat = Special
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0042
+| pokemon = Golbat
+| gender = male
+| level = 37
+| type1 = Poison
+| type2 = Flying
+| move1 = Air Slash | move1type = Flying | move1cat = Special
+| move2 = Crunch | move2type = Dark | move2cat = Physical
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0110
+| pokemon = Weezing
+| gender = male
+| level = 37
+| type1 = Poison
+| move1 = Sludge Bomb | move1type = Poison | move1cat = Special
+| move2 = Flamethrower | move2type = Fire | move2cat = Special
+| move3 = Dark Pulse | move3type = Dark | move3cat = Special
+| move4 = Protect | move4type = Normal | move4cat = Status
+}}
+{{Party/2/div|t-background2 = CCCCCC}}
+{{Pokémon
+| gen = PE
+| ndex = 0089
+| pokemon = Muk
+| gender = female
+| level = 34
+| type1 = Poison
+| move1 = Toxic | move1type = Poison | move1cat = Status
+| move2 = Screech | move2type = Normal | move2cat = Status
+| move3 = Minimize | move3type = Normal | move3cat = Status
+| move4 = Protect | move4type = Normal | move4cat = Status
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0020
+| pokemon = Raticate
+| gender = female
+| level = 34
+| type1 = Normal
+| move1 = Sucker Punch | move1type = Dark | move1cat = Physical
+| move2 = Quick Attack | move2type = Normal | move2cat = Physical
+}}
+{{Party/end}}
+=====6F=====
+{{trainerheader|building}}
+{{trainerentry|VSTeam Rocket Grunt F PE.png{{!}}90px|game=PE|Team Rocket Grunt||924|2|052|Meowth|♀|33|None|020|Raticate|♂|33|None}}
+{{trainerdiv|building}}
+{{trainerentry|VSScientist PE.png{{!}}90px|game=PE|Scientist|Taylor|2,100|3|081|Magnemite||35|None|081|Magnemite||35|None|126|Magmar|♂|35|None|36=ソウスケ|37=Sōsuke}}
+{{trainerdiv|building}}
+{{trainerentry|VSTeam Rocket Grunt M PE.png{{!}}90px|game=PE|Team Rocket Grunt||924|2|020|Raticate|♀|33|None|042|Golbat|♂|33|None}}
+{{trainerfooter|building|PE}}
+
+=====7F=====
+{{trainerheader|building}}
+{{trainerentry|VSTeam Rocket Grunt M PE.png{{!}}90px|game=PE|Team Rocket Grunt||924|2|041|Zubat|♂|33|None|042|Golbat|♂|33|None}}
+{{trainerdiv|building}}
+{{trainerentry|VSTeam Rocket Grunt F PE.png{{!}}90px|game=PE|Team Rocket Grunt||924|3|100|Voltorb||33|None|100|Voltorb||33|None|100|Voltorb||33|None}}
+{{trainerdiv|building}}
+{{trainerentry|VSScientist PE.png{{!}}90px|game=PE|Scientist|Joshua|2,100|2|109|Koffing|♂|35|None|082|Magneton||35|None|36=シュウイチ|37=Shūichi}}
+{{trainerfooter|building|PE}}
+
+=====8F=====
+{{trainerheader|building}}
+{{trainerentry|VSTeam Rocket Grunt F PE.png{{!}}90px|game=PE|Team Rocket Grunt||924|2|088|Grimer|♂|33|None|109|Koffing|♂|33|None}}
+{{trainerdiv|building}}
+{{trainerentry|VSTeam Rocket Grunt M PE.png{{!}}90px|game=PE|Team Rocket Grunt||924|2|092|Gastly|♂|33|None|053|Persian|♂|33|None}}
+{{trainerdiv|building}}
+{{trainerentry|VSScientist PE.png{{!}}90px|game=PE|Scientist|Parker|2,100|2|101|Electrode||35|None|137|Porygon||35|None|36=ヒデキ|37=Hideki}}
+{{trainerfooter|building|PE}}
+
+=====9F=====
+{{trainerheader|building}}
+{{trainerentry|VSTeam Rocket Grunt F PE.png{{!}}90px|game=PE|Team Rocket Grunt||924|1|053|Persian|♂|33|None}}
+{{trainerdiv|building}}
+{{trainerentry|VSScientist PE.png{{!}}90px|game=PE|Scientist|Ed|2,100|3|110|Weezing|♀|35|None|125|Electabuzz|♂|35|None|101|Electrode||35|None|36=スグル|37=Suguru}}
+{{trainerdiv|building}}
+{{trainerentry|VSTeam Rocket Grunt M PE.png{{!}}90px|game=PE|Team Rocket Grunt||924|2|109|Koffing|♂|33|None|093|Haunter|♀|33|None}}
+{{trainerfooter|building|PE}}
+
+=====10F=====
+{{trainerheader|building}}
+{{trainerentry|VSTeam Rocket Grunt M PE.png{{!}}90px|game=PE|Team Rocket Grunt||924|2|100|Voltorb||33|None|020|Raticate|♂|33|None}}
+{{trainerdiv|building}}
+{{trainerentry|VSScientist PE.png{{!}}90px|game=PE|Scientist|Travis|2,100|2|088|Grimer|♂|35|None|089|Muk|♀|35|None|36=ヨシヤ|37=Yoshiya}}
+{{trainerfooter|building|PE}}
+
+=====11F=====
+{{trainerheader|building}}
+{{trainerentry|VSTeam Rocket Grunt M PE.png{{!}}90px|game=PE|Team Rocket Grunt||924|3|096|Drowzee|♂|33|None|041|Zubat|♀|33|None|042|Golbat|♂|33|None}}
+{{trainerfooter|building|PE}}
+
+{{Party/2
+| background = 666
+| bordercolor = C00
+| headcolor = CCC
+| location = Silph Co.
+| game = LGPE
+| prize = {{Pdollar}}3,456
+| t-background = F5BCE2
+| t-border = E44EB2
+| sprite = VSJessie PE.png
+| size = 80x80px
+| class = Team Rocket
+| classlink = Team Rocket
+| name = {{color2|000|Jessie}}
+| pokemon = 1
+| t-background2 = CCDDFF
+| t-border2 = 4D88FF
+| sprite2 = VSJames PE.png
+| size2 = 80x80px
+| class2 = Team Rocket
+| classlink2 = Team Rocket
+| name2 = {{color2|000|James}}
+| pokemon2 = 1
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0024
+| pokemon = Arbok
+| gender = male
+| level = 36
+| type1 = Poison
+| move1 = Poison Jab | move1type = Poison | move1cat = Physical
+| move2 = Glare | move2type = Normal | move2cat = Status
+| move3 = Crunch | move3type = Dark | move3cat = Physical
+| move4 = Rock Slide | move4type = Rock | move4cat = Physical
+}}
+{{Party/2/div|t-background2 = CCDDFF}}
+{{Pokémon
+| gen = PE
+| ndex = 0110
+| pokemon = Weezing
+| gender = male
+| level = 36
+| type1 = Poison
+| move1 = Sludge Bomb | move1type = Poison | move1cat = Special
+| move2 = Dark Pulse | move2type = Dark | move2cat = Special
+| move3 = Flamethrower | move3type = Fire | move3cat = Special
+| move4 = Thunderbolt | move4type = Electric | move4cat = Special
+}}
+{{Party/end}}
+{{Party
+| background = 666666
+| border = CC0000
+| headcolor = CCCCCC
+| sprite = VSGiovanni PE.png
+| size = 80x80px
+| prize = {{PDollar}}6,240
+| class = Team Rocket Boss
+| classlink = Giovanni
+| name = {{color2|000|Giovanni}}
+| location = Silph Co.
+| game = PE
+| pokemon = 3
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0053
+| pokemon = Persian
+| gender = male
+| level = 39
+| type1 = Normal
+| move1 = Slash | move1type = Normal | move1cat = Physical
+| move2 = Feint | move2type = Normal | move2cat = Physical
+| move3 = Fake Out | move3type = Normal | move3cat = Physical
+| move4 = Play Rough | move4type = Fairy | move4cat = Physical
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0111
+| pokemon = Rhyhorn
+| gender = male
+| level = 39
+| type1 = Ground
+| type2 = Rock
+| move1 = Drill Run | move1type = Ground | move1cat = Physical
+| move2 = Take Down | move2type = Normal | move2cat = Physical
+| move3 = Megahorn | move3type = Bug | move3cat = Physical
+| move4 = Rock Throw | move4type = Rock | move4cat = Physical
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0031
+| pokemon = Nidoqueen
+| gender = female
+| level = 39
+| type1 = Poison
+| type2 = Ground
+| move1 = Crunch | move1type = Dark | move1cat = Physical
+| move2 = Body Slam | move2type = Normal | move2cat = Physical
+}}
+{{Party/end}}{{-}}
+
+{{trainerheader|building}}
+{{trainerdiv|building|After becoming Champion}}
+{{trainerentry/master|VSLass Master PE.png{{!}}90px|Lass|Yumi|040|Wigglytuff|♀|75|Normal|Sing|Normal|Tri Attack|Normal|Disable|36=ユウミ|37=Yūmi}}
+{{trainerfooter|building|PE}}
+
+===Layout===
+====Inside design====
+=====Generations I, III, and VII=====
+
+=====1F-6F=====
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{locationcolor/dark|building}}"
+|-
+! style="background:#{{locationcolor/light|building}}; {{roundytl|5px}}" | Version
+! style="background:#{{locationcolor/light|building}}" | 1F
+! style="background:#{{locationcolor/light|building}}" | 2F
+! style="background:#{{locationcolor/light|building}}" | 3F
+! style="background:#{{locationcolor/light|building}}" | 4F
+! style="background:#{{locationcolor/light|building}}" | 5F
+! style="background:#{{locationcolor/light|building}}; {{roundytr|5px}}" | 6F
+|-
+! style="background:#{{red color}}" | {{color2|000|Pokémon Red and Green Versions|Red (JP)}}
+| rowspan="6" | [[File:Silph Co 1F RBY.png|150px]]
+| rowspan="6" | [[File:Silph Co 2F RBY.png|150px]]
+| rowspan="6" | [[File:Silph Co 3F RBY.png|150px]]
+| rowspan="6" | [[File:Silph Co 4F RBY.png|150px]]
+| rowspan="6" | [[File:Silph Co 5F RBY.png|150px]]
+| rowspan="6" | [[File:Silph Co 6F RBY.png|150px]]
+|-
+! style="background:#{{green color}}" | {{color2|000|Pokémon Red and Green Versions|Green}}
+|-
+! style="background:#{{blue color}}" | {{color2|fff|Pokémon Blue Version (Japanese)|Blue (JP)}}
+|-
+! style="background:#{{red color}}" | {{color2|000|Pokémon Red and Blue Versions|Red}}
+|-
+! style="background:#{{blue color}}" | {{color2|fff|Pokémon Red and Blue Versions|Blue}}
+|-
+! style="background:#{{yellow color}}" | {{color2|000|Pokémon Yellow Version|Yellow}}
+|-
+! style="background:#{{firered color}}" | {{color2|000|Pokémon FireRed and LeafGreen Versions|FireRed}}
+| rowspan="2" | [[File:Silph Co 1F FRLG.png|150px]]
+| rowspan="2" | [[File:Silph Co 2F FRLG.png|150px]]
+| rowspan="2" | [[File:Silph Co 3F FRLG.png|150px]]
+| rowspan="2" | [[File:Silph Co 4F FRLG.png|150px]]
+| rowspan="2" | [[File:Silph Co 5F FRLG.png|150px]]
+| rowspan="2" | [[File:Silph Co 6F FRLG.png|150px]]
+|-
+! style="background:#{{leafgreen color}}" | {{color2|000|Pokémon FireRed and LeafGreen Versions|LeafGreen}}
+|-
+! style="background:#{{Let's Go Pikachu color}}" | {{color2|000|Pokémon Let's Go, Pikachu! and Let's Go, Eevee!|Let's Go, Pikachu!}}
+| rowspan="2" | [[File:Silph Co. 1F LGPE.png|150px]]
+| rowspan="2" | [[File:Silph Co. 2F LGPE.png|150px]]
+| rowspan="2" | [[File:Silph Co. 3F LGPE.png|150px]]
+| rowspan="2" | [[File:Silph Co. 4F LGPE.png|150px]]
+| rowspan="2" | [[File:Silph Co. 5F LGPE.png|150px]]
+| rowspan="2" | [[File:Silph Co. 6F LGPE.png|150px]]
+|-
+! style="background:#{{Let's Go Eevee color}}" | {{color2|000|Pokémon Let's Go, Pikachu! and Let's Go, Eevee!|Let's Go, Eevee!}}
+|-
+| colspan="7" style="background:#{{locationcolor/light|building}}; {{roundybottom|5px}}" | &nbsp;
+|}
+
+=====7F-11F=====
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{locationcolor/dark|building}}"
+|-
+! style="background:#{{locationcolor/light|building}}; {{roundytl|5px}}" | Version
+! style="background:#{{locationcolor/light|building}}" | 7F
+! style="background:#{{locationcolor/light|building}}" | 8F
+! style="background:#{{locationcolor/light|building}}" | 9F
+! style="background:#{{locationcolor/light|building}}" | 10F
+! style="background:#{{locationcolor/light|building}}; {{roundytr|5px}}" | 11F
+|-
+! style="background:#{{red color}}" | {{color2|000|Pokémon Red and Green Versions|Red (JP)}}
+| rowspan="6" | [[File:Silph Co 7F RBY.png|150px]]
+| rowspan="6" | [[File:Silph Co 8F RBY.png|150px]]
+| rowspan="6" | [[File:Silph Co 9F RBY.png|150px]]
+| rowspan="6" | [[File:Silph Co 10F RBY.png|150px]]
+| rowspan="6" | [[File:Silph Co 11F RBY.png|150px]]
+|-
+! style="background:#{{green color}}" | {{color2|000|Pokémon Red and Green Versions|Green}}
+|-
+! style="background:#{{blue color}}" | {{color2|fff|Pokémon Blue Version (Japanese)|Blue (JP)}}
+|-
+! style="background:#{{red color}}" | {{color2|000|Pokémon Red and Blue Versions|Red}}
+|-
+! style="background:#{{blue color}}" | {{color2|fff|Pokémon Red and Blue Versions|Blue}}
+|-
+! style="background:#{{yellow color}}" | {{color2|000|Pokémon Yellow Version|Yellow}}
+|-
+! style="background:#{{firered color}}" | {{color2|000|Pokémon FireRed and LeafGreen Versions|FireRed}}
+| rowspan="2" | [[File:Silph Co 7F FRLG.png|150px]]
+| rowspan="2" | [[File:Silph Co 8F FRLG.png|150px]]
+| rowspan="2" | [[File:Silph Co 9F FRLG.png|150px]]
+| rowspan="2" | [[File:Silph Co 10F FRLG.png|150px]]
+| rowspan="2" | [[File:Silph Co 11F FRLG.png|150px]]
+|-
+! style="background:#{{leafgreen color}}" | {{color2|000|Pokémon FireRed and LeafGreen Versions|LeafGreen}}
+|-
+! style="background:#{{Let's Go Pikachu color}}" | {{color2|000|Pokémon Let's Go, Pikachu! and Let's Go, Eevee!|Let's Go, Pikachu!}}
+| rowspan="2" | [[File:Silph Co. 7F LGPE.png|150px]]
+| rowspan="2" | [[File:Silph Co. 8F LGPE.png|150px]]
+| rowspan="2" | [[File:Silph Co. 9F LGPE.png|150px]]
+| rowspan="2" | [[File:Silph Co. 10F LGPE.png|150px]]
+| rowspan="2" | [[File:Silph Co. 11F LGPE.png|150px]]
+|-
+! style="background:#{{Let's Go Eevee color}}" | {{color2|000|Pokémon Let's Go, Pikachu! and Let's Go, Eevee!|Let's Go, Eevee!}}
+|-
+| colspan="6" style="background:#{{locationcolor/light|building}}; {{roundybottom|5px}}" | &nbsp;
+|}
+
+=====Generations II and IV=====
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{locationcolor/dark|building}}"
+|-
+! style="background:#{{locationcolor/light|building}}; {{roundytl|5px}}" | Version
+! style="background:#{{locationcolor/light|building}}; {{roundytr|5px}}" | 1F
+|-
+! style="background:#{{gold color}}" | {{color2|000|Pokémon Gold and Silver Versions|Gold}}
+| rowspan="3" | [[File:Silph Co 1F GSC.png |240px]]
+|-
+! style="background:#{{silver color}}" | {{color2|000|Pokémon Gold and Silver Versions|Silver}}
+|-
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon Crystal Version|Crystal}}
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+| rowspan="2" | [[File:Silph Co 1F HGSS.png |240px]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan="2" style="background:#{{locationcolor/light|building}}; {{roundybottom|5px}}" | &nbsp;
+|}
+
+====Outside design====
+{{Mapgen
+|hv=v
+|colordark={{locationcolor/dark|building}}
+|colorlight={{locationcolor/light|building}}
+|genI=Silph Co RBY.png
+|sizeI=126px
+|genII=Silph Co GSC.png
+|sizeII=126px
+|genIII=Silph Co FRLG.png
+|sizeIII=159px
+|genIV=Silph Co HGSS.png
+|sizeIV=161px
+|genVII=Silph Co. Exterior LGPE.png
+|sizeVII=200px
+}}
+==Music==
+{| class="roundtable" style="margin:auto; text-align: center; background: #{{locationcolor/med|building}}; border: 3px solid #{{locationcolor/dark|building}}"
+|- style="background:#{{locationcolor/light|building}}"
+! Games
+! Song name
+! Composition
+! Arrangement
+|- style="background:#FFF"
+! {{GameIcon|R}}{{GameIcon|Gr}}{{GameIcon|B}}{{GameIcon|Y}}
+| [[Pokémon Red & Pokémon Green: Super Music Collection|Silph Co.]]
+| [[Junichi Masuda]]
+| [[Junichi Masuda]]
+|- style="background:#FFF"
+! {{GameIcon|G}}{{GameIcon|S}}{{GameIcon|C}}
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Pewter City]]
+| [[Junichi Masuda]]
+| [[Go Ichinose]]
+|- style="background:#FFF"
+! {{GameIcon|FR}}{{GameIcon|LG}}
+| [[Pokémon FireRed & Pokémon LeafGreen: Super Music Collection|Silph Co.]] || [[Junichi Masuda]] || [[Go Ichinose]]
+|- style="background:#FFF"
+! {{GameIcon|HG}}{{GameIcon|SS}}
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Pewter City]] || [[Junichi Masuda]] || [[Takuto Kitsuta]]<br><small>[[GB Sounds]]:</small> [[Go Ichinose]]
+|- style="background:#FFF"
+! {{GameIcon|LGP}}{{GameIcon|LGE}}
+| [[Pokémon: Let's Go, Pikachu! & Pokémon: Let's Go, Eevee! Super Music Collection|Silph Co.<br>Pewter City Theme]] || [[Junichi Masuda]] || [[Shota Kageyama]]
+|}
+
+==In spin-off games==
+[[File:Saffron City SSB.png|thumb|200px|Silph Co. in [[Super Smash Bros.]]]]
+===Super Smash Bros. series===
+{{main|Saffron City (stage)}}
+Silph Co. appears in [[Saffron City]] as a playable stage in ''[[Super Smash Bros.]]'' (called '''Silf''' in the Japanese version). The {{pkmn|battle}} takes place on the roof of Silph Co. and a few smaller surrounding buildings, along with two small moving platforms. This is the home stage of {{p|Pikachu}} and {{p|Jigglypuff}} in the game.
+
+Certain Pokémon will emerge from the elevator on the Silph Co. building and attack briefly, similar to Pokémon summoned from {{DL|Poké Ball (item)|Super Smash Bros. series|Poké Balls}}. Occasionally, {{p|Pidgey}}, {{p|Fearow}}, {{p|Butterfree}}, and other {{type|Flying}} Pokémon will appear in the background.
+
+The stage returns in ''[[Super Smash Bros. Ultimate]]'' (in which the Japanese language setting uses the official romanization '''Sylph'''), with its visuals mostly cleaned up with higher-resolution textures; however, the Pokémon that appear maintain their pixellated, two-dimensional appearance from the original game.
+
+===Pokémon Quest===
+In [[Pokémon Quest]], the [[MoBee|MoBee IV]] drone that accompanies the player is mentioned to have been manufactured by Silph Co. When the price of the MoBee IV was reduced, Silph Co. also reduced the capacity of its battery. Silph Co. does not appear in the game other than being named in reference to MoBee IV. 
+
+===Pokémon Pokopia===
+In [[Pokémon Pokopia]], the ruined remains of Silph Co. can be found on the central island of the [[Sparkling Skylands]]. When {{poko|Ditto}} meets [[Tinkmaster]] the {{p|Tinkaton}}, she will task them with restoring the building in the hopes of attracting humans to return. The renovation project comprises of four separate phases, each requiring different materials and Pokémon to assist with the construction. Once the project is fully completed, {{p|Mewtwo}} appears on the roof and briefly meets with Ditto before departing. 
+
+Unlike past depictions of the Silph Co. headquarters, this version consists of only four stories and a rooftop area. An underground sewer system runs around the perimeter of the building, and a ruined subway tunnel is situated deep below the building's foundations. Initially, the building is in an extreme state of disrepair, with most floors having deteriorated from exposure to the elements. The elevator is non-functional, though a stairwell is present behind the building to provide access to each level on foot. Each phase of the restoration will repair the elevator for its respective floor. The player is unable to make any modifications to the building themselves until restoration work is completed. 
+
+* '''1F:''' Lobby, with the layout resembling that seen in the mainline games. This floor is mostly intact, other than some broken window panes and missing sections of the walls.
+* '''2F:''' Appears to have been an office working area. The first renovation project converts into a workshop, with a large play area for Pokémon to relax in.
+* '''3F:''' Appears to have been a research lab. The second renovation project converts into a canteen for humans and Pokémon to enjoy meals together in.
+* '''4F:''' The top floor contains the president's office. The third renovation project largely restores its original opulent design, but refocuses it as a conference space rather than a personal office. A small executive bathroom is also added.
+* '''Rooftop:''' Initially, almost the entire roof of the building is missing. The third renovation project restores it, and converts the space into a terrace garden with a shop.
+
+Although the renovation adds many items that require power, there are no utility poles or transmitters in the building whatsoever, nor any power generators on the island. The player must add their own to make these items functional. Additionally, the cement mixer in the workshop lacks a water source, so a nearby block must be removed and filled with water to make it operational. Despite the restoration work done to the building, no repairs are made at all to the stairs behind the building, nor the lobby interior.
+{{-}}
+
+==In animation==
+[[File:Game Freak Hitmonlee poster.png|thumb|210px|Poster from the [[Game Freak]] website]]
+===''Pokémon the Series''===
+According to artwork from the [[Game Freak]] website, the [[P1 Grand Prix]] is sponsored by Silph Co. and held in the [[Celadon City]] Hall.
+
+===Pokémon Origins===
+[[File:Silph Company PO.png|thumb|250px|left|Silph Co. in [[Pokémon Origins]]]]
+Silph Co. appeared in ''[[PO03|File 3: Giovanni]]''. Like in the {{pkmn|games}}, it was taken over by [[Team Rocket]]. Hearing from Silph Co.'s vice-president of how Team Rocket was experimenting on Pokémon in order to accelerate the completion of [[Master Ball]], {{OBP|Red|Origins}} decided to storm the building. Doing so, he freed all the Pokémon and {{tc|Scientist}}s that were trapped inside, even obtaining a {{p|Lapras}} from one of the Scientists as a thank-you gift. Finally he arrived at the president's office, where he encountered [[Giovanni]]. Before Giovanni could escape, Red proclaimed that he would always be out there to stop their plans, irritating the Team Rocket Boss. Wanting to teach Red a lesson, Giovanni challenged Red to a Pokémon battle, which ended with Giovanni's {{p|Nidoqueen}} defeating [[Red's Charizard]] and wrecking a big portion of the building in the process. Afterwards, Giovanni escaped with a helicopter, leaving before the police could arrive. It was also mentioned that the development of Master Ball was put on hold for a while due to this incident.
+
+===Pokémon Generations===
+A photograph of Silph Co. appeared in ''[[PG02|The Chase]]'', where an [[International Police]] agent informed [[Looker]] about Team Rocket's failed attempt to take over the building while giving him a report about their attempt to locate Giovanni.
+{{-}}
+
+==In the manga==
+===Pokémon Adventures===
+[[File:Silph Co Adventures.png|200px|thumb|Silph Co. in [[Pokémon Adventures]]]]
+Instead of an office building, the Silph Co. in Pokémon Adventures appears to be more like a typical villain base, having multiple traps and specifically designed rooms set up in case of intruders.
+
+===={{MangaArc|Red, Green & Blue}}====
+Silph Co. first appeared in ''[[PS026|Holy Moltres]]'', where [[Team Rocket]] was shown keeping their base inside the building and having managed to capture the three {{adv|legendary birds}}. Later it was revealed that Team Rocket was keeping the kidnapped people of [[Pallet Town]] at the building, prompting {{adv|Red}} and {{adv|Blue}} to break into the Team Rocket-infested Saffron City and storm the Silph Co. building. {{adv|Green}} also entered the building, although with much more selfish motives.
+
+Inside the Silph Co. building, Red, Blue, and Green were confronted by Team Rocket's commanders: the evil [[Gym Leader]]s [[Lt. Surge]], [[Koga]], and [[Sabrina]]. During the conflict, the legendary birds were accidentally {{pkmn|fusion|fused}} together by Green's use of the "Badge Energy Amplifier", a device that increases the energy produced by [[Badge|Gym Badges]]. With their combined efforts, the three Pallet Town Trainers managed to defeat the fusion Pokémon and de-fuse it, allowing the legendary birds to escape. The building collapsed in the ensuing chaos, bringing Team Rocket's plans to an end.
+
+===={{MangaArc|Yellow}}====
+Two years later in ''[[PS041|Ponyta Tale]]'', [[Agatha]] was seen picking up the Badge Energy Amplifier from the Silph Co. ruins for usage at [[Cerise Island]].
+
+[[File:Silph Co PM.png|200px|left|thumb|Silph Co. in [[Pokémon Pocket Monsters]]]]
+[[File:Silph Co Zensho.png|100px|thumb|Silph Co. in [[Pokémon Zensho]]]]
+
+===Pokémon Pocket Monsters===
+Silph Co. appeared in ''[[PM011|Finish Off Team Rocket!!]]'', where it was invaded by Team Rocket. [[Erika]]'s father is the president of Silph Co.
+{{sectionstub}}
+
+===Pokémon Zensho===
+Silph Co. appeared in [[PZ07]], where {{Zensho|Satoshi}} infiltrated the building to defeat Team Rocket. He soon encountered [[Sabrina]], who also wanted to defeat Team Rocket, and a {{pkmn2|talking}} {{p|Lapras}} owned by the company. Satoshi and Sabrina decided to team up against Team Rocket, and used Sabrina's teleportation powers to reach the top floor, where Giovanni was keeping Silph Co.'s president hostage. After defeating Giovanni with Lapras's help, Satoshi obtained the [[Master Ball]] from Silph Co.'s president and the {{badge|Marsh}} from Sabrina, while Lapras ended up joining his [[Party|team]].
+{{-}}
+
+==In the magazines==
+[[File:Master Ball - Pokémon Power.png|thumb|250px|Article about the Master Ball<br>(''{{OBP|Pokémon Power|magazine}}'' magazine)]]
+===''Pokémon Power''===
+In ''{{OBP|Pokémon Power|magazine}}'' (issue 2, page 3), it is said that [[Professor Oak]] invented the [[Master Ball]] and licensed its design to Silph Co., and this company's early field tests were said to be promising.
+{{-}}
+
+==Trivia==
+* Although a logo for the company was not introduced in-game until [[Generation IV]], several possible logos have been seen in previous games. One appeared in early artwork of the [[Silph Scope]] on the front of the device, another appeared on the side of the Silph Co. building in [[Super Smash Bros.]], and a third appeared on the original [[Pokégear]] artwork as a stylized "S".
+* In [[Generation I]] games, if the player uses the [[Town Map]] inside Silph Co., the current place shown by default depends on where the player is:
+** "Saffron City" if the player is on the first floor (except the elevator).
+** "Silph Co." if the player is on any floor other than the first, or in the elevator.
+* In {{game2|Red|Green|Blue}}, the elevator on 11F has a bug that causes the player to be layered on its doors upon leaving it. Another quirk occurs as result, which disables the elevator mat's left panel if the player enters the elevator without being on the doors and does not move from that panel afterwards, thus preventing them from exiting without specifically using the mat's right panel. Both these issues were fixed in {{game|Yellow}}.
+* In the internal data of [[Generation II]] games, Silph Co. is found in the list of place names, but this is not referenced in normal gameplay. When the player is inside Silph Co., the [[Pokégear]] map displays the current location as [[Saffron City]]. In {{game|Crystal}}, if an {{pkmn|Egg}} hatches inside Silph Co., the [[Poké Seer|Pokémon caught data]] is also recorded as Saffron City (in {{game|Gold and Silver|s}}, caught data is not recorded for any Pokémon).
+* During the Team Rocket takeover, one of the Scientists the player battles reveals that he works for Silph and Team Rocket, making him a double-crosser. 
+** In [[Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!]], the scientist elaborates that he works for both organizations to make ends meet.
+* In the [[Generation II]] games and {{game|HeartGold and SoulSilver|s}}, [[Maizie]] mentions that her father works for Silph. Scientist Ross, who can be battled at the [[Team Rocket HQ]], also claims that he used to work for Silph.
+* In {{game|HeartGold and SoulSilver|s}}, if a Forretress with max [[friendship]] is traded for [[Steven]]'s Beldum, then Steven will [[Steven Stone/Quotes#Pokémon HeartGold and SoulSilver|acknowledge this and describe why he likes Steel-type Pokémon]].
+* In [[Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!]] only, after [[Giovanni]] has been defeated here, the Silph Co. theme is replaced with the [[Saffron City]] theme.
+* Silph Co. is the only place where the player battles {{ga|Blue}} in {{5v2|Red|Blue|Yellow|FireRed|LeafGreen}}, but not {{ga|Trace}} in [[Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!|Let's Go, Pikachu! and Let's Go, Eevee!]]. Instead, the player joins Trace in a [[Multi Battle]].
+* The company logo introduced in Generation IV can be seen on the [[Normal (type)|Normal]] Uniform in [[Pokémon Sword and Shield]] as that type's sponsor. However, the logo does not appear in [[Poké Jobs]] or in the list of companies in the credits.
+
+==Name origin==
+Silph Co.'s name is a corruption of {{wp|sylph}}, a mythological creature.
+
+In Japanese, the company is named シルフ ''shirufu'', which is Japanese for "sylph". However, it has been officially romanized as "[[a:File:Game Freak Hitmonlee poster.png|Silph]]", "[https://tcrf.net/File:SSBJapanSilf.png Silf]", and "[https://twitter.com/Pokemon_cojp/status/951000682726854659 Sylph]".
+
+==In other languages==
+{{Langtable|color={{locationcolor/light|building}}|bordercolor={{locationcolor/dark|building}}
+|zh_yue=西爾佛公司 ''{{tt|Sāiyíhbaht Gūngsī|Sylph Company}}'' {{tt|*|Games, Zensho}}<br>西爾佛總公司 ''{{tt|Sāiyíhbaht Júnggūngsī|Sylph Company}}'' {{tt|*|Adventures}}<br>西佛爾公司 ''{{tt|Sāibahtyíh Gūngsī|Sylph Company}}'' {{tt|*|Let's Find Pokémon!, Strategy Guide}}<br>史達企業的總公司 ''{{tt|Sídaahtkéiyihp dīk Júnggūngsī|Sylph Company}}'' {{tt|*|Pokémon Pocket Monsters}}
+|zh_cmn=西爾佛公司 / 西尔佛公司 ''{{tt|Xī'ěrfó Gōngsī|Sylph Company}}'' {{tt|*|Games, Zensho}}<br>西爾佛總公司 ''{{tt|Xī'ěrfó Zǒnggōngsī|Sylph Company}}'' {{tt|*|Adventures (Taiwan)}}<br>西爾夫公司 / 西尔夫公司 ''{{tt|Xī'ěrfū Gōngsī|Sylph Company}}'' {{tt|*|Pokémon Pocket Monsters}}<br>希鲁夫总公司 ''{{tt|Xīlǔfū Zǒnggōngsī|Sylph Company}}'' {{tt|*|Manga (Mainland China)}}<br>希鲁夫公司 ''{{tt|Xīlǔfū Gōngsī|Sylph Company}}'' {{tt|*|Let's Find Pokémon! (Mainland China)}}
+|cs=Společnost Silph
+|fr=Sylphe SARL
+|de=Silph {{tt|Co.|Company}}
+|it=Silph S.p.A. ({{gen|VII}})<br>Silph SpA ({{gen|I}}-{{gen|IV}})
+|ko=실프주식회사 ''{{tt|Sylph Jusikhwesa|Sylph Corporation}}''
+|pt_br=Silph Co. {{tt|*|games, manga}}<br>Companhia Silph {{tt|*|animated series, The Official Pokémon Handbook}}
+|es=Silph S. A. ({{gen|VII}})<br>Silph S.A. ({{gen|I}}-{{gen|IV}})
+|vi=Công ty Sylph
+}}
+
+==Related articles==
+{{Smash Bros.}}
+{{Kanto}}{{Team Rocket Adventures}}
+{{Project Locations notice}}
+
+[[Category:Kanto locations]]
+[[Category:Red, Blue and Yellow locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:FireRed and LeafGreen locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Let's Go, Pikachu! and Let's Go, Eevee! locations]]
+[[Category:Offices]]
+[[Category:Companies in the Pokémon world]]
+[[Category:Villainous team bases]]
+
+[[de:Silph Company]]
+[[es:Silph S. A.]]
+[[fr:Sylphe SARL]]
+[[it:Silph S.p.A.]]
+[[ja:シルフカンパニー]]
+[[zh:西爾佛公司]]

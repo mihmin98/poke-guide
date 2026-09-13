@@ -1,0 +1,615 @@
+<!-- poke-guide fixture: {"title":"Cinnabar Island","resolvedTitle":"Cinnabar Island","revid":4569433,"timestamp":"2026-06-09T01:25:15Z","fetchedAt":"2026-09-12T21:57:28.705Z"} -->
+{{Samename|chapter in [[Pokémon Zensho]]|PZ08}}
+----
+{{Town infobox
+|name=Cinnabar Island
+|jpname=グレン島<br>グレンタウン
+|jptrans=Guren Island<br>Guren Town
+|image=Cinnabar Island PE.png
+|imageI=Cinnabar Island RBY.png
+|imageII=Cinnabar Island GSC.png
+|imageIII=Cinnabar Island FRLG.png
+|slogan=The Fiery Town of Burning Desire
+|mapdesc=A town used to be here until it was swept away by an eruption.{{sup/4|HGSS}}<br>The town at the foot of a volcano. The Pokémon Mansion is located here.{{sup/7|PE}}
+|region=Kanto
+|north=Route 21
+|east=Route 20
+|regionnorth=Kanto
+|regioneast=Kanto
+|gym=Cinnabar Gym
+|gymno=7{{sup/1|RGBY}}{{sup/3|FRLG}}{{sup/7|PE}}
+|leader=Blaine
+|leadervs=VSBlaine PE.png{{!}}80x80px
+|badge=Volcano
+|gymtype=Fire
+|colordark=B23D33
+|colormed=c46c65
+|colorlight=D89D98
+}}
+
+'''Cinnabar Island''' (Japanese: '''グレン{{tt|島|じま}}''' ''Guren Island''; '''グレンタウン''' ''Guren Town'') is a large island located off the southern coast of the [[Kanto]] [[region]], south of [[Pallet Town]]. It is home to a large volcano. [[Blaine]] was once the resident [[Gym Leader]] specializing in {{type|Fire}} {{OBP|Pokémon|species}}, but in the [[Johto]]-based games, Cinnabar Island had been ravaged by a volcanic eruption and Blaine has moved the Cinnabar Gym to the [[Seafoam Islands]].
+
+==Terminology==
+===English===
+In English media, this place is usually called '''Cinnabar Island''', regardless of the Japanese dialogue calling it an "Island" or "Town". It is sometimes shortened to just '''Cinnabar'''. For instance:
+
+* ''"I wasn't in the mood at '''Cinnabar''', but now I'm ready to battle you."'' ({{ga|Blue}}'s quote){{sup/2|GSC}}{{sup/4|HGSS}}
+* ''"We'll be watching over '''Cinnabar''', just waiting to see what will happen!"'' (Radio quote){{sup/4|HGSS}}
+
+In the English manual of {{game|FireRed and LeafGreen|s}}, this is named '''Cinnabar Town''' on the page about the [[Gym Leader]]s.
+
+The related adjective is '''Cinnabarian''', as seen when the "'''Cinnabarian''' Hamburger Steak" is mentioned in [[Pokémon X and Y]].
+
+In an early {{aniseries|OS}} episode summary from [[Pokémon.com]], Cinnabar Island was referred to as '''Glen Island''' in English, based on its Japanese name.<ref>[https://web.archive.org/web/19991012205011/http://pokemon.com/cartoons/lastten.html Pokémon World - Cartoons] (archive)</ref>
+
+===Japanese===
+In Japanese media, Cinnabar Island has two distinct Japanese names—being referred to as both "Island" and "Town". In particular, the area name (as stored on the list of locations in the game data) is the one that appears when the player enters the location and which appears on the Pokémon's [[summary]] or is mentioned by the [[Poké Seer]]{{sup/2|C}} if it was met in this location.
+
+* '''{{j|グレン{{ruby|島|じま}}}}''' (''Guren Island'') is the area name{{sup/2|GSC}}{{sup/3|FRLG}}{{sup/7|PE}}, and it also appears on the [[Cinnabar Gym]] signpost{{sup/1|RGBY}}{{sup/3|FRLG}}{{sup/7|PE}}.
+* '''{{j|グレンタウン}}''' (''Guren Town'') is the area name{{sup/4|HGSS}}, and it also appears on the island's signpost{{sup/1|RGBY}}{{sup/2|GSC}}{{sup/3|FRLG}}{{sup/4|HGSS}}{{sup/7|PE}}, the [[Cinnabar Gym]] signpost{{sup/2|GSC}}{{sup/4|HGSS}}, the Cinnabar Gym relocation notice{{sup/2|GSC}}{{sup/4|HGSS}}, and the map guide about the {{ka|Pokémon Mansion}}{{sup/3|FRLG}}.
+
+In the [[Generation I]] games, it is referred to as simply '''{{j|グレン}}''' (''Guren'') on the [[Town Map]], just like other cities and towns.
+
+==Slogan==
+===Generations I-III and VII===
+'''''The Fiery Town of Burning Desire''''' (Japanese: '''グレンの　赤は　情熱の色''' ''Guren's red is the color of passion.'')
+
+===Generation IV===
+'''''The Ravaged Town of the Past''''' (Japanese: '''おしながされた　かこの　まち''' ''The ravaged town of the past'')
+
+==Geography==
+Cinnabar is a small island, connected to the mainland by two water routes. To the north is {{rt|21|Kanto}} leading to Pallet Town. To the east is {{rt|20|Kanto}}, which leads to the [[Seafoam Islands]]. Further east is another water route, {{rt|19|Kanto}}, which connects northwards to [[Fuchsia City]]. 
+
+The [[Pokémon Mansion journals|journals]] scattered throughout the abandoned {{ka|Pokémon Mansion}} reveal that {{p|Mewtwo}} was created there. The scientists at the [[Cinnabar Lab]] (known as the Pokémon Lab prior to [[Generation VII]]) have the ability to resurrect Pokémon from their [[Fossil]]s.
+
+One year before [[Generation II]] (as well as its remakes), the island has been decimated by a volcanic eruption. The [[Cinnabar Gym]] has been relocated to the [[Seafoam Islands]] as a result.
+
+===Overworld===
+{| style="margin:auto; text-align:center; {{roundy|10px}} border:2px solid #B23D33; background:#c46c65; font-size:80%"
+|-
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:Cinnabar Island RBY.png|150px]]
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:Cinnabar Island GSC.png|150px]]
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:Cinnabar Island FRLG.png|150px]]
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:Cinnabar Island HGSS.png|150px]]
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:Cinnabar Island PE.png|150px]]
+|-
+|{{color2|000|Generation I}}
+|{{color2|000|Generation II}}
+|{{color2|000|Generation III}}
+|{{color2|000|Generation IV}}
+|{{color2|000|Generation VII}}
+|-
+|}
+
+===[[Environment]]s===
+{| style="margin:auto; text-align:center; {{roundy|10px}}; border: 2px solid #B23D33; background: #c46c65; font-size:80%"
+|-
+|style="{{roundy|10px}}; border: 2px solid #B23D33; background: #D89D98; width:80px"| [[File:Battle terrain pond water FRLG.png|250px]]
+|style="{{roundy|10px}}; border: 2px solid #B23D33; background: #D89D98; width:80px"| [[File:Battle terrain plain FRLG.png|250px]]
+|style="{{roundy|10px}}; border: 2px solid #B23D33; background: #D89D98; width:80px"| [[File:BattleEnvironmentLGPEViridianCity.jpg|250px]]
+|-
+| {{color2|000|Generation III}} (Surfing)
+| {{color2|000|Generation III}} (Fishing)
+| {{color2|000|Generation VII}}
+|}
+
+==Points of interest==
+===Volcano===
+There is a volcano on Cinnabar Island which gives it its name. In [[Generation I]] and {{gen|III}}, no volcano is visible on the island, but in Generation VII, the volcano is on the western side, near the Cinnabar Lab and Pokémon Mansion.
+
+In [[Generation II]] and {{Gen|IV}}, the volcano has erupted on the island, destroying everything with only the [[Pokémon Center]] being rebuilt. In these games, the player can actually see the volcano itself.
+
+{| style="margin:auto; text-align:center; {{roundy|10px}} border:2px solid #B23D33; background:#c46c65; font-size:80%"
+|-
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:RG Route 21 Map.png|x250px]]
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:Cinnabar Volcano GSC.png]]
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:Cinnabar Volcano HGSS.png]]
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:Cinnabar Island LGPE Concept Art.jpg|250px]]
+|-
+|{{color2|000|Kanto Route 21|Route 21}} from the {{color2|000|Pocket Monsters Encyclopedia}}<br>with no volcano
+|{{color2|000|Generation II}} (right)
+|{{color2|000|Generation IV}}
+|Concept art depicting the volcano from the<br>{{color2|000|Pokémon: Let's Go, Pikachu! & Pokémon: Let's Go, Eevee! Super Music Collection|Let's Go, Pikachu and Eevee! Super Music Collection}} 
+|-
+|}
+
+===Cinnabar Gym===
+{{main|Cinnabar Gym}}
+The Cinnabar Gym is the official [[Gym]] of Cinnabar Island in Generations I, III, and VII. it is based on {{type|Fire}} {{OBP|Pokémon|species}} and the [[Gym Leader]] is [[Blaine]]. {{pkmn|Trainer}}s who defeat him receive the {{Badge|Volcano}}. The player is unable to enter the Gym at once; only when they obtain the {{ka|Secret Key}} from the {{ka|Pokémon Mansion}} can they unlock the door to the Gym. 
+
+It was relocated to the [[Seafoam Islands]] following the volcanic eruption in Generation II and IV.
+
+{{-}}
+{| style="margin:auto; text-align:center; {{roundy|10px}} border:2px solid #{{fire color dark}}; background:#{{fire color}}; font-size:80%"
+|-
+|style="{{roundy|5px}} border:2px solid #{{fire color dark}}; background:#{{fire color light}}; width:80px"| [[File:Gym RBGY.png]]
+|style="{{roundy|5px}} border:2px solid #{{fire color dark}}; background:#{{fire color light}}; width:80px"| [[File:Cinnabar Gym Outside GSC.png]]
+|style="{{roundy|5px}} border:2px solid #{{fire color dark}}; background:#{{fire color light}}; width:80px"| [[File:Gym FRLG.png]]
+|style="{{roundy|5px}} border:2px solid #{{fire color dark}}; background:#{{fire color light}}; width:80px"| [[File:Cinnabar Gym Outside HGSS.png]]
+|style="{{roundy|5px}} border:2px solid #{{fire color dark}}; background:#{{fire color light}}; width:80px"| [[File:Cinnabar Gym PE.png|250px]]
+|-
+|{{color2|000|Generation I}}
+|{{color2|000|Generation II}}
+|{{color2|000|Generation III}}
+|{{color2|000|Generation IV}}
+|{{color2|000|Generation VII}}
+|-
+|}
+
+===Pokémon Mansion===
+{{main|Pokémon Mansion (Kanto)}}
+The Pokémon Mansion is a decrepit, burned-down mansion on Cinnabar Island. It got its name because a famous Pokémon researcher once lived there. To access the Cinnabar Island [[Gym]] in [[Generation]]s {{gen|I}}, {{gen|III}}, and {{gen|VII}}, the player has to enter the mansion and find the {{ka|Secret Key}} to unlock the door of the Gym. Many {{tc|Burglar}}s come to the mansion, trying to steal valuable items that may have been lost in the wreckage. Several [[Pokémon Mansion journals|journal entries]] can be found around the mansion, describing the discovery of {{p|Mew}} and the creation of {{p|Mewtwo}}.
+
+It has been destroyed as a result of a volcanic eruption by the time of [[Generation II]] and [[Generation IV]].
+
+
+{| style="margin:auto; text-align:center; {{roundy|10px}} border:2px solid #B23D33; background:#c46c65; font-size:80%"
+|-
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:Pokémon Mansion RBY.png]]
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:Pokémon Mansion FRLG.png]]
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:Pokémon Mansion Exterior LGPE.png|250px]]
+|-
+|{{color2|000|Generation I}}
+|{{color2|000|Generation III}}
+|{{color2|000|Generation VII}}
+|-
+|}
+
+===Cinnabar Lab===
+{{main|Cinnabar Lab}}
+The Cinnabar Lab, known as the Pokémon Lab prior to [[Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!|Let's Go, Pikachu! and Let's Go, Eevee!]], is a laboratory located on Cinnabar Island. It was founded by [[Mr. Fuji|Dr. Fuji]] and appears in the Generation I games and their [[remake]]s. In Generations I and III, the west room of the Cinnabar Lab has two people who will offer to [[trade]] Pokémon. In the east room, there is a scientist who will revive the [[Fossil]]s the player has obtained. In [[Silph Co.]], there is a Pokémon Report stating that Cinnabar Lab created {{p|Porygon}}.
+
+It has been destroyed as a result of a volcanic eruption by the time of [[Generation II]] and [[Generation IV]].
+
+{| style="margin:auto; text-align:center; {{roundy|10px}} border:2px solid #B23D33; background:#c46c65; font-size:80%"
+|-
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:Pokémon Lab RBY.png]]
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:Pokémon Lab FRLG.png]]
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:Pokémon Lab PE.png|250px]]
+|-
+|{{color2|000|Generation I}}
+|{{color2|000|Generation III}}
+|{{color2|000|Generation VII}}
+|-
+|}
+
+===Blue===
+{{main|Blue (game)}}
+In Generation II and IV, Blue can be found near the Volcano on Cinnabar Island. After taking the position of the [[Viridian City]] [[Viridian Gym|Gym]] from [[Giovanni]] following the events of Generation I and III, he will return to the Gym after being spoken to here. In Generation IV, he will only return to the Viridian Gym after the player has the other seven Gym Badges from Kanto.
+{{-}}
+{| style="margin:auto; text-align:center; {{roundy|10px}} border:2px solid #B23D33; background:#c46c65; font-size:80%"
+|-
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:Blue Cinnabar Island GSC.png|160px]]
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:Blue Cinnabar Island HGSS.png|256px]]
+|-
+|{{color2|000|Generation II}}
+|{{color2|000|Generation IV}}
+|-
+|}
+
+==Poké Mart==
+{{shop|Generation I}}
+{{shoprow|{{shopitem|Ultra Ball|1200}}|{{shopitem|Great Ball|600}}}}
+{{shoprow|{{shopitem|Hyper Potion|1500}}|{{shopitem|Max Repel|700}}}}
+{{shoprow|{{shopitem|Escape Rope|550}}|{{shopitem|Full Heal|600}}}}
+{{shoprow|{{shopitem|Revive|1500}}}}
+{{shopfooter|multiple=yes}}
+{{shop|Generation III}}
+{{shoprow|{{shopitem|Ultra Ball|1200}}|{{shopitem|Great Ball|600}}}}
+{{shoprow|{{shopitem|Hyper Potion|1200}}|{{shopitem|Revive|1500}}}}
+{{shoprow|{{shopitem|Full Heal|600}}|{{shopitem|Escape Rope|550}}}}
+{{shoprow|{{shopitem|Max Repel|700}}|}}
+{{shopfooter|multiple=yes}}
+{{shop|Generation VII}}
+{{shoprow|{{shopitem|Poké Ball (item)|100|5=Poké Ball|display=Poké Ball}}|{{shopitem|Great Ball|300|note=<sup>1 {{color2|000|Badge}}</sup>}}}}
+{{shoprow|{{shopitem|Ultra Ball|500|note=<sup>4 {{color2|000|Badge|Badges}}</sup>}}|{{shopitem|Potion|200}}}}
+{{shoprow|{{shopitem|Super Potion|700|note=<sup>2 {{color2|000|Badge|Badges}}</sup>}}|{{shopitem|Hyper Potion|1,500|note=<sup>4 {{color2|000|Badge|Badges}}</sup>}}}}
+{{shoprow|{{shopitem|Max Potion|2,500|note=<sup>6 {{color2|000|Badge|Badges}}</sup>}}|{{shopitem|Full Restore|3,000|note=<sup>8 {{color2|000|Badge|Badges}}</sup>}}}}
+{{shoprow|{{shopitem|Antidote|200}}|{{shopitem|Burn Heal|300}}}}
+{{shoprow|{{shopitem|Ice Heal|100}}|{{shopitem|Awakening|100}}}}
+{{shoprow|{{shopitem|Paralyze Heal|300}}|{{shopitem|Full Heal|400|note=<sup>3 {{color2|000|Badge|Badges}}</sup>}}}}
+{{shoprow|{{shopitem|Revive|2,000|note=<sup>3 {{color2|000|Badge|Badges}}</sup>}}|{{shopitem|Escape Rope|300|note=<sup>1 {{color2|000|Badge}}</sup>}}}}
+{{shoprow|{{shopitem|Repel|400|note=<sup>1 {{color2|000|Badge}}</sup>}}|{{shopitem|Super Repel|700|note=<sup>3 {{color2|000|Badge|Badges}}</sup>}}}}
+{{shoprow|{{shopitem|Max Repel|900|note=<sup>5 {{color2|000|Badge|Badges}}</sup>}}|{{shopitem|Lure|400|note=<sup>2 {{color2|000|Badge|Badges}}</sup>}}}}
+{{shoprow|{{shopitem|Super Lure|700|note=<sup>4 {{color2|000|Badge|Badges}}</sup>}}|{{shopitem|Max Lure|900|note=<sup>6 {{color2|000|Badge|Badges}}</sup>}}}}
+{{shoprow|{{shopitem|X Attack|550|note=<sup>1 {{color2|000|Badge}}</sup>}}|{{shopitem|X Defense|500|note=<sup>1 {{color2|000|Badge}}</sup>}}}}
+{{shoprow|{{shopitem|X Sp. Atk|350|note=<sup>1 {{color2|000|Badge}}</sup>}}|{{shopitem|X Sp. Def|350|note=<sup>1 {{color2|000|Badge}}</sup>}}}}
+{{shoprow|{{shopitem|X Speed|350|note=<sup>1 {{color2|000|Badge}}</sup>}}|{{shopitem|X Accuracy|950|note=<sup>1 {{color2|000|Badge}}</sup>}}}}
+{{shoprow|{{shopitem|Dire Hit|650|note=<sup>1 {{color2|000|Badge}}</sup>}}|{{shopitem|Guard Spec.|700|note=<sup>1 {{color2|000|Badge}}</sup>}}}}
+{{shopfooter}}
+
+==Items==
+{{itlisth|volcano}}
+{{Itemlist|Antidote|Southwest of the {{ka|Pokémon Mansion}} entrance|LP=yes|LE=yes}}
+{{Itemlist|Rare Candy|In the northernmost accessible corner of the island ''(hidden)''|G=yes|S=yes|C=yes}}
+{{Itemlist|Rare Candy|On a rock at the northwest corner of the island (requires {{m|Rock Climb}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Iron|On a rock in the southeastern corner of the island (requires {{m|Rock Climb}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Star Piece|On a rock on the erupted volcano (requires {{m|Rock Climb}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Magmarizer|On the erupted volcano (requires {{m|Rock Climb}})|HG=yes|SS=yes}}
+{{itlistfoot|volcano}}
+
+===Pokémon Mansion===
+{{main|Pokémon Mansion (Kanto)#Items|Pokémon Mansion → Items}}
+
+===Cinnabar Lab===
+{{main|Cinnabar Lab#Items|Cinnabar Lab → Items}}
+
+==Pokémon==
+===Generation I===
+{{Catch/header|volcano|no}}
+{{Catch/div|ocean|Fishing}}
+{{Catch/entry1|129|Magikarp|yes|yes|yes|Fish Old|5|100%|type1=Water}}
+{{Catch/entry1|060|Poliwag|yes|yes|yes|Fish Good|10|50%|type1=Water}}{{Catch/entry1|118|Goldeen|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{Catch/entry1|072|Tentacool|no|no|yes|Fish Super|15, 30|40%|type1=Water|type2=Poison}}
+{{Catch/entry1|090|Shellder|yes|yes|no|Fish Super|15|25%|type1=Water}}
+{{Catch/entry1|116|Horsea|yes|yes|no|Fish Super|15|25%|type1=Water}}
+{{Catch/entry1|118|Goldeen|yes|yes|no|Fish Super|15|25%|type1=Water}}
+{{Catch/entry1|120|Staryu|yes|yes|no|Fish Super|15|25%|type1=Water}}
+{{Catch/entry1|120|Staryu|no|no|yes|Fish Super|10, 15|60%|type1=Water}}
+{{catch/footer|volcano}}
+
+===Generation II===
+{{Catch/header|volcano|yes}}
+{{Catch/div|ocean|Surfing}}
+{{Catch/entry2|072|Tentacool|yes|yes|yes|Surf|30-39|all=90%|type1=Water|type2=Poison}}
+{{Catch/entry2|073|Tentacruel|yes|yes|yes|Surf|35-39|all=10%|type1=Water|type2=Poison}}
+{{Catch/div|ocean|Fishing}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entry2|072|Tentacool|yes|yes|yes|Fish Old|10|all=15%|type1=Water|type2=Poison}}
+{{Catch/entry2|072|Tentacool|yes|yes|yes|Fish Good|20|all=35%|type1=Water|type2=Poison}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=Water}}
+{{Catch/entry2|170|Chinchou|yes|yes|yes|Fish Good|20|all=20%|type1=Water|type2=Electric}}
+{{Catch/entry2|090|Shellder|yes|yes|yes|Fish Good|20|all=10%|type1=Water}}
+{{Catch/entry2|170|Chinchou|yes|yes|yes|Fish Super|40|all=40%|type1=Water|type2=Electric}}
+{{Catch/entry2|090|Shellder|yes|yes|yes|Fish Super|40|all=30%|type1=Water}}
+{{Catch/entry2|073|Tentacruel|yes|yes|yes|Fish Super|40|all=20%|type1=Water|type2=Poison}}
+{{Catch/entry2|171|Lanturn|yes|yes|yes|Fish Super|40|all=10%|type1=Water|type2=Electric}}
+{{Catch/footer|volcano}}
+
+===Generation III===
+{{catch/header|volcano|no}}
+{{Catch/div|ocean|Surfing}}
+{{Catch/entryfl|072|Tentacool|yes|yes|Surf|5-40|100%|type1=Water|type2=Poison}}
+{{Catch/div|ocean|Fishing}}
+{{Catch/entryfl|129|Magikarp|yes|yes|Fish Old|5|100%|type1=Water}}
+{{Catch/entryfl|116|Horsea|yes|no|Fish Good|5-15|60%|type1=Water}}
+{{Catch/entryfl|116|Horsea|no|yes|Fish Good|5-15|20%|type1=Water}}
+{{Catch/entryfl|098|Krabby|yes|no|Fish Good|5-15|20%|type1=Water}}
+{{Catch/entryfl|098|Krabby|no|yes|Fish Good|5-15|60%|type1=Water}}
+{{Catch/entryfl|129|Magikarp|yes|yes|Fish Good|5-15|20%|type1=Water}}
+{{catch/entryfl|090|Shellder|yes|no|Fish Super|15-25|40%|type1=Water}}
+{{Catch/entryfl|116|Horsea|yes|no|Fish Super|15-25|40%|type1=Water}}
+{{Catch/entryfl|098|Krabby|no|yes|Fish Super|15-25|40%|type1=Water}}
+{{catch/entryfl|120|Staryu|no|yes|Fish Super|15-25|40%|type1=Water}}
+{{Catch/entryfl|130|Gyarados|yes|yes|Fish Super|15-25|15%|type1=Water|type2=Flying}}
+{{Catch/entryfl|117|Seadra|yes|no|Fish Super|25-35|4%|type1=Water}}
+{{Catch/entryfl|080|Slowbro|no|yes|Fish Super|25-35|4%|type1=Water|type2=Psychic}}
+{{Catch/entryfl|054|Psyduck|yes|no|Fish Super|25-35|1%|type1=Water}}
+{{Catch/entryfl|079|Slowpoke|no|yes|Fish Super|25-35|1%|type1=Water|type2=Psychic}}
+{{Catch/footer|volcano}}
+
+===Generation IV===
+{{Catch/header|volcano|4}}
+{{Catch/div|ocean|Surfing}}
+{{Catch/entryhs|072|Tentacool|yes|yes|Surf|30-35|all=90%|type1=Water|type2=Poison}}
+{{Catch/entryhs|073|Tentacruel|yes|yes|Surf|35|all=10%|type1=Water|type2=Poison}}
+{{Catch/div|ocean|Fishing}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=95%|type1=Water}}
+{{Catch/entryhs|072|Tentacool|yes|yes|Fish Old|10|all=5%|type1=Water|type2=Poison}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{Catch/entryhs|072|Tentacool|yes|yes|Fish Good|20|all=40%|type1=Water|type2=Poison}}
+{{Catch/entryhs|170|Chinchou|yes|yes|Fish Good|20|all=16%|type1=Water|type2=Electric}}
+{{Catch/entryhs|090|Shellder|yes|yes|Fish Good|20|all=4%|type1=Water}}
+{{Catch/entryhs|170|Chinchou|yes|yes|Fish Super|40|all=40%|type1=Water|type2=Electric}}
+{{Catch/entryhs|090|Shellder|yes|yes|Fish Super|40|all=40%|type1=Water}}
+{{Catch/entryhs|073|Tentacruel|yes|yes|Fish Super|40|all=16%|type1=Water|type2=Poison}}
+{{Catch/entryhs|171|Lanturn|yes|yes|Fish Super|40|all=4%|type1=Water|type2=Electric}}
+{{Catch/footer|volcano}}
+
+===Generation VII===
+{{Catch/header|volcano|no}}
+{{Catch/div|volcano|Special Pokémon}}
+{{Catch/entrype|052A|Meowth|no|yes|Trade|44|Unlimited|tradenum=052|tradename=Meowth|type1=Dark|form=Alolan Form}}
+{{Catch/entrype|088A|Grimer|yes|no|Trade|44|Unlimited|tradenum=088|tradename=Grimer|type1=Poison|type2=Dark|form=Alolan Form}}
+{{Catch/footer|volcano}}
+
+===Pokémon Mansion===
+{{main|Pokémon Mansion (Kanto)#Pokémon|Pokémon Mansion → Pokémon}}
+
+===Cinnabar Lab===
+{{main|Cinnabar Lab#Pokémon|Cinnabar Lab → Pokémon}}
+
+==Trainers==
+===Generation VII===
+{{trainerheader|volcano}}
+{{trainerdiv|volcano|After becoming Champion}}
+{{trainerentry/master|VSLass Master PE.png{{!}}90px|Lass|Cindy|103|Exeggutor|♂|75|Psychic|Hypnosis|Grass|Solar Beam|Normal|Hyper Beam|36=ヨシミ|37=Yoshimi}}
+{{trainerfooter|volcano|PE}}
+
+===Pokémon Mansion===
+{{main|Pokémon Mansion (Kanto)#Trainers|Pokémon Mansion → Trainers}}
+
+===Cinnabar Lab===
+{{main|Cinnabar Lab#Trainers|Cinnabar Lab → Trainers}}
+
+==Differences between generations==
+Cinnabar Island has changed dramatically between [[Generation]]s {{Gen|I}} and {{Gen|II}} as the city has been totally replaced by a large erupted volcano, removing everything except for the [[Pokémon Center]]. After the eruption, the [[Gym]] was relocated to the [[Seafoam Islands]]. {{ga|Blue}} can be first found at Cinnabar Island, because he was in a bad mood and decided to take a stroll there. In [[Generation III]], there are a few changes with the visual design, as the {{ka|Pokémon Mansion}} and [[Cinnabar Lab|Pokémon Lab]] are slightly larger along with more sandy beach areas. The first and last questions in the Cinnabar Gym have also been changed slightly for clarification. In [[Generation IV]], the island stays much the same as [[Generation II]], although the volcano is now climbable by {{m|Rock Climb}}. In Generation VII, the eastern slope of the volcano is visible close to the Lab and Pokémon Mansion, but is not accessible.
+
+==Demographics==
+===Pokémon Red, Blue, and Yellow===
+Cinnabar Island has a population of 33.
+
+===Pokémon Gold, Silver, and Crystal===
+Cinnabar Island has a population of 6, all residing in the Pokémon Center.
+
+===Pokémon FireRed and LeafGreen===
+In {{game|FireRed and LeafGreen|s}}, Cinnabar Island has a population of 36.
+
+===Pokémon HeartGold and SoulSilver===
+Cinnabar Island has a population of 9.
+
+==Walking Pokémon quotes==
+{{incomplete|section|needs=Needs info from LGPE.}}
+[[Walking Pokémon]] can have reactions unique to Cinnabar Island. Any quote below where the area says "anywhere" requires interacting with the Pokémon; for more specific areas, the Pokémon reacts automatically when it gets near.
+{| class="roundtable" style="margin: auto; text-align: center; background-color: #{{locationcolor/med|cave}}; border: 3px solid #{{locationcolor/dark|cave}}"
+|- style="background:#{{locationcolor/light|cave}}"
+! Games
+! Pokémon
+! Area
+! Quote
+|- style="background-color: #FFF"
+! rowspan="2" | {{GameIcon|HG}}{{GameIcon|SS}}
+| [[File:Bag Poké Ball Sprite.png]]<br>Any Pokémon
+| Anywhere
+| "Your Pokémon is rolling a rock around!"
+|- style="background-color: #FFF"
+| [[File:Bag Poké Ball Sprite.png]]<br>Any Pokémon
+| Anywhere
+| "Your Pokémon is staring fixedly at the sea!"
+|- style="background-color: #FFF"
+|}
+
+==Music==
+{| class="roundtable" style="margin:auto; text-align: center; background: #c46c65; border: 3px solid #B23D33"
+|- style="background:#D89D98"
+! Games
+! Song name
+! Composition
+! Arrangement
+|- style="background:#FFF"
+! {{GameIcon|R}}{{GameIcon|Gr}}{{GameIcon|B}}{{GameIcon|Y}}
+| [[Pokémon Red & Pokémon Green: Super Music Collection|Cinnabar Island Theme]]
+| [[Junichi Masuda]]
+| [[Junichi Masuda]]
+|- style="background:#FFF"
+! {{GameIcon|G}}{{GameIcon|S}}{{GameIcon|C}}
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Pewter City]]
+| [[Junichi Masuda]]
+| [[Go Ichinose]]
+|- style="background:#FFF"
+! {{GameIcon|FR}}{{GameIcon|LG}}
+| [[Pokémon FireRed & Pokémon LeafGreen: Super Music Collection|Cinnabar Island Theme]] || [[Junichi Masuda]] || [[Go Ichinose]]
+|- style="background:#FFF"
+! {{GameIcon|HG}}{{GameIcon|SS}}
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Cinnabar Island]] || [[Junichi Masuda]] || [[Hitomi Sato]]<br><small>[[GB Sounds]]:</small> [[Hitomi Sato]]
+|- style="background:#FFF"
+! {{GameIcon|LGP}}{{GameIcon|LGE}}
+| [[Pokémon: Let's Go, Pikachu! & Pokémon: Let's Go, Eevee! Super Music Collection|Cinnabar Island Theme]] || [[Junichi Masuda]] || [[Shota Kageyama]]
+|}
+
+==Development==
+===Generation II===
+Although Kanto was planned to return in Gold and Silver since 1997, the [[Pokémon Gold and Silver Spaceworld '97 demo]] reveals that at the time, Kanto was a tiny reconstruction of its original map, as opposed to being far more complete in the final. Whilst this included heavily condensed versions of most areas from Kanto, no Cinnabar Island can be seen, with two large rocks taking its place.
+
+{| style="margin:auto; text-align:center; {{roundy|10px}} border:2px solid #B23D33; background:#c46c65; font-size:80%"
+|-
+|style="{{roundy|5px}} border:2px solid #B23D33; background:#D89D98; width:80px"| [[File:Kanto GS SW97.png|250px]]
+|-
+| {{color2|000|Pokémon Gold and Silver Spaceworld '97 demo|Spaceworld '97}} Kanto map
+|-
+|}
+
+==In the spin-off games==
+===Pokémon Pinball===
+In {{g|Pinball}}, Cinnabar Island appears on the Red and Blue tables; catchable Pokémon include {{p|Growlithe}}, {{p|Ponyta}}, {{p|Grimer}}, {{p|Koffing}}, {{p|Tangela}}, {{p|Magmar}}, {{p|Omanyte}}, {{p|Kabuto}} and {{p|Aerodactyl}}.
+
+===Pokkén Tournament===
+While Cinnabar Island does not appear in [[Pokkén Tournament]], when fighting [[Shadow Mewtwo]], sometimes {{pokken|Nia}} will mention having read the "[[Pokémon Mansion journals|Cinnabar Island docs]]" on Mewtwo. However, the words "Cinnabar Island" aren't in text, and thus are only noticeable if her voice is turned on.
+
+===PokéROM===
+In [[PokéROM]], the [[Trainer Race]] quiz minigame includes a question about this place: ''"What makes Cinnabar Island an island?"'' The accepted answer is: ''"It is surrounded by water."''
+
+==In animation==
+[[File:Cinnabar Island anime.png|thumb|220px|Cinnabar Island in {{aniseries|OS}}]]
+===''Pokémon the Series''===
+In {{aniseries|PTS}}, Cinnabar Island is depicted as a tourist resort after the Cinnabar [[Gym Leader]], [[Blaine]], closed the [[Cinnabar Gym]] down due to the large influx of challengers who cared more about souvenirs than battling. However, Blaine secretly constructed a new Gym inside the Cinnabar Volcano.
+
+===={{aniseries|OS}}====
+In ''[[EP058|Riddle Me This]]'', {{Ash}} and {{ashfr}} arrived on Cinnabar Island for Ash's seventh [[Badge]]. However, they were dismayed to learn that the Gym had been closed down. After saving the Pokémon at the [[Cinnabar Lab|Pokémon Lab]] from being stolen by {{TRT}}, a riddle-loving man told the group about Blaine's new secret Gym and gave them a hint about its location. The group eventually discovered the Gym's secret entrance by accident next to the hot spring at the riddle man's "Big Riddle Inn". Inside the Gym, Ash and his friends found the riddle man, who turned out to be Blaine in disguise. Ash started a Gym battle with Blaine, but had difficulties during the entire match.
+
+In ''[[EP059|Volcanic Panic]]'', Ash forfeited the Gym battle and retreated to heal his Pokémon. Meanwhile, Team Rocket sneaked into the Gym to steal [[Blaine's Magmar]], but their actions at the heart of the volcano threatened to make it erupt and destroy Cinnabar Island. Ash and his friends assisted Blaine in stopping the eruption, and, as a sign of gratitude, Blaine agreed to have a [[rematch]] with Ash. Since the Gym had been destroyed during the incident, the battle took place at the summit of the volcano. To Ash's surprise, his usually [[Obedience|disobedient]] {{AP|Charizard}} offered to battle Blaine's Magmar. After a heated battle, Charizard emerged victorious, earning Ash the {{badge|Volcano}}. Ash and his friends left the island in [[EP060|the next episode]], headed for [[Viridian City]].
+
+====Gallery====
+{| style="margin:auto; text-align:center; background: #c46c65; {{roundy}}; border: 3px solid #B23D33"
+|- style="background:#D89D98"
+! style="{{roundytl|5px}}" | Abandoned {{color2|000|Cinnabar Gym}}
+! New {{color2|000|Cinnabar Gym}}
+! style="{{roundytr|5px}}" | Big Riddle Inn
+|- style="background:#fff"
+| [[File:Former Cinnabar Gym.png|x150px]]
+| [[File:Cinnabar Gym Battlefield.png|x150px]]
+| [[File:Big Riddle Inn.png|x150px]]
+|- style="background:#D89D98"
+! style="{{roundytl|5px}}" | Cinnabar Island overview
+! {{color2|000|Cinnabar Lab|Pokémon Lab}}
+! style="{{roundytr|5px}}" | Cinnabar Volcano
+|- style="background:#fff"
+| [[File:Cinnabar Island Overview anime.png|x150px]]
+| [[File:Pokémon Lab anime.png|x150px]]
+| [[File:Cinnabar Island volcano.png|x150px]]
+|}
+
+===Pokémon Origins===
+Cinnabar Island was visited by {{OBP|Red|Origins}} in ''[[PO03|File 3: Giovanni]]''. During his visit, he first explored the {{ka|Pokémon Mansion}}, where he discovered a [[Pokémon Mansion journals|journal]] that would [[PO04|later]] help him identify [[Cerulean Cave]]'s mysterious Pokémon as {{p|Mewtwo}}. After exploring the Mansion, Red challenged Blaine to a Gym battle and won, earning the Volcano Badge.
+
+==In the manga==
+===Pokémon Adventures===
+[[File:Cinnabar Island Adventures.png|thumb|250px|Cinnabar Island in [[Pokémon Adventures]]]]
+===={{MangaArc|Red, Green & Blue}}====
+Cinnabar Island debuted in ''[[PS026|Holy Moltres]]'', where [[Team Rocket]] was trying to hunt down {{adv|Blaine}} on the island because of him leaving them. When Team Rocket threatened {{adv|Red}}, Blaine showed himself and rescued him. When they tried to escape, Team Rocket sent {{DL|Legendary birds (Adventures)|Moltres}} after them. As Blaine knew that they needed a {{t|Flying}} Pokémon to fight Moltres effectively, he sent Red to [[Cinnabar Lab|his secret laboratory]] within the dormant volcano to revive his [[Old Amber]]. Thanks to the [[Aero]]dactyl revived by Red, Team Rocket and Moltres were forced to retreat.
+
+===={{MangaArc|Yellow}}====
+In ''[[PS064|Putting It on the Line...Against Arcanine]]'', {{adv|Yellow}} arrived at Cinnabar Island from the [[Seafoam Islands]]. At the top of the volcano, she saw Blaine training with {{tc|Camper}} [[Evan]], after which he invited her to his laboratory. They soon received emergency messages from all over [[Kanto]], revealing that the [[Elite Four]] had started their attack on the region. Both Blaine and Yellow then departed to launch a direct assault against the Elite Four's base at [[Cerise Island]].
+
+===={{MangaArc|Gold, Silver & Crystal}}====
+Cinnabar Island made a brief cameo in ''[[PS162|Heckled by Hitmontop]]'', where {{adv|Mewtwo}} was seen flying out of the volcano after Blaine had successfully healed himself of the Mewtwo cells corrupting his body using {{DL|Legendary beasts (Adventures)|Entei}}'s special flames and thus severed the connection between them. 
+
+===={{MangaArc|FireRed & LeafGreen}}====
+Cinnabar Island made another brief appearance in ''[[PS295|Double Down Deoxys]]'', when Camper Evan and {{tc|Super Nerd}} {{adv|Miles}} visited Blaine at his laboratory. Due to the mark left on his arm by Mewtwo's cells, Blaine was able to sense Mewtwo's agitation, speculating that it was due to {{adv|Mew}} heading back to the Kanto mainland from [[Faraway Island]].
+
+===={{MangaArc|Sun, Moon, Ultra Sun & Ultra Moon}}====
+In ''[[PASM28|Arrival at the Scientific Megalopolis]]'', {{adv|Sun}} was revealed to have been born and raised at Cinnabar Island before he moved to [[Alola]].
+
+===Pokémon Zensho===
+Cinnabar Island appeared in [[PZ08]], where {{zensho|Satoshi}} arrived there after briefly visiting [[Seafoam Islands]]. Almost immediately, he headed to the [[Cinnabar Gym]], where he met, talked with, and defeated [[Blaine]], with his {{p|Charmeleon}} evolving into {{zensho|Satoshi's Charizard|Charizard}} in the process. Afterwards, Satoshi and Blaine headed back to Seafoam Islands together so that Satoshi could help Blaine realize his dream of catching {{p|Articuno}}.
+
+==Trivia==
+* Cinnabar Island has many glitches associated with it in the [[Generation I]] games, such as the [[old man glitch]], due to programming oversights on the island's coast. There is also {{DL|List of glitches in Generation I|Overworld sprite misplacement|a trick to see a man on the roof}} of the [[Cinnabar Gym|Gym]]. However, both of these glitches were fixed in some regional versions.
+* Cinnabar Island and [[Vermilion City]] are named after the same color in the English versions of the Pokémon games but not in the Japanese versions, since {{wp|crimson}} ({{j|{{jwp|紅蓮|グレン}}}} ''guren'', "crimson lotus") refers to a shade of red while {{wp|vermilion}} ({{j|{{jwp|朽葉|クチバ}}}} ''kuchiba'', "decayed leaves") refers to a shade of orange. {{wp|Cinnabar}} is an orange-red mineral that produces the orange-red pigment vermilion. This explains why Cinnabar Island is colored red while Vermilion City is colored orange in the [[Generation I]] games when played with the [[Super Game Boy]] enhancements enabled on a compatible system or with the [[Game Boy Color]] enhancements available in the international releases of {{game|Yellow}} (including the [[Virtual Console]] release).
+* It is the southernmost location in both [[Kanto]] and [[Johto]] that the player can {{m|Fly}} to.
+* A Cinnabar-related food item is mentioned in the [[Generation II]] games and their [[Generation IV]] remakes, as well as by a woman in [[Kiloude City]] in [[Pokémon X and Y]]:
+*: Cinnabar Volcano Burger (Japanese: グレンふう かざんハンバーグ ''Guren-Style Volcano Hamburger Steak''){{sup/2|GSC}}{{sup/4|HGSS}}
+*: Cinnabarian hamburger steak (Japanese: グレン{{ruby|風|ふう}}ハンバーグ ''Guren-Style Hamburger Steak''){{sup/6|XY}}
+* It is possible to strand the player on Cinnabar Island in the third and fourth generations:
+** In [[Generation III]], as the player cannot release their last Surf-knowing Pokémon, deposit said Pokémon into the Daycare before using {{m|Teleport}} to return to Cinnabar Island (or alternatively trading away their last Surf-knowing Pokémon to another game), release all Pokémon before tossing away all items and money, and never pick up any of the Fishing Rods.
+** In Generation IV, as the player cannot release their last Surf-knowing Pokémon and [[black out|blacking out]] or using Teleport takes them to the last Pokémon Center they had visited outside of Cinnabar Island, they must trade away their last Surf-knowing Pokémon to another game, release all Pokémon and never pick up any of the Fishing Rods.
+*** In Generations [[Generation I|I]] and [[Generation II|II]], the player can avoid being stranded by trading a Pokémon that knows Surf or Fly from another game. Starting in Generation III, it is not possible to trade if the player only has one Pokémon.
+*** In [[Generation VII]], the Partner Pikachu or Eevee will refuse to be released or traded. [[Secret Technique]]s are also performed by the Partner Pikachu or Eevee, so it’s not possible to softlock oneself.
+{{youtubevid|mKkPM4sSIsA|channel/UC_nRTi_vTE4U8lZySUhSQQg|name=Alucard|Fighting}}
+* Cinnabar Island is based on {{wp|Izu Ōshima}}, an inhabited volcanic island off the coast of Japan. Izu Ōshima is the largest and closest of Tokyo's outlying islands. Similarly to Cinnabar's fate in the Generation II and IV games, the island's population were forced to evacuate in both 1965 and 1986 due to major eruptions. Cinnabar being rendered uninhabitable also parallels {{wp|Montserrat}}, an island in the Caribbean whose human settlements were destroyed by the 1995 eruption of the {{wp|Soufrière Hills}} volcano.
+
+==Names==
+{| class="roundtable" style="background:#c46c65; border:3px solid #B23D33"
+|-
+! style="background:#D89D98" | Language
+! style="background:#D89D98" | Name
+! style="background:#D89D98" | Origin
+|-
+| Japanese
+| グレン島 ''Guren Jima''<br>グレンタウン ''Guren Town''
+| From 紅蓮色 ''guren-iro'' (crimson color of {{wp|Nelumbo nucifera|red lotus}})
+|-
+| English
+| Cinnabar Island
+| From ''cinnabar'' (vivid red color named after the {{wp|cinnabar}} mineral)
+|-
+| German
+| Zinnoberinsel
+| From ''Zinnober'' (cinnabar) and ''Insel'' (island)
+|-
+| European Spanish
+| Isla Canela
+| rowspan="2" | From ''canela'' ({{wp|cinnamon}}), referring to the spice and its reddish brown color
+|-
+| rowspan="2" | Latin American Spanish
+| Isla Canela
+|-
+| Isla Cinnabar<ref group=n>[[Pokémon animated series]] ([[EP187]])</ref>
+| From its English name
+|-
+| French
+| Cramois'île
+| From ''cramoisi'' ({{wp|crimson}}) and ''île'' (island)
+|-
+| Italian
+| Isola Cannella
+| From ''cannella'' (cinnamon)
+|-
+| Korean
+| 홍련섬 ''Hongnyeon Seom''<br>홍련마을 ''Hongnyeon Maeul''
+| From 홍련 (紅蓮) ''hongnyeon'' (red lotus)
+|-
+| Chinese (Traditional)
+| 紅蓮島 ''Hónglián Dǎo'' / ''Hùhnglìhn Dóu''<br>紅蓮鎮 ''Hónglián Zhèn'' / ''Hùhnglìhn Jan''
+| rowspan="2" | From 紅蓮 / 红莲 ''hónglián / hùhnglìhn'' (red lotus)
+|-
+| Chinese (Simplified)
+| 红莲岛 ''Hónglián Dǎo''<br>红莲镇 ''Hónglián Zhèn''
+|-
+| Chinese (Taiwan and Hong Kong)
+| 幽谷鎮 ''Yōugǔ Zhèn'' / ''Yāugūk Jan''<ref group=n>[[Pokémon Zensho]]</ref><br>峽谷島 ''Xiágǔ Dǎo / Haahpgūk Dóu''<ref group=n>[[Pokémon Pocket Monsters]]</ref>
+| From 幽谷 ''yōugǔ / yāugūk'' (secluded valley) and 峽谷 ''xiágǔ / haahpgūk'' (canyon, gorge), possibly a misinterpretation of Japanese グレン ''guren'' as "{{wp|glen}}"
+|-
+| Chinese (mainland China)
+| 葛雷岛 ''Géléi Dǎo'''<ref group=n>[[TV Anime Pocket Monsters Big Bite Book]] (volume 8)</ref>
+| Transcription of its Japanese name
+|-
+| Catalan
+| Illa Canyella<ref group=n>Pokémon animated series (VHS dub)</ref>
+| From ''canyella'' (cinnamon)
+|-
+| Danish
+| Cinnabarøen
+| From its English name
+|-
+| Indonesian
+| Pulau Glen<ref group=n>Pokémon Pocket Monsters</ref>
+| From an alternate romanization of its Japanese name
+|-
+| Norwegian
+| Øya Cinnabar
+| From its English name
+|-
+| Polish
+| Wyspa Cinnabar
+| From its English name
+|-
+| Brazilian Portuguese
+| Ilha Cinnabar<ref group=n>Pokémon animated series, [[Pokémon Adventures]] ([[PS010]]-[[PS047]], end of [[Pokémon Adventures volume 5|volume 5]], [[PS076]]), Red and Blue manual, Yellow manual, [[The Official Pokémon Handbook]]</ref><br>Ilha de Cinnabar<ref group=n>Pokémon Adventures ([[PS055]]-[[PS064]], [[PS083]] onwards)</ref><br>Cidade de Cinnabar<ref group=n>Pokémon Adventures (introduction of volumes [[Pokémon Adventures volume 2|2]]-[[Pokémon Adventures volume 5|5]] and end of volume 2)</ref>
+| From its English name
+|-
+| Russian
+| Остров Киноварь ''Ostrov Kinovar'''
+| From киноварь ''kinovar''' (cinnabar)
+|-
+| Swedish
+| Cinnabar-ön
+| From its English name
+|-
+| Thai
+| เกาะเกรน ''Keāa Kern''
+| Transcription of its Japanese name
+|-
+| Vietnamese
+| Đảo Glen
+| Transcription of its Japanese name
+|}
+{{-}}
+
+===Notes===
+{{reflist|group=n}}
+
+==References==
+{{reflist}}
+
+==Related articles==
+{{Kanto}}
+{{Project Cities and Towns notice}}
+
+[[Category:Kanto locations]]
+[[Category:Red, Blue and Yellow locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:FireRed and LeafGreen locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Let's Go, Pikachu! and Let's Go, Eevee! locations]]
+[[Category:Pokémon Pinball locations]]
+[[Category:Towns]]
+[[Category:Islands]]
+[[Category:Volcanoes]]
+
+[[de:Zinnoberinsel]]
+[[es:Isla Canela]]
+[[fr:Cramois'Île]]
+[[it:Isola Cannella]]
+[[ja:グレンタウン]]
+[[zh:红莲镇]]

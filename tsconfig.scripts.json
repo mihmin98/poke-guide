@@ -1,0 +1,16 @@
+/* Type-checks the Node build scripts (run with tsx), their tests, and the framework-free core they import. */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true,
+    "moduleResolution": "bundler",
+    "types": ["node", "vitest/globals"]
+  },
+  "include": [
+    "scripts/**/*.ts",
+    "vitest.scripts.config.ts",
+    "src/app/core/games/**/*.ts",
+    "src/app/core/domain/**/*.ts",
+    "src/app/core/mechanics/**/*.ts"
+  ]
+}

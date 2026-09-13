@@ -1,0 +1,87 @@
+<!-- poke-guide fixture: {"title":"Mew (Pokémon)/Generation I learnset","resolvedTitle":"Mew (Pokémon)/Generation I learnset","revid":3275444,"timestamp":"2020-10-30T20:11:36Z","fetchedAt":"2026-09-13T06:30:46.043Z"} -->
+{{pokelinkback|151|Mew|1}}
+__NOTOC__
+====By [[Level|leveling up]]====
+{{learnlist/levelh|Mew|Psychic|Psychic|1|1}}
+{{learnlist/level1|1|Pound|Normal|40|100|35}}
+{{learnlist/level1|10|Transform|Normal|—|—|10}}
+{{learnlist/level1|20|Mega Punch|Normal|80|85|20}}
+{{learnlist/level1|30|Metronome|Normal|—|—|10}}
+{{learnlist/level1|40|Psychic|Psychic|90|100|10||'''}}
+{{learnlist/levelf|Mew|Psychic|Psychic|1|1}}
+
+====By [[TM]]/[[HM]]====
+{{learnlist/AllTM|Mew|I|tm}}
+{{learnlist/tmh|Mew|Psychic|Psychic|1|1}}
+{{learnlist/tm1|TM01|Mega Punch|Normal|80|85|20}}
+{{learnlist/tm1|TM02|Razor Wind|Normal|80|75|10}}
+{{learnlist/tm1|TM03|Swords Dance|Normal|—|—|30}}
+{{learnlist/tm1|TM04|Whirlwind|Normal|—|85|20}}
+{{learnlist/tm1|TM05|Mega Kick|Normal|120|75|5}}
+{{learnlist/tm1|TM06|Toxic|Poison|—|85|10}}
+{{learnlist/tm1|TM07|Horn Drill|Normal|—|30|5}}
+{{learnlist/tm1|TM08|Body Slam|Normal|85|100|15}}
+{{learnlist/tm1|TM09|Take Down|Normal|90|85|20}}
+{{learnlist/tm1|TM10|Double-Edge|Normal|100|100|15}}
+{{learnlist/tm1|TM11|BubbleBeam|Water|65|100|20}}
+{{learnlist/tm1|TM12|Water Gun|Water|40|100|25}}
+{{learnlist/tm1|TM13|Ice Beam|Ice|95|100|10}}
+{{learnlist/tm1|TM14|Blizzard|Ice|120|90|5}}
+{{learnlist/tm1|TM15|Hyper Beam|Normal|150|90|5}}
+{{learnlist/tm1|TM16|Pay Day|Normal|40|100|20}}
+{{learnlist/tm1|TM17|Submission|Fighting|80|80|25}}
+{{learnlist/tm1|TM18|Counter|Fighting|—|100|20}}
+{{learnlist/tm1|TM19|Seismic Toss|Fighting|—|100|20}}
+{{learnlist/tm1|TM20|Rage|Normal|20|100|20}}
+{{learnlist/tm1|TM21|Mega Drain|Grass|40|100|10}}
+{{learnlist/tm1|TM22|SolarBeam|Grass|120|100|10}}
+{{learnlist/tm1|TM23|Dragon Rage|Dragon|—|100|10}}
+{{learnlist/tm1|TM24|Thunderbolt|Electric|95|100|15}}
+{{learnlist/tm1|TM25|Thunder|Electric|120|70|10}}
+{{learnlist/tm1|TM26|Earthquake|Ground|100|100|10}}
+{{learnlist/tm1|TM27|Fissure|Ground|—|30|5}}
+{{learnlist/tm1|TM28|Dig|Ground|100|100|10}}
+{{learnlist/tm1|TM29|Psychic|Psychic|90|100|10||'''}}
+{{learnlist/tm1|TM30|Teleport|Psychic|—|—|20}}
+{{learnlist/tm1|TM31|Mimic|Normal|—|100|10}}
+{{learnlist/tm1|TM32|Double Team|Normal|—|—|15}}
+{{learnlist/tm1|TM33|Reflect|Psychic|—|—|20}}
+{{learnlist/tm1|TM34|Bide|Normal|—|—|10}}
+{{learnlist/tm1|TM35|Metronome|Normal|—|—|10}}
+{{learnlist/tm1|TM36|Selfdestruct|Normal|130|100|5}}
+{{learnlist/tm1|TM37|Egg Bomb|Normal|100|75|10}}
+{{learnlist/tm1|TM38|Fire Blast|Fire|120|85|5}}
+{{learnlist/tm1|TM39|Swift|Normal|60|—|20}}
+{{learnlist/tm1|TM40|Skull Bash|Normal|100|100|15}}
+{{learnlist/tm1|TM41|Softboiled|Normal|—|—|10}}
+{{learnlist/tm1|TM42|Dream Eater|Psychic|100|100|15||'''}}
+{{learnlist/tm1|TM43|Sky Attack|Flying|140|90|5}}
+{{learnlist/tm1|TM44|Rest|Psychic|—|—|10}}
+{{learnlist/tm1|TM45|Thunder Wave|Electric|—|100|20}}
+{{learnlist/tm1|TM46|Psywave|Psychic|—|80|15}}
+{{learnlist/tm1|TM47|Explosion|Normal|170|100|5}}
+{{learnlist/tm1|TM48|Rock Slide|Rock|75|90|10}}
+{{learnlist/tm1|TM49|Tri Attack|Normal|80|100|10}}
+{{learnlist/tm1|TM50|Substitute|Normal|—|—|10}}
+{{learnlist/tm1|HM01|Cut|Normal|50|95|30}}
+{{learnlist/tm1|HM02|Fly|Flying|70|95|15}}
+{{learnlist/tm1|HM03|Surf|Water|95|100|15}}
+{{learnlist/tm1|HM04|Strength|Normal|80|100|15}}
+{{learnlist/tm1|HM05|Flash|Normal|—|70|20}}
+{{learnlist/tmf|Mew|Psychic|Psychic|1|1}}
+|}
+
+====By [[transfer]] from another generation====
+{{learnlist/prevgenh/1|Mew|Psychic|Psychic|1}}
+{{learnlist/prevgen1|Mew|1|Defense Curl|Normal|—|—|40|II=yes<!--TM-->}}
+{{learnlist/prevgen1|Mew|1|Fire Punch|Fire|75|100|15|II=yes<!--TM-->}}
+{{learnlist/prevgen1|Mew|1|Flamethrower|Fire|95|100|15|II=yes<!--tutor-->}}
+{{learnlist/prevgen1|Mew|1|Headbutt|Normal|70|100|15|II=yes<!--TM-->}}
+{{learnlist/prevgen1|Mew|1|Ice Punch|Ice|75|100|15|II=yes<!--TM-->}}
+{{learnlist/prevgen1|Mew|1|Roar|Normal|—|100|20|II=yes<!--TM-->}}
+{{learnlist/prevgen1|Mew|1|ThunderPunch|Electric|75|100|15|II=yes<!--TM-->}}
+{{learnlist/prevgen1|Mew|1|Waterfall|Water|80|100|15|II=yes<!--TM-->}}
+{{learnlist/prevgenf/1|Mew|Psychic|Psychic|1}}
+
+[[it:Mew/Mosse apprese in prima generazione]]
+[[zh:梦幻/第一世代招式表]]

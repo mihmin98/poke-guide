@@ -1,0 +1,605 @@
+<!-- poke-guide fixture: {"title":"Celadon Game Corner","resolvedTitle":"Celadon Game Corner","revid":4617811,"timestamp":"2026-08-24T11:16:11Z","fetchedAt":"2026-09-12T21:57:28.705Z"} -->
+{{Infobox location
+|image=Celadon Game Corner LGPE.png
+|image_size=300
+|type=building
+|location_name=Celadon Game Corner
+|japanese_name=タマムシゲームコーナー
+|translated_name=Tamamushi Game Corner
+|other_info=Rocket Game Corner
+|location=[[Celadon City]]
+|region=Kanto
+|generation={{gen|I}}, {{gen|II}}, {{gen|III}}, {{gen|IV}}, {{gen|VII}}
+|map=Kanto Celadon City Map.png
+}}
+The '''Celadon Game Corner''' (Japanese: '''タマムシゲームコーナー''' ''Tamamushi Game Corner'') is a [[Game Corner]] located in the southeastern part of [[Celadon City]] in the [[Kanto]] region. In games in which it is run by [[Team Rocket]], it is known as the '''Rocket Game Corner''' (Japanese: '''ロケットゲームコーナー''' ''Rocket Game Corner''), and is the location of the [[Team Rocket Hideout]].
+
+In the [[Pokémon Adventures]] chapter ''[[PS016|Tauros the Tyrant]]'', it was also referred to as '''Celadon City Arcade'''.
+
+While it seems to be a popular spot for travelers and tourists, the citizens take pride in the city's beauty and think the casino is bad for its image.
+
+==In the core series games==
+In the [[Generation I]] games, {{game|FireRed and LeafGreen|s}}, and [[Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!]], the Game Corner is known as the Rocket Game Corner and is run by [[Team Rocket]]. It has the slogan "The playground for grown-ups!" The [[Team Rocket Hideout]] is located underneath the Rocket Game Corner, with a staircase leading to it revealed by pressing a hidden switch underneath a poster.
+
+In {{game5|Gold|Silver|Crystal|HeartGold|SoulSilver}}, the Game Corner is known as the Celadon Game Corner and is no longer run by Team Rocket. Team Rocket's hideout is now inaccessible, but several characters reference its existence three years prior. Its slogan mentions that it is a "fun place for everyone".
+
+In the Generation I to IV games, the Game Corner consists of two adjacent buildings: the Game Corner proper (the larger building on the west) and the Prize Corner (the smaller building on the east). The main building contains the casino itself, where the player can earn {{OBP|Coin|Game Corner}}s; the Prize Corner is where the player can exchange Coins for prizes, including Pokémon, [[TM]]s, and other items. In Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!, the Game Corner is one building with two entrances; the space on the west side contains the {{wp|amusement arcade|arcade}} while the space on the east side is just a sitting area.
+
+In FireRed and LeafGreen, there is a Pokémon Printer in the corner of the main building. The Pokémon Printer takes a [[Photography|photo]] of the player's current [[party]] to put on the back of their {{ga|Trainer Card}}.
+
+In the Korean and Western releases of Pokémon HeartGold and SoulSilver, Game Corner is significantly different to the Japanese version. The main building has a very different layout, now housing the [[Voltorb Flip]] minigame, which is run by [[Mr. Game]]. This change was made due to changes in {{wp|Pan European Game Information|PEGI}}'s classification standards,<ref>[http://www.gamesradar.com/european-pokemon-platinums-missing-game-corner-explained/ European Pokemon Platinum's missing Game Corner explained | GamesRadar]</ref> which had [[Slot machine#European Platinum|previously impacted the European release]]s of {{game|Platinum}}. As a lasting result of these regulations, the Game Corner in Let's Go, Pikachu! and Let's Go, Eevee! appears to be a more traditional arcade in all versions, and the machines are not playable.
+
+The [[Celadon Gym|Celadon]] [[Gym guide]] can be found playing on one of the machines here, instead of in the Gym.
+
+===Service desk===
+The service desk appears in the Game Corner in all games except the international versions of Pokémon HeartGold and SoulSilver. In Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!, the service desk has run out of {{OBP|Coin|Game Corner}}s; in all other games in which it appears, once they have a [[Coin Case]], the player can purchase Coins here at the following rates:
+
+{{shop|Coins}}
+{{shoprow|{{shopitem|Coin (Game Corner)|1000|Dollars||Coin Case|display=50 Coins}}|{{shopitem|Coin (Game Corner)|10000|Dollars|5=Coin Case|display=500 Coins|note=<sup>Gen. II-IV</sup>}}}}
+{{shopfooter}}
+
+===Games===
+A variety of games appear in the Game Corner, although the specific games that appear vary between generations. In Generations I to IV, the player can play these games as minigames. In Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!, the player is unable to play on the machines in the Game Corner.
+
+====Slot machines====
+{{main|Slot machine}}
+=====Generation I=====
+In the [[Generation I]] games, there are thirty slot machines in the Game Corner, with eight of them having people already seated at them, one that is labeled "out of order," one labeled "reserved," and one where someone left their keys.
+
+======Payouts======
+{| class="roundy" style="background: #{{gold color}}; border: 2px solid #{{gold color}}"
+! style="background: #{{gold color light}}; {{roundytl|5px}}" colspan=4 | Series of icons
+! style="{{roundytr|5px}}; background: #{{gold color light}}" rowspan=2 | Payout
+|-
+! style="background: #{{gold color light}}" | {{GameIcon|Gr}}
+! style="background: #{{gold color light}}" | {{GameIcon|R}}
+! style="background: #{{gold color light}}" | {{GameIcon|B}}
+! style="background: #{{gold color light}}" | {{GameIcon|Y}}
+|- style="background:#FFF"
+| [[File:Celadon Game Corner Seven Green.png]][[File:Celadon Game Corner Seven Green.png]][[File:Celadon Game Corner Seven Green.png]] || [[File:Celadon Game Corner Seven Red.png]][[File:Celadon Game Corner Seven Red.png]][[File:Celadon Game Corner Seven Red.png]] || [[File:Celadon Game Corner Seven Blue.png]][[File:Celadon Game Corner Seven Blue.png]][[File:Celadon Game Corner Seven Blue.png]]|| [[File:Celadon Game Corner 7 Y.png]][[File:Celadon Game Corner 7 Y.png]][[File:Celadon Game Corner 7 Y.png]] || 300
+|- style="background:#FFF"
+| [[File:Celadon Game Corner Bar Green.png]][[File:Celadon Game Corner Bar Green.png]][[File:Celadon Game Corner Bar Green.png]]|| [[File:Celadon Game Corner Bar Red.png]][[File:Celadon Game Corner Bar Red.png]][[File:Celadon Game Corner Bar Red.png]] || [[File:Celadon Game Corner Bar Blue.png]][[File:Celadon Game Corner Bar Blue.png]][[File:Celadon Game Corner Bar Blue.png]]|| [[File:Celadon Game Corner Bar Y.png]][[File:Celadon Game Corner Bar Y.png]][[File:Celadon Game Corner Bar Y.png]] || 100
+|- style="background:#FFF"
+| [[File:Celadon Game Corner Clefairy Green.png]][[File:Celadon Game Corner Clefairy Green.png]][[File:Celadon Game Corner Clefairy Green.png]] || [[File:Celadon Game Corner Rat Red.png]][[File:Celadon Game Corner Rat Red.png]][[File:Celadon Game Corner Rat Red.png]] || [[File:Celadon Game Corner Jigglypuff Blue.png]][[File:Celadon Game Corner Jigglypuff Blue.png]][[File:Celadon Game Corner Jigglypuff Blue.png]] || [[File:Celadon Game Corner Meowth Y.png|link=Meowth (Pokémon)]][[File:Celadon Game Corner Meowth Y.png|link=Meowth (Pokémon)]][[File:Celadon Game Corner Meowth Y.png|link=Meowth (Pokémon)]] || 15
+|- style="background:#FFF"
+| [[File:Celadon Game Corner Ghost Green.png]][[File:Celadon Game Corner Ghost Green.png]][[File:Celadon Game Corner Ghost Green.png]] || [[File:Celadon Game Corner Bird Red.png]][[File:Celadon Game Corner Bird Red.png]][[File:Celadon Game Corner Bird Red.png]] || [[File:Celadon Game Corner Diglett Blue.png]][[File:Celadon Game Corner Diglett Blue.png]][[File:Celadon Game Corner Diglett Blue.png]] || [[File:Celadon Game Corner Arbok Y.png|link=Arbok (Pokémon)]][[File:Celadon Game Corner Arbok Y.png|link=Arbok (Pokémon)]][[File:Celadon Game Corner Arbok Y.png|link=Arbok (Pokémon)]] || 15
+|- style="background:#FFF"
+| [[File:Celadon Game Corner Voltorb Green.png]][[File:Celadon Game Corner Voltorb Green.png]][[File:Celadon Game Corner Voltorb Green.png]] || [[File:Celadon Game Corner Fish Red.png]][[File:Celadon Game Corner Fish Red.png]][[File:Celadon Game Corner Fish Red.png]] || [[File:Celadon Game Corner Poliwag Blue.png]][[File:Celadon Game Corner Poliwag Blue.png]][[File:Celadon Game Corner Poliwag Blue.png]] || [[File:Celadon Game Corner Koffing Y.png|link=Koffing (Pokémon)]][[File:Celadon Game Corner Koffing Y.png|link=Koffing (Pokémon)]][[File:Celadon Game Corner Koffing Y.png|link=Koffing (Pokémon)]] || 15
+|- style="background:#FFF"
+| [[File:Celadon Game Corner Cherries Green.png]][[File:Celadon Game Corner Cherries Green.png]][[File:Celadon Game Corner Cherries Green.png]] ||[[File:Celadon Game Corner Cherry Red.png]][[File:Celadon Game Corner Cherry Red.png]][[File:Celadon Game Corner Cherry Red.png]] || [[File:Celadon Game Corner Cherries Blue.png]][[File:Celadon Game Corner Cherries Blue.png]][[File:Celadon Game Corner Cherries Blue.png]] || [[File:Celadon Game Corner Cherry Y.png]][[File:Celadon Game Corner Cherry Y.png]][[File:Celadon Game Corner Cherry Y.png]] || 8
+|}{{-}}
+
+=====Generation II=====
+In the [[Generation II]] games, there are thirty slot machines in the Game Corner, with eight of them having people already seated at them. One of these people will give the player 18 Coins (the game incorrectly states the player receives only a single Coin).
+
+One to three Coins can be put in the slot machine each play. One Coin will only count the center row across, two Coins will count all three rows across, and three Coins will count all three rows across as well as both diagonals. The reels stop spinning when the A button is pressed.
+
+Having two 7s line up on the first two reels of two symbols may cause one of three special events when stopping the third reel. The third reel may move by itself after being stopped, which will either cause a third 7 to line up and pay out the jackpot, or end up one space away from lining up to tease the player. Very rarely, a [[Chansey (Pokémon)|Chansey]] may appear; it will use {{m|Egg Bomb}} on the third reel repeatedly until the last 7 falls in place for a jackpot. Alternatively, multiple [[Golem (Pokémon)|Golems]] may fall from the top of the screen, shifting the position of the third reel by one each.
+
+When using a slot machine, it has a 1 in 6 chance to enter a mode with enhanced odds. The second machine up in the third row from the left will ''always'' have enhanced odds, but the man using it will only vacate his seat in the [[Morning]].
+[[File:CeladonLuckyMachineGSC.png|frame|The slot machine with enhanced odds, currently occupied.]]
+
+The posters are still there, but there is nothing behind them.
+
+======Payouts======
+{| class="roundy" style="background: #{{gold color}}; border: 2px solid #{{gold color}}"
+! style="background: #{{gold color light}}; {{roundytl|5px}}" | Series of icons
+! style="{{roundytr|5px}}; background: #{{gold color light}}" | Payout
+|- style="background:#FFF"
+| [[File:Celadon Game Corner 7 GSC.png]][[File:Celadon Game Corner 7 GSC.png]][[File:Celadon Game Corner 7 GSC.png]] || 300
+|- style="background:#FFF"
+| [[File:Celadon Game Corner Poké Ball GSC.png|link=Poké Ball (item)]][[File:Celadon Game Corner Poké Ball GSC.png|link=Poké Ball (item)]][[File:Celadon Game Corner Poké Ball GSC.png|link=Poké Ball (item)]] || 50
+|- style="background:#FFFFFF"
+| [[File:Celadon Game Corner Staryu GSC.png|link=Staryu (Pokémon)]][[File:Celadon Game Corner Staryu GSC.png|link=Staryu (Pokémon)]][[File:Celadon Game Corner Staryu GSC.png|link=Staryu (Pokémon)]] || 15
+|- style="background:#FFF"
+| [[File:Celadon Game Corner Squirtle GSC.png|link=Squirtle (Pokémon)]][[File:Celadon Game Corner Squirtle GSC.png|link=Squirtle (Pokémon)]][[File:Celadon Game Corner Squirtle GSC.png|link=Squirtle (Pokémon)]] || 10
+|- style="background:#FFF"
+| [[File:Celadon Game Corner Pikachu GSC.png|link=Pikachu (Pokémon)]][[File:Celadon Game Corner Pikachu GSC.png|link=Pikachu (Pokémon)]][[File:Celadon Game Corner Pikachu GSC.png|link=Pikachu (Pokémon)]] || 8
+|- style="background:#FFF"
+| [[File:Celadon Game Corner Cherry GSC.png]][[File:Celadon Game Corner Cherry GSC.png]][[File:Celadon Game Corner Cherry GSC.png]] || 6
+|}{{-}}
+
+=====Generation III=====
+[[File:Celadon Game Corner Inside FRLG.png|240px|thumb|right|Celadon Game Corner in Generation III]]
+In {{game|FireRed and LeafGreen|s}}, the only games available are [[slot machine]]s, with [[non-player character]]s claiming that they are rigged. There are thirty slot machines, with eight of them already occupied, one labeled "out of order", one labeled "reserved," and one where someone left their keys.
+
+One to three Coins can be put in the slot machine each play. One Coin will only count the center row across, two Coins will count all three rows across, and three Coins will count all three rows across as well as both diagonals. The reels stop spinning when the A button is pressed.
+
+======Payouts======
+{| class="roundy" style="background: #{{gold color}}; border: 2px solid #{{gold color}}"
+! style="background: #{{gold color light}}; {{roundytl|5px}}" colspan=2 | Series of icons
+! style="{{roundytr|5px}}; background: #{{gold color light}}" rowspan=2 | Payout
+|-
+! style="background: #{{gold color light}}" | {{GameIcon|FR}}
+! style="background: #{{gold color light}}" | {{GameIcon|LG}}
+|- style="background:#FFF"
+|colspan=2 style="text-align:center"| [[File:Celadon Game Corner 7 FRLG.png]][[File:Celadon Game Corner 7 FRLG.png]][[File:Celadon Game Corner 7 FRLG.png]] || 300
+|- style="background:#FFF"
+|colspan=2 style="text-align:center"| [[File:Celadon Game Corner R FRLG.png]][[File:Celadon Game Corner R FRLG.png]][[File:Celadon Game Corner R FRLG.png]] || 100
+|- style="background:#FFF"
+|colspan=2 style="text-align:center"| [[File:Celadon Game Corner Pikachu FRLG.png|link=Pikachu (Pokémon)]][[File:Celadon Game Corner Pikachu FRLG.png|link=Pikachu (Pokémon)]][[File:Celadon Game Corner Pikachu FRLG.png|link=Pikachu (Pokémon)]] || 15
+|- style="background:#FFF"
+| [[File:Celadon Game Corner Psyduck FRLG.png|link=Psyduck (Pokémon)]][[File:Celadon Game Corner Psyduck FRLG.png|link=Psyduck (Pokémon)]][[File:Celadon Game Corner Psyduck FRLG.png|link=Psyduck (Pokémon)]]
+| [[File:Celadon Game Corner Slowpoke FRLG.png|link=Slowpoke (Pokémon)]][[File:Celadon Game Corner Slowpoke FRLG.png|link=Slowpoke (Pokémon)]][[File:Celadon Game Corner Slowpoke FRLG.png|link=Slowpoke (Pokémon)]] || 15
+|- style="background:#FFF"
+| [[File:Celadon Game Corner Magnemite FRLG.png|link=Magnemite (Pokémon)]][[File:Celadon Game Corner Magnemite FRLG.png|link=Magnemite (Pokémon)]][[File:Celadon Game Corner Magnemite FRLG.png|link=Magnemite (Pokémon)]]
+| [[File:Celadon Game Corner Voltorb FRLG.png|link=Voltorb (Pokémon)]][[File:Celadon Game Corner Voltorb FRLG.png|link=Voltorb (Pokémon)]][[File:Celadon Game Corner Voltorb FRLG.png|link=Voltorb (Pokémon)]] || 8
+|- style="background:#FFF"
+| [[File:Celadon Game Corner Shellder FRLG.png|link=Shellder (Pokémon)]][[File:Celadon Game Corner Shellder FRLG.png|link=Shellder (Pokémon)]][[File:Celadon Game Corner Shellder FRLG.png|link=Shellder (Pokémon)]]
+| [[File:Celadon Game Corner Staryu FRLG.png|link=Staryu (Pokémon)]][[File:Celadon Game Corner Staryu FRLG.png|link=Staryu (Pokémon)]][[File:Celadon Game Corner Staryu FRLG.png|link=Staryu (Pokémon)]] || 8
+|- style="background:#FFF"
+|colspan=2 style="text-align:center"| [[File:Celadon Game Corner Cherry FRLG.png]][[File:Celadon Game Corner Cherry FRLG.png]] || 6
+|- style="background:#FFF"
+|colspan=2 style="text-align:center"| [[File:Celadon Game Corner Cherry FRLG.png]] || 2
+|}{{-}}
+
+=====Generation IV=====
+{{main|Slot machine#HeartGold and SoulSilver|Slot machine → HeartGold and SoulSilver}}
+[[File:Slot Machine HGSS.png|thumb|150px|A slot machine in Japanese HeartGold and SoulSilver]]
+Only the Japanese version of {{game|HeartGold and SoulSilver|s}} has slot machines.
+
+These slot machines play differently than in the Generation II games. Pressing A stops the reels from left to right; however, the Control Pad controls both Coin insertion and reel starting. Additionally, slot machine payouts can actually vary per machine; they are more similar to the slot machines in {{game2|Diamond|Pearl|Platinum}} than the slot machines in {{game2|Gold|Silver|Crystal}}.
+
+As players play on the slot machine, a {{p|Smeargle}} depicted on the top screen and seen painting can change the background of the top screen's monitor, and any change in background changes slot effects. A green background signals normal play, a red background signals that it's easier to obtain a 7 or {{i|Poké Ball}}, and a blue background signals that it's easier to obtain a {{p|Pikachu}} or {{p|Marill}}.
+
+The jackpot for three 7's is <math>100 + 2x</math>, while the jackpot for three Poké Balls is <math>100 + x</math>, where x starts at 0, may increase whenever a non-jackpot symbol is lined up, and resets to 0 after every bonus game.
+
+A bonus game is started by winning a jackpot. Lining up three 7's starts a 15-round bonus game, while three Poké Balls will trigger an 8-round bonus. In this bonus game, players attempt to perfectly line up a randomly chosen one of [[Johto]]'s [[first partner Pokémon]], and the machine may provide some assistance. Bonus game payouts vary depending on success, as well as the slot machine's speed during bonus games. At the end of a bonus game, the background automatically becomes red. This lets players "chain" together jackpots and bonus games; however, the bonus game difficulty increases (up to a maximum) with each chained jackpot.
+
+======Payouts======
+{| class="roundy" style="background: #{{gold color}}; border: 2px solid #{{gold color}}"
+! style="background: #{{gold color light}}; {{roundytl|5px}}" | Series of icons
+! style="{{roundytr|5px}}; background: #{{gold color light}}" | Payout
+|- style="background:#FFF"
+| [[File:Goldenrod Corner 7.png]][[File:Goldenrod Corner 7.png]][[File:Goldenrod Corner 7.png]] || 100
+|- style="background:#FFF"
+| [[File:Goldenrod Corner Poke Ball.png]][[File:Goldenrod Corner Poke Ball.png]][[File:Goldenrod Corner Poke Ball.png]] || 100
+|- style="background:#FFF"
+| [[File:Goldenrod Corner Pikachu.png]][[File:Goldenrod Corner Pikachu.png]][[File:Goldenrod Corner Pikachu.png]] || 15
+|- style="background:#FFF"
+| [[File:Goldenrod Corner Marill.png]][[File:Goldenrod Corner Marill.png]][[File:Goldenrod Corner Marill.png]] || 10
+|- style="background:#FFF"
+| [[File:Goldenrod Corner Apricorn.png]] || 2
+|- style="background:#FFF"
+| [[File:Goldenrod Corner Replay.png]][[File:Goldenrod Corner Replay.png]][[File:Goldenrod Corner Replay.png]] || Replay
+|}
+
+===== Generation VII =====
+In {{LGPE}}, games are no longer playable at the Game Corner. This change is likely due to concerns about encouraging gambling habits.{{-}}
+
+====Card flip====
+{{main|Card flip}}
+The [[card flip]] minigame is exclusive to the [[Generation II]] games.
+
+When playing card flip, players place bets on cards that may be flipped over. The deck used contains 24 cards: each one has both a number (between one and six) and a picture of a Pokémon (either {{p|Pikachu}}, {{p|Jigglypuff}}, {{p|Oddish}}, or {{p|Poliwag}}). Once twelve cards have been drawn, the deck is reshuffled. Bets can be placed on a single card, on a single column, on a single row, on a pair of columns, or on a pair of rows.
+
+====Voltorb Flip====
+{{main|Voltorb Flip}}
+The Voltorb Flip minigame is exclusive to the Korean and Western releases of {{game|HeartGold and SoulSilver|s}}, and is the only game available in the Game Corner in these versions.
+
+The game features a five-by-five grid of tiles, underneath which are hidden numbers (which multiply the player's score if located) and {{p|Voltorb}} (which cause the player to lose all points). The player has a change to figure out where the Voltorb are located by using the clues provided: the number of Coins and Voltorb in each line and column are noted at the sides of the playing field. If the player can find all of the 2× and 3× multipliers, they will be able to advance to harder levels. Winning at this game, as before, will earn the player {{OBP|Coin|Game Corner}}s, which can be traded for prizes.
+
+===Items===
+[[File:Game corner coins gen1.png|thumb|Locations of hidden Coins in Generation I<br>(click for higher resolution)]]
+[[File:Rocket Game Corner hidden coins FRLG.png|thumb|FRLG locations of hidden Coins<br>(click for further information and higher resolution)]]
+{{itlisth|building}}
+{{Itemlist|Coin Case|One square west and one square south of the {{tc|Gentleman}} ''(hidden)''|R=yes|B=yes|Y=yes|display=10 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|From the {{tc|Gentleman}}|R=yes|B=yes|Y=yes|FR=yes|LG=yes|display=20 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|From the {{tc|Scientist}}|R=yes|B=yes|Y=yes|FR=yes|LG=yes|display=20 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|Three squares north and one square east of the {{tc|Scientist}} ''(hidden)''|R=yes|B=yes|Y=yes|display=100 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|Three squares east and four squares north of the woman in the center aisle ''(hidden)''|R=yes|B=yes|Y=yes|display=20 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|One square south and one square east of the woman in the center aisle ''(hidden)''|R=yes|B=yes|Y=yes|display=20 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|One square south and one square east of the [[Gym guide]] ''(hidden)''|R=yes|B=yes|Y=yes|display=10 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|Two squares south and two squares east from the [[Gym guide]] ''(hidden)''|R=yes|B=yes|Y=yes|display=10 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|Three squares south and one square west of the woman in the west aisle ''(hidden)''|R=yes|B=yes|Y=yes|display=10 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|One square south and one square east of the woman in the west aisle ''(hidden)''|R=yes|B=yes|Y=yes|display=10 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|Two squares west of the {{tc|Fisherman}} ''(hidden)''|R=yes|B=yes|Y=yes|display=20 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|One square south and one square west of the {{tc|Fisherman}} ''(hidden)''|R=yes|B=yes|Y=yes|display=10 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|From the {{tc|Fisherman}}|R=yes|B=yes|Y=yes|FR=yes|LG=yes|display=10 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|Between the counter and the west-most cluster of slot machines ''(hidden)''|R=yes|B=yes|Y=yes|display=10 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|Three squares south and two squares east of the old man ''(hidden)''|FR=yes|LG=yes|display=10 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|One square west of the old man ''(hidden)''|FR=yes|LG=yes|display=10 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|Two squares to the west of the Pokémon Printer ''(hidden)''|FR=yes|LG=yes|display=100 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|Two squares north and two squares east of the {{tc|Scientist}} ''(hidden)''|FR=yes|LG=yes|display=10 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|Two squares north and four squares east of the {{tc|Scientist}} ''(hidden)''|FR=yes|LG=yes|display=40 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|Four squares north of the {{tc|Scientist}} ''(hidden)''|FR=yes|LG=yes|display=10 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|Three squares north and three squares west of the {{tc|Scientist}} ''(hidden)''|FR=yes|LG=yes|display=10 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|One square east and three squares north of the woman in the center aisle ''(hidden)''|FR=yes|LG=yes|display=20 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|Two squares south and one square west of the [[Gym guide]] ''(hidden)''|FR=yes|LG=yes|display=10 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|One square east and three squares south of the woman in the west aisle ''(hidden)''|FR=yes|LG=yes|display=20 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|One square west and one square south of the {{tc|Fisherman}}  ''(hidden)''|FR=yes|LG=yes|display=10 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|One square east and two squares north of the man in the west aisle ''(hidden)''|FR=yes|LG=yes|display=10 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|From the man playing a slot machine in the second cluster of slot machines from the west|G=yes|S=yes|C=yes|HG=yes|SS=yes|display=18 {{OBP|Coin|Game Corner}}s}}
+{{Itemlist|Coin Case|From [[Mr. Game]], if not obtained at the [[Goldenrod Game Corner]]|HG=yes|SS=yes}}
+{{itlistfoot|building}}
+
+In [[Generation I]], the hidden Coins on the ground cannot be detected with the [[Dowsing Machine|Itemfinder]] and will not respond at all if the player attempts to pick them up without having a [[Coin Case]] (as opposed to telling the player that they need a Coin Case to receive the item).
+
+====Recurring items====
+In [[Generation VII]], there are fixed spots on the floor where hidden items from the following list will appear. The item spots refill with new random items every day. Certain items can spawn in multiple spots. The items are not fixed until they are picked up, so the item may be different after [[soft resetting|resetting]].<ref>[https://docs.google.com/spreadsheets/d/e/2PACX-1vRrQhgQKyozIKZsDuoOzdt5anD_oRU3FNDmVZxbukG1VdgiKHdafvJuJsaydy0feiZZa0_i4WTkWSTn/pubhtml LGPE Floor Items data sheet]</ref><ref>https://x.com/Sibuna_Switch/status/1840440457811365935</ref>
+
+{{itlisth|building}}
+{{Itemlist/3|Gold Bottle Cap|Bottle Cap|PP Max|In all six spots (1% chance each; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|PP Up|In all six spots (2% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Health Candy XL|Southwest corner of the building (5% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Health Candy L|Southwest corner of the building (10% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Health Candy|Southwest corner of the building (30% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Mighty Candy XL|In the fire extinguisher in the northwest of the building (5% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Mighty Candy L|In the fire extinguisher in the northwest of the building (10% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Mighty Candy|In the fire extinguisher in the northwest of the building (30% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Tough Candy XL|In front of the northernmost game on the east side in easternmost row of arcade games (5% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Tough Candy L|In front of the northernmost game on the east side in easternmost row of arcade games (10% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Tough Candy|In front of the northernmost game on the east side in easternmost row of arcade games (30% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Smart Candy XL|In front of the northernmost game on the west side in easternmost row of arcade games (5% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Smart Candy L|In front of the northernmost game on the west side in easternmost row of arcade games (10% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Smart Candy|In front of the northernmost game on the west side in easternmost row of arcade games (30% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Courage Candy XL|In between the counters separating the west and east sides (5% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Courage Candy L|In between the counters separating the west and east sides (10% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Courage Candy|In between the counters separating the west and east sides (30% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Quick Candy XL|South of the northeast couch on the east side(5% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Quick Candy L|South of the northeast couch on the east side (10% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Quick Candy|South of the northeast couch on the east side (30% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Razz Berry|
+*Southwest corner of the building (50% chance; ''hidden'')
+*in the fire extinguisher in the northwest of the building (50% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Nanab Berry|
+*In front of the northernmost game on the east side in easternmost row of arcade games (50% chance; ''hidden'')
+*In front of the northernmost game on the west side in easternmost row of arcade games (50% chance; ''hidden'')|LP=yes|LE=yes}}
+{{Itemlist|Pinap Berry|
+*In between the counters separating the west and east sides (50% chance; ''hidden'')
+*South of the northeast couch on the east side (50% chance; ''hidden'')|LP=yes|LE=yes}}
+{{itlistfoot|building}}
+
+===Trainers===
+[[File:Game Corner Poster RBY.png|thumb|160px|The Rocket guarding the switch]]
+In the Generation I, III, and VII games, a {{tc|Team Rocket Grunt}} is guarding a poster. After the Grunt is defeated, the {{player}} will be able to push the button behind the poster that opens the entrance to the [[Team Rocket Hideout]]. In the Generation VII games, he will not battle the player until {{p|Cubone}} is kidnapped by [[Jessie]] and [[James]] in [[Lavender Town]], which only happens after the player encounters Cubone on 3F of [[Pokémon Tower]].
+
+====Generation I====
+{{Trainerheader|building}}
+{{Trainerentry|Spr RG Rocket.png|game=1|Rocket||600|2|020|Raticate||20||041|Zubat||20||}}
+{{Trainerfooter|building|1}}
+
+====Generation III====
+[[File:Game Corner switch FRLG.png|thumb|240px|The Game Corner's secret switch]]
+{{trainerheader|building}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||640|2|020|Raticate|♂|20||041|Zubat|♂|20||}}
+{{trainerfooter|building}}
+
+====Generation VII====
+{{trainerheader|building}}
+{{trainerdiv|building|After Cubone is kidnapped in Lavender Town}}
+{{trainerentry|VSTeam Rocket Grunt M PE.png{{!}}90px|game=PE|Team Rocket Grunt||812|1|020|Raticate|♀|29|None}}
+{{trainerdiv|building|After becoming Champion}}
+{{trainerentry/master|VSScientist Master PE.png{{!}}90px|Scientist|Jordan|137|Porygon||70|Steel|Iron Tail|Normal|Conversion|Ghost|Shadow Ball|Electric|Thunderbolt|36=ジュンイチ|37=Jun'ichi}}
+{{trainerfooter|building|PE}}
+
+===Prize corner===
+The Prize Corner, known as the Prize Exchange in [[Generation I]], is a small building located next to the main building in the Generation I to IV games. Here, the player can exchange {{OBP|Coin|Game Corner}}s for prizes.
+
+In the Generation I, II, and IV games, only the booths are visible; in {{game|FireRed and LeafGreen|s}}, the player can see the women behind the counter.
+
+In {{game|HeartGold and SoulSilver|s}}, there is a man here who can tell the player what [[type]] {{m|Hidden Power}} would be if the player's Pokémon knew it.
+
+The prize corner being in a separate building is due to how {{wp|pachinko}} parlours operate in Japan. In Japan, it is illegal to directly pay out cash for pachinko balls or tokens, but this regulation is often circumvented as (legally independent) exchange shops are set up nearby, where the players can redeem the prizes for cash.<ref>[http://spectrum.ieee.org/tech-talk/consumer-electronics/gaming/the-secret-life-of-pachinko The Secret Life of Pachinko: How Japan's gaming parlors really work | IEEE Spectrum]</ref>
+
+In {{game2|Red|Blue|Yellow}}, a non-player character in the house east of the Celadon City diner states that they just shipped 2000 Pokémon as slot prizes. According to ''[[Pokémon: Official Nintendo Player's Guide]]'', they ship over 2000 Pokémon a month.<ref>''"Next door to the diner is a warehouse operation that's shipping over 2000 Pokémon a month, with most of them being used as prizes at the Game Corner slot arcade."'' - ''[[Pokémon: Official Nintendo Player's Guide]]'', page 37 </ref> However, in {{game|FireRed and LeafGreen|s}}, the non-player character states that they shipped 2000 Pokémon in the current day.<ref>''"We just shipped two thousand more POKéMON as slot prizes again today!"'' - Pokémon FireRed and LeafGreen</ref>
+
+====[[Generation I]]====
+{|cellspacing="0" cellpadding="0" style="background: #88a; border: 3px solid #88a; {{roundy|20px}}"
+|- style="height:29px"
+!Left Window
+!Middle Window
+!Right Window
+|- style="vertical-align:top"
+|
+{{shop|{{color2|{{red color}}|Pokémon Red and Blue Versions|Pokémon Red}} / {{color2|{{red color}}|Pokémon Red and Green Versions|Pocket Monsters Red}}}}
+{{shoprow|{{shopmon|Abra|063|180|lv=9}}|{{Shopmon|Clefairy|035|500|lv=8}}}}
+{{shoprow|{{shopmon|Nidorina|030|1200|lv=17}}}}
+{{shopfooter}}
+{{shop|{{color2|{{blue color}}|Pokémon Red and Blue Versions|Pokémon Blue}} / {{color2|{{green color dark}}|Pokémon Red and Green Versions|Pocket Monsters Green}}}}
+{{shoprow|{{shopmon|Abra|063|120|lv=6}}|{{Shopmon|Clefairy|035|750|lv=12}}}}
+{{shoprow|{{shopmon|Nidorino|033|1200|lv=17}}}}
+{{shopfooter}}
+{{shop|{{color2|{{blue color}}|Pokémon Blue Version (Japanese)|Pocket Monsters Blue}}}}
+{{shoprow|{{shopmon|Abra|063|150|lv=8}}|{{shopmon|Pikachu|025|620|lv=12}}}}
+{{shoprow|{{shopmon|Horsea|116|1000|lv=18}}}}
+{{shopfooter}}
+{{shop|{{color2|{{yellow color dark}}|Pokémon Yellow Version|Pokémon Yellow}}}}
+{{shoprow|{{shopmon|Abra|063|230|lv=15}}|{{shopmon|Vulpix|037|1000|lv=18}}}}
+{{shoprow|{{shopmon|Wigglytuff|040|2680|lv=22}}}}
+{{shopfooter}}
+|
+{{shop|{{color2|{{red color}}|Pokémon Red and Blue Versions|Pokémon Red}} / {{color2|{{red color}}|Pokémon Red and Green Versions|Pocket Monsters Red}}}}
+{{shoprow|{{shopmon|Dratini|147|2800|lv=18}}|{{shopmon|Scyther|123|5500|lv=25}}}}
+{{shoprow|{{shopmon|Porygon|137|9999|lv=26}}}}
+{{shopfooter}}
+{{shop|{{color2|{{blue color}}|Pokémon Red and Blue Versions|Pokémon Blue}} / {{color2|{{green color dark}}|Pokémon Red and Green Versions|Pocket Monsters Green}}}}
+{{shoprow|{{shopmon|Pinsir|127|2500|lv=20}}|{{shopmon|Dratini|147|4600|lv=24}}}}
+{{shoprow|{{shopmon|Porygon|137|6500|lv=18}}}}
+{{shopfooter}}
+{{shop|{{color2|{{blue color}}|Pokémon Blue Version (Japanese)|Pocket Monsters Blue}}}}
+{{shoprow|{{shopmon|Clefable|036|2880|lv=24}}|{{shopmon|Dragonair|148|5400|lv=30}}}}
+{{shoprow|{{shopmon|Porygon|137|8300|lv=22}}}}
+{{shopfooter}}
+{{shop|{{color2|{{yellow color dark}}|Pokémon Yellow Version|Pokémon Yellow}}}}
+{{shoprow|{{shopmon|Scyther|123|6500|lv=30}}|{{shopmon|Pinsir|127|6500|lv=30}}}}
+{{shoprow|{{shopmon|Porygon|137|9999|lv=26}}}}
+{{shopfooter}}
+|
+{{shop|All versions}}
+{{shoprow|{{shopitem|TM23|3300|C||TM Dragon|Dragon Rage}}|{{shopitem|TM15|5500|C||TM Normal|Hyper Beam}}}}
+{{shoprow|{{shopitem|TM50|7700|C||TM Normal|Substitute}}}}
+{{shopfooter}}
+|}
+
+====[[Generation II]]====
+[[File:Celadon Game Prize Corner FRLG.png|240px|thumb|right|The Prize Corner next door]]
+{|cellspacing="0" cellpadding="0" style="background: #88a; border: 3px solid #88a; {{roundy|20px}}"
+|- style="height:29px"
+!Left Window
+!Right Window
+|- style="vertical-align:top"
+|
+{{shop|All versions}}
+{{shoprow|{{shopitem|TM32|1500|C||TM Normal|Double&nbsp;Team}}|{{shopitem|TM29|3500|C||TM Psychic|Psychic}}}}
+{{shoprow|{{shopitem|TM15|7500|C||TM Normal|Hyper&nbsp;Beam}}}}
+{{shopfooter}}
+|
+{{shop|[[Pokémon Gold and Silver Versions|{{color|000|Pokémon {{color|{{gold color dark}}|Gold}} and {{color|{{silver color dark}}|Silver}}}}]]}}
+{{shoprow|{{shopmon|Mr. Mime|122|3333|lv=15}}|{{shopmon|Eevee|133|6666|lv=15}}}}
+{{shoprow|{{shopmon|Porygon|137|9999|lv=20}}}}
+{{shopfooter}}
+{{shop|{{color2|{{crystal color dark}}|Pokémon Crystal Version|Pokémon Crystal}}}}
+{{shoprow|{{shopmon|Pikachu|025|2222|lv=25}}|{{shopmon|Porygon|137|5555|lv=15}}}}
+{{shoprow|{{shopmon|Larvitar|246|8888|lv=40}}}}
+{{shopfooter}}
+|}
+
+====[[Generation III]]====
+{|cellspacing="0" cellpadding="0" style="background: #88a; border: 3px solid #88a; {{roundy|20px}}"
+|- style="height:29px"
+!Left Window
+!Middle Window
+!Right Window
+|- style="vertical-align:top"
+|
+{{shop|All versions - [[Held item]]s}}
+{{shoprow|{{shopitem|Smoke Ball|800|C}}|{{shopitem|Miracle&nbsp;Seed|1000|C}}}}
+{{shoprow|{{shopitem|Charcoal|1000|C}}|{{shopitem|Mystic&nbsp;Water|1000|C}}}}
+{{shoprow|{{shopitem|Yellow Flute|1600|C}}}}
+{{shopfooter}}
+|
+{{shop|{{color2|{{firered color dark}}|Pokémon FireRed and LeafGreen Versions|Pokémon FireRed}}}}
+{{shoprow|{{shopmon|Abra|063|180|lv=9}}|{{shopmon|Clefairy|035|500|lv=8}}}}
+{{shoprow|{{shopmon|Dratini|147|2800|lv=18}}|{{shopmon|Scyther|123|5500|lv=25}}}}
+{{shoprow|{{shopmon|Porygon|137|9999|lv=26}}}}
+{{shopfooter}}
+{{shop|{{color2|{{leafgreen color dark}}|Pokémon FireRed and LeafGreen Versions|Pokémon LeafGreen}}}}
+{{shoprow|{{shopmon|Abra|063|120|lv=7}}|{{shopmon|Clefairy|035|750|lv=12}}}}
+{{shoprow|{{shopmon|Pinsir|127|2500|lv=18}}|{{shopmon|Dratini|147|4600|lv=24}}}}
+{{shoprow|{{shopmon|Porygon|137|6500|lv=18}}}}
+{{shopfooter}}
+|
+{{shop|All versions - [[TM]]s}}
+{{shoprow|{{shopitem|TM13|4000|C||TM Ice|Ice Beam}}|{{shopitem|TM23|3500|C||TM Steel|Iron Tail}}}}
+{{shoprow|{{shopitem|TM24|4000|C||TM Electric|Thunderbolt}}|{{shopitem|TM30|4500|C||TM Ghost|Shadow Ball}}}}
+{{shoprow|{{shopitem|TM35|4000|C||TM Fire|Flamethrower}}}}
+{{shopfooter}}
+|}
+
+====[[Generation IV]]====
+{|cellspacing="0" cellpadding="0" style="background: #88a; border: 3px solid #88a; {{roundy|20px}}"
+|- style="height:29px"
+!Left Window
+!Right Window
+|- style="vertical-align:top"
+|
+{{shop|Items}}
+{{shoprow|{{shopitem|TM58|2,000|C||TM Normal|Endure}}|{{shopitem|TM32|4,000|C||TM Normal|Double Team}}}}
+{{shoprow|{{shopitem|TM10|6,000|C||TM Normal|Hidden Power}}|{{shopitem|TM29|10,000|C||TM Psychic|Psychic}}}}
+{{shoprow|{{shopitem|TM74|10,000|C||TM Steel|Gyro Ball}}|{{shopitem|TM68|15,000|C||TM Normal|Giga Impact}}}}
+{{shoprow|{{shopitem|Silk Scarf|1,000|C}}|{{shopitem|Wide Lens|1,000|C}}}}
+{{shoprow|{{shopitem|Zoom Lens|1,000|C}}|{{shopitem|Metronome (item)|1,000|C||Metronome|display=Metronome}}}}
+{{shopfooter|multiple=yes}}
+|
+{{shop|Pokémon}}
+{{shoprow|{{shopmon|Mr. Mime|122|3,333|lv=15}}|{{shopmon|Eevee|133|6,666|lv=15}}}}
+{{shoprow|{{shopmon|Porygon|137|9,999|lv=15}}}}
+{{shopfooter}}
+|}
+
+===Vending machines===
+In {{LGPE}}, two [[vending machine]]s appear in the east side of the building, in the area that the prize corner was located in previous games.
+
+{{shop|}}
+{{shoprow|{{shopitem|Fresh Water|200}}|{{shopitem|Soda Pop|300}}}}
+{{shopfooter}}
+
+===Walking Pokémon effects===
+When interacting with [[walking Pokémon]] in {{v2|HeartGold and SoulSilver|s}}, the Pokémon may occasionally show an altered mood specific to this location.
+
+{| class="roundtable" style="margin: auto; text-align: center; background-color: #{{locationcolor/med|cave}}; border: 3px solid #{{locationcolor/dark|cave}}"
+|- style="background:#{{locationcolor/light|cave}}"
+! Games
+! Pokémon
+! Area
+! Quote
+|- style="background-color: #FFF"
+! rowspan="2" | {{GameIcon|HG}}{{GameIcon|SS}}
+|- style="background-color: #FFF"
+| [[File:Ani137OD.png]][[File:Ani233OD.png]][[File:Ani474OD.png]]<br>{{p|Porygon}}, {{p|Porygon2}} and {{p|Porygon-Z}}
+| Prize Corner
+| <Pokémon's name> stammered something...
+|}
+
+===Layout===
+====Interior====
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{Locationcolor/dark|building}}"
+! style="background:#{{Locationcolor/light|building}}; {{roundytl|5px}}" | Version
+! style="background:#{{Locationcolor/light|building}}" |{{tt|Main Building|Left entrance in Gen VII}}
+! style="background:#{{Locationcolor/light|building}}; {{roundytr|5px}}" |{{tt|Prize Building|Right entrance in Gen VII}}
+|-
+! style="background:#{{red color}}" | {{color2|000|Pokémon Red and Blue Versions|Red}}
+| rowspan="3" | [[File:Celadon Game Corner Inside RGBY.png|120px]]
+| rowspan="3" | [[File:Celadon Game Prize Corner RGBY.png|120px]]
+|-
+! style="background:#{{blue color}}" | {{color2|fff|Pokémon Red and Blue Versions|Blue}}
+|-
+! style="background:#{{yellow color}}" | {{color2|000|Pokémon Yellow Version|Yellow}}
+|-
+! style="background:#{{gold color}}" | {{color2|000|Pokémon Gold and Silver Versions|Gold}}
+| rowspan="2" | [[File:Celadon Game Corner Inside GS.png|120px]]
+| rowspan="2" | [[File:Prize Exchange 2.png|120px]]
+|-
+! style="background:#{{silver color}}" | {{color2|000|Pokémon Gold and Silver Versions|Silver}}
+|-
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon Crystal Version|Crystal}}
+| [[File:Celadon Game Corner Inside C.png|120px]]
+| [[File:Celadon Game Prize Corner C.png|120px]]
+|-
+! style="background:#{{firered color}}" | {{color2|000|Pokémon FireRed and LeafGreen Versions|FireRed}}
+| rowspan="2" | [[File:Celadon Game Corner Inside FRLG.png|120px]]
+| rowspan="2" | [[File:Celadon Game Prize Corner FRLG.png|120px]]
+|-
+! style="background:#{{leafgreen color}}" | {{color2|000|Pokémon FireRed and LeafGreen Versions|LeafGreen}}
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+| rowspan="2" | [[File:Celadon Game Corner Inside HGSS.png|120px]]
+| rowspan="4" | [[File:Celadon Game Prize Corner HGSS.png|120px]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold (JP)}}
+| rowspan="2" | [[File:Celadon Game Corner Inside HGSS J.png|120px]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver (JP)}}
+|-
+! style="background:#{{Let's Go Pikachu color}}" | {{color2|000|Pokémon Let's Go, Pikachu! and Let's Go, Eevee!|Let's Go, Pikachu!}}
+| rowspan="2" | [[File:Celadon Game Corner Left Entrance LGPE.png|120px]]
+| rowspan="2" | [[File:Celadon Game Corner Right Entrance LGPE.png|120px]]
+|-
+! style="background:#{{Let's Go Eevee color}}" | {{color2|000|Pokémon Let's Go, Pikachu! and Let's Go, Eevee!|Let's Go, Eevee!}}
+|-
+| colspan="3" style="background:#{{Locationcolor/light|building}}; {{roundybottom|5px}}" | &nbsp;
+|}
+
+====Exterior====
+{{Mapgen
+|hv=v
+|colordark={{locationcolor/dark|building}}
+|colorlight={{locationcolor/light|building}}
+|genI=Celadon Game Corner RBY.png
+|sizeI=150px
+|genII=Celadon Game Corner GSC.png
+|sizeII=150px
+|genIII=Celadon Game Corner FRLG.png
+|sizeIII=150px
+|genIV=Celadon Game Corner HGSS.png
+|sizeIV=125px
+|genVII=Celadon Game Corner LGPE.png
+|sizeVII=200px
+}}
+
+==Artwork==
+{| style="margin:auto; text-align:center; {{roundy|20px}} border:2px solid #{{grass color dark}}; background:#{{grass color}}; font-size:80%"
+|style="{{roundy|5px}} border:2px solid #{{grass color dark}}; background:#{{grass color light}}"| [[File:Celadon Game Corner LGPE Concept Art.jpg|x250px]]
+|-
+|Concept art from the {{color2|000|Pokémon: Let's Go, Pikachu! & Pokémon: Let's Go, Eevee! Super Music Collection|Let's Go, Pikachu and Eevee! Super Music Collection}} 
+|}
+
+==In the spin-off games==
+===Pokémon Pokopia===
+One of the [[Human Records]] in {{g|Pokopia}} is a notice from the Celadon Game Corner that they are increasing security patrols in response to reports of suspicious-looking people seen around the facility. Finding this record unlocks the [[Team Rocket]] outfit for the player.
+
+==In animation==
+[[File:Celadon Game Corner PG.png|220px|left|thumb|The Celadon Game Corner in [[Pokémon Generations]]]]
+[[File:Celadon Game Corner Inside PG.png|220px|thumb|The Celadon Game Corner interior in Pokémon Generations]]
+===''Pokémon the Series''===
+===={{aniseries|OS}}====
+In the Japanese version of ''[[EP026|Pokémon Scent-sation!]]'', the [[narrator]] mentioned that [[Celadon City]] has a Game Center. This reference was removed in the [[dub]].
+
+===Pokémon Generations===
+The Celadon Game Corner made a brief appearance in ''[[PG02|The Chase]]''. It was run by [[Team Rocket]] in order to produce income, until the [[International Police]] raided the building, arresting several members of Team Rocket and freeing the Pokémon held captive there.
+{{-}}
+
+==In the manga==
+[[File:Rocket Game Corner Adventures.png|thumb|200px|Rocket Game Corner in [[Pokémon Adventures]]]]
+===Pokémon Adventures===
+===={{MangaArc|Red, Green & Blue}}====
+The Rocket Game Corner first appeared in ''[[PS016|Tauros the Tyrant]]'' and ''[[PS017|A Jynx Jinx]]''. Like in the games, the Game Corner was shown to house the entrance to [[Team Rocket]]'s [[Team Rocket Hideout|hideout]], opened by pressing a secret switch behind a poster. {{adv|Red}}, disguised as a {{tc|Team Rocket Grunt}}, infiltrated the hideout in order to find out about {{adv|Green}}'s whereabouts after she had stolen his [[Badge]]s.
+
+In ''[[PS018|A Tale of Ninetales]]'', {{adv|Blue}} exchanged a big pile of {{OBP|Coin|Game Corner}}s he had won from the Game Corner [[slot machine]]s for a {{TP|Blue|Porygon}}.
+{{-}}
+
+[[File:Celadon Game Corner Zensho.png|thumb|left|180px|Rocket Game Corner in [[Pokémon Zensho]]]]
+===Pokémon Pocket Monsters===
+The Rocket Game Corner appeared ''[[PM009|Pikachu Was Kidnapped!!]]'', where {{PPM|Red}} and his Pokémon won a lot of Coins there.
+
+===Pokémon Zensho===
+The Rocket Game Corner appeared in [[PZ05]], where {{zensho|Satoshi}} followed some {{tc|Team Rocket Grunt}}s there from the [[Pokémon Tower]], secretly sneaking after them to the [[Team Rocket Hideout|Rocket Hideout]] and snatching one of [[Team Rocket]]'s [[Silph Scope]]s before leaving.
+{{-}}
+
+==Trivia==
+* This has also been referred to as the "Casino" in an early article on [[Pokémon.com]].<ref>''"How can I win more coins at the Game Corner (Casino)?"'' - [https://web.archive.org/web/20010203225500/http://www.pokemon.com/games/redbluefaq.html Pokémon Red & Blue FAQs (archived)] on [[Pokémon.com]]</ref>
+* {{P|Abra}} is the only Pokémon whose coin cost is different across every [[Generation I]] game.
+* {{game|Red and Blue|s}} have two errors related to the Game Corner's hidden Coins.
+** The game has data for 12 hidden Coins, but only 11 are obtainable. The position of the 12th puts it inside a slot machine where it cannot be obtained.<ref>[https://github.com/pret/pokered/blob/cbc85b4d220b31c28266a227ff8789818631c4e9/data/hidden_objects.asm#L433 pokered/hidden_objects.asm at master · pret/pokered · GitHub]</ref> 
+** One of the hidden Coin stacks is actually defined to have 40 Coins, but when the game checks for this, it jumps to the same logic that handles the 20-Coin stacks, leaving a section that handles 40-Coin stacks to go unused.<ref>[https://github.com/pret/pokered/blob/cbc85b4d220b31c28266a227ff8789818631c4e9/data/hidden_objects.asm#L79 pokered/hidden_items.asm at master · pret/pokered · GitHub]</ref>
+* Although the [[Goldenrod Game Corner|Goldenrod]] and Celadon Game Corners were changed in the non-Japanese releases of {{game|HeartGold and SoulSilver|s}}, all versions (Japanese, Korean, and Western) have every map of the Game Corners: in the Japanese versions, the maps related to [[Voltorb Flip]] and [[Mr. Game]] are unused and have no events or warps programmed, while the Korean and Western versions have the original maps with their warps intact, plus the event to interact with the clerk is still present and the interface used to buy {{OBP|Coin|Game Corner}}s is functional and was translated. {{TM|78|Captivate}} also remains in the unused Goldenrod Game Corner in the Korean and Western versions, and the [[slot machine]]s in the leftover maps trigger [[Voltorb Flip]] in these versions.
+* While the player cannot play the slot minigame in {{G|Let's Go, Pikachu! and Let's Go, Eevee!}} due to all Pokémon games being frequented by children, the leftmost row of cabinets makes reference to the slot machine game, referring to it as "a game in which you match three pictures", and that staring at it makes the player dizzy.
+** Other rows reference [[Pokkén Tournament]], the [[GO Park]] minigame, the [[Pikachu's Beach]] minigame from {{game|Yellow}}, and [[Pokémon Dash]].
+* The [[Bottle Cap|Bottle Caps]] that can be found as hidden items in Let's Go, Pikachu! and Let's Go, Eevee! may reference [[James|James's]] love of bottle caps in the [[Pokémon animated series]].
+
+==In other languages==
+''Rocket Game Corner''
+{{langtable|color=666|bordercolor=C00
+|zh_yue=火箭遊戲城 ''{{tt|Fójin Yàuhhei Sìhng|Rocket Game Castle}}'' {{tt|*|Games}}<br>火箭遊樂中心 ''{{tt|Fójin Yàuhlohk Jūngsām|Rocket Game Center}}'' {{tt|*|Strategy Guide}}<br>火箭兵團遊戲中心 ''{{tt|Fójin Bīngtyùhn Yàuhhei Jūngsām|Team Rocket Game Center}}'' {{tt|*|Manga}}
+|zh_cmn=火箭遊戲城 / 火箭游戏城 ''{{tt|Huǒjiàn Yóuxì Chéng|Rocket Game Castle}}'' {{tt|*|Games}}<br>火箭隊遊樂中心 / 火箭队游乐中心 ''{{tt|Huǒjiàn Duì Yóulè Zhōngxīn|Team Rocket Game Center}}'' {{tt|*|Manga}}
+|cs=Rakeťácká herna
+|fi=Peliluola
+|fr=Salle d'arcade Rocket{{sup/7|PE}}<br>Casino Rocket{{sup/1|RBY}}{{sup/3|FRLG}}
+|de=Rocket-Gamer-Paradies{{sup/7|PE}}<br>Rocket Spielhalle{{sup/1|RBY}}{{sup/3|FRLG}}
+|it=Sala Giochi Rocket{{sup/7|PE}}<br>Casinò Rocket{{sup/1|RBY}}{{sup/3|FRLG}}
+|ko=로켓 게임코너 ''Rocket Game Corner''
+|pt_br=Casino Rocket
+|es=Sala de Juegos Rocket{{sup/7|PE}}<br>Casino Rocket{{sup/1|RBY}}{{sup/3|FRLG}}
+}}
+
+''Celadon Game Corner''
+{{langtable|color=c0e7c2|bordercolor=ACE1AF
+|zh_yue=彩虹市遊戲中心 ''{{tt|Chóihùhngsíh Yàuhhei Jūngsām|Celadon City Game Center}}'' {{tt|*|Adventures}}<br>彩虹市電子遊戲中心 ''{{tt|Chóihùhngsíh Dihnjí Yàuhhei Jūngsām|Celadon City Electronic Game Center}}'' {{tt|*|Zensho}}
+|zh_cmn=彩虹市遊樂中心 / 彩虹市游乐中心 ''{{tt|Cǎihóngshì Yóulè Zhōngxīn|Celadon City Game Center}}'' {{tt|*|Adventures}}<br>彩虹市電動遊樂中心 ''{{tt|Cǎihóngshì Diàndòng Yóulè Zhōngxīn|Celadon City Electric Game Center}}'' {{tt|*|Zensho (Taiwan)}}
+|da=Spillehjørnet<!--source: Danish version of The Official Pokémon Handbook-->
+|fr=Casino de Céladopole
+|de=Prismania Spielhalle
+|it=Casinò di Azzurropoli
+|ko={{tt|무지개 게임 코너 ''Mujigae Game Corner''|Rainbow Game Corner}}
+|pt_br=Casino da Cidade de Celadon (manga)<br>Esquina Game da Cidade Celadon (The Official Pokémon Handbook)
+|es=Casino de Ciudad Azulona
+|vi=Khu trò chơi Thành phố Tamamushi
+}}
+
+==References==
+<references/>
+
+==Related articles==
+{{gamecorner}}
+{{Kanto}}
+{{Team Rocket}}
+{{Team Rocket Adventures}}
+{{Project Locations notice}}
+
+[[Category:Kanto locations]]
+[[Category:Red, Blue and Yellow locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:FireRed and LeafGreen locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Let's Go, Pikachu! and Let's Go, Eevee! locations]]
+[[Category:Game Corners]]
+
+[[de:Rocket-Gamer-Paradies]]
+[[es:Sala de Juegos Rocket]]
+[[fr:Casino de Céladopole]]
+[[it:Sala Giochi Rocket]]
+[[ja:ロケットゲームコーナー]]
+[[zh:玉虹游戏城]]

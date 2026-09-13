@@ -1,0 +1,11 @@
+node_modules
+dist
+coverage
+.angular
+public/data
+public/sprites
+scripts/data/cache
+scripts/data/reports
+**/__fixtures__
+*.generated.scss
+*.md

@@ -1,0 +1,15 @@
+<!-- poke-guide fixture: {"title":"Ditto (Pokémon)/Generation I learnset","resolvedTitle":"Ditto (Pokémon)/Generation I learnset","revid":3273066,"timestamp":"2020-10-30T07:08:04Z","fetchedAt":"2026-09-13T06:30:46.043Z"} -->
+{{pokelinkback|132|Ditto|1}}
+__NOTOC__
+====By [[Level|leveling up]]====
+{{learnlist/levelh|Ditto|normal|normal|1|1}}
+{{learnlist/level1|1|Transform|Normal|—|—|10}}
+{{learnlist/levelf|Ditto|normal|normal|1|1}}
+
+====By [[TM]]/[[HM]]====
+{{learnlist/tmh|Ditto|normal|normal|1|1}}
+{{learnlist/tm1null}}
+{{learnlist/tmf|Ditto|normal|normal|1|1}}
+
+[[it:Ditto/Mosse apprese in prima generazione]]
+[[zh:百变怪/第一世代招式表]]

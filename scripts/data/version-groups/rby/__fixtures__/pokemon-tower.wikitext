@@ -1,0 +1,1518 @@
+<!-- poke-guide fixture: {"title":"Pokémon Tower","resolvedTitle":"Pokémon Tower","revid":4404338,"timestamp":"2025-10-17T03:32:10Z","fetchedAt":"2026-09-12T21:57:28.705Z"} -->
+{{search|location|the Mystery Dungeon mechanic|Pokémon Tower (Mystery Dungeon)}}
+----
+{{Infobox location
+|image=Lavender Tower Exterior LGPE.png
+|image_size=300
+|type=ghost
+|mapdesc=A tower that houses the graves of countless {{ScPkmn}}. Many people visit it daily to pay their respects to the fallen.{{sup/3|FRLG}}
+|slogan=Becalm the Spirits of Pokémon
+|location_name=Pokémon Tower
+|japanese_name=ポケモンタワー
+|translated_name=Pokémon Tower
+|other_info=Kanto Radio Station
+|location=[[Lavender Town]]
+|region=Kanto
+|generation={{Gen|I}}, {{Gen|II}}, {{Gen|III}}, {{Gen|IV}}, {{Gen|VII}}
+|map=Kanto Lavender Town Map.png
+}}
+
+The '''Pokémon Tower''' (Japanese: '''ポケモンタワー''' ''Pokémon Tower'') is a seven-story tower located in [[Lavender Town]] in the [[Kanto]] [[region]]. It is a burial ground for Pokémon.
+
+==Role==
+[[File:FL Pokemon Tower.png|thumb|240px|Location preview of the Pokémon Tower in Generation III]]
+The Pokémon Tower houses hundreds of graves of deceased {{OBP|Pokémon|species}} in all of its seven floors. Many people visit the building daily to pay their respects to the fallen. On all floors other than the first two, though, the possibility of being attacked by [[wild Pokémon]] is present. In [[Generation II|Generations II]] and {{gen|IV}}, the tower was converted into the '''Kanto Radio Station''', undergoing a similar transformation to the [[Kanto Power Plant]] to the north.
+
+Aside from graves, the tower is home to wild {{p|Cubone}} as well as many {{type|Ghost}} Pokémon. In [[Generation I|Generations I]], {{gen|III}}, and {{gen|VII}}, [[Team Rocket]] tried to steal the Cubone to sell their valuable skulls. In the process, a mother {{p|Marowak}} that was protecting her Cubone child was killed. The ghost of the {{OBP|Marowak|ghost|mother Marowak}} haunted the tower until the player was able to knock it out{{sup/1|RBY}}{{sup/3|FRLG}}/her child climbed the tower and reunited with her{{sup/7|PE}}, setting her spirit free. [[Mr. Fuji]] attempted to confront the poachers, but ended up being taken hostage himself and required the help of the player to be released. As a show of gratitude, Mr. Fuji gives the player the [[Poké Flute]].
+
+The wild Pokémon in the tower appear disguised as {{OBP|ghost|Pokémon Tower}}s, although their disguise can be revealed by using a [[Silph Scope]]. Any Pokémon who attempts to fight a ghost that has not been revealed by the [[Silph Scope]] will be "too scared to move." In Generation VII, the ghosts are not battled normally; touching one instead returns the player to the first floor of the tower.
+
+A special spot on the fifth floor has been made into a wild Pokémon-free healing area. In the Generation I games, the Channeler next to it mentions it is related to white magic. This was removed in the later games.
+
+In Generation I, it is possible to exploit {{DL|List of battle glitches in Generation I|Ghost Marowak bypassing|an oversight}} that allows the {{player}} to skip the sequence with the ghost Marowak by using a [[Poké Doll]], making it possible to progress without obtaining the [[Silph Scope]] first.
+
+==Slogans==
+===As Pokémon Tower===
+"May the Souls of Pokémon Rest Easy"{{sup/1|RBY}}, "Becalm the Spirits of Pokémon"{{sup/3|FRLG}}{{sup/7|PE}}
+
+===As Kanto Radio Station===
+"Your Favorite Programs On-Air Around the Clock!"{{sup/2|GSC}}, "Your Best-Loved Shows On-Air Around the Clock!"{{sup/4|HGSS}}
+
+==Items==
+{{itlisth|ghost}}
+{{Itemlist|Clothing Trunk|1F, from the old lady|LP=yes|LE=yes|display={{DL|List of clothing in Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!|Formal Set}}}}
+{{itemlist|X Attack|2F, northeast of staircase to 3F|LP=yes|LE=yes}}
+{{Itemlist|Elixir|2F, southwest corner|LP=yes|LE=yes}}
+{{Itemlist|Pearl|2F, on the easternmost tombstone against the southern wall ''(hidden)'' (daily)|LP=yes|LE=yes|display={{i|Pearl}}}}
+{{Itemlist|Candy Yellow|2F, reward for defeating {{tc|Coach Trainer}} Holly|LP=yes|display={{DL|Candy|Pikachu Candy}} ×5}}
+{{Itemlist|Candy Brown|2F, reward for defeating {{tc|Coach Trainer}} Holly|LE=yes|display={{DL|Candy|Eevee Candy}} ×5}}
+{{Itemlist|Escape Rope|3F, in the north area of the floor|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Awakening|3F, against the northern wall|LP=yes|LE=yes}}
+{{Itemlist|Super Potion|3F, in the middle of the floor|LP=yes|LE=yes}}
+{{Itemlist|Star Piece|3F, in the northeast corner of the floor ''(hidden)'' (daily)|LP=yes|LE=yes}}
+{{Itemlist|Elixir|4F, southeast of the center of the floor|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Escape Rope|4F, in the middle of a ring of tombstones near the stairs to 3F|LP=yes|LE=yes}}
+{{Itemlist|Full Heal|4F, north of the stairs to 3F|LP=yes|LE=yes}}
+{{Itemlist|Awakening|4F, southwest of the center of the floor|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|TM Psychic VI|4F, southwest of the center of the floor|LP=yes|LE=yes|display={{TM|04|Teleport}}}}
+{{Itemlist|Super Potion|4F, in the northeast corner of the floor ''(hidden)'' (daily)|LP=yes|LE=yes}}
+{{Itemlist|HP Up|4F, in the south area of the floor|R=yes|B=yes|Y=yes}}
+{{Itemlist|Great Ball|4F, in the south area of the floor|FR=yes|LG=yes}}
+{{Itemlist|Elixer|sprite=Bag Elixir Sprite|5F, one square east and three squares south of the west staircase ''(hidden)''|R=yes|B=yes|Y=yes|display=[[Elixir|Elixer]]}}
+{{Itemlist|Big Mushroom|5F, one square north and four squares west of {{tc|Channeler}} Ruth ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Cleanse Tag|5F, in the center of the healing area|FR=yes|LG=yes}}
+{{Itemlist|Nugget|5F, in the southwest area of the floor|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Nugget|5F, in the northwest corner|LP=yes|LE=yes}}
+{{Itemlist|Ice Stone|5F, in the southwest corner|LP=yes|LE=yes}}
+{{Itemlist|Big Pearl|5F, on the tombstone in the southeast corner ''(hidden)'' (daily)|LP=yes|LE=yes}}
+{{Itemlist|X Accuracy|6F, southwest of the stairs to 5F|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Revive|6F, south of the stairs to 5F|LP=yes|LE=yes}}
+{{Itemlist|Ultra Ball|6F, north of the stairs to 5F|LP=yes|LE=yes|display=[[Ultra Ball]] ×3}}
+{{Itemlist|Hyper Potion|6F, in the northwest corner|LP=yes|LE=yes}}
+{{Itemlist|PP Up|6F, in a corner on the wall, south of the northwest corner ''(hidden)'' (daily)|LP=yes|LE=yes}}
+{{Itemlist|Rare Candy|6F, in the west area of the floor|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Rare Candy|6F, west of the stairs to 7F (requires [[Silph Scope]])|LP=yes|LE=yes}}
+{{Itemlist|Soothe Bell|7F, where [[Mr. Fuji]] was standing (requires [[Silph Scope]], and using [[Dowsing Machine|Itemfinder]] at that spot)|FR=yes|LG=yes}}
+{{Itemlist|None|sprite=Pokégear Icon|Gift from the radio station manager after restoring power|G=yes|S=yes|C=yes|HG=yes|SS=yes|display=[[Pokégear#Radio|EXPN Card]]}}
+{{itlistfoot|ghost}}
+
+===Walking Pokémon===
+{{itlisth|ghost}}
+{{Itemlist|Pearl|display={{i|Pearl}}|4F, Infrequently found by the {{player}}'s {{pkmn2|walking}} {{type|Ghost}} Pokémon near the stairs to 3F |LP=yes|LE=yes}}
+{{itlistfoot|ghost}}
+
+==Pokémon==
+===Generation I===
+{{catch/header|ghost|no}}
+{{Catch/div|ghost|3F}}
+{{catch/entry1|092|Gastly|yes|yes|no|3F|18-24|90%|type1=ghost|type2=poison}}
+{{catch/entry1|092|Gastly|no|no|yes|3F|18-25|95%|type1=ghost|type2=poison}}
+{{catch/entry1|093|Haunter|yes|yes|no|3F|25|1%|type1=ghost|type2=poison}}
+{{catch/entry1|093|Haunter|no|no|yes|3F|20, 25|5%|type1=ghost|type2=poison}}
+{{catch/entry1|104|Cubone|yes|yes|no|3F|20, 22|9%|type1=ground}}
+{{Catch/div|ghost|4F}}
+{{catch/entry1|092|Gastly|yes|yes|no|4F|18-24|86%|type1=ghost|type2=poison}}
+{{catch/entry1|092|Gastly|no|no|yes|4F|18-25|95%|type1=ghost|type2=poison}}
+{{catch/entry1|093|Haunter|yes|yes|no|4F|25|5%|type1=ghost|type2=poison}}
+{{catch/entry1|093|Haunter|no|no|yes|4F|20, 25|5%|type1=ghost|type2=poison}}
+{{catch/entry1|104|Cubone|yes|yes|no|4F|20, 22|9%|type1=ground}}
+{{Catch/div|ghost|5F}}
+{{catch/entry1|092|Gastly|yes|yes|no|5F|18-24|86%|type1=ghost|type2=poison}}
+{{catch/entry1|092|Gastly|no|no|yes|5F|21-27|90%|type1=ghost|type2=poison}}
+{{catch/entry1|093|Haunter|yes|yes|no|5F|25|5%|type1=ghost|type2=poison}}
+{{catch/entry1|093|Haunter|no|no|yes|5F|22, 27|5%|type1=ghost|type2=poison}}
+{{catch/entry1|104|Cubone|yes|yes|no|5F|20, 22|9%|type1=ground}}
+{{catch/entry1|104|Cubone|no|no|yes|5F|20|5%|type1=ground}}
+{{Catch/div|ghost|6F}}
+{{catch/entry1|092|Gastly|yes|yes|no|6F|19-24|85%|type1=ghost|type2=poison}}
+{{catch/entry1|092|Gastly|no|no|yes|6F|21-27|90%|type1=ghost|type2=poison}}
+{{catch/entry1|093|Haunter|yes|yes|no|6F|26, 28|6%|type1=ghost|type2=poison}}
+{{catch/entry1|093|Haunter|no|no|yes|6F|22, 27|5%|type1=ghost|type2=poison}}
+{{catch/entry1|104|Cubone|yes|yes|no|6F|22, 24|9%|type1=ground}}
+{{catch/entry1|104|Cubone|no|no|yes|6F|22|5%|type1=ground}}
+{{Catch/div|ghost|7F}}
+{{catch/entry1|092|Gastly|yes|yes|no|7F|20-24|75%|type1=ghost|type2=poison}}
+{{catch/entry1|092|Gastly|no|no|yes|7F|23-29|90%|type1=ghost|type2=poison}}
+{{catch/entry1|093|Haunter|yes|yes|no|7F|28, 30|15%|type1=ghost|type2=poison}}
+{{catch/entry1|093|Haunter|no|no|yes|7F|24, 29|5%|type1=ghost|type2=poison}}
+{{catch/entry1|104|Cubone|yes|yes|no|7F|22, 24|10%|type1=ground}}
+{{catch/entry1|104|Cubone|no|no|yes|7F|24|5%|type1=ground}}
+{{catch/footer|ghost}}
+
+===Generation III===
+{{catch/header|ghost|no}}
+{{Catch/div|ghost|3F}}
+{{catch/entryfl|092|Gastly|yes|yes|3F|13-19|90%|type1=ghost|type2=poison}}
+{{catch/entryfl|093|Haunter|yes|yes|3F|20|1%|type1=ghost|type2=poison}}
+{{catch/entryfl|104|Cubone|yes|yes|3F|15, 17|9%|type1=ground}}
+{{Catch/div|ghost|4F-5F}}
+{{catch/entryfl|092|Gastly|yes|yes|4F-5F|13-19|86%|type1=ghost|type2=poison}}
+{{catch/entryfl|093|Haunter|yes|yes|4F-5F|20|5%|type1=ghost|type2=poison}}
+{{catch/entryfl|104|Cubone|yes|yes|4F-5F|15, 17|9%|type1=ground}}
+{{Catch/div|ghost|6F}}
+{{catch/entryfl|092|Gastly|yes|yes|6F|14-19|85%|type1=ghost|type2=poison}}
+{{catch/entryfl|093|Haunter|yes|yes|6F|21, 23|6%|type1=ghost|type2=poison}}
+{{catch/entryfl|104|Cubone|yes|yes|6F|17, 19|9%|type1=ground}}
+{{Catch/div|ghost|7F}}
+{{catch/entryfl|092|Gastly|yes|yes|7F|15-19|75%|type1=ghost|type2=poison}}
+{{catch/entryfl|093|Haunter|yes|yes|7F|23, 25|15%|type1=ghost|type2=poison}}
+{{catch/entryfl|104|Cubone|yes|yes|7F|17, 19|10%|type1=ground}}
+{{catch/footer|ghost}}
+
+===Generation VII===
+{{Catch/header|ghost|no}}
+{{Catch/div|ghost|3F-4F}}
+{{Catch/entrype|041|Zubat|yes|yes|3F-4F|27-32|5%|type1=Poison|type2=Flying}}
+{{Catch/entrype|042|Golbat|yes|yes|3F-4F|27-32|5%|type1=Poison|type2=Flying}}
+{{Catch/entrype|092|Gastly|yes|yes|3F-4F|27-32|75%|type1=Ghost|type2=Poison}}
+{{Catch/entrype|093|Haunter|yes|yes|3F-4F|27-32|5%|type1=Ghost|type2=Poison}}
+{{Catch/entrype|104|Cubone|yes|yes|3F-4F|27-32|10%|type1=Ground}}
+{{Catch/div|ghost|5F-6F}}
+{{Catch/entrype|041|Zubat|yes|yes|5F-6F|27-32|5%|type1=Poison|type2=Flying}}
+{{Catch/entrype|042|Golbat|yes|yes|5F-6F|27-32|5%|type1=Poison|type2=Flying}}
+{{Catch/entrype|092|Gastly|yes|yes|5F-6F|27-32|70%|type1=Ghost|type2=Poison}}
+{{Catch/entrype|093|Haunter|yes|yes|5F-6F|27-32|10%|type1=Ghost|type2=Poison}}
+{{Catch/entrype|104|Cubone|yes|yes|5F-6F|27-32|10%|type1=Ground}}
+{{catch/div|ghost|Rare Spawns}}
+{{Catch/entrype|113|Chansey|yes|yes|3F-6F|27-32|-}}
+{{Catch/footer|ghost|2}}
+
+==Special encounters==
+===Generation I===
+A {{OBP|ghost|Pokémon Tower}} is encountered on 6F as part of the story. The [[Silph Scope]] must be in the bag in order to reveal its identity as a {{OBP|Marowak|ghost}}. [[Poké Ball]]s can be thrown, but will always fail. It must be defeated in order to progress. If run from, it respawns immediately without leaving the area.
+
+If a [[Poké Doll]] is used to flee from battle, the game will consider it defeated, allowing access to 7F.
+
+{{Pokémon/Grid}}
+{{Pokémon
+| caption = '''Red, Green, and Blue'''
+| gen = 1
+| ndex = 0105
+| pokemon = Marowak
+| level = 30
+| type1 = Ground
+| move1 = Bone Club | move1type = Ground
+| move2 = Growl | move2type = Normal
+| move3 = Leer | move3type = Normal
+| move4 = Focus Energy | move4type = Normal
+}}
+{{Pokémon
+| caption = '''Yellow'''
+| gen = 1
+| ndex = 0105
+| pokemon = Marowak
+| level = 30
+| type1 = Ground
+| move1 = Bone Club | move1type = Ground
+| move2 = Tail Whip | move2type = Normal
+| move3 = Headbutt | move3type = Normal
+| move4 = Leer | move4type = Normal
+}}
+{{Pokémon/Grid/end}}
+
+===Generation III===
+A {{OBP|ghost|Pokémon Tower}} is encountered on 6F as part of the story. The [[Silph Scope]] must be in the bag in order to reveal its identity as a {{OBP|Marowak|ghost}}. [[Poké Ball]]s can be thrown, but will always fail. It must be defeated in order to progress. If run from, it respawns immediately without leaving the area.
+
+{{Pokémon
+| gen = 3
+| ndex = 0105
+| pokemon = Marowak
+| gender = female
+| level = 30
+| type1 = Ground
+| ability = Rock Head
+| ability2 = Lightningrod
+| move1 = Headbutt | move1type = Normal
+| move2 = Leer | move2type = Normal
+| move3 = Focus Energy | move3type = Normal
+| move4 = Bonemerang | move4type = Ground
+}}
+
+==Trainers==
+===Generation I===
+====2F====
+====={{game|Red and Blue|s}}=====
+Blue has one [[Potion]] per Pokémon, using it 12.5% of the time if their HP falls below 20%.
+
+{{Party
+| caption = {{PlayerChoice|0001|Bulbasaur}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr RG Blue 2.png
+| prize = {{PDollar}}1625
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Pokémon Tower
+| game = RGB
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0017
+| pokemon = Pidgeotto
+| level = 25
+| type1 = Normal
+| type2 = Flying
+| move1 = Gust | move1type = Normal
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Whirlwind | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0102
+| pokemon = Exeggcute
+| level = 23
+| type1 = Grass
+| type2 = Psychic
+| move1 = Barrage | move1type = Normal
+| move2 = Hypnosis | move2type = Psychic
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0130
+| pokemon = Gyarados
+| level = 22
+| type1 = Water
+| type2 = Flying
+| move1 = Leer | move1type = Normal
+| move2 = Dragon Rage | move2type = Dragon
+| move3 = Bite | move3type = Normal
+| move4 = Hydro Pump | move4type = Water
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0064
+| pokemon = Kadabra
+| level = 20
+| type1 = Psychic
+| move1 = Teleport | move1type = Psychic
+| move2 = Confusion | move2type = Psychic
+| move3 = Disable | move3type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0005
+| pokemon = Charmeleon
+| level = 25
+| type1 = Fire
+| move1 = Growl | move1type = Normal
+| move2 = Ember | move2type = Fire
+| move3 = Leer | move3type = Normal
+| move4 = Rage | move4type = Normal
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0004|Charmander}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr RG Blue 2.png
+| prize = {{PDollar}}1625
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Pokémon Tower
+| game = RGB
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0017
+| pokemon = Pidgeotto
+| level = 25
+| type1 = Normal
+| type2 = Flying
+| move1 = Gust | move1type = Normal
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Whirlwind | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0058
+| pokemon = Growlithe
+| level = 23
+| type1 = Fire
+| move1 = Bite | move1type = Normal
+| move2 = Roar | move2type = Normal
+| move3 = Ember | move3type = Fire
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0102
+| pokemon = Exeggcute
+| level = 22
+| type1 = Grass
+| type2 = Psychic
+| move1 = Barrage | move1type = Normal
+| move2 = Hypnosis | move2type = Psychic
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0064
+| pokemon = Kadabra
+| level = 20
+| type1 = Psychic
+| move1 = Teleport | move1type = Psychic
+| move2 = Confusion | move2type = Psychic
+| move3 = Disable | move3type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0008
+| pokemon = Wartortle
+| level = 25
+| type1 = Water
+| move1 = Tail Whip | move1type = Normal
+| move2 = Bubble | move2type = Water
+| move3 = Water Gun | move3type = Water
+| move4 = Bite | move4type = Normal
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0007|Squirtle}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr RG Blue 2.png
+| prize = {{PDollar}}1625
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Pokémon Tower
+| game = RGB
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0017
+| pokemon = Pidgeotto
+| level = 25
+| type1 = Normal
+| type2 = Flying
+| move1 = Gust | move1type = Normal
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Whirlwind | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0130
+| pokemon = Gyarados
+| level = 23
+| type1 = Water
+| type2 = Flying
+| move1 = Leer | move1type = Normal
+| move2 = Dragon Rage | move2type = Dragon
+| move3 = Bite | move3type = Normal
+| move4 = Hydro Pump | move4type = Water
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0058
+| pokemon = Growlithe
+| level = 22
+| type1 = Fire
+| move1 = Bite | move1type = Normal
+| move2 = Roar | move2type = Normal
+| move3 = Ember | move3type = Fire
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0064
+| pokemon = Kadabra
+| level = 20
+| type1 = Psychic
+| move1 = Teleport | move1type = Psychic
+| move2 = Confusion | move2type = Psychic
+| move3 = Disable | move3type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0002
+| pokemon = Ivysaur
+| level = 25
+| type1 = Grass
+| type2 = Poison
+| move1 = Growl | move1type = Normal
+| move2 = Leech Seed | move2type = Grass
+| move3 = Vine Whip | move3type = Grass
+| move4 = PoisonPowder | move4type = Poison
+}}
+{{Party/end}}
+====={{game|Yellow}}=====
+Blue has one [[Potion]] per Pokémon, using it 12.5% of the time if their HP falls below 20%.
+
+{{Party
+| caption = {{BlueEevee|Vaporeon|evolved=no}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr Y Blue 2.png
+| prize = {{PDollar}}1625
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Pokémon Tower
+| game = Y
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0022
+| pokemon = Fearow
+| level = 25
+| type1 = Normal
+| type2 = Flying
+| move1 = Mirror Move | move1type = Flying
+| move2 = Growl | move2type = Normal
+| move3 = Leer | move3type = Normal
+| move4 = Fury Attack | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0027
+| pokemon = Sandshrew
+| level = 20
+| type1 = Ground
+| move1 = Scratch | move1type = Normal
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Slash | move3type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0037
+| pokemon = Vulpix
+| level = 23
+| type1 = Fire
+| move1 = Ember | move1type = Fire
+| move2 = Tail Whip | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Roar | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0081
+| pokemon = Magnemite
+| level = 22
+| type1 = Electric
+| move1 = Tackle | move1type = Normal
+| move2 = SonicBoom | move2type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0133
+| pokemon = Eevee
+| level = 25
+| type1 = Normal
+| move1 = Quick Attack | move1type = Normal
+| move2 = Tail Whip | move2type = Normal
+| move3 = Sand-Attack | move3type = Normal
+| move4 = Growl | move4type = Normal
+}}
+{{Party/end}}
+{{Party
+| caption = {{BlueEevee|Jolteon|evolved=no}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr Y Blue 2.png
+| prize = {{PDollar}}1625
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Pokémon Tower
+| game = Y
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0022
+| pokemon = Fearow
+| level = 25
+| type1 = Normal
+| type2 = Flying
+| move1 = Mirror Move | move1type = Flying
+| move2 = Growl | move2type = Normal
+| move3 = Leer | move3type = Normal
+| move4 = Fury Attack | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0090
+| pokemon = Shellder
+| level = 23
+| type1 = Water
+| move1 = Tackle | move1type = Normal
+| move2 = Withdraw | move2type = Water
+| move3 = Supersonic | move3type = Normal
+| move4 = Clamp | move4type = Water
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0037
+| pokemon = Vulpix
+| level = 22
+| type1 = Fire
+| move1 = Ember | move1type = Fire
+| move2 = Tail Whip | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Roar | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0027
+| pokemon = Sandshrew
+| level = 20
+| type1 = Ground
+| move1 = Scratch | move1type = Normal
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Slash | move3type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0133
+| pokemon = Eevee
+| level = 25
+| type1 = Normal
+| move1 = Quick Attack | move1type = Normal
+| move2 = Tail Whip | move2type = Normal
+| move3 = Sand-Attack | move3type = Normal
+| move4 = Growl | move4type = Normal
+}}
+{{Party/end}}
+{{Party
+| caption = {{BlueEevee|Flareon|evolved=no}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr Y Blue 2.png
+| prize = {{PDollar}}1625
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Pokémon Tower
+| game = Y
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0022
+| pokemon = Fearow
+| level = 25
+| type1 = Normal
+| type2 = Flying
+| move1 = Mirror Move | move1type = Flying
+| move2 = Growl | move2type = Normal
+| move3 = Leer | move3type = Normal
+| move4 = Fury Attack | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0027
+| pokemon = Sandshrew
+| level = 20
+| type1 = Ground
+| move1 = Scratch | move1type = Normal
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Slash | move3type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0081
+| pokemon = Magnemite
+| level = 23
+| type1 = Electric
+| move1 = Tackle | move1type = Normal
+| move2 = SonicBoom | move2type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0090
+| pokemon = Shellder
+| level = 22
+| type1 = Water
+| move1 = Tackle | move1type = Normal
+| move2 = Withdraw | move2type = Water
+| move3 = Supersonic | move3type = Normal
+| move4 = Clamp | move4type = Water
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0133
+| pokemon = Eevee
+| level = 25
+| type1 = Normal
+| move1 = Quick Attack | move1type = Normal
+| move2 = Tail Whip | move2type = Normal
+| move3 = Sand-Attack | move3type = Normal
+| move4 = Growl | move4type = Normal
+}}
+{{Party/end}}
+====3F====
+{{trainerheader|ghost}}
+{{trainerentry|Spr RG Channeler.png|game=1|Channeler||690|1|092|Gastly||23|||}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr RG Channeler.png|game=1|Channeler||660|1|092|Gastly||22|||}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr RG Channeler.png|game=1|Channeler||720|1|092|Gastly||24|||}}
+{{trainerfooter|ghost|1}}
+
+====4F====
+{{trainerheader|ghost}}
+{{trainerentry|Spr RG Channeler.png|game=1|Channeler||690|2|092|Gastly||23||092|Gastly||23|||}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr RG Channeler.png|game=1|Channeler||660|1|092|Gastly||22|||}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr RG Channeler.png|game=1|Channeler||720|1|092|Gastly||24|||}}
+{{trainerfooter|ghost|1}}
+
+====5F====
+{{trainerheader|ghost}}
+{{trainerentry|Spr RG Channeler.png|game=1|Channeler||660|1|092|Gastly||22|||}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr RG Channeler.png|game=1|Channeler||690|1|093|Haunter||23|||}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr RG Channeler.png|game=1|Channeler||720|1|092|Gastly||24|||}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr RG Channeler.png|game=1|Channeler||660|1|093|Haunter||22|||}}
+{{trainerfooter|ghost|1}}
+
+====6F====
+{{trainerheader|ghost}}
+{{trainerentry|Spr RG Channeler.png|game=1|Channeler||660|3|092|Gastly||22||092|Gastly||22||092|Gastly||22|||}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr RG Channeler.png|game=1|Channeler||720|1|092|Gastly||24|||}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr RG Channeler.png|game=1|Channeler||720|1|092|Gastly||24|||}}
+{{trainerfooter|ghost|1}}
+
+====7F====
+====={{game|Red and Blue|s}}=====
+{{trainerheader|ghost}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||750|3|041|Zubat||25||041|Zubat||25||042|Golbat||25|||}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||780|2|109|Koffing||26||096|Drowzee||26|||}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr RG Rocket.png|game=1|Rocket||690|4|041|Zubat||23||019|Rattata||23||020|Raticate||23||041|Zubat||23|||}}
+{{trainerfooter|ghost|1}}
+
+====={{game|Yellow}}=====
+{{Party
+| background = 666
+| border = C00
+| headcolor = CCC
+| sprite = Spr Y Jessie James.png
+| prize = {{PDollar}}810
+| name = {{color2|000|Team Rocket trio|Rocket}}
+| location = Pokémon Tower
+| game = Y
+| pokemon = 3
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0052
+| pokemon = Meowth
+| level = 27
+| type1 = Normal
+| move1 = Growl | move1type = Normal
+| move2 = Bite | move2type = Normal
+| move3 = Pay Day | move3type = Normal
+| move4 = Screech | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0024
+| pokemon = Arbok
+| level = 27
+| type1 = Poison
+| move1 = Leer | move1type = Normal
+| move2 = Poison Sting | move2type = Poison
+| move3 = Bite | move3type = Normal
+| move4 = Glare | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0110
+| pokemon = Weezing
+| level = 27
+| type1 = Poison
+| move1 = Tackle | move1type = Normal
+| move2 = Smog | move2type = Poison
+| move3 = Sludge | move3type = Poison
+}}
+{{Party/end}}
+===Generation III===
+====2F====
+{{Party
+| caption = {{PlayerChoice|0001|Bulbasaur}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr FRLG Blue 2.png
+| prize = {{PDollar}}900
+| class = Rival
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Pokémon Tower
+| game = FRLG
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0017
+| pokemon = Pidgeotto
+| gender = male
+| level = 25
+| type1 = Normal
+| type2 = Flying
+| ability = Keen Eye
+| move1 = Gust | move1type = Flying
+| move2 = Sand-Attack | move2type = Ground
+| move3 = Quick Attack | move3type = Normal
+| move4 = Whirlwind | move4type = Normal
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0064
+| pokemon = Kadabra
+| gender = male
+| level = 20
+| type1 = Psychic
+| ability = Synchronize
+| move1 = Teleport | move1type = Psychic
+| move2 = Confusion | move2type = Psychic
+| move3 = Disable | move3type = Normal
+| move4 = Kinesis | move4type = Psychic
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0102
+| pokemon = Exeggcute
+| gender = male
+| level = 23
+| type1 = Grass
+| type2 = Psychic
+| ability = Chlorophyll
+| move1 = Reflect | move1type = Psychic
+| move2 = Hypnosis | move2type = Psychic
+| move3 = Leech Seed | move3type = Grass
+| move4 = Confusion | move4type = Psychic
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0130
+| pokemon = Gyarados
+| gender = male
+| level = 22
+| type1 = Water
+| type2 = Flying
+| ability = Intimidate
+| move1 = Thrash | move1type = Normal
+| move2 = Bite | move2type = Dark
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0005
+| pokemon = Charmeleon
+| gender = male
+| level = 25
+| type1 = Fire
+| ability = Blaze
+| move1 = SmokeScreen | move1type = Normal
+| move2 = Growl | move2type = Normal
+| move3 = Ember | move3type = Fire
+| move4 = Metal Claw | move4type = Steel
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0004|Charmander}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr FRLG Blue 2.png
+| prize = {{PDollar}}900
+| class = Rival
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Pokémon Tower
+| game = FRLG
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0017
+| pokemon = Pidgeotto
+| gender = male
+| level = 25
+| type1 = Normal
+| type2 = Flying
+| ability = Keen Eye
+| move1 = Gust | move1type = Flying
+| move2 = Sand-Attack | move2type = Ground
+| move3 = Quick Attack | move3type = Normal
+| move4 = Whirlwind | move4type = Normal
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0064
+| pokemon = Kadabra
+| gender = male
+| level = 20
+| type1 = Psychic
+| ability = Synchronize
+| move1 = Teleport | move1type = Psychic
+| move2 = Confusion | move2type = Psychic
+| move3 = Disable | move3type = Normal
+| move4 = Kinesis | move4type = Psychic
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0058
+| pokemon = Growlithe
+| gender = male
+| level = 23
+| type1 = Fire
+| ability = Intimidate
+| move1 = Odor Sleuth | move1type = Normal
+| move2 = Roar | move2type = Normal
+| move3 = Ember | move3type = Fire
+| move4 = Leer | move4type = Normal
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0102
+| pokemon = Exeggcute
+| gender = male
+| level = 22
+| type1 = Grass
+| type2 = Psychic
+| ability = Chlorophyll
+| move1 = Reflect | move1type = Psychic
+| move2 = Hypnosis | move2type = Psychic
+| move3 = Leech Seed | move3type = Grass
+| move4 = Confusion | move4type = Psychic
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0008
+| pokemon = Wartortle
+| gender = male
+| level = 25
+| type1 = Water
+| ability = Torrent
+| move1 = Withdraw | move1type = Water
+| move2 = Rapid Spin | move2type = Normal
+| move3 = Water Gun | move3type = Water
+| move4 = Bite | move4type = Dark
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0007|Squirtle}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr FRLG Blue 2.png
+| prize = {{PDollar}}900
+| class = Rival
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Pokémon Tower
+| game = FRLG
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0017
+| pokemon = Pidgeotto
+| gender = male
+| level = 25
+| type1 = Normal
+| type2 = Flying
+| ability = Keen Eye
+| move1 = Gust | move1type = Flying
+| move2 = Sand-Attack | move2type = Ground
+| move3 = Quick Attack | move3type = Normal
+| move4 = Whirlwind | move4type = Normal
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0064
+| pokemon = Kadabra
+| gender = male
+| level = 20
+| type1 = Psychic
+| ability = Synchronize
+| move1 = Teleport | move1type = Psychic
+| move2 = Confusion | move2type = Psychic
+| move3 = Disable | move3type = Normal
+| move4 = Kinesis | move4type = Psychic
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0130
+| pokemon = Gyarados
+| gender = male
+| level = 23
+| type1 = Water
+| type2 = Flying
+| ability = Intimidate
+| move1 = Thrash | move1type = Normal
+| move2 = Bite | move2type = Dark
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0058
+| pokemon = Growlithe
+| gender = male
+| level = 22
+| type1 = Fire
+| ability = Intimidate
+| move1 = Odor Sleuth | move1type = Normal
+| move2 = Roar | move2type = Normal
+| move3 = Ember | move3type = Fire
+| move4 = Leer | move4type = Normal
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0002
+| pokemon = Ivysaur
+| gender = male
+| level = 25
+| type1 = Grass
+| type2 = Poison
+| ability = Overgrow
+| move1 = Sleep Powder | move1type = Grass
+| move2 = Vine Whip | move2type = Grass
+| move3 = Razor Leaf | move3type = Grass
+| move4 = PoisonPowder | move4type = Poison
+}}
+{{Party/end}}
+====3F====
+{{trainerheader|ghost}}
+{{trainerentry|Spr FRLG Channeler.png|Channeler|Hope|736|1|092|Gastly|♀|23|None|36=アイリ|37=Airi}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr FRLG Channeler.png|Channeler|Patricia|704|1|092|Gastly|♀|22|None|36=コトネ|37=Kotone}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr FRLG Channeler.png|Channeler|Carly|768|1|092|Gastly|♀|24|None|36=トミコ|37=Tomiko}}
+{{trainerfooter|ghost|FRLG}}
+
+====4F====
+{{trainerheader|ghost}}
+{{trainerentry|Spr FRLG Channeler.png|Channeler|Laurel|736|2|092|Gastly|♀|23|None|092|Gastly|♀|23|None|36=ソノコ|37=Sonoko}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr FRLG Channeler.png|Channeler|Jody|704|1|092|Gastly|♀|22|None|36=サユリ|37=Sayuri}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr FRLG Channeler.png|Channeler|Paula|768|1|092|Gastly|♀|24|None|36=ヒイナ|37=Hiina}}
+{{trainerfooter|ghost|FRLG}}
+
+====5F====
+{{trainerheader|ghost}}
+{{trainerentry|Spr FRLG Channeler.png|Channeler|Ruth|704|1|092|Gastly|♀|22|None|36=ヒトエ|37=Hitoe}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr FRLG Channeler.png|Channeler|Tammy|736|1|093|Haunter|♀|23|None|36=ミコト|37=Mikoto}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr FRLG Channeler.png|Channeler|Karina|768|1|092|Gastly|♀|24|None|36=カヨコ|37=Kayoko}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr FRLG Channeler.png|Channeler|Janae|704|1|092|Gastly|♀|22|None|36=シズル|37=Shizuru}}
+{{trainerfooter|ghost|FRLG}}
+
+====6F====
+{{trainerheader|ghost}}
+{{trainerentry|Spr FRLG Channeler.png|Channeler|Angelica|704|3|092|Gastly|♀|22|None|092|Gastly|♀|22|None|092|Gastly|♀|22|None|36=ウキエ|37=Ukie}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr FRLG Channeler.png|Channeler|Jennifer|768|1|092|Gastly|♀|24|None|36=ヤエコ|37=Yaeko}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr FRLG Channeler.png|Channeler|Emilia|768|1|092|Gastly|♀|24|None|36=サワコ|37=Sawako}}
+{{trainerfooter|ghost|FRLG}}
+
+====7F====
+{{trainerheader|ghost}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||800|3|041|Zubat|♂|25||041|Zubat|♂|25||042|Golbat|♂|25||}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||832|2|109|Koffing|♂|26||096|Drowzee|♂|26|None|}}
+{{trainerdiv|ghost}}
+{{trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||736|4|041|Zubat|♂|23||019|Rattata|♂|23|None|020|Raticate|♂|23||041|Zubat|♂|23||}}
+{{trainerfooter|ghost|FRLG}}
+
+===Generation VII===
+====2F====
+{{Party
+| caption = {{PlayerChoice|LGP}}
+| background = {{green color light}}
+| border = {{black color dark}}
+| headcolor = {{black color light}}
+| sprite = VSTrace.png
+| size = x90px
+| prize = {{PDollar}}2,240
+| class = Pokémon Trainer
+| name = {{color2|000|Trace (game)|Trace}}
+| location = Pokémon Tower
+| game = LGP
+| pokemon = 3
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0017
+| pokemon = Pidgeotto
+| gender = male
+| level = 27
+| type1 = Normal
+| type2 = Flying
+| move1 = Quick Attack | move1type = Normal | move1cat = Physical
+| move2 = Wing Attack | move2type = Flying | move2cat = Physical
+| move3 = Sand Attack | move3type = Ground | move3cat = Status
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0044
+| pokemon = Gloom
+| gender = female
+| level = 27
+| type1 = Grass
+| type2 = Poison
+| move1 = Razor Leaf | move1type = Grass | move1cat = Physical
+| move2 = Sleep Powder | move2type = Grass | move2cat = Status
+| move3 = Acid | move3type = Poison | move3cat = Special
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0135
+| pokemon = Jolteon
+| gender = male
+| level = 28
+| type1 = Electric
+| move1 = Thunder Shock | move1type = Electric | move1cat = Special
+| move2 = Quick Attack | move2type = Normal | move2cat = Physical
+| move3 = Pin Missile | move3type = Bug | move3cat = Physical
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|LGE}}
+| background = {{green color light}}
+| border = {{black color dark}}
+| headcolor = {{black color light}}
+| sprite = VSTrace.png
+| size = x90px
+| prize = {{PDollar}}2,240
+| class = Pokémon Trainer
+| name = {{color2|000|Trace (game)|Trace}}
+| location = Pokémon Tower
+| game = LGE
+| pokemon = 3
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0017
+| pokemon = Pidgeotto
+| gender = male
+| level = 27
+| type1 = Normal
+| type2 = Flying
+| move1 = Quick Attack | move1type = Normal | move1cat = Physical
+| move2 = Wing Attack | move2type = Flying | move2cat = Physical
+| move3 = Sand Attack | move3type = Ground | move3cat = Status
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0044
+| pokemon = Gloom
+| gender = female
+| level = 27
+| type1 = Grass
+| type2 = Poison
+| move1 = Razor Leaf | move1type = Grass | move1cat = Physical
+| move2 = Sleep Powder | move2type = Grass | move2cat = Status
+| move3 = Acid | move3type = Poison | move3cat = Special
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0026
+| pokemon = Raichu
+| gender = male
+| level = 28
+| type1 = Electric
+| move1 = Thunder Shock | move1type = Electric | move1cat = Special
+| move2 = Quick Attack | move2type = Normal | move2cat = Physical
+| move3 = Thunder Punch | move3type = Electric | move3cat = Physical
+}}
+{{Party/end}}{{-}}
+
+{{trainerheader|ghost}}
+{{trainerentry|VSCoach Trainer F PE.png{{!}}90px|game=PE|Coach Trainer|Holly|2,800|1|074|Geodude|♀|28|None|36=ヘシマ|37=Heshima}}
+{{trainerfooter|ghost|PE}}
+
+====3F====
+{{trainerheader|ghost}}
+{{Trainerentry|VSChanneler PE.png{{!}}90px|game=PE|Channeler|Hope|1,000<br/>3 {{i|Poké Ball}}s|1|092|Gastly|♂|25|None|36=アイリ|37=Airi}}
+{{trainerdiv|ghost}}
+{{trainerentry|VSChanneler PE.png{{!}}90px|game=PE|Channeler|Patricia|1,000<br/>3 {{i|Poké Ball}}s|2|092|Gastly|♀|25|None|092|Gastly|♂|25|None|36=コトネ|37=Kotone}}
+{{trainerdiv|ghost}}
+{{trainerentry|VSChanneler PE.png{{!}}90px|game=PE|Channeler|Carly|1,000<br/>3 {{i|Poké Ball}}s|1|092|Gastly|♀|25|None|36=トミコ|37=Tomiko}}
+{{trainerfooter|ghost|PE}}
+
+====4F====
+{{trainerheader|ghost}}
+{{trainerentry|VSChanneler PE.png{{!}}90px|game=PE|Channeler|Laurel|1,000<br/>3 {{i|Poké Ball}}s|1|093|Haunter|♀|25|None|36=ソノコ|37=Sonoko}}
+{{trainerdiv|ghost}}
+{{trainerentry|VSChanneler PE.png{{!}}90px|game=PE|Channeler|Jody|1,000<br/>3 {{i|Poké Ball}}s|2|092|Gastly|♀|25|None|093|Haunter|♀|25|None|36=サオリ|37=Saori}}
+{{trainerdiv|ghost}}
+{{trainerentry|VSChanneler PE.png{{!}}90px|game=PE|Channeler|Paula|1,000<br/>3 {{i|Poké Ball}}s|2|092|Gastly|♂|25|None|092|Gastly|♀|25|None|36=ヒイナ|37=Hiina}}
+{{trainerdiv|ghost|After becoming Champion}}
+{{trainerentry/master|VSLass Master PE.png{{!}}90px|game=PE|Lass|Hazel|131|Lapras|♀|75|Grass|Solar Beam|Electric|Thunderbolt|Ghost|Confuse Ray|36=アヤナ|37=Ayana}}
+{{trainerfooter|ghost|PE}}
+
+====5F====
+{{trainerheader|ghost}}
+{{trainerentry|VSChanneler PE.png{{!}}90px|game=PE|Channeler|Ruth|1,000<br/>3 {{i|Poké Ball}}s|1|093|Haunter|♀|25|None|36=ヒトエ|37=Hitoe}}
+{{trainerdiv|ghost}}
+{{trainerentry|VSChanneler PE.png{{!}}90px|game=PE|Channeler|Tammy|1,000<br/>3 {{i|Poké Ball}}s|3|093|Haunter|♀|25|None|092|Gastly|♀|25|None|092|Gastly|♂|25|None|36=ミコト|37=Mikoto}}
+{{trainerdiv|ghost}}
+{{trainerentry|VSChanneler PE.png{{!}}90px|game=PE|Channeler|Karina|1,000<br/>3 {{i|Poké Ball}}s|2|093|Haunter|♂|25|None|092|Gastly|♀|25|None|36=カヨコ|37=Kayoko}}
+{{trainerdiv|ghost}}
+{{trainerentry|VSChanneler PE.png{{!}}90px|game=PE|Channeler|Janae|1,000<br/>3 {{i|Poké Ball}}s|4|092|Gastly|♂|25|None|092|Gastly|♂|25|None|092|Gastly|♂|25|None|092|Gastly|♀|25|None|36=シズル|37=Shizuru}}
+{{trainerdiv|ghost|After becoming Champion}}
+{{trainerentry/master|VSPsychic Master PE.png{{!}}90px|game=PE|Psychic|Vlad|097|Hypno|♂|75|Psychic|Hypnosis|Dark|Nasty Plot|Ghost|Shadow Ball|36=タツジ|37=Tatsuji}}
+{{trainerfooter|ghost|PE}}
+
+====6F====
+{{trainerheader|ghost}}
+{{trainerentry|VSChanneler PE.png{{!}}90px|game=PE|Channeler|Emilia|1,280<br/>3 {{i|Poké Ball}}s|3|093|Haunter|♀|32|None|093|Haunter|♂|32|None|093|Haunter|♀|32|None|36=サワコ|37=Sawako}}
+{{trainerdiv|ghost}}
+{{trainerentry|VSChanneler PE.png{{!}}90px|game=PE|Channeler|Angelica|1,000<br/>3 {{i|Poké Ball}}s|3|092|Gastly|♀|25|None|093|Haunter|♀|25|None|092|Gastly|♂|25|None|36=ウキエ|37=Ukie}}
+{{trainerdiv|ghost}}
+{{trainerentry|VSChanneler PE.png{{!}}90px|game=PE|Channeler|Jennifer|1,000<br/>3 {{i|Poké Ball}}s|1|093|Haunter|♀|25|None|36=ヤエコ|37=Yaeko}}
+{{trainerdiv|ghost|After becoming Champion}}
+{{trainerentry/master|VSLass Master PE.png{{!}}90px|game=PE|Lass|Charlotte|026|Raichu|♀|75|Normal|Headbutt|Normal|Double Team|Normal|Hyper Beam|36=マイコ|37=Maiko}}
+{{trainerfooter|ghost|PE}}
+
+====7F====
+{{Party/2
+| background = 666
+| bordercolor = C00
+| headcolor = CCC
+| location = Pokémon Tower
+| game = PE
+| prize = {{Pdollar}}3,264
+| t-background = F5BCE2
+| t-border = E44EB2
+| sprite = VSJessie PE.png
+| size = 90px
+| class = Team Rocket
+| classlink = Team Rocket
+| name = {{color2|000|Jessie}}
+| pokemon = 1
+| t-background2 = CCDDFF
+| t-border2 = 4D88FF
+| sprite2 = VSJames PE.png
+| size2 = 90px
+| class2 = Team Rocket
+| classlink2 = Team Rocket
+| name2 = {{color2|000|James}}
+| pokemon2 = 1
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0024
+| pokemon = Arbok
+| gender = male
+| level = 34
+| type1 = Poison
+| move1 = Poison Jab | move1type = Poison | move1cat = Physical
+| move2 = Glare | move2type = Normal | move2cat = Status
+| move3 = Crunch | move3type = Dark | move3cat = Physical
+}}
+{{Party/2/div|t-background2 = CCDDFF}}
+{{Pokémon
+| gen = PE
+| ndex = 0110
+| pokemon = Weezing
+| gender = male
+| level = 34
+| type1 = Poison
+| move1 = Dark Pulse | move1type = Dark | move1cat = Special
+| move2 = Sludge Bomb | move2type = Poison | move2cat = Special
+}}
+{{Party/end}}{{-}}
+
+{{trainerheader|ghost}}
+{{trainerdiv|ghost|After becoming Champion}}
+{{trainerentry/master|VSLass Master PE.png{{!}}90px|game=PE|Lass|Emily|070|Weepinbell|♀|70|Poison|Poison Jab|Poison|Sludge Bomb|Normal|Growth|36=ノリコ|37=Noriko}}
+{{trainerfooter|ghost|PE}}
+
+==Differences among generations==
+[[File:Capsule Monsters Tower.jpg|170px|thumb|Concept art]]
+[[File:Pokémon Tower PE.png|thumb|left|240px|The top of Pokémon Tower in Generation VII]]
+In [[Generation II]] and {{gen|IV}}, the tower was converted into the '''Kanto Radio Station''', broadcasting music and radio programs, including the [[Poké Flute]] channel, to the radios and [[Pokégear]] of Kanto. Unlike the [[Goldenrod Radio Tower]] in [[Goldenrod City]], only one floor, the ground floor, is open to the public as a result of [[Team Rocket]]'s infiltration of the Goldenrod Tower. The stairs in [[Generation II]] lead down into a basement instead of up into the tower, but the player is blocked by a guard.
+
+After restoring power to Kanto by fixing the generator at the [[Kanto Power Plant]], Trainers can receive the {{DL|Pokégear|Radio|EXPN Card}} from the manager of the tower, allowing Pokégears to tune into the Poké Flute channel, which can be used to move {{p|Snorlax}} from its slumber in front of [[Diglett's Cave]] in [[Vermilion City]].
+
+To compensate for the loss of the burial site, the graves were moved to a small building, the House of Memories, known as the Soul House in Generation II, at the south end of the town. Most of them were placed in secret chambers that only Mr. Fuji knows about.
+
+There is {{weather|fog}} here in [[Generation III]], but it has no in-battle effect. This is because fog was not used as a {{cat|game mechanics|game mechanic}} until Generation IV.
+
+In [[Generation VII]], several changes were made to the layout. The reception desk on the ground floor has been moved to the upper-right corner, with the rest of the floor space being populated with tables and couches for visitors of the graveyard to use. The upper floors are filled with a ghostly purple mist.
+
+{{main|Radio}}
+{| class="roundy" style="background:#{{kanto color}}; border:3px solid #{{kanto color dark}}" colspan=6 cellspacing="2" cellpadding="4"
+|- 
+! width=15% style="background:#{{kanto color light}}; {{roundytl|5px}}" | Program
+! width=10% style="background:#{{kanto color light}}" | Host(s)
+! width=10% style="background:#{{kanto color light}}" | Channel ([[Pokégear|PG]])
+! width=45% style="background:#{{kanto color light}}" | Description
+! width=10% style="background:#{{kanto color light}}" | EXPN Card?
+! width=10% style="background:#{{kanto color light}}; {{roundytr|5px}}" | Games
+|- style="background:#FFF"
+| Poké Flute
+| (no DJ)
+| 20
+| Plays [[Poké Flute]] music. Used to awaken {{p|Snorlax}}. 
+| Yes
+| {{gameabbrev2|GSC}}
+|- style="background:#FFF"
+| Let's All Sing
+| {{DL|DJ|Fern}}
+| 18.5
+| Broadcasts music, either a march or a lullaby.
+| {{v2|Crystal}} only
+| {{gameabbrev2|C}}
+|-
+| style="background:#FFF; {{roundybl|5px}}" | Places and People
+| style="background:#FFF" | {{DL|DJ|Lily}}
+| style="background:#FFF" | 16.5
+| style="background:#FFF" | Talk show discussing [[Kanto]] locations or Trainers the player has faced.
+| style="background:#FFF" | {{v2|Crystal}} only{{tt|*|Only applies for the Pokégear. Does not apply for the radios in Kanto houses.}}
+| style="background:#FFF; {{roundybr|5px}}" | {{gameabbrev2|C}}
+|}
+
+==Layout==
+===Inside design===
+====Generations I and III====
+{| class="roundy" style="margin:auto; background:#000; border:3px solid #{{locationcolor/dark|ghost}}"
+|-
+! style="background:#{{locationcolor/light|ghost}}; {{roundytl|5px}}" | Version
+! style="background:#{{locationcolor/light|ghost}}" | 1F
+! style="background:#{{locationcolor/light|ghost}}" | 2F
+! style="background:#{{locationcolor/light|ghost}}" | 3F
+! style="background:#{{locationcolor/light|ghost}}" | 4F
+! style="background:#{{locationcolor/light|ghost}}" | 5F
+! style="background:#{{locationcolor/light|ghost}}" | 6F
+! style="background:#{{locationcolor/light|ghost}}; {{roundytr|5px}}" | 7F
+|-
+! style="background:#{{red color}}" | {{color2|000|Pokémon Red and Blue Versions|Red}}
+| rowspan="3" | [[File:Pokémon Tower 1F RBY.png|100px]]
+| rowspan="3" | [[File:Pokémon Tower 2F RBY.png|100px]]
+| rowspan="3" | [[File:Pokémon Tower 3F RBY.png|100px]]
+| rowspan="3" | [[File:Pokémon Tower 4F RBY.png|100px]]
+| rowspan="3" | [[File:Pokémon Tower 5F RBY.png|100px]]
+| rowspan="3" | [[File:Pokémon Tower 6F RBY.png|100px]]
+| rowspan="3" | [[File:Pokémon Tower 7F RBY.png|100px]]
+|-
+! style="background:#{{blue color}}" | {{color2|FFF|Pokémon Red and Blue Versions|Blue}}
+|-
+! style="background:#{{yellow color}}" | {{color2|000|Pokémon Yellow Version|Yellow}}
+|-
+! style="background:#{{firered color}}" | {{color2|000|Pokémon FireRed and LeafGreen Versions|FireRed}}
+| rowspan="2" | [[File:Pokémon Tower 1F FRLG.png|100px]]
+| rowspan="2" | [[File:Pokémon Tower 2F FRLG.png|100px]]
+| rowspan="2" | [[File:Pokémon Tower 3F FRLG.png|100px]]
+| rowspan="2" | [[File:Pokémon Tower 4F FRLG.png|100px]]
+| rowspan="2" | [[File:Pokémon Tower 5F FRLG.png|100px]]
+| rowspan="2" | [[File:Pokémon Tower 6F FRLG.png|100px]]
+| rowspan="2" | [[File:Pokémon Tower 7F FRLG.png|100px]]
+|-
+! style="background:#{{leafgreen color}}" | {{color2|000|Pokémon FireRed and LeafGreen Versions|LeafGreen}}
+|-
+|-
+! style="background:#{{Let's Go Pikachu color}}" | {{color2|000|Pokémon Let's Go, Pikachu! and Let's Go, Eevee!|Let's Go, Pikachu!}}
+| rowspan="2" | [[File:Pokémon Tower 1F LGPE.png|100px]]
+| rowspan="2" | [[File:Pokémon Tower 2F LGPE.png|100px]]
+| rowspan="2" | [[File:Pokémon Tower 3F LGPE.png|100px]]
+| rowspan="2" | [[File:Pokémon Tower 4F LGPE.png|100px]]
+| rowspan="2" | [[File:Pokémon Tower 5F LGPE.png|100px]]
+| rowspan="2" | [[File:Pokémon Tower 6F LGPE.png|100px]]
+| rowspan="2" | [[File:Pokémon Tower 7F LGPE.png|100px]]
+|-
+! style="background:#{{Let's Go Eevee color}}" | {{color2|000|Pokémon Let's Go, Pikachu! and Let's Go, Eevee!|Let's Go, Eevee!}}
+|-
+| colspan="8" style="background:#{{locationcolor/light|ghost}}; {{roundybottom|5px}}" | &nbsp; 
+|}
+
+====Generations II and IV====
+{| class="roundy" style="margin:auto; background:#000; border:3px solid #{{locationcolor/dark|building}}"
+|-
+! style="background:#{{locationcolor/light|building}}; {{roundytl|5px}}" | Version
+! style="background:#{{locationcolor/light|building}}; {{roundytr|5px}}" | 1F
+|-
+! style="background:#{{gold color}}" | {{color2|000|Pokémon Gold and Silver Versions|Gold}}
+| rowspan="3" | [[File:Lavender Radio Tower 1F GSC.png|240px]]
+|-
+! style="background:#{{silver color}}" | {{color2|000|Pokémon Gold and Silver Versions|Silver}}
+|-
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon Crystal Version|Crystal}}
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+| rowspan="2" | [[File:Lavender Radio Tower 1F HGSS.png|240px]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan="2" style="background:#{{locationcolor/light|building}}; {{roundybottom|5px}}" | &nbsp; 
+|}
+
+===Outside design===
+{{Mapgen
+|hv=v
+|colordark={{locationcolor/dark|building}}
+|colorlight={{locationcolor/light|ghost}}
+|genI=Pokémon Tower RBY.png
+|sizeI=96px
+|genII=Lavender Radio Tower GSC.png
+|sizeII=94px
+|genIII=Pokémon Tower FRLG.png
+|sizeIII=110px
+|genIV=Lavender Radio Tower HGSS.png
+|sizeIV=110px
+}}
+
+==In animation==
+===''Pokémon the Series''===
+[[File:Pokémon Tower anime.png|thumb|200px|The Pokémon Tower in {{aniseries|OS}}]]
+In {{aniseries|PTS}}, the Pokémon Tower is depicted as a decrepit mansion rather than a graveyard as it is in the {{pkmn|games}}. The exterior of the tower looks significantly smaller than what the game depicts it to be. It has a two horn-like objects protruding from the side of the tower, a balcony that appears to be a mouth and two eye-like windows on the very top of it, giving it a demonic appearance. There are also several other balconies and windows on the building.
+
+The floors seem to be unstable, as [[James]] fell through to the lower floor due to a single step, although it took the weight of the entire Team Rocket trio to break through the lower floor to the basement. The tower appears to have numerous rooms including a nursery, a dining room, and the aforementioned basement.
+
+===={{aniseries|OS}}====
+The Pokémon Tower appeared in ''[[EP023|The Tower of Terror]]'', where {{Ash}} visited it after losing his [[Gym]] {{pkmn|battle}} against [[Sabrina]], and being advised by [[Sabrina's father]] to go to Lavender Town to catch himself a Ghost Pokémon in order to defeat Sabrina's {{t|Psychic}} Pokémon. {{an|Misty}} and {{an|Brock}} quickly got scared of the seemingly inexplicable events happening inside of the tower, and left Ash to conduct his search alone. He finally encountered {{TP|Sabrina|Haunter}} and {{p|Gengar}}, two of the three residents of the tower. He tried to battle them, but soon found out that they were more interested in physical comedy than battling. As their comedy routine didn't work on Ash, the ghosts got sad and sank through the floor in depression. Ash tried to dive after them, but only ended up hitting the floor, causing an old chandelier to fall on him and {{AP|Pikachu}}, killing them. Haunter then turned Ash and Pikachu into ghosts, and the two had some fun with the three ghosts, including playing some pranks with Brock and Misty, before eventually returning to their bodies. However, Haunter had enjoyed its time with Ash so much that it decided to follow him to [[Saffron City]].
+
+Unbeknownst by Ash and {{ashfr}}, {{TRT}} had also been hiding in the tower, seeking for a chance to steal Pikachu. Their plans were foiled, however, due to breaking floors and the pranks of the Ghost Pokémon. Ash even mistook their noises in the basement for the Ghost Pokémon, and had his Pikachu and {{AP|Charmander}} attack them, eventually even throwing a [[Poké Ball]] at [[Jessie]]'s face. At the end of the episode, the Team Rocket trio was seen tied up in {{p|Gastly}}, Haunter, and Gengar's carousel, forcing them to stay with the Ghost Pokémon for a while.
+
+====Pokémon====
+{| style="float:left; width:100%"
+|-
+| {{ActivePoké|Pokémon Tower|Gastly|Pokémon Tower Gastly.png|ghost|poison|link=no}}
+| {{ActivePoké|Pokémon Tower|Gengar|Pokémon Tower Gengar.png|ghost|poison|link=no}}
+|
+|}{{-}}
+
+=====Pokémon previously seen at the Pokémon Tower=====
+{| width="100%"
+|-
+| {{ActivePoké|Sabrina|Haunter|Sabrina Haunter.png|ghost|poison}}
+|
+|}
+
+===Pokémon Origins===
+[[File:Pokémon Tower PO.png|thumb|250px|The Pokémon Tower in [[Pokémon Origins]]]]
+The Pokémon Tower first appeared in ''[[PO02|File 2: Cubone]]'', playing a similar role as in {{game|Red and Blue|s}}.
+
+Once {{OBP|Red|Origins}} arrived in Lavender Town, he soon heard rumors about a [[Ghosts in the Pokémon world|ghost]] that has been appearing in the Pokémon Tower, where people go to pay their respects to their deceased Pokémon. While visiting the {{DL|Lavender Town|Lavender Volunteer Pokémon House|Pokémon House}}, Red learned that Team Rocket had recently invaded the tower and made its top floor their base. Upon hearing that Mr. Fuji had been taken hostage by Team Rocket when he had tried to convince them to leave, Red decided to go to the Pokémon Tower and save Mr. Fuji. {{OBP|Blue|Origins}} overheard the conversation and decided to defeat Team Rocket and save Mr. Fuji himself, so that ''he'' would be the revered hero of Lavender Town.
+
+Initially, Blue believed that the ghost rumors were set up by Team Rocket to scare unwanted visitors away, but when he reached the sixth floor, he found himself attacked by a real ghost, and ran away in fear. His scream was heard by the Team Rocket members on the top floor, and one of them went to investigate. Blue soon bumped into Red, who had also come to the tower. As the ghost followed them, Red refused to run away, and sent his {{TP|Red|Charmeleon}} to battle the ghost. During the battle, Blue managed to sneak past the ghost and make his way to the upper floors, where he encountered the {{tc|Team Rocket Grunt}} with the [[Silph Scope]]. He quickly defeated the Grunt with his {{p|Wartortle}}, snatched the Silph Scope, and rushed it to Red, who had found his attacks to be useless against the ghost. With the Silph Scope, Red discovered that the ghost was actually the spirit of {{OBP|Marowak|ghost}}, a Pokémon that had been killed by Team Rocket. Before the battle could go on, [[Reina]] arrived with {{p|Cubone}}, Marowak's child. Seeing her child once again, Marowak finally found peace, and departed to the afterlife. Red then made his way to the top floor, where he battled one of the Team Rocket Grunts with his {{p|Jolteon}}. With the help of Cubone, Jolteon was able to beat the Grunt's {{p|Koffing}}, forcing the Rockets to retreat in defeat. Mr. Fuji was then rescued, and the tower was opened to the public once again.
+
+The Pokémon Tower made a brief cameo appearance in ''[[PO04|File 4: Charizard]]'' during an overview of Lavender Town.
+
+====Pokémon====
+{| style="float:left; width:100%"
+|-
+| {{ActivePoké|Pokémon Tower|Marowak|Silph Scope Marowak PO.png|ground|nick=Marowak (ghost)}} ♀
+|
+|}
+{{-}}
+
+==In the manga==
+===Pokémon Adventures===
+[[File:Pokémon Tower Adventures.png|thumb|200px|Pokémon Tower in [[Pokémon Adventures]]]]
+===={{MangaArc|Red, Green & Blue}}====
+The Pokémon Tower appeared in ''[[PS013|Sigh for Psyduck]]'' and ''[[PS014|That Awful Arbok!]]''. When {{adv|Red}} had come to Lavender Town, he found out from [[Mr. Fuji]] that there are stories of Pokémon ghosts that appear from the tower. After learning that {{adv|Blue}} had gone inside and not returned for two weeks, Red decided to investigate the area.
+
+Upon entering, Red was attacked by various zombie Pokémon that were being controlled by a mysterious purple fog. In addition, he discovered that Blue and his {{TP|Blue|Charmeleon}} were also being controlled by the fog. Once he figured out that the fog was actually a {{p|Gastly}}, Red managed to free Blue and Charmeleon upon defeating the culprit. The Gastly's owner was subsequently revealed to be [[Koga]], a [[Gym Leader]] working for [[Team Rocket]], who had taken over the tower as a base for the organization. The tower was damaged when Koga's {{p|Arbok}} kept using {{m|Acid}} to attack Red and Blue, but was repaired by the townspeople after Koga was defeated and driven off.
+
+====Pokémon====
+{| style="float:left; width:100px"
+|-
+| {{InactivePoké|Pokémon Tower|Psyduck|Pokémon Tower Psyduck Adventures.png|water|link=no}} (zombie)
+| {{InactivePoké|Pokémon Tower|Lickitung|Pokémon Tower Lickitung Slowbro Adventures.png|normal|link=no}} (multiple; zombies)
+| {{InactivePoké|Pokémon Tower|Slowbro|Pokémon Tower Lickitung Slowbro Adventures.png|water|psychic|link=no}} (multiple; zombies)
+| {{InactivePoké|Pokémon Tower|Tangela|Pokémon Tower Tangela Slowpoke Adventures.png|grass|link=no}} (multiple; zombies)
+|-
+| {{InactivePoké|Pokémon Tower|Slowpoke|Pokémon Tower Tangela Slowpoke Adventures.png|water|psychic|link=no}} (multiple; zombies)
+| {{InactivePoké|Koga|Gastly|Koga Gastly Adventures.png|ghost|poison|link=no}}
+| {{InactivePoké|Koga|Arbok|Koga Arbok Acid Adventures.png|poison|link=no}}
+|}{{left clear}}
+
+===The Electric Tale of Pikachu===
+[[File:Pokémon Tower EToP.png|thumb|250px|Pokémon Tower in [[The Electric Tale of Pikachu]]]]
+The Pokémon Tower appeared in ''[[ET04|Haunting My Dreams]]''. It was the home to a group of {{p|Gastly}} and their leader, a {{pkmn2|giant}} {{p|Haunter}} called the [[Black Fog]]. After the Black Fog had sucked out [[Sabrina]]'s soul with its {{m|Dream Eater}} attack, {{OBP|Ash Ketchum|EToP|Ash}} led a group of {{pkmn|Trainer}}s to [[Lavender Town]], their plan being to capture the Black Fog in a giant [[Poké Ball]]. Although the capture initially seemed successful, the Black Fog escaped by using {{m|Explosion}} to destroy the capture device from the inside. This act, however, left it severely weakened and vulnerable to regular Poké Balls. With this advantage on his side, Ash chased the Black Fog into the tower and managed to corner it, attempting to catch the giant [[Pokémon category|Gas Pokémon]] with an [[Ultra Ball]]. However, just before the ball could make contact with the Black Fog, it used {{m|Self-Destruct}}, killing itself and collapsing the tower. With its death, Sabrina recovered and {{m|teleport}}ed to the site. It was then revealed that past people had treated the Black Fog as a god, and, having gotten used to this treatment, it had chosen to kill itself rather than be caught by a human. Ash, though, was left saddened for having wasted all of his allowance on the Ultra Ball that he had just lost.
+
+====Pokémon====
+{| style="float:left; width:100px"
+|-
+| {{InactivePoké|Pokémon Tower|Gastly|Gastly EToP.png|ghost|poison|link=no}} (multiple)
+| {{InactivePoké|Pokémon Tower|Haunter|Black Fog.png|ghost|poison|nick=Black Fog}}
+|}{{left clear}}
+
+===Magical Pokémon Journey===
+[[File:Pokemon Tower MPJ.png|thumb|250px|Pokémon Tower in [[Magical Pokémon Journey]]]]
+The Pokémon Tower debuted in ''[[PPPB14|Raichu's Best Friend]]''. When {{MPJ|Pikachu}} and his friend see a picture that they took, they spot a [[Ghosts in the Pokémon world|ghost]] within the picture. Afterwards, the ghost returns and switches to her human form. The ghost turns out to be a girl named {{MPJ|Sandy}} who wants the group to do a favor for her and find her [[Sandy's Raichu|friend]]. Sandy sends the group to the Pokémon Tower in order to find her Raichu.
+
+Once the group enters the tower, they are bombarded by many {{OBP|ghost|Pokémon Tower}}s of the deceased Pokémon within the tower.
+
+====Pokémon====
+{| style="float:left; width:100px"
+|-
+| {{InactivePoké|Sandy|Raichu|Sandy Raichu.png|size=120px|electric}} ♂
+| {{InactivePoké|Pokémon Tower|Psyduck|Pokémon Tower spirits MPJ.png|water|link=no}} (multiple)
+| {{InactivePoké|Pokémon Tower|Golbat|Pokémon Tower spirits MPJ.png|poison|flying|link=no}}
+| {{InactivePoké|Pokémon Tower|Charmander|Pokémon Tower spirits MPJ.png|fire|link=no}}
+|-
+| {{InactivePoké|Pokémon Tower|Poliwag|Pokémon Tower spirits MPJ.png|water|link=no}}
+| {{InactivePoké|Pokémon Tower|Victreebel|Pokémon Tower spirits MPJ.png|grass|poison|link=no}}
+| {{InactivePoké|Pokémon Tower|Ninetales|Pokémon Tower spirits MPJ.png|fire|link=no}}
+| {{InactivePoké|Pokémon Tower|Growlithe|Pokémon Tower spirits MPJ.png|fire|link=no}}
+|}{{left clear}}
+
+===Pokémon Zensho===
+[[File:Pokémon Tower Zensho.png|thumb|150px|Pokémon Tower in [[Pokémon Zensho]]]]
+The Pokémon Tower appeared in [[PZ05]]. After visiting the {{DL|Lavender Town|Lavender Volunteer Pokémon House|Pokémon House}} and learning how [[Mr. Fuji]] had gone into the tower several days earlier but not returned, {{zensho|Satoshi}} tried to enter it, but was scared away by the {{OBP|ghost|Pokémon Tower}}s inside. He then witnessed two {{tc|Team Rocket Grunt}}s exiting the tower and overheard them talking about the [[Silph Scope]]. As such, he decided to follow them.
+
+After having managed to snatch himself a Silph Scope from [[Team Rocket Hideout|Team Rocket's hideout]] in [[Celadon City]], Satoshi returned to the Pokémon Tower, now being able to identify the ghosts inside as {{type|Ghost}} Pokémon. At the top floor, he found Mr. Fuji, who was being held hostage by [[Giovanni]] and a pair of Team Rocket Grunts. Giovanni summoned the spirit of his dead {{p|Machamp}} to attack Satoshi, but another ghost suddenly appeared and defeated Machamp, driving [[Team Rocket]] off. With Team Rocket gone, Mr. Fuji was able to calm the ghost's spirit, revealing that it was actually a {{OBP|Marowak|ghost}} killed by Team Rocket, which was now able to peacefully depart into the afterlife. As thanks for saving him, Mr. Fuji gave Satoshi the [[Poké Flute]] that Team Rocket had been after.
+
+====Pokémon====
+{| style="float:left; width:100px"
+|-
+| {{InactivePoké|Pokémon Tower|Gastly|Pokémon Tower Gastly Gengar Zensho.png|ghost|poison|link=no}}
+| {{InactivePoké|Pokémon Tower|Gengar|Pokémon Tower Gastly Gengar Zensho.png|ghost|poison|link=no}}
+| {{InactivePoké|Giovanni|Machamp|Giovanni Machamp Zensho.png|fighting|link=no}}
+| {{InactivePoké|Pokémon Tower|Marowak|Marowak ghost Zensho.png|ground|nick=Marowak (ghost)}}
+|}{{left clear}}
+
+==In the TCG==
+This listing is of cards mentioning and/or featuring the Pokémon Tower in the {{pkmn|Trading Card Game|Pokémon Trading Card Game}}.
+
+{{cardlist/header|Related cards|Trainer|char=yes}}
+{{cardlist/entry|cardname={{TCG ID|Wizards Promo|Pokémon Tower|42}}|type=Trainer|type2=Stadium|enset=Wizards Black Star Promos|ennum=42|jpsetlink=Vending Machine cards|jpset=Expansion Sheet 3|jprarity=Uncommon}}
+{{cardlist/entry|cardname={{TCG ID|Team Up|Lavender Town|147}}|type=Stadium|enset=Team Up|enrarity=Uncommon|ennum=147/181|jpset=Tag Bolt|jprarity=Uncommon|jpnum=90/95}}
+{{cardlist/footer|Trainer}}
+
+==In the magazines==
+[[File:Pokémon Tower - Pokémon Power.png|thumb|250px|News about the Pokémon Tower<br>(''{{OBP|Pokémon Power|magazine}}'' magazine)]]
+===''Pokémon Power''===
+In ''{{OBP|Pokémon Power|magazine}}'' (issue 2, page 3), it is said that visitors have reported seeing ghosts in the Pokémon Tower these days. This article also makes a reference to the TV show ''{{wp|The X-Files}}'' by mentioning that the government has sent special agents Sculder and Mully (based on Mulder and Scully from the show) to investigate the Pokémon Tower.
+{{-}}
+
+==Trivia==
+* The song for the Pokémon Tower was briefly arranged for the song [[Ghost Dive (song)|Ghost Dive]].
+* In [[Generation I]], walking inside or leaving the healing area on the fifth floor do not reduce the duration of [[Repel]], [[Super Repel]], or [[Max Repel]]. However, entering the healing area counts as a regular step.
+* In [[Generation I]] only, the player will be unable to defeat the {{tc|Channeler}}s and reach the end of the Pokémon Tower if there are no available moves (with [[PP]] remaining) that can damage {{type|Ghost}} Pokémon, either directly or indirectly such as via {{status|confusion}}. This is due to the fact that in this generation, Ghost-type Pokémon are immune to {{m|Struggle}} (being a {{type|Normal}} move) and all opposing Pokémon have infinite PP. This applies to the battle against [[Agatha]] at the [[Indigo Plateau]] as well.
+** In particular, it is not possible to win those battles with a team consisting of {{p|Caterpie}} and/or {{p|Metapod}} as well as {{p|Magikarp}} without specific event moves. If no moves are learned from [[TM]]s, events, or from other games, then a total of 25{{sup/1|RB}} or 24{{sup/1|Y}} Pokémon species would be unable to win: the three previously mentioned, as well as {{p|Abra}}, {{p|Voltorb}}, {{p|Electrode}}, {{p|Pinsir}}, {{p|Scyther}}{{sup/1|RB}}, all the pure {{type|Normal}} Pokémon other than {{p|Clefairy}}, {{p|Ditto}}, and {{p|Porygon}}, and all the pure {{type|Fighting}} Pokémon other than {{p|Hitmonchan}}.
+
+==In other languages==
+{{langtable|color={{locationcolor/light|ghost}}|bordercolor={{locationcolor/dark|ghost}}
+|zh_yue=寶可夢塔 ''{{tt|Pokémon Taap|Pokémon Tower}}'' {{tt|*|Games}}<br>寵物小精靈的魔塔 ''{{tt|Chúngmaht Síujīnglìhng dīk Mōtaap|Pocket Monster Haunted Tower}}'' {{tt|*|Adventures}}<br>寵物小精靈塔 ''{{tt|Chúngmaht Síujīnglìhng Taap|Pocket Monster Tower}}'' {{tt|*|Zensho}}<br>小精靈高塔 ''{{tt|Síujīnglìhng dīk Mōtaap|Pokémon High Tower}}'' {{tt|*|Animated series}}
+|zh_cmn=寶可夢塔 / 宝可梦塔 ''{{tt|Pokémon Tǎ|Pokémon Tower}}'' {{tt|*|Games}}<br>神奇寶貝的靈骨塔 / 神奇宝贝的灵骨塔 ''{{tt|Shénqíbǎobèi de Línggǔtǎ|Pokémon Spirit Bone Tower}}'' {{tt|*|Adventures (Taiwan & Mainland China (old Jilin edition))}}<br>神奇寶貝塔 / 神奇宝贝塔 ''{{tt|Shénqíbǎobèi Tǎ|Pokémon Tower}}'' {{tt|*|Animated series & Zensho (Taiwan), Guidebook (Mainland China (21st Century Publishing Group))}}<br>宝可梦的灵骨塔 ''{{tt|Pokémon de Línggǔtǎ|Pokémon Spirit Bone Tower}}'' {{tt|*|Adventures (Mainland China (new Jilin edition))}}<br>宠物小精灵的灵骨塔 ''{{tt|Chǒngwùxiǎojīnglíng de Línggǔtǎ|Pocket Monster Spirit Bone Tower}}'' {{tt|*|Adventures (Mainland China (Light Industry Press edition))}}<br>宠物小精灵塔 ''{{tt|Chǒngwùxiǎojīnglíng Tǎ|Pocket Monster Tower}}'' {{tt|*|Pokédex (Mainland China (21st Century Publishing Group)) & Animated series (Mainland China)}}<br>小精灵塔 ''{{tt|Xiǎojīnglíng Tǎ|Pokémon Tower}}'' {{tt|*|Let's Find Pokémon! (Mainland China) & Animated series (Mainland China)}}
+|da=Pokémon-tårnet<!--source: Danish version of The Official Pokémon Handbook-->
+|fi=Pokémon-torni
+|fr=Tour Pokémon
+|de=Pokémon-Turm
+|it=Torre Pokémon
+|ko=포켓몬타워 ''Pokémon Tower''
+|no=Pokémontårnet
+|pl=Wieża Pokémonów
+|tr=Pokémon Kulesi
+|pt=Torre Pokémon
+|es=Torre Pokémon
+|sv=Pokémon-tornet
+|vi=Tháp Pokémon
+}}
+
+==Related articles==
+* [[Goldenrod Radio Tower]]
+
+{{Burial grounds}}
+{{Kanto}}
+{{Project Locations notice}}
+
+[[Category:Red, Blue and Yellow locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:FireRed and LeafGreen locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Let's Go, Pikachu! and Let's Go, Eevee! locations]]
+[[Category:Towers]]
+[[Category:Monuments]]
+[[Category:Offices]]
+[[Category:Pokémon world media]]
+
+[[de:Pokémon-Turm]]
+[[es:Torre Pokémon]]
+[[fr:Tour Pokémon]]
+[[it:Torre Pokémon]]
+[[ja:ポケモンタワー]]
+[[zh:宝可梦塔]]
