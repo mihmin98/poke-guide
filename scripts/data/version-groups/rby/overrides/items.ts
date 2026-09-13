@@ -60,6 +60,43 @@ export const RBY_ITEM_OVERRIDES: ItemOverrides = {
     rooftopTm('TM13 Ice Beam', 'Fresh Water'),
     rooftopTm('TM48 Rock Slide', 'Soda Pop'),
     rooftopTm('TM49 Tri Attack', 'Lemonade'),
+    {
+      locationId: 'pallet-town',
+      item: { name: 'Potion', quantity: 1, games: ALL, obtain: 'gift', subArea: "Player's house", where: "Stored in the player's PC at the start of the game" },
+      sourcePage: walkthrough(1),
+      reason: "The player's house is not a location page",
+    },
+    {
+      // pret pokered/pokeyellow data/maps/objects/ViridianGym.asm: REVIVE item ball at (16, 9).
+      locationId: 'viridian-city',
+      item: { name: 'Revive', quantity: 1, games: ALL, obtain: 'pickup', subArea: 'Gym', where: 'Inside Viridian Gym', fromPart: { red: 14, blue: 14, yellow: 14 } },
+      sourcePage: walkthrough(2),
+      reason: 'Gym pages are not locations; the Gym only opens in Part 14',
+    },
+  ],
+  patch: [
+    {
+      // pret pokered scripts/Route15Gate2F.asm gives EXP_ALL after 50 species; Exp. Share is the Gen II+ item.
+      locationId: 'route-15',
+      itemId: 'exp-share',
+      set: { name: 'Exp. All' },
+      sourcePage: walkthrough(12),
+      reason: 'The location page uses the later name; Gen I has EXP.ALL (https://github.com/pret/pokered/blob/master/scripts/Route15Gate2F.asm)',
+    },
+  ],
+  walkthroughAccepted: [
+    {
+      itemId: 'poke-ball',
+      games: ALL,
+      reason: "Oak's 5 Poké Balls (Professor Oak's Laboratory) are not in the walkthrough",
+    },
+  ],
+  walkthroughGames: [
+    {
+      page: 'Walkthrough:Pokémon Yellow/Part 3',
+      games: ['yellow'],
+      reason: 'Its Viridian Forest rows are flagged R/B; pret pokeyellow ViridianForest.asm matches the Yellow rows',
+    },
   ],
   requires: [
     ...['protein', 'hp-up', 'x-accuracy', 'tm03-swords-dance'].map((itemId) => ({

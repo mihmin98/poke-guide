@@ -104,6 +104,27 @@ describe('applyItemOverrides', () => {
     ]);
   });
 
+  it('patches exactly one item, renaming its id', () => {
+    const locations = [location('route-15', [item('Exp. Share'), item('Potion', { subArea: '1F' }), item('Potion', { subArea: '2F' })])];
+    const rule = { locationId: 'route-15', sourcePage: 'Walkthrough', reason: 'fix' };
+    const errors = applyItemOverrides(
+      locations,
+      overrides({
+        patch: [
+          { ...rule, itemId: 'exp-share', set: { name: 'Exp. All' } },
+          { ...rule, itemId: 'potion', set: { quantity: 2 } },
+          { ...rule, itemId: 'potion', subArea: '2F', set: { quantity: 1 } },
+        ],
+      }),
+      sourceOf,
+    );
+    expect(errors).toEqual([
+      'Item patch for potion in route-15 matches 2 items, expected 1',
+      'Item patch for potion in route-15 changes nothing',
+    ]);
+    expect(locations[0]!.items[0]).toMatchObject({ itemId: 'exp-all', name: 'Exp. All' });
+  });
+
   it('marks choice groups', () => {
     const locations = [
       location('mt-moon', [item('Dome Fossil', { obtain: 'choice' }), item('Helix Fossil', { obtain: 'choice' })]),
@@ -160,5 +181,9 @@ describe('diffWalkthroughItems', () => {
       { page: 'RB/Part 1', message: 'Iron: the walkthrough says it requires cut ("Somewhere")' },
       { page: 'Part 3', message: 'Nugget: ×0 in the walkthrough, ×1 in the location data' },
     ]);
+    const accepted = [{ itemId: 'potion', games: ['red', 'blue'] as const, reason: 'on purpose' }];
+    expect(diffWalkthroughItems(locations, walkthrough, accepted).map((m) => m.message)).not.toContain(
+      'Potion: ×1 in the walkthrough, ×2 in the location data',
+    );
   });
 });

@@ -32,12 +32,40 @@ export interface ItemChoiceGroup {
   groupId: string;
 }
 
+/** Corrects fields of exactly one parsed item; a new name also changes its id. */
+export interface ItemPatch {
+  locationId: string;
+  itemId: string;
+  subArea?: string;
+  set: Partial<Pick<LocationItem, 'name' | 'quantity' | 'games' | 'where' | 'obtain'>>;
+  /** Page that shows the correct value (or a source link in `reason`); its revid is recorded. */
+  sourcePage: string;
+  reason: string;
+}
+
+/** A walkthrough quantity difference that is expected (items left out on purpose). */
+export interface WalkthroughAccepted {
+  itemId: string;
+  games: readonly GameId[];
+  reason: string;
+}
+
+/** Walkthrough part page whose rows carry the wrong game flags; its rows count for these games instead. */
+export interface WalkthroughGamesFix {
+  page: string;
+  games: readonly GameId[];
+  reason: string;
+}
+
 export interface ItemOverrides {
   /** Plain-text `(requires …)` terms → unlock ids; `null` drops a term that belongs to other games. */
   requirementPhrases: Readonly<Record<string, string | null>>;
   add: readonly ItemAddition[];
   requires: readonly ItemRequirementOverride[];
   choiceGroups: readonly ItemChoiceGroup[];
+  patch?: readonly ItemPatch[];
+  walkthroughAccepted?: readonly WalkthroughAccepted[];
+  walkthroughGames?: readonly WalkthroughGamesFix[];
 }
 
 /** Looks a page up (recording it as a source); `null` when it's not available, which the lookup reports itself. */
@@ -71,6 +99,29 @@ export function applyItemOverrides(
     if (!location) errors.push(`Item override for ${what} names unknown location "${id}"`);
     return location;
   };
+
+  for (const patch of overrides.patch ?? []) {
+    const location = locationOf(patch.locationId, patch.itemId);
+    if (!location) continue;
+    const matches = location.items.filter(
+      (i) => i.itemId === patch.itemId && (patch.subArea === undefined || i.subArea === patch.subArea),
+    );
+    if (matches.length !== 1) {
+      errors.push(`Item patch for ${patch.itemId} in ${location.id} matches ${matches.length} items, expected 1`);
+      continue;
+    }
+    const item = matches[0]!;
+    const unchanged = Object.entries(patch.set).every(
+      ([key, value]) => JSON.stringify(item[key as keyof LocationItem]) === JSON.stringify(value),
+    );
+    if (unchanged) {
+      errors.push(`Item patch for ${patch.itemId} in ${location.id} changes nothing`);
+      continue;
+    }
+    if (!sourceOf(patch.sourcePage)) continue;
+    Object.assign(item, patch.set);
+    if (patch.set.name !== undefined) item.itemId = slugify(patch.set.name);
+  }
 
   for (const addition of overrides.add) {
     const location = locationOf(addition.locationId, addition.item.name);
@@ -172,6 +223,7 @@ function tally(map: Map<string, Tally>, part: number, item: LocationItem): void 
 export function diffWalkthroughItems(
   locations: readonly GameLocation[],
   walkthrough: readonly WalkthroughItems[],
+  accepted: readonly WalkthroughAccepted[] = [],
 ): PageMessage[] {
   const messages: PageMessage[] = [];
   const seen = new Set<string>();
@@ -208,7 +260,8 @@ export function diffWalkthroughItems(
       const inData = located.get(key);
       const inWalkthrough = listed.get(key);
       const name = (inData ?? inWalkthrough)!.name;
-      if ((inData?.quantity ?? 0) !== (inWalkthrough?.quantity ?? 0)) {
+      const isAccepted = accepted.some((a) => a.itemId === key && a.games.includes(game));
+      if (!isAccepted && (inData?.quantity ?? 0) !== (inWalkthrough?.quantity ?? 0)) {
         push(
           page,
           `${name}: ×${inWalkthrough?.quantity ?? 0} in the walkthrough, ×${inData?.quantity ?? 0} in the location data`,

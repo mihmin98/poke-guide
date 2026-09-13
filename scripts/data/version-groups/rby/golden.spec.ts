@@ -113,9 +113,9 @@ describe('rby data: items (plan §7.13)', () => {
   it('has per-game item totals, including the overrides', () => {
     const all = data.locations.flatMap((l) => l.items);
     expect(Object.fromEntries(data.games.map((g) => [g, all.filter((i) => i.games.includes(g)).length]))).toEqual({
-      red: 214,
-      blue: 214,
-      yellow: 219,
+      red: 216,
+      blue: 216,
+      yellow: 221,
     });
   });
 
@@ -168,6 +168,13 @@ describe('rby data: items (plan §7.13)', () => {
     expect(find('silph-co', 'tm03-swords-dance')[0]!.requires).toEqual([['card-key']]);
     expect(find('victory-road', 'tm43-sky-attack')[0]!.requires).toEqual([['strength']]);
     expect(items('sea-cottage').map((i) => i.name)).toEqual(['S.S. Ticket']);
+    expect(find('viridian-city', 'revive')[0]).toMatchObject({ subArea: 'Gym', fromPart: { red: 14, blue: 14, yellow: 14 } });
+    expect(find('pallet-town', 'potion')[0]).toMatchObject({ obtain: 'gift', subArea: "Player's house" });
+  });
+
+  it('patches the Route 15 aide item to the Gen I name', () => {
+    expect(find('route-15', 'exp-share')).toEqual([]);
+    expect(find('route-15', 'exp-all')[0]).toMatchObject({ name: 'Exp. All', obtain: 'gift' });
   });
 
   it('only requires unlocks of the item’s games, and lists walkthrough pages as sources', () => {

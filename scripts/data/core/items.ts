@@ -184,8 +184,8 @@ function walkRows(
       issue('error', `Item row without a location text: ${source}`);
       continue;
     }
-    // Temporary items (the Safari Zone's Safari Balls) are out of scope.
-    if (/\bcannot be kept\b/i.test(plain(whereRaw))) continue;
+    // Temporary items (the Safari Zone's Safari Balls) are out of scope. Walkthroughs say "Loaned".
+    if (/\bcannot be kept\b|^loaned\b/i.test(plain(whereRaw))) continue;
 
     const spots = whereRaw.startsWith('*')
       ? whereRaw

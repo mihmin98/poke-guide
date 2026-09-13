@@ -457,9 +457,16 @@ export function assembleVersionGroup(
       walkthroughRows.set(title, rows);
     }
     const rows = walkthroughRows.get(title);
-    if (rows) walkthroughItems.push({ page: title, part, game, items: rows.items });
+    if (!rows) continue;
+    const fix = config.overrides.items.walkthroughGames?.find((f) => f.page === title);
+    const items = fix ? rows.items.map((i) => ({ ...i, games: [...fix.games] })) : rows.items;
+    walkthroughItems.push({ page: title, part, game, items });
   }
-  for (const { page, message } of diffWalkthroughItems(locations, walkthroughItems))
+  for (const fix of config.overrides.items.walkthroughGames ?? []) {
+    if (!walkthroughRows.has(fix.page)) issue('error', `Walkthrough games fix names unknown page "${fix.page}"`);
+  }
+  const accepted = config.overrides.items.walkthroughAccepted;
+  for (const { page, message } of diffWalkthroughItems(locations, walkthroughItems, accepted))
     issue('warning', message, page);
 
   if (options.categoryMembers)

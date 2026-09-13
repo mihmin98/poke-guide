@@ -414,7 +414,7 @@ export interface VersionGroupConfig {
     unlocks: Unlock[];
     eventOnly: number[];
     patches: Patch[];
-    items: ItemOverrides;                      // add, requires, patch, requirementPhrases, choiceGroups (§7.13)
+    items: ItemOverrides;                      // add, requires, patch, requirementPhrases, choiceGroups, walkthroughAccepted, walkthroughGames (§7.13)
   };
   sprites: Partial<Record<GameId, { setId: string; filePattern: string }>>; // 'Spr_1y_{dex3}.png'
 }
@@ -712,7 +712,8 @@ A Gold/Silver/Crystal slot would look like `{ "levels": {…}, "rate": {"kind":"
     - Gym leader TMs on their city (`subArea: 'Gym'`, sourced from the walkthrough parts). Viridian Gym's TM27 gets `fromPart: 14`.
     - The rooftop TMs on Celadon Department Store (`gift`, "give her a Fresh Water / Soda Pop / Lemonade").
   - `requires`: unstated gates, matched by `(locationId, itemId, where substring)`, e.g. Silph Co. rooms behind Card Key doors. Curated from the walkthrough text and checked against the pret disassembly maps.
-  - `patch` (not implemented yet): name and quantity corrections, e.g. Route 15 `Exp. Share` → `Exp. All` once confirmed (open question 17).
+  - `patch`: corrects fields (name, quantity, games, where, obtain) of exactly one parsed item; a new name changes the id. Route 15 `Exp. Share` → `Exp. All` (pret `Route15Gate2F.asm`). A patch that matches ≠ 1 item or changes nothing is an error.
+  - `walkthroughAccepted`: item/game quantity differences that are expected (Oak's 5 Poké Balls). `walkthroughGames`: a walkthrough part page whose rows carry wrong game flags (Yellow Part 3). Walkthrough rows whose text starts "Loaned" (Safari Balls) are skipped like "cannot be kept".
   - Additions and requirement overrides name a `sourcePage`; the build fetches it and records its revid (in the item's `source` and in `sources`).
   - `requirementPhrases`: non-standard `(requires …)` terms → unlock ids.
   - `choiceGroups`: Mt. Moon Helix/Dome Fossil → the `mt-moon-fossil` exclusive group id.
