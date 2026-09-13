@@ -163,7 +163,8 @@ Phase 1. Done this session: catch-rate history, evolution-box diff and the `buil
 | 2026-09-13 | Multi-game architecture: game registry, version groups, template adapters, no game-specific branches in app code. |
 | 2026-09-13 | English only. In-game sprites. National Dex checklist with regional sort. One playthrough per profile. One copy per species. App name "Poké Guide". |
 | 2026-09-13 | Include catch rates, base stats, shiny and IV info, plus catch-chance and IV/DV calculators (new Phase 6). |
-| 2026-09-13 | The user handles all git operations manually (init, commits, branches, remotes, pushing, repo creation). Claude never runs git commands; scaffold with `--skip-git`. |
+| 2026-09-13 | The user handles all git operations manually (init, commits, branches, remotes, pushing, repo creation). Claude never runs git commands; scaffold with `--skip-git`. **Superseded** by the stage-only rule below. |
+| 2026-09-13 | **Hard rule:** after each important step Claude runs `git add` on the changed files and gives the user a short commit message. Claude never commits, and never runs git commands that change history, branches or remotes (`CLAUDE.md` updated). |
 | 2026-09-13 | Node is managed with **nvm** (user preference), not mise/fnm. Node 26.8.2, pinned in `.nvmrc` (read by nvm) and `.node-version`. |
 | 2026-09-13 | Codec ids follow international release order: red 1, blue 2, yellow 3, gold 4, silver 5, crystal 6, ruby 7, sapphire 8, emerald 9, firered 10, leafgreen 11. Gold, silver, ruby and sapphire aren't in the registry yet, but their ids are reserved. |
 | 2026-09-13 | Router uses `paramsInheritanceStrategy: 'always'` so pages under `/:game` receive `game` as a component input. `routerFeatures` is exported from `app.config.ts` and reused by tests. |
