@@ -9,12 +9,13 @@ import {
   untracked,
 } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { GameDataService } from '../../core/data/game-data.service';
 import type { GameId } from '../../core/domain/models';
 import type { EncounterMethodCategory } from '../../core/games/methods';
 import { findGame, regionName } from '../../core/games/registry';
 import { ProfileStore } from '../../core/profiles/profile.store';
+import { CurrentGameService } from '../../core/routing/current-game.service';
 import { SettingsStore } from '../../core/settings/settings.store';
 import { ProgressRing } from '../../shared/components/progress-ring';
 import { Sprite } from '../../shared/components/sprite';
@@ -23,158 +24,202 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
 /** `/:game/guide` (plan §13.4): every location in walkthrough order, with progress and filters. */
 @Component({
   selector: 'app-guide-page',
-  imports: [MatIconModule, RouterLink, ProgressRing, Sprite],
+  imports: [MatIconModule, RouterLink, RouterOutlet, ProgressRing, Sprite],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: { '[attr.data-detail]': 'hasDetail()' },
   template: `
-    <header class="head">
-      <div>
-        <h1>{{ gameName() }} guide</h1>
-        <p class="sub">Locations in walkthrough order.</p>
-      </div>
-      <app-progress-ring
-        [value]="caughtObtainable()"
-        [total]="obtainableTotal()"
-        label="obtainable without trading"
-      />
-    </header>
-
-    <div class="controls" role="search">
-      <label class="search">
-        <mat-icon aria-hidden="true">search</mat-icon>
-        <input
-          type="search"
-          placeholder="Search locations and Pokémon"
-          aria-label="Search locations and Pokémon"
-          [value]="search()"
-          (input)="onSearch($event)"
+    <div class="list-pane">
+      <header class="head">
+        <div>
+          <h1>{{ gameName() }} guide</h1>
+          <p class="sub">Locations in walkthrough order.</p>
+        </div>
+        <app-progress-ring
+          [value]="caughtObtainable()"
+          [total]="obtainableTotal()"
+          label="obtainable without trading"
         />
-      </label>
+      </header>
 
-      <div class="toggles">
-        <button
-          type="button"
-          class="chip"
-          [attr.aria-pressed]="hideCompleted()"
-          (click)="hideCompleted.set(!hideCompleted())"
-        >
-          Hide completed
-        </button>
-        <button
-          type="button"
-          class="chip"
-          [disabled]="progressPart() === undefined"
-          [attr.aria-pressed]="onlyAvailable()"
-          [title]="
-            progressPart() === undefined
-              ? 'Set which part you are on in your profile first'
-              : 'Only locations up to part ' + progressPart()
-          "
-          (click)="settings.set('hideUnavailable', !onlyAvailable())"
-        >
-          Only available now
-        </button>
+      <div class="controls" role="search">
+        <label class="search">
+          <mat-icon aria-hidden="true">search</mat-icon>
+          <input
+            type="search"
+            placeholder="Search locations and Pokémon"
+            aria-label="Search locations and Pokémon"
+            [value]="search()"
+            (input)="onSearch($event)"
+          />
+        </label>
+
+        <div class="toggles">
+          <button
+            type="button"
+            class="chip"
+            [attr.aria-pressed]="hideCompleted()"
+            (click)="hideCompleted.set(!hideCompleted())"
+          >
+            Hide completed
+          </button>
+          <button
+            type="button"
+            class="chip"
+            [disabled]="progressPart() === undefined"
+            [attr.aria-pressed]="onlyAvailable()"
+            [title]="
+              progressPart() === undefined
+                ? 'Set which part you are on in your profile first'
+                : 'Only locations up to part ' + progressPart()
+            "
+            (click)="settings.set('hideUnavailable', !onlyAvailable())"
+          >
+            Only available now
+          </button>
+        </div>
+
+        @if (categories().length > 1) {
+          <div class="toggles" role="group" aria-label="Encounter types">
+            @for (category of categories(); track category) {
+              <button
+                type="button"
+                class="chip"
+                [attr.aria-pressed]="selectedCategories().has(category)"
+                (click)="toggleCategory(category)"
+              >
+                {{ label(category) }}
+              </button>
+            }
+          </div>
+        }
       </div>
 
-      @if (categories().length > 1) {
-        <div class="toggles" role="group" aria-label="Encounter types">
-          @for (category of categories(); track category) {
+      @if (data().isLoading()) {
+        <p class="status">Loading {{ gameName() }} data…</p>
+      } @else if (data().error()) {
+        <p class="status error">
+          The {{ gameName() }} data could not be loaded. Check your connection and reload.
+        </p>
+      } @else if (parts().length === 0) {
+        <p class="status">No location matches these filters.</p>
+      }
+
+      @for (part of parts(); track part.part; let index = $index) {
+        @if (showRegion() && part.region && part.region !== parts()[index - 1]?.region) {
+          <h2 class="region">{{ region(part) }}</h2>
+        }
+
+        <section class="part" [id]="'part-' + part.part">
+          <h3 class="part-head">
             <button
               type="button"
-              class="chip"
-              [attr.aria-pressed]="selectedCategories().has(category)"
-              (click)="toggleCategory(category)"
+              [attr.aria-expanded]="!collapsed().has(part.part)"
+              [attr.aria-controls]="'part-body-' + part.part"
+              (click)="togglePart(part.part)"
             >
-              {{ label(category) }}
+              <mat-icon aria-hidden="true">
+                {{ collapsed().has(part.part) ? 'expand_more' : 'expand_less' }}
+              </mat-icon>
+              <span class="part-title">Part {{ part.part }} · {{ part.title }}</span>
+              <span class="count">{{ part.caught }}/{{ part.total }}</span>
             </button>
+          </h3>
+
+          @if (!collapsed().has(part.part)) {
+            <ul class="cards" [id]="'part-body-' + part.part">
+              @for (location of part.locations; track location.id) {
+                <li>
+                  <a
+                    class="card"
+                    [class.open]="location.id === activeLocationId()"
+                    [attr.aria-current]="location.id === activeLocationId() ? 'page' : null"
+                    [routerLink]="['/', game(), 'guide', location.id]"
+                  >
+                    <span class="card-head">
+                      <mat-icon class="kind" aria-hidden="true">{{ location.icon }}</mat-icon>
+                      <span class="name">{{ location.name }}</span>
+                      <span class="count" [class.done]="location.complete">
+                        {{ location.caught }}/{{ location.total }}
+                      </span>
+                    </span>
+
+                    @if (location.requirements.length) {
+                      <span class="reqs">
+                        @for (requirement of location.requirements; track requirement.id) {
+                          <span class="req" [class.locked]="requirement.locked">
+                            <mat-icon aria-hidden="true">lock</mat-icon>
+                            {{ requirement.label }}
+                          </span>
+                        }
+                      </span>
+                    }
+
+                    <span class="strip">
+                      @for (species of location.species; track species.dex) {
+                        <app-sprite
+                          [dex]="species.dex"
+                          [game]="gameId()"
+                          [name]="species.name"
+                          [dimmed]="!species.caught"
+                          [size]="spriteSize()"
+                        />
+                      } @empty {
+                        <span class="none">No wild Pokémon here</span>
+                      }
+                    </span>
+                  </a>
+                </li>
+              }
+            </ul>
           }
-        </div>
+        </section>
+      }
+
+      @if (progressPart(); as part) {
+        <button type="button" class="fab" (click)="jumpToProgress(part)">
+          <mat-icon aria-hidden="true">my_location</mat-icon>
+          You are here
+        </button>
       }
     </div>
 
-    @if (data().isLoading()) {
-      <p class="status">Loading {{ gameName() }} data…</p>
-    } @else if (data().error()) {
-      <p class="status error">
-        The {{ gameName() }} data could not be loaded. Check your connection and reload.
-      </p>
-    } @else if (parts().length === 0) {
-      <p class="status">No location matches these filters.</p>
-    }
-
-    @for (part of parts(); track part.part; let index = $index) {
-      @if (showRegion() && part.region && part.region !== parts()[index - 1]?.region) {
-        <h2 class="region">{{ region(part) }}</h2>
-      }
-
-      <section class="part" [id]="'part-' + part.part">
-        <h3 class="part-head">
-          <button
-            type="button"
-            [attr.aria-expanded]="!collapsed().has(part.part)"
-            [attr.aria-controls]="'part-body-' + part.part"
-            (click)="togglePart(part.part)"
-          >
-            <mat-icon aria-hidden="true">
-              {{ collapsed().has(part.part) ? 'expand_more' : 'expand_less' }}
-            </mat-icon>
-            <span class="part-title">Part {{ part.part }} · {{ part.title }}</span>
-            <span class="count">{{ part.caught }}/{{ part.total }}</span>
-          </button>
-        </h3>
-
-        @if (!collapsed().has(part.part)) {
-          <ul class="cards" [id]="'part-body-' + part.part">
-            @for (location of part.locations; track location.id) {
-              <li>
-                <a class="card" [routerLink]="['/', game(), 'guide', location.id]">
-                  <span class="card-head">
-                    <mat-icon class="kind" aria-hidden="true">{{ location.icon }}</mat-icon>
-                    <span class="name">{{ location.name }}</span>
-                    <span class="count" [class.done]="location.complete">
-                      {{ location.caught }}/{{ location.total }}
-                    </span>
-                  </span>
-
-                  @if (location.requirements.length) {
-                    <span class="reqs">
-                      @for (requirement of location.requirements; track requirement.id) {
-                        <span class="req" [class.locked]="requirement.locked">
-                          <mat-icon aria-hidden="true">lock</mat-icon>
-                          {{ requirement.label }}
-                        </span>
-                      }
-                    </span>
-                  }
-
-                  <span class="strip">
-                    @for (species of location.species; track species.dex) {
-                      <app-sprite
-                        [dex]="species.dex"
-                        [game]="gameId()"
-                        [name]="species.name"
-                        [dimmed]="!species.caught"
-                        [size]="spriteSize()"
-                      />
-                    } @empty {
-                      <span class="none">No wild Pokémon here</span>
-                    }
-                  </span>
-                </a>
-              </li>
-            }
-          </ul>
-        }
-      </section>
-    }
-
-    @if (progressPart(); as part) {
-      <button type="button" class="fab" (click)="jumpToProgress(part)">
-        <mat-icon aria-hidden="true">my_location</mat-icon>
-        You are here
-      </button>
-    }
+    <div class="detail-pane">
+      <router-outlet />
+    </div>
   `,
   styles: `
+    :host {
+      display: block;
+    }
+    /* Two panes from 1200 px (plan §13.2): the list keeps its own scroll, the detail scrolls with the page. */
+    @media (min-width: 1200px) {
+      :host {
+        display: grid;
+        grid-template-columns: 360px minmax(0, 1fr);
+        gap: 24px;
+        align-items: start;
+      }
+      .list-pane {
+        position: sticky;
+        top: 0;
+        max-height: 100dvh;
+        overflow: auto;
+        overscroll-behavior: contain;
+        padding-right: 4px;
+      }
+      .cards {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .fab {
+        display: none;
+      }
+    }
+    /* Below that a location takes over the screen; "back" returns to the list. */
+    @media (max-width: 1199.98px) {
+      :host([data-detail='true']) .list-pane {
+        display: none;
+      }
+    }
     .head {
       display: flex;
       align-items: center;
@@ -309,6 +354,10 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
       color: inherit;
       text-decoration: none;
     }
+    .card.open {
+      border-color: var(--mat-sys-primary);
+      background: var(--mat-sys-surface-container);
+    }
     .card:hover {
       background: var(--mat-sys-surface-container);
     }
@@ -379,6 +428,7 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
 })
 export class GuidePage {
   private readonly document = inject(DOCUMENT);
+  private readonly currentGame = inject(CurrentGameService);
   private readonly gameData = inject(GameDataService);
   private readonly profiles = inject(ProfileStore);
   protected readonly settings = inject(SettingsStore);
@@ -397,6 +447,10 @@ export class GuidePage {
     const id = this.gameId();
     return untracked(() => this.gameData.forGame(id));
   });
+
+  /** The location open in the detail pane, from the child route (`/:game/guide/:locationId`). */
+  protected readonly activeLocationId = computed(() => this.currentGame.path().split('/')[3] ?? '');
+  protected readonly hasDetail = computed(() => this.activeLocationId() !== '');
 
   protected readonly search = signal('');
   protected readonly hideCompleted = signal(false);

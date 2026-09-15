@@ -1,6 +1,7 @@
 import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
+import { RouterTestingHarness } from '@angular/router/testing';
 import { routerFeatures } from '../../app.config';
 import { routes } from '../../app.routes';
 import { GameDataService } from '../../core/data/game-data.service';
@@ -93,6 +94,16 @@ describe('GuidePage (plan §13.4)', () => {
     fixture.detectChanges();
     expect(el.querySelectorAll('.card').length).toBe(0);
     expect(el.querySelector('.status')?.textContent).toContain('No location matches');
+  });
+
+  it('shows the location detail beside the list and marks the open card', async () => {
+    const harness = await RouterTestingHarness.create('/red/guide/route-1');
+    const el = harness.routeNativeElement as HTMLElement;
+    // The detail is a child route, so the guide page (the list pane) is still rendered.
+    expect(el.querySelector('.list-pane')).not.toBeNull();
+    expect(el.querySelector('app-location-page h1')?.textContent).toBe('Route 1');
+    expect(el.getAttribute('data-detail')).toBe('true');
+    expect(el.querySelector('.card.open')?.getAttribute('aria-current')).toBe('page');
   });
 
   it('collapses a part', () => {

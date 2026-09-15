@@ -36,15 +36,19 @@ export const routes: Routes = [
           import('./features/onboarding/onboarding.page').then((m) => m.OnboardingPage),
       },
       {
+        // The location page is a child, so ≥ 1200 px can show the list and the detail side by side
+        // (plan §13.2). Narrower screens hide the list while a location is open.
         path: 'guide',
         title: 'Guide · Poké Guide',
         loadComponent: () => import('./features/guide/guide.page').then((m) => m.GuidePage),
-      },
-      {
-        path: 'guide/:locationId',
-        title: 'Location · Poké Guide',
-        loadComponent: () =>
-          import('./features/location/location.page').then((m) => m.LocationPage),
+        children: [
+          {
+            path: ':locationId',
+            title: 'Location · Poké Guide',
+            loadComponent: () =>
+              import('./features/location/location.page').then((m) => m.LocationPage),
+          },
+        ],
       },
       {
         path: 'checklist',

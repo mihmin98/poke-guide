@@ -308,6 +308,12 @@ const ALL_SUB_AREAS = '__all__';
     }
   `,
   styles: `
+    /* In the desktop two-pane layout the list is already on screen (plan §13.2). */
+    @media (min-width: 1200px) {
+      .back {
+        display: none;
+      }
+    }
     .head h1 {
       margin: 8px 0 0;
     }
