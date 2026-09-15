@@ -1,0 +1,119 @@
+import { signal } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
+import { routerFeatures } from '../../app.config';
+import { routes } from '../../app.routes';
+import { GameDataService } from '../../core/data/game-data.service';
+import { buildGameView } from '../../core/domain/game-view';
+import {
+  testData,
+  testEncounter,
+  testLocation,
+  testSpecies,
+} from '../../core/domain/testing/test-data';
+import { ProfileStore } from '../../core/profiles/profile.store';
+import { STATE_STORAGE } from '../../core/storage/storage.service';
+import { GuidePage } from './guide.page';
+
+const data = testData({
+  games: ['red'],
+  species: [testSpecies(16, { name: 'Pidgey' }), testSpecies(19, { name: 'Rattata' })],
+  walkthroughs: { red: [{ part: 1, title: 'Pallet Town', region: 'kanto' }] },
+  locations: [
+    testLocation('route-1', 1, [testEncounter(16, ['red']), testEncounter(19, ['red'])], ['red'], {
+      name: 'Route 1',
+    }),
+  ],
+});
+
+const stub = {
+  isLoading: signal(false),
+  error: signal(undefined),
+  view: signal(buildGameView(data, 'red')),
+  checklist: signal([
+    { dex: 16, obtainable: true, sources: [], exclusiveGroupIds: [] },
+    { dex: 19, obtainable: true, sources: [], exclusiveGroupIds: [] },
+  ]),
+};
+
+describe('GuidePage (plan §13.4)', () => {
+  let profiles: ProfileStore;
+
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [
+        { provide: STATE_STORAGE, useValue: null },
+        { provide: GameDataService, useValue: { forGame: () => stub } },
+        provideRouter(routes, ...routerFeatures),
+      ],
+    });
+    profiles = TestBed.inject(ProfileStore);
+  });
+
+  afterEach(() => TestBed.resetTestingModule());
+
+  function render() {
+    const fixture = TestBed.createComponent(GuidePage);
+    fixture.componentRef.setInput('game', 'red');
+    fixture.detectChanges();
+    return { fixture, el: fixture.nativeElement as HTMLElement };
+  }
+
+  it('lists the locations of each walkthrough part with a sprite strip', () => {
+    const { el } = render();
+    expect(el.querySelector('.part-title')?.textContent).toContain('Part 1 · Pallet Town');
+    expect(el.querySelector('.name')?.textContent?.trim()).toBe('Route 1');
+    expect(el.querySelectorAll('app-sprite').length).toBe(2);
+    expect(el.querySelector('.card')?.getAttribute('href')).toBe('/red/guide/route-1');
+  });
+
+  it('counts caught species and updates as soon as a catch is toggled', () => {
+    profiles.createProfile('Red run', 'red');
+    const { fixture, el } = render();
+    expect(el.querySelector('.card .count')?.textContent?.trim()).toBe('0/2');
+
+    profiles.setCaught('red', 16, true);
+    fixture.detectChanges();
+    expect(el.querySelector('.card .count')?.textContent?.trim()).toBe('1/2');
+    expect(el.querySelector('app-progress-ring svg')?.getAttribute('aria-label')).toBe(
+      '1 of 2 obtainable without trading',
+    );
+  });
+
+  it('searches locations and Pokémon', () => {
+    const { fixture, el } = render();
+    const input = el.querySelector('input')!;
+    input.value = 'rattata';
+    input.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+    expect(el.querySelectorAll('.card').length).toBe(1);
+
+    input.value = 'nothing';
+    input.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+    expect(el.querySelectorAll('.card').length).toBe(0);
+    expect(el.querySelector('.status')?.textContent).toContain('No location matches');
+  });
+
+  it('collapses a part', () => {
+    const { fixture, el } = render();
+    const toggle = el.querySelector<HTMLButtonElement>('.part-head button')!;
+    expect(toggle.getAttribute('aria-expanded')).toBe('true');
+    toggle.click();
+    fixture.detectChanges();
+    expect(toggle.getAttribute('aria-expanded')).toBe('false');
+    expect(el.querySelectorAll('.card').length).toBe(0);
+  });
+
+  it('hides completed locations on request', () => {
+    profiles.createProfile('Red run', 'red');
+    profiles.bulkSetCaught('red', [16, 19], true);
+    const { fixture, el } = render();
+    const hide = [...el.querySelectorAll<HTMLButtonElement>('.chip')].find((b) =>
+      b.textContent?.includes('Hide completed'),
+    )!;
+    hide.click();
+    fixture.detectChanges();
+    expect(el.querySelectorAll('.card').length).toBe(0);
+  });
+});

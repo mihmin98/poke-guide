@@ -41,6 +41,12 @@ export const routes: Routes = [
         loadComponent: () => import('./features/guide/guide.page').then((m) => m.GuidePage),
       },
       {
+        path: 'guide/:locationId',
+        title: 'Location · Poké Guide',
+        loadComponent: () =>
+          import('./features/location/location.page').then((m) => m.LocationPage),
+      },
+      {
         path: 'checklist',
         title: 'Checklist · Poké Guide',
         loadComponent: () =>

@@ -22,7 +22,9 @@ import { ProfileStore } from '../../core/profiles/profile.store';
       [title]="title()"
       (click)="toggle()"
     >
-      <mat-icon aria-hidden="true">{{ caught() ? 'check_circle' : 'radio_button_unchecked' }}</mat-icon>
+      <mat-icon aria-hidden="true">{{
+        caught() ? 'check_circle' : 'radio_button_unchecked'
+      }}</mat-icon>
     </button>
   `,
   styles: `
