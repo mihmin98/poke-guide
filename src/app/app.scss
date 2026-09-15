@@ -3,6 +3,8 @@ $toolbar-height: 64px;
 :host {
   display: block;
   min-height: 100dvh;
+  // The sticky toolbar's height, so pages can offset their own sticky headers against it.
+  --app-toolbar-height: #{$toolbar-height};
 }
 
 .top-bar {
@@ -128,6 +130,11 @@ main {
 }
 
 @media (max-width: 599.98px) {
+  :host {
+    // mat-toolbar is shorter on small screens.
+    --app-toolbar-height: 56px;
+  }
+
   .layout {
     grid-template-columns: minmax(0, 1fr);
   }

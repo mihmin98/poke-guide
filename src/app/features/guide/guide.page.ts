@@ -191,7 +191,10 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
     :host {
       display: block;
     }
-    /* Two panes from 1200 px (plan §13.2): the list keeps its own scroll, the detail scrolls with the page. */
+    /*
+     * Two panes from 1200 px (plan §13.2). The pane sits below the sticky app toolbar, so it starts
+     * there and is that much shorter; inside it, part headers stick to the top of the pane itself.
+     */
     @media (min-width: 1200px) {
       :host {
         display: grid;
@@ -201,11 +204,12 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
       }
       .list-pane {
         position: sticky;
-        top: 0;
-        max-height: 100dvh;
+        top: var(--app-toolbar-height, 64px);
+        height: calc(100dvh - var(--app-toolbar-height, 64px) - 16px);
         overflow: auto;
         overscroll-behavior: contain;
         padding-right: 4px;
+        --stick-top: 0px;
       }
       .cards {
         grid-template-columns: minmax(0, 1fr);
@@ -240,11 +244,6 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
       gap: 8px;
       align-items: center;
       margin: 16px 0;
-      position: sticky;
-      top: 0;
-      z-index: 2;
-      padding: 8px 0;
-      background: var(--mat-sys-surface);
     }
     .search {
       display: flex;
@@ -301,11 +300,19 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
       margin: 24px 0 8px;
       font: var(--mat-sys-title-large);
     }
+    .part {
+      margin-top: 16px;
+    }
+    /*
+     * Sticky headers carry their spacing as padding: a margin on a stuck element is transparent, so
+     * the cards underneath show through above the header band.
+     */
     .part-head {
       position: sticky;
-      top: 56px;
+      top: var(--stick-top, var(--app-toolbar-height, 64px));
       z-index: 1;
-      margin: 16px 0 8px;
+      margin: 0 0 8px;
+      padding: 4px 0;
       background: var(--mat-sys-surface);
     }
     .part-head button {

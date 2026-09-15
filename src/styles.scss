@@ -2,6 +2,14 @@
 @use './theme/game-themes.generated';
 @use './theme/type-colors.generated';
 
+// Without this, `height: 100%` plus padding and a border makes an element render taller than the box
+// it was given — which is what made the guide's location cards spill over each other.
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
   // Follows the OS setting; `.theme-light` / `.theme-dark` are set from SettingsStore (Phase 2).
@@ -32,6 +40,23 @@ body {
   font: var(--mat-sys-body-medium);
   margin: 0;
   min-height: 100%;
+}
+
+// `body`'s `font:` shorthand carries a fixed line-height, which headings would otherwise inherit at
+// their own larger font size and render squashed. Give them the M3 typography tokens instead.
+h1 {
+  font: var(--mat-sys-headline-small);
+  margin: 0 0 8px;
+}
+
+h2 {
+  font: var(--mat-sys-title-large);
+  margin: 0 0 8px;
+}
+
+h3 {
+  font: var(--mat-sys-title-medium);
+  margin: 0 0 8px;
 }
 
 .skip-link {

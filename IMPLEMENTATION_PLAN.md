@@ -1151,7 +1151,8 @@ Binary layout, before encoding (all integers little-endian):
   - Badges from `obtain` (Pickup · Gift · Reward · Drop · Choice · Purchase) plus Hidden. A Purchase badge shows its `coins` price. Prerequisites are chips from the prerequisite vocabulary, and a "from Part N" chip appears when an item is only reachable later than the location's part (Viridian Gym TM).
   - A "Show hidden items" toggle (on by default) and a "Choose one" chip for choice groups (Helix / Dome Fossil).
   - Fake item balls (Power Plant Voltorb/Electrode) are a note that links to the encounter rows.
-  - Items are **not** tracked (no checkbox); the checklist stays Pokémon-only.
+  - Items are **not** tracked (no checkbox); the checklist stays Pokémon-only. Tracking which items you
+    have picked up is **Phase 9** (§16), planned after everything else ships.
 
 ### 13.6 Checklist page (`/:game/checklist`)
 - **Summary card:**
@@ -1315,6 +1316,28 @@ Each phase ends with a working local state and its acceptance criteria met. **No
 - [ ] README (features, dev setup, data pipeline, adding a game).
 - [ ] Deploy, then run the smoke test on the live site (deep link reload, import link, offline).
 - **Accept when:** the live site passes the same manual smoke check (§14) as the local build.
+
+### Phase 9 — Item pickup tracking (added 2026-09-15, to be planned after Phase 8)
+Requested after using the location page: tick off the items you have already picked up in an area.
+Items are read-only today (§13.5), so this changes stored state and needs its own design pass **before**
+any code. It is deliberately last: it touches the two compatibility contracts (persisted state and the
+export code), so it should land only once they are stable and shipped.
+
+Open design questions for that pass:
+- [ ] **Item instance identity.** `LocationItem.itemId` is not unique (a Potion appears in many areas,
+      sometimes twice in one). A tick needs a stable key — e.g. `locationId:subArea:itemId:occurrence`
+      — that survives a data rebuild, or users silently lose ticks when the pipeline reorders a page.
+      Decide the key, then make the pipeline emit it as a field so it is data, not a UI convention.
+- [ ] **Stored state.** `Profile` gains a field (e.g. `itemsTaken: string[]`), so `schemaVersion` goes
+      to 2 with a migration (§11.5). Decide whether it is per profile (yes, it is per playthrough).
+- [ ] **Export.** `PKG1` is a fixed contract (§12.2) and its payload is a National Dex bitfield. Either
+      items stay out of export codes, or a `PKG2` version is defined. **Never change `PKG1`.**
+- [ ] **UI.** Checkboxes on the item rows (§13.5), an items count on the location card (§13.4), and a
+      "hide items I have" filter. Decide whether items appear in any progress figure — the default
+      answer is **no**: "caught" stays Pokémon-only (§1 decisions, binary catch status).
+- [ ] **Scope.** Whether hidden items and purchases (Game Corner TMs) are tickable like the rest.
+- **Accept when:** ticks survive a reload, a data rebuild and a profile switch, and no export code
+  written by an earlier version is rejected or misread.
 
 ---
 
