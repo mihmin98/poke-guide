@@ -245,50 +245,10 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
       align-items: center;
       margin: 16px 0;
     }
-    .search {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex: 1 1 240px;
-      padding: 8px 12px;
-      border-radius: 24px;
-      background: var(--mat-sys-surface-container-high);
-      color: var(--mat-sys-on-surface-variant);
-    }
-    .search input {
-      flex: 1;
-      min-width: 0;
-      border: none;
-      background: none;
-      color: var(--mat-sys-on-surface);
-      font: var(--mat-sys-body-medium);
-    }
-    .search input:focus {
-      outline: none;
-    }
     .toggles {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
-    }
-    .chip {
-      min-height: 32px;
-      padding: 0 12px;
-      border-radius: 8px;
-      border: 1px solid var(--mat-sys-outline-variant);
-      background: none;
-      color: var(--mat-sys-on-surface);
-      font: var(--mat-sys-label-large);
-      cursor: pointer;
-    }
-    .chip[aria-pressed='true'] {
-      background: var(--mat-sys-secondary-container);
-      color: var(--mat-sys-on-secondary-container);
-      border-color: transparent;
-    }
-    .chip:disabled {
-      opacity: 0.38;
-      cursor: not-allowed;
     }
     .status {
       color: var(--mat-sys-on-surface-variant);

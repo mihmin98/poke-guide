@@ -367,21 +367,6 @@ const ALL_SUB_AREAS = '__all__';
       align-items: center;
       margin: 8px 0 16px;
     }
-    .chip {
-      min-height: 32px;
-      padding: 0 12px;
-      border-radius: 8px;
-      border: 1px solid var(--mat-sys-outline-variant);
-      background: none;
-      color: var(--mat-sys-on-surface);
-      font: var(--mat-sys-label-large);
-      cursor: pointer;
-    }
-    .chip[aria-pressed='true'] {
-      background: var(--mat-sys-secondary-container);
-      color: var(--mat-sys-on-secondary-container);
-      border-color: transparent;
-    }
     h2 {
       font: var(--mat-sys-title-medium);
       margin: 24px 0 8px;

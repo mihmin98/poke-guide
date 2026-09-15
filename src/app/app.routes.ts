@@ -56,6 +56,12 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./features/checklist/checklist.page').then((m) => m.ChecklistPage),
       },
+      {
+        // `:key` is a species slug (`pikachu`) or a National Dex number, so links can use either.
+        path: 'pokemon/:key',
+        title: 'Pokémon · Poké Guide',
+        loadComponent: () => import('./features/pokemon/pokemon.page').then((m) => m.PokemonPage),
+      },
     ],
   },
   {
