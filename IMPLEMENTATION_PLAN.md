@@ -1069,7 +1069,7 @@ Binary layout, before encoding (all integers little-endian):
   - Unknown `codecId`: "This code is for a game this version of Poké Guide doesn't support yet."
   - Unsupported format version: "Made by a newer version."
   - `dexCount` differs from the registry's value: bits beyond `nationalDexMax` are ignored and missing ones are treated as not caught, with a warning in the preview.
-- `export-codec.ts` exports `encodeProfile(p, registry): string` and `decodeProfile(s, registry): Result<DecodedProfile, CodecError>`. The error types are `bad-prefix | bad-base64 | too-short | bad-checksum | unsupported-version | unknown-game | bad-name`.
+- `export-codec.ts` exports `encodeProfile(p): string` and `decodeProfile(s): CodecResult`. It reads the registry directly (both are framework-free), instead of taking it as a parameter as this section first sketched. The CRC is **CRC-16/CCITT-FALSE** (polynomial `0x1021`, initial value `0xFFFF`, no reflection, no final XOR), and `DecodedProfile` also carries `dexCount` and `ignoredBeyondDex` so the import preview can warn. The error types are `bad-prefix | bad-base64 | too-short | bad-checksum | unsupported-version | unknown-game | bad-name`.
 - The decoder is forgiving about input: it trims whitespace, removes line breaks and zero-width characters, and accepts a full URL or just the code.
 
 ### 12.3 Export UI

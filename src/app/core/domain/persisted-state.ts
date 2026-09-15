@@ -13,6 +13,8 @@ export interface Settings {
   spriteScale: 2 | 3;
   compactRows: boolean;
   checklistSort: 'national' | 'regional' | 'walkthrough';
+  /** Catch changes since the last export, for the save-reminder banner (plan §13.8). */
+  changesSinceExport: number;
 }
 
 export interface PersistedState {
@@ -32,6 +34,7 @@ export const DEFAULT_SETTINGS: Readonly<Settings> = {
   spriteScale: 2,
   compactRows: false,
   checklistSort: 'national',
+  changesSinceExport: 0,
 };
 
 export function defaultState(): PersistedState {
@@ -57,6 +60,8 @@ const isObject = (value: unknown): value is Json =>
 const pick = <T>(value: unknown, allowed: readonly T[], fallback: T): T =>
   allowed.includes(value as T) ? (value as T) : fallback;
 const bool = (value: unknown, fallback: boolean) => (typeof value === 'boolean' ? value : fallback);
+const count = (value: unknown, fallback: number) =>
+  Number.isInteger(value) && (value as number) >= 0 ? (value as number) : fallback;
 
 export function sanitizeSettings(raw: unknown): Settings {
   const s = isObject(raw) ? raw : {};
@@ -74,6 +79,7 @@ export function sanitizeSettings(raw: unknown): Settings {
       ['national', 'regional', 'walkthrough'] as const,
       d.checklistSort,
     ),
+    changesSinceExport: count(s['changesSinceExport'], d.changesSinceExport),
   };
 }
 

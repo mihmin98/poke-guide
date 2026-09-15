@@ -5,6 +5,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterLink } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
+import { DOCUMENT } from '@angular/core';
+import { buildBackup } from '../../core/domain/backup';
 import type { GameId, Profile } from '../../core/domain/models';
 import { findGame, listGames } from '../../core/games/registry';
 import { ProfileSwitcherService } from '../../core/profiles/profile-switcher.service';
@@ -17,6 +19,7 @@ import {
   type ProfileNameDialogData,
   type ProfileNameDialogResult,
 } from './profile-dialogs';
+import { ExportDialog, type ExportDialogData } from './export-dialog';
 
 interface ProfileRow {
   profile: Profile;
@@ -27,7 +30,7 @@ interface ProfileRow {
   caught: number;
 }
 
-/** `/profiles` (plan §12.1): manage profiles. Import and export arrive in Phase 5. */
+/** `/profiles` (plan §12.1): manage profiles, export a code and restore a backup. */
 @Component({
   selector: 'app-profiles-page',
   imports: [MatButtonModule, MatIconModule, MatMenuModule, RouterLink],
@@ -35,10 +38,20 @@ interface ProfileRow {
   template: `
     <header class="head">
       <h1>Profiles</h1>
-      <button matButton="filled" type="button" (click)="create()">
-        <mat-icon aria-hidden="true">add</mat-icon>
-        New profile
-      </button>
+      <div class="head-actions">
+        <a matButton routerLink="/import">
+          <mat-icon aria-hidden="true">upload</mat-icon>
+          Import
+        </a>
+        <button matButton type="button" [disabled]="rows().length === 0" (click)="downloadBackup()">
+          <mat-icon aria-hidden="true">download</mat-icon>
+          Backup (JSON)
+        </button>
+        <button matButton="filled" type="button" (click)="create()">
+          <mat-icon aria-hidden="true">add</mat-icon>
+          New profile
+        </button>
+      </div>
     </header>
 
     @if (rows().length === 0) {
@@ -77,6 +90,10 @@ interface ProfileRow {
                 <mat-icon aria-hidden="true">more_vert</mat-icon>
               </button>
               <mat-menu #menu="matMenu">
+                <button mat-menu-item type="button" (click)="exportProfile(row.profile)">
+                  <mat-icon aria-hidden="true">ios_share</mat-icon>
+                  <span>Export</span>
+                </button>
                 <button mat-menu-item type="button" (click)="rename(row.profile)">
                   <mat-icon aria-hidden="true">edit</mat-icon>
                   <span>Rename</span>
@@ -103,6 +120,11 @@ interface ProfileRow {
       justify-content: space-between;
       gap: 16px;
       flex-wrap: wrap;
+    }
+    .head-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
     }
     .empty {
       max-width: 60ch;
@@ -163,6 +185,7 @@ export class ProfilesPage {
   private readonly dialog = inject(MatDialog);
   private readonly undoSnackbar = inject(UndoSnackbarService);
   private readonly switcher = inject(ProfileSwitcherService);
+  private readonly document = inject(DOCUMENT);
 
   protected readonly rows = computed<ProfileRow[]>(() => {
     const activeId = this.profiles.activeProfileId();
@@ -174,6 +197,23 @@ export class ProfilesPage {
       caught: profile.caught.length,
     }));
   });
+
+  protected exportProfile(profile: Profile): void {
+    this.dialog.open<ExportDialog, ExportDialogData>(ExportDialog, { data: { profile } });
+  }
+
+  /** Downloads every profile as one JSON file, which the import page can restore (plan §12.3). */
+  protected downloadBackup(): void {
+    const backup = buildBackup(this.profiles.profiles());
+    const url = URL.createObjectURL(
+      new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' }),
+    );
+    const link = this.document.createElement('a');
+    link.href = url;
+    link.download = `poke-guide-backup-${backup.exportedAt.slice(0, 10)}.json`;
+    link.click();
+    URL.revokeObjectURL(url);
+  }
 
   protected async create(): Promise<void> {
     const result = await this.openNameDialog({

@@ -9,6 +9,12 @@ import { ProfileStore } from '../../core/profiles/profile.store';
 import { STATE_STORAGE, StorageService } from '../../core/storage/storage.service';
 import { ProfilesPage } from './profiles.page';
 
+/** The header also holds Import and Backup, so the create button is found by its label. */
+const newProfileButton = (el: HTMLElement) =>
+  [...el.querySelectorAll<HTMLButtonElement>('.head button')].find((button) =>
+    button.textContent?.includes('New profile'),
+  )!;
+
 describe('ProfilesPage (plan §12.1)', () => {
   let profiles: ProfileStore;
   /** What the next dialog resolves with; `undefined` means the user cancelled. */
@@ -74,7 +80,7 @@ describe('ProfilesPage (plan §12.1)', () => {
   it('creates a profile from the dialog result', async () => {
     dialogResult = { name: 'From dialog', game: 'blue' };
     const { fixture, el } = render();
-    el.querySelector<HTMLButtonElement>('.head button')!.click();
+    newProfileButton(el).click();
     await fixture.whenStable();
 
     expect(profiles.profiles()).toHaveLength(1);
@@ -84,7 +90,7 @@ describe('ProfilesPage (plan §12.1)', () => {
   it('keeps the profile when the create dialog is cancelled', async () => {
     dialogResult = undefined;
     const { fixture, el } = render();
-    el.querySelector<HTMLButtonElement>('.head button')!.click();
+    newProfileButton(el).click();
     await fixture.whenStable();
 
     expect(profiles.profiles()).toEqual([]);

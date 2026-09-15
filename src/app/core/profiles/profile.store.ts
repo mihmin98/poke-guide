@@ -103,9 +103,14 @@ export class ProfileStore {
       dexes.every((d) => profile.caught.includes(d) === caught)
     )
       return true;
+    const changed = dexes.filter((d) => profile.caught.includes(d) !== caught).length;
     this.change(
       label ?? `Marked ${dexes.length} Pokémon as ${caught ? 'caught' : 'not caught'}`,
-      (s) => this.withProfile(s, profile.id, { caught: normalizeCaught([...set]) }),
+      (s) =>
+        this.countTowardsReminder(
+          this.withProfile(s, profile.id, { caught: normalizeCaught([...set]) }),
+          changed,
+        ),
     );
     return true;
   }
@@ -196,6 +201,21 @@ export class ProfileStore {
       this.withProfile(s, target.id, { caught, progressPart: imported.progressPart }),
     );
     return target.id;
+  }
+
+  /**
+   * Counts catch changes towards the save reminder (plan §13.8). It lives in the settings, not in the
+   * undo snapshot, so undoing a change does not make the reminder go away.
+   */
+  private countTowardsReminder(state: PersistedState, changes: number): PersistedState {
+    if (changes <= 0) return state;
+    return {
+      ...state,
+      settings: {
+        ...state.settings,
+        changesSinceExport: state.settings.changesSinceExport + changes,
+      },
+    };
   }
 
   /** Reverts the most recent change. Returns its entry, or `undefined` when there is nothing valid to undo. */

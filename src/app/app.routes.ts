@@ -20,6 +20,12 @@ export const routes: Routes = [
     loadComponent: () => import('./features/settings/settings.page').then((m) => m.SettingsPage),
   },
   {
+    // A share link is `/import#PKG1-…`: the code rides in the fragment, never reaching a server.
+    path: 'import',
+    title: 'Import · Poké Guide',
+    loadComponent: () => import('./features/import/import.page').then((m) => m.ImportPage),
+  },
+  {
     path: 'about',
     title: 'About · Poké Guide',
     loadComponent: () => import('./features/about/about.page').then((m) => m.AboutPage),

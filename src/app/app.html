@@ -72,6 +72,7 @@
   </nav>
 
   <main id="main" tabindex="-1">
+    <app-save-reminder />
     <router-outlet />
     <footer class="attribution">
       Encounter data from
@@ -86,6 +87,10 @@
   <a mat-menu-item routerLink="/games">
     <mat-icon aria-hidden="true">sports_esports</mat-icon>
     <span>Games</span>
+  </a>
+  <a mat-menu-item routerLink="/import">
+    <mat-icon aria-hidden="true">upload</mat-icon>
+    <span>Import</span>
   </a>
   <a mat-menu-item routerLink="/settings">
     <mat-icon aria-hidden="true">settings</mat-icon>

@@ -18,6 +18,7 @@ import { ProfileStore } from './core/profiles/profile.store';
 import { UndoSnackbarService } from './core/profiles/undo-snackbar.service';
 import { CurrentGameService } from './core/routing/current-game.service';
 import { StorageService } from './core/storage/storage.service';
+import { SaveReminder } from './shared/components/save-reminder';
 
 interface NavItem {
   label: string;
@@ -35,7 +36,7 @@ interface ProfileItem {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, MatToolbarModule, MatIconModule, MatMenuModule],
+  imports: [RouterOutlet, RouterLink, MatToolbarModule, MatIconModule, MatMenuModule, SaveReminder],
   templateUrl: './app.html',
   styleUrl: './app.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
