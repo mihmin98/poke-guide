@@ -10,7 +10,9 @@ describe('parseTradeTables', () => {
     tables: rbyConfig.tradePage!.tables,
   });
   const forGame = (game: 'red' | 'yellow') =>
-    result.trades.filter((t) => t.games.includes(game)).map((t) => [t.locationPage, t.giveDex, t.getDex, t.nickname]);
+    result.trades
+      .filter((t) => t.games.includes(game))
+      .map((t) => [t.locationPage, t.giveDex, t.getDex, t.nickname]);
 
   it('reads the international Red/Blue and Yellow tables, skipping Japanese-only rows', () => {
     expect(result.issues).toEqual([]);
@@ -51,12 +53,26 @@ describe('diffTrades', () => {
   });
 
   it('sets nicknames on matches and reports differences both ways', () => {
-    const locations = [location('route-2', [encounter(122, 63, ['red', 'blue']), encounter(83, 21, ['red'])])];
+    const locations = [
+      location('route-2', [encounter(122, 63, ['red', 'blue']), encounter(83, 21, ['red'])]),
+    ];
     const result = diffTrades(
       locations,
       [
-        { games: ['red', 'blue'], locationPage: 'Kanto Route 2', giveDex: 63, getDex: 122, nickname: 'MARCEL' },
-        { games: ['yellow'], locationPage: 'Kanto Route 2', giveDex: 35, getDex: 122, nickname: 'MILES' },
+        {
+          games: ['red', 'blue'],
+          locationPage: 'Kanto Route 2',
+          giveDex: 63,
+          getDex: 122,
+          nickname: 'MARCEL',
+        },
+        {
+          games: ['yellow'],
+          locationPage: 'Kanto Route 2',
+          giveDex: 35,
+          getDex: 122,
+          nickname: 'MILES',
+        },
         { games: ['red'], locationPage: 'Nowhere', giveDex: 1, getDex: 2, nickname: 'X' },
       ],
       new Map([['Kanto Route 2', 'route-2']]),
@@ -66,6 +82,9 @@ describe('diffTrades', () => {
       "route-2: trade page lists #35 → #122 in yellow, the location data doesn't",
       'route-2: #21 → #83 in red is not on the trade page',
     ]);
-    expect(locations[0]!.subAreas[0]!.encounters[0]!.trade).toEqual({ giveDex: 63, nickname: 'MARCEL' });
+    expect(locations[0]!.subAreas[0]!.encounters[0]!.trade).toEqual({
+      giveDex: 63,
+      nickname: 'MARCEL',
+    });
   });
 });

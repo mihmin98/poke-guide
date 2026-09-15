@@ -47,15 +47,32 @@ const overrides = (extra: Partial<ItemOverrides>): ItemOverrides => ({
 describe('applyItemOverrides', () => {
   it('adds items with their source, and rejects duplicates, unknown locations and missing pages silently', () => {
     const locations = [location('pewter-city', [item('Potion')])];
-    const gymTm = { name: 'TM34 Bide', quantity: 1, games: ['red' as const], obtain: 'reward' as const, subArea: 'Gym', where: 'From Brock' };
+    const gymTm = {
+      name: 'TM34 Bide',
+      quantity: 1,
+      games: ['red' as const],
+      obtain: 'reward' as const,
+      subArea: 'Gym',
+      where: 'From Brock',
+    };
     const errors = applyItemOverrides(
       locations,
       overrides({
         add: [
           { locationId: 'pewter-city', item: gymTm, sourcePage: 'Walkthrough', reason: 'Gym' },
-          { locationId: 'pewter-city', item: { ...gymTm, name: 'Potion' }, sourcePage: 'Walkthrough', reason: 'dup' },
+          {
+            locationId: 'pewter-city',
+            item: { ...gymTm, name: 'Potion' },
+            sourcePage: 'Walkthrough',
+            reason: 'dup',
+          },
           { locationId: 'nowhere', item: gymTm, sourcePage: 'Walkthrough', reason: 'typo' },
-          { locationId: 'pewter-city', item: { ...gymTm, name: 'Ether' }, sourcePage: 'Missing', reason: 'gone' },
+          {
+            locationId: 'pewter-city',
+            item: { ...gymTm, name: 'Ether' },
+            sourcePage: 'Missing',
+            reason: 'gone',
+          },
         ],
       }),
       sourceOf,
@@ -65,7 +82,10 @@ describe('applyItemOverrides', () => {
       'Item override for TM34 Bide names unknown location "nowhere"',
     ]);
     expect(locations[0]!.items.map((i) => i.itemId)).toEqual(['potion', 'tm34-bide']);
-    expect(locations[0]!.items[1]).toMatchObject({ source: { title: 'Walkthrough', revid: 42 }, subArea: 'Gym' });
+    expect(locations[0]!.items[1]).toMatchObject({
+      source: { title: 'Walkthrough', revid: 42 },
+      subArea: 'Gym',
+    });
   });
 
   it('adds unstated requirements to exactly one item', () => {
@@ -77,7 +97,12 @@ describe('applyItemOverrides', () => {
         item('Iron', { requires: [['card-key']] }),
       ]),
     ];
-    const rule = { locationId: 'silph-co', requires: [['card-key']], sourcePage: 'Walkthrough', reason: 'door' };
+    const rule = {
+      locationId: 'silph-co',
+      requires: [['card-key']],
+      sourcePage: 'Walkthrough',
+      reason: 'door',
+    };
     const errors = applyItemOverrides(
       locations,
       overrides({
@@ -105,7 +130,13 @@ describe('applyItemOverrides', () => {
   });
 
   it('patches exactly one item, renaming its id', () => {
-    const locations = [location('route-15', [item('Exp. Share'), item('Potion', { subArea: '1F' }), item('Potion', { subArea: '2F' })])];
+    const locations = [
+      location('route-15', [
+        item('Exp. Share'),
+        item('Potion', { subArea: '1F' }),
+        item('Potion', { subArea: '2F' }),
+      ]),
+    ];
     const rule = { locationId: 'route-15', sourcePage: 'Walkthrough', reason: 'fix' };
     const errors = applyItemOverrides(
       locations,
@@ -127,29 +158,47 @@ describe('applyItemOverrides', () => {
 
   it('marks choice groups', () => {
     const locations = [
-      location('mt-moon', [item('Dome Fossil', { obtain: 'choice' }), item('Helix Fossil', { obtain: 'choice' })]),
+      location('mt-moon', [
+        item('Dome Fossil', { obtain: 'choice' }),
+        item('Helix Fossil', { obtain: 'choice' }),
+      ]),
     ];
     const errors = applyItemOverrides(
       locations,
       overrides({
-        choiceGroups: [{ locationId: 'mt-moon', itemIds: ['dome-fossil', 'helix-fossil', 'old-amber'], groupId: 'mt-moon-fossil' }],
+        choiceGroups: [
+          {
+            locationId: 'mt-moon',
+            itemIds: ['dome-fossil', 'helix-fossil', 'old-amber'],
+            groupId: 'mt-moon-fossil',
+          },
+        ],
       }),
       sourceOf,
     );
     expect(errors).toEqual(['Choice group mt-moon-fossil has no choice item old-amber in mt-moon']);
-    expect(locations[0]!.items.map((i) => i.choiceGroupId)).toEqual(['mt-moon-fossil', 'mt-moon-fossil']);
+    expect(locations[0]!.items.map((i) => i.choiceGroupId)).toEqual([
+      'mt-moon-fossil',
+      'mt-moon-fossil',
+    ]);
   });
 });
 
 describe('checkItemRequirements', () => {
   it('reports requirements that are not unlocks in every game, and unlocks at unknown locations', () => {
     const cut: Unlock = { id: 'cut', label: 'Cut', kind: 'move', locationId: 'ss-anne', part: 6 };
-    const locations = [location('ss-anne', []), location('route-2', [item('HP Up', { requires: [['cut', 'surf']] })])];
+    const locations = [
+      location('ss-anne', []),
+      location('route-2', [item('HP Up', { requires: [['cut', 'surf']] })]),
+    ];
     expect(
       checkItemRequirements(locations, {
         red: [cut],
         blue: [cut],
-        yellow: [cut, { id: 'surf', label: 'Surf', kind: 'move', locationId: 'safari-zone', part: 11 }],
+        yellow: [
+          cut,
+          { id: 'surf', label: 'Surf', kind: 'move', locationId: 'safari-zone', part: 11 },
+        ],
       }),
     ).toEqual([
       'Unlock "surf" (yellow) is at unknown location "safari-zone"',
@@ -182,8 +231,8 @@ describe('diffWalkthroughItems', () => {
       { page: 'Part 3', message: 'Nugget: ×0 in the walkthrough, ×1 in the location data' },
     ]);
     const accepted = [{ itemId: 'potion', games: ['red', 'blue'] as const, reason: 'on purpose' }];
-    expect(diffWalkthroughItems(locations, walkthrough, accepted).map((m) => m.message)).not.toContain(
-      'Potion: ×1 in the walkthrough, ×2 in the location data',
-    );
+    expect(
+      diffWalkthroughItems(locations, walkthrough, accepted).map((m) => m.message),
+    ).not.toContain('Potion: ×1 in the walkthrough, ×2 in the location data');
   });
 });

@@ -54,19 +54,24 @@ describe('normalizeTemplateName', () => {
 
 describe('findTemplates', () => {
   it('parses positional and named parameters', () => {
-    const [call] = findTemplates('{{catch/entry1|016|Pidgey|yes|yes|no|Grass|2-5|50%|type1=Normal|type2=Flying}}');
+    const [call] = findTemplates(
+      '{{catch/entry1|016|Pidgey|yes|yes|no|Grass|2-5|50%|type1=Normal|type2=Flying}}',
+    );
     expect(call?.name).toBe('catch/entry1');
     expect(call?.positional).toEqual(['016', 'Pidgey', 'yes', 'yes', 'no', 'Grass', '2-5', '50%']);
     expect(call?.named).toEqual({ type1: 'Normal', type2: 'Flying' });
   });
 
   it('keeps nested templates inside parameters', () => {
-    const [call] = findTemplates("{{Catch/entry1|025|Pikachu|no|no|yes|Gift|5|{{tt|One|If Pikachu's friendship is 147.}}}}");
+    const [call] = findTemplates(
+      "{{Catch/entry1|025|Pikachu|no|no|yes|Gift|5|{{tt|One|If Pikachu's friendship is 147.}}}}",
+    );
     expect(call?.positional[7]).toBe("{{tt|One|If Pikachu's friendship is 147.}}");
   });
 
   it('finds several templates on one line, in order, with offsets', () => {
-    const text = 'x{{catch/div|sea|Surfing}}{{catch/entry1|072|Tentacool|yes|yes|yes|Surf|5-40|100%}}y';
+    const text =
+      'x{{catch/div|sea|Surfing}}{{catch/entry1|072|Tentacool|yes|yes|yes|Surf|5-40|100%}}y';
     const calls = findTemplates(text);
     expect(calls.map((c) => c.name)).toEqual(['catch/div', 'catch/entry1']);
     expect(text.slice(calls[0]!.start, calls[0]!.end)).toBe('{{catch/div|sea|Surfing}}');

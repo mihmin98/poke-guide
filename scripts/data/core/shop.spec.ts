@@ -10,7 +10,10 @@ const options = {
 };
 
 describe('parsePrizeShops', () => {
-  const result = parsePrizeShops(fixture('rby', 'celadon-game-corner').wikitext, { ...options, games: [...options.games] });
+  const result = parsePrizeShops(fixture('rby', 'celadon-game-corner').wikitext, {
+    ...options,
+    games: [...options.games],
+  });
   const prizes = (game: 'red' | 'blue' | 'yellow') =>
     result.rows
       .filter((r) => r.row.games.includes(game))
@@ -46,7 +49,9 @@ describe('parsePrizeShops', () => {
       ['Pinsir', 6500, 30],
       ['Porygon', 9999, 26],
     ]);
-    expect(result.rows.every((r) => r.method === 'prize' && r.requires.join() === 'coin-case')).toBe(true);
+    expect(
+      result.rows.every((r) => r.method === 'prize' && r.requires.join() === 'coin-case'),
+    ).toBe(true);
     expect(result.notes).toEqual([
       'Skipped prize shop for other versions: Pocket Monsters Blue',
       'Skipped prize shop for other versions: Pocket Monsters Blue',
@@ -97,7 +102,9 @@ describe('parsePrizeShops', () => {
       { ...options, games: ['red'] },
     );
     expect(other.items).toEqual([]);
-    expect(other.notes).toEqual(['Prize not bought with coins, skipped: {{shopitem|Fresh Water|200}}']);
+    expect(other.notes).toEqual([
+      'Prize not bought with coins, skipped: {{shopitem|Fresh Water|200}}',
+    ]);
   });
 
   it('reports a missing section and malformed rows', () => {
@@ -106,6 +113,8 @@ describe('parsePrizeShops', () => {
       '==Prize corner==\n===Generation I===\n{{shop|All versions}}\n{{shoprow|{{shopmon|Abra|063|x|lv=9}}}}\n{{shopfooter}}',
       { ...options, games: ['red'] },
     );
-    expect(bad.issues.map((i) => i.message)).toEqual(['Malformed prize row: {{shopmon|Abra|063|x|lv=9}}']);
+    expect(bad.issues.map((i) => i.message)).toEqual([
+      'Malformed prize row: {{shopmon|Abra|063|x|lv=9}}',
+    ]);
   });
 });

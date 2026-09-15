@@ -19,7 +19,9 @@ describe('stripMarkup', () => {
     expect(stripMarkup('{{rt|2|Kanto}}')).toBe('Route 2');
     expect(stripMarkup('{{p|Nidoran♀}}')).toBe('Nidoran♀');
     expect(stripMarkup('this {{ScPkmn}} and a {{ScBall}}')).toBe('this Pokémon and a Poké Ball');
-    expect(stripMarkup('{{OBP|Pokémon|species|{{ScPkmn}}}} {{wp|Kappa (folklore)|Kappa}}')).toBe('Pokémon Kappa');
+    expect(stripMarkup('{{OBP|Pokémon|species|{{ScPkmn}}}} {{wp|Kappa (folklore)|Kappa}}')).toBe(
+      'Pokémon Kappa',
+    );
   });
 
   it('uses the display text of link templates and renders game names', () => {

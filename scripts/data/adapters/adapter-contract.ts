@@ -5,7 +5,11 @@ import type { EncounterMethodId, GameId, LocationKind } from '../../../src/app/c
 import { GAMES } from '../../../src/app/core/games/registry';
 import { isKnownMethod } from '../../../src/app/core/games/methods';
 import { parseTemplate } from '../core/wikitext';
-import { AdapterError, type CatchTemplateAdapter, type WalkContext } from './catch-template-adapter';
+import {
+  AdapterError,
+  type CatchTemplateAdapter,
+  type WalkContext,
+} from './catch-template-adapter';
 
 export interface AdapterContractCase {
   description: string;
@@ -36,7 +40,9 @@ export function describeAdapterContract(
     it('declares normalized template names and registry games', () => {
       expect(adapter.templateNames.length).toBeGreaterThan(0);
       for (const name of adapter.templateNames) expect(name).toBe(name.trim().toLowerCase());
-      const known = new Set<string>(GAMES.map((g) => g.id).concat(['gold', 'silver', 'ruby', 'sapphire']));
+      const known = new Set<string>(
+        GAMES.map((g) => g.id).concat(['gold', 'silver', 'ruby', 'sapphire']),
+      );
       for (const game of adapter.games) expect(known.has(game)).toBe(true);
     });
 
@@ -79,7 +85,9 @@ export function describeAdapterContract(
       const first = cases[0]!;
       const ctx = context(first.locationKind);
       const row = adapter.parseRow(parseTemplate(first.wikitext)!, ctx);
-      expect(() => adapter.normalizeMethod({ ...row, rawMethod: 'Teleporter' }, ctx)).toThrow(AdapterError);
+      expect(() => adapter.normalizeMethod({ ...row, rawMethod: 'Teleporter' }, ctx)).toThrow(
+        AdapterError,
+      );
     });
 
     it('rejects a malformed National Dex number', () => {

@@ -4,7 +4,11 @@
  */
 import { z } from 'zod';
 import type { PokedexData, VersionGroupData } from '../../../src/app/core/domain/models';
-import { buildChecklist, maxInOneSave, type ChecklistEntry } from '../../../src/app/core/domain/obtainability';
+import {
+  buildChecklist,
+  maxInOneSave,
+  type ChecklistEntry,
+} from '../../../src/app/core/domain/obtainability';
 import { isKnownMethod } from '../../../src/app/core/games/methods';
 import { POKEMON_TYPES } from '../../../src/app/core/games/pokemon-types';
 import { findGame, getVersionGroup } from '../../../src/app/core/games/registry';
@@ -74,12 +78,21 @@ const location = z.strictObject({
   placement: gameRecord(z.strictObject({ part: positive, order: int.nonnegative() })),
   source: sourceShort,
   notes: z.array(z.string()),
-  subAreas: z.array(z.strictObject({ id: z.string().min(1), name: z.string().nullable(), encounters: z.array(encounter) })),
+  subAreas: z.array(
+    z.strictObject({
+      id: z.string().min(1),
+      name: z.string().nullable(),
+      encounters: z.array(encounter),
+    }),
+  ),
   items: z.array(item),
   itemNotes: z.array(z.string()),
 });
 
-const statRecord = z.partialRecord(z.enum(['hp', 'atk', 'def', 'spa', 'spd', 'spe', 'spc']), int.nonnegative());
+const statRecord = z.partialRecord(
+  z.enum(['hp', 'atk', 'def', 'spa', 'spd', 'spe', 'spc']),
+  int.nonnegative(),
+);
 
 const species = z.strictObject({
   dex: positive,
@@ -128,10 +141,16 @@ export const versionGroupDataSchema = z.strictObject({
     .strictObject({
       dayCareLocationIds: z.array(z.string()),
       dittoDex: positive,
-      babyItemRequirements: z.array(z.strictObject({ offspring: positive, item: z.string() })).optional(),
+      babyItemRequirements: z
+        .array(z.strictObject({ offspring: positive, item: z.string() }))
+        .optional(),
     })
     .nullable(),
-  walkthroughs: gameRecord(z.array(z.strictObject({ part: positive, title: z.string().min(1), region: z.string().min(1) }))),
+  walkthroughs: gameRecord(
+    z.array(
+      z.strictObject({ part: positive, title: z.string().min(1), region: z.string().min(1) }),
+    ),
+  ),
   unlocks: gameRecord(
     z.array(
       z.strictObject({
@@ -144,7 +163,12 @@ export const versionGroupDataSchema = z.strictObject({
     ),
   ),
   exclusiveGroups: z.array(
-    z.strictObject({ id: z.string().min(1), label: z.string().min(1), games: z.array(z.string()).min(1), members: z.array(positive).min(2) }),
+    z.strictObject({
+      id: z.string().min(1),
+      label: z.string().min(1),
+      games: z.array(z.string()).min(1),
+      members: z.array(positive).min(2),
+    }),
   ),
   eventOnly: z.array(positive),
   locations: z.array(location),
@@ -163,18 +187,32 @@ export const pokedexDataSchema = z.strictObject({
       power: positive.nullable(),
       accuracy: z.number().positive().max(100).nullable(),
       pp: positive,
-      machine: z.string().regex(/^(?:TM|HM)\d{2}$/).optional(),
+      machine: z
+        .string()
+        .regex(/^(?:TM|HM)\d{2}$/)
+        .optional(),
     }),
   ),
   learnsets: z.record(
     z.string().regex(/^\d+$/),
     z.strictObject({
-      levelUp: z.array(z.strictObject({ move: z.string().min(1), levels: gameRecord(int.nonnegative()) })),
+      levelUp: z.array(
+        z.strictObject({ move: z.string().min(1), levels: gameRecord(int.nonnegative()) }),
+      ),
       machines: z.array(z.string().min(1)),
-      prevo: z.array(z.strictObject({ move: z.string().min(1), fromDex: z.array(positive).min(1), games: z.array(z.string()).optional() })),
+      prevo: z.array(
+        z.strictObject({
+          move: z.string().min(1),
+          fromDex: z.array(positive).min(1),
+          games: z.array(z.string()).optional(),
+        }),
+      ),
     }),
   ),
-  entries: z.record(z.string().regex(/^\d+$/), z.array(z.strictObject({ games: z.array(z.string()).min(1), text: z.string().min(1) }))),
+  entries: z.record(
+    z.string().regex(/^\d+$/),
+    z.array(z.strictObject({ games: z.array(z.string()).min(1), text: z.string().min(1) })),
+  ),
   sources: z.array(sourceRef),
 });
 
@@ -198,11 +236,17 @@ function schemaIssues(label: string, error: z.ZodError): BuildIssue[] {
     message: `${label} schema: ${i.path.join('.') || '(root)'}: ${i.message}`,
   }));
   if (error.issues.length > MAX_SCHEMA_ISSUES)
-    issues.push({ level: 'error', message: `${label} schema: … and ${error.issues.length - MAX_SCHEMA_ISSUES} more` });
+    issues.push({
+      level: 'error',
+      message: `${label} schema: … and ${error.issues.length - MAX_SCHEMA_ISSUES} more`,
+    });
   return issues;
 }
 
-export function validateVersionGroup(data: VersionGroupData, pokedex: PokedexData): ValidationResult {
+export function validateVersionGroup(
+  data: VersionGroupData,
+  pokedex: PokedexData,
+): ValidationResult {
   const issues: BuildIssue[] = [];
   const error = (message: string) => issues.push({ level: 'error', message });
 
@@ -217,16 +261,20 @@ export function validateVersionGroup(data: VersionGroupData, pokedex: PokedexDat
   const groups = new Set(data.exclusiveGroups.map((g) => g.id));
   const unknownGames = (list: Iterable<string>) => [...list].filter((g) => !games.has(g));
   const checkGames = (what: string, list: Iterable<string>) => {
-    for (const game of unknownGames(list)) error(`${what} has game "${game}", which is not in the version group`);
+    for (const game of unknownGames(list))
+      error(`${what} has game "${game}", which is not in the version group`);
   };
   const checkDex = (what: string, dex: number) => {
     if (!dexes.has(dex)) error(`${what} names #${dex}, which is not in the species list`);
   };
 
   if (pokedex.versionGroupId !== data.versionGroupId)
-    error(`Pokédex file is for "${pokedex.versionGroupId}", data file for "${data.versionGroupId}"`);
+    error(
+      `Pokédex file is for "${pokedex.versionGroupId}", data file for "${data.versionGroupId}"`,
+    );
   for (const game of data.games) {
-    if (findGame(game)?.versionGroupId !== data.versionGroupId) error(`Game "${game}" is not a registry game of ${data.versionGroupId}`);
+    if (findGame(game)?.versionGroupId !== data.versionGroupId)
+      error(`Game "${game}" is not a registry game of ${data.versionGroupId}`);
   }
   const seen = new Set<string>();
   for (const loc of data.locations) {
@@ -239,7 +287,8 @@ export function validateVersionGroup(data: VersionGroupData, pokedex: PokedexDat
         if (!isKnownMethod(e.method)) error(`${what}: unknown method "${e.method}"`);
         checkDex(what, e.dex);
         if (e.trade) checkDex(`${what} trade`, e.trade.giveDex);
-        if (e.exclusiveGroupId && !groups.has(e.exclusiveGroupId)) error(`${what}: unknown exclusive group "${e.exclusiveGroupId}"`);
+        if (e.exclusiveGroupId && !groups.has(e.exclusiveGroupId))
+          error(`${what}: unknown exclusive group "${e.exclusiveGroupId}"`);
         checkGames(`${what} slot`, Object.keys(e.games));
       }
     }
@@ -269,7 +318,11 @@ export function validateVersionGroup(data: VersionGroupData, pokedex: PokedexDat
         error(`#${entry.dex} ${name} has no source and no unobtainable reason in ${id}`);
       }
     }
-    checklists.push({ game: id, entries, maxInOneSave: maxInOneSave(data, game, group.features, entries) });
+    checklists.push({
+      game: id,
+      entries,
+      maxInOneSave: maxInOneSave(data, game, group.features, entries),
+    });
   }
   return { issues, checklists };
 }

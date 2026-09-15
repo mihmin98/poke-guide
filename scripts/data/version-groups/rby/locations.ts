@@ -5,7 +5,14 @@
 import type { LocationKind } from '../../../../src/app/core/domain/models';
 import type { LocationConfig } from '../types';
 
-function kanto(id: string, page: string, name: string, kind: LocationKind, part: number, extra: Partial<LocationConfig> = {}): LocationConfig {
+function kanto(
+  id: string,
+  page: string,
+  name: string,
+  kind: LocationKind,
+  part: number,
+  extra: Partial<LocationConfig> = {},
+): LocationConfig {
   return {
     id,
     page,
@@ -43,7 +50,13 @@ export const RBY_LOCATIONS: LocationConfig[] = [
   route(25, 5),
   kanto('sea-cottage', 'Sea Cottage', 'Sea Cottage', 'building', 5, { itemsOnly: true }),
   route(5, 5),
-  kanto('underground-path-5-6', 'Underground Path (Kanto Routes 5–6)', 'Underground Path (Routes 5–6)', 'building', 5),
+  kanto(
+    'underground-path-5-6',
+    'Underground Path (Kanto Routes 5–6)',
+    'Underground Path (Routes 5–6)',
+    'building',
+    5,
+  ),
   // Part 6
   route(6, 6),
   kanto('vermilion-city', 'Vermilion City', 'Vermilion City', 'town', 6),
@@ -51,23 +64,41 @@ export const RBY_LOCATIONS: LocationConfig[] = [
   // Part 7
   route(11, 7),
   kanto('digletts-cave', "Diglett's Cave", "Diglett's Cave", 'cave', 7),
-  kanto('pewter-museum', 'Pewter Museum of Science', 'Pewter Museum of Science', 'building', 7, { expectEmpty: true }),
+  kanto('pewter-museum', 'Pewter Museum of Science', 'Pewter Museum of Science', 'building', 7, {
+    expectEmpty: true,
+  }),
   route(9, 7),
   route(10, 7),
   // Part 8
   kanto('rock-tunnel', 'Rock Tunnel', 'Rock Tunnel', 'cave', 8),
   kanto('lavender-town', 'Lavender Town', 'Lavender Town', 'town', 8, { expectEmpty: true }),
   route(8, 8),
-  kanto('underground-path-7-8', 'Underground Path (Kanto Routes 7–8)', 'Underground Path (Routes 7–8)', 'building', 8, { expectEmpty: true }),
+  kanto(
+    'underground-path-7-8',
+    'Underground Path (Kanto Routes 7–8)',
+    'Underground Path (Routes 7–8)',
+    'building',
+    8,
+    { expectEmpty: true },
+  ),
   route(7, 8),
   // Part 9
   kanto('celadon-city', 'Celadon City', 'Celadon City', 'town', 9),
-  kanto('celadon-department-store', 'Celadon Department Store', 'Celadon Department Store', 'building', 9, {
-    itemsOnly: true,
-  }),
+  kanto(
+    'celadon-department-store',
+    'Celadon Department Store',
+    'Celadon Department Store',
+    'building',
+    9,
+    {
+      itemsOnly: true,
+    },
+  ),
   kanto('celadon-condominiums', 'Celadon Condominiums', 'Celadon Condominiums', 'building', 9),
   kanto('celadon-game-corner', 'Celadon Game Corner', 'Celadon Game Corner', 'building', 9),
-  kanto('team-rocket-hideout', 'Team Rocket Hideout', 'Team Rocket Hideout', 'building', 9, { expectEmpty: true }),
+  kanto('team-rocket-hideout', 'Team Rocket Hideout', 'Team Rocket Hideout', 'building', 9, {
+    expectEmpty: true,
+  }),
   kanto('pokemon-tower', 'Pokémon Tower', 'Pokémon Tower', 'building', 9),
   // Part 10
   kanto('saffron-city', 'Saffron City', 'Saffron City', 'town', 10, { expectEmpty: true }),

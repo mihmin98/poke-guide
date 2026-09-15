@@ -9,14 +9,16 @@
  */
 import type { CatchRateNoteClassification } from '../../../core/catch-rate-history';
 
-const PRET_YELLOW_BASE_STATS = 'https://github.com/pret/pokeyellow/blob/master/data/pokemon/base_stats';
+const PRET_YELLOW_BASE_STATS =
+  'https://github.com/pret/pokeyellow/blob/master/data/pokemon/base_stats';
 
 export const RBY_CATCH_RATE_NOTES: readonly CatchRateNoteClassification[] = [
   {
     dex: 25,
     note: 'The first partner Pikachu in Yellow has its catch rate value set to 163',
     kind: 'note-only',
-    reason: 'The partner Pikachu is a gift, never captured; 163 only gives it a Light Ball when traded to Generation II.',
+    reason:
+      'The partner Pikachu is a gift, never captured; 163 only gives it a Light Ball when traded to Generation II.',
   },
   {
     dex: 64,

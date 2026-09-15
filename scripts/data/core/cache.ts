@@ -64,7 +64,9 @@ export function readFixture(file: string): CachedPage {
 export function loadFixtures(dir: string): Map<string, CachedPage> {
   const pages = new Map<string, CachedPage>();
   if (!existsSync(dir)) return pages;
-  for (const name of readdirSync(dir).filter((f) => f.endsWith('.wikitext')).sort()) {
+  for (const name of readdirSync(dir)
+    .filter((f) => f.endsWith('.wikitext'))
+    .sort()) {
     const page = readFixture(join(dir, name));
     pages.set(page.title, page);
     pages.set(page.resolvedTitle, page);

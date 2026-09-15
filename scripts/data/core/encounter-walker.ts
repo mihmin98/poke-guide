@@ -13,7 +13,13 @@ import {
 } from '../adapters/catch-template-adapter';
 import { stripMarkup } from './markup';
 import { findNestedSection, headingText, headingsWithin } from './sections';
-import { findTemplates, parseHeadings, stripComments, type Heading, type TemplateCall } from './wikitext';
+import {
+  findTemplates,
+  parseHeadings,
+  stripComments,
+  type Heading,
+  type TemplateCall,
+} from './wikitext';
 
 export interface Issue {
   level: 'error' | 'warning';
@@ -76,7 +82,9 @@ export function walkEncounterSection(wikitext: string, options: WalkOptions): Wa
   const issue = (level: Issue['level'], message: string) =>
     result.issues.push({ level, page: options.pageTitle, message });
   const adapterByName = new Map(
-    options.adapters.flatMap((a) => a.templateNames.map((name) => [name.toLowerCase(), a] as const)),
+    options.adapters.flatMap((a) =>
+      a.templateNames.map((name) => [name.toLowerCase(), a] as const),
+    ),
   );
 
   const events: WalkEvent[] = [
@@ -89,7 +97,8 @@ export function walkEncounterSection(wikitext: string, options: WalkOptions): Wa
 
   // Notes end at the first table or sub-area; inline templates such as {{game|Yellow}} belong to the prose.
   const firstOffset =
-    events.find((e) => 'heading' in e || e.template.name.startsWith('catch/'))?.offset ?? section.end;
+    events.find((e) => 'heading' in e || e.template.name.startsWith('catch/'))?.offset ??
+    section.end;
   result.notes = text
     .slice(section.start, firstOffset)
     .split(/\n\s*\n/)
@@ -145,7 +154,8 @@ export function walkEncounterSection(wikitext: string, options: WalkOptions): Wa
       const row = adapter.parseRow(template, ctx);
       const normalized = adapter.normalizeMethod(row, ctx);
       const method = findMethod(normalized.method);
-      if (!method) throw new AdapterError(`Adapter returned unknown method id "${normalized.method}"`);
+      if (!method)
+        throw new AdapterError(`Adapter returned unknown method id "${normalized.method}"`);
       if (LEVELED_CATEGORIES.has(method.category) && row.slots.some((s) => s.levels === null)) {
         issue('error', `Unparseable levels "${row.slots[0]?.rawLevels ?? ''}" in ${source}`);
       }

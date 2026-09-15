@@ -106,7 +106,11 @@ function indexOfTopLevel(text: string, char: string, from = 0): number {
 export function splitTopLevel(text: string, separator = '|'): string[] {
   const parts: string[] = [];
   let last = 0;
-  for (let i = indexOfTopLevel(text, separator); i !== -1; i = indexOfTopLevel(text, separator, last)) {
+  for (
+    let i = indexOfTopLevel(text, separator);
+    i !== -1;
+    i = indexOfTopLevel(text, separator, last)
+  ) {
     parts.push(text.slice(last, i));
     last = i + 1;
   }
@@ -164,5 +168,7 @@ export function findTemplates(text: string, from = 0, to = text.length): Templat
 export function parseTemplate(raw: string): TemplateCall | null {
   const trimmed = raw.trim();
   if (!trimmed.startsWith('{{')) return null;
-  return matchBraces(trimmed, 0) === trimmed.length ? parseTemplateCall(trimmed, 0, trimmed.length) : null;
+  return matchBraces(trimmed, 0) === trimmed.length
+    ? parseTemplateCall(trimmed, 0, trimmed.length)
+    : null;
 }

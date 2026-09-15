@@ -94,7 +94,9 @@ async function buildGroup(
   issues.push(...validation.issues);
   printIssues(issues);
   for (const { game, entries, maxInOneSave } of validation.checklists) {
-    console.log(`${game}: ${entries.filter((e) => e.obtainable).length}/${entries.length} obtainable, ${maxInOneSave} max in one save`);
+    console.log(
+      `${game}: ${entries.filter((e) => e.obtainable).length}/${entries.length} obtainable, ${maxInOneSave} max in one save`,
+    );
   }
 
   const errors = issues.filter((i) => i.level === 'error').length;
@@ -113,7 +115,9 @@ async function buildGroup(
 
   const dataFile = join(repoRoot(), 'public', getVersionGroup(config.id).dataFile);
   const pokedexFile = dataFile.replace(/\.json$/, '.pokedex.json');
-  const previous = existsSync(dataFile) ? (JSON.parse(readFileSync(dataFile, 'utf8')) as VersionGroupData) : null;
+  const previous = existsSync(dataFile)
+    ? (JSON.parse(readFileSync(dataFile, 'utf8')) as VersionGroupData)
+    : null;
   mkdirSync(dirname(dataFile), { recursive: true });
   for (const [file, content] of [
     [dataFile, data],
@@ -128,7 +132,10 @@ async function buildGroup(
   }
   const reportFile = join(repoRoot(), 'scripts', 'data', 'reports', `${config.id}.md`);
   mkdirSync(dirname(reportFile), { recursive: true });
-  writeFileSync(reportFile, renderReport({ data, previous, issues, checklists: validation.checklists }));
+  writeFileSync(
+    reportFile,
+    renderReport({ data, previous, issues, checklists: validation.checklists }),
+  );
   console.log(`Wrote ${relative(repoRoot(), reportFile)}`);
   return true;
 }

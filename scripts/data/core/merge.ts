@@ -74,15 +74,19 @@ function conditionsKey(conditions: readonly EncounterCondition[] | undefined): s
 
 function addSlot(slots: EncounterSlot[], slot: EncounterSlot): void {
   const key = conditionsKey(slot.conditions);
-  const same = slot.rate.kind === 'percent'
-    ? slots.find((s) => s.rate.kind === 'percent' && conditionsKey(s.conditions) === key)
-    : undefined;
+  const same =
+    slot.rate.kind === 'percent'
+      ? slots.find((s) => s.rate.kind === 'percent' && conditionsKey(s.conditions) === key)
+      : undefined;
   if (!same || same.rate.kind !== 'percent' || slot.rate.kind !== 'percent') {
     slots.push(slot);
     return;
   }
   same.levels = unionLevels(same.levels, slot.levels);
-  same.rate = { kind: 'percent', value: Math.round((same.rate.value + slot.rate.value) * 100) / 100 };
+  same.rate = {
+    kind: 'percent',
+    value: Math.round((same.rate.value + slot.rate.value) * 100) / 100,
+  };
   if (slot.note && slot.note !== same.note) {
     same.note = same.note ? `${same.note} ${slot.note}` : slot.note;
   }

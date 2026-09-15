@@ -1,7 +1,14 @@
 import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { PageCache, PageSource, formatFixture, loadFixtures, parseFixture, type CachedPage } from './cache';
+import {
+  PageCache,
+  PageSource,
+  formatFixture,
+  loadFixtures,
+  parseFixture,
+  type CachedPage,
+} from './cache';
 import type { MediaWikiClient } from './mediawiki-client';
 
 const page = (title: string, revid = 1): CachedPage => ({
@@ -40,7 +47,10 @@ describe('fixtures', () => {
   });
 
   it('loads a directory indexed by requested and resolved title', () => {
-    writeFileSync(join(dir, 'lab.wikitext'), formatFixture({ ...page('Pokémon Lab'), resolvedTitle: 'Pokémon Research Lab' }));
+    writeFileSync(
+      join(dir, 'lab.wikitext'),
+      formatFixture({ ...page('Pokémon Lab'), resolvedTitle: 'Pokémon Research Lab' }),
+    );
     const fixtures = loadFixtures(dir);
     expect(fixtures.get('Pokémon Lab')?.revid).toBe(1);
     expect(fixtures.get('Pokémon Research Lab')?.revid).toBe(1);
@@ -49,7 +59,10 @@ describe('fixtures', () => {
 
 describe('PageSource', () => {
   function fakeClient() {
-    const getPages = vi.fn(async (titles: readonly string[]) => new Map(titles.map((t) => [t, t === 'Missing' ? null : page(t, 9)])));
+    const getPages = vi.fn(
+      async (titles: readonly string[]) =>
+        new Map(titles.map((t) => [t, t === 'Missing' ? null : page(t, 9)])),
+    );
     return { client: { getPages } as unknown as MediaWikiClient, getPages };
   }
 
@@ -57,7 +70,12 @@ describe('PageSource', () => {
     const cache = new PageCache(dir);
     cache.write(page('Cached'));
     const { client, getPages } = fakeClient();
-    const source = new PageSource({ mode: 'cache-first', cache, client, now: () => new Date('2026-02-01T00:00:00Z') });
+    const source = new PageSource({
+      mode: 'cache-first',
+      cache,
+      client,
+      now: () => new Date('2026-02-01T00:00:00Z'),
+    });
     const pages = await source.getPages(['Cached', 'New', 'Missing']);
     expect(getPages).toHaveBeenCalledWith(['New', 'Missing']);
     expect(pages.get('Cached')?.revid).toBe(1);
@@ -80,7 +98,11 @@ describe('PageSource', () => {
     cache.write(page('Cached', 2));
     const { client, getPages } = fakeClient();
     const fixtures = new Map([['Fixture', page('Fixture', 3)]]);
-    const pages = await new PageSource({ mode: 'offline', cache, client, fixtures }).getPages(['Fixture', 'Cached', 'Absent']);
+    const pages = await new PageSource({ mode: 'offline', cache, client, fixtures }).getPages([
+      'Fixture',
+      'Cached',
+      'Absent',
+    ]);
     expect(getPages).not.toHaveBeenCalled();
     expect(pages.get('Fixture')?.revid).toBe(3);
     expect(pages.get('Cached')?.revid).toBe(2);

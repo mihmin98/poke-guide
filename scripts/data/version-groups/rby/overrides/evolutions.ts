@@ -22,7 +22,12 @@ const item = (from: number, to: number, name: string): EvolutionEdge => ({
   requiresTrade: false,
 });
 
-const trade = (from: number, to: number): EvolutionEdge => ({ from, to, trigger: 'trade', requiresTrade: true });
+const trade = (from: number, to: number): EvolutionEdge => ({
+  from,
+  to,
+  trigger: 'trade',
+  requiresTrade: true,
+});
 
 export const RBY_EVOLUTIONS: readonly EvolutionEdge[] = [
   level(1, 2, 16), // Bulbasaur → Ivysaur

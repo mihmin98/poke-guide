@@ -105,9 +105,13 @@ export function applyEncounterPatches(
     if (patch.locationId !== locationId) continue;
     const { method, dex, label } = patch.match;
     const matches = (r: WalkedRow) =>
-      r.method === method && (dex === undefined || r.row.dex === dex) && (label === undefined || r.label === label);
+      r.method === method &&
+      (dex === undefined || r.row.dex === dex) &&
+      (label === undefined || r.label === label);
     if (!result.some(matches)) {
-      errors.push(`Encounter patch for ${JSON.stringify(patch.match)} in ${locationId} matches no rows`);
+      errors.push(
+        `Encounter patch for ${JSON.stringify(patch.match)} in ${locationId} matches no rows`,
+      );
       continue;
     }
     if (!sourceOf(patch.sourcePage ?? pageTitle)) continue;
@@ -117,7 +121,11 @@ export function applyEncounterPatches(
         ? result.filter((r) => !matches(r))
         : result.map((r) =>
             matches(r)
-              ? { ...r, method: set.method ?? r.method, label: set.label === undefined ? r.label : set.label }
+              ? {
+                  ...r,
+                  method: set.method ?? r.method,
+                  label: set.label === undefined ? r.label : set.label,
+                }
               : r,
           );
   }
@@ -125,7 +133,10 @@ export function applyEncounterPatches(
 }
 
 /** Errors for overrides and patches naming locations that aren't configured. */
-export function checkOverrideLocations(overrides: EncounterOverrides, locationIds: ReadonlySet<string>): string[] {
+export function checkOverrideLocations(
+  overrides: EncounterOverrides,
+  locationIds: ReadonlySet<string>,
+): string[] {
   return [
     ...overrides.encounters.map((o) => [o.locationId, `#${o.dex} ${o.name}`] as const),
     ...overrides.patches.map((p) => [p.locationId, JSON.stringify(p.match)] as const),
@@ -136,7 +147,10 @@ export function checkOverrideLocations(overrides: EncounterOverrides, locationId
 }
 
 /** Tags member encounters with their exclusive group (in place). Errors for members missing in a game. */
-export function applyExclusiveGroups(locations: GameLocation[], groups: readonly ExclusiveGroupOverride[]): string[] {
+export function applyExclusiveGroups(
+  locations: GameLocation[],
+  groups: readonly ExclusiveGroupOverride[],
+): string[] {
   const errors: string[] = [];
   for (const group of groups) {
     const encounters = locations
@@ -169,7 +183,9 @@ export function checkEncounterRequirements(
           (game) => !unlocks[game]?.some((u) => u.id === id),
         );
         if (missing.length > 0)
-          errors.push(`#${encounter.dex} in ${location.id} requires "${id}", which is not an unlock in ${missing.join(', ')}`);
+          errors.push(
+            `#${encounter.dex} in ${location.id} requires "${id}", which is not an unlock in ${missing.join(', ')}`,
+          );
       }
     }
   }

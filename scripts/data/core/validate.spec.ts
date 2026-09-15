@@ -4,7 +4,8 @@ import type { PokedexData, VersionGroupData } from '../../../src/app/core/domain
 import { repoRoot } from './paths';
 import { validateVersionGroup } from './validate';
 
-const load = <T>(file: string): T => JSON.parse(readFileSync(join(repoRoot(), 'public', 'data', file), 'utf8')) as T;
+const load = <T>(file: string): T =>
+  JSON.parse(readFileSync(join(repoRoot(), 'public', 'data', file), 'utf8')) as T;
 
 describe('validateVersionGroup', () => {
   const data = () => load<VersionGroupData>('rby.json');
@@ -24,7 +25,9 @@ describe('validateVersionGroup', () => {
     const broken = data() as unknown as { locations: { extra?: number }[] };
     broken.locations[0]!.extra = 1;
     const result = validateVersionGroup(broken as unknown as VersionGroupData, pokedex);
-    expect(result.issues.map((i) => i.message)).toEqual(['Data schema: locations.0: Unrecognized key: "extra"']);
+    expect(result.issues.map((i) => i.message)).toEqual([
+      'Data schema: locations.0: Unrecognized key: "extra"',
+    ]);
     expect(result.checklists).toEqual([]);
   });
 
@@ -35,8 +38,12 @@ describe('validateVersionGroup', () => {
     encounter.games['gold'] = encounter.games['red'];
     d.eventOnly = [];
     const messages = validateVersionGroup(d, pokedex).issues.map((i) => i.message);
-    expect(messages).toContain(`#${encounter.dex} headbutt in route-1/main: unknown method "headbutt"`);
-    expect(messages).toContain(`#${encounter.dex} headbutt in route-1/main slot has game "gold", which is not in the version group`);
+    expect(messages).toContain(
+      `#${encounter.dex} headbutt in route-1/main: unknown method "headbutt"`,
+    );
+    expect(messages).toContain(
+      `#${encounter.dex} headbutt in route-1/main slot has game "gold", which is not in the version group`,
+    );
     expect(messages).toContain('#151 Mew has no source and no unobtainable reason in red');
   });
 });

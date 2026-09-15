@@ -24,14 +24,24 @@ describe('spriteJobs', () => {
   it('covers each sprite set of the rby games once, over the species range', () => {
     const jobs = spriteJobs(rbyConfig);
     expect(jobs).toHaveLength(302);
-    expect(jobs[0]).toEqual({ setId: 'gen1-rb', dex: 1, fileTitle: 'File:Spr_1b_001.png', path: 'gen1-rb/001.png' });
-    expect(jobs.at(-1)).toEqual({ setId: 'gen1-y', dex: 151, fileTitle: 'File:Spr_1y_151.png', path: 'gen1-y/151.png' });
+    expect(jobs[0]).toEqual({
+      setId: 'gen1-rb',
+      dex: 1,
+      fileTitle: 'File:Spr_1b_001.png',
+      path: 'gen1-rb/001.png',
+    });
+    expect(jobs.at(-1)).toEqual({
+      setId: 'gen1-y',
+      dex: 151,
+      fileTitle: 'File:Spr_1y_151.png',
+      path: 'gen1-y/151.png',
+    });
   });
 
   it('throws when a game uses an unconfigured sprite set', () => {
-    expect(() => spriteJobs({ ...rbyConfig, spriteSets: { 'gen1-rb': { filePattern: 'Spr_1b_{dex3}.png' } } })).toThrow(
-      /"gen1-y" has no filePattern/,
-    );
+    expect(() =>
+      spriteJobs({ ...rbyConfig, spriteSets: { 'gen1-rb': { filePattern: 'Spr_1b_{dex3}.png' } } }),
+    ).toThrow(/"gen1-y" has no filePattern/);
   });
 });
 
@@ -56,7 +66,12 @@ describe('syncSprites', () => {
         new Map<string, ImageInfo | null>(
           titles.map((title) => {
             const file = files[title];
-            return [title, file ? { url: `https://x/${title}`, sha1: file.sha1 ?? sha1(bytesOf(file.content)) } : null];
+            return [
+              title,
+              file
+                ? { url: `https://x/${title}`, sha1: file.sha1 ?? sha1(bytesOf(file.content)) }
+                : null,
+            ];
           }),
         ),
       download: async (url) => {
@@ -85,7 +100,11 @@ describe('syncSprites', () => {
     expect(result.unchanged.map((j) => j.dex)).toEqual([2]);
     expect(result.missing.map((j) => j.dex)).toEqual([4]);
     expect(result.corrupt.map((j) => j.dex)).toEqual([5]);
-    expect(downloads).toEqual(['https://x/File:Spr_1b_001.png', 'https://x/File:Spr_1b_003.png', 'https://x/File:Spr_1b_005.png']);
+    expect(downloads).toEqual([
+      'https://x/File:Spr_1b_001.png',
+      'https://x/File:Spr_1b_003.png',
+      'https://x/File:Spr_1b_005.png',
+    ]);
     expect(readFileSync(join(dir, 'gen1-rb/001.png'), 'utf8')).toBe('new');
     expect(readFileSync(join(dir, 'gen1-rb/003.png'), 'utf8')).toBe('updated');
     expect(existsSync(join(dir, 'gen1-rb/005.png'))).toBe(false);

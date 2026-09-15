@@ -29,8 +29,13 @@ describe('typesInGeneration', () => {
   });
 
   it('leaves every Gen I species with types that exist in Gen I', () => {
-    const species = speciesInRange(parseNationalDexList(fixture('rby', 'national-dex-list').wikitext), [1, 151]);
-    const invalid = species.filter((s) => !typesInGeneration(s.dex, s.types, 1).every((t) => typeExistsIn(t, 1)));
+    const species = speciesInRange(
+      parseNationalDexList(fixture('rby', 'national-dex-list').wikitext),
+      [1, 151],
+    );
+    const invalid = species.filter(
+      (s) => !typesInGeneration(s.dex, s.types, 1).every((t) => typeExistsIn(t, 1)),
+    );
     expect(invalid.map((s) => s.name)).toEqual([]);
   });
 });

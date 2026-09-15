@@ -73,7 +73,8 @@ export function parseLearnsetPage(wikitext: string, options: LearnsetParseOption
 
   /** Reads `name|type|power|accuracy|pp` starting at `index`; returns the move name. */
   const readMove = (call: TemplateCall, index: number): string | null => {
-    const [rawName = '', rawType = '', rawPower = '', rawAccuracy = '', rawPp = ''] = call.positional.slice(index);
+    const [rawName = '', rawType = '', rawPower = '', rawAccuracy = '', rawPp = ''] =
+      call.positional.slice(index);
     const name = stripMarkup(rawName);
     const where = `${call.name} "${name}"`;
     let type;
@@ -83,18 +84,22 @@ export function parseLearnsetPage(wikitext: string, options: LearnsetParseOption
       result.issues.push(`${where}: unknown type "${rawType}"`);
       return null;
     }
-    if (!typeExistsIn(type, gen)) result.issues.push(`${where}: type ${type} doesn't exist in Generation ${toRoman(gen)}`);
+    if (!typeExistsIn(type, gen))
+      result.issues.push(`${where}: type ${type} doesn't exist in Generation ${toRoman(gen)}`);
     const power = optionalNumber(rawPower);
     const accuracy = optionalNumber(rawAccuracy);
     const pp = optionalNumber(rawPp);
     if (!name || power === undefined || accuracy === undefined || typeof pp !== 'number') {
-      result.issues.push(`${where}: malformed move data "${call.positional.slice(index, index + 5).join('|')}"`);
+      result.issues.push(
+        `${where}: malformed move data "${call.positional.slice(index, index + 5).join('|')}"`,
+      );
       return null;
     }
     const data: MoveData = { name, type, power, accuracy, pp };
     const known = moves.get(name);
     if (!known) moves.set(name, data);
-    else if (JSON.stringify(known) !== JSON.stringify(data)) result.issues.push(`${where}: conflicting move data on the page`);
+    else if (JSON.stringify(known) !== JSON.stringify(data))
+      result.issues.push(`${where}: conflicting move data on the page`);
     return name;
   };
 
@@ -108,7 +113,12 @@ export function parseLearnsetPage(wikitext: string, options: LearnsetParseOption
       section = classifySection(headingText(headings[headingIndex]!));
       headingIndex++;
     }
-    if (section === 'ignored' || !call.name.startsWith('learnlist/') || ignoredTemplates.has(call.name)) continue;
+    if (
+      section === 'ignored' ||
+      !call.name.startsWith('learnlist/') ||
+      ignoredTemplates.has(call.name)
+    )
+      continue;
 
     if (section === 'level' && call.name === 'learnlist/levelh') {
       columns = [options.games];
@@ -121,10 +131,15 @@ export function parseLearnsetPage(wikitext: string, options: LearnsetParseOption
       } else {
         columns = mapped as (readonly GameId[])[];
       }
-    } else if (section === 'level' && (call.name === `learnlist/level${gen}` || call.name === `learnlist/level${roman}`)) {
+    } else if (
+      section === 'level' &&
+      (call.name === `learnlist/level${gen}` || call.name === `learnlist/level${roman}`)
+    ) {
       const width = call.name === `learnlist/level${gen}` ? 1 : columns.length;
       if (width !== columns.length) {
-        result.issues.push(`${call.name}: ${width} level column(s) under a header with ${columns.length}`);
+        result.issues.push(
+          `${call.name}: ${width} level column(s) under a header with ${columns.length}`,
+        );
         continue;
       }
       const move = readMove(call, width);
@@ -145,12 +160,15 @@ export function parseLearnsetPage(wikitext: string, options: LearnsetParseOption
     } else if (section === 'machine' && call.name === `learnlist/tm${gen}`) {
       const machine = stripMarkup(call.positional[0] ?? '');
       const move = readMove(call, 1);
-      if (!/^(TM|HM)\d{2,3}$/.test(machine)) result.issues.push(`${call.name}: unexpected machine "${machine}"`);
+      if (!/^(TM|HM)\d{2,3}$/.test(machine))
+        result.issues.push(`${call.name}: unexpected machine "${machine}"`);
       else if (move) result.machines.push({ machine, move });
     } else if (section === 'prevo' && call.name === `learnlist/prevo${gen}`) {
       // `prevo1|029|Nidoran♀||030|Nidorina||Double Kick|Fighting|30|100|30||RB`: up to two previous stages
       // (dex, name, marker), the move from parameter 7, then an optional bold marker and game flag.
-      const rawDex = [call.positional[0], call.positional[3]].filter((value): value is string => !!value);
+      const rawDex = [call.positional[0], call.positional[3]].filter(
+        (value): value is string => !!value,
+      );
       const fromDex = rawDex.map(Number);
       const flag = stripMarkup(call.positional[12] ?? '');
       const games = flag ? options.levelColumns[flag] : undefined;
@@ -174,7 +192,10 @@ export function parseLearnsetPage(wikitext: string, options: LearnsetParseOption
  * Merges the moves of every learnset into the version group's move list (ids are slugs of the generation's
  * spelling). Different data for one move, or two machines teaching one move, are issues.
  */
-export function collectMoves(learnsets: readonly ParsedLearnset[]): { moves: Move[]; issues: string[] } {
+export function collectMoves(learnsets: readonly ParsedLearnset[]): {
+  moves: Move[];
+  issues: string[];
+} {
   const byId = new Map<string, Move>();
   const issues: string[] = [];
   for (const learnset of learnsets) {
@@ -182,14 +203,21 @@ export function collectMoves(learnsets: readonly ParsedLearnset[]): { moves: Mov
       const id = slugify(data.name);
       const known = byId.get(id);
       if (!known) byId.set(id, { id, ...data });
-      else if (known.name !== data.name || known.type !== data.type || known.power !== data.power || known.accuracy !== data.accuracy || known.pp !== data.pp) {
+      else if (
+        known.name !== data.name ||
+        known.type !== data.type ||
+        known.power !== data.power ||
+        known.accuracy !== data.accuracy ||
+        known.pp !== data.pp
+      ) {
         issues.push(`Move "${data.name}" has conflicting data across learnsets`);
       }
     }
     for (const { machine, move } of learnset.machines) {
       const known = byId.get(slugify(move));
       if (!known) continue;
-      if (known.machine && known.machine !== machine) issues.push(`Move "${move}" is taught by ${known.machine} and ${machine}`);
+      if (known.machine && known.machine !== machine)
+        issues.push(`Move "${move}" is taught by ${known.machine} and ${machine}`);
       known.machine = machine;
     }
   }

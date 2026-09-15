@@ -9,8 +9,15 @@ import { entry2Adapter } from './entry2';
 describeAdapterContract(entry2Adapter, [
   {
     description: 'morning/day only (Route 1 Pidgey)',
-    wikitext: '{{catch/entry2|016|Pidgey|yes|yes|yes|Grass|2-4|45%|45%|0%|type1=normal|type2=flying|11=k}}',
-    expected: { dex: 16, games: ['gold', 'silver', 'crystal'], method: 'walk-grass', slotCount: 2, times: ['morning', 'day'] },
+    wikitext:
+      '{{catch/entry2|016|Pidgey|yes|yes|yes|Grass|2-4|45%|45%|0%|type1=normal|type2=flying|11=k}}',
+    expected: {
+      dex: 16,
+      games: ['gold', 'silver', 'crystal'],
+      method: 'walk-grass',
+      slotCount: 2,
+      times: ['morning', 'day'],
+    },
   },
   {
     description: 'night only, one version (Route 1 Rattata)',
@@ -37,15 +44,28 @@ describe('entry2 through the generic walker and merge (Kanto Route 1, Generation
 
   it('produces one slot per time of day', () => {
     expect(find(16).games.crystal).toEqual([
-      { levels: { min: 2, max: 4 }, rate: { kind: 'percent', value: 45 }, conditions: [{ kind: 'time', value: 'morning' }] },
-      { levels: { min: 2, max: 4 }, rate: { kind: 'percent', value: 45 }, conditions: [{ kind: 'time', value: 'day' }] },
+      {
+        levels: { min: 2, max: 4 },
+        rate: { kind: 'percent', value: 45 },
+        conditions: [{ kind: 'time', value: 'morning' }],
+      },
+      {
+        levels: { min: 2, max: 4 },
+        rate: { kind: 'percent', value: 45 },
+        conditions: [{ kind: 'time', value: 'day' }],
+      },
     ]);
   });
 
   it('keeps per-version night slots from split rows', () => {
     const night = (game: 'gold' | 'crystal') =>
-      find(19).games[game]!.find((s) => s.conditions?.[0]?.kind === 'time' && s.conditions[0].value === 'night');
-    expect(night('gold')).toMatchObject({ levels: { min: 2, max: 6, values: [2, 3, 6] }, rate: { value: 55 } });
+      find(19).games[game]!.find(
+        (s) => s.conditions?.[0]?.kind === 'time' && s.conditions[0].value === 'night',
+      );
+    expect(night('gold')).toMatchObject({
+      levels: { min: 2, max: 6, values: [2, 3, 6] },
+      rate: { value: 55 },
+    });
     expect(night('crystal')).toMatchObject({ levels: { min: 2, max: 3 }, rate: { value: 50 } });
   });
 });

@@ -19,14 +19,17 @@ describe('rby evolution override', () => {
   it('only uses Generation I triggers, with their details', () => {
     for (const edge of RBY_EVOLUTIONS) {
       if (edge.trigger === 'level') expect(edge.level).toBeGreaterThan(0);
-      else if (edge.trigger === 'item') expect(edge.item).toMatch(/^(Fire|Water|Thunder|Leaf|Moon) Stone$/);
+      else if (edge.trigger === 'item')
+        expect(edge.item).toMatch(/^(Fire|Water|Thunder|Leaf|Moon) Stone$/);
       else expect(edge.trigger).toBe('trade');
       expect(edge.requiresTrade).toBe(edge.trigger === 'trade');
     }
   });
 
   it('marks exactly Alakazam, Machamp, Golem and Gengar as trade evolutions', () => {
-    expect(RBY_EVOLUTIONS.filter((e) => e.requiresTrade).map((e) => e.to)).toEqual([65, 68, 76, 94]);
+    expect(RBY_EVOLUTIONS.filter((e) => e.requiresTrade).map((e) => e.to)).toEqual([
+      65, 68, 76, 94,
+    ]);
   });
 
   it('has Eevee branch three ways', () => {

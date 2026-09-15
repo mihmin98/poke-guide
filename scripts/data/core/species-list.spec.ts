@@ -11,7 +11,12 @@ describe('parseNationalDexList', () => {
 
   it('reads names, slugs and current types', () => {
     const byDex = new Map(entries.map((e) => [e.dex, e]));
-    expect(byDex.get(1)).toEqual({ dex: 1, name: 'Bulbasaur', slug: 'bulbasaur', types: ['grass', 'poison'] });
+    expect(byDex.get(1)).toEqual({
+      dex: 1,
+      name: 'Bulbasaur',
+      slug: 'bulbasaur',
+      types: ['grass', 'poison'],
+    });
     expect(byDex.get(19)).toEqual({ dex: 19, name: 'Rattata', slug: 'rattata', types: ['normal'] });
     expect(byDex.get(29)?.slug).toBe('nidoran-f');
     expect(byDex.get(32)?.slug).toBe('nidoran-m');
@@ -27,13 +32,17 @@ describe('parseNationalDexList', () => {
   });
 
   it('skips announced species without a number', () => {
-    expect(parseNationalDexList('{{ndex|0001|Bulbasaur|Grass}}\n{{ndex|????|Browt|Grass}}')).toHaveLength(1);
+    expect(
+      parseNationalDexList('{{ndex|0001|Bulbasaur|Grass}}\n{{ndex|????|Browt|Grass}}'),
+    ).toHaveLength(1);
   });
 
   it('fails on unknown types and gaps', () => {
-    expect(() => parseNationalDexList('{{ndex|0001|Bulbasaur|Grass|Shadow}}')).toThrow(/Unknown type/);
-    expect(() => parseNationalDexList('{{ndex|0001|Bulbasaur|Grass}}\n{{ndex|0003|Venusaur|Grass}}')).toThrow(
-      /not contiguous/,
+    expect(() => parseNationalDexList('{{ndex|0001|Bulbasaur|Grass|Shadow}}')).toThrow(
+      /Unknown type/,
     );
+    expect(() =>
+      parseNationalDexList('{{ndex|0001|Bulbasaur|Grass}}\n{{ndex|0003|Venusaur|Grass}}'),
+    ).toThrow(/not contiguous/);
   });
 });

@@ -5,7 +5,8 @@ import { repoRoot } from './paths';
 import { renderReport } from './report';
 import { validateVersionGroup } from './validate';
 
-const load = <T>(file: string): T => JSON.parse(readFileSync(join(repoRoot(), 'public', 'data', file), 'utf8')) as T;
+const load = <T>(file: string): T =>
+  JSON.parse(readFileSync(join(repoRoot(), 'public', 'data', file), 'utf8')) as T;
 
 describe('renderReport', () => {
   const data = load<VersionGroupData>('rby.json');
@@ -33,7 +34,9 @@ describe('renderReport', () => {
   });
 
   it('says so when there is no previous build or no change', () => {
-    expect(renderReport({ data, previous: null, checklists, issues: [] })).toContain('No previous build.');
+    expect(renderReport({ data, previous: null, checklists, issues: [] })).toContain(
+      'No previous build.',
+    );
     expect(renderReport({ data, previous: data, checklists, issues: [] })).toContain(
       '## Encounter changes since the previous build\n\nNone.',
     );

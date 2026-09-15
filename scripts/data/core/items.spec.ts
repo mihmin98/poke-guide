@@ -50,7 +50,8 @@ describe('walkItemSection on Red/Blue/Yellow fixtures', () => {
       ['Super Rod', 'gift', false, null],
       ['Iron', 'pickup', false, [['cut']]],
     ]);
-    for (const item of walk('route-12').items) expect(item.games).toEqual(['red', 'blue', 'yellow']);
+    for (const item of walk('route-12').items)
+      expect(item.games).toEqual(['red', 'blue', 'yellow']);
   });
 
   it('splits bullets into spots, takes floors as sub-areas and marks the fossil choice (Mt. Moon)', () => {
@@ -69,9 +70,15 @@ describe('walkItemSection on Red/Blue/Yellow fixtures', () => {
       ['Dome Fossil', 'B2F'],
       ['Helix Fossil', 'B2F'],
     ]);
-    expect(items[1]).toMatchObject({ quantity: 1, where: 'To the far northwest of TM12, in the southwest area of the floor' });
+    expect(items[1]).toMatchObject({
+      quantity: 1,
+      where: 'To the far northwest of TM12, in the southwest area of the floor',
+    });
     expect(items.filter((i) => i.hidden).map((i) => i.name)).toEqual(['Ether', 'Moon Stone']);
-    expect(items.filter((i) => i.obtain === 'choice').map((i) => i.itemId)).toEqual(['dome-fossil', 'helix-fossil']);
+    expect(items.filter((i) => i.obtain === 'choice').map((i) => i.itemId)).toEqual([
+      'dome-fossil',
+      'helix-fossil',
+    ]);
   });
 
   it('keeps per-game rows apart (Viridian Forest)', () => {
@@ -98,9 +105,15 @@ describe('walkItemSection on Red/Blue/Yellow fixtures', () => {
   it('reads trainer drops behind the Lift Key and drops "broken" notes (Team Rocket Hideout)', () => {
     const items = walk('team-rocket-hideout').items;
     expect(items).toHaveLength(16);
-    expect(items.find((i) => i.itemId === 'silph-scope')).toMatchObject({ obtain: 'drop', requires: [['lift-key']], subArea: 'B4F' });
+    expect(items.find((i) => i.itemId === 'silph-scope')).toMatchObject({
+      obtain: 'drop',
+      requires: [['lift-key']],
+      subArea: 'B4F',
+    });
     expect(items.find((i) => i.itemId === 'lift-key')?.obtain).toBe('drop');
-    expect(items.find((i) => i.itemId === 'nugget' && i.hidden)?.where).toBe('One square east of TM10');
+    expect(items.find((i) => i.itemId === 'nugget' && i.hidden)?.where).toBe(
+      'One square east of TM10',
+    );
   });
 
   it('turns fake items into notes (Power Plant)', () => {
@@ -126,7 +139,9 @@ describe('walkItemSection on Red/Blue/Yellow fixtures', () => {
 
   it('reads Game Corner coins as quantities', () => {
     const items = walk('celadon-game-corner').items;
-    expect(items.map((i) => i.quantity)).toEqual([10, 20, 20, 100, 20, 20, 10, 10, 10, 10, 20, 10, 10, 10]);
+    expect(items.map((i) => i.quantity)).toEqual([
+      10, 20, 20, 100, 20, 20, 10, 10, 10, 10, 20, 10, 10, 10,
+    ]);
     expect(new Set(items.map((i) => i.itemId))).toEqual(new Set(['coins']));
     expect(items.filter((i) => i.obtain === 'gift')).toHaveLength(3);
     expect(items.filter((i) => i.hidden)).toHaveLength(11);
@@ -155,8 +170,14 @@ describe('walkItemSection on Red/Blue/Yellow fixtures', () => {
     );
     expect(bad.items.map((i) => i.requires)).toEqual([[['old-sea-map']]]);
     expect(bad.issues).toHaveLength(2);
-    expect(bad.issues[0]).toMatchObject({ level: 'error', message: expect.stringMatching(/^Unrecognized requirement "friend" in \{\{Itemlist\|Potion/) });
-    expect(bad.issues[1]).toMatchObject({ level: 'error', message: expect.stringMatching(/^Machine item without display=: \{\{Itemlist\|TM Water/) });
+    expect(bad.issues[0]).toMatchObject({
+      level: 'error',
+      message: expect.stringMatching(/^Unrecognized requirement "friend" in \{\{Itemlist\|Potion/),
+    });
+    expect(bad.issues[1]).toMatchObject({
+      level: 'error',
+      message: expect.stringMatching(/^Machine item without display=: \{\{Itemlist\|TM Water/),
+    });
     expect(walk('route-1', '==Pokémon==\n').found).toBe(false);
   });
 });
@@ -169,7 +190,9 @@ describe('collectItemRows on walkthrough pages', () => {
     );
     expect(result.issues).toEqual([]);
     expect(result.notes).toEqual(['Fake item balls: Voltorb ×3']);
-    expect(result.items).toMatchObject([{ name: 'Protein', subArea: '5F', where: 'In the northwest room' }]);
+    expect(result.items).toMatchObject([
+      { name: 'Protein', subArea: '5F', where: 'In the northwest room' },
+    ]);
   });
 
   it('collects rows inside tables, without sub-areas (Red and Blue Part 10)', () => {

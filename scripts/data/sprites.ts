@@ -36,7 +36,8 @@ async function main(): Promise<void> {
         `missing ${result.missing.length}, failed SHA-1 ${result.corrupt.length}`,
     );
     for (const job of result.missing) console.log(`  MISSING ${job.fileTitle} (${job.path})`);
-    for (const job of result.corrupt) console.log(`  SHA-1 MISMATCH ${job.fileTitle} (${job.path})`);
+    for (const job of result.corrupt)
+      console.log(`  SHA-1 MISMATCH ${job.fileTitle} (${job.path})`);
     if (result.missing.length > 0 || result.corrupt.length > 0) ok = false;
   }
   console.log(`\n${client.requestCount} requests`);

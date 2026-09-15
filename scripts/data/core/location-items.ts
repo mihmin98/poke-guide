@@ -2,7 +2,12 @@
  * Location items after parsing (plan §7.13): curated overrides, the prerequisite check against unlocks and the
  * walkthrough cross-check. Pure functions; `assemble.ts` turns their messages into build issues.
  */
-import type { GameId, GameLocation, LocationItem, Unlock } from '../../../src/app/core/domain/models';
+import type {
+  GameId,
+  GameLocation,
+  LocationItem,
+  Unlock,
+} from '../../../src/app/core/domain/models';
 import { slugify } from './slug';
 
 export interface ItemAddition {
@@ -104,10 +109,13 @@ export function applyItemOverrides(
     const location = locationOf(patch.locationId, patch.itemId);
     if (!location) continue;
     const matches = location.items.filter(
-      (i) => i.itemId === patch.itemId && (patch.subArea === undefined || i.subArea === patch.subArea),
+      (i) =>
+        i.itemId === patch.itemId && (patch.subArea === undefined || i.subArea === patch.subArea),
     );
     if (matches.length !== 1) {
-      errors.push(`Item patch for ${patch.itemId} in ${location.id} matches ${matches.length} items, expected 1`);
+      errors.push(
+        `Item patch for ${patch.itemId} in ${location.id} matches ${matches.length} items, expected 1`,
+      );
       continue;
     }
     const item = matches[0]!;
@@ -129,7 +137,9 @@ export function applyItemOverrides(
     if (!location || !source) continue;
     const itemId = slugify(addition.item.name);
     if (location.items.some((i) => i.itemId === itemId && !i.source)) {
-      errors.push(`Item override adds ${addition.item.name} to ${location.id}, but the page already lists it`);
+      errors.push(
+        `Item override adds ${addition.item.name} to ${location.id}, but the page already lists it`,
+      );
       continue;
     }
     location.items.push({ itemId, ...addition.item, source });
@@ -139,7 +149,9 @@ export function applyItemOverrides(
     const location = locationOf(override.locationId, override.itemId);
     if (!location) continue;
     const matches = location.items.filter(
-      (i) => i.itemId === override.itemId && (override.subArea === undefined || i.subArea === override.subArea),
+      (i) =>
+        i.itemId === override.itemId &&
+        (override.subArea === undefined || i.subArea === override.subArea),
     );
     if (matches.length !== 1) {
       errors.push(
@@ -150,7 +162,9 @@ export function applyItemOverrides(
     const item = matches[0]!;
     const stated = requirementIds(item);
     if (override.requires.flat().every((id) => stated.has(id))) {
-      errors.push(`Requirement override for ${override.itemId} in ${location.id} is already stated by the page`);
+      errors.push(
+        `Requirement override for ${override.itemId} in ${location.id} is already stated by the page`,
+      );
       continue;
     }
     if (!sourceOf(override.sourcePage)) continue;
@@ -180,7 +194,9 @@ export function checkItemRequirements(
   for (const [game, list] of Object.entries(unlocks)) {
     for (const unlock of list ?? []) {
       if (!locationIds.has(unlock.locationId))
-        errors.push(`Unlock "${unlock.id}" (${game}) is at unknown location "${unlock.locationId}"`);
+        errors.push(
+          `Unlock "${unlock.id}" (${game}) is at unknown location "${unlock.locationId}"`,
+        );
     }
   }
   for (const location of locations) {
@@ -248,12 +264,15 @@ export function diffWalkthroughItems(
     for (const entry of walkthrough) {
       if (entry.game !== game) continue;
       pages.set(entry.part, entry.page);
-      for (const item of entry.items) if (item.games.includes(game)) tally(listed, entry.part, item);
+      for (const item of entry.items)
+        if (item.games.includes(game)) tally(listed, entry.part, item);
     }
 
     const firstPart = (itemId: string) =>
       Math.min(...(listed.get(itemId)?.parts ?? located.get(itemId)?.parts ?? [0]));
-    const keys = [...new Set([...located.keys(), ...listed.keys()])].sort((a, b) => firstPart(a) - firstPart(b));
+    const keys = [...new Set([...located.keys(), ...listed.keys()])].sort(
+      (a, b) => firstPart(a) - firstPart(b),
+    );
     for (const key of keys) {
       const part = firstPart(key);
       const page = pages.get(part) ?? `Part ${part}`;
@@ -270,8 +289,14 @@ export function diffWalkthroughItems(
       for (const item of inWalkthrough?.items ?? []) {
         const ids = [...requirementIds(item)];
         if (ids.length === 0) continue;
-        const covered = (inData?.items ?? []).some((l) => ids.every((id) => requirementIds(l).has(id)));
-        if (!covered) push(page, `${item.name}: the walkthrough says it requires ${ids.join(' + ')} ("${item.where}")`);
+        const covered = (inData?.items ?? []).some((l) =>
+          ids.every((id) => requirementIds(l).has(id)),
+        );
+        if (!covered)
+          push(
+            page,
+            `${item.name}: the walkthrough says it requires ${ids.join(' + ')} ("${item.where}")`,
+          );
       }
     }
   }

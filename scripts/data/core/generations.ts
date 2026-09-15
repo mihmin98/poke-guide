@@ -9,7 +9,8 @@ const ROMAN_VALUES: readonly [string, number][] = [
 ];
 
 export function toRoman(value: number): string {
-  if (!Number.isInteger(value) || value < 1 || value > 39) throw new Error(`Unsupported generation ${value}`);
+  if (!Number.isInteger(value) || value < 1 || value > 39)
+    throw new Error(`Unsupported generation ${value}`);
   let rest = value;
   let out = '';
   for (const [numeral, amount] of ROMAN_VALUES) {

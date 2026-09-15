@@ -22,7 +22,11 @@ describe('parseLevels', () => {
 describe('unionLevels', () => {
   it('merges ranges and keeps gaps as values', () => {
     expect(unionLevels({ min: 2, max: 4 }, { min: 5, max: 7 })).toEqual({ min: 2, max: 7 });
-    expect(unionLevels({ min: 2, max: 3 }, { min: 6, max: 6 })).toEqual({ min: 2, max: 6, values: [2, 3, 6] });
+    expect(unionLevels({ min: 2, max: 3 }, { min: 6, max: 6 })).toEqual({
+      min: 2,
+      max: 6,
+      values: [2, 3, 6],
+    });
     expect(unionLevels(null, { min: 1, max: 1 })).toEqual({ min: 1, max: 1 });
   });
 });
@@ -38,8 +42,12 @@ describe('parseRate', () => {
   });
 
   it('parses purchases', () => {
-    expect(parseRate('Purchase for {{PDollar}}500')).toEqual({ rate: { kind: 'price', value: 500 } });
-    expect(parseRate('Purchase for {{PDollar}}1,000')).toEqual({ rate: { kind: 'price', value: 1000 } });
+    expect(parseRate('Purchase for {{PDollar}}500')).toEqual({
+      rate: { kind: 'price', value: 500 },
+    });
+    expect(parseRate('Purchase for {{PDollar}}1,000')).toEqual({
+      rate: { kind: 'price', value: 1000 },
+    });
   });
 
   it('keeps tooltip text as a note', () => {

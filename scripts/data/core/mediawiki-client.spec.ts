@@ -9,7 +9,10 @@ function json(body: unknown, init: ResponseInit = {}): Response {
 }
 
 function revision(title: string, revid: number, content = `text of ${title}`) {
-  return { title, revisions: [{ revid, timestamp: '2026-01-01T00:00:00Z', slots: { main: { content } } }] };
+  return {
+    title,
+    revisions: [{ revid, timestamp: '2026-01-01T00:00:00Z', slots: { main: { content } } }],
+  };
 }
 
 function setup(responses: ((url: URL) => Response)[]) {
@@ -66,7 +69,14 @@ describe('MediaWikiClient.getPages', () => {
   it('batches at most 50 titles per request and throttles to one request per second', async () => {
     const titles = Array.from({ length: 60 }, (_, i) => `Page ${i}`);
     const respond = (url: URL) =>
-      json({ query: { pages: url.searchParams.get('titles')!.split('|').map((t, i) => revision(t, i)) } });
+      json({
+        query: {
+          pages: url.searchParams
+            .get('titles')!
+            .split('|')
+            .map((t, i) => revision(t, i)),
+        },
+      });
     const { client, calls, sleeps } = setup([respond, respond]);
     const pages = await client.getPages(titles);
     expect(calls.map((c) => c.url.searchParams.get('titles')!.split('|').length)).toEqual([50, 10]);
@@ -103,7 +113,8 @@ describe('MediaWikiClient.request retries', () => {
 
   it('retries maxlag errors', async () => {
     const { client } = setup([
-      () => json({ error: { code: 'maxlag', info: 'Waiting' } }, { headers: { 'retry-after': '1' } }),
+      () =>
+        json({ error: { code: 'maxlag', info: 'Waiting' } }, { headers: { 'retry-after': '1' } }),
       () => json({ ok: true }),
     ]);
     await expect(client.request({ action: 'query' })).resolves.toEqual({ ok: true });
@@ -126,14 +137,20 @@ describe('MediaWikiClient files', () => {
           query: {
             normalized: [{ from: 'File:Spr_1b_001.png', to: 'File:Spr 1b 001.png' }],
             pages: [
-              { title: 'File:Spr 1b 001.png', imageinfo: [{ url: 'https://a/Spr_1b_001.png', sha1: 'abc' }] },
+              {
+                title: 'File:Spr 1b 001.png',
+                imageinfo: [{ url: 'https://a/Spr_1b_001.png', sha1: 'abc' }],
+              },
               { title: 'File:Nope.png', missing: true },
             ],
           },
         }),
     ]);
     const infos = await client.getImageInfo(['File:Spr_1b_001.png', 'File:Nope.png']);
-    expect(infos.get('File:Spr_1b_001.png')).toEqual({ url: 'https://a/Spr_1b_001.png', sha1: 'abc' });
+    expect(infos.get('File:Spr_1b_001.png')).toEqual({
+      url: 'https://a/Spr_1b_001.png',
+      sha1: 'abc',
+    });
     expect(infos.get('File:Nope.png')).toBeNull();
     expect(calls[0]!.url.searchParams.get('iiprop')).toBe('url|sha1');
   });
@@ -143,7 +160,9 @@ describe('MediaWikiClient files', () => {
       () => new Response('', { status: 503 }),
       () => new Response(new Uint8Array([1, 2, 3])),
     ]);
-    await expect(client.download('https://a/Spr_1b_001.png')).resolves.toEqual(new Uint8Array([1, 2, 3]));
+    await expect(client.download('https://a/Spr_1b_001.png')).resolves.toEqual(
+      new Uint8Array([1, 2, 3]),
+    );
     expect(calls).toHaveLength(2);
     expect(calls[1]!.headers['User-Agent']).toBe(USER_AGENT);
     expect(calls[1]!.url.searchParams.has('format')).toBe(false);

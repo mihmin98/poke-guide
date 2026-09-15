@@ -36,7 +36,8 @@ export interface SpriteSyncResult {
 const dex3 = (dex: number) => String(dex).padStart(3, '0');
 
 export function spriteFileTitle(filePattern: string, dex: number): string {
-  if (!filePattern.includes('{dex3}')) throw new Error(`Sprite pattern "${filePattern}" has no {dex3}`);
+  if (!filePattern.includes('{dex3}'))
+    throw new Error(`Sprite pattern "${filePattern}" has no {dex3}`);
   return `File:${filePattern.replaceAll('{dex3}', dex3(dex))}`;
 }
 
@@ -46,10 +47,16 @@ export function spriteJobs(config: VersionGroupConfig): SpriteJob[] {
   const jobs: SpriteJob[] = [];
   for (const setId of setIds) {
     const set = config.spriteSets[setId];
-    if (!set) throw new Error(`Version group ${config.id}: sprite set "${setId}" has no filePattern`);
+    if (!set)
+      throw new Error(`Version group ${config.id}: sprite set "${setId}" has no filePattern`);
     const [first, last] = config.speciesRange;
     for (let dex = first; dex <= last; dex++) {
-      jobs.push({ setId, dex, fileTitle: spriteFileTitle(set.filePattern, dex), path: `${setId}/${dex3(dex)}.png` });
+      jobs.push({
+        setId,
+        dex,
+        fileTitle: spriteFileTitle(set.filePattern, dex),
+        path: `${setId}/${dex3(dex)}.png`,
+      });
     }
   }
   return jobs;

@@ -43,7 +43,12 @@ function rowCells(row: string): string[] {
   for (const line of row.split('\n')) {
     if (!line.startsWith('|') || line.startsWith('|}') || line.startsWith('|-')) continue;
     const parts = splitTopLevel(line.slice(1));
-    cells.push((parts.length > 1 && CELL_ATTRIBUTES.test(parts[0]!) ? parts.slice(1).join('|') : line.slice(1)).trim());
+    cells.push(
+      (parts.length > 1 && CELL_ATTRIBUTES.test(parts[0]!)
+        ? parts.slice(1).join('|')
+        : line.slice(1)
+      ).trim(),
+    );
   }
   return cells;
 }
@@ -51,15 +56,20 @@ function rowCells(row: string): string[] {
 /** The page a location cell links to; `null` when it holds no link. */
 function locationPageOf(cell: string): string | null {
   const call = findTemplates(cell)[0];
-  if (call?.name === 'rt') return `${stripMarkup(call.positional[1] ?? '')} Route ${stripMarkup(call.positional[0] ?? '')}`;
+  if (call?.name === 'rt')
+    return `${stripMarkup(call.positional[1] ?? '')} Route ${stripMarkup(call.positional[0] ?? '')}`;
   if (call?.name === 'obp') return `${call.positional[0]} (${call.positional[1]})`;
   const link = /\[\[([^|\]]+)/.exec(cell);
   return link ? link[1]!.trim() : null;
 }
 
-export function parseTradeTables(wikitext: string, options: { pageTitle: string; generationHeading: string; tables: readonly TradeTable[] }): TradeParseResult {
+export function parseTradeTables(
+  wikitext: string,
+  options: { pageTitle: string; generationHeading: string; tables: readonly TradeTable[] },
+): TradeParseResult {
   const result: TradeParseResult = { trades: [], issues: [] };
-  const issue = (message: string) => result.issues.push({ level: 'error', page: options.pageTitle, message });
+  const issue = (message: string) =>
+    result.issues.push({ level: 'error', page: options.pageTitle, message });
   const text = stripComments(wikitext);
   const headings = parseHeadings(text);
   const generation = findNestedSection(text, [options.generationHeading], headings);
@@ -67,7 +77,9 @@ export function parseTradeTables(wikitext: string, options: { pageTitle: string;
     issue(`No "${options.generationHeading}" section`);
     return result;
   }
-  const children = headingsWithin(headings, generation).filter((h) => h.level === generation.heading.level + 1);
+  const children = headingsWithin(headings, generation).filter(
+    (h) => h.level === generation.heading.level + 1,
+  );
 
   for (const table of options.tables) {
     const heading = children.find((h) => headingText(h) === table.heading);
@@ -84,7 +96,10 @@ export function parseTradeTables(wikitext: string, options: { pageTitle: string;
       continue;
     }
     let location: string | null = null;
-    for (const row of body.slice(start, end).split(/\n\|-[^\n]*/).slice(1)) {
+    for (const row of body
+      .slice(start, end)
+      .split(/\n\|-[^\n]*/)
+      .slice(1)) {
       const cells = rowCells(row);
       if (cells.length === 0) continue;
       const species = findTemplates(row).filter((c) => c.name === 'msp/3');
@@ -96,7 +111,12 @@ export function parseTradeTables(wikitext: string, options: { pageTitle: string;
         continue;
       }
       // Cells: [location], give MSP, give name, get MSP, get name, English nickname, ...
-      const getIndex = cells.findIndex((c, i) => i > 0 && /\{\{MSP\/3\|/i.test(c) && cells.slice(0, i).some((p) => /\{\{MSP\/3\|/i.test(p)));
+      const getIndex = cells.findIndex(
+        (c, i) =>
+          i > 0 &&
+          /\{\{MSP\/3\|/i.test(c) &&
+          cells.slice(0, i).some((p) => /\{\{MSP\/3\|/i.test(p)),
+      );
       const nickname = stripMarkup(cells[getIndex + 2] ?? '');
       if (/^N\/A$/i.test(nickname)) continue;
       result.trades.push({
@@ -135,14 +155,24 @@ export function diffTrades(
     for (const game of trade.games) {
       const encounter = location.subAreas
         .flatMap((s) => s.encounters)
-        .find((e) => e.method === 'trade' && e.dex === trade.getDex && e.trade?.giveDex === trade.giveDex && e.games[game]);
+        .find(
+          (e) =>
+            e.method === 'trade' &&
+            e.dex === trade.getDex &&
+            e.trade?.giveDex === trade.giveDex &&
+            e.games[game],
+        );
       if (!encounter) {
-        warnings.push(`${location.id}: trade page lists #${trade.giveDex} → #${trade.getDex} in ${game}, the location data doesn't`);
+        warnings.push(
+          `${location.id}: trade page lists #${trade.giveDex} → #${trade.getDex} in ${game}, the location data doesn't`,
+        );
         continue;
       }
       matched.add(`${location.id}|${trade.getDex}|${trade.giveDex}|${game}`);
       if (encounter.trade!.nickname && encounter.trade!.nickname !== trade.nickname) {
-        warnings.push(`${location.id}: #${trade.getDex} is nicknamed ${encounter.trade!.nickname} and ${trade.nickname}`);
+        warnings.push(
+          `${location.id}: #${trade.getDex} is nicknamed ${encounter.trade!.nickname} and ${trade.nickname}`,
+        );
         continue;
       }
       encounter.trade!.nickname = trade.nickname;
@@ -154,7 +184,9 @@ export function diffTrades(
       if (encounter.method !== 'trade' || !encounter.trade) continue;
       for (const game of Object.keys(encounter.games) as GameId[]) {
         if (!matched.has(`${location.id}|${encounter.dex}|${encounter.trade.giveDex}|${game}`)) {
-          warnings.push(`${location.id}: #${encounter.trade.giveDex} → #${encounter.dex} in ${game} is not on the trade page`);
+          warnings.push(
+            `${location.id}: #${encounter.trade.giveDex} → #${encounter.dex} in ${game} is not on the trade page`,
+          );
         }
       }
     }

@@ -31,7 +31,12 @@ describe('parseInfobox', () => {
 
   it('reads Pikachu, whose base experience changed after Generation IV', () => {
     const info = parseInfobox(page('pikachu'));
-    expect(info).toMatchObject({ category: 'Mouse', catchRate: 190, growthRate: 'medium-fast', evYield: { spe: 2 } });
+    expect(info).toMatchObject({
+      category: 'Mouse',
+      catchRate: 190,
+      growthRate: 'medium-fast',
+      evYield: { spe: 2 },
+    });
     expect(baseExpIn(info, 1)).toBe(82);
     expect(baseExpIn(info, 9)).toBe(112);
   });
@@ -67,7 +72,10 @@ describe('parseBaseStats', () => {
       spc: 65,
       spe: 45,
     });
-    expect(baseStatsIn(parseBaseStats(page('rattata'), 'Rattata'), 1)).toMatchObject({ hp: 30, spe: 72 });
+    expect(baseStatsIn(parseBaseStats(page('rattata'), 'Rattata'), 1)).toMatchObject({
+      hp: 30,
+      spe: 72,
+    });
   });
 
   it('accepts other stats templates and heading spellings', () => {
@@ -88,11 +96,21 @@ describe('parseBaseStats', () => {
       [1, 5],
       [6, Infinity],
     ]);
-    expect(baseStatsIn(parseBaseStats('===Stats===\n====Base stats====\n{{BaseStats with RBY|HP=100|Attack=100|Defense=100|SpAtk=100|SpDef=100|Special=100|Speed=100}}', 'Mew'), 1)).toEqual({ hp: 100, atk: 100, def: 100, spc: 100, spe: 100 });
+    expect(
+      baseStatsIn(
+        parseBaseStats(
+          '===Stats===\n====Base stats====\n{{BaseStats with RBY|HP=100|Attack=100|Defense=100|SpAtk=100|SpDef=100|Special=100|Speed=100}}',
+          'Mew',
+        ),
+        1,
+      ),
+    ).toEqual({ hp: 100, atk: 100, def: 100, spc: 100, spe: 100 });
   });
 
   it('fails when no block covers the generation', () => {
-    expect(() => baseStatsIn([{ from: 6, to: Infinity, stats: {} }], 1)).toThrow(/0 base stat blocks/);
+    expect(() => baseStatsIn([{ from: 6, to: Infinity, stats: {} }], 1)).toThrow(
+      /0 base stat blocks/,
+    );
   });
 });
 

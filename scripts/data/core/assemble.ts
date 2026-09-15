@@ -32,7 +32,12 @@ import {
   parseLearnsetPage,
   type ParsedLearnset,
 } from './learnsets';
-import { collectItemRows, walkItemSection, type ItemWalkOptions, type ItemWalkResult } from './items';
+import {
+  collectItemRows,
+  walkItemSection,
+  type ItemWalkOptions,
+  type ItemWalkResult,
+} from './items';
 import {
   applyItemOverrides,
   checkItemRequirements,
@@ -103,7 +108,11 @@ export function walkthroughPartTitles(
   return config.games.flatMap((game) => {
     const base = config.walkthroughPages[game];
     if (!base) return [];
-    return (config.walkthroughs[game] ?? []).map(({ part }) => ({ game, part, page: `${base}/Part ${part}` }));
+    return (config.walkthroughs[game] ?? []).map(({ part }) => ({
+      game,
+      part,
+      page: `${base}/Part ${part}`,
+    }));
   });
 }
 
@@ -394,12 +403,17 @@ export function assembleVersionGroup(
       issue('error', 'No "Items" section on an items-only location', location.page);
     const shopConfig = config.prizeShops?.find((s) => s.locationId === location.id);
     const shop = shopConfig
-      ? parsePrizeShops(page.wikitext, { pageTitle: location.page, games: config.games, ...shopConfig })
+      ? parsePrizeShops(page.wikitext, {
+          pageTitle: location.page,
+          games: config.games,
+          ...shopConfig,
+        })
       : null;
     if (shop) {
       for (const found of shop.issues) issue(found.level, found.message, found.page);
       for (const note of shop.notes) issue('note', note, location.page);
-      if (!shop.found) issue('error', 'No prize shop section on a configured prize shop', location.page);
+      if (!shop.found)
+        issue('error', 'No prize shop section on a configured prize shop', location.page);
     }
     if (!walk.found && !shop?.found && !location.expectEmpty) {
       issue('warning', `No "Pokémon → ${config.generationHeading}" section`, location.page);
@@ -415,7 +429,11 @@ export function assembleVersionGroup(
     const patched = applyEncounterPatches(
       location.id,
       location.page,
-      [...walk.rows, ...(shop?.rows ?? []), ...overrideRows(location.id, location.page, encounterOverrides, sourceOf)],
+      [
+        ...walk.rows,
+        ...(shop?.rows ?? []),
+        ...overrideRows(location.id, location.page, encounterOverrides, sourceOf),
+      ],
       encounterOverrides,
       sourceOf,
     );
@@ -489,8 +507,10 @@ export function assembleVersionGroup(
   }
 
   // Encounter overrides after the merge: exclusive groups and requirements (plan §7.7).
-  for (const message of applyExclusiveGroups(locations, encounterOverrides.exclusiveGroups)) issue('error', message);
-  for (const message of checkEncounterRequirements(locations, config.overrides.unlocks)) issue('error', message);
+  for (const message of applyExclusiveGroups(locations, encounterOverrides.exclusiveGroups))
+    issue('error', message);
+  for (const message of checkEncounterRequirements(locations, config.overrides.unlocks))
+    issue('error', message);
 
   // Items: overrides, prerequisites against unlocks, and the walkthrough cross-check (plan §7.13).
   for (const message of applyItemOverrides(locations, config.overrides.items, sourceOf))
@@ -513,7 +533,8 @@ export function assembleVersionGroup(
     walkthroughItems.push({ page: title, part, game, items });
   }
   for (const fix of config.overrides.items.walkthroughGames ?? []) {
-    if (!walkthroughRows.has(fix.page)) issue('error', `Walkthrough games fix names unknown page "${fix.page}"`);
+    if (!walkthroughRows.has(fix.page))
+      issue('error', `Walkthrough games fix names unknown page "${fix.page}"`);
   }
   const accepted = config.overrides.items.walkthroughAccepted;
   for (const { page, message } of diffWalkthroughItems(locations, walkthroughItems, accepted))

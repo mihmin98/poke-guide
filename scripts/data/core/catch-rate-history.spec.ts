@@ -20,7 +20,10 @@ describe('parseCatchRateList', () => {
       catchRate: 45,
       notes: ["120 in Let's Go Pikachu and Eevee"],
     });
-    expect(rows.find((r) => r.dex === 20)).toMatchObject({ catchRate: 127, notes: ['90 prior to Generation III'] });
+    expect(rows.find((r) => r.dex === 20)).toMatchObject({
+      catchRate: 127,
+      notes: ['90 prior to Generation III'],
+    });
     expect(rows.find((r) => r.dex === 2)?.notes).toEqual([]);
   });
 
@@ -30,11 +33,17 @@ describe('parseCatchRateList', () => {
       ['Partner', 255],
     ]);
     expect(rows.filter((r) => r.dex === 774).map((r) => r.form)).toEqual(['Meteor Form', 'Core']);
-    expect(rows.find((r) => r.dex === 901 && r.form !== null)).toMatchObject({ name: 'Ursaluna', form: 'Bloodmoon' });
+    expect(rows.find((r) => r.dex === 901 && r.form !== null)).toMatchObject({
+      name: 'Ursaluna',
+      form: 'Bloodmoon',
+    });
   });
 
   it('splits multi-line notes', () => {
-    expect(rows.find((r) => r.dex === 376)?.notes).toEqual(['15 in Colosseum', '20 in Legends: Z-A']);
+    expect(rows.find((r) => r.dex === 376)?.notes).toEqual([
+      '15 in Colosseum',
+      '20 in Legends: Z-A',
+    ]);
   });
 
   it('has one default row per species and skips the Legends: Arceus table', () => {
@@ -54,7 +63,9 @@ describe('catchRateNoteEffect', () => {
       untilGeneration: 3,
       label: 'Generation III',
     });
-    expect(catchRateNoteEffect('5 prior to ORAS', { generation: 3, games: ['emerald'] })).toMatchObject({
+    expect(
+      catchRateNoteEffect('5 prior to ORAS', { generation: 3, games: ['emerald'] }),
+    ).toMatchObject({
       kind: 'earlier-value',
       untilGeneration: 6,
     });
@@ -68,7 +79,9 @@ describe('catchRateNoteEffect', () => {
       'Always succeeds in XD: Gale of Darkness',
       '27 in Pokémon Yellow',
     ]) {
-      expect(catchRateNoteEffect(note, { generation: 2, games: ['crystal'] })).toEqual({ kind: 'other-games' });
+      expect(catchRateNoteEffect(note, { generation: 2, games: ['crystal'] })).toEqual({
+        kind: 'other-games',
+      });
     }
   });
 
@@ -104,18 +117,29 @@ describe('resolveCatchRates', () => {
   });
 
   it('fails on per-game overrides for games outside the version group', () => {
-    const synthetic: CatchRateRow[] = [{ dex: 1, name: 'Test', form: null, catchRate: 45, notes: ['9 in Pokémon Yellow'] }];
+    const synthetic: CatchRateRow[] = [
+      { dex: 1, name: 'Test', form: null, catchRate: 45, notes: ['9 in Pokémon Yellow'] },
+    ];
     const { rates, errors } = resolveCatchRates(synthetic, {
       generation: 2,
       games: ['crystal'],
       speciesRange: [1, 1],
       classifications: [
-        { dex: 1, note: '9 in Pokémon Yellow', kind: 'override', value: 9, games: ['yellow'], reason: 'test' },
+        {
+          dex: 1,
+          note: '9 in Pokémon Yellow',
+          kind: 'override',
+          value: 9,
+          games: ['yellow'],
+          reason: 'test',
+        },
       ],
     });
     // Yellow isn't in the version group, so the note is ignored and the classification is stale.
     expect(rates.get(1)).toEqual({ catchRate: 45 });
-    expect(errors).toEqual(['#1: catch-rate note classification matches no note: "9 in Pokémon Yellow"']);
+    expect(errors).toEqual([
+      '#1: catch-rate note classification matches no note: "9 in Pokémon Yellow"',
+    ]);
   });
 
   it('fails on every unclassified Yellow note', () => {
@@ -146,7 +170,13 @@ describe('resolveCatchRates', () => {
 
   it('chains earlier values, applies overrides and shows display text', () => {
     const synthetic: CatchRateRow[] = [
-      { dex: 1, name: 'Test', form: null, catchRate: 3, notes: ['30 prior to Generation V', '5 prior to Generation III'] },
+      {
+        dex: 1,
+        name: 'Test',
+        form: null,
+        catchRate: 3,
+        notes: ['30 prior to Generation V', '5 prior to Generation III'],
+      },
       { dex: 2, name: 'Other', form: null, catchRate: 45, notes: ['60 in Pokémon Crystal'] },
     ];
     const { rates, errors } = resolveCatchRates(synthetic, {
@@ -154,7 +184,14 @@ describe('resolveCatchRates', () => {
       games: ['crystal'],
       speciesRange: [1, 2],
       classifications: [
-        { dex: 2, note: '60 in Pokémon Crystal', kind: 'override', value: 60, display: '45 outside Crystal', reason: 'test' },
+        {
+          dex: 2,
+          note: '60 in Pokémon Crystal',
+          kind: 'override',
+          value: 60,
+          display: '45 outside Crystal',
+          reason: 'test',
+        },
       ],
     });
     expect(errors).toEqual([]);
@@ -163,8 +200,8 @@ describe('resolveCatchRates', () => {
   });
 
   it('reports species without exactly one default row', () => {
-    expect(resolveCatchRates([], { ...rby, speciesRange: [1, 1], classifications: [] }).errors).toEqual([
-      '#1: 0 default rows in the catch-rate list',
-    ]);
+    expect(
+      resolveCatchRates([], { ...rby, speciesRange: [1, 1], classifications: [] }).errors,
+    ).toEqual(['#1: 0 default rows in the catch-rate list']);
   });
 });

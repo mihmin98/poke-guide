@@ -2,11 +2,22 @@
  * Species pages (`<Name> (Pokémon)`, plan §7.11): infobox fields, base stats with generation ranges,
  * and Pokédex entries per generation.
  */
-import type { GameId, GrowthRate, PokedexEntryText, StatId } from '../../../src/app/core/domain/models';
+import type {
+  GameId,
+  GrowthRate,
+  PokedexEntryText,
+  StatId,
+} from '../../../src/app/core/domain/models';
 import { parseGenerationRange, toRoman, type GenerationRange } from './generations';
 import { stripMarkup } from './markup';
 import { findNestedSection, headingText, headingsWithin } from './sections';
-import { findTemplates, parseHeadings, stripComments, type Heading, type TemplateCall } from './wikitext';
+import {
+  findTemplates,
+  parseHeadings,
+  stripComments,
+  type Heading,
+  type TemplateCall,
+} from './wikitext';
 
 export const speciesPageTitle = (name: string) => `${name} (Pokémon)`;
 
@@ -44,7 +55,14 @@ const GROWTH_BY_LV100_EXP: Record<number, GrowthRate> = {
   1640000: 'fluctuating',
 };
 
-const EV_KEYS: Record<string, StatId> = { evhp: 'hp', evat: 'atk', evde: 'def', evsa: 'spa', evsd: 'spd', evsp: 'spe' };
+const EV_KEYS: Record<string, StatId> = {
+  evhp: 'hp',
+  evat: 'atk',
+  evde: 'def',
+  evsa: 'spa',
+  evsd: 'spd',
+  evsp: 'spe',
+};
 
 function findInfobox(text: string): TemplateCall {
   const infobox = findTemplates(text).find((t) => t.name === 'pokémon infobox');
@@ -58,7 +76,8 @@ function numberField(call: TemplateCall, key: string): number {
     .replace(/\s*\([^)]*\)$/, '')
     .replace(/,/g, '');
   const value = Number(raw);
-  if (raw === '' || !Number.isFinite(value)) throw new Error(`Infobox field "${key}" is not a number: "${raw}"`);
+  if (raw === '' || !Number.isFinite(value))
+    throw new Error(`Infobox field "${key}" is not a number: "${raw}"`);
   return value;
 }
 
@@ -67,10 +86,9 @@ export function parseInfobox(wikitext: string): InfoboxData {
   const growth = GROWTH_BY_LV100_EXP[numberField(infobox, 'lv100exp')];
   if (!growth) throw new Error(`Unknown growth rate for lv100exp=${infobox.named['lv100exp']}`);
   // Pages with regional forms list one category per line; the first is the original form.
-  const category = stripMarkup((infobox.named['category'] ?? '').split(/<br\s*\/?>/i)[0] ?? '').replace(
-    /\s+Pokémon$/,
-    '',
-  );
+  const category = stripMarkup(
+    (infobox.named['category'] ?? '').split(/<br\s*\/?>/i)[0] ?? '',
+  ).replace(/\s+Pokémon$/, '');
   if (!category) throw new Error('Infobox has no category');
   const evYield: Partial<Record<StatId, number>> = {};
   for (const [key, stat] of Object.entries(EV_KEYS)) {
@@ -164,7 +182,10 @@ const GEN1_STATS: StatId[] = ['hp', 'atk', 'def', 'spc', 'spe'];
 const MODERN_STATS: StatId[] = ['hp', 'atk', 'def', 'spa', 'spd', 'spe'];
 
 /** Gen I: hp/atk/def/spc/spe · Gen II+: hp/atk/def/spa/spd/spe. Throws if no single block covers the generation. */
-export function baseStatsIn(blocks: readonly BaseStatsBlock[], generation: number): Partial<Record<StatId, number>> {
+export function baseStatsIn(
+  blocks: readonly BaseStatsBlock[],
+  generation: number,
+): Partial<Record<StatId, number>> {
   const matching = blocks.filter((b) => b.from <= generation && generation <= b.to);
   if (matching.length !== 1) {
     throw new Error(`${matching.length} base stat blocks cover Generation ${toRoman(generation)}`);
@@ -172,7 +193,8 @@ export function baseStatsIn(blocks: readonly BaseStatsBlock[], generation: numbe
   const stats: Partial<Record<StatId, number>> = {};
   for (const stat of generation === 1 ? GEN1_STATS : MODERN_STATS) {
     const value = matching[0]!.stats[stat];
-    if (value === undefined) throw new Error(`Missing base stat "${stat}" for Generation ${toRoman(generation)}`);
+    if (value === undefined)
+      throw new Error(`Missing base stat "${stat}" for Generation ${toRoman(generation)}`);
     stats[stat] = value;
   }
   return stats;

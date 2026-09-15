@@ -41,7 +41,10 @@ export interface ItemWalkResult {
 
 const GAME_NAMES = [...GAMES.map((g) => g.shortName), 'Green'].join('|');
 /** Headings that split rows by version (`Pokémon Red and Blue`); the flags already say which games. */
-const GAME_HEADING = new RegExp(`^Pok[eé]mon (?:${GAME_NAMES})(?:(?:,| and|, and) (?:${GAME_NAMES}))*$`, 'i');
+const GAME_HEADING = new RegExp(
+  `^Pok[eé]mon (?:${GAME_NAMES})(?:(?:,| and|, and) (?:${GAME_NAMES}))*$`,
+  'i',
+);
 const FAKE_HEADING = /^fake items?$/i;
 
 const REQUIRES = /\(requires\s+((?:[^()]|\([^()]*\))*)\)/i;
@@ -66,7 +69,9 @@ const INLINE: Record<string, (call: TemplateCall) => string> = {
 /** Drops tooltips and `{{sup/…}}` game notes, keeping the rest as wikitext. */
 function clean(wikitext: string): string {
   const { text } = splitTooltips(wikitext);
-  return replaceTemplates(text, (call) => (call.name.startsWith('sup/') ? '' : text.slice(call.start, call.end)));
+  return replaceTemplates(text, (call) =>
+    call.name.startsWith('sup/') ? '' : text.slice(call.start, call.end),
+  );
 }
 
 function plain(wikitext: string): string {
@@ -138,7 +143,11 @@ function parseRequirements(
       const call = parseTemplate(term);
       const link = /^\[\[([^|\]]+)(?:\|[^\]]*)?\]\]$/.exec(term.trim());
       const target =
-        call && ['m', 'ka', 'i'].includes(call.name) ? call.positional[0] : call ? undefined : link?.[1];
+        call && ['m', 'ka', 'i'].includes(call.name)
+          ? call.positional[0]
+          : call
+            ? undefined
+            : link?.[1];
       if (target) alternatives.push(slugify(target));
       else unknown.push(text);
     }
@@ -201,13 +210,17 @@ function walkRows(
         continue;
       }
       // Walkthroughs list the Power Plant's disguised Voltorb without a `Fake items` heading.
-      const disguised = plain(call.positional[0] ?? '') === 'None' && /^\{\{p\|/i.test(call.named['display'] ?? '');
+      const disguised =
+        plain(call.positional[0] ?? '') === 'None' && /^\{\{p\|/i.test(call.named['display'] ?? '');
       if (fake || disguised) {
         result.notes.push(`Fake item balls: ${named.name} ×${named.quantity}`);
         continue;
       }
       if (spots.length > 1 && named.quantity !== spots.length) {
-        issue('warning', `Quantity ×${named.quantity} doesn't match ${spots.length} spots: ${source}`);
+        issue(
+          'warning',
+          `Quantity ×${named.quantity} doesn't match ${spots.length} spots: ${source}`,
+        );
       }
       for (const spot of spots) {
         let rest = clean(spot);
@@ -216,8 +229,11 @@ function walkRows(
         if (requiresMatch) {
           const parsed = parseRequirements(requiresMatch[1]!, options.requirementPhrases);
           requires = parsed.requires;
-          for (const term of parsed.unknown) issue('error', `Unrecognized requirement "${term}" in ${source}`);
-          rest = rest.slice(0, requiresMatch.index) + rest.slice(requiresMatch.index + requiresMatch[0].length);
+          for (const term of parsed.unknown)
+            issue('error', `Unrecognized requirement "${term}" in ${source}`);
+          rest =
+            rest.slice(0, requiresMatch.index) +
+            rest.slice(requiresMatch.index + requiresMatch[0].length);
         }
         const hidden = HIDDEN.test(rest);
         rest = rest.replace(HIDDEN, ' ');

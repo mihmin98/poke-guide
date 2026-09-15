@@ -20,7 +20,13 @@ describeAdapterContract(entry1Adapter, [
     description: 'floor as method (Pokémon Tower)',
     wikitext: '{{catch/entry1|092|Gastly|yes|yes|no|3F|18-24|90%|type1=ghost|type2=poison}}',
     locationKind: 'building',
-    expected: { dex: 92, games: ['red', 'blue'], method: 'walk-building', slotCount: 1, subArea: '3F' },
+    expected: {
+      dex: 92,
+      games: ['red', 'blue'],
+      method: 'walk-building',
+      slotCount: 1,
+      subArea: '3F',
+    },
   },
   {
     description: 'surf (Route 12)',
@@ -30,11 +36,18 @@ describeAdapterContract(entry1Adapter, [
   {
     description: 'Super Rod (Route 4)',
     wikitext: '{{Catch/entry1|118|Goldeen|no|no|yes|Fish Super|20, 25, 30|90%|type1=Water}}',
-    expected: { dex: 118, games: ['yellow'], method: 'fish-super', slotCount: 1, requires: ['super-rod'] },
+    expected: {
+      dex: 118,
+      games: ['yellow'],
+      method: 'fish-super',
+      slotCount: 1,
+      requires: ['super-rod'],
+    },
   },
   {
     description: 'purchase (Route 4)',
-    wikitext: '{{Catch/entry1|129|Magikarp|yes|yes|yes|Gift|5|Purchase for {{PDollar}}500|type1=Water}}',
+    wikitext:
+      '{{Catch/entry1|129|Magikarp|yes|yes|yes|Gift|5|Purchase for {{PDollar}}500|type1=Water}}',
     expected: { dex: 129, games: ['red', 'blue', 'yellow'], method: 'purchase', slotCount: 1 },
   },
   {
@@ -83,11 +96,16 @@ describe('entry1 row details', () => {
   });
 
   it('keeps purchase prices and tooltip notes', () => {
-    expect(parse('{{Catch/entry1|129|Magikarp|yes|yes|yes|Gift|5|Purchase for {{PDollar}}500}}').slots[0]?.rate).toEqual({
+    expect(
+      parse('{{Catch/entry1|129|Magikarp|yes|yes|yes|Gift|5|Purchase for {{PDollar}}500}}').slots[0]
+        ?.rate,
+    ).toEqual({
       kind: 'price',
       value: 500,
     });
-    const gift = parse("{{Catch/entry1|001|Bulbasaur|no|no|yes|Gift|10|{{tt|One|If Pikachu's friendship is 147 or higher.}}}}");
+    const gift = parse(
+      "{{Catch/entry1|001|Bulbasaur|no|no|yes|Gift|10|{{tt|One|If Pikachu's friendship is 147 or higher.}}}}",
+    );
     expect(gift.slots[0]?.note).toBe("If Pikachu's friendship is 147 or higher.");
   });
 

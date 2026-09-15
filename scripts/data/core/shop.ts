@@ -55,7 +55,9 @@ function shopGames(title: string, games: readonly GameId[]): GameId[] | null {
   const texts = findTemplates(title)
     .filter((c) => c.name === 'color2')
     .map((c) => stripMarkup(c.positional[2] ?? c.positional[1] ?? ''));
-  const named = GAMES.filter((g) => games.includes(g.id) && texts.includes(g.name)).map((g) => g.id);
+  const named = GAMES.filter((g) => games.includes(g.id) && texts.includes(g.name)).map(
+    (g) => g.id,
+  );
   return named.length > 0 ? named : null;
 }
 
@@ -72,7 +74,8 @@ export function parsePrizeShops(wikitext: string, options: PrizeShopOptions): Pr
       case 'shop': {
         const title = call.positional[0] ?? '';
         current = shopGames(title, options.games);
-        if (!current) result.notes.push(`Skipped prize shop for other versions: ${stripMarkup(title)}`);
+        if (!current)
+          result.notes.push(`Skipped prize shop for other versions: ${stripMarkup(title)}`);
         return;
       }
       case 'shopfooter':
@@ -93,7 +96,11 @@ export function parsePrizeShops(wikitext: string, options: PrizeShopOptions): Pr
         const coins = Number(stripMarkup(call.positional[1] ?? ''));
         const name = prizeItemName(call);
         if (!name || !Number.isInteger(coins) || coins <= 0) {
-          result.issues.push({ level: 'error', page: options.pageTitle, message: `Malformed item prize: ${source}` });
+          result.issues.push({
+            level: 'error',
+            page: options.pageTitle,
+            message: `Malformed item prize: ${source}`,
+          });
           return;
         }
         result.items.push({
@@ -119,11 +126,19 @@ export function parsePrizeShops(wikitext: string, options: PrizeShopOptions): Pr
         try {
           dex = parseDex(call.positional[1]);
         } catch (error) {
-          result.issues.push({ level: 'error', page: options.pageTitle, message: `${(error as Error).message}: ${source}` });
+          result.issues.push({
+            level: 'error',
+            page: options.pageTitle,
+            message: `${(error as Error).message}: ${source}`,
+          });
           return;
         }
         if (!Number.isInteger(coins) || coins <= 0 || !levels) {
-          result.issues.push({ level: 'error', page: options.pageTitle, message: `Malformed prize row: ${source}` });
+          result.issues.push({
+            level: 'error',
+            page: options.pageTitle,
+            message: `Malformed prize row: ${source}`,
+          });
           return;
         }
         result.rows.push({

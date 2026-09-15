@@ -13,7 +13,11 @@ export const RBY_WALKTHROUGH: WalkthroughPart[] = [
     title: "Route 11, Diglett's Cave, Route 2 (East), Pewter Museum, Route 9, Route 10 (North)",
     region: 'kanto',
   },
-  { part: 8, title: 'Rock Tunnel, Lavender Town, Route 8, Underground Path, Route 7', region: 'kanto' },
+  {
+    part: 8,
+    title: 'Rock Tunnel, Lavender Town, Route 8, Underground Path, Route 7',
+    region: 'kanto',
+  },
   { part: 9, title: 'Celadon City, Rocket Hideout, Pokémon Tower', region: 'kanto' },
   { part: 10, title: 'Saffron City, Silph Co.', region: 'kanto' },
   { part: 11, title: 'Routes 16–18, Fuchsia City, Safari Zone', region: 'kanto' },

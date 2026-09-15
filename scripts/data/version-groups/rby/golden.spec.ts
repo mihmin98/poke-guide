@@ -108,7 +108,9 @@ describe('rby data: encounters (plan §7.8)', () => {
 
 describe('rby data: encounter overrides (plan §7.7)', () => {
   const at = (locationId: string) =>
-    data.locations.find((l) => l.id === locationId)!.subAreas.flatMap((s) => s.encounters.map((e) => ({ ...e, subArea: s.id })));
+    data.locations
+      .find((l) => l.id === locationId)!
+      .subAreas.flatMap((s) => s.encounters.map((e) => ({ ...e, subArea: s.id })));
 
   it('makes the Oak’s Lab first partners starters, with the Red/Blue choice as an exclusive group', () => {
     expect(at('oaks-lab').map((e) => [e.dex, e.method, e.exclusiveGroupId ?? null])).toEqual([
@@ -121,19 +123,45 @@ describe('rby data: encounter overrides (plan §7.7)', () => {
   });
 
   it('adds the statics with pret levels and their requirements', () => {
-    const find = (locationId: string, dex: number) => at(locationId).find((e) => e.dex === dex && e.method === 'static')!;
+    const find = (locationId: string, dex: number) =>
+      at(locationId).find((e) => e.dex === dex && e.method === 'static')!;
     const summary = (locationId: string, dex: number) => {
       const e = find(locationId, dex);
       return [e.subArea, e.games.yellow![0]!.levels!.min, e.requires, Object.keys(e.games)];
     };
-    expect(summary('route-12', 143)).toEqual(['main', 30, ['poke-flute'], ['red', 'blue', 'yellow']]);
-    expect(summary('route-16', 143)).toEqual(['main', 30, ['poke-flute'], ['red', 'blue', 'yellow']]);
-    expect(summary('seafoam-islands', 144)).toEqual(['b4f', 50, ['surf', 'strength'], ['red', 'blue', 'yellow']]);
+    expect(summary('route-12', 143)).toEqual([
+      'main',
+      30,
+      ['poke-flute'],
+      ['red', 'blue', 'yellow'],
+    ]);
+    expect(summary('route-16', 143)).toEqual([
+      'main',
+      30,
+      ['poke-flute'],
+      ['red', 'blue', 'yellow'],
+    ]);
+    expect(summary('seafoam-islands', 144)).toEqual([
+      'b4f',
+      50,
+      ['surf', 'strength'],
+      ['red', 'blue', 'yellow'],
+    ]);
     expect(summary('power-plant', 145)).toEqual(['main', 50, ['surf'], ['red', 'blue', 'yellow']]);
     expect(summary('power-plant', 100)[1]).toBe(40);
     expect(summary('power-plant', 101)[1]).toBe(43);
-    expect(summary('victory-road', 146)).toEqual(['2f', 50, ['strength'], ['red', 'blue', 'yellow']]);
-    expect(summary('cerulean-cave', 150)).toEqual(['b1f', 70, ['post-game'], ['red', 'blue', 'yellow']]);
+    expect(summary('victory-road', 146)).toEqual([
+      '2f',
+      50,
+      ['strength'],
+      ['red', 'blue', 'yellow'],
+    ]);
+    expect(summary('cerulean-cave', 150)).toEqual([
+      'b1f',
+      70,
+      ['post-game'],
+      ['red', 'blue', 'yellow'],
+    ]);
   });
 
   it('has the exclusive groups on their encounters, and Mew as event-only', () => {
@@ -142,23 +170,33 @@ describe('rby data: encounter overrides (plan §7.7)', () => {
       ['mt-moon-fossil', [138, 140]],
       ['fighting-dojo', [106, 107]],
     ]);
-    expect(at('cinnabar-lab').filter((e) => e.method === 'fossil').map((e) => [e.dex, e.exclusiveGroupId ?? null])).toEqual([
+    expect(
+      at('cinnabar-lab')
+        .filter((e) => e.method === 'fossil')
+        .map((e) => [e.dex, e.exclusiveGroupId ?? null]),
+    ).toEqual([
       [138, 'mt-moon-fossil'],
       [140, 'mt-moon-fossil'],
       [142, null],
     ]);
-    expect(at('fighting-dojo').map((e) => e.exclusiveGroupId)).toEqual(['fighting-dojo', 'fighting-dojo']);
+    expect(at('fighting-dojo').map((e) => e.exclusiveGroupId)).toEqual([
+      'fighting-dojo',
+      'fighting-dojo',
+    ]);
     expect(data.eventOnly).toEqual([151]);
   });
 });
 
 describe('rby data: items (plan §7.13)', () => {
   const items = (locationId: string) => data.locations.find((l) => l.id === locationId)!.items;
-  const find = (locationId: string, itemId: string) => items(locationId).filter((i) => i.itemId === itemId);
+  const find = (locationId: string, itemId: string) =>
+    items(locationId).filter((i) => i.itemId === itemId);
 
   it('has per-game item totals, including the overrides', () => {
     const all = data.locations.flatMap((l) => l.items);
-    expect(Object.fromEntries(data.games.map((g) => [g, all.filter((i) => i.games.includes(g)).length]))).toEqual({
+    expect(
+      Object.fromEntries(data.games.map((g) => [g, all.filter((i) => i.games.includes(g)).length])),
+    ).toEqual({
       red: 219,
       blue: 219,
       yellow: 224,
@@ -166,13 +204,24 @@ describe('rby data: items (plan §7.13)', () => {
   });
 
   it('parses stated prerequisites, trainer drops and alternatives', () => {
-    expect(find('route-12', 'tm16-pay-day')[0]).toMatchObject({ requires: [['surf']], obtain: 'pickup' });
-    expect(find('team-rocket-hideout', 'silph-scope')[0]).toMatchObject({ obtain: 'drop', requires: [['lift-key']] });
-    expect(find('route-25', 'tm19-seismic-toss')[0]!.requires).toEqual([['route-25-jr-trainer', 'cut']]);
+    expect(find('route-12', 'tm16-pay-day')[0]).toMatchObject({
+      requires: [['surf']],
+      obtain: 'pickup',
+    });
+    expect(find('team-rocket-hideout', 'silph-scope')[0]).toMatchObject({
+      obtain: 'drop',
+      requires: [['lift-key']],
+    });
+    expect(find('route-25', 'tm19-seismic-toss')[0]!.requires).toEqual([
+      ['route-25-jr-trainer', 'cut'],
+    ]);
   });
 
   it('keeps per-game spots apart (Viridian Forest) and splits bulleted spots (Mt. Moon)', () => {
-    expect(find('viridian-forest', 'antidote').map((i) => i.games)).toEqual([['red', 'blue', 'yellow'], ['red', 'blue']]);
+    expect(find('viridian-forest', 'antidote').map((i) => i.games)).toEqual([
+      ['red', 'blue', 'yellow'],
+      ['red', 'blue'],
+    ]);
     expect(find('viridian-forest', 'potion').map((i) => i.games)).toEqual([
       ['yellow'],
       ['red', 'blue', 'yellow'],
@@ -227,8 +276,14 @@ describe('rby data: items (plan §7.13)', () => {
     expect(find('silph-co', 'tm03-swords-dance')[0]!.requires).toEqual([['card-key']]);
     expect(find('victory-road', 'tm43-sky-attack')[0]!.requires).toEqual([['strength']]);
     expect(items('sea-cottage').map((i) => i.name)).toEqual(['S.S. Ticket']);
-    expect(find('viridian-city', 'revive')[0]).toMatchObject({ subArea: 'Gym', fromPart: { red: 14, blue: 14, yellow: 14 } });
-    expect(find('pallet-town', 'potion')[0]).toMatchObject({ obtain: 'gift', subArea: "Player's house" });
+    expect(find('viridian-city', 'revive')[0]).toMatchObject({
+      subArea: 'Gym',
+      fromPart: { red: 14, blue: 14, yellow: 14 },
+    });
+    expect(find('pallet-town', 'potion')[0]).toMatchObject({
+      obtain: 'gift',
+      subArea: "Player's house",
+    });
   });
 
   it('patches the Route 15 aide item to the Gen I name', () => {
@@ -255,21 +310,34 @@ describe('rby data: prizes and trades (plan §7.7)', () => {
   it('has the Game Corner prizes per game, with coins, levels and the Coin Case', () => {
     const prizes = encounters('celadon-game-corner').filter((e) => e.method === 'prize');
     const forGame = (game: 'red' | 'blue' | 'yellow') =>
-      prizes.filter((e) => e.games[game]).map((e) => e.dex).sort((a, b) => a - b);
+      prizes
+        .filter((e) => e.games[game])
+        .map((e) => e.dex)
+        .sort((a, b) => a - b);
     expect(forGame('red')).toEqual([30, 35, 63, 123, 137, 147]);
     expect(forGame('blue')).toEqual([33, 35, 63, 127, 137, 147]);
     expect(forGame('yellow')).toEqual([37, 40, 63, 123, 127, 137]);
     const abra = prizes.find((e) => e.dex === 63)!;
     expect(abra.requires).toEqual(['coin-case']);
-    expect(abra.games.red).toEqual([{ levels: { min: 9, max: 9 }, rate: { kind: 'coins', value: 180 } }]);
-    expect(abra.games.yellow).toEqual([{ levels: { min: 15, max: 15 }, rate: { kind: 'coins', value: 230 } }]);
+    expect(abra.games.red).toEqual([
+      { levels: { min: 9, max: 9 }, rate: { kind: 'coins', value: 180 } },
+    ]);
+    expect(abra.games.yellow).toEqual([
+      { levels: { min: 15, max: 15 }, rate: { kind: 'coins', value: 230 } },
+    ]);
   });
 
   it('names every in-game trade from the trade page', () => {
-    const trades = data.locations.flatMap((l) => l.subAreas.flatMap((s) => s.encounters)).filter((e) => e.method === 'trade');
+    const trades = data.locations
+      .flatMap((l) => l.subAreas.flatMap((s) => s.encounters))
+      .filter((e) => e.method === 'trade');
     expect(trades).toHaveLength(16);
     expect(trades.every((e) => e.trade?.nickname)).toBe(true);
-    expect(encounters('route-2').filter((e) => e.method === 'trade').map((e) => e.trade)).toEqual([
+    expect(
+      encounters('route-2')
+        .filter((e) => e.method === 'trade')
+        .map((e) => e.trade),
+    ).toEqual([
       { giveDex: 63, nickname: 'MARCEL' },
       { giveDex: 35, nickname: 'MILES' },
     ]);

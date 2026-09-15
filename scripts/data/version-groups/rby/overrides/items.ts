@@ -18,7 +18,15 @@ function gymTm(
 ): ItemAddition {
   return {
     locationId,
-    item: { name, quantity: 1, games: ALL, obtain: 'reward', subArea: 'Gym', where: `From ${leader}, after defeating them`, ...extra },
+    item: {
+      name,
+      quantity: 1,
+      games: ALL,
+      obtain: 'reward',
+      subArea: 'Gym',
+      where: `From ${leader}, after defeating them`,
+      ...extra,
+    },
     sourcePage: walkthrough(part),
     reason: 'Gym leader TM; Gym pages are not locations',
   };
@@ -56,20 +64,37 @@ export const RBY_ITEM_OVERRIDES: ItemOverrides = {
     // The Cinnabar Gym door is locked until the player has the Secret Key from the Pokémon Mansion (Part 13).
     gymTm('cinnabar-island', 'TM38 Fire Blast', 'Blaine', 13, { requires: [['secret-key']] }),
     // The walkthrough lists it with Viridian City (Part 2), but the Gym only opens in Part 14.
-    gymTm('viridian-city', 'TM27 Fissure', 'Giovanni', 2, { fromPart: { red: 14, blue: 14, yellow: 14 } }),
+    gymTm('viridian-city', 'TM27 Fissure', 'Giovanni', 2, {
+      fromPart: { red: 14, blue: 14, yellow: 14 },
+    }),
     rooftopTm('TM13 Ice Beam', 'Fresh Water'),
     rooftopTm('TM48 Rock Slide', 'Soda Pop'),
     rooftopTm('TM49 Tri Attack', 'Lemonade'),
     {
       locationId: 'pallet-town',
-      item: { name: 'Potion', quantity: 1, games: ALL, obtain: 'gift', subArea: "Player's house", where: "Stored in the player's PC at the start of the game" },
+      item: {
+        name: 'Potion',
+        quantity: 1,
+        games: ALL,
+        obtain: 'gift',
+        subArea: "Player's house",
+        where: "Stored in the player's PC at the start of the game",
+      },
       sourcePage: walkthrough(1),
       reason: "The player's house is not a location page",
     },
     {
       // pret pokered/pokeyellow data/maps/objects/ViridianGym.asm: REVIVE item ball at (16, 9).
       locationId: 'viridian-city',
-      item: { name: 'Revive', quantity: 1, games: ALL, obtain: 'pickup', subArea: 'Gym', where: 'Inside Viridian Gym', fromPart: { red: 14, blue: 14, yellow: 14 } },
+      item: {
+        name: 'Revive',
+        quantity: 1,
+        games: ALL,
+        obtain: 'pickup',
+        subArea: 'Gym',
+        where: 'Inside Viridian Gym',
+        fromPart: { red: 14, blue: 14, yellow: 14 },
+      },
       sourcePage: walkthrough(2),
       reason: 'Gym pages are not locations; the Gym only opens in Part 14',
     },
@@ -81,7 +106,8 @@ export const RBY_ITEM_OVERRIDES: ItemOverrides = {
       itemId: 'exp-share',
       set: { name: 'Exp. All' },
       sourcePage: walkthrough(12),
-      reason: 'The location page uses the later name; Gen I has EXP.ALL (https://github.com/pret/pokered/blob/master/scripts/Route15Gate2F.asm)',
+      reason:
+        'The location page uses the later name; Gen I has EXP.ALL (https://github.com/pret/pokered/blob/master/scripts/Route15Gate2F.asm)',
     },
   ],
   walkthroughAccepted: [
@@ -102,7 +128,8 @@ export const RBY_ITEM_OVERRIDES: ItemOverrides = {
     {
       page: 'Walkthrough:Pokémon Yellow/Part 3',
       games: ['yellow'],
-      reason: 'Its Viridian Forest rows are flagged R/B; pret pokeyellow ViridianForest.asm matches the Yellow rows',
+      reason:
+        'Its Viridian Forest rows are flagged R/B; pret pokeyellow ViridianForest.asm matches the Yellow rows',
     },
   ],
   requires: [
@@ -121,5 +148,7 @@ export const RBY_ITEM_OVERRIDES: ItemOverrides = {
       reason: 'Behind a boulder (walkthrough: "requires Strength")',
     })),
   ],
-  choiceGroups: [{ locationId: 'mt-moon', itemIds: ['dome-fossil', 'helix-fossil'], groupId: 'mt-moon-fossil' }],
+  choiceGroups: [
+    { locationId: 'mt-moon', itemIds: ['dome-fossil', 'helix-fossil'], groupId: 'mt-moon-fossil' },
+  ],
 };

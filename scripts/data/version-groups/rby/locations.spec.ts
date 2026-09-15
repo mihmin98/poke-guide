@@ -21,11 +21,14 @@ describe('rby location config', () => {
   });
 
   it('places every location in all three games', () => {
-    for (const location of locations) expect(Object.keys(location.placement).sort()).toEqual(['blue', 'red', 'yellow']);
+    for (const location of locations)
+      expect(Object.keys(location.placement).sort()).toEqual(['blue', 'red', 'yellow']);
   });
 
   it('covers the Bulbapedia location category exactly (snapshot)', () => {
-    const snapshot = JSON.parse(readFileSync(join(fixturesDir('rby'), 'category-members.json'), 'utf8')) as {
+    const snapshot = JSON.parse(
+      readFileSync(join(fixturesDir('rby'), 'category-members.json'), 'utf8'),
+    ) as {
       members: string[];
     };
     const configured = new Set(locations.map((l) => l.page));

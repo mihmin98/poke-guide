@@ -38,7 +38,11 @@ describe('walkEncounterSection on Red/Blue/Yellow fixtures', () => {
   });
 
   it('takes sub-areas from headings (Mt. Moon, Safari Zone)', () => {
-    expect([...new Set(walk('mt-moon', 'cave').rows.map((r) => r.subArea))]).toEqual(['1F', 'B1F', 'B2F']);
+    expect([...new Set(walk('mt-moon', 'cave').rows.map((r) => r.subArea))]).toEqual([
+      '1F',
+      'B1F',
+      'B2F',
+    ]);
     expect([...new Set(walk('safari-zone', 'special').rows.map((r) => r.subArea))]).toEqual([
       'Center Area',
       'Area 1 - East',
@@ -55,7 +59,11 @@ describe('walkEncounterSection on Red/Blue/Yellow fixtures', () => {
 
   it('finds the section at a deeper heading level (Silph Co.)', () => {
     const [lapras] = walk('silph-co', 'building').rows;
-    expect(lapras).toMatchObject({ method: 'gift', label: null, row: { dex: 131, games: ['red', 'blue', 'yellow'] } });
+    expect(lapras).toMatchObject({
+      method: 'gift',
+      label: null,
+      row: { dex: 131, games: ['red', 'blue', 'yellow'] },
+    });
   });
 
   it('reads two templates on one line (Cinnabar Island)', () => {
@@ -65,7 +73,10 @@ describe('walkEncounterSection on Red/Blue/Yellow fixtures', () => {
 
   it('keeps specific div labels and drops group labels (Route 1)', () => {
     const rows = walk('route-1').rows;
-    expect(rows.find((r) => r.row.dex === 25)).toMatchObject({ method: 'special', label: 'Attacking Oak' });
+    expect(rows.find((r) => r.row.dex === 25)).toMatchObject({
+      method: 'special',
+      label: 'Attacking Oak',
+    });
     expect(rows.find((r) => r.row.dex === 16)?.label).toBeNull();
   });
 
@@ -73,7 +84,10 @@ describe('walkEncounterSection on Red/Blue/Yellow fixtures', () => {
     expect(walk('route-4').rows.find((r) => r.method === 'purchase')?.row.dex).toBe(129);
     const cerulean = walk('cerulean-city', 'town').rows;
     expect(cerulean.find((r) => r.method === 'gift')?.row.slots[0]?.note).toMatch(/friendship/);
-    expect(cerulean.find((r) => r.method === 'trade')?.row.trade).toEqual({ giveDex: 61, giveName: 'Poliwhirl' });
+    expect(cerulean.find((r) => r.method === 'trade')?.row.trade).toEqual({
+      giveDex: 61,
+      giveName: 'Poliwhirl',
+    });
   });
 
   it('collects prose before the table as notes (Route 12)', () => {
@@ -83,9 +97,17 @@ describe('walkEncounterSection on Red/Blue/Yellow fixtures', () => {
   });
 
   it('warns when a section defers to a subpage', () => {
-    const result = walk('route-1', 'route', '==Pokémon==\n===Generation I===\n{{main|Indigo Plateau/Generation I}}\n');
+    const result = walk(
+      'route-1',
+      'route',
+      '==Pokémon==\n===Generation I===\n{{main|Indigo Plateau/Generation I}}\n',
+    );
     expect(result.issues).toEqual([
-      { level: 'warning', page: 'Kanto Route 1', message: 'Section defers to another page: {{main|Indigo Plateau/Generation I}}' },
+      {
+        level: 'warning',
+        page: 'Kanto Route 1',
+        message: 'Section defers to another page: {{main|Indigo Plateau/Generation I}}',
+      },
     ]);
   });
 

@@ -22,7 +22,9 @@ export function headingText(heading: Heading): string {
 
 function matchesTitle(heading: Heading, matcher: TitleMatcher): boolean {
   const title = headingText(heading);
-  return typeof matcher === 'string' ? title.toLowerCase() === matcher.toLowerCase() : matcher.test(title);
+  return typeof matcher === 'string'
+    ? title.toLowerCase() === matcher.toLowerCase()
+    : matcher.test(title);
 }
 
 export function sectionAt(text: string, headings: readonly Heading[], index: number): SectionRange {
@@ -47,7 +49,12 @@ export function findNestedSection(
   headings: readonly Heading[] = parseHeadings(text),
 ): SectionRange | null {
   if (path.length === 0) return null;
-  const search = (from: number, to: number, parentLevel: number, depth: number): SectionRange | null => {
+  const search = (
+    from: number,
+    to: number,
+    parentLevel: number,
+    depth: number,
+  ): SectionRange | null => {
     for (let i = 0; i < headings.length; i++) {
       const heading = headings[i]!;
       if (heading.start < from || heading.start >= to || heading.level <= parentLevel) continue;

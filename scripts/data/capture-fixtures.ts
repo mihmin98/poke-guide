@@ -20,7 +20,8 @@ async function main(): Promise<void> {
   });
   const group = values.group ?? '';
   const pages = FIXTURE_PAGES[group];
-  if (!pages) throw new Error(`Unknown --group "${group}". Known: ${Object.keys(FIXTURE_PAGES).join(', ')}`);
+  if (!pages)
+    throw new Error(`Unknown --group "${group}". Known: ${Object.keys(FIXTURE_PAGES).join(', ')}`);
 
   const source = new PageSource({
     mode: values.refresh ? 'refresh' : 'cache-first',

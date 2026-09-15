@@ -18,7 +18,19 @@ function decodeEntities(text: string): string {
 }
 
 /** Link templates written `{{x|target|display text}}`. */
-const LINK_TEMPLATES = new Set(['p', 'm', 'i', 'a', 't', 'type', 'ability', 'item', 'pkmn', 'loc', 'wp']);
+const LINK_TEMPLATES = new Set([
+  'p',
+  'm',
+  'i',
+  'a',
+  't',
+  'type',
+  'ability',
+  'item',
+  'pkmn',
+  'loc',
+  'wp',
+]);
 
 /** Plain-text rendering of the templates that appear inside encounter tables, labels and notes. */
 function renderTemplate(call: TemplateCall): string {

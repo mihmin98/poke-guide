@@ -34,7 +34,12 @@ export const entry1Adapter: CatchTemplateAdapter = {
       rawMethod: stripMarkup(p[5] ?? ''),
       games: GAMES.filter((_, i) => isYes(p[2 + i])),
       slots: [
-        { levels: parseLevels(rawLevels), rawLevels: stripMarkup(rawLevels), rate, ...(note ? { note } : {}) },
+        {
+          levels: parseLevels(rawLevels),
+          rawLevels: stripMarkup(rawLevels),
+          rate,
+          ...(note ? { note } : {}),
+        },
       ],
       types: rowTypes(template),
       ...(trade ? { trade } : {}),

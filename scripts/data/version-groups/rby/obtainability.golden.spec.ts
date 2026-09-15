@@ -5,7 +5,9 @@ import { buildChecklist, maxInOneSave } from '../../../../src/app/core/domain/ob
 import { GAMES, getVersionGroup } from '../../../../src/app/core/games/registry';
 import { repoRoot } from '../../core/paths';
 
-const data = JSON.parse(readFileSync(join(repoRoot(), 'public', 'data', 'rby.json'), 'utf8')) as VersionGroupData;
+const data = JSON.parse(
+  readFileSync(join(repoRoot(), 'public', 'data', 'rby.json'), 'utf8'),
+) as VersionGroupData;
 const features = getVersionGroup('rby').features;
 
 describe('rby data: obtainability (plan §7.8, §9)', () => {
@@ -23,12 +25,21 @@ describe('rby data: obtainability (plan §7.8, §9)', () => {
     it(`${game.shortName}: exclusive choices lower the maximum in one save`, () => {
       const obtainable = entries.filter((e) => e.obtainable).length;
       // Red/Blue: starter (lose 2 families = 6), fossil (lose 1 family = 2), Dojo (1). Yellow: fossil and Dojo only.
-      expect(obtainable - maxInOneSave(data, game, features, entries)).toBe(game.id === 'yellow' ? 3 : 9);
+      expect(obtainable - maxInOneSave(data, game, features, entries)).toBe(
+        game.id === 'yellow' ? 3 : 9,
+      );
     });
   }
 
   it('reports version exclusives with the games that have them', () => {
-    const red = buildChecklist(data, GAMES.find((g) => g.id === 'red')!, features);
-    expect(red.find((e) => e.dex === 27)).toMatchObject({ unobtainableReason: 'other-version', unobtainableDetail: 'Available in blue, yellow' });
+    const red = buildChecklist(
+      data,
+      GAMES.find((g) => g.id === 'red')!,
+      features,
+    );
+    expect(red.find((e) => e.dex === 27)).toMatchObject({
+      unobtainableReason: 'other-version',
+      unobtainableDetail: 'Available in blue, yellow',
+    });
   });
 });

@@ -92,13 +92,15 @@ export const RBY_ENCOUNTER_OVERRIDES: EncounterOverrides = {
       locationId: 'oaks-lab',
       match: { method: 'gift', label: 'First partner Pokémon' },
       set: { method: 'starter', label: null },
-      reason: 'The "First partner Pokémon" group is the starter choice (Red/Blue) or Pikachu (Yellow)',
+      reason:
+        'The "First partner Pokémon" group is the starter choice (Red/Blue) or Pikachu (Yellow)',
     },
     {
       locationId: 'route-1',
       match: { method: 'special', dex: 25, label: 'Attacking Oak' },
       set: 'drop',
-      reason: "Yellow's Pikachu is the Oak's Lab starter; the Route 1 row describes the same Pikachu (open question 10)",
+      reason:
+        "Yellow's Pikachu is the Oak's Lab starter; the Route 1 row describes the same Pikachu (open question 10)",
     },
   ],
   exclusiveGroups: [

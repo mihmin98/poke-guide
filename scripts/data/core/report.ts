@@ -24,7 +24,9 @@ function encounterKeys(data: VersionGroupData): Map<string, Set<string>> {
     for (const area of location.subAreas) {
       for (const e of area.encounters) {
         const trade = e.trade ? ` for #${e.trade.giveDex}` : '';
-        set.add(`${area.id} · ${e.method} · #${e.dex} ${names.get(e.dex) ?? '?'}${trade} · ${Object.keys(e.games).join('/')}`);
+        set.add(
+          `${area.id} · ${e.method} · #${e.dex} ${names.get(e.dex) ?? '?'}${trade} · ${Object.keys(e.games).join('/')}`,
+        );
       }
     }
     keys.set(location.id, set);
@@ -79,7 +81,13 @@ export function renderReport({ data, previous, issues, checklists }: ReportInput
       const removed = [...old].filter((k) => !now.has(k));
       if (added.length === 0 && removed.length === 0) continue;
       changed = true;
-      lines.push(`### ${id}`, '', ...added.map((k) => `- added: ${k}`), ...removed.map((k) => `- removed: ${k}`), '');
+      lines.push(
+        `### ${id}`,
+        '',
+        ...added.map((k) => `- added: ${k}`),
+        ...removed.map((k) => `- removed: ${k}`),
+        '',
+      );
     }
     if (!changed) lines.push('None.', '');
   }
@@ -87,7 +95,8 @@ export function renderReport({ data, previous, issues, checklists }: ReportInput
   for (const level of ['warning', 'note'] as const) {
     const selected = issues.filter((i) => i.level === level);
     lines.push(`## ${level === 'warning' ? 'Warnings' : 'Notes'} (${selected.length})`, '');
-    for (const found of selected) lines.push(`- ${found.page ? `[${found.page}] ` : ''}${found.message}`);
+    for (const found of selected)
+      lines.push(`- ${found.page ? `[${found.page}] ` : ''}${found.message}`);
     lines.push('');
   }
   return lines.join('\n').replace(/\n+$/, '\n');

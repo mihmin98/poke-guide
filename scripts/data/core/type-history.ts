@@ -24,7 +24,11 @@ export const TYPE_HISTORY: readonly TypeHistoryEntry[] = [
   { dex: 122, types: ['psychic'], untilGeneration: 5 }, // Mr. Mime (Psychic/Fairy)
 ];
 
-export function typesInGeneration(dex: number, currentTypes: readonly PokemonType[], generation: number): PokemonType[] {
+export function typesInGeneration(
+  dex: number,
+  currentTypes: readonly PokemonType[],
+  generation: number,
+): PokemonType[] {
   const entry = TYPE_HISTORY.filter((e) => e.dex === dex && generation <= e.untilGeneration).sort(
     (a, b) => a.untilGeneration - b.untilGeneration,
   )[0];

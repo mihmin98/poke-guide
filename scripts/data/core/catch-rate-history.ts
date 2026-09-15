@@ -46,11 +46,12 @@ function parseNameCell(cell: string): { name: string; form: string | null } {
     if (/<small>/i.test(part)) {
       // `{{fd|Minior|Meteor Form}}` and `{{form|Ursaluna|Bloodmoon}}` show their last argument.
       const shown = replaceTemplates(part, (call) =>
-        FORM_TEMPLATES.has(call.name) ? (call.positional.at(-1) ?? '') : part.slice(call.start, call.end),
+        FORM_TEMPLATES.has(call.name)
+          ? (call.positional.at(-1) ?? '')
+          : part.slice(call.start, call.end),
       );
       form = stripMarkup(shown).replace(/^\((.*)\)$/, '$1');
-    }
-    else name = stripMarkup(part);
+    } else name = stripMarkup(part);
   }
   return { name, form };
 }
@@ -72,11 +73,18 @@ export function parseCatchRateList(wikitext: string): CatchRateRow[] {
     const dex = Number(rawDex);
     const { name, form } = parseNameCell(nameCell);
     const catchRate = Number(stripMarkup(rawRate));
-    if (!name || extra.length > 0 || !Number.isInteger(catchRate) || catchRate < 0 || catchRate > 255) {
+    if (
+      !name ||
+      extra.length > 0 ||
+      !Number.isInteger(catchRate) ||
+      catchRate < 0 ||
+      catchRate > 255
+    ) {
       throw new Error(`Malformed catch-rate row: ${chunk.trim()}`);
     }
     const previous = rows.at(-1);
-    if (previous && dex < previous.dex) throw new Error(`Catch-rate list is out of order at #${dex}`);
+    if (previous && dex < previous.dex)
+      throw new Error(`Catch-rate list is out of order at #${dex}`);
     const notes = noteCell
       .split(/<br\s*\/?>/i)
       .map(stripMarkup)
@@ -148,14 +156,24 @@ export function catchRateNoteEffect(note: string, context: CatchRateContext): Ca
     const generation = fromRoman(priorGeneration[2]!);
     if (generation === null) return needs;
     const label = `Generation ${priorGeneration[2]}`;
-    return { kind: 'earlier-value', value: Number(priorGeneration[1]), untilGeneration: generation, label };
+    return {
+      kind: 'earlier-value',
+      value: Number(priorGeneration[1]),
+      untilGeneration: generation,
+      label,
+    };
   }
   const priorGame = PRIOR_TO_GAME.exec(note);
   if (priorGame) {
     const game = resolveGame(priorGame[2]!);
     // Within the game's own generation it is unclear which games the earlier value covers.
     if (!game || game.generation === context.generation) return needs;
-    return { kind: 'earlier-value', value: Number(priorGame[1]), untilGeneration: game.generation, label: game.label };
+    return {
+      kind: 'earlier-value',
+      value: Number(priorGame[1]),
+      untilGeneration: game.generation,
+      label: game.label,
+    };
   }
   const inGames = IN_GAMES.exec(note);
   if (inGames) {
@@ -238,7 +256,9 @@ export function resolveCatchRates(
       if (classification.kind === 'override' && classification.games) {
         const outside = classification.games.filter((g) => !context.games.includes(g));
         if (outside.length > 0) {
-          errors.push(`#${dex} ${row.name}: catch-rate override names games outside the version group: ${outside.join(', ')}`);
+          errors.push(
+            `#${dex} ${row.name}: catch-rate override names games outside the version group: ${outside.join(', ')}`,
+          );
         }
         byGame ??= {};
         for (const game of classification.games) byGame[game] = classification.value;
@@ -263,7 +283,9 @@ export function resolveCatchRates(
   }
   for (const classification of context.classifications) {
     if (!used.has(classification)) {
-      errors.push(`#${classification.dex}: catch-rate note classification matches no note: "${classification.note}"`);
+      errors.push(
+        `#${classification.dex}: catch-rate note classification matches no note: "${classification.note}"`,
+      );
     }
   }
   return { rates, errors };
