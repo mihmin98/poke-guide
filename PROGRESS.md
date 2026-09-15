@@ -15,7 +15,7 @@ How to use it:
 
 ## Current status
 
-- **Phase:** Phase 0 complete. **Phase 1 complete** (acceptance met 2026-09-13; Game Corner TM prizes finished 2026-09-15). **Phase 2 complete and accepted 2026-09-15.** **Phase 3 in progress** (code complete 2026-09-15; acceptance needs the manual browser check). Done in Phase 1:
+- **Phase:** Phase 0 complete. **Phase 1 complete** (acceptance met 2026-09-13; Game Corner TM prizes finished 2026-09-15). **Phase 2 complete and accepted 2026-09-15.** **Phase 3 complete and accepted 2026-09-15.** Phase 4 next. Done in Phase 1:
   - Parsing core, `entry1`/`entry2` adapters, walker, merge, and the ordered `rby` location config.
   - Species master data: National Dex list, Gen I type history, slugs.
   - Species pages: infobox extras, base stats by generation, Pokédex entries.
@@ -41,11 +41,9 @@ How to use it:
 
 ## Next step
 
-**Phase 3 is code-complete (2026-09-15) and needs the user's manual browser check** to be accepted: every location at **360 px and 1440 px** in each game, and catch toggles updating the counts immediately. Worth checking while there: the two-pane split at 1440 px (sticky list, open card marked), a location at 360 px (list hidden, back returns to the same scroll position), the sub-area tabs, and the items list.
+**Phase 3 is complete and accepted (2026-09-15).** Next: **Phase 4** (plan §13.6–13.7): the checklist grid and list views, filters and sorts, the summary with "max in one save" and the unobtainable section, then the Pokémon detail page (sources, other games, evolution chain, Pokédex entry, learnsets). Start with the checklist page. The shared components and the mismatch banner are ready for it; the detail page is the first consumer of the lazily loaded `rby.pokedex.json` (`GameDataView.pokedex()`).
 
-After that, **Phase 4** (plan §13.6–13.7): the checklist grid and list views, filters, the summary with "max in one save", and the Pokémon detail page. The mismatch banner and every shared component are ready for it.
-
-The Settings page is still a placeholder: `SettingsStore` exists but nothing binds to it yet. It belongs to Phase 7 polish, not Phase 2's acceptance.
+The Settings page is still a placeholder: `SettingsStore` exists and the guide and location pages read from it, but nothing writes to it except the guide's *Only available now* toggle. Binding the rest is Phase 7 polish.
 
 ---
 
@@ -100,7 +98,8 @@ The Settings page is still a placeholder: `SettingsStore` exists but nothing bin
 - [x] Location page (sub-area tabs, method sections, encounter/trade/prize rows, exclusive group chips, source link, previous/next, plus an items list with prerequisites). **Done 2026-09-15:** `features/location/` — `location-model.ts` (pure) plus `location.page.ts`, route `/:game/guide/:locationId`, "Mark all here as caught" (confirm + undo) and "Show only missing".
 - [x] Desktop two-pane layout and mobile full-screen navigation with scroll restoration. **Done 2026-09-15:** the location route is now a **child** of `guide`, so the guide page hosts the detail in a `<router-outlet>`; from 1200 px the list pane is a sticky 360 px column with its own scroll and the open card is marked `aria-current="page"`, below that a location hides the list and takes the screen. The router's `withInMemoryScrolling` already restores scroll.
 - [x] Game-mismatch banner. **Done 2026-09-15:** `shared/components/game-mismatch-banner.ts`, on the location page; Phase 4 reuses it on the checklist.
-- **Accept when:** all locations render correctly for each game at 360 px and 1440 px, and toggles update counts immediately.
+- [x] **Phase 3 acceptance: manual browser check (user confirmed 2026-09-15)** — locations render at 360 px and 1440 px, the two-pane layout and catch toggles behave. The check found two CSS bugs (card overflow, squashed headings), both fixed before acceptance.
+- **Accept when:** all locations render correctly for each game at 360 px and 1440 px, and toggles update counts immediately. **Met 2026-09-15.**
 
 ### Phase 4 — Checklist and Pokémon detail (plan §13.6–13.7)
 - [ ] Checklist grid and list views, filters, sorts, summary with "max in one save", unobtainable section
@@ -277,3 +276,4 @@ code), so it waits until they are stable.
 | 2026-09-15 | Fixed the guide page's sticky layout after the user reported cards overlapping in the desktop list pane. Three bugs: the part header carried its 16 px top margin into its stuck state, so cards showed through above the transparent band (spacing moved to `.part` and to padding); the filter bar was sticky at `top: 0`, which put it under the app toolbar on narrow screens (it now scrolls with the page); and the list pane was sticky at `top: 0` with `max-height: 100dvh`, so it ran a toolbar's height past the viewport. `App` now exposes `--app-toolbar-height` (64 px, 56 px under 600 px) and the guide sets `--stick-top: 0` inside the pane, so part headers stick to the pane on desktop and just below the toolbar elsewhere. **Verification: `npm run verify` passes (286 pipeline tests, 137 app tests, lint clean, build OK).** |
 | 2026-09-15 | Two CSS bugs the user caught in the browser, both from missing global defaults rather than the page styles. (1) **Cards overlapping in the guide list:** the project had no `box-sizing: border-box` rule, so `.card { height: 100%; padding: 12px 16px; border: 1px }` rendered 26 px taller than its grid area and spilled over the card below. Added the universal border-box rule in `styles.scss`. The earlier sticky-header fix was a misdiagnosis of the same screenshot, though the offsets it corrected were wrong too. (2) **Squashed headings:** `body { font: var(--mat-sys-body-medium) }` sets a fixed line-height that headings inherited at their own larger size, so a wrapping `<h1>` ("Underground Path (Routes 5–6)") collided with itself. `h1`/`h2`/`h3` now use the M3 `headline-small` / `title-large` / `title-medium` tokens. **Verification: `npm run verify` passes (286 pipeline tests, 137 app tests, lint clean, build OK); both fixes still need the user's eyes in the browser.** |
 | 2026-09-15 | Added **Phase 9 — item pickup tracking** to the plan (§16) and to the phase checklists, at the user's request, as a design-first phase after Phase 8. No code changes. |
+| 2026-09-15 | **Phase 3 accepted** by the user's manual browser check. No code changes beyond the two CSS fixes logged above. |
