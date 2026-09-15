@@ -31,7 +31,9 @@ export interface EncounterSlot {
   levels: LevelSpec | null;
   rate: Rate;
   conditions?: EncounterCondition[];
-  ivs?: { kind: 'fixed'; values: Partial<Record<StatId, number>> } | { kind: 'min-perfect'; count: number };
+  ivs?:
+    | { kind: 'fixed'; values: Partial<Record<StatId, number>> }
+    | { kind: 'min-perfect'; count: number };
   /** Absent means the generation's base odds apply. */
   shiny?: 'locked' | 'guaranteed';
   catchRateOverride?: number;
@@ -99,7 +101,8 @@ export interface LocationItem {
   source?: { title: string; revid: number };
 }
 
-export type GrowthRate = 'erratic' | 'fast' | 'medium-fast' | 'medium-slow' | 'slow' | 'fluctuating';
+export type GrowthRate =
+  'erratic' | 'fast' | 'medium-fast' | 'medium-slow' | 'slow' | 'fluctuating';
 
 export interface Species {
   dex: number;

@@ -98,8 +98,19 @@ describe('ProfileStore', () => {
     });
 
     it('keeps unsupported-game profiles but refuses edits', () => {
-      const unsupported: Profile = { id: 'x', name: 'Future', game: 'platinum' as GameId, caught: [1], createdAt: 't', updatedAt: 't' };
-      storage.update((s) => ({ ...s, profiles: [...s.profiles, unsupported], activeProfileId: 'x' }));
+      const unsupported: Profile = {
+        id: 'x',
+        name: 'Future',
+        game: 'platinum' as GameId,
+        caught: [1],
+        createdAt: 't',
+        updatedAt: 't',
+      };
+      storage.update((s) => ({
+        ...s,
+        profiles: [...s.profiles, unsupported],
+        activeProfileId: 'x',
+      }));
       expect(store.activeProfile()?.name).toBe('Future');
       expect(store.canEditCatches('platinum' as GameId)).toBe(false);
       expect(store.toggleCaught('platinum' as GameId, 2)).toBe(false);
@@ -108,18 +119,31 @@ describe('ProfileStore', () => {
 
   describe('import', () => {
     it('adds an imported profile, dropping species beyond the game’s dex', () => {
-      const id = store.importProfile({ name: '', game: 'yellow', caught: [151, 3, 3, 152], progressPart: 2 }, 'new');
-      expect(store.activeProfile()).toMatchObject({ id, name: 'Imported profile', game: 'yellow', caught: [3, 151], progressPart: 2 });
+      const id = store.importProfile(
+        { name: '', game: 'yellow', caught: [151, 3, 3, 152], progressPart: 2 },
+        'new',
+      );
+      expect(store.activeProfile()).toMatchObject({
+        id,
+        name: 'Imported profile',
+        game: 'yellow',
+        caught: [3, 151],
+        progressPart: 2,
+      });
     });
 
     it('replaces a same-game profile’s progress and rejects another game', () => {
       const red = store.createProfile('Red', 'red');
       store.setCaught('red', 1, true);
       store.setProgressPart(5);
-      expect(store.importProfile({ name: 'ignored', game: 'red', caught: [4, 7] }, 'replace', red.id)).toBe(red.id);
+      expect(
+        store.importProfile({ name: 'ignored', game: 'red', caught: [4, 7] }, 'replace', red.id),
+      ).toBe(red.id);
       expect(store.activeProfile()).toMatchObject({ name: 'Red', caught: [4, 7] });
       expect(store.activeProfile()).not.toHaveProperty('progressPart');
-      expect(() => store.importProfile({ name: 'x', game: 'blue', caught: [] }, 'replace', red.id)).toThrow(/Cannot replace/);
+      expect(() =>
+        store.importProfile({ name: 'x', game: 'blue', caught: [] }, 'replace', red.id),
+      ).toThrow(/Cannot replace/);
     });
   });
 

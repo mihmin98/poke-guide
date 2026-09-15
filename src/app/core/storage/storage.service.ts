@@ -6,6 +6,8 @@ import { defaultState, type PersistedState } from '../domain/persisted-state';
 export const STATE_KEY = 'poke-guide/state';
 export const CORRUPT_BACKUP_PREFIX = `${STATE_KEY}.corrupt.`;
 export const SAVE_DEBOUNCE_MS = 300;
+/** How many `state.corrupt.<ms>` backups to keep (plan §11.5). */
+export const MAX_BACKUPS = 3;
 
 /** `localStorage`, or `null` where reading it throws (blocked storage, some private modes). */
 export const STATE_STORAGE = new InjectionToken<Storage | null>('STATE_STORAGE', {
@@ -132,7 +134,29 @@ export class StorageService {
     } catch {
       backupKey = null;
     }
+    if (backupKey !== null) this.pruneBackups(backupKey);
     this.recovery.set({ reason, message, backupKey });
+  }
+
+  /**
+   * Keeps only the newest `MAX_BACKUPS` recovery backups. An app that keeps opening state it cannot
+   * read would otherwise write a new `state.corrupt.<ms>` key on every load until storage is full.
+   */
+  private pruneBackups(keep: string): void {
+    try {
+      const storage = this.storage;
+      if (!storage) return;
+      const keys: string[] = [];
+      for (let i = 0; i < storage.length; i++) {
+        const key = storage.key(i);
+        if (key?.startsWith(CORRUPT_BACKUP_PREFIX)) keys.push(key);
+      }
+      // Timestamps are fixed-width for the next ~270 years, so a plain sort is chronological.
+      keys.sort();
+      for (const key of keys.slice(0, -MAX_BACKUPS)) if (key !== keep) storage.removeItem(key);
+    } catch {
+      // Pruning is best effort: a failure here must not lose the backup we just wrote.
+    }
   }
 
   private onStorageEvent(event: StorageEvent): void {

@@ -20,8 +20,17 @@ export function testSpecies(dex: number, extra: Partial<Species> = {}): Species 
   };
 }
 
-export function testEncounter(dex: number, games: string[], extra: Partial<Encounter> = {}): Encounter {
-  return { dex, method: 'walk-grass', games: Object.fromEntries(games.map((g) => [g, ONCE])), ...extra };
+export function testEncounter(
+  dex: number,
+  games: string[],
+  extra: Partial<Encounter> = {},
+): Encounter {
+  return {
+    dex,
+    method: 'walk-grass',
+    games: Object.fromEntries(games.map((g) => [g, ONCE])),
+    ...extra,
+  };
 }
 
 export function testLocation(

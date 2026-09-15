@@ -11,7 +11,46 @@
       {{ g.shortName }}
     </a>
   }
+
+  <button
+    type="button"
+    class="profile-chip"
+    [matMenuTriggerFor]="profileMenu"
+    [attr.aria-label]="
+      activeProfile()
+        ? 'Profile: ' + activeProfile()!.name + '. Switch profile'
+        : 'No profile. Create one'
+    "
+  >
+    <mat-icon aria-hidden="true">account_circle</mat-icon>
+    <span>{{ activeProfile()?.name ?? 'No profile' }}</span>
+  </button>
 </mat-toolbar>
+
+<mat-menu #profileMenu="matMenu">
+  @for (item of profileItems(); track item.profile.id) {
+    <button
+      mat-menu-item
+      type="button"
+      (click)="switchTo(item.profile)"
+      [disabled]="item.isActive"
+      [attr.aria-current]="item.isActive ? 'true' : null"
+    >
+      <mat-icon aria-hidden="true">{{ item.isActive ? 'check' : 'account_circle' }}</mat-icon>
+      <span>{{ item.profile.name }} — {{ item.gameName }} · {{ item.caught }} caught</span>
+    </button>
+  } @empty {
+    <span class="menu-empty">No profiles yet</span>
+  }
+  <a mat-menu-item [routerLink]="newProfileLink()">
+    <mat-icon aria-hidden="true">add</mat-icon>
+    <span>New profile…</span>
+  </a>
+  <a mat-menu-item routerLink="/profiles">
+    <mat-icon aria-hidden="true">manage_accounts</mat-icon>
+    <span>Manage profiles</span>
+  </a>
+</mat-menu>
 
 <div class="layout">
   <nav class="nav" aria-label="Main">

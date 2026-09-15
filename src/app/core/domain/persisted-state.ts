@@ -35,7 +35,12 @@ export const DEFAULT_SETTINGS: Readonly<Settings> = {
 };
 
 export function defaultState(): PersistedState {
-  return { schemaVersion: STATE_SCHEMA_VERSION, activeProfileId: null, profiles: [], settings: { ...DEFAULT_SETTINGS } };
+  return {
+    schemaVersion: STATE_SCHEMA_VERSION,
+    activeProfileId: null,
+    profiles: [],
+    settings: { ...DEFAULT_SETTINGS },
+  };
 }
 
 export const PROFILE_NAME_MAX = 32;
@@ -47,7 +52,8 @@ export function validProfileName(name: string): string | null {
 }
 
 type Json = Record<string, unknown>;
-const isObject = (value: unknown): value is Json => typeof value === 'object' && value !== null && !Array.isArray(value);
+const isObject = (value: unknown): value is Json =>
+  typeof value === 'object' && value !== null && !Array.isArray(value);
 const pick = <T>(value: unknown, allowed: readonly T[], fallback: T): T =>
   allowed.includes(value as T) ? (value as T) : fallback;
 const bool = (value: unknown, fallback: boolean) => (typeof value === 'boolean' ? value : fallback);
@@ -63,7 +69,11 @@ export function sanitizeSettings(raw: unknown): Settings {
     hideUnavailable: bool(s['hideUnavailable'], d.hideUnavailable),
     spriteScale: pick(s['spriteScale'], [2, 3] as const, d.spriteScale),
     compactRows: bool(s['compactRows'], d.compactRows),
-    checklistSort: pick(s['checklistSort'], ['national', 'regional', 'walkthrough'] as const, d.checklistSort),
+    checklistSort: pick(
+      s['checklistSort'],
+      ['national', 'regional', 'walkthrough'] as const,
+      d.checklistSort,
+    ),
   };
 }
 
@@ -84,13 +94,15 @@ export function sanitizeProfile(raw: unknown, now: string): Profile | null {
   if (typeof id !== 'string' || id === '' || typeof game !== 'string' || game === '') return null;
   const profile: Profile = {
     id,
-    name: (typeof name === 'string' ? name.trim() : '').slice(0, PROFILE_NAME_MAX) || 'Unnamed profile',
+    name:
+      (typeof name === 'string' ? name.trim() : '').slice(0, PROFILE_NAME_MAX) || 'Unnamed profile',
     game: game as GameId,
     caught: normalizeCaught(raw['caught']),
     createdAt: typeof createdAt === 'string' ? createdAt : now,
     updatedAt: typeof updatedAt === 'string' ? updatedAt : now,
   };
-  if (Number.isInteger(progressPart) && (progressPart as number) > 0) profile.progressPart = progressPart as number;
+  if (Number.isInteger(progressPart) && (progressPart as number) > 0)
+    profile.progressPart = progressPart as number;
   return profile;
 }
 
@@ -108,7 +120,8 @@ export function sanitizeState(raw: Json, now: string): PersistedState {
   const active = raw['activeProfileId'];
   return {
     schemaVersion: STATE_SCHEMA_VERSION,
-    activeProfileId: typeof active === 'string' && ids.has(active) ? active : (profiles[0]?.id ?? null),
+    activeProfileId:
+      typeof active === 'string' && ids.has(active) ? active : (profiles[0]?.id ?? null),
     profiles,
     settings: sanitizeSettings(raw['settings']),
   };

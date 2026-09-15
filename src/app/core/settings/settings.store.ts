@@ -17,7 +17,10 @@ export class SettingsStore {
   /** Invalid values (e.g. from a URL or an old form) fall back to the default for that field. */
   set<K extends keyof Settings>(key: K, value: Settings[K]): void {
     if (this.settings()[key] === value) return;
-    this.storage.update((s) => ({ ...s, settings: sanitizeSettings({ ...s.settings, [key]: value }) }));
+    this.storage.update((s) => ({
+      ...s,
+      settings: sanitizeSettings({ ...s.settings, [key]: value }),
+    }));
   }
 
   reset(): void {

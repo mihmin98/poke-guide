@@ -11,7 +11,14 @@ describe('buildGameView', () => {
     ],
     evolutions: [
       { from: 1, to: 2, trigger: 'level', level: 16, requiresTrade: false },
-      { from: 1, to: 3, trigger: 'item', item: 'moon-stone', requiresTrade: false, games: ['yellow'] },
+      {
+        from: 1,
+        to: 3,
+        trigger: 'item',
+        item: 'moon-stone',
+        requiresTrade: false,
+        games: ['yellow'],
+      },
       { from: 4, to: 5, trigger: 'trade', requiresTrade: true },
     ],
     exclusiveGroups: [
@@ -24,7 +31,11 @@ describe('buildGameView', () => {
 
   it('keeps only this game’s locations, in walkthrough order', () => {
     expect(buildGameView(data, 'red').locations.map((l) => l.id)).toEqual(['early', 'late']);
-    expect(buildGameView(data, 'yellow').locations.map((l) => l.id)).toEqual(['yellow-only', 'early', 'late']);
+    expect(buildGameView(data, 'yellow').locations.map((l) => l.id)).toEqual([
+      'yellow-only',
+      'early',
+      'late',
+    ]);
     expect(buildGameView(data, 'blue').locationById.has('late')).toBe(false);
   });
 
@@ -83,9 +94,21 @@ describe('encountersFor', () => {
   });
 
   it('narrows slots to the game and keeps encounter details', () => {
-    const [fishing] = encountersFor(location, 'red')[0]!.sections.filter((s) => s.method.id === 'fish-old');
-    expect(fishing!.encounters[0]).toEqual({ dex: 1, method: 'fish-old', requires: ['old-rod'], slots: ONCE });
-    expect(encountersFor(location, 'yellow').map((s) => [s.name, s.sections[0]!.encounters.map((e) => e.dex)])).toEqual([
+    const [fishing] = encountersFor(location, 'red')[0]!.sections.filter(
+      (s) => s.method.id === 'fish-old',
+    );
+    expect(fishing!.encounters[0]).toEqual({
+      dex: 1,
+      method: 'fish-old',
+      requires: ['old-rod'],
+      slots: ONCE,
+    });
+    expect(
+      encountersFor(location, 'yellow').map((s) => [
+        s.name,
+        s.sections[0]!.encounters.map((e) => e.dex),
+      ]),
+    ).toEqual([
       ['1F', [2, 4]],
       ['2F', [6]],
     ]);

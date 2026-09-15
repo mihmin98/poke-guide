@@ -15,7 +15,8 @@ export interface ObtainSource {
   part: number;
 }
 
-export type UnobtainableReason = 'other-version' | 'trade-evolution' | 'event-only' | 'requires-other-game' | 'not-in-game';
+export type UnobtainableReason =
+  'other-version' | 'trade-evolution' | 'event-only' | 'requires-other-game' | 'not-in-game';
 
 export interface ChecklistEntry {
   dex: number;
@@ -78,7 +79,10 @@ function collectSources(
     for (const subArea of location.subAreas) {
       subArea.encounters.forEach((encounter, index) => {
         if (!encounter.games[game]?.length || exclude?.(encounter)) return;
-        const part = Math.max(placement.part, ...(encounter.requires ?? []).map((id) => unlockPart.get(id) ?? 0));
+        const part = Math.max(
+          placement.part,
+          ...(encounter.requires ?? []).map((id) => unlockPart.get(id) ?? 0),
+        );
         const source: ObtainSource = {
           kind: 'encounter',
           locationId: location.id,
@@ -89,7 +93,8 @@ function collectSources(
           ...(encounter.trade ? { fromDex: encounter.trade.giveDex } : {}),
         };
         const key = `encounter|${location.id}|${subArea.id}|${index}`;
-        if (encounter.trade) trades.push({ dex: encounter.dex, giveDex: encounter.trade.giveDex, key, source });
+        if (encounter.trade)
+          trades.push({ dex: encounter.dex, giveDex: encounter.trade.giveDex, key, source });
         else upsert(sources, encounter.dex, key, source);
       });
     }
@@ -120,13 +125,22 @@ function collectSources(
     for (const trade of trades) {
       const give = partOf(sources, trade.giveDex);
       if (give === undefined) continue;
-      changed = upsert(sources, trade.dex, trade.key, { ...trade.source, part: Math.max(trade.source.part, give) }) || changed;
+      changed =
+        upsert(sources, trade.dex, trade.key, {
+          ...trade.source,
+          part: Math.max(trade.source.part, give),
+        }) || changed;
     }
     for (const edge of edges) {
       if (edge.requiresTrade) continue;
       const from = partOf(sources, edge.from);
       if (from === undefined) continue;
-      const source: ObtainSource = { kind: 'evolution', fromDex: edge.from, evolution: edge, part: from };
+      const source: ObtainSource = {
+        kind: 'evolution',
+        fromDex: edge.from,
+        evolution: edge,
+        part: from,
+      };
       changed = upsert(sources, edge.to, `evolution|${edge.from}`, source) || changed;
     }
     if (breeding && dayCarePart !== undefined) {
@@ -137,13 +151,25 @@ function collectSources(
         const eggGroups = species?.eggGroups ?? [];
         if (parentPart === undefined || eggGroups.length === 0) continue;
         if (eggGroups.some((g) => /undiscovered|no eggs/i.test(g))) continue;
-        const bothGenders = typeof species?.genderRatio === 'number' && species.genderRatio > 0 && species.genderRatio < 1;
-        const partner = dex !== breeding.dittoDex && ditto !== undefined ? ditto : bothGenders ? parentPart : undefined;
+        const bothGenders =
+          typeof species?.genderRatio === 'number' &&
+          species.genderRatio > 0 &&
+          species.genderRatio < 1;
+        const partner =
+          dex !== breeding.dittoDex && ditto !== undefined
+            ? ditto
+            : bothGenders
+              ? parentPart
+              : undefined;
         const offspring = root(dex);
         if (partner === undefined || offspring === dex) continue;
         // Baby items aren't modelled as obtainable items yet, so those offspring don't count as bred.
         if (breeding.babyItemRequirements?.some((r) => r.offspring === offspring)) continue;
-        const source: ObtainSource = { kind: 'breeding', fromDex: dex, part: Math.max(parentPart, partner, dayCarePart) };
+        const source: ObtainSource = {
+          kind: 'breeding',
+          fromDex: dex,
+          part: Math.max(parentPart, partner, dayCarePart),
+        };
         changed = upsert(sources, offspring, `breeding|${dex}`, source) || changed;
       }
     }
@@ -163,11 +189,16 @@ export function buildChecklist(
   features: GenerationFeatures,
 ): ChecklistEntry[] {
   const sources = collectSources(data, game.id, features);
-  const others = data.games.filter((g) => g !== game.id).map((g) => [g, collectSources(data, g, features)] as const);
+  const others = data.games
+    .filter((g) => g !== game.id)
+    .map((g) => [g, collectSources(data, g, features)] as const);
   const edges = edgesFor(data, game.id);
   const nameOf = (dex: number) => data.species.find((s) => s.dex === dex)?.name ?? `#${dex}`;
-  const locationOrder = new Map(data.locations.map((l) => [l.id, l.placement[game.id]?.order ?? LAST]));
-  const orderOf = (s: ObtainSource) => (s.locationId ? (locationOrder.get(s.locationId) ?? LAST) : LAST);
+  const locationOrder = new Map(
+    data.locations.map((l) => [l.id, l.placement[game.id]?.order ?? LAST]),
+  );
+  const orderOf = (s: ObtainSource) =>
+    s.locationId ? (locationOrder.get(s.locationId) ?? LAST) : LAST;
 
   const groupMemo = new Map<number, Set<string>>();
   const groupsOf = (dex: number, visiting = new Set<number>()): Set<string> => {
@@ -187,8 +218,15 @@ export function buildChecklist(
 
   const entries: ChecklistEntry[] = [];
   for (let dex = 1; dex <= game.nationalDexMax; dex++) {
-    const list = [...(sources.get(dex)?.values() ?? [])].sort((a, b) => a.part - b.part || orderOf(a) - orderOf(b));
-    const entry: ChecklistEntry = { dex, obtainable: list.length > 0, sources: list, exclusiveGroupIds: [...groupsOf(dex)] };
+    const list = [...(sources.get(dex)?.values() ?? [])].sort(
+      (a, b) => a.part - b.part || orderOf(a) - orderOf(b),
+    );
+    const entry: ChecklistEntry = {
+      dex,
+      obtainable: list.length > 0,
+      sources: list,
+      exclusiveGroupIds: [...groupsOf(dex)],
+    };
     if (!entry.obtainable) {
       const tradeEdge = edges.find((e) => e.to === dex && e.requiresTrade && sources.has(e.from));
       const elsewhere = others.filter(([, s]) => (s.get(dex)?.size ?? 0) > 0).map(([g]) => g);
@@ -225,7 +263,12 @@ export function maxInOneSave(
   for (const group of data.exclusiveGroups) {
     if (!group.games.includes(game.id)) continue;
     const costs = group.members.map((choice) => {
-      const kept = collectSources(data, game.id, features, (e) => e.exclusiveGroupId === group.id && e.dex !== choice);
+      const kept = collectSources(
+        data,
+        game.id,
+        features,
+        (e) => e.exclusiveGroupId === group.id && e.dex !== choice,
+      );
       return obtainable - countObtainable(kept, game.nationalDexMax);
     });
     if (costs.length > 0) lost += Math.min(...costs);

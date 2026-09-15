@@ -11,15 +11,24 @@ describe('GameDataService', () => {
 
   const data = testData({
     games: ['red', 'blue', 'yellow'],
-    species: testData().species.slice(0, 3).map((s) => ({ ...s })),
+    species: testData()
+      .species.slice(0, 3)
+      .map((s) => ({ ...s })),
     locations: [
       testLocation('route-2', 2, [testEncounter(2, ['red'])], ['red', 'blue']),
-      testLocation('route-1', 1, [testEncounter(1, ['red', 'yellow']), testEncounter(3, ['red'], { method: 'surf' })], ['red', 'yellow']),
+      testLocation(
+        'route-1',
+        1,
+        [testEncounter(1, ['red', 'yellow']), testEncounter(3, ['red'], { method: 'surf' })],
+        ['red', 'yellow'],
+      ),
     ],
   });
 
   beforeEach(() => {
-    TestBed.configureTestingModule({ providers: [provideHttpClient(), provideHttpClientTesting()] });
+    TestBed.configureTestingModule({
+      providers: [provideHttpClient(), provideHttpClientTesting()],
+    });
     service = TestBed.inject(GameDataService);
     http = TestBed.inject(HttpTestingController);
   });
@@ -46,7 +55,9 @@ describe('GameDataService', () => {
     expect(red.locations().map((l) => l.id)).toEqual(['route-1', 'route-2']);
     expect(yellow.locations().map((l) => l.id)).toEqual(['route-1']);
     expect(red.speciesBySlug().get('mon2')?.dex).toBe(2);
-    expect(red.encountersFor('route-1').flatMap((s) => s.sections.map((x) => x.method.id))).toEqual(['walk-grass', 'surf']);
+    expect(red.encountersFor('route-1').flatMap((s) => s.sections.map((x) => x.method.id))).toEqual(
+      ['walk-grass', 'surf'],
+    );
     expect(yellow.encountersFor('route-2')).toEqual([]);
   });
 
@@ -83,7 +94,15 @@ describe('GameDataService', () => {
     const pokedex = red.pokedex();
     expect(service.forGame('blue').pokedex()).toBe(pokedex);
     TestBed.tick();
-    const file: PokedexData = { schemaVersion: 1, versionGroupId: 'rby', builtAt: '', moves: [], learnsets: {}, entries: {}, sources: [] };
+    const file: PokedexData = {
+      schemaVersion: 1,
+      versionGroupId: 'rby',
+      builtAt: '',
+      moves: [],
+      learnsets: {},
+      entries: {},
+      sources: [],
+    };
     http.expectOne('data/rby.pokedex.json').flush(file);
     await settle();
     expect(pokedex.value()).toEqual(file);

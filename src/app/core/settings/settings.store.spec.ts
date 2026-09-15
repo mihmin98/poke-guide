@@ -21,7 +21,11 @@ describe('SettingsStore', () => {
     store.set('theme', 'dark');
     store.set('spriteScale', 3);
     expect(theme()).toBe('dark');
-    expect(storage.state().settings).toEqual({ ...DEFAULT_SETTINGS, theme: 'dark', spriteScale: 3 });
+    expect(storage.state().settings).toEqual({
+      ...DEFAULT_SETTINGS,
+      theme: 'dark',
+      spriteScale: 3,
+    });
   });
 
   it('falls back to the default for invalid values and skips no-op writes', () => {

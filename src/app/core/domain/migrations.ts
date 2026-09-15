@@ -29,12 +29,21 @@ export function migrateState(
   }
   const from = version as number;
   if (from > currentVersion) {
-    return { ok: false, reason: 'newer', message: `schemaVersion ${from} is newer than ${currentVersion}` };
+    return {
+      ok: false,
+      reason: 'newer',
+      message: `schemaVersion ${from} is newer than ${currentVersion}`,
+    };
   }
   try {
-    for (let v = from; v < currentVersion; v++) state = { ...migrations[v - 1]!(state), schemaVersion: v + 1 };
+    for (let v = from; v < currentVersion; v++)
+      state = { ...migrations[v - 1]!(state), schemaVersion: v + 1 };
   } catch (error) {
-    return { ok: false, reason: 'invalid', message: `Migration from schemaVersion ${from} failed: ${String(error)}` };
+    return {
+      ok: false,
+      reason: 'invalid',
+      message: `Migration from schemaVersion ${from} failed: ${String(error)}`,
+    };
   }
   const result: MigrationResult = { ok: true, state: sanitizeState(state, now) };
   if (from < currentVersion) result.migratedFrom = from;

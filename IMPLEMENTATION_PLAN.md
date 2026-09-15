@@ -48,7 +48,7 @@ For each area it lists the Pokémon you can get, in the order you visit the area
 | License | **No license file** is added to the repo. The Bulbapedia attribution is still shown in the app (§15). |
 | Git | **The user handles all git operations manually** (init, commits, branches, remotes, pushing, creating the GitHub repo). Tooling never runs git commands, and the Angular scaffold uses `--skip-git`. "Committed" files in this plan are generated, and the user commits them. |
 | Deployment | GitHub Pages publishing (workflows, base href, repo setup) is the **last phase** (§17). Until then everything runs and is tested locally. |
-| Framework conventions | Standalone components, signals, zoneless change detection, the built-in control flow (`@if`, `@for`), `OnPush`, lazy-loaded routes, and the `@angular/build` application builder. |
+| Framework conventions | Standalone components, signals, zoneless change detection, the built-in control flow (`@if`, `@for`), `OnPush`, lazy-loaded routes, and the `@angular/build` application builder. **Modern Angular 22 APIs only** (user rule, 2026-09-15): `input()`/`output()`/`model()`, `inject()`, functional guards, and **Signal Forms** (`@angular/forms/signals`) — never `FormsModule`/`ngModel` or reactive forms. RxJS is used only where an Angular API returns an Observable, consumed with `firstValueFrom` or `toSignal`. See `CLAUDE.md` for the full list. |
 
 ---
 
@@ -991,6 +991,7 @@ export const appConfig: ApplicationConfig = {
 | `**` | `NotFoundPage` | |
 
 - The `gameGuard` resolves `:game` through the registry and rejects unknown or `planned` games (in production builds).
+- **Switching profiles follows the profile** (added 2026-09-15): activating a profile from the toolbar switcher or the Profiles page navigates to the same section under that profile's game (`/red/checklist` → `/yellow/checklist`), dropping deeper segments. On a page with no game in the URL nothing navigates; `CurrentGameService.game` falls back to the active profile's game, so the nav repoints. Undoing a switch follows the restored profile back.
 - **Game in URL vs active profile:** the URL decides which data is shown. Catch toggles write to the active profile **only if its game matches**. If it doesn't match, a banner reads "Your active profile *My Blue run* is for Blue. [Switch to a Red profile] [Create Red profile]", and the toggles are disabled.
 
 ### 11.4 Core services

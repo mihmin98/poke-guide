@@ -1,6 +1,18 @@
 import { httpResource, type HttpResourceRef } from '@angular/common/http';
-import { Injectable, Injector, computed, inject, runInInjectionContext, type Signal } from '@angular/core';
-import { buildGameView, encountersFor, type GameView, type SubAreaEncounters } from '../domain/game-view';
+import {
+  Injectable,
+  Injector,
+  computed,
+  inject,
+  runInInjectionContext,
+  type Signal,
+} from '@angular/core';
+import {
+  buildGameView,
+  encountersFor,
+  type GameView,
+  type SubAreaEncounters,
+} from '../domain/game-view';
 import type { GameId, PokedexData, VersionGroupData, VersionGroupId } from '../domain/models';
 import { buildChecklist, maxInOneSave, type ChecklistEntry } from '../domain/obtainability';
 import { getGame, versionGroupOf } from '../games/registry';
@@ -11,7 +23,9 @@ export const dataUrl = (group: VersionGroupId) => `data/${group}.json`;
 export const pokedexUrl = (group: VersionGroupId) => `data/${group}.pokedex.json`;
 
 /** Rejects a file for another version group or schema (e.g. a stale service-worker copy). */
-function checked<T extends { schemaVersion: number; versionGroupId: string }>(group: VersionGroupId) {
+function checked<T extends { schemaVersion: number; versionGroupId: string }>(
+  group: VersionGroupId,
+) {
   return (raw: unknown): T => {
     const file = raw as T;
     if (file?.schemaVersion !== 1 || file.versionGroupId !== group) {
@@ -84,8 +98,14 @@ export class GameDataView {
 @Injectable({ providedIn: 'root' })
 export class GameDataService {
   private readonly injector = inject(Injector);
-  private readonly dataFiles = new Map<VersionGroupId, HttpResourceRef<VersionGroupData | undefined>>();
-  private readonly pokedexFiles = new Map<VersionGroupId, HttpResourceRef<PokedexData | undefined>>();
+  private readonly dataFiles = new Map<
+    VersionGroupId,
+    HttpResourceRef<VersionGroupData | undefined>
+  >();
+  private readonly pokedexFiles = new Map<
+    VersionGroupId,
+    HttpResourceRef<PokedexData | undefined>
+  >();
   private readonly views = new Map<GameId, GameDataView>();
 
   forGame(gameId: GameId): GameDataView {

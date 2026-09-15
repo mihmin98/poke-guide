@@ -11,7 +11,26 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Poké Guide** is a companion web app for catching every Pokémon obtainable **without trading with another player**. It shows the Pokémon available in each area, in walkthrough order (levels, rates, types, catch rate), plus a checklist saved in `localStorage` with multiple named profiles and import/export codes. Red/Blue/Yellow ship first. The architecture must let Crystal, FireRed/LeafGreen, Emerald and later games be added **as data and config, not app changes**.
 
-Stack: TypeScript, Angular 22 (standalone components, signals, zoneless, `OnPush`, built-in control flow, lazy routes), Angular Material 3, Vitest (no Playwright or other e2e suite; browser behavior is checked by hand, plan §14). Hosted on GitHub Pages.
+Stack: TypeScript, Angular 22, Angular Material 3, Vitest (no Playwright or other e2e suite; browser behavior is checked by hand, plan §14). Hosted on GitHub Pages.
+
+## Angular style (hard rule)
+
+**Always use the modern Angular 22 APIs.** This project has no legacy Angular code, and none may be added. When an older and a newer way exist, use the newer one; if you are unsure whether an API is current, check the installed typings under `node_modules/@angular/*/types/` rather than writing from memory.
+
+Required:
+
+- **Standalone components only.** No `NgModule`, no `CommonModule`/`BrowserModule`. Don't write `standalone: true` — it's the default and is redundant.
+- **Signals for all state:** `signal`, `computed`, `linkedSignal`, `resource`/`httpResource`, `effect` (a last resort, for syncing to something outside Angular). No `BehaviorSubject` state.
+- **`input()` / `output()` / `model()` / `viewChild()`**, never the `@Input`, `@Output`, `@ViewChild` decorators or `EventEmitter`.
+- **`inject()`**, never constructor-parameter injection.
+- **Built-in control flow** (`@if`, `@for` with `track`, `@switch`, `@let`, `@empty`), never `*ngIf`, `*ngFor`, `ngClass` or `ngStyle` (use `[class.x]` and `[style.x]`).
+- **Signal Forms** (`@angular/forms/signals`: `form()`, `schema()`, the `FormField` directive as `[formField]`, validators like `required`/`maxLength`). **Never `FormsModule`/`ngModel` or `ReactiveFormsModule`.** Note `Field` is a *type*; the directive to import is `FormField`. Material's `mat-select` and friends aren't Signal Forms controls yet — bind those with a signal two-way binding (`[(value)]`) instead.
+- **`ChangeDetectionStrategy.OnPush`** on every component; the app is **zoneless** (no `zone.js`).
+- **Lazy routes** via `loadComponent`, and functional `CanActivateFn` guards and `redirectTo` functions, never class-based guards.
+- **Minimal RxJS.** Prefer signals. Where an Angular API only gives an Observable (`MatDialogRef.afterClosed()`, `MatSnackBarRef.onAction()`, router events), consume it with `firstValueFrom` in an `async` method or convert it with `toSignal` — don't hand-manage `.subscribe()` calls.
+- **Angular Material 3** attribute selectors: `matButton="filled"`, `matIconButton`, not the old `mat-raised-button`/`mat-icon-button` element selectors.
+
+`src/app/core/{domain,games,mechanics}` stays framework-free (see below): no Angular imports there at all.
 
 ## Commands
 

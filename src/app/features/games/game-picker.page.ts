@@ -1,6 +1,7 @@
-import { ChangeDetectionStrategy, Component, isDevMode } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, isDevMode } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { groupGamesByGeneration, listGames, regionName } from '../../core/games/registry';
+import { ProfileStore } from '../../core/profiles/profile.store';
 
 const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
 
@@ -16,13 +17,17 @@ const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
         <ul class="cards">
           @for (game of group.games; track game.id) {
             <li [class]="'game-' + game.id">
-              <a class="card" [routerLink]="['/', game.id, 'guide']">
+              @let count = profileCounts()[game.id] ?? 0;
+              <!-- A game with no profile goes to onboarding (plan §11.3). -->
+              <a class="card" [routerLink]="['/', game.id, count > 0 ? 'guide' : 'welcome']">
                 <span class="swatch" aria-hidden="true"></span>
                 <span class="name">{{ game.name }}</span>
                 @if (game.status === 'planned') {
                   <span class="badge">Planned</span>
                 }
-                <span class="action">Start</span>
+                <span class="action">
+                  {{ count === 0 ? 'Start' : count === 1 ? '1 profile' : count + ' profiles' }}
+                </span>
               </a>
             </li>
           }
@@ -88,6 +93,17 @@ const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
   `,
 })
 export class GamePickerPage {
+  private readonly profiles = inject(ProfileStore);
+
+  /** How many profiles exist per game id, for the card's "N profiles" label. */
+  protected readonly profileCounts = computed(() => {
+    const counts: Partial<Record<string, number>> = {};
+    for (const profile of this.profiles.profiles()) {
+      counts[profile.game] = (counts[profile.game] ?? 0) + 1;
+    }
+    return counts;
+  });
+
   protected readonly groups = groupGamesByGeneration(
     listGames({ includePlanned: isDevMode() }),
   ).map((group) => {

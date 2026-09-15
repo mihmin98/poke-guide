@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
+import { homeRedirect } from './core/routing/home-redirect';
 import { gameGuard } from './core/routing/game.guard';
 
 export const routes: Routes = [
-  // Phase 2: redirect to the active profile's game instead.
-  { path: '', pathMatch: 'full', redirectTo: 'games' },
+  { path: '', pathMatch: 'full', redirectTo: homeRedirect },
   {
     path: 'games',
     title: 'Games · Poké Guide',
@@ -29,6 +29,12 @@ export const routes: Routes = [
     canActivate: [gameGuard],
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'guide' },
+      {
+        path: 'welcome',
+        title: 'Welcome · Poké Guide',
+        loadComponent: () =>
+          import('./features/onboarding/onboarding.page').then((m) => m.OnboardingPage),
+      },
       {
         path: 'guide',
         title: 'Guide · Poké Guide',

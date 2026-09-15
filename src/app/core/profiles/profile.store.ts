@@ -1,6 +1,11 @@
 import { Injectable, computed, inject, signal } from '@angular/core';
 import type { GameId, Profile } from '../domain/models';
-import { normalizeCaught, validProfileName, PROFILE_NAME_MAX, type PersistedState } from '../domain/persisted-state';
+import {
+  normalizeCaught,
+  validProfileName,
+  PROFILE_NAME_MAX,
+  type PersistedState,
+} from '../domain/persisted-state';
 import { findGame } from '../games/registry';
 import { StorageService } from '../storage/storage.service';
 
@@ -42,8 +47,12 @@ export class ProfileStore {
 
   readonly profiles = computed(() => this.storage.state().profiles);
   readonly activeProfileId = computed(() => this.storage.state().activeProfileId);
-  readonly activeProfile = computed(() => this.profiles().find((p) => p.id === this.activeProfileId()));
-  readonly caughtSet = computed<ReadonlySet<number>>(() => new Set(this.activeProfile()?.caught ?? []));
+  readonly activeProfile = computed(() =>
+    this.profiles().find((p) => p.id === this.activeProfileId()),
+  );
+  readonly caughtSet = computed<ReadonlySet<number>>(
+    () => new Set(this.activeProfile()?.caught ?? []),
+  );
   /** The most recent undoable change, while it is still valid. */
   readonly lastChange = computed(() => {
     const entry = this.history().at(-1);
@@ -66,13 +75,22 @@ export class ProfileStore {
   }
 
   setCaught(game: GameId, dex: number, caught: boolean, label?: string): boolean {
-    return this.bulkSetCaught(game, [dex], caught, label ?? `Marked #${dex} as ${caught ? 'caught' : 'not caught'}`);
+    return this.bulkSetCaught(
+      game,
+      [dex],
+      caught,
+      label ?? `Marked #${dex} as ${caught ? 'caught' : 'not caught'}`,
+    );
   }
 
   bulkSetCaught(game: GameId, dexes: readonly number[], caught: boolean, label?: string): boolean {
     const profile = this.activeProfile();
     const max = findGame(game)?.nationalDexMax ?? 0;
-    if (!profile || !this.canEditCatches(game) || dexes.some((d) => !Number.isInteger(d) || d < 1 || d > max)) {
+    if (
+      !profile ||
+      !this.canEditCatches(game) ||
+      dexes.some((d) => !Number.isInteger(d) || d < 1 || d > max)
+    ) {
       return false;
     }
     const set = new Set(profile.caught);
@@ -80,9 +98,14 @@ export class ProfileStore {
       if (caught) set.add(dex);
       else set.delete(dex);
     }
-    if (set.size === profile.caught.length && dexes.every((d) => profile.caught.includes(d) === caught)) return true;
-    this.change(label ?? `Marked ${dexes.length} Pokémon as ${caught ? 'caught' : 'not caught'}`, (s) =>
-      this.withProfile(s, profile.id, { caught: normalizeCaught([...set]) }),
+    if (
+      set.size === profile.caught.length &&
+      dexes.every((d) => profile.caught.includes(d) === caught)
+    )
+      return true;
+    this.change(
+      label ?? `Marked ${dexes.length} Pokémon as ${caught ? 'caught' : 'not caught'}`,
+      (s) => this.withProfile(s, profile.id, { caught: normalizeCaught([...set]) }),
     );
     return true;
   }
@@ -91,7 +114,11 @@ export class ProfileStore {
   createProfile(name: string, game: GameId): Profile {
     const profile = this.newProfile(this.requireName(name), this.requireGame(game), []);
     const first = this.profiles().length === 0;
-    this.change(`Created ${profile.name}`, (s) => ({ ...s, profiles: [...s.profiles, profile], activeProfileId: profile.id }));
+    this.change(`Created ${profile.name}`, (s) => ({
+      ...s,
+      profiles: [...s.profiles, profile],
+      activeProfileId: profile.id,
+    }));
     if (first) void this.storage.requestPersistence();
     return profile;
   }
@@ -107,7 +134,8 @@ export class ProfileStore {
     const profile = this.requireProfile(id);
     this.change(`Deleted ${profile.name}`, (s) => {
       const profiles = s.profiles.filter((p) => p.id !== id);
-      const activeProfileId = s.activeProfileId === id ? (profiles[0]?.id ?? null) : s.activeProfileId;
+      const activeProfileId =
+        s.activeProfileId === id ? (profiles[0]?.id ?? null) : s.activeProfileId;
       return { ...s, profiles, activeProfileId };
     });
   }
@@ -136,8 +164,11 @@ export class ProfileStore {
   setProgressPart(part: number | undefined): void {
     const profile = this.activeProfile();
     if (!profile) throw new ProfileError('No active profile');
-    if (part !== undefined && (!Number.isInteger(part) || part < 1)) throw new ProfileError(`Invalid part ${part}`);
-    this.change(`Set progress for ${profile.name}`, (s) => this.withProfile(s, profile.id, { progressPart: part }));
+    if (part !== undefined && (!Number.isInteger(part) || part < 1))
+      throw new ProfileError(`Invalid part ${part}`);
+    this.change(`Set progress for ${profile.name}`, (s) =>
+      this.withProfile(s, profile.id, { progressPart: part }),
+    );
   }
 
   /**
@@ -151,11 +182,16 @@ export class ProfileStore {
     if (mode === 'new') {
       const name = validProfileName(imported.name) ?? 'Imported profile';
       const profile = this.newProfile(name, game, caught, imported.progressPart);
-      this.change(`Imported ${profile.name}`, (s) => ({ ...s, profiles: [...s.profiles, profile], activeProfileId: profile.id }));
+      this.change(`Imported ${profile.name}`, (s) => ({
+        ...s,
+        profiles: [...s.profiles, profile],
+        activeProfileId: profile.id,
+      }));
       return profile.id;
     }
     const target = this.requireProfile(targetId ?? '');
-    if (target.game !== game) throw new ProfileError(`Cannot replace a ${target.game} profile with ${game} data`);
+    if (target.game !== game)
+      throw new ProfileError(`Cannot replace a ${target.game} profile with ${game} data`);
     this.change(`Replaced ${target.name} with imported data`, (s) =>
       this.withProfile(s, target.id, { caught, progressPart: imported.progressPart }),
     );
@@ -208,10 +244,23 @@ export class ProfileStore {
     return { ...state, profiles };
   }
 
-  private newProfile(name: string, game: GameId, caught: readonly number[], progressPart?: number): Profile {
+  private newProfile(
+    name: string,
+    game: GameId,
+    caught: readonly number[],
+    progressPart?: number,
+  ): Profile {
     const now = new Date().toISOString();
-    const profile: Profile = { id: globalThis.crypto.randomUUID(), name, game, caught: [...caught], createdAt: now, updatedAt: now };
-    if (progressPart !== undefined && Number.isInteger(progressPart) && progressPart > 0) profile.progressPart = progressPart;
+    const profile: Profile = {
+      id: globalThis.crypto.randomUUID(),
+      name,
+      game,
+      caught: [...caught],
+      createdAt: now,
+      updatedAt: now,
+    };
+    if (progressPart !== undefined && Number.isInteger(progressPart) && progressPart > 0)
+      profile.progressPart = progressPart;
     return profile;
   }
 

@@ -1,6 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 import { DEFAULT_SETTINGS, defaultState, type PersistedState } from '../domain/persisted-state';
-import { CORRUPT_BACKUP_PREFIX, SAVE_DEBOUNCE_MS, STATE_KEY, STATE_STORAGE, StorageService } from './storage.service';
+import {
+  CORRUPT_BACKUP_PREFIX,
+  MAX_BACKUPS,
+  SAVE_DEBOUNCE_MS,
+  STATE_KEY,
+  STATE_STORAGE,
+  StorageService,
+} from './storage.service';
 
 class MemoryStorage implements Storage {
   readonly items = new Map<string, string>();
@@ -26,7 +33,14 @@ class MemoryStorage implements Storage {
   }
 }
 
-const profile = { id: 'p1', name: 'Red run', game: 'red' as const, caught: [1], createdAt: 't', updatedAt: 't' };
+const profile = {
+  id: 'p1',
+  name: 'Red run',
+  game: 'red' as const,
+  caught: [1],
+  createdAt: 't',
+  updatedAt: 't',
+};
 const saved: PersistedState = { ...defaultState(), activeProfileId: 'p1', profiles: [profile] };
 
 describe('StorageService', () => {
@@ -71,6 +85,20 @@ describe('StorageService', () => {
     expect(service.recovery()).toMatchObject({ reason, backupKey: `${CORRUPT_BACKUP_PREFIX}1000` });
     expect(storage!.getItem(`${CORRUPT_BACKUP_PREFIX}1000`)).toBe(text);
     expect(storage!.getItem(STATE_KEY)).toBe(text); // untouched until the next change
+  });
+
+  it('keeps only the newest backups so repeated recoveries cannot fill storage', () => {
+    // A browser that keeps opening unreadable state would otherwise add a key on every load.
+    for (let i = 1; i <= MAX_BACKUPS + 2; i++) {
+      vi.setSystemTime(1_000_000_000_000 + i);
+      storage!.setItem(STATE_KEY, '{not json');
+      create();
+      TestBed.resetTestingModule();
+    }
+    const backups = [...storage!.items.keys()].filter((k) => k.startsWith(CORRUPT_BACKUP_PREFIX));
+    expect(backups).toHaveLength(MAX_BACKUPS);
+    // The survivors are the most recent ones.
+    expect(backups.at(-1)).toBe(`${CORRUPT_BACKUP_PREFIX}${1_000_000_000_000 + MAX_BACKUPS + 2}`);
   });
 
   it('debounces writes', () => {
