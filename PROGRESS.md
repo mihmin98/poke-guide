@@ -15,7 +15,7 @@ How to use it:
 
 ## Current status
 
-- **Phase:** Phase 0 complete. **Phase 1 complete** (acceptance met 2026-09-13; Game Corner TM prizes finished 2026-09-15). **Phase 2 complete and accepted 2026-09-15.** Phase 3 next. Done in Phase 1:
+- **Phase:** Phase 0 complete. **Phase 1 complete** (acceptance met 2026-09-13; Game Corner TM prizes finished 2026-09-15). **Phase 2 complete and accepted 2026-09-15.** **Phase 3 in progress** (shared components done 2026-09-15). Done in Phase 1:
   - Parsing core, `entry1`/`entry2` adapters, walker, merge, and the ordered `rby` location config.
   - Species master data: National Dex list, Gen I type history, slugs.
   - Species pages: infobox extras, base stats by generation, Pokédex entries.
@@ -29,7 +29,7 @@ How to use it:
   - Sprites: `npm run data:sprites` → 302 SHA-1-verified sprites in `public/sprites/gen1-rb` and `gen1-y`.
   - The 10-location spot check against Bulbapedia.
 - **Last updated:** 2026-09-15
-- **Repo state:** `npm run verify` passes (theme check, lint, scripts typecheck, 286 pipeline tests, 67 app tests, production build).
+- **Repo state:** `npm run verify` passes (theme check, lint, scripts typecheck, 286 pipeline tests, 106 app tests, production build).
   - The build now validates its output (zod schemas, cross-references, obtainability coverage) and writes `scripts/data/reports/rby.md`. Obtainable: Red 135/151 (max 126 in one save), Blue 135/151 (126), Yellow 134/151 (131); unobtainable species all have a reason.
   - `npm run data:build` gives 0 errors, 1 warning (Vermilion City Tentacool types) and 5 notes: 151 species, 60 locations, 760 encounters (including 10 Game Corner prize species and 8 statics), 235 items (Red 219, Blue 219, Yellow 224, including the 3 Game Corner TM prizes), 164 moves. All 16 trades match the In-game trade page and carry nicknames. Exclusive groups: `rby-starter`, `mt-moon-fossil`, `fighting-dojo`; event-only: Mew.
   - Species without any source (after non-trade evolutions): only version exclusives, the 4 trade evolutions and Mew, in every game.
@@ -41,7 +41,7 @@ How to use it:
 
 ## Next step
 
-**Phase 2 is complete and accepted (2026-09-15).** Next: **Phase 3** (plan §13.2–13.5) — shared components (sprite, type badge, level range, rate, condition chips, method icon, catch toggle, progress ring), then the guide page, the location page, the two-pane/mobile layouts and the game-mismatch banner. Start with the shared components: Phase 4 reuses them.
+**Phase 3 started.** The shared components are done (2026-09-15). Next: the **guide page** (`/:game/guide`, plan §13.4) — region and part sections, location cards with sprite strips, search, filters and *hide completed* — then the location page (§13.5), the two-pane/mobile layouts and the game-mismatch banner.
 
 The Settings page is still a placeholder: `SettingsStore` exists but nothing binds to it yet. It belongs to Phase 7 polish, not Phase 2's acceptance.
 
@@ -93,7 +93,7 @@ The Settings page is still a placeholder: `SettingsStore` exists but nothing bin
 - **Accept when:** you can create and switch profiles for different games, and state survives reloads and syncs across tabs.
 
 ### Phase 3 — Guide and location pages (plan §13.2–13.5)
-- [ ] Shared components (sprite, type badge, level range, rate, condition chips, method icon, catch toggle, progress ring)
+- [x] Shared components (sprite, type badge, level range, rate, condition chips, method icon, catch toggle, progress ring). **Done 2026-09-15:** `src/app/shared/components/` with `shared-components.spec.ts` (20 tests). Pure formatters are exported for reuse: `formatLevels`/`formatLevelValues`, `formatRate`/`rarityPips`/`rarityLabel`, `progressFraction`.
 - [ ] Guide page (region and part sections, location cards, sprite strips, search, filters, hide completed)
 - [ ] Location page (sub-area tabs, method sections, encounter/trade/prize rows, exclusive group chips, source link, previous/next, plus an items list with prerequisites)
 - [ ] Desktop two-pane layout and mobile full-screen navigation with scroll restoration
@@ -254,3 +254,4 @@ The Settings page is still a placeholder: `SettingsStore` exists but nothing bin
 | 2026-09-15 | Phase 2 UI: `/` redirect to the active profile's game, profile counts on the picker (cards for a game with no profile link to onboarding), `/:game/welcome`, the toolbar profile switcher, and `/profiles` (create, rename, duplicate, delete with confirm, switch), plus the undo snackbar and the storage-recovery toast (worded per the 2026-09-15 decision). `StorageService` now keeps only the newest `MAX_BACKUPS` (3) `state.corrupt.<ms>` keys, closing the pile-up concern in that decision. **Verification: `npm run verify` passes (286 pipeline tests, 82 app tests, lint clean, build OK). Phase 2 acceptance still needs the user's manual browser check.** |
 | 2026-09-15 | **Angular style rule added to `CLAUDE.md`** at the user's request: always use modern Angular 22 APIs. Audited all of `src/`; the only legacy code was what this session had just written. Replaced `FormsModule`/`ngModel` with **Signal Forms** (`@angular/forms/signals`: `form()`, `FormField` as `[formField]`, `required`, `maxLength`, `submit`) in the onboarding page and the profile dialog, and replaced hand-managed `.subscribe()` calls with `firstValueFrom`. `@angular/forms` was already a dependency, so nothing new was installed. The rest of the app (standalone, signals, `input()`, `inject()`, built-in control flow, `OnPush`, zoneless, functional guards) was already compliant. |
 | 2026-09-13 | Phase 2 stores: `core/profiles/profile.store.ts` (create/rename/delete/duplicate/switch, progress part, catch toggles gated by URL game and dex range, import new/replace, undo of 20 chained changes invalidated by outside edits, persistence request on the first profile) and `core/settings/settings.store.ts` (`settings`, `select`, validated `set`, `reset`); `validProfileName` added to `persisted-state.ts`. The first test run caught an undo bug (history was cleared on every change because all entries were compared with the current state instead of the newest one), fixed. The newer-schema handling question was left unanswered, so it is recorded as an open question with the current backup-and-start-fresh behavior. **Verification: `npm run verify` passes (283 pipeline tests, 67 app tests, build OK).** |
+| 2026-09-15 | Phase 3 shared components: `src/app/shared/components/` — `sprite` (game sprite set, pixelated, dimmed silhouette for uncaught), `type-badge` (generated `--type-*` tokens), `level-range` (gapped ranges in the tooltip and for screen readers), `rate` (percent with a 5-pip rarity bar, One / coins / ₽), `condition-chips` (chip-display conditions only, unless asked for all), `method-icon` (from the method registry, generic fallback for an unknown method), `catch-toggle` (writes only when the active profile matches the URL game, `role="checkbox"`, 48 px target) and `progress-ring` (SVG ring with a clamped fraction). Formatting helpers are exported as pure functions and unit-tested. **Verification: `npm run verify` passes (286 pipeline tests, 106 app tests, lint clean, build OK). The initial-bundle budget warning is pre-existing; nothing imports these components yet.** |
