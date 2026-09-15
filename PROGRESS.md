@@ -15,7 +15,7 @@ How to use it:
 
 ## Current status
 
-- **Phase:** Phase 0 complete. **Phase 1 complete** (acceptance met 2026-09-13; Game Corner TM prizes finished 2026-09-15). Phase 2 next. Done in Phase 1:
+- **Phase:** Phase 0 complete. **Phase 1 complete** (acceptance met 2026-09-13; Game Corner TM prizes finished 2026-09-15). **Phase 2 complete and accepted 2026-09-15.** Phase 3 next. Done in Phase 1:
   - Parsing core, `entry1`/`entry2` adapters, walker, merge, and the ordered `rby` location config.
   - Species master data: National Dex list, Gen I type history, slugs.
   - Species pages: infobox extras, base stats by generation, Pokédex entries.
@@ -41,7 +41,7 @@ How to use it:
 
 ## Next step
 
-**Phase 2 is code-complete; it needs the user's manual browser check to be accepted** (create and switch profiles for different games, reload, and edit in two tabs). After that, Phase 3 (plan §13.2–13.5): shared components, the guide page, the location page, the two-pane/mobile layouts and the game-mismatch banner.
+**Phase 2 is complete and accepted (2026-09-15).** Next: **Phase 3** (plan §13.2–13.5) — shared components (sprite, type badge, level range, rate, condition chips, method icon, catch toggle, progress ring), then the guide page, the location page, the two-pane/mobile layouts and the game-mismatch banner. Start with the shared components: Phase 4 reuses them.
 
 The Settings page is still a placeholder: `SettingsStore` exists but nothing binds to it yet. It belongs to Phase 7 polish, not Phase 2's acceptance.
 
@@ -89,7 +89,7 @@ The Settings page is still a placeholder: `SettingsStore` exists but nothing bin
 - [x] `models.ts` (written early; the pipeline needs it; now includes `Move`, `Learnset`, `PokedexData` and species extras), `obtainability.ts` (including synthetic breeding tests; **done 2026-09-13**, used by the pipeline validator), `GameDataService` with lazy loading per version group (plus the lazily loaded `.pokedex.json`). **Done 2026-09-13:** `core/data/game-data.service.ts` over the framework-free `core/domain/game-view.ts`.
 - [x] `StorageService`, `migrations.ts`, `ProfileStore`, `SettingsStore`, undo. **Done 2026-09-13:** `core/storage/storage.service.ts`, `core/domain/migrations.ts`, `core/domain/persisted-state.ts`, `core/profiles/profile.store.ts` (undo of the last 20 changes), `core/settings/settings.store.ts`. The undo snackbar and recovery toast are UI work.
 - [x] Game picker, onboarding, profile switcher, Profiles page. **Done 2026-09-15:** the `/` redirect (`core/routing/home-redirect.ts`), profile counts on the picker cards, `/:game/welcome` (`features/onboarding/`), the toolbar profile switcher, `/profiles` with create/rename/duplicate/delete/switch (`features/profiles/`, dialogs in `profile-dialogs.ts`), the undo snackbar (`core/profiles/undo-snackbar.service.ts`) and the storage-recovery toast in `App`.
-- [ ] **Phase 2 acceptance: manual browser check by the user** (create and switch profiles for different games; state survives reloads and syncs across tabs).
+- [x] **Phase 2 acceptance: manual browser check (user confirmed 2026-09-15)** — creating and switching profiles across games, reload persistence and cross-tab sync all behave.
 - **Accept when:** you can create and switch profiles for different games, and state survives reloads and syncs across tabs.
 
 ### Phase 3 — Guide and location pages (plan §13.2–13.5)
