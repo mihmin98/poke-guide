@@ -90,6 +90,13 @@ export const RBY_ITEM_OVERRIDES: ItemOverrides = {
       games: ALL,
       reason: "Oak's 5 Poké Balls (Professor Oak's Laboratory) are not in the walkthrough",
     },
+    // The Game Corner TM prizes are in the walkthroughs, but as a {{shop}} block rather than
+    // {{Itemlist}} rows, so the cross-check (which only counts item rows) sees none.
+    ...(['tm23-dragon-rage', 'tm15-hyper-beam', 'tm50-substitute'] as const).map((itemId) => ({
+      itemId,
+      games: ALL,
+      reason: 'Game Corner prize: the walkthrough lists it in a {{shop}} block, not as an item row',
+    })),
   ],
   walkthroughGames: [
     {

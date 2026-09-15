@@ -159,9 +159,9 @@ describe('rby data: items (plan §7.13)', () => {
   it('has per-game item totals, including the overrides', () => {
     const all = data.locations.flatMap((l) => l.items);
     expect(Object.fromEntries(data.games.map((g) => [g, all.filter((i) => i.games.includes(g)).length]))).toEqual({
-      red: 216,
-      blue: 216,
-      yellow: 221,
+      red: 219,
+      blue: 219,
+      yellow: 224,
     });
   });
 
@@ -195,6 +195,19 @@ describe('rby data: items (plan §7.13)', () => {
       'Fake item balls: Voltorb ×6',
       'Fake item balls: Electrode ×2',
     ]);
+  });
+
+  it('buys the Game Corner TM prizes with coins', () => {
+    expect(
+      items('celadon-game-corner')
+        .filter((i) => i.obtain === 'purchase')
+        .map((i) => [i.name, i.coins, i.subArea, i.games.length]),
+    ).toEqual([
+      ['TM23 Dragon Rage', 3300, 'Prize corner', 3],
+      ['TM15 Hyper Beam', 5500, 'Prize corner', 3],
+      ['TM50 Substitute', 7700, 'Prize corner', 3],
+    ]);
+    expect(find('celadon-game-corner', 'tm23-dragon-rage')[0]!.requires).toEqual([['coin-case']]);
   });
 
   it('adds Gym leader and rooftop TMs from their source pages, and walkthrough-only gates', () => {

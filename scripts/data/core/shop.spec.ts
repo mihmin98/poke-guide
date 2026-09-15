@@ -6,6 +6,7 @@ const options = {
   sectionPath: [/^Prize corner/i, 'Generation I'],
   games: ['red', 'blue', 'yellow'] as const,
   requires: ['coin-case'],
+  itemSubArea: 'Prize corner',
 };
 
 describe('parsePrizeShops', () => {
@@ -49,8 +50,54 @@ describe('parsePrizeShops', () => {
     expect(result.notes).toEqual([
       'Skipped prize shop for other versions: Pocket Monsters Blue',
       'Skipped prize shop for other versions: Pocket Monsters Blue',
-      'Item prizes not listed yet: 3',
     ]);
+  });
+
+  it('reads the TM prizes as location items for every game', () => {
+    expect(result.items).toEqual([
+      {
+        itemId: 'tm23-dragon-rage',
+        name: 'TM23 Dragon Rage',
+        quantity: 1,
+        games: ['red', 'blue', 'yellow'],
+        obtain: 'purchase',
+        subArea: 'Prize corner',
+        where: 'Game Corner prize for 3300 Coins',
+        coins: 3300,
+        requires: [['coin-case']],
+      },
+      {
+        itemId: 'tm15-hyper-beam',
+        name: 'TM15 Hyper Beam',
+        quantity: 1,
+        games: ['red', 'blue', 'yellow'],
+        obtain: 'purchase',
+        subArea: 'Prize corner',
+        where: 'Game Corner prize for 5500 Coins',
+        coins: 5500,
+        requires: [['coin-case']],
+      },
+      {
+        itemId: 'tm50-substitute',
+        name: 'TM50 Substitute',
+        quantity: 1,
+        games: ['red', 'blue', 'yellow'],
+        obtain: 'purchase',
+        subArea: 'Prize corner',
+        where: 'Game Corner prize for 7700 Coins',
+        coins: 7700,
+        requires: [['coin-case']],
+      },
+    ]);
+  });
+
+  it('skips prizes bought in another currency', () => {
+    const other = parsePrizeShops(
+      '==Prize corner==\n===Generation I===\n{{shop|All versions}}\n{{shoprow|{{shopitem|Fresh Water|200}}}}\n{{shopfooter}}',
+      { ...options, games: ['red'] },
+    );
+    expect(other.items).toEqual([]);
+    expect(other.notes).toEqual(['Prize not bought with coins, skipped: {{shopitem|Fresh Water|200}}']);
   });
 
   it('reports a missing section and malformed rows', () => {

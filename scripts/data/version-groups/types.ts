@@ -58,7 +58,13 @@ export interface VersionGroupConfig {
   /** Item spelling variants → the name used in the data (`Elixer` → `Elixir`). */
   itemAliases: Record<string, string>;
   /** Prize shops on location pages (plan §7.7); their rows become `prize` encounters at that location. */
-  prizeShops?: { locationId: string; sectionPath: TitleMatcher[]; requires: string[] }[];
+  prizeShops?: {
+    locationId: string;
+    sectionPath: TitleMatcher[];
+    requires: string[];
+    /** Sub-area for item prizes (TMs). */
+    itemSubArea?: string;
+  }[];
   /** In-game trade tables, diffed against the location tables' trade rows (plan §7.7). */
   tradePage?: TradePageConfig;
   /**

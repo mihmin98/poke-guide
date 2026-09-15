@@ -466,7 +466,7 @@ export function assembleVersionGroup(
       source: { title: page.resolvedTitle, revid: page.revid },
       notes: walk.notes,
       subAreas: mergeRows(rows, config.games),
-      items: itemWalk.items,
+      items: [...itemWalk.items, ...(shop?.items ?? [])],
       itemNotes: itemWalk.notes,
     });
   }

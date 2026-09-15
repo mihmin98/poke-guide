@@ -503,7 +503,7 @@ Dev dependencies: `tsx`, `zod`, `@material/material-color-utilities`, `fast-chec
 - Breeding (Gen II and later, off for `rby`) uses `BreedingRules { dayCareLocationIds, dittoDex: 132, babyItemRequirements?: {offspring, item}[] }`, plus per-species `eggGroups` and `genderRatio`, to decide whether an egg is obtainable (§9).
 
 ### 7.7 Special parsers and overrides for Red/Blue/Yellow
-- **Game Corner (`core/shop.ts`, config `prizeShops`):** inside `Prize corner` → `Generation I`, read each `{{shop|<title>}} … {{shopfooter}}` block. Map the title to games through its `{{color2}}` link texts (`Pokémon Red`, `Pokémon Blue`, `Pokémon Yellow`; `All versions` = every game). Shops naming no game of the version group (`Pocket Monsters Blue`) are skipped with a note. Each `{{shopmon|Name|dex|coins|lv=N}}` becomes a walked row with `method: 'prize'`, `rate: {kind:'coins'}`, levels `N` and `requires: ['coin-case']`, merged into the location like table rows. `{{shopitem}}` TM prizes are only counted in a note for now. A configured shop with no section is an error; a found shop replaces the "no Pokémon section" warning.
+- **Game Corner (`core/shop.ts`, config `prizeShops`):** inside `Prize corner` → `Generation I`, read each `{{shop|<title>}} … {{shopfooter}}` block. Map the title to games through its `{{color2}}` link texts (`Pokémon Red`, `Pokémon Blue`, `Pokémon Yellow`; `All versions` = every game). Shops naming no game of the version group (`Pocket Monsters Blue`) are skipped with a note. Each `{{shopmon|Name|dex|coins|lv=N}}` becomes a walked row with `method: 'prize'`, `rate: {kind:'coins'}`, levels `N` and `requires: ['coin-case']`, merged into the location like table rows. Each `{{shopitem|TM23|3300|C||TM Dragon|Dragon Rage}}` becomes a **location item** (§7.13) instead: `obtain: 'purchase'`, `coins: 3300`, `name: 'TM23 Dragon Rage'` (number plus move, matching the `TM16 Pay Day` convention), `subArea` from the config's `itemSubArea` (`Prize corner`), `where: "Game Corner prize for N Coins"` and `requires: [['coin-case']]`. Prizes in another currency (`{{shopitem|Fresh Water|200}}`, Poké Mart stock) are skipped with a note, keeping §7.13's scope. A configured shop with no section is an error; a found shop replaces the "no Pokémon section" warning.
 - **In-game trades (`core/trades.ts`, config `tradePage`):** inside `Generation I`, read the wikitables under the configured child headings (`Pokémon Red and Green (Japan), Pokémon Red and Blue (Western)` → red/blue, `Pokémon Yellow` → yellow). Location comes from the first cell (`{{rt|N|Kanto}}` → `Kanto Route N`, `{{OBP|title|disambiguation}}` → `title (disambiguation)`, or a `[[link]]`) and carries over rowspans. The player gives the 1st `{{MSP/3|dex|Name}}` and gets the 2nd. **A row whose English nickname is `N/A` is a Japanese-only trade and is skipped** (the row background marks the Japanese vs international release, not Red vs Blue). **The location tables already hold every Gen I trade row**, so the trade page is a cross-check: differences either way are warnings, unknown location pages are errors, and matches set `trade.nickname`. No `overrides/trades.ts` fallback is needed for rby.
 - **Static encounters**, each with `sourcePage` and `revid`, and verified against the page text in Phase 1:
   - Snorlax: Route 12 and Route 16. Requires the Poké Flute. Two copies are obtainable.
@@ -668,7 +668,7 @@ A Gold/Silver/Crystal slot would look like `{ "levels": {…}, "rate": {"kind":"
 
 ### 7.13 Items per area (requested and designed 2026-09-13)
 - **Goal:** each location lists the items found there for the selected game and each item's **prerequisites** beyond reaching the location in walkthrough order (Cut, Surf, Strength, a key item, an event).
-  - Included: visible pickups, hidden items, gifts, rewards, trainer drops, choices, and Game Corner coins. Fake item balls become a location note.
+  - Included: visible pickups, hidden items, gifts, rewards, trainer drops, choices, Game Corner coins, and the **Game Corner TM prizes bought with coins** (`obtain: 'purchase'`, parsed by `core/shop.ts`, see §7.7). Fake item balls become a location note.
   - Out of scope (user choice): Poké Mart stock and temporary items (Safari Balls).
   - Items are informational and not tracked in profiles.
 - **Research (Red/Blue/Yellow):**
@@ -804,7 +804,7 @@ export interface GameLocation {
   itemNotes: string[];                                  // e.g. fake item balls
 }
 
-export type ItemObtainMethod = 'pickup' | 'gift' | 'reward' | 'drop' | 'choice';
+export type ItemObtainMethod = 'pickup' | 'gift' | 'reward' | 'drop' | 'choice' | 'purchase';
 
 export interface LocationItem {
   itemId: string; name: string;                         // name as spelled for the generation: "TM28 Dig", "Coins"
@@ -817,6 +817,7 @@ export interface LocationItem {
   requires?: string[][];                                // AND of alternatives, unlock ids: [['cut','surf']] = Cut or Surf
   fromPart?: Partial<Record<GameId, number>>;           // reachable only later than the location's part
   choiceGroupId?: string;                               // e.g. 'mt-moon-fossil'
+  coins?: number;                                       // price of an `obtain: 'purchase'` Game Corner prize
   source?: { title: string; revid: number };            // only on override items from another page
 }
 
@@ -1146,7 +1147,7 @@ Binary layout, before encoding (all integers little-endian):
   [item icon] Rare Candy      Hidden   One square south and three squares west of …        [Cut]
   [item icon] Iron            Pickup   B4F, in the southwest area of the floor             [Lift Key]
   ```
-  - Badges from `obtain` (Pickup · Gift · Reward · Drop · Choice) plus Hidden. Prerequisites are chips from the prerequisite vocabulary, and a "from Part N" chip appears when an item is only reachable later than the location's part (Viridian Gym TM).
+  - Badges from `obtain` (Pickup · Gift · Reward · Drop · Choice · Purchase) plus Hidden. A Purchase badge shows its `coins` price. Prerequisites are chips from the prerequisite vocabulary, and a "from Part N" chip appears when an item is only reachable later than the location's part (Viridian Gym TM).
   - A "Show hidden items" toggle (on by default) and a "Choose one" chip for choice groups (Helix / Dome Fossil).
   - Fake item balls (Power Plant Voltorb/Electrode) are a note that links to the encounter rows.
   - Items are **not** tracked (no checkbox); the checklist stays Pokémon-only.

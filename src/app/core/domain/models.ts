@@ -74,7 +74,7 @@ export interface GameLocation {
   itemNotes: string[];
 }
 
-export type ItemObtainMethod = 'pickup' | 'gift' | 'reward' | 'drop' | 'choice';
+export type ItemObtainMethod = 'pickup' | 'gift' | 'reward' | 'drop' | 'choice' | 'purchase';
 
 export interface LocationItem {
   itemId: string;
@@ -90,6 +90,8 @@ export interface LocationItem {
   where: string;
   /** AND of alternatives, as unlock ids: `[['cut', 'surf']]` is Cut or Surf. */
   requires?: string[][];
+  /** Price in Game Corner coins (`obtain: 'purchase'`). */
+  coins?: number;
   /** Only reachable later than the location's part (Viridian Gym TM). */
   fromPart?: Partial<Record<GameId, number>>;
   choiceGroupId?: string;

@@ -1,6 +1,6 @@
 # rby data report
 
-151 species, 60 locations, 760 encounters, 232 items, 248 source pages.
+151 species, 60 locations, 760 encounters, 235 items, 248 source pages.
 
 ## Obtainable per game
 
@@ -78,11 +78,10 @@ None.
 
 - [Vermilion City] Tentacool has types water here, expected water/poison
 
-## Notes (6)
+## Notes (5)
 
 - Meowth: unsupported box {{evobox/meowth-alola}}
 - Persian: unsupported box {{evobox/meowth-alola}}
 - Eevee: unsupported box {{evobox/setup}}
 - [Celadon Game Corner] Skipped prize shop for other versions: Pocket Monsters Blue
 - [Celadon Game Corner] Skipped prize shop for other versions: Pocket Monsters Blue
-- [Celadon Game Corner] Item prizes not listed yet: 3
