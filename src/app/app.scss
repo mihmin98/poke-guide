@@ -117,6 +117,10 @@ $toolbar-height: 64px;
 main {
   padding: 16px 24px;
   outline: none;
+  // A page wider than the screen widens the layout viewport, which drags the fixed bottom nav off
+  // screen with it. `clip` (not `hidden`) stops that without creating a scroll container, so the
+  // guide's sticky part headers keep sticking to the page.
+  overflow-x: clip;
 }
 
 .attribution {

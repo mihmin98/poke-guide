@@ -57,23 +57,33 @@ const GROWTH_RATES: Record<string, string> = {
           </p>
           <p class="sub">{{ v.species.category }} Pokémon</p>
         </div>
-        <app-catch-toggle
-          [dex]="v.species.dex"
-          [game]="gameId()"
-          [name]="v.species.name"
-        />
+        <app-catch-toggle [dex]="v.species.dex" [game]="gameId()" [name]="v.species.name" />
       </header>
 
       <app-game-mismatch-banner [game]="gameId()" />
 
       <section class="card facts">
         <dl>
-          <div><dt>Height</dt><dd>{{ v.species.heightM }} m</dd></div>
-          <div><dt>Weight</dt><dd>{{ v.species.weightKg }} kg</dd></div>
-          <div><dt>Growth rate</dt><dd>{{ growthRate(v.species.growthRate) }}</dd></div>
-          <div><dt>Base experience</dt><dd>{{ v.species.baseExp }}</dd></div>
+          <div>
+            <dt>Height</dt>
+            <dd>{{ v.species.heightM }} m</dd>
+          </div>
+          <div>
+            <dt>Weight</dt>
+            <dd>{{ v.species.weightKg }} kg</dd>
+          </div>
+          <div>
+            <dt>Growth rate</dt>
+            <dd>{{ growthRate(v.species.growthRate) }}</dd>
+          </div>
+          <div>
+            <dt>Base experience</dt>
+            <dd>{{ v.species.baseExp }}</dd>
+          </div>
         </dl>
-        <p class="sub">Catch rate, base stats and DV tools arrive with the calculators (Phase 6).</p>
+        <p class="sub">
+          Catch rate, base stats and DV tools arrive with the calculators (Phase 6).
+        </p>
       </section>
 
       <section>
@@ -142,7 +152,12 @@ const GROWTH_RATES: Record<string, string> = {
             @for (step of v.family; track $index) {
               <li>
                 <a [routerLink]="['/', game(), 'pokemon', slug(step.fromDex)]">
-                  <app-sprite [dex]="step.fromDex" [game]="gameId()" [name]="step.fromName" [size]="48" />
+                  <app-sprite
+                    [dex]="step.fromDex"
+                    [game]="gameId()"
+                    [name]="step.fromName"
+                    [size]="48"
+                  />
                   {{ step.fromName }}
                 </a>
                 <span class="arrow">
@@ -153,7 +168,12 @@ const GROWTH_RATES: Record<string, string> = {
                   }
                 </span>
                 <a [routerLink]="['/', game(), 'pokemon', slug(step.toDex)]">
-                  <app-sprite [dex]="step.toDex" [game]="gameId()" [name]="step.toName" [size]="48" />
+                  <app-sprite
+                    [dex]="step.toDex"
+                    [game]="gameId()"
+                    [name]="step.toName"
+                    [size]="48"
+                  />
                   {{ step.toName }}
                 </a>
               </li>
@@ -184,25 +204,36 @@ const GROWTH_RATES: Record<string, string> = {
           <p class="status">Loading the learnset…</p>
         } @else {
           <h3>By level up</h3>
-          <table>
-            <thead>
-              <tr><th>Level</th><th>Move</th><th>Type</th><th>Power</th><th>Acc.</th><th>PP</th></tr>
-            </thead>
-            <tbody>
-              @for (row of learnset().levelUp; track $index) {
+          <div class="table-wrap">
+            <table>
+              <thead>
                 <tr>
-                  <td>{{ row.level }}</td>
-                  <td>{{ row.move.name }}</td>
-                  <td><app-type-badge [type]="row.move.type" /></td>
-                  <td>{{ row.move.power ?? '—' }}</td>
-                  <td>{{ row.move.accuracy === null ? '—' : row.move.accuracy + '%' }}</td>
-                  <td>{{ row.move.pp }}</td>
+                  <th>Level</th>
+                  <th>Move</th>
+                  <th>Type</th>
+                  <th>Power</th>
+                  <th>Acc.</th>
+                  <th>PP</th>
                 </tr>
-              } @empty {
-                <tr><td colspan="6">No level-up moves.</td></tr>
-              }
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                @for (row of learnset().levelUp; track $index) {
+                  <tr>
+                    <td>{{ row.level }}</td>
+                    <td>{{ row.move.name }}</td>
+                    <td><app-type-badge [type]="row.move.type" /></td>
+                    <td>{{ row.move.power ?? '—' }}</td>
+                    <td>{{ row.move.accuracy === null ? '—' : row.move.accuracy + '%' }}</td>
+                    <td>{{ row.move.pp }}</td>
+                  </tr>
+                } @empty {
+                  <tr>
+                    <td colspan="6">No level-up moves.</td>
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
 
           @if (learnset().machines.length) {
             <h3>By TM / HM</h3>
@@ -220,7 +251,9 @@ const GROWTH_RATES: Record<string, string> = {
             <h3>From a pre-evolution</h3>
             <ul class="machines">
               @for (row of learnset().prevo; track row.move.id) {
-                <li>{{ row.move.name }} <span class="sub">— from {{ row.from.join(', ') }}</span></li>
+                <li>
+                  {{ row.move.name }} <span class="sub">— from {{ row.from.join(', ') }}</span>
+                </li>
               }
             </ul>
           }
@@ -376,6 +409,9 @@ const GROWTH_RATES: Record<string, string> = {
       color: var(--mat-sys-on-surface-variant);
       font: var(--mat-sys-label-small);
     }
+    .table-wrap {
+      overflow-x: auto;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
@@ -456,8 +492,11 @@ export class PokemonPage {
   protected readonly learnset = computed(() => {
     const dex = this.view()?.species.dex;
     const byDex = this.data().speciesByDex();
-    return buildLearnset(this.pokedex(), dex ?? 0, this.gameId(), (d) =>
-      (byDex.get(d)?.name ?? `#${d}`) as string,
+    return buildLearnset(
+      this.pokedex(),
+      dex ?? 0,
+      this.gameId(),
+      (d) => (byDex.get(d)?.name ?? `#${d}`) as string,
     );
   });
 

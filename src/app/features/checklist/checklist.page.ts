@@ -378,11 +378,17 @@ const STATUSES: readonly { id: ChecklistStatus; label: string }[] = [
       margin: 0;
       font: var(--mat-sys-title-medium);
     }
+    /*
+     * A <select> is as wide as its widest option ("Part 12 · Silph Co."), so it has to be allowed to
+     * shrink: anything wider than the screen widens the layout viewport, which drags the fixed bottom
+     * nav with it.
+     */
     .progress-part,
     .select {
-      display: inline-flex;
+      display: flex;
       align-items: center;
       gap: 8px;
+      max-width: 100%;
       margin-top: 12px;
       font: var(--mat-sys-body-medium);
       color: var(--mat-sys-on-surface-variant);
@@ -390,7 +396,20 @@ const STATUSES: readonly { id: ChecklistStatus; label: string }[] = [
     .select {
       margin-top: 0;
     }
+    /* On a phone "I'm on" and a part title don't fit one line, so the label sits above its select. */
+    @media (max-width: 599.98px) {
+      .progress-part {
+        display: grid;
+        gap: 4px;
+        justify-items: start;
+      }
+      .progress-part select {
+        width: 100%;
+      }
+    }
     select {
+      flex: 0 1 auto;
+      min-width: 0;
       min-height: 36px;
       padding: 0 8px;
       border-radius: 8px;
@@ -398,6 +417,7 @@ const STATUSES: readonly { id: ChecklistStatus; label: string }[] = [
       background: var(--mat-sys-surface);
       color: var(--mat-sys-on-surface);
       font: var(--mat-sys-body-medium);
+      text-overflow: ellipsis;
     }
     details summary {
       margin-top: 12px;
@@ -435,6 +455,7 @@ const STATUSES: readonly { id: ChecklistStatus; label: string }[] = [
       gap: 8px;
       align-items: center;
       margin: 16px 0;
+      max-width: 100%;
     }
     .toggles {
       display: flex;
@@ -539,11 +560,15 @@ const STATUSES: readonly { id: ChecklistStatus; label: string }[] = [
     }
     .row {
       display: grid;
-      grid-template-columns: auto auto auto minmax(0, 1fr) auto auto;
+      grid-template-columns: auto auto auto minmax(0, 1fr) auto;
       align-items: center;
-      gap: 8px;
+      gap: 4px 8px;
       padding: 4px 0;
       border-bottom: 1px solid var(--mat-sys-outline-variant);
+    }
+    .row .name {
+      min-width: 0;
+      overflow-wrap: anywhere;
     }
     .row .num {
       font: var(--mat-sys-label-small);
@@ -554,7 +579,9 @@ const STATUSES: readonly { id: ChecklistStatus; label: string }[] = [
       color: inherit;
     }
     .row .types {
+      grid-column: 2 / -1;
       display: flex;
+      flex-wrap: wrap;
       gap: 4px;
     }
     .row .where {
@@ -581,6 +608,12 @@ const STATUSES: readonly { id: ChecklistStatus; label: string }[] = [
       margin-top: 24px;
     }
     @media (min-width: 720px) {
+      .row {
+        grid-template-columns: auto auto auto minmax(0, 1fr) auto auto;
+      }
+      .row .types {
+        grid-column: auto;
+      }
       .row .where {
         grid-column: auto;
         text-align: right;
