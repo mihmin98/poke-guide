@@ -63,6 +63,23 @@ export const routes: Routes = [
           import('./features/checklist/checklist.page').then((m) => m.ChecklistPage),
       },
       {
+        // Generic tools driven by the version group's `mechanicsId` (plan §13.11).
+        path: 'tools',
+        children: [
+          { path: '', pathMatch: 'full', redirectTo: 'catch' },
+          {
+            path: 'catch',
+            title: 'Catch chance · Poké Guide',
+            loadComponent: () => import('./features/tools/catch.page').then((m) => m.CatchToolPage),
+          },
+          {
+            path: 'ivs',
+            title: 'IV calculator · Poké Guide',
+            loadComponent: () => import('./features/tools/iv.page').then((m) => m.IvToolPage),
+          },
+        ],
+      },
+      {
         // `:key` is a species slug (`pikachu`) or a National Dex number, so links can use either.
         path: 'pokemon/:key',
         title: 'Pokémon · Poké Guide',

@@ -29,6 +29,7 @@ const data = testData({
       weightKg: 1.8,
       baseExp: 55,
       growthRate: 'medium-slow',
+      baseStats: { hp: 40, atk: 45, def: 40, spc: 35, spe: 56 },
     }),
     testSpecies(17, { name: 'Pidgeotto', slug: 'pidgeotto' }),
   ],
@@ -114,8 +115,29 @@ describe('PokemonPage (plan §13.7)', () => {
   it('renders the Pokédex entry and the learnsets from the lazily loaded file', () => {
     const { el } = render();
     expect(el.querySelector('blockquote')?.textContent).toContain('common sight');
-    expect(el.querySelector('tbody tr')?.textContent).toContain('Gust');
+    expect(el.querySelector('table.moves tbody tr')?.textContent).toContain('Gust');
     expect(el.querySelector('.machines')?.textContent).toContain('HM01');
+  });
+
+  it('shows the catch rate, base stats and the quick catch grid (plan §13.11)', () => {
+    const { el } = render();
+    expect(el.querySelector('.facts')?.textContent).toContain('Catch rate');
+    const stats = el.querySelector('.stats')?.textContent ?? '';
+    expect(stats).toContain('HP');
+    expect(stats).toContain('Special');
+    // The grid lists every ball against every status, and highlights the best non-Master ball.
+    const grid = el.querySelector('table:not(.moves)');
+    expect(grid?.textContent).toContain('Poké Ball');
+    expect(grid?.textContent).toContain('Master Ball');
+    expect(grid?.querySelector('td.best')).not.toBeNull();
+    expect(el.textContent).toContain('Shiny if moved to Generation II');
+  });
+
+  it('links to both calculators for this species', () => {
+    const { el } = render();
+    const links = [...el.querySelectorAll('a')].map((a) => a.getAttribute('href'));
+    expect(links).toContain('/red/tools/catch?dex=16');
+    expect(links).toContain('/red/tools/ivs?dex=16');
   });
 
   it('explains an unknown species', () => {

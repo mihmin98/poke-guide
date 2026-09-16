@@ -245,21 +245,37 @@ export type StatId = 'hp' | 'atk' | 'def' | 'spa' | 'spd' | 'spe' | 'spc';   // 
 export interface GenerationMechanics {
   id: string;                                   // 'gen1'
   stats: StatId[];                              // gen1: hp, atk, def, spc, spe · gen3+: hp, atk, def, spa, spd, spe
-  ivSystem: { kind: 'dv'; max: 15; hpDerived: true } | { kind: 'iv'; max: 31 };
+  statLabels: Record<string, string>;           // 'spc' → 'Special', so the tool pages need no stat table
+  ivSystem: { kind: 'dv'; max: 15; hpDerived: true; label: 'DV' }
+          | { kind: 'iv'; max: 31; hpDerived: false; label: 'IV' };
   shiny: ShinyRules;                            // in-game shinies?, base odds, special cases, "shiny if transferred" rule
   capture: CaptureFormula;
-  statFormula(input: StatInput): number;        // base, iv/dv, level, effort (stat exp / EVs), nature?
+  statValue(input: StatInput): number;          // base, iv/dv, level, effort (stat exp / EVs), nature?
+  effortFromDefeat(baseStats): Partial<Record<StatId, number>>;  // gen1–2: the defeated species' base stats
+  effortLabel: string;                          // 'Stat Exp' · 'EVs'
+  solveIvs(baseStats, observations): IvSolution; // possible values per stat, count, contradiction, shiny verdict
   sources: { label: string; url: string }[];    // Bulbapedia pages the rules come from, shown in the UI
 }
 
 export interface CaptureFormula {
   balls: BallDef[];                             // gen1: Poké, Great, Ultra, Safari, Master
   statuses: StatusDef[];                        // gen1: none · sleep/freeze · paralysis/burn/poison
-  contexts?: CaptureContextDef[];               // gen1: Safari Zone (bait / rock)
+  contexts?: CaptureContextDef[];               // gen1: Safari Game (bait / rock)
+  reportsShakes: boolean;                       // whether the break-free animation carries information
   compute(input: CaptureInput): CaptureResult;  // exact P(catch) per throw, expected throws,
-                                                // throws for 50/90/99 %, shake distribution (if applicable)
+                                                // throws for 50/90/99 %, shakes on failure (if applicable)
 }
 ```
+
+**Gen I module** (`core/mechanics/gen1.ts`, written in Phase 6 from `Catch rate` rev 4612204, `Stat` rev 4605719 and
+`Individual values` rev 4625391):
+- `gen1Capture` counts the outcomes of the algorithm's two random draws instead of using Bulbapedia's
+  "approximate probability", which overshoots above a catch rate of 230 (Poké), 175 (Great) or 125 (Ultra).
+  Inside those ranges the two agree exactly, which is asserted in `gen1.spec.ts`.
+- The Safari Game halves (floor) or doubles the catch rate, saturating at 255 — confirmed against pret
+  `pokered/engine/items/item_effects.asm` (`srl [hl]`, `add a` with the `$ff` carry branch).
+- `gen1SolveDvs` enumerates all 16⁴ DV sets against every reading, deriving the HP DV from the other four,
+  and reports `'yes' | 'no' | 'possible'` for the Generation II Shiny condition.
 
 Games that break their generation's rules (e.g. Let's Go) get their own module. Exceptions for single encounters (fixed IVs, Shiny-locked, guaranteed Shiny, a different catch rate) are **data** on the encounter slot (§8), not code.
 
@@ -983,8 +999,8 @@ export const appConfig: ApplicationConfig = {
 | `/:game/guide/:locationId` | `LocationPage` | A side pane on desktop |
 | `/:game/checklist` | `ChecklistPage` | Query params: `status`, `type`, `method`, `q`, `view`, `sort=national\|regional\|walkthrough` |
 | `/:game/pokemon/:slug` | `PokemonPage` | A bottom sheet on mobile when opened from lists |
-| `/:game/tools/catch` | `CatchCalculatorPage` | Prefilled from query params `dex`, `level`, `context` (e.g. `safari-zone`) when opened from an encounter row |
-| `/:game/tools/ivs` | `IvCalculatorPage` | Query param `dex` |
+| `/:game/tools/catch` | `CatchToolPage` | Prefilled from query params `dex` and `level`; the catch rate on an encounter row links here. A context prefill was dropped: nothing links to a Safari state yet. |
+| `/:game/tools/ivs` | `IvToolPage` | Query param `dex`. Titled with the generation's label ("DV calculator" in Gen I). |
 | `/profiles` | `ProfilesPage` | Manage, import and export |
 | `/import` | `ImportPage` | Reads the code from the URL fragment |
 | `/settings`, `/about` | | |
@@ -1205,6 +1221,11 @@ Both tools are generic screens driven by `GenerationMechanics` (§4.5). Only the
   - Gen I–II: shows the possible DV range for each stat, assuming zero stat experience (freshly caught). It narrows the HP DV using the rule that derives it from the other DVs, and shows **"Shiny if moved to Gen II: yes / no / possible"**.
   - Adding more level and stat entries (after level-ups) narrows the ranges further.
 - Both tools show their sources (Bulbapedia `Catch rate`, `Stat`, `Individual values`, `Shiny Pokémon`) and their assumptions.
+- **As built (Phase 6, 2026-09-16):**
+  - HP is entered once, not in two modes: a level box drives an estimated max HP (the generation's HP formula with a middling DV and no effort), which the player can overwrite with the real number, plus a current-HP box and a percentage slider that stay in step. `f` only depends on the ratio, so either way of entering it gives the same answer.
+  - Gen I's shake count is **fixed** for a given ball, status and HP, so the tool states the number (and that seeing more shakes than before means the Pokémon is caught) rather than a distribution.
+  - The Pokémon detail page hosts the quick grid — every ball × status at full HP — and links to both tools with `?dex=`; the catch rate on an encounter row links with `?dex=&level=`.
+  - The IV tool takes several readings (level + stats), each removable, and reports "Exactly one DV set matches" / "N DV sets still match" / "No DV set matches those stats".
 
 ---
 

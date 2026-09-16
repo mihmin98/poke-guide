@@ -33,6 +33,7 @@ import {
   catchDifficulty,
   itemObtainLabel,
   itemRequirementLabels,
+  type LocationRow,
   type LocationSubArea,
 } from './location-model';
 
@@ -173,9 +174,15 @@ const ALL_SUB_AREAS = '__all__';
                     </span>
 
                     @if (showCatchRates() && row.catchRate !== undefined) {
-                      <span class="cr" [class]="'cr-' + difficulty(row.catchRate)">
+                      <a
+                        class="cr"
+                        [class]="'cr-' + difficulty(row.catchRate)"
+                        [routerLink]="['/', game(), 'tools', 'catch']"
+                        [queryParams]="{ dex: row.dex, level: minLevel(row) }"
+                        [title]="'Catch chance for ' + row.name"
+                      >
                         CR {{ row.catchRate }}
-                      </span>
+                      </a>
                     }
 
                     <span class="tags">
@@ -427,6 +434,9 @@ const ALL_SUB_AREAS = '__all__';
       grid-area: cr;
       font: var(--mat-sys-label-medium);
       font-variant-numeric: tabular-nums;
+      color: inherit;
+      text-decoration-style: dotted;
+      white-space: nowrap;
     }
     .cr-easy {
       color: var(--mat-sys-primary);
@@ -590,6 +600,14 @@ export class LocationPage {
   protected region = regionName;
   protected obtainLabel = itemObtainLabel;
   protected difficulty = catchDifficulty;
+
+  /** The lowest level the row can appear at, so the calculator opens with a sensible HP estimate. */
+  protected minLevel(row: LocationRow): number {
+    const levels = row.slots
+      .map((slot) => slot.levels?.min)
+      .filter((level): level is number => level !== undefined);
+    return levels.length ? Math.min(...levels) : 5;
+  }
 
   protected pad(dex: number): string {
     return String(dex).padStart(3, '0');

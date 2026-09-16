@@ -17,8 +17,16 @@ import { LevelRange } from '../../shared/components/level-range';
 import { RateDisplay } from '../../shared/components/rate';
 import { Sprite } from '../../shared/components/sprite';
 import { TypeBadge } from '../../shared/components/type-badge';
+import { mechanicsForGame } from '../../core/mechanics';
 import { unobtainableLabel } from '../checklist/checklist-model';
+import { catchDifficulty, catchRateFor } from '../location/location-model';
+import { buildCatchGrid, formatChance } from '../tools/catch-model';
 import { buildLearnset, buildPokemonView, entriesFor } from './pokemon-model';
+
+/** The highest Gen I base stat is 255 (Chansey's HP), so the bars are scaled to it. */
+const MAX_BASE_STAT = 255;
+
+const ROMAN: Record<number, string> = { 1: 'I', 2: 'II', 3: 'III' };
 
 const GROWTH_RATES: Record<string, string> = {
   erratic: 'Erratic',
@@ -80,11 +88,103 @@ const GROWTH_RATES: Record<string, string> = {
             <dt>Base experience</dt>
             <dd>{{ v.species.baseExp }}</dd>
           </div>
+          @if (catchRate(); as rate) {
+            <div>
+              <dt>Catch rate</dt>
+              <dd>
+                {{ rate }}
+                <span class="difficulty" [class]="'cr-' + difficulty(rate)">{{
+                  difficultyLabel(difficulty(rate))
+                }}</span>
+              </dd>
+            </div>
+          }
         </dl>
-        <p class="sub">
-          Catch rate, base stats and DV tools arrive with the calculators (Phase 6).
-        </p>
+        @if (catchRateNote(); as note) {
+          <p class="sub">{{ note }}</p>
+        }
       </section>
+
+      @if (statRows().length) {
+        <section>
+          <h2>Base stats in {{ generationName() }}</h2>
+          <ul class="stats">
+            @for (row of statRows(); track row.stat) {
+              <li>
+                <span class="stat-label">{{ row.label }}</span>
+                <span class="bar" aria-hidden="true">
+                  <span [style.width.%]="row.percent"></span>
+                </span>
+                <span class="stat-value">{{ row.value }}</span>
+              </li>
+            }
+            <li class="total">
+              <span class="stat-label">Total</span>
+              <span class="bar" aria-hidden="true"></span>
+              <span class="stat-value">{{ statTotal() }}</span>
+            </li>
+          </ul>
+          <p class="sub">
+            Defeating one gives {{ effortLabel() }} equal to these values.
+          </p>
+          <p class="sub">
+            A Pokémon's own stats also depend on its {{ ivLabel() }}s and {{ effortLabel() }} —
+            <a [routerLink]="['/', game(), 'tools', 'ivs']" [queryParams]="{ dex: v.species.dex }">
+              work them out from the summary screen</a
+            >.
+          </p>
+        </section>
+      }
+
+      @if (catchGrid(); as grid) {
+        <section>
+          <h2>Catching it at full HP</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Ball</th>
+                  @for (status of grid.statuses; track status.id) {
+                    <th scope="col">{{ status.label }}</th>
+                  }
+                </tr>
+              </thead>
+              <tbody>
+                @for (row of grid.rows; track row.ball.id) {
+                  <tr>
+                    <th scope="row">{{ row.ball.name }}</th>
+                    @for (cell of row.cells; track cell.statusId) {
+                      <td [class.best]="cell.best">{{ chance(cell.result.probability) }}</td>
+                    }
+                  </tr>
+                }
+              </tbody>
+            </table>
+          </div>
+          <p class="sub">
+            Chance per throw with a full-health target.
+            <a [routerLink]="['/', game(), 'tools', 'catch']" [queryParams]="{ dex: v.species.dex }">
+              Open the catch calculator</a
+            >
+            to change the HP, throw bait or rocks and see how many balls you need.
+          </p>
+        </section>
+      }
+
+      @if (shinyTransfer(); as transfer) {
+        <section>
+          <h2>{{ transfer.label }}</h2>
+          <p>{{ transfer.description }}</p>
+          <p class="sub">
+            <a [routerLink]="['/', game(), 'tools', 'ivs']" [queryParams]="{ dex: v.species.dex }">
+              Check a caught {{ v.species.name }} in the {{ ivLabel() }} calculator</a
+            >.
+          </p>
+          @if (transfer.impossibleNote) {
+            <p class="sub">{{ transfer.impossibleNote }}</p>
+          }
+        </section>
+      }
 
       <section>
         <h2>Where to find it in {{ gameName() }}</h2>
@@ -205,7 +305,7 @@ const GROWTH_RATES: Record<string, string> = {
         } @else {
           <h3>By level up</h3>
           <div class="table-wrap">
-            <table>
+            <table class="moves">
               <thead>
                 <tr>
                   <th>Level</th>
@@ -442,6 +542,61 @@ const GROWTH_RATES: Record<string, string> = {
     .prev-next .next {
       margin-left: auto;
     }
+    .difficulty {
+      margin-left: 6px;
+      padding: 1px 6px;
+      border-radius: 999px;
+      font: var(--mat-sys-label-small);
+      background: var(--mat-sys-surface-container-high);
+      color: var(--mat-sys-on-surface-variant);
+    }
+    .difficulty.cr-easy {
+      background: color-mix(in srgb, green 18%, var(--mat-sys-surface-container-high));
+    }
+    .difficulty.cr-hard {
+      background: color-mix(in srgb, var(--mat-sys-error) 18%, var(--mat-sys-surface-container-high));
+    }
+    .stats {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-width: 480px;
+    }
+    .stats li {
+      display: grid;
+      grid-template-columns: 64px 1fr 40px;
+      align-items: center;
+      gap: 8px;
+      padding: 2px 0;
+      font: var(--mat-sys-body-small);
+    }
+    .stats .stat-label {
+      color: var(--mat-sys-on-surface-variant);
+    }
+    .stats .bar {
+      height: 8px;
+      border-radius: 999px;
+      background: var(--mat-sys-surface-container-high);
+      overflow: hidden;
+    }
+    .stats .bar > span {
+      display: block;
+      height: 100%;
+      background: var(--mat-sys-primary);
+    }
+    .stats .stat-value {
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+    .stats .total {
+      font-weight: 600;
+      border-top: 1px solid var(--mat-sys-outline-variant);
+    }
+    td.best {
+      background: var(--mat-sys-primary-container);
+      color: var(--mat-sys-on-primary-container);
+      font-weight: 600;
+    }
   `,
 })
 export class PokemonPage {
@@ -499,6 +654,65 @@ export class PokemonPage {
       (d) => (byDex.get(d)?.name ?? `#${d}`) as string,
     );
   });
+
+  private readonly mechanics = computed(() => mechanicsForGame(this.gameId()));
+  protected readonly ivLabel = computed(() => this.mechanics()?.ivSystem.label ?? 'IV');
+  protected readonly effortLabel = computed(() => this.mechanics()?.effortLabel ?? 'EVs');
+  protected readonly shinyTransfer = computed(() => this.mechanics()?.shiny.transfer);
+  protected readonly generationName = computed(() => {
+    const game = findGame(this.game());
+    return game ? `Generation ${ROMAN[game.generation] ?? game.generation}` : 'this generation';
+  });
+
+  /** The value this game uses, which can differ from the version group's (Yellow Dragonair is 27). */
+  protected readonly catchRate = computed(() =>
+    catchRateFor(this.view()?.species, this.gameId(), undefined),
+  );
+  protected readonly catchRateNote = computed(() => {
+    const species = this.view()?.species;
+    if (!species) return undefined;
+    const perGame = species.catchRateByGame?.[this.gameId()];
+    const note = species.catchRateNote;
+    const differs =
+      perGame !== undefined && perGame !== species.catchRate
+        ? `${this.gameName()} uses ${perGame} where the other games in this version group use ${species.catchRate}.`
+        : undefined;
+    return [differs, note].filter(Boolean).join(' ') || undefined;
+  });
+
+  protected readonly statRows = computed(() => {
+    const mechanics = this.mechanics();
+    const species = this.view()?.species;
+    if (!mechanics || !species) return [];
+    return mechanics.stats
+      .filter((stat) => species.baseStats[stat] !== undefined)
+      .map((stat) => {
+        const value = species.baseStats[stat]!;
+        return {
+          stat,
+          label: mechanics.statLabels[stat] ?? stat,
+          value,
+          percent: Math.min(100, Math.round((value / MAX_BASE_STAT) * 100)),
+        };
+      });
+  });
+  protected readonly statTotal = computed(() =>
+    this.statRows().reduce((sum, row) => sum + row.value, 0),
+  );
+
+  /** The quick grid (plan §13.11): every ball and status against a full-health target. */
+  protected readonly catchGrid = computed(() => {
+    const mechanics = this.mechanics();
+    const catchRate = this.catchRate();
+    if (!mechanics || catchRate === undefined) return undefined;
+    return buildCatchGrid(mechanics, { catchRate, currentHp: 100, maxHp: 100 });
+  });
+
+  protected readonly chance = formatChance;
+  protected readonly difficulty = catchDifficulty;
+  protected difficultyLabel(level: string): string {
+    return level === 'easy' ? 'easy' : level === 'medium' ? 'tricky' : 'hard';
+  }
 
   protected reasonLabel = unobtainableLabel;
 

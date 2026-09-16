@@ -125,6 +125,8 @@ describe('LocationPage (plan §13.5)', () => {
     expect(row.querySelector('app-level-range')?.textContent).toContain('Lv 2–5');
     expect(row.querySelector('app-rate')?.textContent).toContain('45%');
     expect(row.querySelector('.cr')?.textContent?.trim()).toBe('CR 255');
+    // The catch rate opens the calculator for this species at the lowest level it appears (§13.11).
+    expect(row.querySelector('.cr')?.getAttribute('href')).toBe('/red/tools/catch?dex=16&level=2');
   });
 
   it('groups sub-areas into tabs and shows one at a time', () => {

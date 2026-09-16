@@ -98,9 +98,22 @@ export class App {
     ];
   });
 
-  protected readonly moreActive = computed(() =>
-    ['/games', '/settings', '/about'].some((p) => this.currentGame.path().startsWith(p)),
-  );
+  /** The tools live under the current game, since their rules come from its generation (plan §13.11). */
+  protected readonly toolLinks = computed(() => {
+    const game = this.game();
+    return {
+      catch: game ? `/${game.id}/tools/catch` : '/games',
+      ivs: game ? `/${game.id}/tools/ivs` : '/games',
+    };
+  });
+
+  protected readonly moreActive = computed(() => {
+    const path = this.currentGame.path();
+    return (
+      ['/games', '/settings', '/about', '/import'].some((p) => path.startsWith(p)) ||
+      path.includes('/tools')
+    );
+  });
 
   constructor() {
     // On <html> so overlays (menus, dialogs) outside <app-root> get the game's tokens too.
