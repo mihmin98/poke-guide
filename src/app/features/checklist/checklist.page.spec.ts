@@ -1,6 +1,6 @@
 import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { provideRouter } from '@angular/router';
+import { Router, provideRouter } from '@angular/router';
 import { routerFeatures } from '../../app.config';
 import { routes } from '../../app.routes';
 import { GameDataService } from '../../core/data/game-data.service';
@@ -33,7 +33,9 @@ const data = testData({
 });
 
 const view = buildGameView(data, 'red');
-const entries = buildChecklist(data, { id: 'red', nationalDexMax: 72 }, { breeding: false } as never);
+const entries = buildChecklist(data, { id: 'red', nationalDexMax: 72 }, {
+  breeding: false,
+} as never);
 
 const stub = {
   isLoading: signal(false),
@@ -93,7 +95,11 @@ describe('ChecklistPage (plan §13.6)', () => {
 
   it('toggles a catch from a grid tile once a profile for this game exists', () => {
     const { fixture, el } = render();
-    expect(el.querySelector<HTMLButtonElement>('.tile button')!.disabled).toBe(true);
+    const tile = el.querySelector<HTMLButtonElement>('.tile button')!;
+    // Still focusable, but a click does nothing until a Red profile exists.
+    expect(tile.getAttribute('aria-disabled')).toBe('true');
+    tile.click();
+    expect(profiles.isCaught(16)).toBe(false);
 
     profiles.createProfile('Red run', 'red');
     fixture.detectChanges();
@@ -102,6 +108,22 @@ describe('ChecklistPage (plan §13.6)', () => {
 
     expect(profiles.isCaught(16)).toBe(true);
     expect(el.querySelector('.headline')?.textContent).toContain('1');
+  });
+
+  it('is one tab stop: arrow keys move between tiles and Enter opens the details', () => {
+    const navigate = vi.spyOn(TestBed.inject(Router), 'navigate').mockResolvedValue(true);
+    const { fixture, el } = render();
+    const tiles = () => [...el.querySelectorAll<HTMLButtonElement>('.tile > button')];
+    expect(tiles().map((t) => t.tabIndex)).toEqual([0, -1]);
+    expect(el.querySelector<HTMLAnchorElement>('.tile .info')!.tabIndex).toBe(-1);
+
+    tiles()[0]!.dispatchEvent(new KeyboardEvent('keydown', { key: 'ArrowRight' }));
+    fixture.detectChanges();
+    expect(document.activeElement).toBe(tiles()[1]);
+    expect(tiles().map((t) => t.tabIndex)).toEqual([-1, 0]);
+
+    tiles()[1]!.dispatchEvent(new KeyboardEvent('keydown', { key: 'Enter' }));
+    expect(navigate).toHaveBeenCalledWith(['/', 'red', 'pokemon', 'pidgeotto']);
   });
 
   it('filters by status and searches by number', () => {

@@ -1,5 +1,5 @@
 import { provideHttpClient, withFetch } from '@angular/common/http';
-import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { ApplicationConfig, isDevMode, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { MAT_ICON_DEFAULT_OPTIONS } from '@angular/material/icon';
 import {
   provideRouter,
@@ -8,6 +8,7 @@ import {
   withRouterConfig,
   withViewTransitions,
 } from '@angular/router';
+import { provideServiceWorker } from '@angular/service-worker';
 import { routes } from './app.routes';
 
 /** Shared with tests. Pages under `/:game` read the parent `game` param as an input. */
@@ -25,5 +26,11 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes, ...routerFeatures),
     provideHttpClient(withFetch()),
     { provide: MAT_ICON_DEFAULT_OPTIONS, useValue: { fontSet: 'material-symbols-outlined' } },
+    // Offline support (plan §13.10). Registered once the app is stable, so it never competes with the
+    // first load; production builds only.
+    provideServiceWorker('ngsw-worker.js', {
+      enabled: !isDevMode(),
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
   ],
 };

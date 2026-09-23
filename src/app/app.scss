@@ -11,8 +11,13 @@ $toolbar-height: 64px;
   position: sticky;
   top: 0;
   z-index: 3;
+  display: flex;
+  align-items: center;
   gap: 12px;
+  height: var(--app-toolbar-height);
+  padding: 0 16px;
   background: var(--mat-sys-surface-container);
+  color: var(--mat-sys-on-surface);
 }
 
 .brand {
@@ -135,7 +140,7 @@ main {
 
 @media (max-width: 599.98px) {
   :host {
-    // mat-toolbar is shorter on small screens.
+    // A shorter top bar on small screens, as in the M3 top app bar.
     --app-toolbar-height: 56px;
   }
 

@@ -86,6 +86,53 @@ const PALETTE_TONES: [string, (s: DynamicScheme) => number][] = [
   ['neutral-variant20', (s) => s.neutralVariantPalette.tone(20)],
 ];
 
+/**
+ * Foreground/background token pairs the app actually puts together, with the WCAG minimum each needs:
+ * 4.5 for text, 3 for non-text UI such as borders (plan §13.1). A seed that breaks one fails the script.
+ */
+const CONTRAST_PAIRS: [string, DynamicColor, DynamicColor, number][] = [
+  ['on-primary on primary', MaterialDynamicColors.onPrimary, MaterialDynamicColors.primary, 4.5],
+  [
+    'on-primary-container on primary-container',
+    MaterialDynamicColors.onPrimaryContainer,
+    MaterialDynamicColors.primaryContainer,
+    4.5,
+  ],
+  [
+    'on-secondary-container on secondary-container',
+    MaterialDynamicColors.onSecondaryContainer,
+    MaterialDynamicColors.secondaryContainer,
+    4.5,
+  ],
+  [
+    'on-tertiary-container on tertiary-container',
+    MaterialDynamicColors.onTertiaryContainer,
+    MaterialDynamicColors.tertiaryContainer,
+    4.5,
+  ],
+  [
+    'on-error-container on error-container',
+    MaterialDynamicColors.onErrorContainer,
+    MaterialDynamicColors.errorContainer,
+    4.5,
+  ],
+  ['primary on surface', MaterialDynamicColors.primary, MaterialDynamicColors.surface, 4.5],
+  [
+    'primary on surface-container-highest',
+    MaterialDynamicColors.primary,
+    MaterialDynamicColors.surfaceContainerHighest,
+    4.5,
+  ],
+  ['error on surface', MaterialDynamicColors.error, MaterialDynamicColors.surface, 4.5],
+  [
+    'on-surface-variant on surface-container-highest',
+    MaterialDynamicColors.onSurfaceVariant,
+    MaterialDynamicColors.surfaceContainerHighest,
+    4.5,
+  ],
+  ['outline on surface', MaterialDynamicColors.outline, MaterialDynamicColors.surface, 3],
+];
+
 function hex(argb: number): string {
   return hexFromArgb(argb).toUpperCase();
 }
@@ -96,6 +143,19 @@ function gameThemeCss(): string {
     // Fidelity keeps the primary container close to the brand seed (important for Yellow).
     const light = new SchemeFidelity(seed, false, 0);
     const dark = new SchemeFidelity(seed, true, 0);
+    for (const [scheme, mode] of [
+      [light, 'light'],
+      [dark, 'dark'],
+    ] as const) {
+      for (const [label, fg, bg, minimum] of CONTRAST_PAIRS) {
+        const ratio = contrast(hex(fg.getArgb(scheme)), hex(bg.getArgb(scheme)));
+        if (ratio < minimum) {
+          throw new Error(
+            `${game.name} (${mode}): ${label} has contrast ${ratio.toFixed(2)}, below ${minimum}.`,
+          );
+        }
+      }
+    }
     const lines = [
       ...SYSTEM_COLORS.map(
         ([name, color]) =>

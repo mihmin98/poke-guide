@@ -15,7 +15,7 @@ How to use it:
 
 ## Current status
 
-- **Phase:** Phase 0 complete. **Phase 1 complete** (acceptance met 2026-09-13; Game Corner TM prizes finished 2026-09-15). **Phase 2 complete and accepted 2026-09-15.** **Phase 3 complete and accepted 2026-09-15.** **Phase 4 complete and accepted 2026-09-15.** **Phase 5 built 2026-09-15, acceptance pending the user's two-browser round trip.** **Phase 6 built 2026-09-16, acceptance pending the user's check against hand-worked examples.** Done in Phase 1:
+- **Phase:** Phase 0 complete. **Phase 1 complete** (acceptance met 2026-09-13; Game Corner TM prizes finished 2026-09-15). **Phase 2 complete and accepted 2026-09-15.** **Phase 3 complete and accepted 2026-09-15.** **Phase 4 complete and accepted 2026-09-15.** **Phase 5 built 2026-09-15, acceptance pending the user's two-browser round trip.** **Phase 6 built 2026-09-16, acceptance pending the user's check against hand-worked examples.** **Phase 7 built 2026-09-23, acceptance pending the user's offline check and Lighthouse run.** Done in Phase 1:
   - Parsing core, `entry1`/`entry2` adapters, walker, merge, and the ordered `rby` location config.
   - Species master data: National Dex list, Gen I type history, slugs.
   - Species pages: infobox extras, base stats by generation, Pokédex entries.
@@ -28,8 +28,8 @@ How to use it:
     - 3 new locations: Oak's Lab, which restores the starters, plus Sea Cottage and Celadon Department Store.
   - Sprites: `npm run data:sprites` → 302 SHA-1-verified sprites in `public/sprites/gen1-rb` and `gen1-y`.
   - The 10-location spot check against Bulbapedia.
-- **Last updated:** 2026-09-16
-- **Repo state:** `npm run verify` passes (theme check, lint, scripts typecheck, 286 pipeline tests, 255 app tests, production build).
+- **Last updated:** 2026-09-23
+- **Repo state:** `npm run verify` passes (theme check, fonts check, lint, scripts typecheck, 288 pipeline tests, 275 app tests, production build). The only build warning is the initial bundle, 16.8 kB over the raw 500 kB CLI budget (138 kB compressed, well under the plan's 350 KB compressed target).
   - The build now validates its output (zod schemas, cross-references, obtainability coverage) and writes `scripts/data/reports/rby.md`. Obtainable: Red 135/151 (max 126 in one save), Blue 135/151 (126), Yellow 134/151 (131); unobtainable species all have a reason.
   - `npm run data:build` gives 0 errors, 1 warning (Vermilion City Tentacool types) and 5 notes: 151 species, 60 locations, 760 encounters (including 10 Game Corner prize species and 8 statics), 235 items (Red 219, Blue 219, Yellow 224, including the 3 Game Corner TM prizes), 164 moves. All 16 trades match the In-game trade page and carry nicknames. Exclusive groups: `rby-starter`, `mt-moon-fossil`, `fighting-dojo`; event-only: Mew.
   - Species without any source (after non-trade evolutions): only version exclusives, the 4 trade evolutions and Mew, in every game.
@@ -41,14 +41,22 @@ How to use it:
 
 ## Next step
 
-Two phases are built and waiting on the user's manual checks:
+Three phases are built and waiting on the user's manual checks:
 
-1. **Phase 5**: export a profile in one browser, import the code (and the share link) in another, and confirm the state matches exactly; then try a damaged code, a backup download and a restore.
+1. **Phase 5**: export a profile in one browser, import the code (and the share link) in another, and confirm the state matches exactly; then try a damaged code, a backup download and a restore. **New in Phase 7:** the export dialog's QR code — scan it with a phone to open the import page.
 2. **Phase 6**: open `/red/tools/catch` and `/red/tools/ivs`, compare a few results against hand-worked Bulbapedia examples, and check the new Pokémon-detail sections (catch rate, base stats, quick catch grid, Shiny) at 360 px and 1440 px.
+3. **Phase 7** (the service worker only runs in a production build, not in `npm start`):
+   - `npx ng build`, then serve `dist/poke-guide/browser` with any static server (e.g. `python3 -m http.server 8080 -d dist/poke-guide/browser`) and open `http://localhost:8080/` (start at `/`: this server has no deep-link fallback until the service worker is installed).
+   - Open a game's guide, checklist and a few locations, then go offline (DevTools → Network → Offline) and reload: the app, fonts, icons, that game's data and the sprites you have seen should all load. Deep links (`/red/guide/route-1`) should reload offline too.
+   - Settings: switch Light/Dark/System, sprite size and compact rows; check dark mode on every page.
+   - The update prompt: rebuild after any change while the old tab is open, focus the tab again, and a "new version is ready · Reload" snackbar should appear.
+   - Keyboard: on the checklist grid, Tab once into the grid, arrows move, Space toggles, Enter opens details.
+   - Swipe left/right on a location page on a phone (or DevTools touch emulation).
+   - **Lighthouse (user runs it, mobile, on the production build):** Performance ≥ 90, Accessibility ≥ 95. Report any failing audits.
 
-After acceptance: **Phase 7** (plan §13.1, §13.9, §13.10): dark mode and contrast, reduced motion, service worker and manifest, self-hosted fonts, the accessibility pass and the Lighthouse targets. The initial bundle is 56 kB over its 500 kB budget (Material in the shell) and is trimmed there.
+Open decision for the user: the initial bundle is 16.8 kB (raw) over the CLI's 500 kB warning. What remains is the two `mat-menu`s (profile switcher and More). Either raise the raw warning budget (the plan's compressed target is already met), or replace the More menu with a `/more` page (a UI change).
 
-The Settings page is still a placeholder: `SettingsStore` exists and the guide and location pages read from it, but nothing writes to it except the guide's *Only available now* toggle. Binding the rest is Phase 7 polish.
+After acceptance: **Phase 8** (GitHub Pages publishing, plan §17).
 
 ---
 
@@ -131,11 +139,28 @@ The Settings page is still a placeholder: `SettingsStore` exists and the guide a
 - **Accept when:** results match hand-worked examples from Bulbapedia's formulas, and every species shows the correct Gen I catch rate and base stats.
 
 ### Phase 7 — Polish, accessibility, PWA (plan §13.1, §13.9, §13.10)
-- [ ] Dark mode, generated accents checked for contrast, reduced motion
-- [ ] Service worker, manifest, update prompt
-- [ ] Self-host the Roboto and Material Symbols fonts (currently Google Fonts links) so the app works offline
-- [ ] Optional: QR export, swipe between locations
-- [ ] Manual accessibility check clean. Lighthouse mobile: Performance ≥ 90, Accessibility ≥ 95.
+- [x] Dark mode, generated accents checked for contrast, reduced motion. **Done 2026-09-23:**
+  - The Settings page (`features/settings/`) binds every setting.
+  - `theme` sets `theme-light`/`theme-dark` on `<html>`, and `theme-color` follows it.
+  - `spriteScale` and `compactRows` now also reach the location rows and checklist lists.
+  - The theme generator enforces contrast pairs in light and dark.
+  - Reduced motion covers view transitions and scripted scrolls.
+- [x] Service worker, manifest, update prompt. **Done 2026-09-23:**
+  - `@angular/service-worker` (user-approved dependency) and `ngsw-config.json`.
+  - `public/manifest.webmanifest`, plus Poké Ball icons from `npm run icons`.
+  - `core/pwa/app-update.service.ts`.
+- [x] Self-host the Roboto and Material Symbols fonts. **Done 2026-09-23:** `npm run fonts` downloads Roboto plus an icon subset of 58 icons (7 KB), and `--check` runs in verify.
+- [x] Optional: QR export, swipe between locations. **Done 2026-09-23:**
+  - QR export in the export dialog uses `qrcode-generator` (user-approved), loaded lazily.
+  - Swipe on the location page (`shared/swipe.ts`).
+- [~] Manual accessibility check clean. Lighthouse mobile: Performance ≥ 90, Accessibility ≥ 95.
+  - **Code-level pass done 2026-09-23:**
+    - The checklist grid is one tab stop (arrows, Space toggles, Enter opens details).
+    - Tiles use `aria-disabled` so they stay focusable.
+    - Heading levels no longer skip.
+    - Specific titles on the location and Pokémon pages.
+    - A global `.sr-only`.
+  - The user runs Lighthouse and the manual check.
 - **Accept when:** the app works offline after the first load, and the Lighthouse targets are met.
 
 ### Phase 8 — GitHub Pages publishing (last step, plan §17)
@@ -256,6 +281,12 @@ code), so it waits until they are stable.
 | 2026-09-16 | **Tool routes are `/:game/tools/catch` and `/:game/tools/ivs`** (plan §11.3, §13.11): the IV route keeps the generic name and the page titles itself from `ivSystem.label` ("DV calculator" in Gen I). Prefill is `?dex=` and `?level=`; the planned `context` prefill was dropped because nothing links to a Safari state. The catch rate on an encounter row links to the calculator at the row's lowest level, and the Pokémon detail page carries the quick grid (every ball × status at full HP) plus links to both tools. |
 | 2026-09-16 | **Calculator inputs use plain signals, not Signal Forms**: they are controls, not a submitted form, so they follow the guide/checklist idiom (`[value]` + `(input)` over signals). The catch page's max HP is a `linkedSignal` on species and level, and current HP a `linkedSignal` on max HP that keeps its percentage — no `effect` is needed to sync them. |
 | 2026-09-15 | **Item pickup tracking becomes Phase 9** (user request), planned and implemented only after Phase 8. Items stay read-only until then (plan §13.5 unchanged for now). It is last because it needs a stable per-item-instance key from the pipeline, a `schemaVersion` 2 migration for `Profile`, and a decision on the export format — `PKG1` must never change, so items either stay out of export codes or need a `PKG2`. Items will not count towards any "caught" figure. Plan §16 gained the phase with its open design questions. |
+| 2026-09-23 | **Phase 7 choices (user):** add `@angular/service-worker`; self-host fonts with a download script and an icon **subset** (not npm font packages, not the full 3–4 MB icon font); the user runs Lighthouse themselves (no `npx lighthouse` here); build both optional extras, QR export (new dependency `qrcode-generator`) and swipe. |
+| 2026-09-23 | **Data files are a lazy asset group, not a `freshness` data group** (plan §13.10 changed). The JSON is a build output deployed with the app and checked against the app's `schemaVersion`, so caching it as a hashed asset keeps data and code on the same version and serves it cache-first. It updates with the app. |
+| 2026-09-23 | **Icons in code go through `icon('name')`** (`src/app/shared/icon.ts`; `CLAUDE.md` updated). The icon font subset only holds what `scripts/fonts/icon-names.ts` finds: literal `<mat-icon>` text, quoted names inside its interpolations, `icon: '…'` properties and `icon('…')` calls. `npm run fonts -- --check` fails verify when an icon is missing. The first scan found 3 icons chosen in code (`location_city`, `route`, `help`). |
+| 2026-09-23 | **The shell loads the snackbar on first use** (`shared/lazy-snack-bar.ts`, which resolves to `undefined` once the injector is destroyed), the save reminder is `@defer (on idle)`, and `mat-toolbar` became a plain `<header>`. The initial bundle went from 568 to 517 kB raw (138 kB compressed). |
+| 2026-09-23 | **Checklist grid keyboard model** (plan §13.9): one tab stop with a roving tabindex, arrow keys, Home and End. Space toggles; Enter opens details, so the tile's info link is `tabindex="-1"`. Tiles are `aria-disabled` (not `disabled`) without a matching profile, and the click is ignored. |
+| 2026-09-23 | Prettier isn't applied repo-wide: some committed files (Phase 5–6 tools, codec, mechanics) aren't in Prettier style, so `prettier --write` on a folder reformats unrelated files. Run it only on the files a step changes. |
 
 ## Session log
 
@@ -296,3 +327,4 @@ code), so it waits until they are stable.
 | 2026-09-15 | **Phase 4 accepted** by the user's manual browser check. No code changes beyond the three mobile layout fixes logged above. |
 | 2026-09-15 | Phase 5: `core/domain/export-codec.ts` (the `PKG1` contract — layout documented in the file header, CRC-16/CCITT-FALSE, hand-written base64url, forgiving input that accepts a full share link, whitespace and zero-width characters, and seven typed error kinds with user-ready messages), `core/domain/backup.ts` (the JSON backup, parsed through the same sanitizer the stored state uses), `features/profiles/export-dialog.ts` (code, copy code, copy link, `navigator.share`, clipboard fallback), `downloadBackup()` plus an Export menu action and an Import link on the profiles page, `features/import/import.page.ts` at `/import` (fragment prefill, live preview with the caught count and the beyond-dex warning, import as new or replace, backup restore), `shared/components/save-reminder.ts` in the app shell, a new `settings.changesSinceExport` counter, and an Import entry in the More menu. **Verification: `npm run verify` passes (286 pipeline tests, 196 app tests — 29 new, lint clean, build OK). Phase 5 acceptance needs the user's two-browser round trip.** |
 | 2026-09-16 | Phase 6 built. Cached and read the Bulbapedia rules pages (`Catch rate`, `Stat`, `Individual values`, `Shiny Pokémon`, `Experience`, `Effort values`, `Poké Ball`; open question 3 resolved) and checked the Safari rounding against pret. New framework-free `core/mechanics/`: `types.ts` (the generic `GenerationMechanics`/`CaptureFormula` contract), `gen1.ts` (exact capture odds by enumeration, Safari bait/rock, shake count, the Gen I–II stat formula, the derived HP DV, the DV solver, the Gen II Shiny rule, Stat Exp from base stats, sources) and `index.ts` (`mechanicsForGame`). New `features/tools/`: `/:game/tools/catch` and `/:game/tools/ivs` over the pure `catch-model.ts` and `iv-model.ts`, both driven entirely by the mechanics module. The Pokémon detail page lost its "arrives in Phase 6" note and gained the catch rate with a difficulty chip, a base-stat table, the quick catch grid and the Shiny transfer rule; the location page's catch-rate badge became a link into the calculator; the More menu gained both tools. **Verification: `npm run verify` passes (286 pipeline tests, 255 app tests — 59 new, lint clean, build OK). The initial-bundle budget warning (556 kB) is pre-existing. Phase 6 acceptance needs the user's browser check.**
+| 2026-09-23 | Phase 7 built (user choices: service worker, font subset script, user runs Lighthouse, QR + swipe).<br>Steps, each staged separately:<ul><li>**Settings page and dark mode:** every setting bound, the theme class and `theme-color` on `<html>`, `spriteScale`/`compactRows` on the location and checklist rows, contrast pairs enforced by the theme generator (all 7 seeds pass in light and dark), reduced motion for view transitions and scripted scrolls.</li><li>**Self-hosted fonts:** `npm run fonts` (Roboto in 4 subsets, 132 KB; 58-icon Material Symbols subset, 7 KB) with an offline `--check` in verify and the `icon()` marker. Google Fonts links removed; font credit on the About page.</li><li>**PWA:** `@angular/service-worker`, `ngsw-config.json`, the manifest, Poké Ball icons from `npm run icons` (pure Node PNG/ICO encoder), and the update prompt.</li><li>**QR export:** the export dialog, lazy `qrcode-generator` (6.6 KB gzipped chunk).</li><li>**Swipe** between locations (passive touch listeners).</li><li>**Bundle trim:** lazy snackbar, deferred save reminder, plain header.</li><li>**Accessibility:** the checklist grid roving tabindex, heading levels, specific page titles, global `.sr-only`.</li></ul>Found and fixed: `prettier --write src` reformatted 16 unrelated committed files (restored from HEAD); the lazy snackbar threw NG0205 after TestBed teardown (now resolves to `undefined`). **Verification: `npm run verify` passes (288 pipeline tests, 275 app tests, lint clean, fonts check clean, build OK). The only warning is the initial bundle, 16.8 kB over the raw 500 kB budget. No browser run: Phase 7 acceptance needs the user's offline check and Lighthouse.** |

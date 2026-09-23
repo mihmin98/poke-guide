@@ -17,6 +17,7 @@ import { LevelRange } from '../../shared/components/level-range';
 import { RateDisplay } from '../../shared/components/rate';
 import { Sprite } from '../../shared/components/sprite';
 import { TypeBadge } from '../../shared/components/type-badge';
+import { pageTitle } from '../../shared/page-title';
 import { mechanicsForGame } from '../../core/mechanics';
 import { unobtainableLabel } from '../checklist/checklist-model';
 import { catchDifficulty, catchRateFor } from '../location/location-model';
@@ -606,6 +607,13 @@ export class PokemonPage {
   readonly game = input.required<string>();
   /** A species slug, or a National Dex number. */
   readonly key = input.required<string>();
+
+  constructor() {
+    pageTitle(() => {
+      const name = this.view()?.species.name;
+      return name && `${name} · ${this.gameName()}`;
+    });
+  }
 
   protected readonly gameId = computed(() => this.game() as GameId);
   protected readonly gameName = computed(() => findGame(this.game())?.name ?? '');

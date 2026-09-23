@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { findMethod } from '../../core/games/methods';
+import { icon } from '../icon';
 
 /** The icon and label for an encounter method, from the method registry (plan §13.5). */
 @Component({
@@ -31,7 +32,7 @@ export class MethodIcon {
   readonly showLabel = input(false);
 
   private readonly definition = computed(() => findMethod(this.method()));
-  protected readonly icon = computed(() => this.definition()?.icon ?? 'help');
+  protected readonly icon = computed(() => this.definition()?.icon ?? icon('help'));
   protected readonly label = computed(() => this.definition()?.label ?? this.method());
   protected readonly ariaLabel = computed(() => (this.showLabel() ? null : this.label()));
 }

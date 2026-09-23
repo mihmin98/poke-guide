@@ -8,17 +8,21 @@ import {
 } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import type { Profile } from './core/domain/models';
 import { GAMES, findGame } from './core/games/registry';
 import { ProfileSwitcherService } from './core/profiles/profile-switcher.service';
 import { ProfileStore } from './core/profiles/profile.store';
 import { UndoSnackbarService } from './core/profiles/undo-snackbar.service';
+import { AppUpdateService } from './core/pwa/app-update.service';
 import { CurrentGameService } from './core/routing/current-game.service';
+import { SettingsStore } from './core/settings/settings.store';
 import { StorageService } from './core/storage/storage.service';
 import { SaveReminder } from './shared/components/save-reminder';
+import { LazySnackBar } from './shared/lazy-snack-bar';
+
+/** The toolbar color (`--mat-sys-surface-container`) per scheme, for `<meta name="theme-color">`. */
+const THEME_COLORS = { light: '#f9ebe9', dark: '#251e1d' } as const;
 
 interface NavItem {
   label: string;
@@ -36,7 +40,7 @@ interface ProfileItem {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink, MatToolbarModule, MatIconModule, MatMenuModule, SaveReminder],
+  imports: [RouterOutlet, RouterLink, MatIconModule, MatMenuModule, SaveReminder],
   templateUrl: './app.html',
   styleUrl: './app.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -47,7 +51,8 @@ export class App {
   private readonly undoSnackbar = inject(UndoSnackbarService);
   private readonly switcher = inject(ProfileSwitcherService);
   private readonly storage = inject(StorageService);
-  private readonly snackBar = inject(MatSnackBar);
+  private readonly theme = inject(SettingsStore).select('theme');
+  private readonly snackBar = inject(LazySnackBar);
 
   protected readonly game = this.currentGame.game;
   protected readonly activeProfile = this.profiles.activeProfile;
@@ -117,11 +122,25 @@ export class App {
 
   constructor() {
     // On <html> so overlays (menus, dialogs) outside <app-root> get the game's tokens too.
-    const rootElement = inject(DOCUMENT).documentElement;
+    const document = inject(DOCUMENT);
+    const rootElement = document.documentElement;
     effect(() => {
       const id = this.game()?.id;
       for (const game of GAMES) rootElement.classList.toggle(`game-${game.id}`, game.id === id);
     });
+    // `color-scheme` on <html> picks the light or dark half of every `light-dark()` token (plan §13.1).
+    effect(() => {
+      const theme = this.theme();
+      rootElement.classList.toggle('theme-light', theme === 'light');
+      rootElement.classList.toggle('theme-dark', theme === 'dark');
+      // index.html has one tag per OS scheme; a forced theme gives both the same color.
+      for (const meta of document.querySelectorAll<HTMLMetaElement>('meta[name="theme-color"]')) {
+        const scheme = meta.media.includes('dark') ? 'dark' : 'light';
+        meta.content = THEME_COLORS[theme === 'system' ? scheme : theme];
+      }
+    });
+
+    inject(AppUpdateService).start();
 
     // Saved state that could not be read (plan §11.5). `newer` is not data loss: the app is older
     // than the save, so the wording must not suggest the progress was thrown away.
@@ -137,7 +156,7 @@ export class App {
         recovery.reason === 'newer'
           ? `This copy of Poké Guide is older than your saved progress, so it started empty. ${backed}`
           : `Your saved progress could not be read, so Poké Guide started empty. ${backed}`;
-      this.snackBar.open(message, 'Dismiss');
+      void this.snackBar.open(message, 'Dismiss');
     });
   }
 }

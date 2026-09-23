@@ -8,6 +8,7 @@ import {
   signal,
   untracked,
 } from '@angular/core';
+import { NgTemplateOutlet } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { GameDataService } from '../../core/data/game-data.service';
@@ -19,12 +20,13 @@ import { CurrentGameService } from '../../core/routing/current-game.service';
 import { SettingsStore } from '../../core/settings/settings.store';
 import { ProgressRing } from '../../shared/components/progress-ring';
 import { Sprite } from '../../shared/components/sprite';
+import { scrollBehavior } from '../../shared/motion';
 import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide-model';
 
 /** `/:game/guide` (plan §13.4): every location in walkthrough order, with progress and filters. */
 @Component({
   selector: 'app-guide-page',
-  imports: [MatIconModule, RouterLink, RouterOutlet, ProgressRing, Sprite],
+  imports: [NgTemplateOutlet, MatIconModule, RouterLink, RouterOutlet, ProgressRing, Sprite],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { '[attr.data-detail]': 'hasDetail()' },
   template: `
@@ -110,20 +112,22 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
         }
 
         <section class="part" [id]="'part-' + part.part">
-          <h3 class="part-head">
-            <button
-              type="button"
-              [attr.aria-expanded]="!collapsed().has(part.part)"
-              [attr.aria-controls]="'part-body-' + part.part"
-              (click)="togglePart(part.part)"
-            >
-              <mat-icon aria-hidden="true">
-                {{ collapsed().has(part.part) ? 'expand_more' : 'expand_less' }}
-              </mat-icon>
-              <span class="part-title">Part {{ part.part }} · {{ part.title }}</span>
-              <span class="count">{{ part.caught }}/{{ part.total }}</span>
-            </button>
-          </h3>
+          <!-- Parts sit under region headings only when the game has several regions. -->
+          @if (showRegion()) {
+            <h3 class="part-head">
+              <ng-container
+                [ngTemplateOutlet]="partToggle"
+                [ngTemplateOutletContext]="{ $implicit: part }"
+              />
+            </h3>
+          } @else {
+            <h2 class="part-head">
+              <ng-container
+                [ngTemplateOutlet]="partToggle"
+                [ngTemplateOutletContext]="{ $implicit: part }"
+              />
+            </h2>
+          }
 
           @if (!collapsed().has(part.part)) {
             <ul class="cards" [id]="'part-body-' + part.part">
@@ -186,6 +190,21 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
     <div class="detail-pane">
       <router-outlet />
     </div>
+
+    <ng-template #partToggle let-part>
+      <button
+        type="button"
+        [attr.aria-expanded]="!collapsed().has(part.part)"
+        [attr.aria-controls]="'part-body-' + part.part"
+        (click)="togglePart(part.part)"
+      >
+        <mat-icon aria-hidden="true">
+          {{ collapsed().has(part.part) ? 'expand_more' : 'expand_less' }}
+        </mat-icon>
+        <span class="part-title">Part {{ part.part }} · {{ part.title }}</span>
+        <span class="count">{{ part.caught }}/{{ part.total }}</span>
+      </button>
+    </ng-template>
   `,
   styles: `
     :host {
@@ -505,8 +524,9 @@ export class GuidePage {
     const parts = this.parts();
     const target = parts.find((p) => p.part >= part) ?? parts.at(-1);
     if (!target) return;
-    this.document
-      .getElementById(`part-${target.part}`)
-      ?.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    const section = this.document.getElementById(`part-${target.part}`);
+    section?.scrollIntoView({ block: 'start', behavior: scrollBehavior(this.document) });
+    // Keyboard and screen-reader users land where the page scrolled to, on the part's toggle.
+    section?.querySelector<HTMLElement>('.part-head button')?.focus({ preventScroll: true });
   }
 }

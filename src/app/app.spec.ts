@@ -3,12 +3,17 @@ import { Router, provideRouter } from '@angular/router';
 import { App } from './app';
 import { routerFeatures } from './app.config';
 import { routes } from './app.routes';
+import { SettingsStore } from './core/settings/settings.store';
+import { STATE_STORAGE } from './core/storage/storage.service';
 
 describe('App shell', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [App],
-      providers: [provideRouter(routes, ...routerFeatures)],
+      providers: [
+        { provide: STATE_STORAGE, useValue: null },
+        provideRouter(routes, ...routerFeatures),
+      ],
     }).compileComponents();
   });
 
@@ -41,5 +46,30 @@ describe('App shell', () => {
   it('redirects unknown games to the game picker', async () => {
     await render('/green/guide');
     expect(TestBed.inject(Router).url).toBe('/games');
+  });
+
+  it('applies the theme setting to <html>, leaving "system" to the OS', async () => {
+    const metas = (['light', 'dark'] as const).map((scheme) => {
+      const meta = document.createElement('meta');
+      meta.name = 'theme-color';
+      meta.media = `(prefers-color-scheme: ${scheme})`;
+      return document.head.appendChild(meta);
+    });
+    await render('/games');
+    expect(metas.map((m) => m.content)).toEqual(['#f9ebe9', '#251e1d']);
+    const root = document.documentElement.classList;
+    expect([root.contains('theme-light'), root.contains('theme-dark')]).toEqual([false, false]);
+
+    const settings = TestBed.inject(SettingsStore);
+    settings.set('theme', 'dark');
+    TestBed.tick();
+    expect([root.contains('theme-light'), root.contains('theme-dark')]).toEqual([false, true]);
+    // The browser chrome follows the forced theme whatever the OS scheme is.
+    expect(metas.map((m) => m.content)).toEqual(['#251e1d', '#251e1d']);
+
+    settings.set('theme', 'light');
+    TestBed.tick();
+    expect([root.contains('theme-light'), root.contains('theme-dark')]).toEqual([true, false]);
+    metas.forEach((m) => m.remove());
   });
 });

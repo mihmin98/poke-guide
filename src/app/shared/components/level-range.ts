@@ -34,13 +34,6 @@ export function formatLevelValues(levels: LevelSpec | null | undefined): string 
       white-space: nowrap;
       font-variant-numeric: tabular-nums;
     }
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip-path: inset(50%);
-    }
   `,
 })
 export class LevelRange {

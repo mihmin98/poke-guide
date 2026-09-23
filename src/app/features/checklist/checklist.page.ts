@@ -10,7 +10,7 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
 import { GameDataService } from '../../core/data/game-data.service';
 import type { GameId, PokemonType } from '../../core/domain/models';
@@ -23,6 +23,7 @@ import { GameMismatchBanner } from '../../shared/components/game-mismatch-banner
 import { ProgressRing } from '../../shared/components/progress-ring';
 import { Sprite } from '../../shared/components/sprite';
 import { TypeBadge } from '../../shared/components/type-badge';
+import { columnCount, gridMove } from '../../shared/roving-grid';
 import { ConfirmDialog, type ConfirmDialogData } from '../profiles/profile-dialogs';
 import {
   buildChecklistView,
@@ -233,26 +234,40 @@ const STATUSES: readonly { id: ChecklistStatus; label: string }[] = [
       @if (view().rows.length === 0) {
         <p class="status">No Pokémon matches these filters.</p>
       } @else if (mode() === 'grid') {
-        <ul class="grid">
-          @for (row of view().rows; track row.dex) {
+        <p id="grid-keys" class="sr-only">
+          Arrow keys move between Pokémon, Space marks one as caught, Enter opens its details.
+        </p>
+        <ul class="grid" aria-describedby="grid-keys">
+          @for (row of view().rows; track row.dex; let index = $index) {
             <li class="tile" [class.caught]="row.caught">
+              <!-- aria-disabled rather than disabled, so the grid stays reachable by keyboard. -->
               <button
                 type="button"
                 role="checkbox"
                 [attr.aria-checked]="row.caught"
                 [attr.aria-label]="row.name + (row.caught ? ', caught' : ', not caught')"
-                [disabled]="!canEdit()"
-                (click)="toggle(row)"
+                [attr.aria-disabled]="!canEdit()"
+                [attr.tabindex]="index === activeTile() ? 0 : -1"
+                (focus)="focusedTile.set(index)"
+                (keydown)="onTileKey($event, index, row)"
+                (click)="canEdit() && toggle(row)"
               >
-                <app-sprite [dex]="row.dex" [game]="gameId()" [dimmed]="!row.caught" [size]="56" />
+                <app-sprite
+                  [dex]="row.dex"
+                  [game]="gameId()"
+                  [dimmed]="!row.caught"
+                  [size]="tileSprite()"
+                />
                 <span class="num">#{{ pad(row.dex) }}</span>
                 <span class="name">{{ row.name }}</span>
                 @if (row.caught) {
                   <mat-icon class="mark" aria-hidden="true">check_circle</mat-icon>
                 }
               </button>
+              <!-- Enter on the tile opens the same page, so the link is left out of the tab order. -->
               <a
                 class="info"
+                tabindex="-1"
                 [routerLink]="['/', game(), 'pokemon', row.slug]"
                 [attr.aria-label]="'Details for ' + row.name"
               >
@@ -262,11 +277,16 @@ const STATUSES: readonly { id: ChecklistStatus; label: string }[] = [
           }
         </ul>
       } @else {
-        <ul class="list">
+        <ul class="list" [class.compact]="compact()">
           @for (row of view().rows; track row.dex) {
             <li class="row">
               <app-catch-toggle [dex]="row.dex" [game]="gameId()" [name]="row.name" />
-              <app-sprite [dex]="row.dex" [game]="gameId()" [dimmed]="!row.caught" [size]="40" />
+              <app-sprite
+                [dex]="row.dex"
+                [game]="gameId()"
+                [dimmed]="!row.caught"
+                [size]="rowSprite()"
+              />
               <span class="num">#{{ pad(row.dex) }}</span>
               <a class="name" [routerLink]="['/', game(), 'pokemon', row.slug]">{{ row.name }}</a>
               <span class="types">
@@ -327,10 +347,15 @@ const STATUSES: readonly { id: ChecklistStatus; label: string }[] = [
           <summary>
             Not obtainable in {{ gameName() }} without trading ({{ view().unobtainable.length }})
           </summary>
-          <ul class="list">
+          <ul class="list" [class.compact]="compact()">
             @for (row of view().unobtainable; track row.dex) {
               <li class="row">
-                <app-sprite [dex]="row.dex" [game]="gameId()" [dimmed]="true" [size]="40" />
+                <app-sprite
+                  [dex]="row.dex"
+                  [game]="gameId()"
+                  [dimmed]="true"
+                  [size]="rowSprite()"
+                />
                 <span class="num">#{{ pad(row.dex) }}</span>
                 <a class="name" [routerLink]="['/', game(), 'pokemon', row.slug]">{{ row.name }}</a>
                 <span class="where">
@@ -520,7 +545,7 @@ const STATUSES: readonly { id: ChecklistStatus; label: string }[] = [
       color: inherit;
       cursor: pointer;
     }
-    .tile > button:disabled {
+    .tile [aria-disabled='true'] {
       cursor: not-allowed;
     }
     .tile .num {
@@ -565,6 +590,10 @@ const STATUSES: readonly { id: ChecklistStatus; label: string }[] = [
       gap: 4px 8px;
       padding: 4px 0;
       border-bottom: 1px solid var(--mat-sys-outline-variant);
+    }
+    .list.compact .row {
+      padding: 0;
+      gap: 0 8px;
     }
     .row .name {
       min-width: 0;
@@ -627,6 +656,7 @@ export class ChecklistPage {
   private readonly settings = inject(SettingsStore);
   private readonly dialog = inject(MatDialog);
   private readonly undoSnackbar = inject(UndoSnackbarService);
+  private readonly router = inject(Router);
 
   /** Route param, bound by `withComponentInputBinding`. */
   readonly game = input.required<string>();
@@ -651,9 +681,21 @@ export class ChecklistPage {
   protected readonly onlyAvailable = signal(false);
   protected readonly mode = signal<'grid' | 'list'>('grid');
   protected readonly expanded = signal<ReadonlySet<number>>(new Set());
+  /** The grid's single tab stop; clamped when filters shorten the list. */
+  protected readonly focusedTile = signal(0);
+  protected readonly activeTile = computed(() =>
+    Math.max(0, Math.min(this.focusedTile(), this.view().rows.length - 1)),
+  );
 
   /** The sort is a global setting, so it survives navigation and reloads. */
   protected readonly sort = this.settings.select('checklistSort');
+  protected readonly compact = this.settings.select('compactRows');
+  protected readonly tileSprite = computed(() =>
+    this.settings.settings().spriteScale === 3 ? 72 : 56,
+  );
+  protected readonly rowSprite = computed(() =>
+    this.settings.settings().spriteScale === 3 ? 56 : 40,
+  );
   protected readonly canEdit = computed(() => this.profiles.canEditCatches(this.gameId()));
   protected readonly walkthrough = computed(() => this.data().view()?.walkthrough ?? []);
   protected readonly allTypes = computed(() => this.data().data()?.types ?? []);
@@ -746,6 +788,21 @@ export class ChecklistPage {
     const next = new Set(this.expanded());
     if (!next.delete(dex)) next.add(dex);
     this.expanded.set(next);
+  }
+
+  protected onTileKey(event: KeyboardEvent, index: number, row: ChecklistRow): void {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      void this.router.navigate(['/', this.game(), 'pokemon', row.slug]);
+      return;
+    }
+    const grid = (event.currentTarget as HTMLElement).closest('ul');
+    const tiles = [...(grid?.querySelectorAll<HTMLElement>(':scope > li > button') ?? [])];
+    const next = gridMove(event.key, index, tiles.length, columnCount(tiles));
+    if (next === null) return;
+    event.preventDefault();
+    this.focusedTile.set(next);
+    tiles[next]?.focus();
   }
 
   protected toggle(row: ChecklistRow): void {

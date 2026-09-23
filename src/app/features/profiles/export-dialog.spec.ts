@@ -86,4 +86,28 @@ describe('ExportDialog (plan §12.3)', () => {
     expect(link).toContain('/import#PKG1-');
     expect(decodeProfile(new URL(link).hash.slice(1)).ok).toBe(true);
   });
+
+  it('shows the share link as a QR code on request', async () => {
+    const { fixture, el } = render();
+    expect(el.querySelector('svg.qr')).toBeNull();
+    const button = [...el.querySelectorAll<HTMLButtonElement>('.actions button')].find((b) =>
+      b.textContent?.includes('QR code'),
+    )!;
+    expect(button.getAttribute('aria-expanded')).toBe('false');
+
+    button.click();
+    await fixture.whenStable();
+    const svg = el.querySelector('svg.qr')!;
+    expect(svg.getAttribute('aria-label')).toBe('QR code of the share link');
+    // A link of this length needs a version 5–7 code (37–45 modules) plus the quiet zone.
+    const size = Number(svg.getAttribute('viewBox')!.split(' ')[2]);
+    expect(size).toBeGreaterThanOrEqual(37 + 8);
+    expect(size).toBeLessThanOrEqual(45 + 8);
+    expect(svg.querySelector('path')!.getAttribute('d')).toMatch(/^M\d/);
+    expect(button.getAttribute('aria-expanded')).toBe('true');
+
+    button.click();
+    fixture.detectChanges();
+    expect(el.querySelector('svg.qr')).toBeNull();
+  });
 });

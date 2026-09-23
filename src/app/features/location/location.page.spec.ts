@@ -1,6 +1,6 @@
 import { signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { provideRouter } from '@angular/router';
+import { Router, provideRouter } from '@angular/router';
 import { routerFeatures } from '../../app.config';
 import { routes } from '../../app.routes';
 import { GameDataService } from '../../core/data/game-data.service';
@@ -13,6 +13,7 @@ import {
   testSpecies,
 } from '../../core/domain/testing/test-data';
 import { ProfileStore } from '../../core/profiles/profile.store';
+import { SettingsStore } from '../../core/settings/settings.store';
 import { STATE_STORAGE } from '../../core/storage/storage.service';
 import { LocationPage } from './location.page';
 
@@ -105,6 +106,8 @@ describe('LocationPage (plan §13.5)', () => {
 
   it('shows the header, the Bulbapedia source at its revid and the neighbours', () => {
     const { el } = render();
+    TestBed.tick();
+    expect(document.title).toBe('Route 2 · Pokémon Red · Poké Guide');
     expect(el.querySelector('h1')?.textContent).toBe('Route 2');
     expect(el.querySelector('.meta')?.textContent).toContain('Part 2');
     expect(el.querySelector('.meta a')?.getAttribute('href')).toBe(
@@ -134,6 +137,13 @@ describe('LocationPage (plan §13.5)', () => {
     const tabs = [...el.querySelectorAll<HTMLButtonElement>('[role="tab"]')];
     expect(tabs.map((t) => t.textContent?.trim())).toEqual(['All', 'Main area', 'Water']);
     expect(el.querySelectorAll('.row:not(.item)').length).toBe(2);
+
+    // Method headings nest under an area heading only where one is shown (the unnamed main area has none).
+    expect([...el.querySelectorAll('.area h2, .area h3')].map((h) => h.tagName)).toEqual([
+      'H2',
+      'H2',
+      'H3',
+    ]);
 
     tabs[2]!.click();
     fixture.detectChanges();
@@ -184,6 +194,51 @@ describe('LocationPage (plan §13.5)', () => {
     showHidden.click();
     fixture.detectChanges();
     expect(el.querySelector('.row.item')).toBeNull();
+  });
+
+  it('follows the rate, sprite size and compact-row settings', () => {
+    const settings = TestBed.inject(SettingsStore);
+    const { fixture, el } = render();
+    expect(el.querySelector('.row app-sprite img')?.getAttribute('width')).toBe('40');
+    expect(el.querySelector('.rows')?.classList.contains('compact')).toBe(false);
+
+    settings.set('showRates', false);
+    settings.set('showCatchRates', false);
+    settings.set('spriteScale', 3);
+    settings.set('compactRows', true);
+    fixture.detectChanges();
+    const row = el.querySelector('.row')!;
+    expect(row.querySelector('app-rate')).toBeNull();
+    expect(row.querySelector('.cr')).toBeNull();
+    expect(row.querySelector('app-sprite img')?.getAttribute('width')).toBe('56');
+    expect(el.querySelector('.rows')?.classList.contains('compact')).toBe(true);
+  });
+
+  it('swipes to the neighbouring locations in walkthrough order', () => {
+    const navigate = vi.spyOn(TestBed.inject(Router), 'navigate').mockResolvedValue(true);
+    const { el } = render();
+    /** jsdom has no Touch constructor, so the touch lists are attached by hand. */
+    const touch = (type: 'touchstart' | 'touchend', x: number) => {
+      const point = [{ clientX: x, clientY: 300 }];
+      const event = new Event(type);
+      Object.defineProperty(event, 'touches', { value: type === 'touchstart' ? point : [] });
+      Object.defineProperty(event, 'changedTouches', { value: point });
+      el.dispatchEvent(event);
+    };
+    const swipe = (from: number, to: number) => {
+      touch('touchstart', from);
+      touch('touchend', to);
+    };
+
+    swipe(200, 400);
+    expect(navigate).toHaveBeenLastCalledWith(['/', 'red', 'guide', 'route-1']);
+    navigate.mockClear();
+    // Route 2 is the last location, so there is nothing to the left of it.
+    swipe(400, 200);
+    expect(navigate).not.toHaveBeenCalled();
+    // A touch from the screen edge is the browser's own back gesture.
+    swipe(5, 300);
+    expect(navigate).not.toHaveBeenCalled();
   });
 
   it('explains a location that is not in this game', () => {

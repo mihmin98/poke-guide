@@ -14,13 +14,15 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "theme:games": "tsx scripts/theme/generate-game-themes.ts",
+    "fonts": "tsx scripts/fonts/fonts.ts",
+    "icons": "tsx scripts/icons/generate-icons.ts",
     "data:fixtures": "tsx scripts/data/capture-fixtures.ts --group rby",
     "data:build": "tsx scripts/data/build.ts --group rby",
     "data:build:all": "tsx scripts/data/build.ts --all",
     "data:refresh": "tsx scripts/data/build.ts --group rby --refresh",
     "data:offline": "tsx scripts/data/build.ts --group rby --offline",
     "data:sprites": "tsx scripts/data/sprites.ts --group rby",
-    "verify": "npm run theme:games -- --check && npm run lint && npm run typecheck:scripts && npm run test:scripts && npm run test:ci && ng build"
+    "verify": "npm run theme:games -- --check && npm run fonts -- --check && npm run lint && npm run typecheck:scripts && npm run test:scripts && npm run test:ci && ng build"
   },
   "private": true,
   "packageManager": "npm@11.19.1",
@@ -33,6 +35,8 @@
     "@angular/material": "^22.1.6",
     "@angular/platform-browser": "^22.1.0",
     "@angular/router": "^22.1.0",
+    "@angular/service-worker": "^22.1.6",
+    "qrcode-generator": "^2.0.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

@@ -66,6 +66,9 @@ describe('GuidePage (plan §13.4)', () => {
     expect(el.querySelector('.name')?.textContent?.trim()).toBe('Route 1');
     expect(el.querySelectorAll('app-sprite').length).toBe(2);
     expect(el.querySelector('.card')?.getAttribute('href')).toBe('/red/guide/route-1');
+    // One region, so no region headings: parts follow the <h1> directly as <h2>s.
+    expect(el.querySelector('h2.part-head')).not.toBeNull();
+    expect(el.querySelector('h3.part-head')).toBeNull();
   });
 
   it('counts caught species and updates as soon as a catch is toggled', () => {

@@ -21,6 +21,12 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       links to its source page.
     </p>
 
+    <h2>Fonts</h2>
+    <p>
+      Text is set in Roboto (SIL Open Font License 1.1) and icons come from Material Symbols (Apache
+      License 2.0), both by Google and served from this site.
+    </p>
+
     <h2>Disclaimer</h2>
     <p>
       Poké Guide is an unofficial fan project. It is not affiliated with or endorsed by Nintendo,

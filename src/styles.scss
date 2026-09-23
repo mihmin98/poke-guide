@@ -1,4 +1,5 @@
 @use '@angular/material' as mat;
+@use './theme/fonts.generated';
 @use './theme/game-themes.generated';
 @use './theme/type-colors.generated';
 
@@ -116,6 +117,16 @@ h3 {
   }
 }
 
+// Text for screen readers only (labels, keyboard hints). Shared by every component.
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
 .skip-link {
   position: absolute;
   left: 8px;
@@ -139,5 +150,12 @@ h3 {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  // Route changes use view transitions; their pseudo-elements aren't matched by `*` above.
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
   }
 }

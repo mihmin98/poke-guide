@@ -8,6 +8,7 @@ import type {
   Species,
 } from '../../core/domain/models';
 import { ENCOUNTER_METHODS, type EncounterMethodCategory } from '../../core/games/methods';
+import { icon } from '../../shared/icon';
 
 const CATEGORY_LABELS: Record<EncounterMethodCategory, string> = {
   wild: 'Walking',
@@ -26,12 +27,12 @@ export function categoryLabel(category: EncounterMethodCategory): string {
 }
 
 const KIND_ICONS: Record<LocationKind, string> = {
-  town: 'location_city',
-  route: 'route',
-  cave: 'landscape',
-  building: 'apartment',
-  water: 'waves',
-  special: 'star',
+  town: icon('location_city'),
+  route: icon('route'),
+  cave: icon('landscape'),
+  building: icon('apartment'),
+  water: icon('waves'),
+  special: icon('star'),
 };
 
 export function locationIcon(kind: LocationKind): string {

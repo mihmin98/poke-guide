@@ -91,6 +91,8 @@ describe('PokemonPage (plan §13.7)', () => {
 
   it('shows the species header and its facts', () => {
     const { el } = render();
+    TestBed.tick();
+    expect(document.title).toBe('Pidgey · Pokémon Red · Poké Guide');
     expect(el.querySelector('h1')?.textContent).toBe('Pidgey');
     expect(el.querySelector('.num')?.textContent).toBe('#016');
     expect([...el.querySelectorAll('app-type-badge')][0]?.textContent?.trim()).toBe('Normal');

@@ -1,6 +1,6 @@
 <a class="skip-link" href="#main">Skip to content</a>
 
-<mat-toolbar class="top-bar">
+<header class="top-bar">
   <a class="brand" routerLink="/games">Poké Guide</a>
   @if (game(); as g) {
     <a
@@ -25,7 +25,7 @@
     <mat-icon aria-hidden="true">account_circle</mat-icon>
     <span>{{ activeProfile()?.name ?? 'No profile' }}</span>
   </button>
-</mat-toolbar>
+</header>
 
 <mat-menu #profileMenu="matMenu">
   @for (item of profileItems(); track item.profile.id) {
@@ -72,7 +72,10 @@
   </nav>
 
   <main id="main" tabindex="-1">
-    <app-save-reminder />
+    <!-- Rarely shown, so its code loads once the page is idle rather than with the shell. -->
+    @defer (on idle) {
+      <app-save-reminder />
+    }
     <router-outlet />
     <footer class="attribution">
       Encounter data from

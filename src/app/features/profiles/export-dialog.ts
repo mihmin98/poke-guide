@@ -1,4 +1,12 @@
-import { ChangeDetectionStrategy, Component, DOCUMENT, computed, inject, signal } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  DOCUMENT,
+  computed,
+  inject,
+  resource,
+  signal,
+} from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
@@ -6,6 +14,7 @@ import { encodeProfile } from '../../core/domain/export-codec';
 import type { Profile } from '../../core/domain/models';
 import { findGame } from '../../core/games/registry';
 import { SettingsStore } from '../../core/settings/settings.store';
+import { linkQrCode } from './qr-svg';
 
 export interface ExportDialogData {
   profile: Profile;
@@ -39,8 +48,8 @@ async function copyText(document: Document, text: string): Promise<boolean> {
     <h2 mat-dialog-title>Export “{{ data.profile.name }}”</h2>
     <mat-dialog-content>
       <p class="sub">
-        This code holds {{ data.profile.caught.length }} caught Pokémon for
-        {{ gameName() }}. Paste it into Poké Guide on another device, or keep it somewhere safe.
+        This code holds {{ data.profile.caught.length }} caught Pokémon for {{ gameName() }}. Paste
+        it into Poké Guide on another device, or keep it somewhere safe.
       </p>
 
       <label class="field">
@@ -62,6 +71,38 @@ async function copyText(document: Document, text: string): Promise<boolean> {
             <mat-icon aria-hidden="true">share</mat-icon>
             Share…
           </button>
+        }
+        <button
+          matButton
+          type="button"
+          [attr.aria-expanded]="showQr()"
+          aria-controls="export-qr"
+          (click)="showQr.set(!showQr())"
+        >
+          <mat-icon aria-hidden="true">qr_code_2</mat-icon>
+          {{ showQr() ? 'Hide QR code' : 'QR code' }}
+        </button>
+      </div>
+
+      <div id="export-qr">
+        @if (showQr()) {
+          @if (qr.value(); as code) {
+            <svg
+              class="qr"
+              role="img"
+              aria-label="QR code of the share link"
+              shape-rendering="crispEdges"
+              [attr.viewBox]="'0 0 ' + code.size + ' ' + code.size"
+            >
+              <rect [attr.width]="code.size" [attr.height]="code.size" fill="#fff" />
+              <path [attr.d]="code.path" fill="#000" />
+            </svg>
+            <p class="sub">
+              Scan it with the other device's camera to open the import page with this code.
+            </p>
+          } @else if (qr.error()) {
+            <p class="status" role="status">The QR code could not be created.</p>
+          }
         }
       </div>
 
@@ -106,17 +147,16 @@ async function copyText(document: Document, text: string): Promise<boolean> {
       flex-wrap: wrap;
       gap: 8px;
     }
+    .qr {
+      display: block;
+      width: min(100%, 240px);
+      margin: 0 auto;
+      border-radius: 8px;
+    }
     .status {
       margin: 0;
       color: var(--mat-sys-primary);
       font: var(--mat-sys-body-small);
-    }
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip-path: inset(50%);
     }
   `,
 })
@@ -136,6 +176,13 @@ export class ExportDialog {
     () => `${new URL('import', this.document.baseURI).href}#${this.code()}`,
   );
   protected readonly canShare = computed(() => typeof navigator.share === 'function');
+
+  protected readonly showQr = signal(false);
+  /** Idle until the QR code is first shown, so the generator stays out of the dialog's chunk. */
+  protected readonly qr = resource({
+    params: () => (this.showQr() ? this.link() : undefined),
+    loader: ({ params: link }) => linkQrCode(link),
+  });
 
   protected selectAll(event: Event): void {
     (event.target as HTMLTextAreaElement).select();

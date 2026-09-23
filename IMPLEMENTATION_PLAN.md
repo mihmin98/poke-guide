@@ -974,6 +974,9 @@ For Red, Blue and Yellow, Bulbapedia's walkthrough parts are **the same**:
 - Scaffolded with `npx @angular/cli@22.1.8 new poke-guide --directory . --skip-git --commit=false --style=scss --routing --ssr=false --zoneless --test-runner=vitest --package-manager=npm --ai-config=none`. Standalone, strict and the 2025 file-name style are CLI defaults.
 - `ng add @angular/material` (M3, custom theme), `ng add @angular/pwa` (Phase 7), `angular-eslint`, Prettier, and `strict: true` plus `noUncheckedIndexedAccess: true` in the tsconfig.
 - Budgets: initial bundle < 350 KB (compressed). Data files are loaded separately and lazily.
+  - Measured 2026-09-23: **138 KB compressed** (517 KB raw). The Angular CLI budget in `angular.json` counts raw bytes (500 kB warning).
+  - Phase 7 moved the snackbar (loaded on first use through `shared/lazy-snack-bar.ts`), the save reminder (`@defer (on idle)`) and `mat-toolbar` out of the shell.
+  - What remains of Material/CDK in the shell is the two `mat-menu`s (CDK overlay plus menu, about 80 KB raw).
 
 ### 11.2 App config
 ```ts
@@ -1090,7 +1093,7 @@ Binary layout, before encoding (all integers little-endian):
 
 ### 12.3 Export UI
 - A dialog shows the code in a read-only monospace field, plus **Copy code**, **Copy link** and **Share…** (`navigator.share`).
-- *Optional (Phase 7):* a QR code of the share link, from a lazy-loaded small library.
+- *Optional (Phase 7), done 2026-09-23:* a **QR code** button shows the share link as a QR code. `qrcode-generator` (MIT, no dependencies) is loaded through a signal `resource` only when the code is first shown, and the code is drawn as one SVG path, dark on white even in dark mode. Scanning it opens `/import#PKG1-…` on the other device.
 - **Full backup:** "Download all profiles (JSON)" produces `{app:'poke-guide', schemaVersion, exportedAt, profiles}`. It can be restored from the Import page.
 
 ### 12.4 Import UI
@@ -1112,6 +1115,16 @@ Binary layout, before encoding (all integers little-endian):
 - Type color tokens exist for **all 18 types**, each with a text color picked for WCAG AA contrast.
 - Sprites use `image-rendering: pixelated` and a fixed size (no layout shift).
 - Respect `prefers-reduced-motion`.
+- Implementation (2026-09-23):
+  - `SettingsStore.theme` sets `theme-light`/`theme-dark` on `<html>`. That sets `color-scheme`, which picks one half of every `light-dark()` token. `<meta name="theme-color">` (one tag per OS scheme) follows a forced theme.
+  - The theme generator fails when a seed breaks a contrast pair the app uses, in light or dark:
+    - 4.5:1 for text on primary, the containers, surface and surface-container-highest;
+    - 3:1 for `outline`.
+  - Reduced motion: Material checks the media query itself. A global CSS rule covers component transitions and the router's view-transition pseudo-elements. Scripted scrolls go through `shared/motion.ts` `scrollBehavior()`.
+  - Fonts are self-hosted (`npm run fonts`, `src/theme/fonts/`, see `CLAUDE.md`):
+    - Roboto variable 400–700, with only the `latin`, `latin-ext`, `symbols` (♀ ♂) and `math` subsets.
+    - A Material Symbols Outlined file cut down to the icons the app uses (about 7 KB).
+    - `--check` in `verify` fails when a used icon is missing from the subset.
 
 ### 13.2 Layout and breakpoints
 | Width | Navigation | Guide layout |
@@ -1203,11 +1216,23 @@ Binary layout, before encoding (all integers little-endian):
 - Type badges and condition chips show text, not only color or an icon.
 - Keyboard: roving tabindex in lists, Space toggles, Enter opens details, and focus is restored when sheets or dialogs close.
 - Component tests cover labels, roles and keyboard behavior. Rendered-page accessibility is checked by hand in the browser's accessibility tools (there is no e2e suite, see §14).
+- Implementation (2026-09-23):
+  - The checklist grid is one tab stop (`shared/roving-grid.ts`): arrow keys, Home and End move between tiles, Space toggles, Enter opens the details. The info link is out of the tab order.
+  - Tiles use `aria-disabled` rather than `disabled` without a matching profile, so the grid stays reachable by keyboard.
+  - Heading levels never skip: part and method headings are `<h2>` when no region or area heading is shown above them.
+  - Location and Pokémon pages set a specific document title (`shared/page-title.ts`).
+  - `.sr-only` is a global utility.
 
 ### 13.10 Offline / PWA (Phase 7)
-- `ngsw-config.json`: the app shell is cached `prefetch`. `data/*.json` and sprites are cached `lazy` with `freshness`, so only the games you open are cached.
-- A manifest with a game-neutral theme color and maskable icons.
-- A "New data available · Reload" prompt via `SwUpdate`.
+- `ngsw-config.json`: the app shell (JS, CSS, fonts under `/media/`) is cached `prefetch`.
+  - **Changed 2026-09-23:** `data/*.json` is a `lazy` **asset group** (`updateMode: prefetch`), not a `freshness` data group. The data files are build outputs deployed with the app, and the app rejects a file whose `schemaVersion` doesn't match. As hashed assets they are always the version that shipped with the running code, served cache-first, and refreshed with the next app version. Only the games you open are cached.
+  - Sprites and icons are a `lazy` asset group.
+- A manifest (`public/manifest.webmanifest`, relative URLs so it works under the Pages sub-path) with the neutral shell color `#f9ebe9` (the base theme's `surface-container`) and maskable icons.
+  - The icons are a Poké Ball drawn by `npm run icons` (`scripts/icons/generate-icons.ts`): anti-aliased shapes encoded as PNG with Node's zlib, with no image dependency.
+- An update prompt via `SwUpdate` (`core/pwa/app-update.service.ts`):
+  - "A new version of Poké Guide is ready · Reload", flushing pending storage writes before reloading.
+  - A reload prompt on an unrecoverable cache state.
+  - An update check whenever the page becomes visible again.
 
 ### 13.11 Catch and IV tools (`/:game/tools/…`)
 Both tools are generic screens driven by `GenerationMechanics` (§4.5). Only the Gen I module is built at first.
@@ -1324,9 +1349,9 @@ Each phase ends with a working local state and its acceptance criteria met. **No
 - **Accept when:** calculator results match hand-worked examples from Bulbapedia's formulas, and every species shows the correct Gen I catch rate and base stats.
 
 ### Phase 7 — Polish, accessibility, PWA
-- [ ] Dark mode, generated game accents checked for contrast, reduced motion.
-- [ ] Service worker, manifest, update prompt.
-- [ ] Optional: QR export, swipe between locations.
+- [x] Dark mode, generated game accents checked for contrast, reduced motion. (Plus the Settings page binding every setting.)
+- [x] Service worker, manifest, update prompt. (Plus self-hosted fonts and generated icons.)
+- [x] Optional: QR export (`qrcode-generator`, loaded lazily; the QR code holds the share link), swipe between locations (passive touch listeners, `shared/swipe.ts`).
 - [ ] Manual accessibility check clean. Lighthouse (local production build, mobile): Performance ≥ 90, Accessibility ≥ 95.
 - **Accept when:** the production build works offline after the first load, and the Lighthouse targets are met.
 

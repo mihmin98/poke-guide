@@ -11,7 +11,7 @@ import {
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
 import { GameDataService } from '../../core/data/game-data.service';
 import type { GameId, LocationItem } from '../../core/domain/models';
@@ -27,6 +27,8 @@ import { MethodIcon } from '../../shared/components/method-icon';
 import { RateDisplay } from '../../shared/components/rate';
 import { Sprite } from '../../shared/components/sprite';
 import { TypeBadge } from '../../shared/components/type-badge';
+import { pageTitle } from '../../shared/page-title';
+import { onHorizontalSwipe, type SwipeDirection } from '../../shared/swipe';
 import { ConfirmDialog, type ConfirmDialogData } from '../profiles/profile-dialogs';
 import {
   buildLocationView,
@@ -128,15 +130,26 @@ const ALL_SUB_AREAS = '__all__';
 
           @for (section of area.sections; track section.method.id) {
             @if (rowsOf(section.rows).length) {
-              <h3 class="method">
-                <app-method-icon [method]="section.method.id" [showLabel]="true" />
-              </h3>
+              @if (area.name && v.subAreas.length > 1) {
+                <h3 class="method">
+                  <app-method-icon [method]="section.method.id" [showLabel]="true" />
+                </h3>
+              } @else {
+                <h2 class="method">
+                  <app-method-icon [method]="section.method.id" [showLabel]="true" />
+                </h2>
+              }
 
-              <ul class="rows">
+              <ul class="rows" [class.compact]="compact()">
                 @for (row of rowsOf(section.rows); track row.key) {
                   <li class="row">
                     <app-catch-toggle [dex]="row.dex" [game]="gameId()" [name]="row.name" />
-                    <app-sprite [dex]="row.dex" [game]="gameId()" [name]="row.name" [size]="40" />
+                    <app-sprite
+                      [dex]="row.dex"
+                      [game]="gameId()"
+                      [name]="row.name"
+                      [size]="spriteSize()"
+                    />
 
                     <span class="who">
                       <span class="name">
@@ -404,6 +417,13 @@ const ALL_SUB_AREAS = '__all__';
       border-radius: 12px;
       background: var(--mat-sys-surface-container-low);
     }
+    .rows.compact {
+      gap: 2px;
+    }
+    .rows.compact .row {
+      padding: 0 8px;
+      gap: 0 8px;
+    }
     app-catch-toggle {
       grid-area: toggle;
     }
@@ -531,10 +551,20 @@ export class LocationPage {
   private readonly settings = inject(SettingsStore);
   private readonly dialog = inject(MatDialog);
   private readonly undoSnackbar = inject(UndoSnackbarService);
+  private readonly router = inject(Router);
 
   /** Route params, bound by `withComponentInputBinding`. */
   readonly game = input.required<string>();
   readonly locationId = input.required<string>();
+
+  constructor() {
+    // Touch screens: swipe left for the next location in walkthrough order, right for the previous.
+    onHorizontalSwipe((direction) => this.goToNeighbour(direction));
+    pageTitle(() => {
+      const name = this.view()?.location.name;
+      return name && `${name} · ${this.gameName()}`;
+    });
+  }
 
   protected readonly all = ALL_SUB_AREAS;
   protected readonly gameId = computed(() => this.game() as GameId);
@@ -558,6 +588,10 @@ export class LocationPage {
 
   protected readonly showRates = this.settings.select('showRates');
   protected readonly showCatchRates = this.settings.select('showCatchRates');
+  protected readonly compact = this.settings.select('compactRows');
+  protected readonly spriteSize = computed(() =>
+    this.settings.settings().spriteScale === 3 ? 56 : 40,
+  );
   protected readonly canEdit = computed(() => this.profiles.canEditCatches(this.gameId()));
 
   protected readonly view = computed(() => {
@@ -646,5 +680,11 @@ export class LocationPage {
       `Marked ${dexes.length} Pokémon at ${this.view()?.location.name ?? 'this location'} as caught`,
     );
     void this.undoSnackbar.show();
+  }
+
+  private goToNeighbour(direction: SwipeDirection): void {
+    const view = this.view();
+    const target = direction === 'left' ? view?.next : view?.previous;
+    if (target) void this.router.navigate(['/', this.game(), 'guide', target.id]);
   }
 }

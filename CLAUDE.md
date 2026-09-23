@@ -38,7 +38,7 @@ Node 26.8.2 is managed with **nvm** (`.nvmrc`). Node is already on the PATH, inc
 
 ```bash
 npm start                       # ng serve (http://localhost:4200)
-npm run verify                  # local quality gate: theme check + lint + scripts typecheck + unit tests + production build
+npm run verify                  # local quality gate: theme + fonts check + lint + scripts typecheck + unit tests + production build
 npm test                        # Vitest via the Angular unit-test builder (watch mode in a TTY)
 npm run test:ci                 # same, single run
 npx ng test --watch=false --include src/app/core/games/registry.spec.ts --filter "codec"   # one file / tests matching a regex
@@ -46,7 +46,10 @@ npm run lint                    # angular-eslint over src/ and scripts/
 npm run typecheck:scripts       # tsc -p tsconfig.scripts.json (scripts/ + framework-free core)
 npm run format                  # prettier
 npm run theme:games             # regenerate src/theme/*.generated.scss from registry seeds and type colors (--check in verify)
+npm run fonts                   # re-download the self-hosted Roboto + icon-subset fonts into src/theme/fonts/ (--check in verify, offline)
 ```
+
+**Icons:** the Material Symbols font is a subset holding only the icons the app uses. After adding an icon, run `npm run fonts` (verify fails until you do). The scanner only sees literal `<mat-icon>name</mat-icon>` text (or quoted names inside its interpolation), `icon: 'name'` properties, and `icon('name')` calls from `src/app/shared/icon.ts`. Wrap any other icon name picked in code in `icon()`.
 
 Planned, not yet implemented (plan §7.2):
 
