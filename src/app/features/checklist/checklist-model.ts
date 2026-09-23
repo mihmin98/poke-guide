@@ -1,4 +1,5 @@
 // Pure view model for the checklist page (plan §13.6): no Angular, so it can be unit-tested on its own.
+import { evolutionDetailText } from '../../shared/evolution-text';
 import type { GameView } from '../../core/domain/game-view';
 import type { GameId, PokemonType } from '../../core/domain/models';
 import type { ChecklistEntry, ObtainSource, UnobtainableReason } from '../../core/domain/obtainability';
@@ -152,23 +153,6 @@ export interface ChecklistView {
   summary: ChecklistSummary;
 }
 
-function evolutionDetail(source: ObtainSource): string | undefined {
-  const edge = source.evolution;
-  if (!edge) return undefined;
-  switch (edge.trigger) {
-    case 'level':
-      return edge.level === undefined ? 'Level up' : `Lv ${edge.level}`;
-    case 'item':
-      return edge.item ?? 'Use an item';
-    case 'friendship':
-      return 'Friendship';
-    case 'trade':
-      return 'Trade';
-    default:
-      return edge.condition;
-  }
-}
-
 /** One obtainability source with its location, method and evolution names resolved. */
 export function describeSource(source: ObtainSource, view: GameView): ChecklistSource {
   const nameOf = (dex: number | undefined) =>
@@ -177,7 +161,7 @@ export function describeSource(source: ObtainSource, view: GameView): ChecklistS
   const base = { category, part: source.part };
 
   if (source.kind === 'evolution') {
-    const detail = evolutionDetail(source);
+    const detail = source.evolution && evolutionDetailText(source.evolution);
     return {
       ...base,
       label: `Evolves from ${nameOf(source.fromDex)}`,

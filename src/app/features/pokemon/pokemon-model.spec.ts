@@ -1,5 +1,5 @@
 import { buildGameView } from '../../core/domain/game-view';
-import type { PokedexData } from '../../core/domain/models';
+import type { EvolutionEdge, PokedexData } from '../../core/domain/models';
 import { buildChecklist } from '../../core/domain/obtainability';
 import {
   testData,
@@ -7,7 +7,8 @@ import {
   testLocation,
   testSpecies,
 } from '../../core/domain/testing/test-data';
-import { buildLearnset, buildPokemonView, entriesFor } from './pokemon-model';
+import { evolutionDetailText } from '../../shared/evolution-text';
+import { buildLearnset, buildPokemonView, entriesFor, genderText } from './pokemon-model';
 
 function data() {
   return testData({
@@ -45,6 +46,8 @@ const POKEDEX: PokedexData = {
       ],
       machines: ['cut'],
       prevo: [{ move: 'tackle', fromDex: [2], games: ['blue'] }],
+      egg: ['growl'],
+      tutor: [{ move: 'cut', games: ['blue'] }, { move: 'tackle' }],
     },
   },
   entries: {
@@ -132,10 +135,15 @@ describe('Pokémon detail model (plan §13.7)', () => {
     // The prior-evolution row is flagged Blue only.
     expect(red.prevo).toEqual([]);
     expect(buildLearnset(POKEDEX, 1, 'blue', () => 'Beta').prevo[0]!.from).toEqual(['Beta']);
+    expect(red.egg.map((move) => move.name)).toEqual(['Growl']);
+    // Tutor rows flagged for another game are left out.
+    expect(red.tutor.map((move) => move.name)).toEqual(['Tackle']);
     expect(buildLearnset(POKEDEX, 2, 'red', () => '')).toEqual({
       levelUp: [],
       machines: [],
       prevo: [],
+      egg: [],
+      tutor: [],
     });
   });
 
@@ -145,5 +153,40 @@ describe('Pokémon detail model (plan §13.7)', () => {
       'A Blue entry.',
     ]);
     expect(entriesFor(undefined, 1, 'red')).toEqual([]);
+  });
+});
+
+describe('evolution text', () => {
+  const edge = (e: Partial<EvolutionEdge>): EvolutionEdge => ({
+    from: 1,
+    to: 2,
+    trigger: 'level',
+    requiresTrade: false,
+    ...e,
+  });
+
+  it('describes Gen I and Gen II triggers', () => {
+    expect(evolutionDetailText(edge({ level: 16 }))).toBe('Lv 16');
+    expect(evolutionDetailText(edge({ trigger: 'item', item: 'Moon Stone' }))).toBe('Moon Stone');
+    expect(evolutionDetailText(edge({ trigger: 'trade', requiresTrade: true }))).toBe('Trade');
+    expect(
+      evolutionDetailText(edge({ trigger: 'trade', heldItem: 'Metal Coat', requiresTrade: true })),
+    ).toBe('Trade holding Metal Coat');
+    expect(evolutionDetailText(edge({ trigger: 'friendship', timeOfDay: 'day' }))).toBe(
+      'Friendship, day',
+    );
+    expect(evolutionDetailText(edge({ level: 20, stat: 'atk>def' }))).toBe(
+      'Lv 20, Attack > Defense',
+    );
+  });
+});
+
+describe('gender text', () => {
+  it('formats the female fraction', () => {
+    expect(genderText(0.5)).toBe('50% ♂ · 50% ♀');
+    expect(genderText(0.125)).toBe('87.5% ♂ · 12.5% ♀');
+    expect(genderText(0)).toBe('Male only');
+    expect(genderText(1)).toBe('Female only');
+    expect(genderText('genderless')).toBe('Genderless');
   });
 });

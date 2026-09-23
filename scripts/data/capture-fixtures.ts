@@ -1,8 +1,9 @@
 /**
  * Captures raw wikitext fixtures for parser tests.
  *
- *   npm run data:fixtures               uses the cache, fetches what's missing
+ *   npm run data:fixtures               uses the cache, fetches what's missing (every version group)
  *   npm run data:fixtures -- --refresh  refetches every fixture page
+ *   npm run data:fixtures -- --group gsc  one version group
  */
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { join, relative } from 'node:path';
@@ -18,13 +19,22 @@ async function main(): Promise<void> {
   const { values } = parseArgs({
     options: { group: { type: 'string' }, refresh: { type: 'boolean', default: false } },
   });
-  const group = values.group ?? '';
-  const pages = FIXTURE_PAGES[group];
-  if (!pages)
-    throw new Error(`Unknown --group "${group}". Known: ${Object.keys(FIXTURE_PAGES).join(', ')}`);
+  const groups = values.group === undefined ? Object.keys(FIXTURE_PAGES) : [values.group];
+  for (const group of groups) {
+    const pages = FIXTURE_PAGES[group];
+    if (!pages)
+      throw new Error(`Unknown --group "${group}". Known: ${Object.keys(FIXTURE_PAGES).join(', ')}`);
+    await captureGroup(group, pages, values.refresh);
+  }
+}
 
+async function captureGroup(
+  group: string,
+  pages: readonly FixturePage[],
+  refresh: boolean,
+): Promise<void> {
   const source = new PageSource({
-    mode: values.refresh ? 'refresh' : 'cache-first',
+    mode: refresh ? 'refresh' : 'cache-first',
     cache: new PageCache(rawCacheDir()),
     client: new MediaWikiClient({ log: console.warn }),
     log: console.log,

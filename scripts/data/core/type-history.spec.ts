@@ -18,6 +18,25 @@ describe('typesInGeneration', () => {
     expect(typesInGeneration(1, ['grass', 'poison'], 1)).toEqual(['grass', 'poison']);
   });
 
+  it('applies the Gen II–V types of Gen II species', () => {
+    expect(typesInGeneration(175, ['fairy'], 2)).toEqual(['normal']);
+    expect(typesInGeneration(176, ['fairy', 'flying'], 2)).toEqual(['normal', 'flying']);
+    expect(typesInGeneration(184, ['water', 'fairy'], 2)).toEqual(['water']);
+    expect(typesInGeneration(210, ['fairy'], 6)).toEqual(['fairy']);
+  });
+
+  it('leaves every Gen I and II species with types that exist in Gen II', () => {
+    const species = speciesInRange(
+      parseNationalDexList(fixture('rby', 'national-dex-list').wikitext),
+      [1, 251],
+    );
+    expect(species).toHaveLength(251);
+    const invalid = species.filter(
+      (s) => !typesInGeneration(s.dex, s.types, 2).every((t) => typeExistsIn(t, 2)),
+    );
+    expect(invalid.map((s) => s.name)).toEqual([]);
+  });
+
   it('counts the types of each generation', () => {
     const count = (gen: number) => POKEMON_TYPES.filter((t) => typeExistsIn(t.id, gen)).length;
     expect([count(1), count(2), count(5), count(6)]).toEqual([15, 17, 17, 18]);

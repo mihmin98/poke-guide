@@ -22,14 +22,4 @@ export function parseLevels(raw: string): LevelSpec | null {
   return values.length === max - min + 1 ? { min, max } : { min, max, values };
 }
 
-/** Union of two level specs (split rows for the same game are merged). */
-export function unionLevels(a: LevelSpec | null, b: LevelSpec | null): LevelSpec | null {
-  if (!a) return b;
-  if (!b) return a;
-  const expand = (spec: LevelSpec) =>
-    spec.values ?? Array.from({ length: spec.max - spec.min + 1 }, (_, i) => spec.min + i);
-  const values = [...new Set([...expand(a), ...expand(b)])].sort((x, y) => x - y);
-  const min = values[0]!;
-  const max = values[values.length - 1]!;
-  return values.length === max - min + 1 ? { min, max } : { min, max, values };
-}
+export { unionLevels } from '../../../src/app/core/domain/levels';

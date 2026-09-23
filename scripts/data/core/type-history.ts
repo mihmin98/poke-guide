@@ -1,7 +1,8 @@
 /**
  * Generation-aware species types (plan §7.5). The National Dex list only has current types; entries here
  * give the older ones. Sources: Bulbapedia "Type" (Fairy retcon in Generation VI, Steel added in Generation II).
- * Gen II–V entries for Pokémon introduced after Gen I are added together with their generations.
+ * Entries for Pokémon introduced later are added together with their generations (Gen II: 2026-09-23;
+ * checked against each species' Gen II table types when the gsc build runs).
  */
 import type { PokemonType } from '../../../src/app/core/games/pokemon-types';
 
@@ -22,6 +23,14 @@ export const TYPE_HISTORY: readonly TypeHistoryEntry[] = [
   { dex: 39, types: ['normal'], untilGeneration: 5 }, // Jigglypuff (Normal/Fairy)
   { dex: 40, types: ['normal'], untilGeneration: 5 }, // Wigglytuff (Normal/Fairy)
   { dex: 122, types: ['psychic'], untilGeneration: 5 }, // Mr. Mime (Psychic/Fairy)
+  { dex: 173, types: ['normal'], untilGeneration: 5 }, // Cleffa (Fairy)
+  { dex: 174, types: ['normal'], untilGeneration: 5 }, // Igglybuff (Normal/Fairy)
+  { dex: 175, types: ['normal'], untilGeneration: 5 }, // Togepi (Fairy)
+  { dex: 176, types: ['normal', 'flying'], untilGeneration: 5 }, // Togetic (Fairy/Flying)
+  { dex: 183, types: ['water'], untilGeneration: 5 }, // Marill (Water/Fairy)
+  { dex: 184, types: ['water'], untilGeneration: 5 }, // Azumarill (Water/Fairy)
+  { dex: 209, types: ['normal'], untilGeneration: 5 }, // Snubbull (Fairy)
+  { dex: 210, types: ['normal'], untilGeneration: 5 }, // Granbull (Fairy)
 ];
 
 export function typesInGeneration(

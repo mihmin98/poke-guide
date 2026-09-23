@@ -46,6 +46,23 @@ describe('parseCondition', () => {
     });
     expect(parseCondition('Galarica Cuff')).toEqual({ trigger: 'other' });
   });
+
+  it('reads Gen II stat and time-of-day conditions', () => {
+    expect(parseCondition('Level 20 (Attack > Defense)')).toEqual({
+      trigger: 'level',
+      level: 20,
+      stat: 'atk>def',
+    });
+    expect(parseCondition('Level 20 (Attack = Defense)')).toMatchObject({ stat: 'atk=def' });
+    expect(parseCondition('Level up with high friendship during the day')).toEqual({
+      trigger: 'friendship',
+      timeOfDay: 'day',
+    });
+    expect(parseCondition('Level up with high friendship at night')).toEqual({
+      trigger: 'friendship',
+      timeOfDay: 'night',
+    });
+  });
 });
 
 describe('parseEvolutionBoxes', () => {

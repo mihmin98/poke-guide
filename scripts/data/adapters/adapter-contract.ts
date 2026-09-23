@@ -16,6 +16,8 @@ export interface AdapterContractCase {
   /** A single row template. */
   wikitext: string;
   locationKind?: LocationKind;
+  /** The enclosing `catch/div` label, for methods that depend on it (Gen II swarms, the Contest). */
+  divLabel?: string;
   expected: {
     dex: number;
     games: GameId[];
@@ -28,8 +30,8 @@ export interface AdapterContractCase {
   };
 }
 
-function context(locationKind: LocationKind = 'route'): WalkContext {
-  return { pageTitle: 'Contract test', locationKind, subArea: null, divLabel: null };
+function context(locationKind: LocationKind = 'route', divLabel: string | null = null): WalkContext {
+  return { pageTitle: 'Contract test', locationKind, subArea: null, divLabel };
 }
 
 export function describeAdapterContract(
@@ -40,18 +42,16 @@ export function describeAdapterContract(
     it('declares normalized template names and registry games', () => {
       expect(adapter.templateNames.length).toBeGreaterThan(0);
       for (const name of adapter.templateNames) expect(name).toBe(name.trim().toLowerCase());
-      const known = new Set<string>(
-        GAMES.map((g) => g.id).concat(['gold', 'silver', 'ruby', 'sapphire']),
-      );
+      const known = new Set<string>(GAMES.map((g) => g.id));
       for (const game of adapter.games) expect(known.has(game)).toBe(true);
     });
 
-    it.each(cases)('$description', ({ wikitext, locationKind, expected }) => {
+    it.each(cases)('$description', ({ wikitext, locationKind, divLabel, expected }) => {
       const template = parseTemplate(wikitext);
       expect(template).not.toBeNull();
       expect(adapter.templateNames).toContain(template!.name);
 
-      const ctx = context(locationKind);
+      const ctx = context(locationKind, divLabel);
       const row = adapter.parseRow(template!, ctx);
       const method = adapter.normalizeMethod(row, ctx);
 

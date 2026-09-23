@@ -1,3 +1,4 @@
+import { parseRegionalDexList } from './regional-dex';
 import { fixture } from '../testing/fixtures';
 import { parseNationalDexList, speciesInRange } from './species-list';
 
@@ -44,5 +45,25 @@ describe('parseNationalDexList', () => {
     expect(() =>
       parseNationalDexList('{{ndex|0001|Bulbasaur|Grass}}\n{{ndex|0003|Venusaur|Grass}}'),
     ).toThrow(/not contiguous/);
+  });
+});
+
+describe('parseRegionalDexList', () => {
+  it('reads rdex rows and hand-written form rows (New Pokédex Unown)', () => {
+    const wikitext = [
+      '{{rdex|001|152|Chikorita|1|Grass|gen=2}}',
+      '{{rdex|060|094|Gengar|2|Ghost|Poison|gen=2}}',
+      '|- style="background:#FFF"',
+      '| rowspan="26" style="font-family:monospace,monospace" | #061',
+      '| rowspan="26" style="font-family:monospace,monospace" | #0201',
+      '! {{MSP/3|201|Unown}}',
+      '{{rdex|251|251|Celebi|1|Psychic|Grass|gen=2}}',
+    ].join('\n');
+    expect([...parseRegionalDexList(wikitext)]).toEqual([
+      [152, 1],
+      [94, 60],
+      [251, 251],
+      [201, 61],
+    ]);
   });
 });

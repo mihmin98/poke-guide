@@ -3,6 +3,7 @@
  * (overrides, extra parsers, sprites).
  */
 import type {
+  BreedingRules,
   EvolutionEdge,
   GameId,
   LocationKind,
@@ -53,6 +54,8 @@ export interface VersionGroupConfig {
   speciesRange: [number, number];
   /** Level column labels (`{{learnlist/levelh/1|…|RGB|Y}}`) and row game flags (`RB`) on learnset subpages → games. */
   learnsetLevelColumns: Record<string, GameId[]>;
+  /** Games per game-flag parameter of `{{learnlist/tutorN}}` (Gen II: `[['crystal']]`); absent = no tutor moves. */
+  learnsetTutorColumns?: GameId[][];
   /** Game flag keys on `{{Itemlist}}` rows (`R=yes`) → games (plan §7.13). */
   itemGameFlags: Record<string, GameId[]>;
   /** Item spelling variants → the name used in the data (`Elixer` → `Elixir`). */
@@ -68,10 +71,27 @@ export interface VersionGroupConfig {
   /** In-game trade tables, diffed against the location tables' trade rows (plan §7.7). */
   tradePage?: TradePageConfig;
   /**
+   * `List of Pokémon by … Pokédex number` page for the regional Pokédex; fills `species.regionalDex` for the
+   * games whose registry entry has a `regionalDex` (plan §16 Phase 10).
+   */
+  regionalDexPage?: string;
+  /**
+   * Item rows that are location notes rather than items, e.g. Berry and Apricorn trees that give an item
+   * every day (plan §16 Phase 10). A row matches when its item name or its `where` text matches `match`.
+   */
+  itemNoteRules?: { match: RegExp; note: (itemName: string, where: string) => string }[];
+  /**
    * Bulbagarden Archives file pattern per sprite set (plan §7.10), keyed by the registry's `spriteSetId`;
    * `{dex3}` is the zero-padded National Dex number. Every game's set must be listed.
    */
-  spriteSets: Record<string, { filePattern: string }>;
+  spriteSets: Record<
+    string,
+    {
+      filePattern: string;
+      /** Keep only the first frame of an animated PNG (Crystal's sprites, plan §16 Phase 10). */
+      stillFrame?: true;
+    }
+  >;
   overrides: {
     /** Authoritative evolution graph; parsed evolution boxes are only diffed against it. */
     evolutions: readonly EvolutionEdge[];
@@ -83,5 +103,7 @@ export interface VersionGroupConfig {
     items: ItemOverrides;
     /** Statics, encounter patches, exclusive groups and event-only species (plan §7.7). */
     encounters: EncounterOverrides;
+    /** Day Care rules, for generations with breeding (plan §7.6, §9). */
+    breeding?: BreedingRules;
   };
 }

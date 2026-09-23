@@ -22,7 +22,7 @@ import { mechanicsForGame } from '../../core/mechanics';
 import { unobtainableLabel } from '../checklist/checklist-model';
 import { catchDifficulty, catchRateFor } from '../location/location-model';
 import { buildCatchGrid, formatChance } from '../tools/catch-model';
-import { buildLearnset, buildPokemonView, entriesFor } from './pokemon-model';
+import { buildLearnset, buildPokemonView, entriesFor, genderText } from './pokemon-model';
 
 /** The highest Gen I base stat is 255 (Chansey's HP), so the bars are scaled to it. */
 const MAX_BASE_STAT = 255;
@@ -89,6 +89,20 @@ const GROWTH_RATES: Record<string, string> = {
             <dt>Base experience</dt>
             <dd>{{ v.species.baseExp }}</dd>
           </div>
+          @if (v.species.eggGroups; as groups) {
+            @if (groups.length) {
+              <div>
+                <dt>Egg groups</dt>
+                <dd>{{ groups.join(', ') }}</dd>
+              </div>
+            }
+          }
+          @if (v.species.genderRatio !== undefined) {
+            <div>
+              <dt>Gender</dt>
+              <dd>{{ gender(v.species.genderRatio) }}</dd>
+            </div>
+          }
           @if (catchRate(); as rate) {
             <div>
               <dt>Catch rate</dt>
@@ -239,6 +253,9 @@ const GROWTH_RATES: Record<string, string> = {
                   @if (place.rate) {
                     · <app-rate [rate]="place.rate" />
                   }
+                  @if (place.times) {
+                    · {{ place.times }}
+                  }
                 </li>
               }
             </ul>
@@ -348,6 +365,24 @@ const GROWTH_RATES: Record<string, string> = {
             </ul>
           }
 
+          @if (learnset().egg.length) {
+            <h3>By breeding</h3>
+            <ul class="machines">
+              @for (move of learnset().egg; track move.id) {
+                <li>{{ move.name }} <app-type-badge [type]="move.type" /></li>
+              }
+            </ul>
+          }
+
+          @if (learnset().tutor.length) {
+            <h3>By move tutor</h3>
+            <ul class="machines">
+              @for (move of learnset().tutor; track move.id) {
+                <li>{{ move.name }} <app-type-badge [type]="move.type" /></li>
+              }
+            </ul>
+          }
+
           @if (learnset().prevo.length) {
             <h3>From a pre-evolution</h3>
             <ul class="machines">
@@ -362,7 +397,7 @@ const GROWTH_RATES: Record<string, string> = {
       </section>
 
       <p class="source-link">
-        <a [href]="bulbapediaUrl(v.species.slug)" target="_blank" rel="noopener noreferrer">
+        <a [href]="bulbapediaUrl(v.species.name)" target="_blank" rel="noopener noreferrer">
           {{ v.species.name }} on Bulbapedia
         </a>
       </p>
@@ -728,6 +763,8 @@ export class PokemonPage {
     return String(dex).padStart(3, '0');
   }
 
+  protected gender = genderText;
+
   protected growthRate(rate: string): string {
     return GROWTH_RATES[rate] ?? rate;
   }
@@ -744,11 +781,9 @@ export class PokemonPage {
     return this.data().speciesByDex().get(dex)?.slug ?? String(dex);
   }
 
-  protected bulbapediaUrl(slug: string): string {
-    const title = slug
-      .split('-')
-      .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-      .join('_');
-    return `https://bulbapedia.bulbagarden.net/wiki/${title}_(Pok%C3%A9mon)`;
+  /** From the name, not the slug: `Ho-Oh`, `Nidoran♀`, `Mr. Mime` keep their page titles. */
+  protected bulbapediaUrl(name: string): string {
+    const title = encodeURIComponent(`${name} (Pokémon)`.replace(/ /g, '_'));
+    return `https://bulbapedia.bulbagarden.net/wiki/${title}`;
   }
 }

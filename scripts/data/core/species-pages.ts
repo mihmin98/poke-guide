@@ -112,6 +112,26 @@ export function parseInfobox(wikitext: string): InfoboxData {
   };
 }
 
+/**
+ * `gendercode` → the female fraction the app works with (`Species.genderRatio`), or `'genderless'`.
+ * The codes are the games' byte thresholds (31 = 12.5 % female), so they map through a table rather than
+ * dividing; an unknown code returns `undefined` and fails the build.
+ */
+const GENDER_RATIOS: Record<number, number | 'genderless'> = {
+  0: 0,
+  31: 0.125,
+  63: 0.25,
+  127: 0.5,
+  191: 0.75,
+  225: 0.875,
+  254: 1,
+  255: 'genderless',
+};
+
+export function genderRatioFromCode(code: number): number | 'genderless' | undefined {
+  return GENDER_RATIOS[code];
+}
+
 /** Base experience yields were rebalanced in Generation V; `oldexp` holds the Generation I–IV value. */
 export function baseExpIn(info: InfoboxData, generation: number): number {
   return generation <= 4 && info.oldBaseExp !== null ? info.oldBaseExp : info.baseExp;

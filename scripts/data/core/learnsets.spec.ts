@@ -148,6 +148,36 @@ describe('parseLearnsetPage', () => {
       'learnlist/leveli "Bite": type dark doesn\'t exist in Generation I',
     ]);
   });
+
+  it('reads Gen II egg moves and Crystal tutor moves (Charmander)', () => {
+    const text = [
+      '====By {{pkmn|breeding}}====',
+      '{{learnlist/breedh|Charmander|fire|fire|2|1}}',
+      '{{learnlist/breed2|{{MSP/3|158|Totodile}}|AncientPower|Rock|60|100|5|*|grid=6}}',
+      '{{learnlist/breed2|{{MSP/3|143|Snorlax}}|Belly Drum|Normal|—|—|10|grid=6}}',
+      '{{learnlist/breed2|{{MSP/3|111|Rhyhorn}}|AncientPower|Rock|60|100|5|‡|grid=6}}',
+      '{{learnlist/breedf|Charmander|fire|fire|2|1}}',
+      '====By [[Move Tutor|tutoring]]====',
+      '{{learnlist/tutorh|Charmander|fire|fire|2|1}}',
+      "{{learnlist/tutor2|Flamethrower|Fire|95|100|15||'''|yes}}",
+      '{{learnlist/tutor2|Thunderbolt|Electric|95|100|15|||no}}',
+      '{{learnlist/tutorf|Charmander|fire|fire|2|1}}',
+    ].join('\n');
+    const gen2: LearnsetParseOptions = {
+      generation: 2,
+      games: ['gold', 'silver', 'crystal'],
+      levelColumns: {},
+      eggMoves: true,
+      tutorColumns: [['crystal']],
+    };
+    const result = parseLearnsetPage(text, gen2);
+    expect(result.issues).toEqual([]);
+    expect(result.egg).toEqual(['AncientPower', 'Belly Drum']);
+    expect(result.tutor).toEqual([{ move: 'Flamethrower', games: ['crystal'] }]);
+    // Without the options (Gen I), both sections are ignored.
+    const gen1 = parseLearnsetPage(text, { ...gen2, eggMoves: false, tutorColumns: undefined });
+    expect([gen1.egg, gen1.tutor, gen1.issues]).toEqual([[], [], []]);
+  });
 });
 
 describe('collectMoves', () => {
@@ -168,7 +198,7 @@ describe('collectMoves', () => {
   });
 
   it('reports conflicting data', () => {
-    const base = { levelUp: [], machines: [], prevo: [], issues: [] };
+    const base = { levelUp: [], machines: [], prevo: [], egg: [], tutor: [], issues: [] };
     const { issues } = collectMoves([
       { ...base, moves: [{ name: 'Bite', type: 'normal', power: 60, accuracy: 100, pp: 25 }] },
       { ...base, moves: [{ name: 'Bite', type: 'dark', power: 60, accuracy: 100, pp: 25 }] },

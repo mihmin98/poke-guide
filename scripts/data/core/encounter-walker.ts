@@ -66,6 +66,8 @@ const GROUP_LABELS = new Set([
   'special pokemon',
   'trade',
   'in-game trade',
+  'rock smash',
+  'bug-catching contest',
 ]);
 
 const LEVELED_CATEGORIES = new Set(['wild', 'water', 'fishing']);

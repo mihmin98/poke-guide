@@ -161,6 +161,10 @@ export interface Learnset {
   machines: string[];
   /** Moves only previous evolutions learn by level; `games` absent means every game of the version group. */
   prevo: { move: string; fromDex: number[]; games?: GameId[] }[];
+  /** Egg moves (Gen II+); absent when the generation has no breeding or the species has none. */
+  egg?: string[];
+  /** Move tutor moves; `games` absent means every game of the version group (Crystal's tutor is Crystal only). */
+  tutor?: { move: string; games?: GameId[] }[];
 }
 
 export interface PokedexEntryText {
@@ -189,6 +193,10 @@ export interface EvolutionEdge {
   level?: number;
   item?: string;
   heldItem?: string;
+  /** Time of day the evolution must happen in (Espeon: day, Umbreon: night). */
+  timeOfDay?: TimeOfDay;
+  /** Stat comparison at the evolution level (Tyrogue: Attack vs Defense). */
+  stat?: 'atk>def' | 'atk<def' | 'atk=def';
   condition?: string;
   requiresTrade: boolean;
   /** Absent means all games in the version group. */

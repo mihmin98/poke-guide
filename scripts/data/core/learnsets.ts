@@ -2,8 +2,9 @@
  * Per-generation learnset subpages (`<Name> (Pokémon)/Generation I learnset`). Their rows carry the move's
  * type, power, accuracy and PP as of that generation, which also gives the version group's move list.
  *
- * Kept: "By leveling up", "By TM/HM", "By a prior Evolution".
- * Ignored: transfer-only moves, events, Stadium tutoring, Move Reminder lists.
+ * Kept: "By leveling up", "By TM/HM", "By a prior Evolution", plus "By breeding" (egg moves) where the generation
+ * has breeding and "By tutoring" where the version group names its tutor columns (Crystal).
+ * Ignored: transfer-only moves, events, Stadium tutoring (Gen I), Move Reminder lists.
  */
 import type { GameId, Move } from '../../../src/app/core/domain/models';
 import { toRoman } from './generations';
@@ -23,6 +24,13 @@ export interface LearnsetParseOptions {
   games: readonly GameId[];
   /** Level column labels (`{{learnlist/levelh/N|…|RGB|Y}}`) and row game flags (`RB`, `Y`) → games. */
   levelColumns: Readonly<Record<string, readonly GameId[]>>;
+  /** Read "By breeding" (Gen II+). */
+  eggMoves?: boolean;
+  /**
+   * Games per trailing game-flag parameter of `{{learnlist/tutorN}}` (Gen II: parameter 8 → Crystal, default `yes`).
+   * Absent: "By tutoring" is ignored (Gen I's is the Stadium tutor).
+   */
+  tutorColumns?: readonly (readonly GameId[])[];
 }
 
 export type MoveData = Omit<Move, 'id' | 'machine'>;
@@ -31,18 +39,23 @@ export interface ParsedLearnset {
   levelUp: { move: string; levels: Partial<Record<GameId, number>> }[];
   machines: { machine: string; move: string }[];
   prevo: { move: string; fromDex: number[]; games?: GameId[] }[];
+  /** Egg moves, by name, without duplicates. */
+  egg: string[];
+  tutor: { move: string; games?: GameId[] }[];
   /** Every move seen on the page, by name. */
   moves: MoveData[];
   issues: string[];
 }
 
-type Section = 'level' | 'machine' | 'prevo' | 'ignored';
+type Section = 'level' | 'machine' | 'prevo' | 'egg' | 'tutor' | 'ignored';
 
-function classifySection(title: string): Section {
+function classifySection(title: string, options: LearnsetParseOptions): Section {
   const text = title.toLowerCase();
   if (text === 'by leveling up') return 'level';
   if (text.startsWith('by tm')) return 'machine';
   if (text === 'by a prior evolution') return 'prevo';
+  if (text === 'by breeding' && options.eggMoves) return 'egg';
+  if (text === 'by tutoring' && options.tutorColumns) return 'tutor';
   return 'ignored';
 }
 
@@ -57,7 +70,15 @@ export function parseLearnsetPage(wikitext: string, options: LearnsetParseOption
   const text = stripComments(wikitext);
   const gen = options.generation;
   const roman = toRoman(gen).toLowerCase();
-  const result: ParsedLearnset = { levelUp: [], machines: [], prevo: [], moves: [], issues: [] };
+  const result: ParsedLearnset = {
+    levelUp: [],
+    machines: [],
+    prevo: [],
+    egg: [],
+    tutor: [],
+    moves: [],
+    issues: [],
+  };
   const moves = new Map<string, MoveData>();
 
   const ignoredTemplates = new Set([
@@ -69,6 +90,12 @@ export function parseLearnsetPage(wikitext: string, options: LearnsetParseOption
     'learnlist/prevoh',
     'learnlist/prevof',
     `learnlist/prevo${gen}null`,
+    'learnlist/breedh',
+    'learnlist/breedf',
+    `learnlist/breed${gen}null`,
+    'learnlist/tutorh',
+    'learnlist/tutorf',
+    `learnlist/tutor${gen}null`,
   ]);
 
   /** Reads `name|type|power|accuracy|pp` starting at `index`; returns the move name. */
@@ -110,7 +137,7 @@ export function parseLearnsetPage(wikitext: string, options: LearnsetParseOption
 
   for (const call of findTemplates(text)) {
     while (headingIndex < headings.length && headings[headingIndex]!.start < call.start) {
-      section = classifySection(headingText(headings[headingIndex]!));
+      section = classifySection(headingText(headings[headingIndex]!), options);
       headingIndex++;
     }
     if (
@@ -180,6 +207,19 @@ export function parseLearnsetPage(wikitext: string, options: LearnsetParseOption
       } else if (move) {
         result.prevo.push(games ? { move, fromDex, games: [...games] } : { move, fromDex });
       }
+    } else if (section === 'egg' && call.name === `learnlist/breed${gen}`) {
+      // `breed2|<parents as MSP icons>|AncientPower|Rock|60|100|5|*`: a move can repeat with other parents.
+      const move = readMove(call, 1);
+      if (move && !result.egg.includes(move)) result.egg.push(move);
+    } else if (section === 'tutor' && call.name === `learnlist/tutor${gen}`) {
+      // `tutor2|Flamethrower|Fire|95|100|15||'''|yes`: the move, two formatting markers, then one flag per column.
+      const move = readMove(call, 0);
+      const columns = options.tutorColumns ?? [];
+      const games = columns.flatMap((column, i) =>
+        /^no$/i.test(stripMarkup(call.positional[7 + i] ?? 'yes')) ? [] : column,
+      );
+      const all = options.games.every((game) => games.includes(game));
+      if (move && games.length) result.tutor.push(all ? { move } : { move, games: [...new Set(games)] });
     } else {
       result.issues.push(`Unexpected template {{${call.name}}} in a "${section}" section`);
     }

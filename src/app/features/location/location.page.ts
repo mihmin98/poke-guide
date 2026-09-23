@@ -15,7 +15,9 @@ import { Router, RouterLink } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
 import { GameDataService } from '../../core/data/game-data.service';
 import type { GameId, LocationItem } from '../../core/domain/models';
+import { TIMES_OF_DAY, timeOfDayHours, timeOfDayLabel } from '../../core/games/conditions';
 import { findGame, regionName } from '../../core/games/registry';
+import { mechanicsForGame } from '../../core/mechanics';
 import { ProfileStore } from '../../core/profiles/profile.store';
 import { UndoSnackbarService } from '../../core/profiles/undo-snackbar.service';
 import { SettingsStore } from '../../core/settings/settings.store';
@@ -26,7 +28,7 @@ import { GameMismatchBanner } from '../../shared/components/game-mismatch-banner
 import { ItemToggle } from '../../shared/components/item-toggle';
 import { LevelRange } from '../../shared/components/level-range';
 import { MethodIcon } from '../../shared/components/method-icon';
-import { RateDisplay } from '../../shared/components/rate';
+import { formatRate, RateDisplay } from '../../shared/components/rate';
 import { Sprite } from '../../shared/components/sprite';
 import { TypeBadge } from '../../shared/components/type-badge';
 import { pageTitle } from '../../shared/page-title';
@@ -144,7 +146,25 @@ const ALL_SUB_AREAS = '__all__';
                 </h2>
               }
 
-              <ul class="rows" [class.compact]="compact()">
+              <ul
+                class="rows"
+                [class.compact]="compact()"
+                [class.timed]="section.timeColumns && showRates()"
+              >
+                @if (section.timeColumns && showRates()) {
+                  <li class="row time-head" aria-hidden="true">
+                    <span class="slots">
+                      <span class="slot">
+                        @for (time of times; track time) {
+                          <span class="tcell" [title]="timeHours(time)">{{ timeLabel(time) }}</span>
+                        }
+                      </span>
+                    </span>
+                    @if (showCatchRates()) {
+                      <span class="cr placeholder">CR 255</span>
+                    }
+                  </li>
+                }
                 @for (row of rowsOf(section.rows); track row.key) {
                   <li class="row">
                     <app-catch-toggle [dex]="row.dex" [game]="gameId()" [name]="row.name" />
@@ -171,20 +191,43 @@ const ALL_SUB_AREAS = '__all__';
                     </span>
 
                     <span class="slots">
-                      @for (slot of row.slots; track $index) {
+                      @for (line of row.lines; track $index) {
                         <span class="slot">
-                          <app-level-range [levels]="slot.levels" />
-                          @if (showRates()) {
-                            <app-rate [rate]="slot.rate" />
-                          }
-                          <app-condition-chips [conditions]="slot.conditions" />
-                          @if (slot.shiny === 'guaranteed') {
+                          <app-condition-chips [conditions]="line.conditions" />
+                          @if (line.shiny === 'guaranteed') {
                             <span class="badge">Guaranteed shiny</span>
-                          } @else if (slot.shiny === 'locked') {
+                          } @else if (line.shiny === 'locked') {
                             <span class="badge">Shiny-locked</span>
                           }
-                          @if (slot.ivs) {
-                            <span class="badge">Fixed IVs</span>
+                          @if (line.ivs) {
+                            <span class="badge">Fixed {{ ivLabel() }}s</span>
+                          }
+                          <app-level-range [levels]="line.levels" />
+                          @if (showRates()) {
+                            @if (line.byTime; as byTime) {
+                              @for (time of times; track time) {
+                                <span class="tcell">
+                                  <span class="sr-only">{{ timeLabel(time) }}:</span>
+                                  @if (byTime[time]; as rate) {
+                                    {{ rateText(rate) }}
+                                  } @else {
+                                    <span aria-hidden="true">—</span>
+                                    <span class="sr-only">none</span>
+                                  }
+                                </span>
+                              }
+                            } @else if (line.rate; as rate) {
+                              @if (section.timeColumns) {
+                                <span class="tcell all">
+                                  @if (line.allDay) {
+                                    <span class="sr-only">Any time:</span>
+                                  }
+                                  <app-rate [rate]="rate" />
+                                </span>
+                              } @else {
+                                <app-rate [rate]="rate" />
+                              }
+                            }
                           }
                         </span>
                       }
@@ -449,6 +492,47 @@ const ALL_SUB_AREAS = '__all__';
     .rows.compact {
       gap: 2px;
     }
+    /* Morning / Day / Night columns (games with time of day): fixed-width cells at the row's end line up. */
+    .tcell {
+      width: 3.25em;
+      text-align: end;
+      font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }
+    .tcell.all {
+      width: calc(3 * 3.25em + 16px);
+      text-align: center;
+    }
+    .time-head {
+      grid-template-areas: 'toggle sprite who slots cr';
+      background: none;
+      padding-block: 0;
+      font: var(--mat-sys-label-small);
+      color: var(--mat-sys-on-surface-variant);
+    }
+    .rows.timed .cr {
+      min-width: 3.75em;
+      text-align: end;
+    }
+    .cr.placeholder {
+      visibility: hidden;
+    }
+    @media (max-width: 599px) {
+      .rows.timed .row {
+        grid-template-areas:
+          'toggle sprite who who cr'
+          'toggle sprite slots slots slots'
+          'toggle sprite tags tags tags'
+          'trade trade trade trade trade'
+          'note note note note note';
+      }
+      .rows.timed .time-head {
+        grid-template-areas: 'slots slots slots slots slots';
+      }
+      .rows.timed .time-head .cr {
+        display: none;
+      }
+    }
     .rows.compact .row {
       padding: 0 8px;
       gap: 0 8px;
@@ -627,6 +711,15 @@ export class LocationPage {
   protected readonly showRates = this.settings.select('showRates');
   protected readonly showCatchRates = this.settings.select('showCatchRates');
   protected readonly compact = this.settings.select('compactRows');
+
+  protected readonly times = TIMES_OF_DAY;
+  protected readonly timeLabel = timeOfDayLabel;
+  protected readonly timeHours = timeOfDayHours;
+  protected readonly rateText = formatRate;
+  /** "DV" or "IV", from the generation's rules. */
+  protected readonly ivLabel = computed(
+    () => mechanicsForGame(this.gameId())?.ivSystem.label ?? 'IV',
+  );
   protected readonly spriteSize = computed(() =>
     this.settings.settings().spriteScale === 3 ? 56 : 40,
   );

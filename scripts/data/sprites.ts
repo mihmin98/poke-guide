@@ -3,7 +3,7 @@
  *
  *   npm run data:sprites    only downloads files that are missing or differ from Bulbagarden Archives
  *
- * Options: `--group <id>` or `--all`. Exit code 1 when a file is missing on the archive or fails its SHA-1 check.
+ * Options: `--group <id>` (default: every version group). Exit code 1 when a file is missing on the archive or fails its SHA-1 check.
  */
 import { join } from 'node:path';
 import { parseArgs } from 'node:util';
@@ -17,12 +17,14 @@ async function main(): Promise<void> {
   const { values } = parseArgs({
     options: { group: { type: 'string' }, all: { type: 'boolean', default: false } },
   });
-  const configs: VersionGroupConfig[] = values.all
-    ? Object.values(VERSION_GROUP_CONFIGS)
-    : [VERSION_GROUP_CONFIGS[values.group as keyof typeof VERSION_GROUP_CONFIGS]].filter(
-        (c): c is VersionGroupConfig => c !== undefined,
-      );
-  if (configs.length === 0) throw new Error('Pass --group <id> (with a pipeline config) or --all');
+  // Every version group by default (`--all` is accepted for compatibility); `--group <id>` narrows it.
+  const configs: VersionGroupConfig[] =
+    values.group === undefined
+      ? Object.values(VERSION_GROUP_CONFIGS)
+      : [VERSION_GROUP_CONFIGS[values.group as keyof typeof VERSION_GROUP_CONFIGS]].filter(
+          (c): c is VersionGroupConfig => c !== undefined,
+        );
+  if (configs.length === 0) throw new Error(`Unknown --group "${values.group ?? ''}"`);
 
   const client = new MediaWikiClient({ endpoint: ARCHIVES_API, log: console.warn });
   const spritesDir = join(repoRoot(), 'public', 'sprites');
@@ -30,7 +32,13 @@ async function main(): Promise<void> {
   for (const config of configs) {
     const jobs = spriteJobs(config);
     console.log(`\n== ${config.id}: ${jobs.length} sprites ==`);
-    const result = await syncSprites(jobs, client, spritesDir, console.log);
+    const result = await syncSprites(
+      jobs,
+      client,
+      spritesDir,
+      console.log,
+      join(repoRoot(), 'scripts', 'data', 'sprite-sources'),
+    );
     console.log(
       `downloaded ${result.downloaded.length}, unchanged ${result.unchanged.length}, ` +
         `missing ${result.missing.length}, failed SHA-1 ${result.corrupt.length}`,

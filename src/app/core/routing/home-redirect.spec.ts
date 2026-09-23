@@ -39,7 +39,7 @@ describe('home redirect (plan §11.3)', () => {
     // A profile saved by a newer app: its game is not in this build's registry.
     TestBed.inject(StorageService).update((s) => ({
       ...s,
-      profiles: s.profiles.map((p) => ({ ...p, game: 'gold' as GameId })),
+      profiles: s.profiles.map((p) => ({ ...p, game: 'ruby' as GameId })),
     }));
     await router.navigateByUrl('/');
     expect(router.url).toBe('/games');

@@ -51,14 +51,15 @@ npm run fonts                   # re-download the self-hosted Roboto + icon-subs
 
 **Icons:** the Material Symbols font is a subset holding only the icons the app uses. After adding an icon, run `npm run fonts` (verify fails until you do). The scanner only sees literal `<mat-icon>name</mat-icon>` text (or quoted names inside its interpolation), `icon: 'name'` properties, and `icon('name')` calls from `src/app/shared/icon.ts`. Wrap any other icon name picked in code in `icon()`.
 
-Planned, not yet implemented (plan §7.2):
+Data pipeline (plan §7.2). Each script covers every version group; add `-- --group gsc` for one:
 
 ```bash
-npm run data:build              # scrape → parse → validate → write public/data/rby.json (uses cache)
+npm run data:build              # scrape → parse → validate → write public/data/<group>.json (uses cache)
 npm run data:refresh            # same, ignoring the cache
 npm run data:offline            # build from fixtures/cache only (what tests use)
-npm run data:sprites            # download sprites for the version group
-npm run data:validate           # validate committed data files
+npm run data:sprites            # download the sprite sets
+npm run data:fixtures           # capture parser-test fixtures into version-groups/<id>/__fixtures__
+npm run data:validate           # planned, not yet implemented: validate committed data files
 ```
 
 ## Architecture (big picture)

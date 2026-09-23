@@ -133,6 +133,8 @@ export const versionGroupDataSchema = z.strictObject({
       level: positive.optional(),
       item: z.string().optional(),
       heldItem: z.string().optional(),
+      timeOfDay: z.enum(['morning', 'day', 'night']).optional(),
+      stat: z.enum(['atk>def', 'atk<def', 'atk=def']).optional(),
       condition: z.string().optional(),
       requiresTrade: z.boolean(),
       games: z.array(z.string()).optional(),
@@ -208,6 +210,10 @@ export const pokedexDataSchema = z.strictObject({
           games: z.array(z.string()).optional(),
         }),
       ),
+      egg: z.array(z.string().min(1)).optional(),
+      tutor: z
+        .array(z.strictObject({ move: z.string().min(1), games: z.array(z.string()).optional() }))
+        .optional(),
     }),
   ),
   entries: z.record(

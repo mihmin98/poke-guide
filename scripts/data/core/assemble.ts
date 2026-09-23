@@ -5,6 +5,7 @@
 import type {
   GameId,
   GameLocation,
+  LocationItem,
   Learnset,
   PokedexData,
   PokedexEntryText,
@@ -59,12 +60,15 @@ import {
 import {
   baseExpIn,
   baseStatsIn,
+  genderRatioFromCode,
   parseBaseStats,
   parseInfobox,
   parsePokedexEntries,
   pokedexEntriesForGames,
   speciesPageTitle,
+  type InfoboxData,
 } from './species-pages';
+import { parseRegionalDexList } from './regional-dex';
 import { typeExistsIn, typesInGeneration } from './type-history';
 
 export interface BuildIssue {
@@ -103,6 +107,7 @@ export function listPageTitles(config: VersionGroupConfig): string[] {
     ...config.locations.map((l) => l.page),
     ...walkthroughPartTitles(config).map((w) => w.page),
     ...(config.tradePage ? [config.tradePage.page] : []),
+    ...(config.regionalDexPage ? [config.regionalDexPage] : []),
   ];
 }
 
@@ -204,6 +209,27 @@ export function diffLocationCategory(
 const byTitle = (sources: Map<string, SourceRef>) =>
   [...sources.values()].sort((a, b) => a.title.localeCompare(b.title));
 
+/** Moves item rows matched by `config.itemNoteRules` (recurring Berry trees) into the location's notes. */
+export function splitItemNotes(
+  items: readonly LocationItem[],
+  notes: readonly string[],
+  config: Pick<VersionGroupConfig, 'itemNoteRules'>,
+): Pick<GameLocation, 'items' | 'itemNotes'> {
+  const rules = config.itemNoteRules ?? [];
+  const kept: LocationItem[] = [];
+  const itemNotes = [...notes];
+  for (const item of items) {
+    const rule = rules.find((r) => r.match.test(item.name) || r.match.test(item.where));
+    if (!rule) {
+      kept.push(item);
+      continue;
+    }
+    const note = rule.note(item.name, item.where);
+    if (!itemNotes.includes(note)) itemNotes.push(note);
+  }
+  return { items: kept, itemNotes };
+}
+
 // ---- assembly ----
 
 export function assembleVersionGroup(
@@ -219,6 +245,17 @@ export function assembleVersionGroup(
   const gameDefs = GAMES.filter((g) => config.games.includes(g.id));
   const mainSources = new Map<string, SourceRef>();
   const pokedexSources = new Map<string, SourceRef>();
+
+  /** `genderRatio` from the infobox code; an unknown code is an error. */
+  const genderOf = (info: InfoboxData, title: string): Pick<Species, 'genderRatio'> => {
+    if (info.genderCode === null) return {};
+    const ratio = genderRatioFromCode(info.genderCode);
+    if (ratio === undefined) {
+      issue('error', `Unknown gendercode ${info.genderCode}`, title);
+      return {};
+    }
+    return { genderRatio: ratio };
+  };
 
   /** Looks a page up and records it as a source; a missing page is an error. */
   const use = (title: string, ...sources: Map<string, SourceRef>[]): CachedPage | null => {
@@ -253,6 +290,22 @@ export function assembleVersionGroup(
   });
   for (const message of catchRates.errors) issue('error', message, CATCH_RATE_LIST_PAGE);
 
+  // Regional Pokédex numbers, for the games whose registry entry has a regional Pokédex.
+  const regionalGames = gameDefs.filter((g) => g.regionalDex).map((g) => g.id);
+  const regionalPage = config.regionalDexPage ? use(config.regionalDexPage, mainSources) : null;
+  const regionalNumbers = regionalPage ? parseRegionalDexList(regionalPage.wikitext) : null;
+  const regionalDexOf = (dex: number): Pick<Species, 'regionalDex'> => {
+    const no = regionalNumbers?.get(dex);
+    if (!regionalGames.length || no === undefined) return {};
+    return { regionalDex: Object.fromEntries(regionalGames.map((g) => [g, no])) };
+  };
+  if (regionalNumbers) {
+    for (const entry of list) {
+      if (!regionalNumbers.has(entry.dex))
+        issue('warning', `#${entry.dex} ${entry.name} has no regional Pokédex number`, regionalPage!.title);
+    }
+  }
+
   const species: Species[] = [];
   const entries: Record<string, PokedexEntryText[]> = {};
   const evolutionPages: EvolutionBoxPage[] = [];
@@ -286,6 +339,7 @@ export function assembleVersionGroup(
             name: entry.name,
             slug: entry.slug,
             types: types as Species['types'],
+            ...regionalDexOf(entry.dex),
             catchRate: rate.catchRate,
             ...(rate.catchRateByGame ? { catchRateByGame: rate.catchRateByGame } : {}),
             ...(rate.note ? { catchRateNote: rate.note } : {}),
@@ -298,15 +352,7 @@ export function assembleVersionGroup(
             // Effort values exist from Generation III; earlier stat experience is a mechanics rule.
             ...(generation >= 3 ? { evYield: info.evYield } : {}),
             ...(group.features.breeding
-              ? {
-                  eggGroups: info.eggGroups,
-                  ...(info.genderCode !== null
-                    ? {
-                        genderRatio:
-                          info.genderCode === 255 ? ('genderless' as const) : info.genderCode,
-                      }
-                    : {}),
-                }
+              ? { eggGroups: info.eggGroups, ...genderOf(info, page.title) }
               : {}),
           });
         }
@@ -332,6 +378,8 @@ export function assembleVersionGroup(
         generation,
         games: config.games,
         levelColumns: config.learnsetLevelColumns,
+        eggMoves: group.features.breeding,
+        ...(config.learnsetTutorColumns ? { tutorColumns: config.learnsetTutorColumns } : {}),
       });
       for (const message of parsed.issues) issue('error', message, learnsetTitle);
       parsedLearnsets.push([entry.dex, parsed]);
@@ -347,6 +395,10 @@ export function assembleVersionGroup(
       levelUp: parsed.levelUp.map((row) => ({ move: slugify(row.move), levels: row.levels })),
       machines: [...new Set(parsed.machines.map((m) => slugify(m.move)))],
       prevo: parsed.prevo.map((row) => ({ ...row, move: slugify(row.move) })),
+      ...(parsed.egg.length ? { egg: parsed.egg.map((move) => slugify(move)) } : {}),
+      ...(parsed.tutor.length
+        ? { tutor: parsed.tutor.map((row) => ({ ...row, move: slugify(row.move) })) }
+        : {}),
     };
   }
 
@@ -489,8 +541,7 @@ export function assembleVersionGroup(
       source: { title: page.resolvedTitle, revid: page.revid },
       notes: walk.notes,
       subAreas: mergeRows(rows, config.games),
-      items: [...itemWalk.items, ...(shop?.items ?? [])],
-      itemNotes: itemWalk.notes,
+      ...splitItemNotes([...itemWalk.items, ...(shop?.items ?? [])], itemWalk.notes, config),
     });
   }
 
@@ -557,8 +608,12 @@ export function assembleVersionGroup(
   if (options.categoryMembers)
     issues.push(...diffLocationCategory(options.categoryMembers, config));
   else issue('note', `Location category check skipped (${config.locationCategory} not available)`);
-  if (group.features.breeding)
+  const breeding = config.overrides.breeding ?? null;
+  if (group.features.breeding && !breeding)
     issue('warning', 'Breeding rules are not configured yet; breeding is left out');
+  for (const id of breeding?.dayCareLocationIds ?? []) {
+    if (!locations.some((l) => l.id === id)) issue('error', `Day Care location "${id}" is not configured`);
+  }
 
   const data: VersionGroupData = {
     schemaVersion: 1,
@@ -569,7 +624,15 @@ export function assembleVersionGroup(
     types: POKEMON_TYPES.map((t) => t.id).filter((type) => typeExistsIn(type, generation)),
     species,
     evolutions,
-    breeding: null,
+    breeding: breeding
+      ? {
+          dayCareLocationIds: [...breeding.dayCareLocationIds],
+          dittoDex: breeding.dittoDex,
+          ...(breeding.babyItemRequirements
+            ? { babyItemRequirements: breeding.babyItemRequirements.map((r) => ({ ...r })) }
+            : {}),
+        }
+      : null,
     walkthroughs: config.walkthroughs,
     unlocks: Object.fromEntries(
       Object.entries(config.overrides.unlocks).map(([game, list]) => [game, [...(list ?? [])]]),

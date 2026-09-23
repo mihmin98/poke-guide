@@ -1,5 +1,5 @@
 import { buildGameView } from '../../core/domain/game-view';
-import type { LocationItem } from '../../core/domain/models';
+import type { EncounterSlot, LocationItem, TimeOfDay } from '../../core/domain/models';
 import {
   testData,
   testEncounter,
@@ -12,6 +12,7 @@ import {
   catchDifficulty,
   catchRateFor,
   itemRequirementLabels,
+  slotLines,
 } from './location-model';
 
 const percent = (value: number, min = 2, max = 5) => [
@@ -176,5 +177,62 @@ describe('location model (plan §13.5)', () => {
       [3, true, null],
     ]);
     expect(rows([3], true, true)).toEqual([[1, false, null]]);
+  });
+});
+
+describe('slot lines (time of day, plan §16 Phase 10)', () => {
+  const timed = (time: TimeOfDay, value: number, min = 2, max = 4): EncounterSlot => ({
+    levels: { min, max },
+    rate: { kind: 'percent', value },
+    conditions: [{ kind: 'time', value: time }],
+  });
+
+  it('passes slots without time conditions through unchanged', () => {
+    const slots: EncounterSlot[] = [
+      { levels: { min: 2, max: 5 }, rate: { kind: 'percent', value: 50 } },
+      { levels: null, rate: { kind: 'once' }, conditions: [{ kind: 'swarm' }] },
+    ];
+    expect(slotLines(slots)).toEqual([
+      { levels: { min: 2, max: 5 }, rate: { kind: 'percent', value: 50 }, conditions: [] },
+      { levels: null, rate: { kind: 'once' }, conditions: [{ kind: 'swarm' }] },
+    ]);
+  });
+
+  it('merges per-time slots into one line with a rate per time', () => {
+    const [line] = slotLines([timed('morning', 5), timed('day', 5), timed('night', 45, 3, 6)]);
+    expect(line).toEqual({
+      levels: { min: 2, max: 6 },
+      byTime: {
+        morning: { kind: 'percent', value: 5 },
+        day: { kind: 'percent', value: 5 },
+        night: { kind: 'percent', value: 45 },
+      },
+      conditions: [],
+    });
+  });
+
+  it('leaves a time empty when the species does not appear then', () => {
+    const [line] = slotLines([timed('night', 55)]);
+    expect(line?.byTime).toEqual({ morning: null, day: null, night: { kind: 'percent', value: 55 } });
+  });
+
+  it('collapses equal rates into one all-day rate', () => {
+    const [line] = slotLines([timed('morning', 30), timed('day', 30), timed('night', 30)]);
+    expect(line).toEqual({
+      levels: { min: 2, max: 4 },
+      rate: { kind: 'percent', value: 30 },
+      allDay: true,
+      conditions: [],
+    });
+  });
+
+  it('keeps other conditions on separate lines', () => {
+    const swarm: EncounterSlot = {
+      ...timed('day', 40),
+      conditions: [{ kind: 'time', value: 'day' }, { kind: 'swarm' }],
+    };
+    const lines = slotLines([timed('day', 10), swarm]);
+    expect(lines.map((l) => l.conditions)).toEqual([[], [{ kind: 'swarm' }]]);
+    expect(lines[1]?.byTime?.day).toEqual({ kind: 'percent', value: 40 });
   });
 });

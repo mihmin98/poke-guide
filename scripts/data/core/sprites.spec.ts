@@ -4,7 +4,13 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { rbyConfig } from '../version-groups/rby/config';
 import type { ImageInfo } from './mediawiki-client';
-import { spriteFileTitle, spriteJobs, syncSprites, type SpriteSource } from './sprites';
+import {
+  pngStillFrame,
+  spriteFileTitle,
+  spriteJobs,
+  syncSprites,
+  type SpriteSource,
+} from './sprites';
 
 const sha1 = (bytes: Uint8Array) => createHash('sha1').update(bytes).digest('hex');
 const bytesOf = (text: string) => new TextEncoder().encode(text);
@@ -108,5 +114,84 @@ describe('syncSprites', () => {
     expect(readFileSync(join(dir, 'gen1-rb/001.png'), 'utf8')).toBe('new');
     expect(readFileSync(join(dir, 'gen1-rb/003.png'), 'utf8')).toBe('updated');
     expect(existsSync(join(dir, 'gen1-rb/005.png'))).toBe(false);
+  });
+});
+
+/** A PNG chunk (the CRC isn't checked by `pngStillFrame`, so it's left zero). */
+function chunk(type: string, data: number[] = []): number[] {
+  const length = [24, 16, 8, 0].map((shift) => (data.length >>> shift) & 0xff);
+  return [...length, ...[...type].map((c) => c.charCodeAt(0)), ...data, 0, 0, 0, 0];
+}
+const SIGNATURE = [0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a];
+
+describe('pngStillFrame', () => {
+  it('drops the animation chunks of an APNG and keeps the default image', () => {
+    const apng = new Uint8Array([
+      ...SIGNATURE,
+      ...chunk('IHDR', [1, 2, 3]),
+      ...chunk('acTL', [0, 0, 0, 2]),
+      ...chunk('fcTL', [9]),
+      ...chunk('IDAT', [7, 7]),
+      ...chunk('fcTL', [9]),
+      ...chunk('fdAT', [8, 8]),
+      ...chunk('IEND'),
+    ]);
+    const still = [...SIGNATURE, ...chunk('IHDR', [1, 2, 3]), ...chunk('IDAT', [7, 7]), ...chunk('IEND')];
+    expect([...pngStillFrame(apng)]).toEqual(still);
+    // A plain PNG is unchanged.
+    expect([...pngStillFrame(new Uint8Array(still))]).toEqual(still);
+  });
+
+  it('rejects files that are not PNGs or have no image data', () => {
+    expect(() => pngStillFrame(bytesOf('GIF89a'))).toThrow(/Not a PNG/);
+    expect(() => pngStillFrame(new Uint8Array([...SIGNATURE, ...chunk('IEND')]))).toThrow(/IDAT/);
+  });
+});
+
+describe('syncSprites with still frames', () => {
+  let dir: string;
+  beforeEach(() => {
+    dir = mkdtempSync(join(tmpdir(), 'sprites-'));
+  });
+  afterEach(() => rmSync(dir, { recursive: true, force: true }));
+
+  it('stores the still frame and skips it next time through the manifest', async () => {
+    const apng = new Uint8Array([
+      ...SIGNATURE,
+      ...chunk('IHDR'),
+      ...chunk('acTL'),
+      ...chunk('IDAT', [1]),
+      ...chunk('IEND'),
+    ]);
+    const downloads: string[] = [];
+    const fake: SpriteSource = {
+      getImageInfo: async (titles) =>
+        new Map(titles.map((t) => [t, { url: `https://x/${t}`, sha1: sha1(apng) }])),
+      download: async (url) => {
+        downloads.push(url);
+        return apng;
+      },
+    };
+    const jobs = [
+      {
+        setId: 'gen2-c',
+        dex: 1,
+        fileTitle: 'File:Spr_2c_001.png',
+        path: 'gen2-c/001.png',
+        stillFrame: true as const,
+      },
+    ];
+    const manifests = join(dir, 'sources');
+
+    const first = await syncSprites(jobs, fake, dir, undefined, manifests);
+    expect(first.downloaded).toHaveLength(1);
+    expect([...readFileSync(join(dir, 'gen2-c/001.png'))]).toEqual([...pngStillFrame(apng)]);
+    expect(JSON.parse(readFileSync(join(manifests, 'gen2-c.json'), 'utf8'))).toEqual({
+      '001.png': sha1(apng),
+    });
+
+    const second = await syncSprites(jobs, fake, dir, undefined, manifests);
+    expect(second.unchanged).toHaveLength(1);
+    expect(downloads).toHaveLength(1);
   });
 });

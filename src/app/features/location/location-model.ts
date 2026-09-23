@@ -1,15 +1,39 @@
 // Pure view model for the location page (plan §13.5): no Angular, so it can be unit-tested on its own.
 import { encountersFor, type GameEncounter, type GameView } from '../../core/domain/game-view';
 import { chosenInstead } from '../../core/domain/item-progress';
+import { unionLevels } from '../../core/domain/levels';
 import type {
+  EncounterCondition,
   EncounterSlot,
   GameId,
   GameLocation,
+  LevelSpec,
   LocationItem,
   PokemonType,
   Rate,
+  TimeOfDay,
 } from '../../core/domain/models';
+import { TIMES_OF_DAY } from '../../core/games/conditions';
 import type { EncounterMethodDefinition } from '../../core/games/methods';
+
+/**
+ * One displayed line of a row. Slots that differ only by time of day become one line with a rate per time
+ * (plan §16 Phase 10); a line whose times all share one rate is collapsed to `rate`.
+ */
+export interface SlotLine {
+  levels: LevelSpec | null;
+  /** The single rate, when there is no per-time split (or every time has the same rate). */
+  rate?: Rate;
+  /** Per time of day; `null` = doesn't appear then. Absent when `rate` is set. */
+  byTime?: Record<TimeOfDay, Rate | null>;
+  /** Every time of day shares `rate` (shown across the time columns). */
+  allDay?: true;
+  /** Conditions other than time of day. */
+  conditions: EncounterCondition[];
+  shiny?: EncounterSlot['shiny'];
+  ivs?: EncounterSlot['ivs'];
+  note?: string;
+}
 
 export interface LocationRow {
   key: string;
@@ -17,6 +41,8 @@ export interface LocationRow {
   name: string;
   types: readonly PokemonType[];
   slots: readonly EncounterSlot[];
+  /** `slots` as displayed: time-of-day slots merged into columns. */
+  lines: SlotLine[];
   /** Unlock labels the encounter needs. */
   requires: string[];
   exclusiveGroupLabel?: string;
@@ -30,6 +56,8 @@ export interface LocationRow {
 export interface LocationSection {
   method: EncounterMethodDefinition;
   rows: LocationRow[];
+  /** Some row has per-time rates, so the section shows Morning / Day / Night columns. */
+  timeColumns: boolean;
 }
 
 export interface LocationSubArea {
@@ -54,9 +82,67 @@ function rateWeight(rate: Rate | undefined): number {
   return rate?.kind === 'percent' ? rate.value : -1;
 }
 
+/** The best rate of any slot, so a night-only 55% sorts with the day's 55%. */
+function bestRateWeight(row: LocationRow): number {
+  return Math.max(-1, ...row.slots.map((slot) => rateWeight(slot.rate)));
+}
+
 export function compareRows(a: LocationRow, b: LocationRow): number {
-  const byRate = rateWeight(b.slots[0]?.rate) - rateWeight(a.slots[0]?.rate);
+  const byRate = bestRateWeight(b) - bestRateWeight(a);
   return byRate !== 0 ? byRate : a.dex - b.dex;
+}
+
+function sameRate(a: Rate | null, b: Rate | null): boolean {
+  return JSON.stringify(a) === JSON.stringify(b);
+}
+
+function timeOf(slot: EncounterSlot): TimeOfDay | undefined {
+  return slot.conditions?.find((c) => c.kind === 'time')?.value as TimeOfDay | undefined;
+}
+
+function lineOf(slot: EncounterSlot, conditions: EncounterCondition[]): SlotLine {
+  return {
+    levels: slot.levels,
+    rate: slot.rate,
+    conditions,
+    ...(slot.shiny ? { shiny: slot.shiny } : {}),
+    ...(slot.ivs ? { ivs: slot.ivs } : {}),
+    ...(slot.note ? { note: slot.note } : {}),
+  };
+}
+
+/**
+ * Merges slots that differ only by time of day into one line per remaining condition set, in slot order.
+ * Rows without time conditions come back one line per slot, unchanged.
+ */
+export function slotLines(slots: readonly EncounterSlot[]): SlotLine[] {
+  if (!slots.some((slot) => timeOf(slot))) {
+    return slots.map((slot) => lineOf(slot, slot.conditions ?? []));
+  }
+  const groups = new Map<string, EncounterSlot[]>();
+  for (const slot of slots) {
+    const others = (slot.conditions ?? []).filter((c) => c.kind !== 'time');
+    const key = JSON.stringify([others, slot.shiny, slot.ivs, slot.note]);
+    groups.set(key, [...(groups.get(key) ?? []), slot]);
+  }
+  return [...groups.values()].map((group) => {
+    const first = group[0]!;
+    const others = (first.conditions ?? []).filter((c) => c.kind !== 'time');
+    const byTime = { morning: null, day: null, night: null } as Record<TimeOfDay, Rate | null>;
+    for (const slot of group) {
+      const time = timeOf(slot);
+      for (const t of time ? [time] : TIMES_OF_DAY) byTime[t] = slot.rate;
+    }
+    const levels = group.reduce<LevelSpec | null>((acc, slot) => unionLevels(acc, slot.levels), null);
+    const line = { ...lineOf(first, others), levels };
+    const rates = TIMES_OF_DAY.map((t) => byTime[t]);
+    if (rates.every((rate) => rate && sameRate(rate, rates[0]!))) {
+      return { ...line, rate: rates[0]!, allDay: true as const };
+    }
+    const split: SlotLine = { ...line, byTime };
+    delete split.rate;
+    return split;
+  });
 }
 
 /** The value a capture actually uses here: slot override, then per-game value, then the species value. */
@@ -97,6 +183,7 @@ function buildRow(
     name: species?.name ?? `#${encounter.dex}`,
     types: species?.types ?? [],
     slots: encounter.slots,
+    lines: slotLines(encounter.slots),
     requires: (encounter.requires ?? []).map((id) => unlockById.get(id)?.label ?? id),
     exclusiveGroupLabel: group?.label,
     trade: encounter.trade && {
@@ -129,12 +216,16 @@ export function buildLocationView(input: LocationInput): LocationView | undefine
   const subAreas: LocationSubArea[] = encountersFor(location, game).map((subArea) => ({
     id: subArea.id,
     name: subArea.name,
-    sections: subArea.sections.map((section) => ({
-      method: section.method,
-      rows: section.encounters
+    sections: subArea.sections.map((section) => {
+      const rows = section.encounters
         .map((encounter) => buildRow(encounter, subArea.id, view, game, obtainable))
-        .sort(compareRows),
-    })),
+        .sort(compareRows);
+      return {
+        method: section.method,
+        rows,
+        timeColumns: rows.some((row) => row.lines.some((line) => line.byTime || line.allDay)),
+      };
+    }),
   }));
 
   const order = view.locations.findIndex((l) => l.id === locationId);

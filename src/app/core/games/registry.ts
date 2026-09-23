@@ -51,7 +51,7 @@ const GEN3_FEATURES: GenerationFeatures = {
 
 /**
  * Codec ids are a compatibility contract with every export code ever produced.
- * Reserved for games not listed yet: gold = 4, silver = 5, ruby = 7, sapphire = 8.
+ * Reserved for games not listed yet: ruby = 7, sapphire = 8.
  */
 export const GAMES: readonly GameDefinition[] = [
   {
@@ -97,6 +97,36 @@ export const GAMES: readonly GameDefinition[] = [
     status: 'available',
   },
   {
+    id: 'gold',
+    codecId: 4,
+    name: 'Pokémon Gold',
+    shortName: 'Gold',
+    versionGroupId: 'gsc',
+    generation: 2,
+    regions: ['johto', 'kanto'],
+    releaseOrder: 4,
+    nationalDexMax: 251,
+    regionalDex: { id: 'johto', name: 'New Pokédex' },
+    accent: { seed: '#B8860B' },
+    spriteSetId: 'gen2-g',
+    status: 'planned',
+  },
+  {
+    id: 'silver',
+    codecId: 5,
+    name: 'Pokémon Silver',
+    shortName: 'Silver',
+    versionGroupId: 'gsc',
+    generation: 2,
+    regions: ['johto', 'kanto'],
+    releaseOrder: 5,
+    nationalDexMax: 251,
+    regionalDex: { id: 'johto', name: 'New Pokédex' },
+    accent: { seed: '#8A9BB0' },
+    spriteSetId: 'gen2-s',
+    status: 'planned',
+  },
+  {
     id: 'crystal',
     codecId: 6,
     name: 'Pokémon Crystal',
@@ -104,7 +134,7 @@ export const GAMES: readonly GameDefinition[] = [
     versionGroupId: 'gsc',
     generation: 2,
     regions: ['johto', 'kanto'],
-    releaseOrder: 4,
+    releaseOrder: 6,
     nationalDexMax: 251,
     regionalDex: { id: 'johto', name: 'New Pokédex' },
     accent: { seed: '#4FB8D6' },
@@ -119,7 +149,7 @@ export const GAMES: readonly GameDefinition[] = [
     versionGroupId: 'frlg',
     generation: 3,
     regions: ['kanto', 'sevii'],
-    releaseOrder: 5,
+    releaseOrder: 7,
     nationalDexMax: 386,
     regionalDex: { id: 'kanto', name: 'Kanto Pokédex' },
     accent: { seed: '#F15A22' },
@@ -134,7 +164,7 @@ export const GAMES: readonly GameDefinition[] = [
     versionGroupId: 'frlg',
     generation: 3,
     regions: ['kanto', 'sevii'],
-    releaseOrder: 6,
+    releaseOrder: 8,
     nationalDexMax: 386,
     regionalDex: { id: 'kanto', name: 'Kanto Pokédex' },
     accent: { seed: '#4E9A3A' },
@@ -149,7 +179,7 @@ export const GAMES: readonly GameDefinition[] = [
     versionGroupId: 'rse',
     generation: 3,
     regions: ['hoenn'],
-    releaseOrder: 7,
+    releaseOrder: 9,
     nationalDexMax: 386,
     regionalDex: { id: 'hoenn', name: 'Hoenn Pokédex' },
     accent: { seed: '#00A86B' },
@@ -169,7 +199,7 @@ export const VERSION_GROUPS: readonly VersionGroupDefinition[] = [
   },
   {
     id: 'gsc',
-    games: ['crystal'],
+    games: ['gold', 'silver', 'crystal'],
     generation: 2,
     dataFile: 'data/gsc.json',
     features: GEN2_FEATURES,

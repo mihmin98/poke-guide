@@ -1,15 +1,19 @@
 // Pure view model for the Pokémon detail page (plan §13.7): no Angular, so it can be unit-tested on its own.
+import { evolutionDetailText } from '../../shared/evolution-text';
 import type { GameView } from '../../core/domain/game-view';
+import { unionLevels } from '../../core/domain/levels';
 import type {
-  EvolutionEdge,
+  EncounterSlot,
   GameId,
   LevelSpec,
   Move,
   PokedexData,
   Rate,
   Species,
+  TimeOfDay,
   VersionGroupData,
 } from '../../core/domain/models';
+import { TIMES_OF_DAY, timeOfDayLabel } from '../../core/games/conditions';
 import type { ChecklistEntry, UnobtainableReason } from '../../core/domain/obtainability';
 import { findMethod } from '../../core/games/methods';
 import { describeSource, type ChecklistSource } from '../checklist/checklist-model';
@@ -30,7 +34,10 @@ export interface OtherGamePlace {
   locationName: string;
   methodLabel: string;
   levels: LevelSpec | null;
+  /** The best rate over every slot (a percentage wins over a one-off). */
   rate: Rate | undefined;
+  /** `Night` or `Morning, day` when the species only appears at some times of day. */
+  times?: string;
 }
 
 export interface OtherGameEntry {
@@ -53,6 +60,10 @@ export interface PokemonLearnset {
   levelUp: LevelUpMove[];
   machines: Move[];
   prevo: PrevoMove[];
+  /** Egg moves (Gen II+). */
+  egg: Move[];
+  /** Move tutor moves available in this game. */
+  tutor: Move[];
 }
 
 export interface PokemonEntryText {
@@ -72,21 +83,6 @@ export interface PokemonView {
   family: EvolutionStep[];
   previous: { slug: string; name: string } | undefined;
   next: { slug: string; name: string } | undefined;
-}
-
-export function evolutionDetailText(edge: EvolutionEdge): string {
-  switch (edge.trigger) {
-    case 'level':
-      return edge.level === undefined ? 'Level up' : `Lv ${edge.level}`;
-    case 'item':
-      return edge.item ?? 'Use an item';
-    case 'friendship':
-      return 'Friendship';
-    case 'trade':
-      return edge.item ? `Trade holding ${edge.item}` : 'Trade';
-    default:
-      return edge.condition ?? 'Special';
-  }
 }
 
 /** Every edge of the species' family, walked up to the root and then down through every branch. */
@@ -122,6 +118,27 @@ function familyOf(view: GameView, dex: number): EvolutionStep[] {
   return steps;
 }
 
+function bestRate(slots: readonly EncounterSlot[]): Rate | undefined {
+  const percents = slots.flatMap((slot) => (slot.rate.kind === 'percent' ? [slot.rate] : []));
+  if (!percents.length) return slots[0]?.rate;
+  return percents.reduce((best, rate) => (rate.value > best.value ? rate : best));
+}
+
+/** The times of day the slots cover, or `undefined` when that's all day (or the game has no clock). */
+function timesOf(slots: readonly EncounterSlot[]): string | undefined {
+  const times = new Set<TimeOfDay>();
+  for (const slot of slots) {
+    const time = slot.conditions?.find((c) => c.kind === 'time')?.value as TimeOfDay | undefined;
+    if (!time) return undefined;
+    times.add(time);
+  }
+  if (!times.size || times.size === TIMES_OF_DAY.length) return undefined;
+  const text = TIMES_OF_DAY.filter((t) => times.has(t))
+    .map((t) => timeOfDayLabel(t).toLowerCase())
+    .join(', ');
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
 function placesIn(data: VersionGroupData, dex: number, game: GameId): OtherGamePlace[] {
   const places: OtherGamePlace[] = [];
   for (const location of data.locations) {
@@ -130,12 +147,14 @@ function placesIn(data: VersionGroupData, dex: number, game: GameId): OtherGameP
       for (const encounter of subArea.encounters) {
         const slots = encounter.games[game];
         if (encounter.dex !== dex || !slots?.length) continue;
+        const times = timesOf(slots);
         places.push({
           locationId: location.id,
           locationName: location.name,
           methodLabel: findMethod(encounter.method)?.label ?? encounter.method,
-          levels: slots[0]?.levels ?? null,
-          rate: slots[0]?.rate,
+          levels: slots.reduce<LevelSpec | null>((acc, slot) => unionLevels(acc, slot.levels), null),
+          rate: bestRate(slots),
+          ...(times ? { times } : {}),
         });
       }
     }
@@ -198,7 +217,7 @@ export function buildLearnset(
 ): PokemonLearnset {
   const learnset = pokedex?.learnsets[String(dex)];
   const moves = new Map((pokedex?.moves ?? []).map((move) => [move.id, move]));
-  if (!learnset) return { levelUp: [], machines: [], prevo: [] };
+  if (!learnset) return { levelUp: [], machines: [], prevo: [], egg: [], tutor: [] };
 
   const levelUp: LevelUpMove[] = [];
   for (const row of learnset.levelUp) {
@@ -221,7 +240,27 @@ export function buildLearnset(
     prevo.push({ move, from: row.fromDex.map(nameOf) });
   }
 
-  return { levelUp, machines, prevo };
+  const byName = (a: Move, b: Move) => a.name.localeCompare(b.name);
+  const egg = (learnset.egg ?? [])
+    .map((id) => moves.get(id))
+    .filter((move): move is Move => move !== undefined)
+    .sort(byName);
+  const tutor = (learnset.tutor ?? [])
+    .filter((row) => !row.games || row.games.includes(game))
+    .map((row) => moves.get(row.move))
+    .filter((move): move is Move => move !== undefined)
+    .sort(byName);
+
+  return { levelUp, machines, prevo, egg, tutor };
+}
+
+/** `50% ♂ · 50% ♀` · `Male only` · `Genderless`, from `Species.genderRatio` (the female fraction). */
+export function genderText(ratio: number | 'genderless'): string {
+  if (ratio === 'genderless') return 'Genderless';
+  if (ratio === 0) return 'Male only';
+  if (ratio === 1) return 'Female only';
+  const percent = (value: number) => `${Math.round(value * 1000) / 10}%`;
+  return `${percent(1 - ratio)} ♂ · ${percent(ratio)} ♀`;
 }
 
 /** Pokédex entries for this species, the game's own first (plan §13.7). */

@@ -2,6 +2,8 @@
  * Merges walked rows into sub-areas and encounters with per-game slots (plan §7.4 step 7).
  * Rows are grouped by (sub-area, method, dex, label, traded species). Within one game, slots with the same
  * conditions and percentage rates are combined: levels are unioned and rates added (split table rows).
+ * Afterwards a morning, day and night slot that are otherwise identical collapse into one slot without a
+ * time condition, so time-of-day games only keep the times that actually differ.
  */
 import type {
   Encounter,
@@ -51,6 +53,12 @@ export function mergeRows(rows: readonly WalkedRow[], games: readonly GameId[]):
     }
   }
 
+  for (const encounter of encounters.values()) {
+    for (const [game, slots] of Object.entries(encounter.games)) {
+      encounter.games[game as GameId] = collapseTimes(slots);
+    }
+  }
+
   return [...subAreas.values()]
     .map((area) => ({
       ...area,
@@ -90,4 +98,44 @@ function addSlot(slots: EncounterSlot[], slot: EncounterSlot): void {
   if (slot.note && slot.note !== same.note) {
     same.note = same.note ? `${same.note} ${slot.note}` : slot.note;
   }
+}
+
+const TIMES = ['morning', 'day', 'night'] as const;
+
+/** Merges a morning/day/night triple that only differs by its time condition into one untimed slot. */
+function collapseTimes(slots: EncounterSlot[]): EncounterSlot[] {
+  const timeOf = (slot: EncounterSlot) => slot.conditions?.find((c) => c.kind === 'time')?.value;
+  const restKey = (slot: EncounterSlot) =>
+    JSON.stringify([
+      (slot.conditions ?? []).filter((c) => c.kind !== 'time'),
+      slot.levels,
+      slot.rate,
+      slot.note,
+    ]);
+  const groups = new Map<string, EncounterSlot[]>();
+  for (const slot of slots) {
+    if (!timeOf(slot)) continue;
+    const key = restKey(slot);
+    groups.set(key, [...(groups.get(key) ?? []), slot]);
+  }
+  const out: EncounterSlot[] = [];
+  const done = new Set<string>();
+  for (const slot of slots) {
+    const time = timeOf(slot);
+    const group = time ? groups.get(restKey(slot)) : undefined;
+    const full =
+      group?.length === TIMES.length && TIMES.every((t) => group.some((s) => timeOf(s) === t));
+    if (!full) {
+      out.push(slot);
+      continue;
+    }
+    const key = restKey(slot);
+    if (done.has(key)) continue;
+    done.add(key);
+    const conditions = (slot.conditions ?? []).filter((c) => c.kind !== 'time');
+    const collapsed: EncounterSlot = { ...slot };
+    delete collapsed.conditions;
+    out.push(conditions.length ? { ...collapsed, conditions } : collapsed);
+  }
+  return out;
 }

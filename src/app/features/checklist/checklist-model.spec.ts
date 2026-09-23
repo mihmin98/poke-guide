@@ -168,7 +168,8 @@ describe('checklist model (plan §13.6)', () => {
     expect(categoryOf({ kind: 'encounter', method: 'prize', part: 1 })).toBe('prize');
     expect(categoryOf({ kind: 'evolution', part: 1 })).toBe('evolution');
     expect(categoryOf({ kind: 'breeding', part: 1 })).toBe('breeding');
-    expect(categoryOf({ kind: 'encounter', method: 'headbutt', part: 1 })).toBeUndefined();
+    expect(categoryOf({ kind: 'encounter', method: 'headbutt', part: 1 })).toBe('wild');
+    expect(categoryOf({ kind: 'encounter', method: 'no-such-method', part: 1 })).toBeUndefined();
   });
 
   it('labels every unobtainable reason', () => {

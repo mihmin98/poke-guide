@@ -165,6 +165,116 @@
   --mat-sys-neutral-variant20: light-dark(#37301D, #37301D);
 }
 
+/* Pokémon Gold · seed #B8860B */
+.game-gold {
+  --mat-sys-primary: light-dark(#785600, #F7BD48);
+  --mat-sys-on-primary: light-dark(#FFFFFF, #412D00);
+  --mat-sys-primary-container: light-dark(#986D00, #BA880F);
+  --mat-sys-on-primary-container: light-dark(#FFFBFF, #362500);
+  --mat-sys-inverse-primary: light-dark(#F7BD48, #7B5800);
+  --mat-sys-primary-fixed: light-dark(#FFDEA6, #FFDEA6);
+  --mat-sys-primary-fixed-dim: light-dark(#F7BD48, #F7BD48);
+  --mat-sys-on-primary-fixed: light-dark(#271900, #271900);
+  --mat-sys-on-primary-fixed-variant: light-dark(#5D4200, #5D4200);
+  --mat-sys-secondary: light-dark(#725B2E, #E2C28C);
+  --mat-sys-on-secondary: light-dark(#FFFFFF, #402D04);
+  --mat-sys-secondary-container: light-dark(#FCDBA3, #5B461B);
+  --mat-sys-on-secondary-container: light-dark(#775F32, #D3B47F);
+  --mat-sys-secondary-fixed: light-dark(#FFDEA6, #FFDEA6);
+  --mat-sys-secondary-fixed-dim: light-dark(#E2C28C, #E2C28C);
+  --mat-sys-on-secondary-fixed: light-dark(#271900, #271900);
+  --mat-sys-on-secondary-fixed-variant: light-dark(#594319, #594319);
+  --mat-sys-tertiary: light-dark(#085EA2, #A1C9FF);
+  --mat-sys-on-tertiary: light-dark(#FFFFFF, #00325A);
+  --mat-sys-tertiary-container: light-dark(#3477BC, #5594DB);
+  --mat-sys-on-tertiary-container: light-dark(#FDFCFF, #00294C);
+  --mat-sys-tertiary-fixed: light-dark(#D2E4FF, #D2E4FF);
+  --mat-sys-tertiary-fixed-dim: light-dark(#A1C9FF, #A1C9FF);
+  --mat-sys-on-tertiary-fixed: light-dark(#001C37, #001C37);
+  --mat-sys-on-tertiary-fixed-variant: light-dark(#004880, #004880);
+  --mat-sys-error: light-dark(#BA1A1A, #FFB4AB);
+  --mat-sys-on-error: light-dark(#FFFFFF, #690005);
+  --mat-sys-error-container: light-dark(#FFDAD6, #93000A);
+  --mat-sys-on-error-container: light-dark(#93000A, #FFDAD6);
+  --mat-sys-background: light-dark(#FFF8F3, #17130B);
+  --mat-sys-on-background: light-dark(#201B13, #ECE1D4);
+  --mat-sys-surface: light-dark(#FFF8F3, #17130B);
+  --mat-sys-surface-dim: light-dark(#E3D8CC, #17130B);
+  --mat-sys-surface-bright: light-dark(#FFF8F3, #3E382F);
+  --mat-sys-surface-container-lowest: light-dark(#FFFFFF, #120E07);
+  --mat-sys-surface-container-low: light-dark(#FDF2E5, #201B13);
+  --mat-sys-surface-container: light-dark(#F7ECDF, #241F17);
+  --mat-sys-surface-container-high: light-dark(#F1E7D9, #2F2921);
+  --mat-sys-surface-container-highest: light-dark(#ECE1D4, #3A342B);
+  --mat-sys-on-surface: light-dark(#201B13, #ECE1D4);
+  --mat-sys-surface-variant: light-dark(#F0E0CA, #4F4535);
+  --mat-sys-on-surface-variant: light-dark(#4F4535, #D3C4AF);
+  --mat-sys-inverse-surface: light-dark(#353027, #ECE1D4);
+  --mat-sys-inverse-on-surface: light-dark(#FAEFE2, #353027);
+  --mat-sys-outline: light-dark(#817563, #9C8F7B);
+  --mat-sys-outline-variant: light-dark(#D3C4AF, #4F4535);
+  --mat-sys-shadow: light-dark(#000000, #000000);
+  --mat-sys-scrim: light-dark(#000000, #000000);
+  --mat-sys-surface-tint: light-dark(#7B5800, #F7BD48);
+  --mat-sys-neutral10: light-dark(#201B13, #201B13);
+  --mat-sys-neutral-variant20: light-dark(#382F20, #382F20);
+}
+
+/* Pokémon Silver · seed #8A9BB0 */
+.game-silver {
+  --mat-sys-primary: light-dark(#4F6073, #B7C8DE);
+  --mat-sys-on-primary: light-dark(#FFFFFF, #213243);
+  --mat-sys-primary-container: light-dark(#8A9BB0, #8A9BB0);
+  --mat-sys-on-primary-container: light-dark(#223344, #223344);
+  --mat-sys-inverse-primary: light-dark(#B7C8DE, #4F6073);
+  --mat-sys-primary-fixed: light-dark(#D3E4FB, #D3E4FB);
+  --mat-sys-primary-fixed-dim: light-dark(#B7C8DE, #B7C8DE);
+  --mat-sys-on-primary-fixed: light-dark(#0B1D2D, #0B1D2D);
+  --mat-sys-on-primary-fixed-variant: light-dark(#38485A, #38485A);
+  --mat-sys-secondary: light-dark(#595F67, #C1C7D1);
+  --mat-sys-on-secondary: light-dark(#FFFFFF, #2B3138);
+  --mat-sys-secondary-container: light-dark(#DDE3ED, #434A52);
+  --mat-sys-on-secondary-container: light-dark(#5F656D, #B3B9C2);
+  --mat-sys-secondary-fixed: light-dark(#DDE3ED, #DDE3ED);
+  --mat-sys-secondary-fixed-dim: light-dark(#C1C7D1, #C1C7D1);
+  --mat-sys-on-secondary-fixed: light-dark(#161C23, #161C23);
+  --mat-sys-on-secondary-fixed-variant: light-dark(#41474F, #41474F);
+  --mat-sys-tertiary: light-dark(#735A3C, #E2C19C);
+  --mat-sys-on-tertiary: light-dark(#FFFFFF, #412C12);
+  --mat-sys-tertiary-container: light-dark(#B29472, #B29472);
+  --mat-sys-on-tertiary-container: light-dark(#422D13, #422D13);
+  --mat-sys-tertiary-fixed: light-dark(#FFDDB8, #FFDDB8);
+  --mat-sys-tertiary-fixed-dim: light-dark(#E2C19C, #E2C19C);
+  --mat-sys-on-tertiary-fixed: light-dark(#291802, #291802);
+  --mat-sys-on-tertiary-fixed-variant: light-dark(#594226, #594226);
+  --mat-sys-error: light-dark(#BA1A1A, #FFB4AB);
+  --mat-sys-on-error: light-dark(#FFFFFF, #690005);
+  --mat-sys-error-container: light-dark(#FFDAD6, #93000A);
+  --mat-sys-on-error-container: light-dark(#93000A, #FFDAD6);
+  --mat-sys-background: light-dark(#FBF9FA, #131315);
+  --mat-sys-on-background: light-dark(#1B1C1D, #E4E2E3);
+  --mat-sys-surface: light-dark(#FBF9FA, #131315);
+  --mat-sys-surface-dim: light-dark(#DBD9DB, #131315);
+  --mat-sys-surface-bright: light-dark(#FBF9FA, #39393A);
+  --mat-sys-surface-container-lowest: light-dark(#FFFFFF, #0D0E0F);
+  --mat-sys-surface-container-low: light-dark(#F5F3F4, #1B1C1D);
+  --mat-sys-surface-container: light-dark(#EFEDEF, #1F2021);
+  --mat-sys-surface-container-high: light-dark(#E9E7E9, #292A2B);
+  --mat-sys-surface-container-highest: light-dark(#E4E2E3, #343536);
+  --mat-sys-on-surface: light-dark(#1B1C1D, #E4E2E3);
+  --mat-sys-surface-variant: light-dark(#E0E2E9, #44474C);
+  --mat-sys-on-surface-variant: light-dark(#44474C, #C4C6CD);
+  --mat-sys-inverse-surface: light-dark(#303032, #E4E2E3);
+  --mat-sys-inverse-on-surface: light-dark(#F2F0F2, #303032);
+  --mat-sys-outline: light-dark(#74777D, #8E9197);
+  --mat-sys-outline-variant: light-dark(#C4C6CD, #44474C);
+  --mat-sys-shadow: light-dark(#000000, #000000);
+  --mat-sys-scrim: light-dark(#000000, #000000);
+  --mat-sys-surface-tint: light-dark(#4F6073, #B7C8DE);
+  --mat-sys-neutral10: light-dark(#1B1C1D, #1B1C1D);
+  --mat-sys-neutral-variant20: light-dark(#2D3135, #2D3135);
+}
+
 /* Pokémon Crystal · seed #4FB8D6 */
 .game-crystal {
   --mat-sys-primary: light-dark(#00677D, #6ED4F3);

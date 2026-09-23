@@ -38,7 +38,7 @@ For each area it lists the Pokémon you can get, in the order you visit the area
 
 | Topic | Decision |
 |---|---|
-| Games | Ship with **Red, Blue and Yellow** (international English versions; Japanese Red/Green and Japanese Blue are ignored). The architecture is **game-agnostic** (§4), and adding a game means adding data configuration, not changing the app. |
+| Games | Ship with **Red, Blue and Yellow** (international English versions; Japanese Red/Green and Japanese Blue are ignored). The architecture is **game-agnostic** (§4), and adding a game means adding data configuration, not changing the app. **Gold, Silver and Crystal** follow in Phase 10 (§16, decided 2026-09-23). |
 | Data source | A **Node/TypeScript script scrapes Bulbapedia when the site is built** through the MediaWiki API. It writes static JSON per *version group* that is committed to the repo. Hand-curated **override files** cover data that isn't in a parseable template. The app never calls Bulbapedia at runtime. |
 | What counts toward the checklist | Wild encounters, **evolutions** (except those that need a trade), **in-game NPC trades**, **gifts, prizes and fossils**, **static encounters and legendaries**. For later generations, **breeding** also counts where the game has a Day Care. If you must pick one option (starter, fossil, Hitmonlee/Hitmonchan), the options are shown as an *either/or group*. Transfers from other games or Pal Park count as trading, so they're excluded. |
 | Catch status | **Only two states: caught or not caught.** No "seen" state. |
@@ -215,7 +215,7 @@ export interface GenerationFeatures {
 }
 ```
 
-Codec ids follow international release order and are fixed: red 1, blue 2, yellow 3, gold 4, silver 5, crystal 6, ruby 7, sapphire 8, emerald 9, firered 10, leafgreen 11 (4, 5, 7 and 8 are reserved until those games are registered).
+Codec ids follow international release order and are fixed: red 1, blue 2, yellow 3, gold 4, silver 5, crystal 6, ruby 7, sapphire 8, emerald 9, firered 10, leafgreen 11 (7 and 8 are reserved until those games are registered; gold 4 and silver 5 are registered in Phase 10).
 
 The initial registry contains `red`, `blue` and `yellow` as `available`. Crystal, FireRed, LeafGreen and Emerald can be listed as `planned`, which lets the game picker and codec ids be designed up front. They only appear in dev builds behind a flag.
 
@@ -261,6 +261,8 @@ export interface CaptureFormula {
   balls: BallDef[];                             // gen1: Poké, Great, Ultra, Safari, Master
   statuses: StatusDef[];                        // gen1: none · sleep/freeze · paralysis/burn/poison
   contexts?: CaptureContextDef[];               // gen1: Safari Game (bait / rock)
+                                                // Phase 10: generalized to CaptureInputDef (select | number | boolean,
+                                                // optionally per ball) for the Gen II Apricorn balls
   reportsShakes: boolean;                       // whether the break-free animation carries information
   compute(input: CaptureInput): CaptureResult;  // exact P(catch) per throw, expected throws,
                                                 // throws for 50/90/99 %, shakes on failure (if applicable)
@@ -428,7 +430,10 @@ export interface VersionGroupConfig {
     unlocks: Unlock[];
     items: ItemOverrides;                      // add, requires, patch, requirementPhrases, choiceGroups, walkthroughAccepted, walkthroughGames (§7.13)
   };
-  spriteSets: Record<string, { filePattern: string }>; // keyed by registry spriteSetId: 'gen1-y' → 'Spr_1y_{dex3}.png'
+  spriteSets: Record<string, { filePattern: string; stillFrame?: true }>; // keyed by registry spriteSetId: 'gen1-y' → 'Spr_1y_{dex3}.png'
+                                               // stillFrame: keep an animated PNG's first frame (Crystal, Phase 10)
+  // Phase 10 adds: overrides.breeding (BreedingRules), regionalDexPage (fills species.regionalDex),
+  // itemNoteRules (fruit/Apricorn trees → itemNotes)
 }
 
 export interface CatchTemplateAdapter {
@@ -442,13 +447,14 @@ export interface CatchTemplateAdapter {
 
 ### 7.2 npm scripts
 ```jsonc
-"data:build":    "tsx scripts/data/build.ts --group rby",   // uses cache, fetches only what's missing
-"data:build:all":"tsx scripts/data/build.ts --all",
-"data:refresh":  "tsx scripts/data/build.ts --group rby --refresh",
-"data:offline":  "tsx scripts/data/build.ts --group rby --offline", // fixtures/cache only, category from the snapshot
+"data:build":    "tsx scripts/data/build.ts",               // uses cache, fetches only what's missing
+"data:build:all":"tsx scripts/data/build.ts --all",         // same as data:build (kept for compatibility)
+"data:refresh":  "tsx scripts/data/build.ts --refresh",
+"data:offline":  "tsx scripts/data/build.ts --offline",     // fixtures/cache only, category from the snapshot
+// Every script covers every version group (Phase 10); `npm run data:build -- --group gsc` narrows it.
 // build.ts also accepts --dry-run (print the report, write nothing). Files are never written when there are errors.
 // Golden tests read the generated public/data files, so rebuild after pipeline changes.
-"data:sprites":  "tsx scripts/data/sprites.ts --group rby", // or --all; skips files whose SHA-1 matches the archive
+"data:sprites":  "tsx scripts/data/sprites.ts",             // skips files whose SHA-1 matches the archive (stillFrame sets: the manifest)
 "data:validate": "tsx scripts/data/core/validate.ts",
 "theme:games":   "tsx scripts/theme/generate-game-themes.ts"
 ```
@@ -862,6 +868,8 @@ export interface Species {
 export interface EvolutionEdge {
   from: number; to: number;
   trigger: 'level' | 'item' | 'trade' | 'friendship' | 'other';
+  timeOfDay?: 'morning' | 'day' | 'night';             // Phase 10: Espeon (day), Umbreon (night)
+  stat?: 'atk>def' | 'atk<def' | 'atk=def';             // Phase 10: Tyrogue
   level?: number; item?: string; heldItem?: string; condition?: string;
   requiresTrade: boolean;
   games?: GameId[];                                     // absent = all games in the group
@@ -1406,6 +1414,118 @@ Phase 8 on 2026-09-23. Design decisions (user choices in bold):
 - **Accept when:** ticks survive a reload, a data rebuild and a profile switch, and no export code
   written by an earlier version is rejected or misread.
 
+### Phase 10 — Gen II: Gold, Silver, Crystal (added and designed 2026-09-23)
+Adds the 251-species checklist and the walkthrough-ordered guide for Gold, Silver and Crystal, following
+§19.1. Exploring the code found about 25 places where Gen II needs more than data. They are fixed
+**generically** in Stage A, never as game branches. Design decisions (user choices in bold):
+- **Games: Gold, Silver and Crystal**, one `gsc` version group. Codec ids gold 4, silver 5, crystal 6.
+- **Scope: full parity with Red/Blue/Yellow**:
+  - encounters with morning/day/night rates
+  - checklist with breeding
+  - items with ticking
+  - learnsets (plus egg and tutor moves) and Pokédex entries
+  - both Game Corners
+  - a `gen2` mechanics module, so the catch and IV/DV tools work
+- **Count as obtainable:** the Bug-Catching Contest, the Odd Egg and baby gifts, phone-call swarms, and
+  the roaming beasts.
+- **Time of day: Morning / Day / Night rate columns** on location rows, collapsed to one rate when all
+  three are equal. The columns come from the `display: 'column'` condition kinds, so they only appear for
+  games whose data has time slots.
+- **Celebi follows the original cartridge:** it is event-only, like Mew. The 3DS Virtual Console GS Ball
+  event is ignored.
+- **Crystal sprites are static first frames:**
+  - Bulbagarden's `Spr 2c ###.png` files are animated PNGs. The sprite script strips the animation chunks.
+  - Gold and Silver use `Spr 2g ###.png` / `Spr 2s ###.png` (static 56×56, checked 2026-09-23).
+- **Berry and Apricorn trees are location notes** (`itemNotes`), not tickable items: they give items
+  every day, like Poké Mart stock.
+
+**Stage A — generic groundwork** (no gsc data yet). Red/Blue/Yellow output must stay byte-identical except
+`builtAt`, and `rby/item-numbers.json` must be unchanged.
+- [ ] Registry and vocabularies:
+  - `gold`/`silver` in `GAMES` (`planned`), with `gsc.games = ['gold','silver','crystal']` and accent seeds
+    that pass the theme contrast check.
+  - Methods `headbutt`, `rock-smash`, `bug-contest`, `roaming`, `egg`.
+  - Time-of-day column labels and hours (Morning 4–10, Day 10–18, Night 18–4).
+- [ ] Model (§8): `EvolutionEdge.timeOfDay` / `.stat`; `Learnset.egg` / `.tutor`. The zod schema mirrors them.
+- [ ] Mechanics interface (§4.5):
+  - `CaptureInputDef` (select, number or boolean, optionally tied to balls) replaces the select-only
+    contexts.
+  - A Shiny verdict for in-game DV shininess, with optional gender and Unown-letter hooks.
+  - Gen I wording moves from the tool pages into `gen1.ts`.
+- [ ] App UI:
+  - Time-of-day rate columns on location rows, with sorting by the best rate.
+  - Pokémon-page places summarize all slots.
+  - Evolution text shows held items, friendship plus time, and Tyrogue's stat condition.
+  - Egg groups, gender, egg and tutor moves shown when present.
+  - The Bulbapedia link built from the name (Ho-Oh).
+  - The sprite fallback uses the game's sprite set.
+- [ ] Pipeline:
+  - `entry2`: `all=`, with equal rates collapsed to one slot without a time condition, and the Gen II
+    method table.
+  - Gender ratio as a fraction.
+  - `overrides.breeding` emitted.
+  - `regionalDexPage` fills `species.regionalDex`.
+  - Gen II type history (Fairy retcon).
+  - Time and stat evolution conditions in `evolution-boxes.ts`.
+  - Egg and tutor learnset sections.
+  - `itemNoteRules`.
+  - `spriteSets[].stillFrame`, with an archive SHA-1 manifest.
+  - `capture-fixtures.ts` per group.
+  - npm data scripts default to `--all`, with `--group` narrowing.
+
+**Stage B — `version-groups/gsc/` config, locations and walkthroughs**
+- [ ] Research the real pages first (cache-first): the category, both walkthroughs, about 10 Johto pages,
+  `In-game trade`, the Game Corners and the Johto dex list.
+- [ ] Config, `locations.ts` and `walkthrough.ts`:
+  - Johto gets new ids; Kanto reuses rby's ids.
+  - Placement per game: Gold/Silver from their walkthrough, Crystal from its own.
+- [ ] Fixtures, the category snapshot, and registration in `version-groups/index.ts`.
+
+**Stage C — curated overrides** (each with a source page and revid, plus pret `pokegold`/`pokecrystal` refs)
+- [ ] `encounters.ts`:
+  - **Statics:** Sudowoodo, the Red Gyarados (guaranteed Shiny, fixed DVs), Union Cave Lapras (Friday),
+    Snorlax, the Rocket HQ Electrode, Ho-Oh, Lugia, and Crystal's Suicune.
+  - **Roaming:** the beasts.
+  - **Gifts**, including the exclusive groups `gsc-starter` and `odd-egg` (random).
+  - `eventOnly: [151, 251]`.
+- [ ] `evolutions.ts`:
+  - baby and friendship edges
+  - Espeon (day) and Umbreon (night)
+  - Tyrogue's stat edges
+  - the held-item trade evolutions (`requiresTrade`)
+- [ ] Breeding `{ dayCareLocationIds: ['route-34'], dittoDex: 132 }`. Ditto is obtainable, so the engine's
+  partner rule needs no change.
+- [ ] Unlocks, catch-rate note classifications, and item overrides.
+
+**Stage D — species and Pokédex data:** Gen II base stats (SpA/SpD), catch rates, Dex entries for all three
+games, and learnsets and moves (Gen II move types).
+
+**Stage E — items:** the walkthrough cross-check, triaged overrides, and fruit trees as notes. The first
+build writes `gsc/item-numbers.json` from 1.
+
+**Stage F — sprites:** 3 × 251 files in `public/sprites/gen2-{g,s,c}/`.
+
+**Stage G — `core/mechanics/gen2.ts`:**
+- The capture formula with the documented Gen II quirks: the status bonus applies only to sleep/freeze.
+- The Apricorn balls and their documented bugs.
+- Stats with the shared Special DV.
+- The in-game Shiny rule (1/8192), gender from the Attack DV, and the Unown letter.
+- Tests use Bulbapedia's worked examples.
+
+**Stage H — validation, goldens, report, go live:**
+- [ ] `gsc/golden.spec.ts` and `obtainability.golden.spec.ts`.
+- [ ] Review `reports/gsc.md`.
+- [ ] A 10-location spot check.
+- [ ] Flip the three games to `available`.
+
+- [ ] Manual browser check (the user)
+- **Accept when:**
+  - `npm run data:build` has 0 errors with warnings triaged, and the Red/Blue/Yellow output is unchanged.
+  - Every species 1–251 is obtainable or has a reason in each of Gold, Silver and Crystal.
+  - The spot check matches Bulbapedia.
+  - Location pages show time-of-day columns correctly at 360 px and 1440 px.
+  - The Gen II tools match hand-worked Bulbapedia examples.
+
 ---
 
 ## 17. Deployment to GitHub Pages (final phase)
@@ -1452,7 +1572,7 @@ Phase 8 on 2026-09-23. Design decisions (user choices in bold):
 ### 19.2 Roadmap notes per candidate game
 | Game(s) | Version group | Notes to prepare for |
 |---|---|---|
-| Gold / Silver / Crystal | `gsc` | Time-of-day slots, Johto plus Kanto regions, breeding, Headbutt trees, Rock Smash, swarms, roaming, Bug-Catching Contest, day-of-week NPCs |
+| Gold / Silver / Crystal | `gsc` | Time-of-day slots, Johto plus Kanto regions, breeding, Headbutt trees, Rock Smash, swarms, roaming, Bug-Catching Contest, day-of-week NPCs. **In progress as Phase 10 (§16)**, with the decisions recorded there. |
 | FireRed / LeafGreen | `frlg` | `catch/entryfl`, reuses Kanto location ids plus the Sevii Islands region, National Dex unlock after the post-game, many species need a Ruby/Sapphire/Emerald trade (`requires-other-game`), breeding |
 | Ruby / Sapphire / Emerald | `rse` | Hoenn region, Dive/underwater, Rock Smash, fishing spots (Feebas tiles), Safari Zone expansions in Emerald, abilities (reserved), Mirage Island, weather-free |
 | HeartGold / SoulSilver and later | `hgss`, … | Radio (Hoenn/Sinnoh sound), swarms, Pokéwalker (counts as an external device, so excluded), seasons in Gen V (`season` condition) |

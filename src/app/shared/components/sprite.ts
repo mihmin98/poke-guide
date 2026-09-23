@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
 import type { GameId } from '../../core/domain/models';
-import { findGame } from '../../core/games/registry';
+import { getGame } from '../../core/games/registry';
 
 /**
  * A species sprite from the game's sprite set (plan §13.1): fixed size, pixelated, never a layout shift.
@@ -47,11 +47,11 @@ export class Sprite {
   readonly name = input<string>('');
   /** Uncaught species are drawn as a silhouette. */
   readonly dimmed = input(false);
-  /** Rendered box in CSS pixels; Gen I sprites are 56×56. */
+  /** Rendered box in CSS pixels; Gen I and II sprites are 56×56. */
   readonly size = input(56);
 
   protected readonly src = computed(() => {
-    const setId = findGame(this.game())?.spriteSetId ?? 'gen1-rb';
+    const setId = getGame(this.game()).spriteSetId;
     return `sprites/${setId}/${String(this.dex()).padStart(3, '0')}.png`;
   });
 

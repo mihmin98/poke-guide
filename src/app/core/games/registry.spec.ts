@@ -22,6 +22,9 @@ describe('game registry', () => {
     expect(findGame('blue')?.codecId).toBe(2);
     expect(findGame('yellow')?.codecId).toBe(3);
     expect(findGameByCodecId(3)?.id).toBe('yellow');
+    expect(findGame('gold')?.codecId).toBe(4);
+    expect(findGame('silver')?.codecId).toBe(5);
+    expect(findGame('crystal')?.codecId).toBe(6);
   });
 
   it('uses codec ids that fit in a uint16', () => {
@@ -66,6 +69,10 @@ describe('game registry', () => {
     expect(groups[0]?.games.map((g) => g.id)).toEqual(['red', 'blue', 'yellow']);
   });
 
+  it('puts Gold, Silver and Crystal in one Gen II version group', () => {
+    expect(getVersionGroup('gsc').games).toEqual(['gold', 'silver', 'crystal']);
+  });
+
   it('recognizes game ids', () => {
     expect(isGameId('yellow')).toBe(true);
     expect(isGameId('green')).toBe(false);
@@ -99,6 +106,12 @@ describe('encounter method registry', () => {
       'special',
     ];
     for (const id of rby) expect(isKnownMethod(id)).toBe(true);
+  });
+
+  it('covers the methods used by Gold, Silver and Crystal', () => {
+    for (const id of ['headbutt', 'rock-smash', 'bug-contest', 'roaming', 'egg']) {
+      expect(isKnownMethod(id)).toBe(true);
+    }
   });
 });
 

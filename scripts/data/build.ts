@@ -6,7 +6,7 @@
  *   npm run data:refresh    refetches every page
  *   npm run data:offline    fixtures and cache only, never touches the network
  *
- * Options: `--group <id>` or `--all`, `--refresh`, `--offline`, `--dry-run` (report only).
+ * Options: `--group <id>` (default: every version group), `--refresh`, `--offline`, `--dry-run` (report only).
  * Nothing is written when there are errors; the exit code is then 1.
  */
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
@@ -161,11 +161,13 @@ async function main(): Promise<void> {
   if (values.refresh && values.offline)
     throw new Error('--refresh and --offline exclude each other');
   const known = Object.keys(VERSION_GROUP_CONFIGS).join(', ');
-  const configs = values.all
-    ? Object.values(VERSION_GROUP_CONFIGS)
-    : [VERSION_GROUP_CONFIGS[values.group as keyof typeof VERSION_GROUP_CONFIGS]];
+  // Every version group by default (`--all` is accepted for compatibility); `--group <id>` narrows it.
+  const configs =
+    values.group === undefined
+      ? Object.values(VERSION_GROUP_CONFIGS)
+      : [VERSION_GROUP_CONFIGS[values.group as keyof typeof VERSION_GROUP_CONFIGS]];
   if (configs.length === 0 || configs.some((c) => !c)) {
-    throw new Error(`Pass --all or --group <id>. Known groups: ${known}`);
+    throw new Error(`Unknown --group "${values.group ?? ''}". Known groups: ${known}`);
   }
   const mode: FetchMode = values.offline ? 'offline' : values.refresh ? 'refresh' : 'cache-first';
   let ok = true;

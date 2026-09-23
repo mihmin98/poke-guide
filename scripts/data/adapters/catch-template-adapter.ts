@@ -72,7 +72,8 @@ export class AdapterError extends Error {
 
 // ---- helpers shared by adapters ----
 
-export const FLOOR_LABEL = /^B?\d+F$/i;
+/** `3F`, `B1F`, or a floor range such as `2F-9F` (Gen II Bell Tower). */
+export const FLOOR_LABEL = /^B?\d+F(?:\s*[-–]\s*B?\d+F)?$/i;
 
 export function parseDex(raw: string | undefined): number {
   const text = stripMarkup(raw ?? '');

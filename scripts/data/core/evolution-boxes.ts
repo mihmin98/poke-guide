@@ -16,6 +16,8 @@ export interface ParsedEvolution {
   level?: number;
   item?: string;
   heldItem?: string;
+  timeOfDay?: EvolutionEdge['timeOfDay'];
+  stat?: EvolutionEdge['stat'];
   /** The condition as plain text (`Level 16`, `Trade holding King's Rock`). */
   condition: string;
 }
@@ -32,12 +34,13 @@ interface Stage {
 }
 
 /**
- * `{{Evobox-1/2/3}}`, `{{Evobox/1branch2}}` and `{{Evobox/2branch2}}` share one parameter scheme: stage keys
- * `1`, `2`, `2a`, `3b`… (`noK`, `nameK`, `formK`) and conditions `evoK` leading from stage `K` to the next.
+ * `{{Evobox-1/2/3}}`, `{{Evobox/1branch2}}`, `{{Evobox/1branch3}}` (Tyrogue) and `{{Evobox/2branch2}}` share one
+ * parameter scheme: stage keys `1`, `2`, `2a`, `3b`… (`noK`, `nameK`, `formK`) and conditions `evoK` leading from
+ * stage `K` to the next.
  * Other `evobox` templates (`Evobox/Setup` tables, `Evobox/Meowth-Alola`) are skipped.
  */
 const STANDARD_BOX = /^evobox(?:-\d|\/\dbranch\d)$/;
-const EVO_KEY = /^evo(\d)([ab]?)$/;
+const EVO_KEY = /^evo(\d)([abc]?)$/;
 
 /** The section is `Evolution data` on most pages, `[[Evolution]] data` or `Evolution` on some (Dewgong). */
 const SECTION_PATH = ['Game data', /^Evolution(?: data)?$/] as const;
@@ -53,16 +56,35 @@ function conditionText(raw: string): string {
   return stripMarkup(withoutIcons).replace(/^(?:\+\s*)+/, '');
 }
 
+/** `(Attack > Defense)` after a level (Tyrogue). */
+const STAT_CONDITIONS: [RegExp, NonNullable<EvolutionEdge['stat']>][] = [
+  [/\(Attack > Defense\)/, 'atk>def'],
+  [/\(Attack < Defense\)/, 'atk<def'],
+  [/\(Attack = Defense\)/, 'atk=def'],
+];
+
+/** `…during the day` / `…at night` / `…in the morning` (Espeon, Umbreon). */
+function timeOfDayIn(condition: string): Pick<ParsedEvolution, 'timeOfDay'> {
+  if (/\bduring the day\b|\bin the daytime\b/i.test(condition)) return { timeOfDay: 'day' };
+  if (/\bat night\b|\bduring the night\b/i.test(condition)) return { timeOfDay: 'night' };
+  if (/\bin the morning\b/i.test(condition)) return { timeOfDay: 'morning' };
+  return {};
+}
+
 export function parseCondition(
   condition: string,
-): Pick<ParsedEvolution, 'trigger' | 'level' | 'item' | 'heldItem'> {
+): Pick<ParsedEvolution, 'trigger' | 'level' | 'item' | 'heldItem' | 'timeOfDay' | 'stat'> {
   const level = /^Level (\d+)\b/.exec(condition);
-  if (level) return { trigger: 'level', level: Number(level[1]) };
+  if (level) {
+    const stat = STAT_CONDITIONS.find(([pattern]) => pattern.test(condition))?.[1];
+    return { trigger: 'level', level: Number(level[1]), ...(stat ? { stat } : {}) };
+  }
   if (/^Trade\b/.test(condition)) {
     const held = /^Trade holding (.+?)$/.exec(condition);
     return held ? { trigger: 'trade', heldItem: held[1]! } : { trigger: 'trade' };
   }
-  if (/^Level up with high friendship\b/.test(condition)) return { trigger: 'friendship' };
+  if (/^Level up with high friendship\b/.test(condition))
+    return { trigger: 'friendship', ...timeOfDayIn(condition) };
   const stone = /^([A-Z][A-Za-z']* Stone)\b/.exec(condition);
   if (stone) return { trigger: 'item', item: stone[1]! };
   return { trigger: 'other' };
@@ -142,7 +164,7 @@ export interface EvolutionBoxDiff {
   notes: string[];
 }
 
-type Comparable = Pick<EvolutionEdge, 'trigger' | 'level' | 'item' | 'heldItem'>;
+type Comparable = Pick<EvolutionEdge, 'trigger' | 'level' | 'item' | 'heldItem' | 'timeOfDay' | 'stat'>;
 
 const describe = (e: Comparable) =>
   [
@@ -150,6 +172,8 @@ const describe = (e: Comparable) =>
     e.level !== undefined && `level ${e.level}`,
     e.item,
     e.heldItem && `holding ${e.heldItem}`,
+    e.timeOfDay,
+    e.stat,
   ]
     .filter(Boolean)
     .join(', ');

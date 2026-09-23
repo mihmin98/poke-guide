@@ -26,7 +26,22 @@ export interface ConditionKindDefinition<K extends EncounterConditionKind> {
   format(condition: ConditionOf<K>): string;
 }
 
+export const TIMES_OF_DAY: readonly TimeOfDay[] = ['morning', 'day', 'night'];
 const TIME_LABELS: Record<TimeOfDay, string> = { morning: 'Morning', day: 'Day', night: 'Night' };
+/** In-game clock hours of each period (Gen II), for column tooltips. */
+const TIME_HOURS: Record<TimeOfDay, string> = {
+  morning: '4:00–9:59',
+  day: '10:00–17:59',
+  night: '18:00–3:59',
+};
+
+export function timeOfDayLabel(time: TimeOfDay): string {
+  return TIME_LABELS[time];
+}
+
+export function timeOfDayHours(time: TimeOfDay): string {
+  return TIME_HOURS[time];
+}
 const DAY_LABELS: Record<DayOfWeek, string> = {
   mon: 'Monday',
   tue: 'Tuesday',

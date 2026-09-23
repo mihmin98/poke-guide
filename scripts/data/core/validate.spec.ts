@@ -34,15 +34,15 @@ describe('validateVersionGroup', () => {
   it('reports unknown methods, games and species, and species without a reason', () => {
     const d = data();
     const encounter = d.locations.find((l) => l.id === 'route-1')!.subAreas[0]!.encounters[0]!;
-    encounter.method = 'headbutt';
+    encounter.method = 'no-such-method';
     encounter.games['gold'] = encounter.games['red'];
     d.eventOnly = [];
     const messages = validateVersionGroup(d, pokedex).issues.map((i) => i.message);
     expect(messages).toContain(
-      `#${encounter.dex} headbutt in route-1/main: unknown method "headbutt"`,
+      `#${encounter.dex} no-such-method in route-1/main: unknown method "no-such-method"`,
     );
     expect(messages).toContain(
-      `#${encounter.dex} headbutt in route-1/main slot has game "gold", which is not in the version group`,
+      `#${encounter.dex} no-such-method in route-1/main slot has game "gold", which is not in the version group`,
     );
     expect(messages).toContain('#151 Mew has no source and no unobtainable reason in red');
   });

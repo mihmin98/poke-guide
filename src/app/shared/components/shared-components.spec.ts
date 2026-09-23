@@ -140,9 +140,9 @@ describe('shared components (plan §13.4–13.5)', () => {
     });
 
     it('falls back to a generic icon for a method the app does not know', () => {
-      const { el } = render(MethodIcon, { method: 'headbutt', showLabel: true });
+      const { el } = render(MethodIcon, { method: 'no-such-method', showLabel: true });
       expect(el.querySelector('mat-icon')?.textContent?.trim()).toBe('help');
-      expect(el.querySelector('.label')?.textContent?.trim()).toBe('headbutt');
+      expect(el.querySelector('.label')?.textContent?.trim()).toBe('no-such-method');
     });
   });
 
