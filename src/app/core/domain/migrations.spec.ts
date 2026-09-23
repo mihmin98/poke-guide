@@ -33,13 +33,40 @@ const v1Snapshot = {
   settings: { ...DEFAULT_SETTINGS, theme: 'dark', spriteScale: 3 },
 };
 
+/** Schema 2 (Phase 9): profiles carry the item numbers they have picked up. */
+const v2Snapshot = {
+  ...v1Snapshot,
+  schemaVersion: 2,
+  profiles: [
+    { ...v1Snapshot.profiles[0]!, itemsTaken: [3, 17] },
+    { ...v1Snapshot.profiles[1]!, itemsTaken: [] },
+  ],
+};
+
 describe('migrateState', () => {
   it('matches the schema version constant', () => {
     expect(MIGRATIONS.length + 1).toBe(CURRENT_STATE_VERSION);
   });
 
-  it('loads a current (v1) snapshot unchanged', () => {
-    expect(migrateState(structuredClone(v1Snapshot), NOW)).toEqual({ ok: true, state: v1Snapshot });
+  it('loads a current (v2) snapshot unchanged', () => {
+    expect(migrateState(structuredClone(v2Snapshot), NOW)).toEqual({ ok: true, state: v2Snapshot });
+  });
+
+  it('migrates a v1 snapshot: every profile gains an empty itemsTaken', () => {
+    expect(migrateState(structuredClone(v1Snapshot), NOW)).toEqual({
+      ok: true,
+      migratedFrom: 1,
+      state: {
+        ...v1Snapshot,
+        schemaVersion: 2,
+        profiles: v1Snapshot.profiles.map((p) => ({ ...p, itemsTaken: [] })),
+      },
+    });
+    // The migration itself leaves anything that isn't a profile object to the sanitizer.
+    expect(MIGRATIONS[0]!({ profiles: [{ id: 'a', itemsTaken: [5] }, 'junk'] })).toEqual({
+      profiles: [{ id: 'a', itemsTaken: [5] }, 'junk'],
+    });
+    expect(MIGRATIONS[0]!({ profiles: 'junk' })).toEqual({ profiles: 'junk' });
   });
 
   it('runs migrations in order from the stored version and sanitizes the result', () => {
@@ -71,7 +98,7 @@ describe('migrateState', () => {
   });
 
   it('refuses state from a newer app version and rejects unreadable input', () => {
-    expect(migrateState({ ...v1Snapshot, schemaVersion: 2 }, NOW)).toMatchObject({
+    expect(migrateState({ ...v2Snapshot, schemaVersion: 3 }, NOW)).toMatchObject({
       ok: false,
       reason: 'newer',
     });
@@ -117,6 +144,7 @@ describe('sanitizing stored state', () => {
           game: 'crystal-2',
           name: `  ${'a'.repeat(40)} `,
           caught: [3, 1, 3, 0, -2, 1.5, '7'],
+          itemsTaken: [9, 2, 'x', 2],
           progressPart: 0,
         },
         NOW,
@@ -126,6 +154,7 @@ describe('sanitizing stored state', () => {
       game: 'crystal-2',
       name: 'a'.repeat(32),
       caught: [1, 3],
+      itemsTaken: [2, 9],
       createdAt: NOW,
       updatedAt: NOW,
     });
@@ -145,7 +174,7 @@ describe('sanitizing stored state', () => {
     );
     expect(result.ok && result.state.profiles.map((p) => p.game)).toEqual(['red']);
     expect(result.ok && result.state.activeProfileId).toBe('a');
-    expect(migrateState({ schemaVersion: 1, activeProfileId: 'gone' }, NOW)).toEqual({
+    expect(migrateState({ schemaVersion: 2, activeProfileId: 'gone' }, NOW)).toEqual({
       ok: true,
       state: defaultState(),
     });

@@ -19,9 +19,11 @@ import { findGame, regionName } from '../../core/games/registry';
 import { ProfileStore } from '../../core/profiles/profile.store';
 import { UndoSnackbarService } from '../../core/profiles/undo-snackbar.service';
 import { SettingsStore } from '../../core/settings/settings.store';
+import { itemProgress } from '../../core/domain/item-progress';
 import { CatchToggle } from '../../shared/components/catch-toggle';
 import { ConditionChips } from '../../shared/components/condition-chips';
 import { GameMismatchBanner } from '../../shared/components/game-mismatch-banner';
+import { ItemToggle } from '../../shared/components/item-toggle';
 import { LevelRange } from '../../shared/components/level-range';
 import { MethodIcon } from '../../shared/components/method-icon';
 import { RateDisplay } from '../../shared/components/rate';
@@ -31,6 +33,7 @@ import { pageTitle } from '../../shared/page-title';
 import { onHorizontalSwipe, type SwipeDirection } from '../../shared/swipe';
 import { ConfirmDialog, type ConfirmDialogData } from '../profiles/profile-dialogs';
 import {
+  buildItemRows,
   buildLocationView,
   catchDifficulty,
   itemObtainLabel,
@@ -51,6 +54,7 @@ const ALL_SUB_AREAS = '__all__';
     CatchToggle,
     ConditionChips,
     GameMismatchBanner,
+    ItemToggle,
     LevelRange,
     MethodIcon,
     RateDisplay,
@@ -242,9 +246,14 @@ const ALL_SUB_AREAS = '__all__';
         <p class="status">No Pokémon can be caught here in {{ gameName() }}.</p>
       }
 
-      @if (items().length || v.location.itemNotes.length) {
+      @if (v.items.length || v.location.itemNotes.length) {
         <section class="items">
-          <h2>Items</h2>
+          <h2>
+            Items
+            @if (itemCount().total) {
+              <span class="count">{{ itemCount().taken }}/{{ itemCount().total }}</span>
+            }
+          </h2>
           <div class="actions">
             <button
               type="button"
@@ -254,12 +263,26 @@ const ALL_SUB_AREAS = '__all__';
             >
               Show hidden items
             </button>
+            <button
+              type="button"
+              class="chip"
+              [attr.aria-pressed]="hideTaken()"
+              (click)="hideTaken.set(!hideTaken())"
+            >
+              Hide items I have
+            </button>
           </div>
 
-          <ul class="rows">
-            @for (item of items(); track $index) {
-              <li class="row item">
-                <mat-icon class="kind" aria-hidden="true">inventory_2</mat-icon>
+          <ul class="rows" [class.compact]="compact()">
+            @for (row of items(); track row.item.no) {
+              @let item = row.item;
+              <li class="row item" [class.taken]="row.taken || row.chosenInstead">
+                <app-item-toggle
+                  [no]="item.no"
+                  [game]="gameId()"
+                  [name]="item.name"
+                  [chosenInstead]="row.chosenInstead"
+                />
                 <span class="who">
                   <span class="name">
                     {{ item.name }}
@@ -288,11 +311,17 @@ const ALL_SUB_AREAS = '__all__';
                   @if (fromPart(item); as part) {
                     <span class="badge">from Part {{ part }}</span>
                   }
+                  @if (row.chosenInstead; as other) {
+                    <span class="badge">You chose the {{ other }}</span>
+                  }
                 </span>
                 <p class="note where">{{ item.where }}</p>
               </li>
             }
           </ul>
+          @if (hideTaken() && itemCount().total && itemCount().taken === itemCount().total) {
+            <p class="status">You have every item here.</p>
+          }
 
           @for (note of v.location.itemNotes; track note) {
             <p class="note">{{ note }}</p>
@@ -521,9 +550,17 @@ const ALL_SUB_AREAS = '__all__';
         'kind who tags'
         'note note note';
     }
-    .item .kind {
+    .item app-item-toggle {
       grid-area: kind;
+    }
+    .item.taken .name {
       color: var(--mat-sys-on-surface-variant);
+    }
+    h2 .count {
+      margin-left: 8px;
+      color: var(--mat-sys-on-surface-variant);
+      font: var(--mat-sys-label-large);
+      font-variant-numeric: tabular-nums;
     }
     .where {
       grid-area: note;
@@ -585,6 +622,7 @@ export class LocationPage {
   });
   protected readonly onlyMissing = signal(false);
   protected readonly showHidden = signal(true);
+  protected readonly hideTaken = signal(false);
 
   protected readonly showRates = this.settings.select('showRates');
   protected readonly showCatchRates = this.settings.select('showCatchRates');
@@ -620,10 +658,19 @@ export class LocationPage {
     return found ? [found] : areas;
   });
 
-  protected readonly items = computed(() => {
-    const items = this.view()?.items ?? [];
-    return items.filter((item) => this.showHidden() || !item.hidden);
-  });
+  private readonly itemsTaken = computed(() => this.profiles.itemsTakenIn(this.gameId()));
+
+  protected readonly items = computed(() =>
+    buildItemRows(this.view()?.items ?? [], this.itemsTaken(), {
+      showHidden: this.showHidden(),
+      hideTaken: this.hideTaken(),
+    }),
+  );
+
+  /** Over every item here, whatever the filters show. */
+  protected readonly itemCount = computed(() =>
+    itemProgress(this.view()?.items ?? [], this.itemsTaken()),
+  );
 
   protected rowsOf<T extends { dex: number }>(rows: readonly T[]): T[] {
     if (!this.onlyMissing()) return [...rows];

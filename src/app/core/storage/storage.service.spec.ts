@@ -38,6 +38,7 @@ const profile = {
   name: 'Red run',
   game: 'red' as const,
   caught: [1],
+  itemsTaken: [],
   createdAt: 't',
   updatedAt: 't',
 };

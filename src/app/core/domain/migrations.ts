@@ -6,7 +6,19 @@ import { STATE_SCHEMA_VERSION, sanitizeState, type PersistedState } from './pers
  * Append only: never edit or remove a released migration. Each one needs a snapshot test.
  */
 export type Migration = (state: Record<string, unknown>) => Record<string, unknown>;
-export const MIGRATIONS: readonly Migration[] = [];
+export const MIGRATIONS: readonly Migration[] = [
+  // 1 → 2 (Phase 9): profiles gain `itemsTaken`. The bump stops an older app from overwriting the ticks.
+  (state) => ({
+    ...state,
+    profiles: Array.isArray(state['profiles'])
+      ? state['profiles'].map((profile: unknown) =>
+          typeof profile === 'object' && profile !== null
+            ? { itemsTaken: [], ...profile }
+            : profile,
+        )
+      : state['profiles'],
+  }),
+];
 
 export type MigrationResult =
   | { ok: true; state: PersistedState; migratedFrom?: number }

@@ -8,12 +8,13 @@ import type {
   LocationItem,
   Unlock,
 } from '../../../src/app/core/domain/models';
+import { UNNUMBERED, type RetiredItem } from './item-numbers';
 import { slugify } from './slug';
 
 export interface ItemAddition {
   locationId: string;
   /** `itemId` is derived from the name. */
-  item: Omit<LocationItem, 'itemId' | 'source'>;
+  item: Omit<LocationItem, 'no' | 'itemId' | 'source'>;
   /** Page the item is taken from; its revid is recorded at build time. */
   sourcePage: string;
   reason: string;
@@ -71,6 +72,8 @@ export interface ItemOverrides {
   patch?: readonly ItemPatch[];
   walkthroughAccepted?: readonly WalkthroughAccepted[];
   walkthroughGames?: readonly WalkthroughGamesFix[];
+  /** Item numbers whose item is gone from the data for good (plan §7.13); never handed out again. */
+  retiredItems?: readonly RetiredItem[];
 }
 
 /** Looks a page up (recording it as a source); `null` when it's not available, which the lookup reports itself. */
@@ -142,7 +145,7 @@ export function applyItemOverrides(
       );
       continue;
     }
-    location.items.push({ itemId, ...addition.item, source });
+    location.items.push({ no: UNNUMBERED, itemId, ...addition.item, source });
   }
 
   for (const override of overrides.requires) {

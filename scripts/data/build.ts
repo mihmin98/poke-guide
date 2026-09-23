@@ -1,5 +1,6 @@
 /**
- * Builds a version group's data files (plan §7.2): `public/data/<group>.json` and `<group>.pokedex.json`.
+ * Builds a version group's data files (plan §7.2): `public/data/<group>.json` and `<group>.pokedex.json`,
+ * and updates the committed item number registry (`version-groups/<group>/item-numbers.json`, plan §7.13).
  *
  *   npm run data:build      uses the cache, fetches only what's missing
  *   npm run data:refresh    refetches every page
@@ -21,7 +22,8 @@ import {
 } from './core/assemble';
 import { PageCache, PageSource, loadFixtures, type CachedPage, type FetchMode } from './core/cache';
 import { MediaWikiClient } from './core/mediawiki-client';
-import { fixturesDir, rawCacheDir, repoRoot } from './core/paths';
+import { formatItemNumbers, parseItemNumbers } from './core/item-numbers';
+import { fixturesDir, rawCacheDir, repoRoot, versionGroupDir } from './core/paths';
 import type { VersionGroupData } from '../../src/app/core/domain/models';
 import { renderReport } from './core/report';
 import { NATIONAL_DEX_LIST_PAGE } from './core/species-list';
@@ -82,12 +84,16 @@ async function buildGroup(
   }
   if (client) console.log(`${client.requestCount} request(s) to Bulbapedia`);
 
-  const { data, pokedex, issues } = assembleVersionGroup(
+  const itemNumbersFile = join(versionGroupDir(config.id), 'item-numbers.json');
+  const { data, pokedex, issues, itemNumbers } = assembleVersionGroup(
     config,
     (title) => pages.get(title) ?? null,
     {
       builtAt: new Date().toISOString(),
       categoryMembers,
+      itemNumbers: existsSync(itemNumbersFile)
+        ? parseItemNumbers(readFileSync(itemNumbersFile, 'utf8'))
+        : null,
     },
   );
   const validation = validateVersionGroup(data, pokedex);
@@ -130,6 +136,8 @@ async function buildGroup(
       `Wrote ${relative(repoRoot(), file)} (${Math.round(Buffer.byteLength(json) / 1024)} KB)`,
     );
   }
+  writeFileSync(itemNumbersFile, formatItemNumbers(itemNumbers));
+  console.log(`Wrote ${relative(repoRoot(), itemNumbersFile)} (${itemNumbers.items.length} items)`);
   const reportFile = join(repoRoot(), 'scripts', 'data', 'reports', `${config.id}.md`);
   mkdirSync(dirname(reportFile), { recursive: true });
   writeFileSync(

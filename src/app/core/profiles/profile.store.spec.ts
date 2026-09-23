@@ -103,6 +103,7 @@ describe('ProfileStore', () => {
         name: 'Future',
         game: 'platinum' as GameId,
         caught: [1],
+        itemsTaken: [],
         createdAt: 't',
         updatedAt: 't',
       };
@@ -117,10 +118,51 @@ describe('ProfileStore', () => {
     });
   });
 
+  describe('items taken (Phase 9)', () => {
+    beforeEach(() => store.createProfile('Red run', 'red'));
+
+    it('ticks and unticks items on the active profile, sorted, with undo', () => {
+      expect(store.setItemTaken('red', 17, true, 'Picked up Potion')).toBe(true);
+      expect(store.bulkSetItemsTaken('red', [3, 17, 200], true, 'Picked up 3 items')).toBe(true);
+      expect(store.activeProfile()?.itemsTaken).toEqual([3, 17, 200]);
+      expect(store.itemsTakenSet().has(200)).toBe(true);
+      expect(store.activeProfile()?.caught).toEqual([]);
+
+      expect(store.setItemTaken('red', 3, false, 'Put back Antidote')).toBe(true);
+      expect(store.activeProfile()?.itemsTaken).toEqual([17, 200]);
+      expect(store.undo()?.label).toBe('Put back Antidote');
+      expect(store.activeProfile()?.itemsTaken).toEqual([3, 17, 200]);
+    });
+
+    it('counts towards the save reminder, but only real changes', () => {
+      store.setItemTaken('red', 5, true, 'x');
+      store.setItemTaken('red', 5, true, 'x');
+      expect(storage.state().settings.changesSinceExport).toBe(1);
+    });
+
+    it('refuses another game and invalid numbers', () => {
+      expect(store.setItemTaken('blue', 5, true, 'x')).toBe(false);
+      expect(store.bulkSetItemsTaken('red', [1, 0], true, 'x')).toBe(false);
+      expect(store.setItemTaken('red', 1.5, true, 'x')).toBe(false);
+      expect(store.activeProfile()?.itemsTaken).toEqual([]);
+    });
+
+    it('copies ticks when duplicating', () => {
+      store.setItemTaken('red', 9, true, 'x');
+      expect(store.duplicateProfile(store.activeProfileId()!).itemsTaken).toEqual([9]);
+    });
+  });
+
   describe('import', () => {
     it('adds an imported profile, dropping species beyond the game’s dex', () => {
       const id = store.importProfile(
-        { name: '', game: 'yellow', caught: [151, 3, 3, 152], progressPart: 2 },
+        {
+          name: '',
+          game: 'yellow',
+          caught: [151, 3, 3, 152],
+          itemsTaken: [40, 2, 40],
+          progressPart: 2,
+        },
         'new',
       );
       expect(store.activeProfile()).toMatchObject({
@@ -128,6 +170,7 @@ describe('ProfileStore', () => {
         name: 'Imported profile',
         game: 'yellow',
         caught: [3, 151],
+        itemsTaken: [2, 40],
         progressPart: 2,
       });
     });
@@ -135,11 +178,13 @@ describe('ProfileStore', () => {
     it('replaces a same-game profile’s progress and rejects another game', () => {
       const red = store.createProfile('Red', 'red');
       store.setCaught('red', 1, true);
+      store.setItemTaken('red', 12, true, 'x');
       store.setProgressPart(5);
       expect(
         store.importProfile({ name: 'ignored', game: 'red', caught: [4, 7] }, 'replace', red.id),
       ).toBe(red.id);
-      expect(store.activeProfile()).toMatchObject({ name: 'Red', caught: [4, 7] });
+      // A code without items (PKG1) stands for a profile with none taken.
+      expect(store.activeProfile()).toMatchObject({ name: 'Red', caught: [4, 7], itemsTaken: [] });
       expect(store.activeProfile()).not.toHaveProperty('progressPart');
       expect(() =>
         store.importProfile({ name: 'x', game: 'blue', caught: [] }, 'replace', red.id),

@@ -7,6 +7,7 @@ import {
   testSpecies,
 } from '../../core/domain/testing/test-data';
 import {
+  buildItemRows,
   buildLocationView,
   catchDifficulty,
   catchRateFor,
@@ -18,6 +19,7 @@ const percent = (value: number, min = 2, max = 5) => [
 ];
 
 const ITEM: LocationItem = {
+  no: 1,
   itemId: 'rare-candy',
   name: 'Rare Candy',
   quantity: 1,
@@ -141,5 +143,38 @@ describe('location model (plan §13.5)', () => {
       'Cut or Surf',
     ]);
     expect(itemRequirementLabels({ ...ITEM, requires: undefined }, (id) => id)).toEqual([]);
+  });
+
+  it('builds item rows with their picked-up state and the "hide items I have" filter', () => {
+    const fossil = (no: number, name: string): LocationItem => ({
+      ...ITEM,
+      no,
+      name,
+      hidden: undefined,
+      obtain: 'choice',
+      choiceGroupId: 'fossil',
+    });
+    const items = [ITEM, fossil(2, 'Dome Fossil'), fossil(3, 'Helix Fossil')];
+    const rows = (taken: number[], showHidden = true, hideTaken = false) =>
+      buildItemRows(items, new Set(taken), { showHidden, hideTaken }).map((r) => [
+        r.item.no,
+        r.taken,
+        r.chosenInstead ?? null,
+      ]);
+    expect(rows([])).toEqual([
+      [1, false, null],
+      [2, false, null],
+      [3, false, null],
+    ]);
+    expect(rows([3])).toEqual([
+      [1, false, null],
+      [2, false, 'Helix Fossil'],
+      [3, true, null],
+    ]);
+    expect(rows([3], false)).toEqual([
+      [2, false, 'Helix Fossil'],
+      [3, true, null],
+    ]);
+    expect(rows([3], true, true)).toEqual([[1, false, null]]);
   });
 });

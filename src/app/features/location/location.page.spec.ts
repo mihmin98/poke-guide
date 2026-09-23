@@ -18,6 +18,7 @@ import { STATE_STORAGE } from '../../core/storage/storage.service';
 import { LocationPage } from './location.page';
 
 const ITEM: LocationItem = {
+  no: 1,
   itemId: 'rare-candy',
   name: 'Rare Candy',
   quantity: 1,
@@ -29,6 +30,14 @@ const ITEM: LocationItem = {
   requires: [['cut-hm']],
 };
 
+const FOSSIL: LocationItem = {
+  ...ITEM,
+  obtain: 'choice',
+  hidden: undefined,
+  requires: undefined,
+  choiceGroupId: 'fossil',
+};
+
 const data = testData({
   games: ['red'],
   species: [
@@ -37,7 +46,13 @@ const data = testData({
   ],
   unlocks: { red: [{ id: 'cut-hm', label: 'Cut', kind: 'move', locationId: 'a', part: 5 }] },
   locations: [
-    testLocation('route-1', 1, [testEncounter(16, ['red'])], ['red'], { name: 'Route 1' }),
+    testLocation('route-1', 1, [testEncounter(16, ['red'])], ['red'], {
+      name: 'Route 1',
+      items: [
+        { ...FOSSIL, no: 2, itemId: 'dome-fossil', name: 'Dome Fossil' },
+        { ...FOSSIL, no: 3, itemId: 'helix-fossil', name: 'Helix Fossil' },
+      ],
+    }),
     testLocation(
       'route-2',
       2,
@@ -194,6 +209,67 @@ describe('LocationPage (plan §13.5)', () => {
     showHidden.click();
     fixture.detectChanges();
     expect(el.querySelector('.row.item')).toBeNull();
+  });
+
+  describe('item pickup tracking (Phase 9)', () => {
+    const toggles = (el: HTMLElement) => [
+      ...el.querySelectorAll<HTMLButtonElement>('app-item-toggle button'),
+    ];
+    const chip = (el: HTMLElement, text: string) =>
+      [...el.querySelectorAll<HTMLButtonElement>('.chip')].find((b) =>
+        b.textContent?.includes(text),
+      )!;
+
+    it('ticks an item on the active profile and counts it', () => {
+      const { fixture, el } = render();
+      expect(toggles(el)[0]!.disabled).toBe(true);
+
+      profiles.createProfile('Red run', 'red');
+      fixture.detectChanges();
+      expect(el.querySelector('.items h2')?.textContent).toContain('0/1');
+      toggles(el)[0]!.click();
+      fixture.detectChanges();
+
+      expect(profiles.activeProfile()?.itemsTaken).toEqual([1]);
+      expect(profiles.activeProfile()?.caught).toEqual([]);
+      expect(toggles(el)[0]!.getAttribute('aria-checked')).toBe('true');
+      expect(toggles(el)[0]!.getAttribute('aria-label')).toBe('Rare Candy, picked up');
+      expect(el.querySelector('.items h2')?.textContent).toContain('1/1');
+
+      chip(el, 'Hide items I have').click();
+      fixture.detectChanges();
+      expect(el.querySelector('.row.item')).toBeNull();
+      expect(el.querySelector('.items .status')?.textContent).toContain('every item');
+    });
+
+    it('turns the other option of a choice off once one is picked', () => {
+      profiles.createProfile('Red run', 'red');
+      const { fixture, el } = render('route-1');
+      toggles(el)[0]!.click();
+      fixture.detectChanges();
+
+      const [dome, helix] = toggles(el);
+      expect(dome!.getAttribute('aria-checked')).toBe('true');
+      expect(helix!.disabled).toBe(true);
+      expect(helix!.title).toBe('You chose the Dome Fossil');
+      expect(el.querySelectorAll('.row.item')[1]!.textContent).toContain(
+        'You chose the Dome Fossil',
+      );
+      // The choice counts once.
+      expect(el.querySelector('.items h2')?.textContent).toContain('1/1');
+
+      chip(el, 'Hide items I have').click();
+      fixture.detectChanges();
+      expect(el.querySelector('.row.item')).toBeNull();
+    });
+
+    it('neither shows nor edits another game’s ticks', () => {
+      profiles.createProfile('Blue run', 'blue');
+      profiles.importProfile({ name: 'x', game: 'blue', caught: [], itemsTaken: [1] }, 'new');
+      const { el } = render();
+      expect(toggles(el)[0]!.disabled).toBe(true);
+      expect(toggles(el)[0]!.getAttribute('aria-checked')).toBe('false');
+    });
   });
 
   it('follows the rate, sprite size and compact-row settings', () => {

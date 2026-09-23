@@ -38,6 +38,7 @@ import {
   type ItemWalkOptions,
   type ItemWalkResult,
 } from './items';
+import { assignItemNumbers, type ItemNumberRegistry } from './item-numbers';
 import {
   applyItemOverrides,
   checkItemRequirements,
@@ -80,12 +81,16 @@ export interface AssembleOptions {
   builtAt: string;
   /** Members of `config.locationCategory`; `null` skips the category check (with a note). */
   categoryMembers: readonly string[] | null;
+  /** The committed item number registry; `null` numbers every item from 1 (a new version group). */
+  itemNumbers: ItemNumberRegistry | null;
 }
 
 export interface AssembleResult {
   data: VersionGroupData;
   pokedex: PokedexData;
   issues: BuildIssue[];
+  /** The registry after this build, for `build.ts` to write back. */
+  itemNumbers: ItemNumberRegistry;
 }
 
 // ---- page lists (the build fetches these in two rounds) ----
@@ -517,6 +522,15 @@ export function assembleVersionGroup(
     issue('error', message);
   for (const message of checkItemRequirements(locations, config.overrides.unlocks))
     issue('error', message);
+  const numbered = assignItemNumbers(
+    locations,
+    options.itemNumbers,
+    config.overrides.items.retiredItems ?? [],
+    config.id,
+  );
+  for (const message of numbered.errors) issue('error', message);
+  for (const message of numbered.warnings) issue('warning', message);
+  for (const message of numbered.notes) issue('note', message);
   const walkthroughRows = new Map<string, ItemWalkResult | null>();
   const walkthroughItems: WalkthroughItems[] = [];
   for (const { game, part, page: title } of walkthroughPartTitles(config)) {
@@ -579,5 +593,5 @@ export function assembleVersionGroup(
     entries,
     sources: byTitle(pokedexSources),
   };
-  return { data, pokedex, issues };
+  return { data, pokedex, issues, itemNumbers: numbered.registry };
 }

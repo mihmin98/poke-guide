@@ -61,6 +61,7 @@ describe('parsePrizeShops', () => {
   it('reads the TM prizes as location items for every game', () => {
     expect(result.items).toEqual([
       {
+        no: 0,
         itemId: 'tm23-dragon-rage',
         name: 'TM23 Dragon Rage',
         quantity: 1,
@@ -72,6 +73,7 @@ describe('parsePrizeShops', () => {
         requires: [['coin-case']],
       },
       {
+        no: 0,
         itemId: 'tm15-hyper-beam',
         name: 'TM15 Hyper Beam',
         quantity: 1,
@@ -83,6 +85,7 @@ describe('parsePrizeShops', () => {
         requires: [['coin-case']],
       },
       {
+        no: 0,
         itemId: 'tm50-substitute',
         name: 'TM50 Substitute',
         quantity: 1,

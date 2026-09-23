@@ -686,7 +686,7 @@ A Gold/Silver/Crystal slot would look like `{ "levels": {…}, "rate": {"kind":"
 - **Goal:** each location lists the items found there for the selected game and each item's **prerequisites** beyond reaching the location in walkthrough order (Cut, Surf, Strength, a key item, an event).
   - Included: visible pickups, hidden items, gifts, rewards, trainer drops, choices, Game Corner coins, and the **Game Corner TM prizes bought with coins** (`obtain: 'purchase'`, parsed by `core/shop.ts`, see §7.7). Fake item balls become a location note.
   - Out of scope (user choice): Poké Mart stock and temporary items (Safari Balls).
-  - Items are informational and not tracked in profiles.
+  - Items were informational at first. **Phase 9** lets profiles tick items as picked up, keyed by the item numbers below.
 - **Research (Red/Blue/Yellow):**
   - **Where:** location pages have an `Items` section (`==Items==`, or `===Items===` under `In the core series games` / `In the games`). It holds `{{Itemlist|<sprite key>|<where>|<game flags>|display=…}}` rows between `{{itlisth}}` and `{{itlistfoot}}`. There are 203 Gen I rows (flags `R`/`B`/`Y`) over 37 of the 57 original locations; the other 20 only have rows for later games (checked).
   - **Names:** the first parameter is a sprite key (`TM Water`, `Old Rod III`, `Card Key III`). The item name is `display=` when present (`{{TM|12|Water Gun}}`, `[[Potion]] ×2`, `10 {{OBP|Coin|Game Corner}}s`), otherwise the key. `{{Itemlist/N|item1|…|itemN|<where>|flags}}` exists but has no Gen I rows.
@@ -741,6 +741,14 @@ A Gold/Silver/Crystal slot would look like `{ "levels": {…}, "rate": {"kind":"
   - Compare each item's **total quantity per game** with the location data, and report walkthrough requirements that no location item with that id has. Differences are **warnings**, triaged in `PROGRESS.md` until `reports/rby.md` exists.
   - Totals are compared, not parts (changed 2026-09-13): the walkthrough groups some places in other parts (Route 2's east side in Part 7, the Pewter Museum's Old Amber in Part 3). A per-part diff gave 41 placement-only warnings.
   - The first rby build has 13 item warnings: Potion, Revive and Poké Ball counts, Yellow's Viridian Forest Antidote, Safari Balls (excluded on purpose), and Exp. All vs Exp. Share.
+- **Item numbers (Phase 9, decided 2026-09-23):** every item gets a number `no`, unique within the version group and **never reused**. Profiles store ticks as these numbers, and `PKG2` codes carry them as a bitfield, so they are a compatibility contract like `codecId`.
+  - The committed registry `scripts/data/version-groups/<id>/item-numbers.json` holds `next` and one entry per live item: `{no, locationId, subArea, itemId, where}`. It is written by the build (not by hand) and staged with the data.
+  - `core/item-numbers.ts` matches each build's items against the registry, one `(locationId, subArea, itemId)` group at a time:
+    1. Same `where` text: keeps its number.
+    2. Otherwise, the leftovers of the group pair up in page order and keep their numbers, with a **warning** per item ("where text changed"), so a Bulbapedia rewording is triaged rather than silent.
+    3. Items still unmatched get `next`, `next + 1`, … (a note per new item).
+    4. Registry entries still unmatched are an **error**, unless `overrides/items.ts` → `retiredItems` lists the number with a reason; a retired number then leaves the registry for good (`next` never goes down). A retired number that still matches an item is an error too.
+  - With no registry file (a new version group), numbers are handed out in location and page order from 1.
 - **Output:** in the main `rby.json` as `GameLocation.items` and `GameLocation.itemNotes` (§8). The location page needs them, and they're small: the first build has 230 items, and `rby.json` grew from 247 to 300 KB raw. Walkthrough pages used are added to `sources`.
 - **Golden assertions:**
   - Route 12 `TM16 Pay Day` requires `surf`.
@@ -823,6 +831,7 @@ export interface GameLocation {
 export type ItemObtainMethod = 'pickup' | 'gift' | 'reward' | 'drop' | 'choice' | 'purchase';
 
 export interface LocationItem {
+  no: number;                                           // stable per version group, never reused (§7.13); profiles store it
   itemId: string; name: string;                         // name as spelled for the generation: "TM28 Dig", "Coins"
   quantity: number;
   games: GameId[];
@@ -879,6 +888,7 @@ export interface Profile {
   name: string;                // 1–32 chars
   game: GameId;
   caught: number[];            // sorted, unique National Dex numbers
+  itemsTaken: number[];        // sorted, unique LocationItem.no of the profile's version group (Phase 9, schema 2)
   progressPart?: number;       // optional "I'm at walkthrough part N"
   createdAt: string; updatedAt: string;
 }
@@ -1049,13 +1059,14 @@ setActive(id); setProgressPart(part); importProfile(p, mode: 'new' | 'replace', 
 ### 11.5 Persisted state and migrations
 ```ts
 interface PersistedState {
-  schemaVersion: 1;
+  schemaVersion: 2;
   activeProfileId: string | null;
   profiles: Profile[];
   settings: Settings;
 }
 ```
 `migrations.ts` holds `[(s0) => s1, …]` and runs them in order on load. Each has snapshot unit tests.
+- **1 → 2 (Phase 9):** every profile gains `itemsTaken: []`. The bump matters even though the field could be optional: an older app that finds schema 2 refuses to overwrite it (`reason: 'newer'`) instead of silently dropping the ticks. Item numbers the current data doesn't know (a retired item) stay stored and are simply not shown or counted. The JSON backup carries `itemsTaken` and its `schemaVersion` becomes 2; schema-1 backups still restore.
 
 ---
 
@@ -1088,7 +1099,17 @@ Binary layout, before encoding (all integers little-endian):
   - Unknown `codecId`: "This code is for a game this version of Poké Guide doesn't support yet."
   - Unsupported format version: "Made by a newer version."
   - `dexCount` differs from the registry's value: bits beyond `nationalDexMax` are ignored and missing ones are treated as not caught, with a warning in the preview.
-- `export-codec.ts` exports `encodeProfile(p): string` and `decodeProfile(s): CodecResult`. It reads the registry directly (both are framework-free), instead of taking it as a parameter as this section first sketched. The CRC is **CRC-16/CCITT-FALSE** (polynomial `0x1021`, initial value `0xFFFF`, no reflection, no final XOR), and `DecodedProfile` also carries `dexCount` and `ignoredBeyondDex` so the import preview can warn. The error types are `bad-prefix | bad-base64 | too-short | bad-checksum | unsupported-version | unknown-game | bad-name`.
+- **`PKG2` (Phase 9, decided 2026-09-23):** the same layout with format version `2` and an item block between the caught bitfield and the name:
+
+  | Offset | Size | Field |
+  |---|---|---|
+  | 6 + ⌈N/8⌉ | 2 | `itemCount` M (uint16): the highest item number carried, so trailing zero bytes are left out |
+  | … | ⌈M/8⌉ | **items-taken bitfield**: bit *i* = item number *i*+1 of the game's version group |
+
+  - The encoder writes **`PKG1` when the profile has no items ticked**, so a Pokémon-only profile still gives a code every earlier version reads, and `PKG2` otherwise. The decoder reads both forever; a `PKG1` code means "no items taken".
+  - The codec doesn't read the game data: numbers the data doesn't know are kept (like retired ones in storage) and the import preview counts only known items.
+  - Red/Blue/Yellow with every item taken adds 2 + 30 bytes, about 43 characters.
+- `export-codec.ts` exports `encodeProfile(p): string` and `decodeProfile(s): CodecResult`. It reads the registry directly (both are framework-free), instead of taking it as a parameter as this section first sketched. The CRC is **CRC-16/CCITT-FALSE** (polynomial `0x1021`, initial value `0xFFFF`, no reflection, no final XOR), and `DecodedProfile` also carries `dexCount` and `ignoredBeyondDex` so the import preview can warn. The error types are `bad-prefix | bad-base64 | too-short | bad-checksum | unsupported-version | unknown-game | bad-name`. Since Phase 9 the decoder accepts any `PKG<digit>-` prefix: a format it doesn't know (`PKG3-`) is `unsupported-version`, and a format byte that disagrees with the prefix (an edited code; the CRC doesn't cover the prefix) is `bad-prefix`. **Importing with "replace"** overwrites `itemsTaken` too (a `PKG1` code clears it): a code stands for the whole profile.
 - The decoder is forgiving about input: it trims whitespace, removes line breaks and zero-width characters, and accepts a full URL or just the code.
 
 ### 12.3 Export UI
@@ -1149,6 +1170,7 @@ Binary layout, before encoding (all integers little-endian):
 - **Sections:** region headers (only for multi-region games), then sticky part headers ("Part 5 · Cerulean City, Route 24…") with collapse and part progress.
 - **Location card:**
   - Name, kind icon and completion ("3/5").
+  - An items count ("Items 2/7", Phase 9) when the location has items in this game. It never feeds any progress figure, filter or "completed" state, which stay Pokémon-only.
   - A **sprite strip** with caught species in color and uncaught ones as greyed silhouettes.
   - Badges for encounters that need an unlock you don't have yet ("Surf", "Super Rod", "Post-game").
 - A **"You are here"** FAB jumps to the `progressPart` section.
@@ -1180,8 +1202,7 @@ Binary layout, before encoding (all integers little-endian):
   - Badges from `obtain` (Pickup · Gift · Reward · Drop · Choice · Purchase) plus Hidden. A Purchase badge shows its `coins` price. Prerequisites are chips from the prerequisite vocabulary, and a "from Part N" chip appears when an item is only reachable later than the location's part (Viridian Gym TM).
   - A "Show hidden items" toggle (on by default) and a "Choose one" chip for choice groups (Helix / Dome Fossil).
   - Fake item balls (Power Plant Voltorb/Electrode) are a note that links to the encounter rows.
-  - Items are **not** tracked (no checkbox); the checklist stays Pokémon-only. Tracking which items you
-    have picked up is **Phase 9** (§16), planned after everything else ships.
+  - **Phase 9:** each item row has a "picked up" checkbox (same rules as the catch toggle: only the active profile, only when its game matches). Every kind is tickable: hidden items, Game Corner coins and TM purchases, and the fossil choice. In a choice group, ticking one option makes the others read "You chose X" and disables them until it is unticked. A **"Hide items I have"** chip joins "Show hidden items". Item ticks count towards the save reminder and can be undone, but never count as "caught".
 
 ### 13.6 Checklist page (`/:game/checklist`)
 - **Summary card:**
@@ -1363,25 +1384,25 @@ Each phase ends with a working local state and its acceptance criteria met. **No
 - [ ] Deploy, then run the smoke test on the live site (deep link reload, import link, offline).
 - **Accept when:** the live site passes the same manual smoke check (§14) as the local build.
 
-### Phase 9 — Item pickup tracking (added 2026-09-15, to be planned after Phase 8)
-Requested after using the location page: tick off the items you have already picked up in an area.
-Items are read-only today (§13.5), so this changes stored state and needs its own design pass **before**
-any code. It is deliberately last: it touches the two compatibility contracts (persisted state and the
-export code), so it should land only once they are stable and shipped.
+### Phase 9 — Item pickup tracking (added 2026-09-15, designed 2026-09-23)
+Requested after using the location page: tick off the items you have already picked up in an area. It
+touches both compatibility contracts (persisted state and the export code). The user moved it ahead of
+Phase 8 on 2026-09-23. Design decisions (user choices in bold):
+- **Identity: a numbered registry.** The pipeline gives each item a stable `no`, recorded in a committed,
+  append-only registry per version group (§7.13). Ticks are stored as numbers, never as array indexes.
+- **Stored state:** `Profile.itemsTaken: number[]`, per profile (a playthrough), `schemaVersion` 2 with a
+  migration (§11.5).
+- **Export: `PKG2`.** `PKG1` is unchanged and still written for profiles without item ticks (§12.2).
+- **Scope: everything is tickable**, including hidden items, Game Corner coins and TM purchases, and the
+  fossil choice (choosing one disables the other).
+- **UI:** checkboxes on item rows and "Hide items I have" (§13.5), an items count on the location card
+  (§13.4). Items never count as "caught" or towards any Pokémon progress figure.
 
-Open design questions for that pass:
-- [ ] **Item instance identity.** `LocationItem.itemId` is not unique (a Potion appears in many areas,
-      sometimes twice in one). A tick needs a stable key — e.g. `locationId:subArea:itemId:occurrence`
-      — that survives a data rebuild, or users silently lose ticks when the pipeline reorders a page.
-      Decide the key, then make the pipeline emit it as a field so it is data, not a UI convention.
-- [ ] **Stored state.** `Profile` gains a field (e.g. `itemsTaken: string[]`), so `schemaVersion` goes
-      to 2 with a migration (§11.5). Decide whether it is per profile (yes, it is per playthrough).
-- [ ] **Export.** `PKG1` is a fixed contract (§12.2) and its payload is a National Dex bitfield. Either
-      items stay out of export codes, or a `PKG2` version is defined. **Never change `PKG1`.**
-- [ ] **UI.** Checkboxes on the item rows (§13.5), an items count on the location card (§13.4), and a
-      "hide items I have" filter. Decide whether items appear in any progress figure — the default
-      answer is **no**: "caught" stays Pokémon-only (§1 decisions, binary catch status).
-- [ ] **Scope.** Whether hidden items and purchases (Game Corner TMs) are tickable like the rest.
+- [x] Pipeline: `LocationItem.no`, `core/item-numbers.ts`, the registry file, `retiredItems`, tests
+- [x] State: `itemsTaken`, schema 2 migration, backup, `ProfileStore` item toggles with undo
+- [x] Codec: `PKG2` encode/decode, import preview and replace
+- [x] UI: location item toggles, choice groups, "Hide items I have", guide card count
+- [ ] Manual browser check (the user)
 - **Accept when:** ticks survive a reload, a data rebuild and a profile switch, and no export code
   written by an earlier version is rejected or misread.
 

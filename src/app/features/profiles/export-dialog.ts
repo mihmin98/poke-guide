@@ -39,7 +39,10 @@ async function copyText(document: Document, text: string): Promise<boolean> {
   }
 }
 
-/** The export dialog (plan §12.3): the `PKG1` code, a share link, and the system share sheet. */
+/**
+ * The export dialog (plan §12.3): the code (`PKG1`, or `PKG2` once items are ticked), a share link,
+ * and the system share sheet.
+ */
 @Component({
   selector: 'app-export-dialog',
   imports: [MatButtonModule, MatDialogModule, MatIconModule],
@@ -48,8 +51,11 @@ async function copyText(document: Document, text: string): Promise<boolean> {
     <h2 mat-dialog-title>Export “{{ data.profile.name }}”</h2>
     <mat-dialog-content>
       <p class="sub">
-        This code holds {{ data.profile.caught.length }} caught Pokémon for {{ gameName() }}. Paste
-        it into Poké Guide on another device, or keep it somewhere safe.
+        This code holds {{ data.profile.caught.length }} caught Pokémon
+        @if (data.profile.itemsTaken.length; as items) {
+          and {{ items }} picked-up {{ items === 1 ? 'item' : 'items' }}
+        }
+        for {{ gameName() }}. Paste it into Poké Guide on another device, or keep it somewhere safe.
       </p>
 
       <label class="field">

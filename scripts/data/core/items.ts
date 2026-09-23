@@ -6,6 +6,7 @@
 import type { GameId, ItemObtainMethod, LocationItem } from '../../../src/app/core/domain/models';
 import { GAMES } from '../../../src/app/core/games/registry';
 import type { Issue } from './encounter-walker';
+import { UNNUMBERED } from './item-numbers';
 import { replaceTemplates, splitTooltips, stripMarkup } from './markup';
 import { findNestedSection, headingText, headingsWithin } from './sections';
 import { slugify } from './slug';
@@ -249,6 +250,7 @@ function walkRows(
         }
         where = where.charAt(0).toUpperCase() + where.slice(1);
         result.items.push({
+          no: UNNUMBERED,
           itemId: slugify(named.name),
           name: named.name,
           quantity: spots.length > 1 ? 1 : named.quantity,

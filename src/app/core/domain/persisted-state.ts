@@ -1,7 +1,7 @@
 // FRAMEWORK-FREE: the persisted app state (plan §11.5) and its sanitizer. No Angular imports.
 import type { GameId, Profile } from './models';
 
-export const STATE_SCHEMA_VERSION = 1;
+export const STATE_SCHEMA_VERSION = 2;
 
 export interface Settings {
   theme: 'system' | 'light' | 'dark';
@@ -83,7 +83,7 @@ export function sanitizeSettings(raw: unknown): Settings {
   };
 }
 
-/** Sorted, unique, positive integers. */
+/** Sorted, unique, positive integers: National Dex numbers, or item numbers for `itemsTaken`. */
 export function normalizeCaught(raw: unknown): number[] {
   if (!Array.isArray(raw)) return [];
   const dexes = raw.filter((n): n is number => Number.isInteger(n) && n > 0);
@@ -104,6 +104,8 @@ export function sanitizeProfile(raw: unknown, now: string): Profile | null {
       (typeof name === 'string' ? name.trim() : '').slice(0, PROFILE_NAME_MAX) || 'Unnamed profile',
     game: game as GameId,
     caught: normalizeCaught(raw['caught']),
+    // Numbers the current data doesn't know (a retired item) are kept, and simply not shown.
+    itemsTaken: normalizeCaught(raw['itemsTaken']),
     createdAt: typeof createdAt === 'string' ? createdAt : now,
     updatedAt: typeof updatedAt === 'string' ? updatedAt : now,
   };

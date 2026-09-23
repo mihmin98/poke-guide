@@ -11,6 +11,7 @@ const PROFILE: Profile = {
   name: 'Red run',
   game: 'red',
   caught: [1, 4, 7],
+  itemsTaken: [],
   progressPart: 3,
   createdAt: '',
   updatedAt: '',

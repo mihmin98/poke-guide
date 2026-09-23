@@ -10,6 +10,7 @@ import { findGame } from '../games/registry';
 import { StorageService } from '../storage/storage.service';
 
 export const UNDO_LIMIT = 20;
+const NO_ITEMS: ReadonlySet<number> = new Set();
 
 /** The part of the state profile changes touch (and undo restores). */
 interface ProfilesSnapshot {
@@ -29,6 +30,8 @@ export interface ImportedProfile {
   name: string;
   game: GameId;
   caught: readonly number[];
+  /** Absent for a `PKG1` code, which means "no items taken". */
+  itemsTaken?: readonly number[];
   progressPart?: number;
 }
 
@@ -37,8 +40,9 @@ export class ProfileError extends Error {
 }
 
 /**
- * Profiles and catch status (plan §11.4), stored through `StorageService`. Catch changes take the game
- * shown in the URL and only apply when the active profile is for that game (plan §11.3).
+ * Profiles, catch status and picked-up items (plan §11.4, Phase 9), stored through `StorageService`. Catch
+ * and item changes take the game shown in the URL and only apply when the active profile is for that game
+ * (plan §11.3).
  */
 @Injectable({ providedIn: 'root' })
 export class ProfileStore {
@@ -53,11 +57,23 @@ export class ProfileStore {
   readonly caughtSet = computed<ReadonlySet<number>>(
     () => new Set(this.activeProfile()?.caught ?? []),
   );
+  /** `LocationItem.no` values the active profile has picked up. */
+  readonly itemsTakenSet = computed<ReadonlySet<number>>(
+    () => new Set(this.activeProfile()?.itemsTaken ?? []),
+  );
   /** The most recent undoable change, while it is still valid. */
   readonly lastChange = computed(() => {
     const entry = this.history().at(-1);
     return entry && this.isCurrent(entry) ? entry : undefined;
   });
+
+  /**
+   * The active profile's items taken, when it is for `game`. Unlike National Dex numbers, item numbers
+   * only mean something within the profile's own game data, so other games see none.
+   */
+  itemsTakenIn(game: GameId): ReadonlySet<number> {
+    return this.activeProfile()?.game === game ? this.itemsTakenSet() : NO_ITEMS;
+  }
 
   isCaught(dex: number): boolean {
     return this.caughtSet().has(dex);
@@ -115,6 +131,34 @@ export class ProfileStore {
     return true;
   }
 
+  /**
+   * Marks items (by `LocationItem.no`) as picked up or not. The same rules as catches apply; items never
+   * count as caught, but they do count towards the save reminder and can be undone.
+   */
+  bulkSetItemsTaken(game: GameId, nos: readonly number[], taken: boolean, label: string): boolean {
+    const profile = this.activeProfile();
+    if (!profile || !this.canEditCatches(game) || nos.some((n) => !Number.isInteger(n) || n < 1))
+      return false;
+    const changed = nos.filter((n) => profile.itemsTaken.includes(n) !== taken);
+    if (changed.length === 0) return true;
+    const set = new Set(profile.itemsTaken);
+    for (const no of changed) {
+      if (taken) set.add(no);
+      else set.delete(no);
+    }
+    this.change(label, (s) =>
+      this.countTowardsReminder(
+        this.withProfile(s, profile.id, { itemsTaken: normalizeCaught([...set]) }),
+        changed.length,
+      ),
+    );
+    return true;
+  }
+
+  setItemTaken(game: GameId, no: number, taken: boolean, label: string): boolean {
+    return this.bulkSetItemsTaken(game, [no], taken, label);
+  }
+
   /** Creates a profile, makes it active, and asks for persistent storage when it is the first one. */
   createProfile(name: string, game: GameId): Profile {
     const profile = this.newProfile(this.requireName(name), this.requireGame(game), []);
@@ -150,7 +194,13 @@ export class ProfileStore {
     const source = this.requireProfile(id);
     const suffix = ' (copy)';
     const name = source.name.slice(0, PROFILE_NAME_MAX - suffix.length).trimEnd() + suffix;
-    const copy = this.newProfile(name, source.game, source.caught, source.progressPart);
+    const copy = this.newProfile(
+      name,
+      source.game,
+      source.caught,
+      source.progressPart,
+      source.itemsTaken,
+    );
     this.change(`Duplicated ${source.name}`, (s) => {
       const profiles = [...s.profiles];
       profiles.splice(profiles.findIndex((p) => p.id === id) + 1, 0, copy);
@@ -177,16 +227,17 @@ export class ProfileStore {
   }
 
   /**
-   * `new` adds the imported profile (and makes it active); `replace` overwrites the caught list and progress
-   * of `targetId`, which must be for the same game. Returns the affected profile's id.
+   * `new` adds the imported profile (and makes it active); `replace` overwrites the caught list, the items
+   * taken and the progress of `targetId`, which must be for the same game. Returns the affected profile's id.
    */
   importProfile(imported: ImportedProfile, mode: 'new' | 'replace', targetId?: string): string {
     const game = this.requireGame(imported.game);
     const max = findGame(game)!.nationalDexMax;
     const caught = normalizeCaught(imported.caught).filter((d) => d <= max);
+    const itemsTaken = normalizeCaught(imported.itemsTaken ?? []);
     if (mode === 'new') {
       const name = validProfileName(imported.name) ?? 'Imported profile';
-      const profile = this.newProfile(name, game, caught, imported.progressPart);
+      const profile = this.newProfile(name, game, caught, imported.progressPart, itemsTaken);
       this.change(`Imported ${profile.name}`, (s) => ({
         ...s,
         profiles: [...s.profiles, profile],
@@ -198,7 +249,7 @@ export class ProfileStore {
     if (target.game !== game)
       throw new ProfileError(`Cannot replace a ${target.game} profile with ${game} data`);
     this.change(`Replaced ${target.name} with imported data`, (s) =>
-      this.withProfile(s, target.id, { caught, progressPart: imported.progressPart }),
+      this.withProfile(s, target.id, { caught, itemsTaken, progressPart: imported.progressPart }),
     );
     return target.id;
   }
@@ -269,6 +320,7 @@ export class ProfileStore {
     game: GameId,
     caught: readonly number[],
     progressPart?: number,
+    itemsTaken: readonly number[] = [],
   ): Profile {
     const now = new Date().toISOString();
     const profile: Profile = {
@@ -276,6 +328,7 @@ export class ProfileStore {
       name,
       game,
       caught: [...caught],
+      itemsTaken: [...itemsTaken],
       createdAt: now,
       updatedAt: now,
     };

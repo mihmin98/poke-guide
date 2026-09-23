@@ -8,6 +8,7 @@ import type { GameId, LocationItem } from '../../../src/app/core/domain/models';
 import { GAMES } from '../../../src/app/core/games/registry';
 import { parseDex } from '../adapters/catch-template-adapter';
 import type { Issue, WalkedRow } from './encounter-walker';
+import { UNNUMBERED } from './item-numbers';
 import { parseLevels } from './levels';
 import { stripMarkup } from './markup';
 import { findNestedSection, type TitleMatcher } from './sections';
@@ -104,6 +105,7 @@ export function parsePrizeShops(wikitext: string, options: PrizeShopOptions): Pr
           return;
         }
         result.items.push({
+          no: UNNUMBERED,
           itemId: slugify(name),
           name,
           quantity: 1,

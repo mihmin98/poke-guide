@@ -79,6 +79,11 @@ export interface GameLocation {
 export type ItemObtainMethod = 'pickup' | 'gift' | 'reward' | 'drop' | 'choice' | 'purchase';
 
 export interface LocationItem {
+  /**
+   * Stable within the version group and never reused (plan §7.13): profiles store these in `itemsTaken`
+   * and `PKG2` codes carry them, so they are a compatibility contract like a game's `codecId`.
+   */
+  no: number;
   itemId: string;
   /** As spelled for the generation: "TM28 Dig", "Coins". */
   name: string;
@@ -252,6 +257,8 @@ export interface Profile {
   game: GameId;
   /** Sorted, unique National Dex numbers. */
   caught: number[];
+  /** Sorted, unique `LocationItem.no` values of the game's version group (plan §16, Phase 9). */
+  itemsTaken: number[];
   /** Optional "I'm at walkthrough part N". */
   progressPart?: number;
   createdAt: string;

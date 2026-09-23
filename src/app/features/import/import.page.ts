@@ -29,8 +29,8 @@ import { SettingsStore } from '../../core/settings/settings.store';
   template: `
     <h1>Import progress</h1>
     <p class="sub">
-      Paste a <code>PKG1-</code> code or a share link to bring a profile from another device, or
-      restore a JSON backup of every profile.
+      Paste a code (<code>PKG1-…</code> or <code>PKG2-…</code>) or a share link to bring a profile
+      from another device, or restore a JSON backup of every profile.
     </p>
 
     <label class="field">
@@ -39,7 +39,7 @@ import { SettingsStore } from '../../core/settings/settings.store';
         rows="3"
         autocomplete="off"
         spellcheck="false"
-        placeholder="PKG1-…"
+        placeholder="PKG2-…"
         [value]="input()"
         (input)="onInput($event)"
       ></textarea>
@@ -55,6 +55,10 @@ import { SettingsStore } from '../../core/settings/settings.store';
         <p class="meta">
           <span class="chip">{{ gameName(preview.game) }}</span>
           <span>{{ preview.caught.length }} caught{{ obtainableSuffix(preview) }}</span>
+          @if (preview.itemsTaken.length) {
+            @let items = itemsTakenCount(preview);
+            <span>· {{ items }} {{ items === 1 ? 'item' : 'items' }} picked up</span>
+          }
           @if (preview.progressPart; as part) {
             <span>· Part {{ part }}</span>
           }
@@ -209,7 +213,7 @@ export class ImportPage {
   private readonly fragment = toSignal(inject(ActivatedRoute).fragment, { initialValue: null });
 
   /**
-   * A share link puts the code in the fragment (`/import#PKG1-…`), so it never reaches a server.
+   * A share link puts the code in the fragment (`/import#PKG2-…`), so it never reaches a server.
    * The field starts from it and the user can paste over it.
    */
   protected readonly input = linkedSignal(() => this.fragment() ?? '');
@@ -252,6 +256,18 @@ export class ImportPage {
     return obtainable > 0 ? ` of ${obtainable} obtainable` : '';
   }
 
+  /** Items of that game the code has ticked; numbers the data doesn't know (retired items) aren't counted. */
+  protected itemsTakenCount(preview: DecodedProfile): number {
+    const view = untracked(() => this.gameData.forGame(preview.game)).view();
+    if (!view) return preview.itemsTaken.length;
+    const known = new Set(
+      view.locations.flatMap((l) =>
+        l.items.filter((i) => i.games.includes(preview.game)).map((i) => i.no),
+      ),
+    );
+    return preview.itemsTaken.filter((no) => known.has(no)).length;
+  }
+
   protected onInput(event: Event): void {
     this.input.set((event.target as HTMLTextAreaElement).value);
     this.replaceId.set('');
@@ -269,6 +285,7 @@ export class ImportPage {
         name: this.uniqueName(preview.name),
         game: preview.game,
         caught: preview.caught,
+        itemsTaken: preview.itemsTaken,
         ...partOf(preview),
       },
       'new',
@@ -278,7 +295,13 @@ export class ImportPage {
 
   protected async importAsReplace(preview: DecodedProfile): Promise<void> {
     const id = this.profiles.importProfile(
-      { name: preview.name, game: preview.game, caught: preview.caught, ...partOf(preview) },
+      {
+        name: preview.name,
+        game: preview.game,
+        caught: preview.caught,
+        itemsTaken: preview.itemsTaken,
+        ...partOf(preview),
+      },
       'replace',
       this.replaceId(),
     );
@@ -303,6 +326,7 @@ export class ImportPage {
           name: this.uniqueName(profile.name),
           game: profile.game,
           caught: profile.caught,
+          itemsTaken: profile.itemsTaken,
           ...(profile.progressPart === undefined ? {} : { progressPart: profile.progressPart }),
         },
         'new',

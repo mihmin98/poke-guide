@@ -145,6 +145,17 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
                       <span class="count" [class.done]="location.complete">
                         {{ location.caught }}/{{ location.total }}
                       </span>
+                      @if (location.items.total) {
+                        <span
+                          class="count items"
+                          [class.done]="location.items.taken === location.items.total"
+                          title="Items picked up"
+                        >
+                          <mat-icon aria-hidden="true">inventory_2</mat-icon>
+                          <span class="sr-only">Items</span>
+                          {{ location.items.taken }}/{{ location.items.total }}
+                        </span>
+                      }
                     </span>
 
                     @if (location.requirements.length) {
@@ -320,6 +331,16 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
     .count.done {
       color: var(--mat-sys-primary);
     }
+    .count.items {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+    }
+    .count.items mat-icon {
+      font-size: 16px;
+      width: 16px;
+      height: 16px;
+    }
     .cards {
       list-style: none;
       margin: 0;
@@ -468,6 +489,7 @@ export class GuidePage {
       view,
       game: this.gameId(),
       caught: this.profiles.caughtSet(),
+      itemsTaken: this.profiles.itemsTakenIn(this.gameId()),
       progressPart: this.progressPart(),
       filters: {
         search: this.search(),

@@ -7,7 +7,8 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { GameId, PokedexData, VersionGroupData } from '../../../../src/app/core/domain/models';
-import { repoRoot } from '../../core/paths';
+import { parseItemNumbers } from '../../core/item-numbers';
+import { repoRoot, versionGroupDir } from '../../core/paths';
 import { rbyConfig } from './config';
 import { RBY_EVOLUTIONS } from './overrides/evolutions';
 
@@ -300,6 +301,29 @@ describe('rby data: items (plan §7.13)', () => {
     const titles = data.sources.map((s) => s.title);
     expect(titles).toContain('Walkthrough:Pokémon Yellow/Part 17');
     expect(titles).toContain('Celadon Department Store');
+  });
+
+  it('numbers every item as the committed registry does (plan §7.13, Phase 9)', () => {
+    const registry = parseItemNumbers(
+      readFileSync(join(versionGroupDir('rby'), 'item-numbers.json'), 'utf8'),
+    );
+    const numbered = data.locations.flatMap((l) =>
+      l.items.map((i) => ({
+        no: i.no,
+        locationId: l.id,
+        subArea: i.subArea,
+        itemId: i.itemId,
+        where: i.where,
+      })),
+    );
+    expect([...numbered].sort((a, b) => a.no - b.no)).toEqual(registry.items);
+    expect(registry.next).toBeGreaterThan(Math.max(...numbered.map((i) => i.no)));
+    // Spot checks: these numbers are stored in profiles and export codes, so they must never move.
+    expect(find('pallet-town', 'town-map')[0]!.no).toBe(1);
+    expect(find('mt-moon', 'dome-fossil')[0]!.no).toBe(31);
+    expect(find('route-12', 'tm16-pay-day')[0]!.no).toBe(165);
+    const b1f = find('cerulean-cave', 'ultra-ball').filter((i) => i.subArea === 'B1F');
+    expect(b1f.map((i) => i.no)).toEqual([218, 219, 227, 228]);
   });
 });
 

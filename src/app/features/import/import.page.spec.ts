@@ -16,6 +16,7 @@ const stub = {
   isLoading: signal(false),
   error: signal(undefined),
   checklist: signal([]),
+  view: signal<unknown>(undefined),
 };
 
 const CODE = encodeProfile({
@@ -41,7 +42,10 @@ describe('ImportPage (plan §12.4)', () => {
     settings = TestBed.inject(SettingsStore);
   });
 
-  afterEach(() => TestBed.resetTestingModule());
+  afterEach(() => {
+    stub.view.set(undefined);
+    TestBed.resetTestingModule();
+  });
 
   function render() {
     const fixture = TestBed.createComponent(ImportPage);
@@ -63,6 +67,38 @@ describe('ImportPage (plan §12.4)', () => {
     expect(el.querySelector('.preview .meta')?.textContent).toContain('4 caught');
     expect(el.querySelector('.preview .meta')?.textContent).toContain('Part 5');
     expect(el.querySelector('.status.error')).toBeNull();
+  });
+
+  it('previews and imports the items a PKG2 code carries (Phase 9)', async () => {
+    const withItems = encodeProfile({
+      name: 'Items run',
+      game: 'red',
+      caught: [1],
+      itemsTaken: [3, 17, 999],
+    });
+    const { fixture, el, type } = render();
+    type(withItems);
+    // Until the game data loads, every number counts.
+    expect(el.querySelector('.preview .meta')?.textContent).toContain('3 items picked up');
+
+    // Once it has, only items of this game that the data knows are counted.
+    stub.view.set({
+      locations: [
+        {
+          items: [
+            { no: 3, games: ['red'] },
+            { no: 17, games: ['blue'] },
+          ],
+        },
+      ],
+    });
+    fixture.detectChanges();
+    expect(el.querySelector('.preview .meta')?.textContent).toContain('1 item picked up');
+
+    el.querySelector<HTMLButtonElement>('.actions button')!.click();
+    await fixture.whenStable();
+    // Unknown numbers are kept: a later data build may know them again.
+    expect(profiles.activeProfile()?.itemsTaken).toEqual([3, 17, 999]);
   });
 
   it('explains an invalid code without offering to import it', () => {
@@ -149,6 +185,7 @@ describe('ImportPage (plan §12.4)', () => {
         name: 'Backup red',
         game: 'red',
         caught: [2],
+        itemsTaken: [],
         createdAt: '',
         updatedAt: '',
       },
@@ -158,6 +195,7 @@ describe('ImportPage (plan §12.4)', () => {
         // A profile saved by a newer build, for a game this one doesn't know.
         game: 'scarlet' as GameId,
         caught: [3],
+        itemsTaken: [],
         createdAt: '',
         updatedAt: '',
       },

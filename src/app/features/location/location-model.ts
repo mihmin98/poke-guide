@@ -1,5 +1,6 @@
 // Pure view model for the location page (plan §13.5): no Angular, so it can be unit-tested on its own.
 import { encountersFor, type GameEncounter, type GameView } from '../../core/domain/game-view';
+import { chosenInstead } from '../../core/domain/item-progress';
 import type {
   EncounterSlot,
   GameId,
@@ -165,6 +166,40 @@ const OBTAIN_LABELS: Record<LocationItem['obtain'], string> = {
   choice: 'Choice',
   purchase: 'Purchase',
 };
+
+export interface ItemRow {
+  item: LocationItem;
+  taken: boolean;
+  /** The option taken instead, for an item in a choice group (plan §13.5, Phase 9). */
+  chosenInstead?: string;
+}
+
+export interface ItemFilters {
+  showHidden: boolean;
+  /** "Hide items I have": also hides choice options you passed on. */
+  hideTaken: boolean;
+}
+
+/** The item rows shown, in page order, with each one's picked-up state. */
+export function buildItemRows(
+  items: readonly LocationItem[],
+  taken: ReadonlySet<number>,
+  filters: ItemFilters,
+): ItemRow[] {
+  const rows: ItemRow[] = [];
+  for (const item of items) {
+    if (!filters.showHidden && item.hidden) continue;
+    const other = chosenInstead(item, items, taken);
+    const row: ItemRow = {
+      item,
+      taken: taken.has(item.no),
+      ...(other ? { chosenInstead: other } : {}),
+    };
+    if (filters.hideTaken && (row.taken || row.chosenInstead)) continue;
+    rows.push(row);
+  }
+  return rows;
+}
 
 export function itemObtainLabel(item: LocationItem): string {
   return OBTAIN_LABELS[item.obtain];

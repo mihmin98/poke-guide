@@ -6,6 +6,7 @@ const PROFILE: Profile = {
   name: 'Red run',
   game: 'red',
   caught: [1, 4, 7],
+  itemsTaken: [3, 17],
   createdAt: '2026-01-01T00:00:00.000Z',
   updatedAt: '2026-01-02T00:00:00.000Z',
 };
@@ -13,7 +14,7 @@ const PROFILE: Profile = {
 describe('profile backup file (plan §12.3)', () => {
   it('round-trips every profile', () => {
     const backup = buildBackup([PROFILE], new Date('2026-09-15T10:00:00Z'));
-    expect(backup).toMatchObject({ app: BACKUP_APP_ID, schemaVersion: 1 });
+    expect(backup).toMatchObject({ app: BACKUP_APP_ID, schemaVersion: 2 });
     expect(backup.exportedAt).toBe('2026-09-15T10:00:00.000Z');
 
     const result = parseBackup(JSON.stringify(backup));
@@ -24,11 +25,7 @@ describe('profile backup file (plan §12.3)', () => {
     const file = JSON.stringify({
       app: BACKUP_APP_ID,
       schemaVersion: 1,
-      profiles: [
-        { id: 'a', game: 'red', caught: [3, 3, 1, -2, 'x'] },
-        { game: 'red' },
-        'nonsense',
-      ],
+      profiles: [{ id: 'a', game: 'red', caught: [3, 3, 1, -2, 'x'] }, { game: 'red' }, 'nonsense'],
     });
     const result = parseBackup(file, '2026-09-15T00:00:00.000Z');
     expect(result.ok).toBe(true);
@@ -38,6 +35,8 @@ describe('profile backup file (plan §12.3)', () => {
       id: 'a',
       name: 'Unnamed profile',
       caught: [1, 3],
+      // A schema-1 backup predates item tracking.
+      itemsTaken: [],
     });
   });
 

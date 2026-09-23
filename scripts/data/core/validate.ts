@@ -55,6 +55,7 @@ const encounter = z.strictObject({
 });
 
 const item = z.strictObject({
+  no: positive,
   itemId: z.string().min(1),
   name: z.string().min(1),
   quantity: positive,
@@ -277,6 +278,7 @@ export function validateVersionGroup(
       error(`Game "${game}" is not a registry game of ${data.versionGroupId}`);
   }
   const seen = new Set<string>();
+  const itemNumbers = new Set<number>();
   for (const loc of data.locations) {
     if (seen.has(loc.id)) error(`Duplicate location id "${loc.id}"`);
     seen.add(loc.id);
@@ -292,7 +294,12 @@ export function validateVersionGroup(
         checkGames(`${what} slot`, Object.keys(e.games));
       }
     }
-    for (const it of loc.items) checkGames(`${it.name} in ${loc.id}`, it.games);
+    for (const it of loc.items) {
+      checkGames(`${it.name} in ${loc.id}`, it.games);
+      if (itemNumbers.has(it.no))
+        error(`Item number ${it.no} is used twice (${it.name} in ${loc.id})`);
+      itemNumbers.add(it.no);
+    }
   }
   for (const group of data.exclusiveGroups) {
     checkGames(`Exclusive group ${group.id}`, group.games);

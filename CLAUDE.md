@@ -98,9 +98,11 @@ npm run data:validate           # validate committed data files
 - Every species `1..nationalDexMax` must be obtainable or carry an `unobtainableReason`. The validator enforces this.
 
 ### App state (plan §11–12)
-- Signal stores. `ProfileStore` holds profiles: `{id, name, game, caught: number[] (National Dex), progressPart?}`. `SettingsStore` holds global settings. Both persist to the single `localStorage` key `poke-guide/state`, with `schemaVersion` and migrations, debounced writes and cross-tab sync.
+- Signal stores. `ProfileStore` holds profiles: `{id, name, game, caught: number[] (National Dex), itemsTaken: number[] (item numbers), progressPart?}`. `SettingsStore` holds global settings. Both persist to the single `localStorage` key `poke-guide/state`, with `schemaVersion` and migrations, debounced writes and cross-tab sync.
 - The route `/:game/...` decides which data is shown. Catch toggles write only to the active profile **if its game matches**; otherwise a mismatch banner is shown.
-- **The `PKG1-` export code is a compatibility contract:** binary → CRC-16 → base64url, holding the game `codecId` (uint16), `dexCount` and a caught bitfield keyed by National Dex. **Never reuse or change a `codecId`**, and never key saved state on array indexes.
+- **The `PKG1-` export code is a compatibility contract:** binary → CRC-16 → base64url, holding the game `codecId` (uint16), `dexCount` and a caught bitfield keyed by National Dex. **Never reuse or change a `codecId`**, and never key saved state on array indexes. `PKG2-` (Phase 9) adds an items-taken bitfield; the encoder still writes `PKG1` when no items are ticked, and both formats decode forever.
+- **Item numbers (`LocationItem.no`) are a contract too:** profiles and `PKG2` codes store them. The build assigns them through the committed, build-written registry `scripts/data/version-groups/<id>/item-numbers.json` (plan §7.13). Never edit it by hand or renumber: a vanished item fails the build until it is listed in `overrides/items.ts` → `retiredItems`, and numbers are never reused. Stage the registry with the data files.
+- Items never count as "caught" or towards any Pokémon progress figure.
 - Catch status is **binary** (caught / not caught). There is intentionally no "seen" state.
 
 ### Mechanics (plan §4.5, §13.11)

@@ -1,9 +1,10 @@
-// FRAMEWORK-FREE: the `PKG1` export code (plan §12.2). No Angular imports.
+// FRAMEWORK-FREE: the `PKG1` and `PKG2` export codes (plan §12.2). No Angular imports.
 //
-// This is a **compatibility contract**: every code ever produced must keep decoding. The layout,
+// This is a **compatibility contract**: every code ever produced must keep decoding. The layouts,
 // the CRC and the `codecId` values are therefore fixed forever. A change means a new prefix
-// (`PKG2`), never an edit here.
+// (`PKG3`), never an edit to an existing format.
 //
+// `PKG1`, format version 1:
 // | Offset | Size   | Field                                                      |
 // |--------|--------|------------------------------------------------------------|
 // | 0      | 1      | format version = 1                                          |
@@ -14,12 +15,29 @@
 // | …      | 1      | name length n (0–32 bytes)                                  |
 // | …      | n      | name, UTF-8                                                 |
 // | last   | 2      | CRC-16/CCITT-FALSE over every previous byte (uint16 LE)     |
+//
+// `PKG2`, format version 2 (Phase 9): the same, plus the items the profile has picked up, between
+// the caught bitfield and the name. Item numbers are `LocationItem.no` of the game's version group.
+//
+// | …      | 2      | `itemCount` M (uint16 LE): the highest item number carried  |
+// | …      | ⌈M/8⌉  | items-taken bitfield, bit i = item number i + 1, LSB first   |
+//
+// The encoder writes `PKG1` when no items are taken, so those codes stay readable by every
+// earlier version; a `PKG1` code means "no items taken".
 import { findGameByCodecId, getGame } from '../games/registry';
 import type { GameId } from '../games/types';
 import type { Profile } from './models';
 
+/** The prefix of format 1; format N is `PKG<N>-`. */
 export const EXPORT_PREFIX = 'PKG1-';
 export const EXPORT_FORMAT_VERSION = 1;
+/** Adds the items-taken bitfield (Phase 9). */
+export const EXPORT_FORMAT_ITEMS = 2;
+/** `itemCount` is a uint16. */
+export const MAX_ITEM_NUMBER = 0xffff;
+
+export const exportPrefix = (format: number) => `PKG${format}-`;
+const PREFIX = /PKG(\d)-/gi;
 /** The name field is a single byte, and profile names are capped at 32 characters anyway. */
 export const MAX_NAME_BYTES = 32;
 
@@ -48,14 +66,14 @@ export interface DecodedProfile {
   dexCount: number;
   /** Caught species the code carried beyond this game's `nationalDexMax`, and that were dropped. */
   ignoredBeyondDex: number;
+  /** Sorted `LocationItem.no` values; empty for a `PKG1` code. Not checked against the game data. */
+  itemsTaken: number[];
 }
 
-export type CodecResult =
-  | { ok: true; value: DecodedProfile }
-  | { ok: false; error: CodecError };
+export type CodecResult = { ok: true; value: DecodedProfile } | { ok: false; error: CodecError };
 
 const ERROR_MESSAGES: Record<CodecErrorKind, string> = {
-  'bad-prefix': 'That doesn’t look like a Poké Guide code. Codes start with “PKG1-”.',
+  'bad-prefix': 'That doesn’t look like a Poké Guide code. Codes start with “PKG1-” or “PKG2-”.',
   'bad-base64': 'This code contains characters that don’t belong in it. Copy it again.',
   'too-short': 'This code is incomplete. Copy the whole thing and try again.',
   'bad-checksum': 'This code is damaged — a character is wrong or missing. Copy it again.',
@@ -139,18 +157,28 @@ export function encodeName(name: string): Uint8Array {
 }
 
 export type ExportableProfile = Pick<Profile, 'name' | 'game' | 'caught'> &
-  Partial<Pick<Profile, 'progressPart'>>;
+  Partial<Pick<Profile, 'progressPart' | 'itemsTaken'>>;
 
-/** The `PKG1-…` code for one profile. Caught numbers outside the game's dex range are dropped. */
+/**
+ * The code for one profile: `PKG1-…` without items taken, `PKG2-…` with them. Caught numbers outside
+ * the game's dex range, and item numbers outside 1–`MAX_ITEM_NUMBER`, are dropped.
+ */
 export function encodeProfile(profile: ExportableProfile): string {
   const game = getGame(profile.game);
   const dexCount = game.nationalDexMax;
   const bitfieldLength = Math.ceil(dexCount / 8);
   const name = encodeName(profile.name);
+  const items = (profile.itemsTaken ?? []).filter(
+    (no) => Number.isInteger(no) && no >= 1 && no <= MAX_ITEM_NUMBER,
+  );
+  const itemCount = items.length ? Math.max(...items) : 0;
+  const format = itemCount > 0 ? EXPORT_FORMAT_ITEMS : EXPORT_FORMAT_VERSION;
+  const itemBlockLength = format === EXPORT_FORMAT_ITEMS ? 2 + Math.ceil(itemCount / 8) : 0;
 
-  const body = new Uint8Array(6 + bitfieldLength + 1 + name.length);
+  const nameAt = 6 + bitfieldLength + itemBlockLength;
+  const body = new Uint8Array(nameAt + 1 + name.length);
   const bodyView = new DataView(body.buffer);
-  body[0] = EXPORT_FORMAT_VERSION;
+  body[0] = format;
   bodyView.setUint16(1, game.codecId, true);
   // A part above 255 can't be stored; the registry's walkthroughs are far shorter than that.
   body[3] = Math.min(Math.max(profile.progressPart ?? 0, 0), 255);
@@ -160,13 +188,21 @@ export function encodeProfile(profile: ExportableProfile): string {
     const index = dex - 1;
     body[6 + (index >> 3)]! |= 1 << (index & 7);
   }
-  body[6 + bitfieldLength] = name.length;
-  body.set(name, 6 + bitfieldLength + 1);
+  if (format === EXPORT_FORMAT_ITEMS) {
+    const itemsAt = 6 + bitfieldLength;
+    bodyView.setUint16(itemsAt, itemCount, true);
+    for (const no of items) {
+      const index = no - 1;
+      body[itemsAt + 2 + (index >> 3)]! |= 1 << (index & 7);
+    }
+  }
+  body[nameAt] = name.length;
+  body.set(name, nameAt + 1);
 
   const out = new Uint8Array(body.length + 2);
   out.set(body);
   new DataView(out.buffer).setUint16(body.length, crc16(body), true);
-  return EXPORT_PREFIX + toBase64Url(out);
+  return exportPrefix(format) + toBase64Url(out);
 }
 
 /**
@@ -175,16 +211,26 @@ export function encodeProfile(profile: ExportableProfile): string {
  */
 export function normalizeCode(input: string): string {
   const cleaned = input.replace(/[\s\u200B-\u200F\u2060\uFEFF]/g, '');
-  const at = cleaned.toUpperCase().lastIndexOf(EXPORT_PREFIX);
-  return at === -1 ? cleaned : cleaned.slice(at);
+  const at = [...cleaned.matchAll(PREFIX)].at(-1)?.index;
+  return at === undefined ? cleaned : cleaned.slice(at);
 }
 
-/** Decodes a `PKG1-` code, a share link holding one, or fails with a message for the user. */
+/** Reads bits `0..count - 1` of a bitfield starting at `at` as the numbers `index + 1`. */
+function readBitfield(body: Uint8Array, at: number, count: number): number[] {
+  const numbers: number[] = [];
+  for (let index = 0; index < count; index++) {
+    if (body[at + (index >> 3)]! & (1 << (index & 7))) numbers.push(index + 1);
+  }
+  return numbers;
+}
+
+/** Decodes a `PKG1-`/`PKG2-` code, a share link holding one, or fails with a message for the user. */
 export function decodeProfile(input: string): CodecResult {
   const code = normalizeCode(input);
-  if (!code.toUpperCase().startsWith(EXPORT_PREFIX)) return fail('bad-prefix');
+  const prefix = /^PKG(\d)-/i.exec(code);
+  if (!prefix) return fail('bad-prefix');
 
-  const bytes = fromBase64Url(code.slice(EXPORT_PREFIX.length));
+  const bytes = fromBase64Url(code.slice(prefix[0].length));
   if (!bytes) return fail('bad-base64');
   // Header (6) + at least one bitfield byte + name length + CRC (2).
   if (bytes.length < 10) return fail('too-short');
@@ -194,14 +240,27 @@ export function decodeProfile(input: string): CodecResult {
   if (view.getUint16(bytes.length - 2, true) !== crc16(body)) return fail('bad-checksum');
 
   // The version is checked after the CRC, so random text can't claim to be from a newer app.
-  if (body[0] !== EXPORT_FORMAT_VERSION) return fail('unsupported-version');
+  // The CRC doesn't cover the prefix, so a prefix that disagrees with the format byte was edited.
+  const format = body[0]!;
+  if (format !== EXPORT_FORMAT_VERSION && format !== EXPORT_FORMAT_ITEMS)
+    return fail('unsupported-version');
+  if (Number(prefix[1]) !== format) return fail('bad-prefix');
 
   const game = findGameByCodecId(view.getUint16(1, true));
   if (!game) return fail('unknown-game');
 
   const dexCount = view.getUint16(4, true);
   const bitfieldLength = Math.ceil(dexCount / 8);
-  const nameAt = 6 + bitfieldLength;
+  let nameAt = 6 + bitfieldLength;
+  let itemsTaken: number[] = [];
+  if (format === EXPORT_FORMAT_ITEMS) {
+    if (body.length < nameAt + 2) return fail('too-short');
+    const itemCount = view.getUint16(nameAt, true);
+    const itemsAt = nameAt + 2;
+    nameAt = itemsAt + Math.ceil(itemCount / 8);
+    if (body.length < nameAt) return fail('too-short');
+    itemsTaken = readBitfield(body, itemsAt, itemCount);
+  }
   if (body.length < nameAt + 1) return fail('too-short');
   const nameLength = body[nameAt]!;
   if (nameLength > MAX_NAME_BYTES) return fail('bad-name');
@@ -216,13 +275,8 @@ export function decodeProfile(input: string): CodecResult {
 
   // A code from another build may carry a longer dex than this game has here; extra bits are
   // reported so the import preview can warn, and species this game lacks are dropped.
-  const caught: number[] = [];
-  let ignoredBeyondDex = 0;
-  for (let index = 0; index < dexCount; index++) {
-    if (!(body[6 + (index >> 3)]! & (1 << (index & 7)))) continue;
-    if (index + 1 <= game.nationalDexMax) caught.push(index + 1);
-    else ignoredBeyondDex++;
-  }
+  const carried = readBitfield(body, 6, dexCount);
+  const caught = carried.filter((dex) => dex <= game.nationalDexMax);
 
   const progressPart = body[3]!;
   return {
@@ -233,7 +287,8 @@ export function decodeProfile(input: string): CodecResult {
       caught,
       ...(progressPart > 0 ? { progressPart } : {}),
       dexCount,
-      ignoredBeyondDex,
+      ignoredBeyondDex: carried.length - caught.length,
+      itemsTaken,
     },
   };
 }

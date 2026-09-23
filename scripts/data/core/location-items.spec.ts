@@ -8,6 +8,7 @@ import {
 import { slugify } from './slug';
 
 const item = (name: string, extra: Partial<LocationItem> = {}): LocationItem => ({
+  no: 0,
   itemId: slugify(name),
   name,
   quantity: 1,

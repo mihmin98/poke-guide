@@ -1,5 +1,5 @@
 import { buildGameView } from '../../core/domain/game-view';
-import type { Encounter, VersionGroupData } from '../../core/domain/models';
+import type { Encounter, LocationItem, VersionGroupData } from '../../core/domain/models';
 import {
   testData,
   testEncounter,
@@ -21,6 +21,18 @@ function surf(dex: number): Encounter {
   return testEncounter(dex, ['red'], { method: 'surf', requires: ['surf-hm'] });
 }
 
+const item = (no: number, extra: Partial<LocationItem> = {}): LocationItem => ({
+  no,
+  itemId: `item-${no}`,
+  name: `Item ${no}`,
+  quantity: 1,
+  games: ['red'],
+  obtain: 'pickup',
+  subArea: null,
+  where: '',
+  ...extra,
+});
+
 function data(): VersionGroupData {
   return testData({
     games: ['red'],
@@ -39,7 +51,20 @@ function data(): VersionGroupData {
       red: [{ id: 'surf-hm', label: 'Surf', kind: 'move', locationId: 'route-1', part: 12 }],
     },
     locations: [
-      testLocation('route-1', 1, [testEncounter(16, ['red']), testEncounter(19, ['red'])], ['red']),
+      testLocation(
+        'route-1',
+        1,
+        [testEncounter(16, ['red']), testEncounter(19, ['red'])],
+        ['red'],
+        {
+          items: [
+            item(1),
+            item(2, { games: ['blue'] }),
+            item(3, { choiceGroupId: 'fossil', obtain: 'choice' }),
+            item(4, { choiceGroupId: 'fossil', obtain: 'choice' }),
+          ],
+        },
+      ),
       testLocation('route-22', 2, [testEncounter(16, ['red']), surf(72)], ['red'], {
         name: 'Route 22',
       }),
@@ -50,16 +75,32 @@ function data(): VersionGroupData {
 
 const view = () => buildGameView(data(), 'red');
 
-const guide = (filters: Partial<GuideFilters> = {}, caught: number[] = [], progressPart?: number) =>
+const guide = (
+  filters: Partial<GuideFilters> = {},
+  caught: number[] = [],
+  progressPart?: number,
+  itemsTaken: number[] = [],
+) =>
   buildGuide({
     view: view(),
     game: 'red',
     caught: new Set(caught),
+    itemsTaken: new Set(itemsTaken),
     ...(progressPart === undefined ? {} : { progressPart }),
     filters: { ...NO_FILTERS, ...filters },
   });
 
 describe('guide model (plan §13.4)', () => {
+  it('counts the items of the game on each card, a choice group as one (Phase 9)', () => {
+    const route1 = (taken: number[]) => guide({}, [], undefined, taken)[0]!.locations[0]!;
+    expect(route1([]).items).toEqual({ taken: 0, total: 2 });
+    expect(route1([1, 4]).items).toEqual({ taken: 2, total: 2 });
+    // Another game's item and unknown numbers don't count; items never make a card complete.
+    expect(route1([2, 99]).items).toEqual({ taken: 0, total: 2 });
+    expect(route1([1, 3])).toMatchObject({ complete: false, caught: 0 });
+    expect(guide()[1]!.locations[0]!.items).toEqual({ taken: 0, total: 0 });
+  });
+
   it('groups locations into walkthrough parts with their titles and counts', () => {
     const parts = guide({}, [16]);
     expect(parts.map((p) => p.part)).toEqual([1, 2]);

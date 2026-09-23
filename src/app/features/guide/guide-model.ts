@@ -1,5 +1,6 @@
 // Pure view model for the guide page (plan §13.4): no Angular, so it can be unit-tested on its own.
 import { encountersFor, type GameView } from '../../core/domain/game-view';
+import { itemProgress, type ItemProgress } from '../../core/domain/item-progress';
 import type {
   GameId,
   GameLocation,
@@ -63,6 +64,8 @@ export interface GuideLocation {
   total: number;
   complete: boolean;
   requirements: GuideRequirement[];
+  /** Items picked up here (Phase 9). Never part of `caught`, `complete` or any part count. */
+  items: ItemProgress;
 }
 
 export interface GuidePart {
@@ -90,6 +93,8 @@ export interface GuideInput {
   view: GameView;
   game: GameId;
   caught: ReadonlySet<number>;
+  /** `LocationItem.no` values taken, already narrowed to this game's profile. */
+  itemsTaken: ReadonlySet<number>;
   progressPart?: number;
   filters: GuideFilters;
 }
@@ -168,6 +173,10 @@ function buildLocation(location: GameLocation, input: GuideInput): GuideLocation
     total,
     complete: total > 0 && caughtCount === total,
     requirements,
+    items: itemProgress(
+      location.items.filter((item) => item.games.includes(game)),
+      input.itemsTaken,
+    ),
   };
 }
 
