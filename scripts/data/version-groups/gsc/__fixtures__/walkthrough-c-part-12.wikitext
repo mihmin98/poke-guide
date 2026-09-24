@@ -1,0 +1,1033 @@
+<!-- poke-guide fixture: {"title":"Walkthrough:Pokémon Crystal/Part 12","resolvedTitle":"Walkthrough:Pokémon Crystal/Part 12","revid":4490915,"timestamp":"2026-02-21T02:37:23Z","fetchedAt":"2026-09-24T09:59:22.804Z"} -->
+==Goldenrod City==
+[[Goldenrod City]] has been overrun by [[Team Rocket]]. It is up to you to liberate the [[Goldenrod Radio Tower|Radio Tower]] and finally put an end to their schemes!
+
+===Radio Tower===
+[[File:Goldenrod Radio Tower 1F C.png|thumb|Radio Tower, 1F]]
+[[File:Goldenrod Radio Tower 2F C.png|thumb|Radio Tower, 2F]]
+[[File:Goldenrod Radio Tower 3F C.png|thumb|Radio Tower, 3F]]
+[[File:Goldenrod Radio Tower 4F C.png|thumb|Radio Tower, 4F]]
+[[File:Goldenrod Radio Tower 5F C.png|thumb|Radio Tower, 5F]]
+
+{| class="expandable" align="center" style="background: #{{locationcolor/med|building}}; {{roundy}}; border: 5px solid #{{locationcolor/light|building}};"
+|- align="center"
+! Trainers
+|- 
+| 
+{| class="expandable" align="center" style="background: #{{locationcolor/med|building}}; {{roundy}}; border: 5px solid #{{locationcolor/light|building}};"
+|- align="center"
+! 1F
+|- 
+| 
+{{Trainerheader|building}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||960|2|020|Raticate|♂|24|None|020|Raticate|♂|24|None}}
+{{Trainerfooter|building|I}}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|building}}; {{roundy}}; border: 5px solid #{{locationcolor/light|building}};"
+|- align="center"
+! 2F
+|- 
+| 
+{{Trainerheader|building}}
+{{Trainerentry|Spr GS Rocket Grunt F.png|Rocket Grunt||1040|1|024|Arbok|♀|26|None}}
+{{Trainerdiv|building}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||920|5|019|Rattata|♂|21|None|019|Rattata|♂|21|None|019|Rattata|♂|23|None|019|Rattata|♂|23|None|019|Rattata|♂|23|None}}
+{{Trainerdiv|building}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||1040|2|041|Zubat|♂|26|None|041|Zubat|♂|26|None}}
+{{Trainerdiv|building}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||1000|3|088|Grimer|♂|23|None|088|Grimer|♂|23|None|089|Muk|♂|25|None}}
+{{Trainerfooter|building|I}}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|building}}; {{roundy}}; border: 5px solid #{{locationcolor/light|building}};"
+|- align="center"
+! 3F
+|- 
+| 
+{{Trainerheader|building}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||1040|1|110|Weezing|♂|26|None}}
+{{Trainerdiv|building}}
+{{Trainerentry|Spr GS Scientist.png|Scientist|Marc|2700|3|081|Magnemite||27|None|081|Magnemite||27|None|081|Magnemite||27|None}}
+{{Trainerdiv|building}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||920|4|109|Koffing|♂|23|None|041|Zubat|♂|23|None|019|Rattata|♂|23|None|088|Grimer|♂|23|None}}
+{{catch/div|building|Requires Card Key}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||1040|2|020|Raticate|♂|24|None|109|Koffing|♂|26|None}}
+{{Trainerfooter|building|I}}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|building}}; {{roundy}}; border: 5px solid #{{locationcolor/light|building}};"
+|- align="center"
+! 4F (West)
+|- 
+| 
+{{Trainerheader|building}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||880|3|041|Zubat|♂|22|None|042|Golbat|♂|24|None|088|Grimer|♂|22|None}}
+{{Trainerdiv|building}}
+{{Trainerentry|Spr GS Scientist.png|Scientist|Rich|3000|1|137|Porygon||30|None}}
+{{catch/div|building|Requires Card Key}}
+{{Trainerentry|Spr GS Rocket Grunt F.png|Rocket Grunt||960|4|023|Ekans|♀|21|None|043|Oddish|♀|23|None|023|Ekans|♀|21|None|044|Gloom|♀|24|None}}
+{{Trainerfooter|building|II}}
+|}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|building}}; {{roundy}}; border: 5px solid #{{locationcolor/light|building}};"
+|- align="center"
+! Items
+|- 
+|
+{{itlisth|building}}
+{{Itemlist|Basement Key IV|5F; from [[Petrel|a Team Rocket Executive]], after defeating him|C=yes|display=[[Basement Key (Johto)|Basement Key]]}}
+{{itlistfoot|building}}
+|}
+
+
+====1F====
+Defeat the single Rocket Grunt and climb to the second floor.
+
+====2F====
+There are four Rocket Grunts patrolling the second floor. Battle past them to reach the western stairs.
+
+====3F====
+Battle another two Rocket Grunts and Scientist Marc. A Card Key is required to access the eastern area, so take the western stairs instead.
+
+====4F (West)====
+Beat the Rocket Grunt and Scientist Rich to reach the stairs to the Director's office.
+
+====5F (West)====
+The Director is being held captive here in his office, or at least that is how it seems at first. This man is an imposter, and is actually [[Petrel|a Rocket Executive]] in disguise. Prepare for battle!
+
+{{Party
+|walkthrough=yes
+|background=666666
+|border=CC0000
+|headcolor=CCCCCC
+|sprite=Spr GS Rocket Executive M.png
+|prize={{pdollar}}2160
+|class=Rocket
+|name={{color2|000|Petrel|Executive}}
+|game=C
+|location=Goldenrod Radio Tower
+|pokemon=6
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0109
+|pokemon=Koffing
+|type1=Poison
+|level=30
+|gender=male
+|move1=SmokeScreen|move1type=Normal
+|move2=Tackle|move2type=Normal
+|move3=Sludge|move3type=Poison
+|move4=Selfdestruct|move4type=Normal
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0109
+|pokemon=Koffing
+|type1=Poison
+|level=30
+|gender=male
+|move1=SmokeScreen|move1type=Normal
+|move2=Tackle|move2type=Normal
+|move3=Sludge|move3type=Poison
+|move4=Selfdestruct|move4type=Normal
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0109
+|pokemon=Koffing
+|type1=Poison
+|level=30
+|gender=male
+|move1=SmokeScreen|move1type=Normal
+|move2=Tackle|move2type=Normal
+|move3=Sludge|move3type=Poison
+|move4=Selfdestruct|move4type=Normal
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0109
+|pokemon=Koffing
+|type1=Poison
+|level=30
+|gender=male
+|move1=SmokeScreen|move1type=Normal
+|move2=Tackle|move2type=Normal
+|move3=Sludge|move3type=Poison
+|move4=Selfdestruct|move4type=Normal
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0110
+|pokemon=Weezing
+|type1=Poison
+|level=32
+|gender=male
+|move1=SmokeScreen|move1type=Normal
+|move2=Tackle|move2type=Normal
+|move3=Sludge|move3type=Poison
+|move4=Explosion|move4type=Normal
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0109
+|pokemon=Koffing
+|type1=Poison
+|level=30
+|gender=male
+|move1=SmokeScreen|move1type=Normal
+|move2=Tackle|move2type=Normal
+|move3=Sludge|move3type=Poison
+|move4=Smog|move4type=Poison
+}}
+{{Party/end}}
+
+
+When the battle ends, the Executive reveals that the real Director is being held in the Underground Warehouse, behind the locked door in [[Goldenrod Tunnel|the Underground]]'s access hallway. He doubts that you will even get that far, and hands over the {{jo|Basement Key}}.
+
+===Goldenrod Underground===
+[[File:The Underground Basement GSC.png|thumb|Underground, B2F]]
+[[File:Underground Warehouse GSC.png|thumb|Underground, Warehouse]]
+
+A Rocket Grunt guards the south alley behind the Pokémon Center, so enter [[Goldenrod Tunnel|the Underground]] from the north instead. Take the access hallway and use the {{jo|Basement Key}} to unlock the door. Go down the stairs in the next room to reach the Underground Warehouse.
+
+{| class="expandable" align="center" style="background: #{{locationcolor/med|road}}; {{roundy}}; border: 5px solid #{{locationcolor/light|road}};"
+|- align="center"
+! Trainers
+|- 
+|
+{| class="expandable" align="center" style="background: #{{locationcolor/med|road}}; {{roundy}}; border: 5px solid #{{locationcolor/light|road}};"
+|- align="center"
+! B2F
+|- 
+|
+{{trainerheader|road}}
+{{catch/div|road|North side}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||1080|1|019|Rattata|♂|27|None}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||1000|3|089|Muk|♂|23|None|109|Koffing|♂|23|None|019|Rattata|♂|25|None}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||960|2|109|Koffing|♂|24|None|089|Muk|♂|24|None}}
+{{catch/div|road|In the maze}}
+{{Trainerentry|Spr GS Burglar.png|Burglar|Eddie|2112|2|058|Growlithe|♂|26|None|109|Koffing|♂|24|None}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr GS Burglar.png|Burglar|Duncan|2024|3|109|Koffing|♂|23|None|126|Magmar|♂|25|None|109|Koffing|♂|23|None}}
+{{catch/div|road|South side}}
+{{Trainerentry|Spr GS Rocket Grunt F.png|Rocket Grunt||1000|2|044|Gloom|♀|25|None|044|Gloom|♀|25|None}}
+{{trainerfooter|road|I}}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|road}}; {{roundy}}; border: 5px solid #{{locationcolor/light|road}};"
+|- align="center"
+! Warehouse
+|- 
+|
+{{trainerheader|road}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||960|2|020|Raticate|♂|24|None|042|Golbat|♂|24|None}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||920|2|088|Grimer|♂|26|None|110|Weezing|♂|23|None}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||1000|2|109|Koffing|♂|25|None|109|Koffing|♂|25|None}}
+{{trainerfooter|road|I}}
+|}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|road}}; {{roundy}}; border: 5px solid #{{locationcolor/light|road}};"
+|- align="center"
+! Items
+|- 
+| 
+{{itlisth|road}}
+{{catch/div|road|B2F}}
+{{Itemlist|Full Heal|Northeast room, accessed via Switch 1|C=yes}}
+{{Itemlist|Smoke Ball|Southwest room, accessed by flipping Switches #1, #3, #2, #1, #3|C=yes}}
+{{Itemlist|Revive|Northwest room, west of Burglar Eddie (hidden)|C=yes}}
+{{Itemlist|Max Potion|North-central room, accessed via Switch 1 (hidden)|C=yes}}
+{{catch/div|road|Warehouse}}
+{{Itemlist|Ultra Ball|Northwest corner|C=yes}}
+{{Itemlist|Max Ether|Southeast corner|C=yes}}
+{{Itemlist|TM Normal|Interior room, next to the Director|C=yes|display={{TM|35|Sleep Talk}}}}
+{{Itemlist|Card Key|Interior room, from the Director|C=yes|display={{jo|Card Key}}}}
+{{itlistfoot|road}}
+|}
+
+
+====B2F====
+{{ga|Silver}} appears again a short distance from the entrance. He intends to be the one to finally defeat [[Team Rocket]], and plans to defeat you to get you out of his way.
+
+=====Rival Battle 4=====
+Each of {{ga|Silver}}'s Pokémon has grown 10 levels since the previous battle. His {{p|Zubat}} has since evolved into {{p|Golbat}}, and the Pokémon that he took from {{prof|Elm}}'s lab—either {{p|Totodile}} or {{p|Chikorita}}—has now evolved into its final form. His team includes one new addition, a {{p|Sneasel}}. As a {{2t|Dark|Ice}} Pokémon, it takes massive damage from {{type|Fighting}} moves.
+
+{{Party
+|caption={{PlayerChoice|0152|Chikorita}}
+|walkthrough=yes
+|background={{silver color}}
+|headcolor={{silver color light}}
+|border={{silver color dark}}
+|sprite=Spr GS Silver 1.png
+|prize={{PDollar}}1920
+|name={{color2|000|Silver (game)|Silver}}
+|game=C
+|location=Goldenrod Tunnel
+|locationname=Goldenrod Underground
+|pokemon=5
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0042
+|pokemon=Golbat
+|type1=Poison|type2=Flying
+|level=30
+|gender=male
+|move1=Wing Attack|move1type=Flying
+|move2=Confuse Ray|move2type=Ghost
+|move3=Bite|move3type=Dark
+|move4=Leech Life|move4type=Bug
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0081
+|pokemon=Magnemite
+|type1=Electric|type2=Steel
+|level=28
+|move1=SonicBoom|move1type=Normal
+|move2=Thunder Wave|move2type=Electric
+|move3=Tackle|move3type=Normal
+|move4=ThunderShock|move4type=Electric
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0093
+|pokemon=Haunter
+|type1=Ghost|type2=Poison
+|level=30
+|gender=male
+|move1=Shadow Ball|move1type=Ghost
+|move2=Lick|move2type=Ghost
+|move3=Curse|move3type=???
+|move4=Mean Look|move4type=Normal
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0215
+|pokemon=Sneasel
+|type1=Dark|type2=Ice
+|level=32
+|gender=male
+|move1=Faint Attack|move1type=Dark
+|move2=Leer|move2type=Normal
+|move3=Quick Attack|move3type=Normal
+|move4=Screech|move4type=Normal
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0156
+|pokemon=Quilava
+|type1=Fire
+|level=32
+|gender=male
+|move1=Ember|move1type=Fire
+|move2=SmokeScreen|move2type=Normal
+|move3=Quick Attack|move3type=Normal
+|move4=Flame Wheel|move4type=Fire
+}}
+{{Party/end}}
+
+
+{{Party
+|caption={{PlayerChoice|0155|Cyndaquil}}
+|walkthrough=yes
+|background={{silver color}}
+|headcolor={{silver color light}}
+|border={{silver color dark}}
+|sprite=Spr GS Silver 1.png
+|prize={{PDollar}}1920
+|name={{color2|000|Silver (game)|Silver}}
+|game=C
+|location=Goldenrod Tunnel
+|locationname=Goldenrod Underground
+|pokemon=5
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0042
+|pokemon=Golbat
+|type1=Poison|type2=Flying
+|level=30
+|gender=male
+|move1=Wing Attack|move1type=Flying
+|move2=Confuse Ray|move2type=Ghost
+|move3=Bite|move3type=Dark
+|move4=Leech Life|move4type=Bug
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0081
+|pokemon=Magnemite
+|type1=Electric|type2=Steel
+|level=28
+|move1=SonicBoom|move1type=Normal
+|move2=Thunder Wave|move2type=Electric
+|move3=Tackle|move3type=Normal
+|move4=ThunderShock|move4type=Electric
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0093
+|pokemon=Haunter
+|type1=Ghost|type2=Poison
+|level=30
+|gender=male
+|move1=Shadow Ball|move1type=Ghost
+|move2=Lick|move2type=Ghost
+|move3=Curse|move3type=???
+|move4=Mean Look|move4type=Normal
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0215|pokemon=Sneasel
+|type1=Dark|type2=Ice
+|level=32
+|gender=male
+|move1=Faint Attack|move1type=Dark
+|move2=Leer|move2type=Normal
+|move3=Quick Attack|move3type=Normal
+|move4=Screech|move4type=Normal
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0160|pokemon=Feraligatr
+|type1=Water
+|level=32
+|gender=male
+|move1=Bite|move1type=Dark
+|move2=Scary Face|move2type=Normal
+|move3=Rage|move3type=Normal
+|move4=Water Gun|move4type=Water
+}}
+{{Party/end}}
+
+
+{{Party
+|caption={{PlayerChoice|0158|Totodile}}
+|walkthrough=yes
+|background={{silver color}}
+|headcolor={{silver color light}}
+|border={{silver color dark}}
+|sprite=Spr GS Silver 1.png
+|prize={{PDollar}}1920
+|name={{color2|000|Silver (game)|Silver}}
+|game=C
+|location=Goldenrod Tunnel
+|locationname=Goldenrod Underground
+|pokemon=5
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0042
+|pokemon=Golbat
+|type1=Poison|type2=Flying
+|level=30
+|gender=male
+|move1=Wing Attack|move1type=Flying
+|move2=Confuse Ray|move2type=Ghost
+|move3=Bite|move3type=Dark
+|move4=Leech Life|move4type=Bug
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0081
+|pokemon=Magnemite
+|type1=Electric|type2=Steel
+|level=28
+|move1=SonicBoom|move1type=Normal
+|move2=Thunder Wave|move2type=Electric
+|move3=Tackle|move3type=Normal
+|move4=ThunderShock|move4type=Electric
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0093
+|pokemon=Haunter
+|type1=Ghost|type2=Poison
+|level=30
+|gender=male
+|move1=Shadow Ball|move1type=Ghost
+|move2=Lick|move2type=Ghost
+|move3=Curse|move3type=???
+|move4=Mean Look|move4type=Normal
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0215
+|pokemon=Sneasel
+|type1=Dark|type2=Ice
+|level=32
+|gender=male
+|move1=Faint Attack|move1type=Dark
+|move2=Leer|move2type=Normal
+|move3=Quick Attack|move3type=Normal
+|move4=Screech|move4type=Normal
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0154
+|pokemon=Meganium
+|type1=Grass
+|level=32
+|gender=male
+|move1=PoisonPowder|move1type=Poison
+|move2=Razor Leaf|move2type=Grass
+|move3=Body Slam|move3type=Normal
+|move4=Reflect|move4type=Psychic
+}}
+{{Party/end}}
+
+
+Defeated, he wonders aloud if what [[Lance]] told him about not treating his Pokémon properly is true, but refuses to give up on becoming stronger.
+
+=====The Shifting Shutters=====
+After {{ga|Silver}} leaves, there are three Rocket Grunts along the north wall. Defeat them all, then turn your attention to the three switches on the wall behind them. These switches are numbered from 1 to 3, starting with the eastern one. Each of these switches controls a different group of shutters to the south. To reset the puzzle, either flip each switch again or leave and re-enter the room.
+
+* Flip the switches in a four-part sequence (#2, #1, #2, #3) to reach a [[Full Heal]] in the northeast room, a hidden [[Max Potion]] in the north-central room, a hidden [[Revive]] in the northwest room, and a [[Smoke Ball]] in the southwest room.
+* To clear the maze, flip each switch once in descending order (#3, #2, #1). Defeat the two Burglars on the way.
+
+After exiting the maze, defeat the female Rocket Grunt and pass through the double doors.
+
+====Warehouse====
+Go north to reach an [[Ultra Ball]], then follow the winding hallway past the first Rocket Grunt to reach a [[Max Ether]] in the southeast corner. Battle a second Rocket Grunt in the northeast, then detour up the nearby stairs; this leads to a blocked-off area in the [[Goldenrod Department Store|Department Store]]'s basement and an [[Amulet Coin]]. Continue westward to fight a third Rocket Grunt. Pick up {{TM|35|Sleep Talk}} in the interior room, then speak to the Director. After hearing about [[Team Rocket]] occupying the [[Goldenrod Radio Tower|Radio Tower]], he begs for your help and gives you a {{jo|Card Key}}. This card unlocks the shutter on the tower's third floor. Climb the northeast stairs again and take the elevator up from the basement.
+
+===Radio Tower===
+With the {{jo|Card Key}} in hand, it is time to defeat [[Team Rocket]] once and for all!
+
+{| class="expandable" align="center" style="background: #{{locationcolor/med|building}}; {{roundy}}; border: 5px solid #{{locationcolor/light|building}};"
+|- align="center"
+! Trainers
+|- 
+| 
+{| class="expandable" align="center" style="background: #{{locationcolor/med|building}}; {{roundy}}; border: 5px solid #{{locationcolor/light|building}};"
+|- align="center"
+! 3F
+|- 
+| 
+{{Trainerheader|building}}
+{{catch/div|building|Requires Card Key}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||1040|2|020|Raticate|♂|24|None|109|Koffing|♂|26|None}}
+{{Trainerfooter|building|I}}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|building}}; {{roundy}}; border: 5px solid #{{locationcolor/light|building}};"
+|- align="center"
+! 4F (East)
+|- 
+| 
+{{Trainerheader|building}}
+{{Trainerentry|Spr GS Rocket Grunt F.png|Rocket Grunt||960|4|023|Ekans|♀|21|None|043|Oddish|♀|23|None|023|Ekans|♀|21|None|044|Gloom|♀|24|None}}
+{{Trainerfooter|building|I}}
+|}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|building}}; {{roundy}}; border: 5px solid #{{locationcolor/light|building}};"
+|- align="center"
+! Items
+|- 
+|
+{{itlisth|building}}
+{{Itemlist|Clear Bell|5F (East); from the Director, after defeating Team Rocket|C=yes}}
+{{Itemlist|Ultra Ball|5F (East); in the studio|C=yes}}
+{{Itemlist|TM Fire|3F; from a woman, after defeating [[Team Rocket]]|C=yes|display={{TM|11|Sunny Day}}}}
+{{Itemlist|None|4F; from [[DJ Mary]], after defeating Team Rocket|C=yes|display=[[Pink Bow]]}}
+{{itlistfoot|building}}
+|}
+
+
+====3F====
+Swipe the {{jo|Card Key}} through the slot near the shutter. Defeat the single Rocket Grunt on the other side and take the stairs to the east side of 4F.
+
+====4F (East)====
+Battle the female Rocket Grunt and [[Proton|a Rocket Executive]] here to reach the fifth floor.
+
+{{Party
+|walkthrough=yes
+|background=666666
+|border=CC0000
+|headcolor=CCCCCC
+|sprite=Spr GS Rocket Executive M.png
+|prize={{Pdollar}}2592
+|class=Executive
+|name={{color2|000|Proton|Executive}}
+|game=C
+|location=Goldenrod Radio Tower
+|pokemon=1
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0042
+|pokemon=Golbat
+|gender=male
+|level=36
+|type1=Poison|type2=Flying
+|move1=Wing Attack|move1type=Flying
+|move2=Confuse Ray|move2type=Ghost
+|move3=Leech Life|move3type=Bug
+|move4=Bite|move4type=Dark
+}}
+{{Party/end}}
+
+
+====5F (East)====
+Head toward the broadcasting studio to draw the attention of [[Ariana|a female Rocket Executive]]. She intends to get payback for her defeat in [[Mahogany Town]].
+
+{{Party
+|walkthrough=yes
+|background=666666
+|border=CC0000
+|headcolor=CCCCCC
+|sprite=Spr GS Rocket Executive F.png
+|prize={{PDollar}}2304
+|class=Rocket
+|name={{color2|000|Ariana|Executive}}
+|game=C
+|location=Goldenrod Radio Tower
+|pokemon=3
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0024
+|pokemon=Arbok
+|type1=Poison
+|level=32
+|gender=female
+|move1=Glare|move1type=Normal
+|move2=Bite|move2type=Dark
+|move3=Wrap|move3type=Normal
+|move4=Poison Sting|move4type=Poison
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0045
+|pokemon=Vileplume
+|type1=Grass|type2=Poison
+|level=32
+|gender=female
+|move1=Sweet Scent|move1type=Normal
+|move2=Absorb|move2type=Grass
+|move3=Acid|move3type=Poison
+|move4=Sleep Powder|move4type=Grass
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0198
+|pokemon=Murkrow
+|type1=Dark|type2=Flying
+|level=32
+|gender=female
+|move1=Peck|move1type=Flying
+|move2=Haze|move2type=Ice
+|move3=Pursuit|move3type=Dark
+|move4=Night Shade|move4type=Ghost
+}}
+{{Party/end}}
+
+
+Enter the studio to reach [[Archer|a final Rocket Executive]]. He reveals the details of their plan: to take over the radio station and announce their return. Their hope is that hearing this broadcast will bring their leader, [[Giovanni]], back from his solo training so that he can lead them to regain their former glory. He refuses to let you interfere any further, and draws you into battle.
+
+{{Party
+|walkthrough=yes
+|background=666666
+|border=CC0000
+|headcolor=CCCCCC
+|sprite=Spr GS Rocket Executive M.png
+|prize={{PDollar}}2520
+|class=Rocket
+|name={{color2|000|Archer|Executive}}
+|game=C
+|location=Goldenrod Radio Tower
+|pokemon=3
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0228
+|pokemon=Houndour
+|type1=Dark|type2=Fire
+|level=33
+|gender=male
+|move1=Faint Attack|move1type=Dark
+|move2=Ember|move2type=Fire
+|move3=Bite|move3type=Dark
+|move4=Roar|move4type=Normal
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0109
+|pokemon=Koffing
+|type1=Poison
+|level=33
+|gender=male
+|move1=Sludge|move1type=Poison
+|move2=SmokeScreen|move2type=Normal
+|move3=Tackle|move3type=Normal
+|move4=Haze|move4type=Ice
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0229
+|pokemon=Houndoom
+|type1=Dark|type2=Fire
+|level=35
+|gender=male
+|move1=Faint Attack|move1type=Dark
+|move2=Ember|move2type=Fire
+|move3=Bite|move3type=Dark
+|move4=Smog|move4type=Poison
+}}
+{{Party/end}}
+
+
+Conceding defeat, the Rocket Executive formally disbands [[Team Rocket]], just as [[Giovanni]] did before him. The Rockets flee the building, and the Director returns a moment later. He exclaims that your courageous actions have saved Pokémon nationwide, and rewards you with a [[Clear Bell]]. He explains that there used to be a different tower at this site, but it was old and unstable. This gleaming bell was dug up during demolition to make way for the new Radio Tower. He wonders aloud if it might have some connection to {{ci|Ecruteak}}'s [[Bell Tower|Tin Tower]], then suddenly remembers overhearing a conversation between [[Team Rocket]] members. He says that they were whispering about something going on at that same tower, and suggests looking into it before leaving for his office. Pick up the [[Ultra Ball]] in the studio here, and then as you exit the tower, speak to [[DJ Mary]] on 4F (East) for a [[Pink Bow]], and the girl on 3F to get {{TM|11|Sunny Day}}.
+
+==Ecruteak City==
+===Barrier Station===
+In the building at the foot of [[Bell Tower|Tin Tower]], one of the tower's caretakers informs you that a momentous event has occurred. He initially asks you to leave, but relents when he hears the [[Clear Bell]] begin ringing gently. The bell's chime is said to reflect the bearer's soul, and he believes that you may be able to make it through the tower.
+
+As you approach the exit, you are blocked by a group known as the Wise Trio. They speak of a legend in which a Trainer with the ability to touch the souls of Pokémon is tested by a Pokémon that appears at [[Bell Tower|Tin Tower]]. They excitedly inform you that the legend has come true, as {{p|Suicune}} has appeared at the tower. The trio intends to test your worthiness to meet the beast. Between battles, they offer more insight into the local legends.
+
+{| class="expandable" align="center" style="background: #{{locationcolor/med|road}}; {{roundy}}; border: 5px solid #{{locationcolor/light|road}};"
+|- align="center"
+! Trainers
+|- 
+|
+{{Trainerheader|building}}
+{{Trainerentry|Spr GS Sage.png|Sage|Gaku|1024|2|164|Noctowl|♂|32|None|136|Flareon|♂|32|None}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr GS Sage.png|Sage|Masa|1024|2|164|Noctowl|♂|32|None|135|Jolteon|♂|32|None}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr GS Sage.png|Sage|Koji|1024|2|164|Noctowl|♂|32|None|134|Vaporeon|♂|32|None}}
+{{Trainerfooter|building|I}}
+|}
+
+
+Afterward, the trio explains that they have been charged with protecting the legendary Pokémon, and are to allow passage only to those who possess "the power and soul of truth". They invite you to enter the tower, where {{p|Suicune}} awaits. Follow the trail to the tower, and be sure to save the game.
+
+===Tin Tower===
+====1F====
+When you step inside, the three [[legendary beasts]] can be seen standing together near the central pillar. Immediately noticing your presence, {{p|Raikou}} and {{p|Entei}} each leap over the fence with a roar before racing out of the tower. {{p|Suicune}} clears the fence with a roar of its own and lands directly in front of you, forcing you into battle.
+
+=====VS Suicune=====
+The legendary {{p|Suicune}} has appeared! Begin with {{t|Grass}}- and {{type|Electric}} attacks to wear its health down quickly, then follow up with Water-, {{t|Fire}}-, {{t|Ice}}-, and {{type|Steel}} moves to chip away at it even further. Consider inflicting status ailments like {{status|Sleep}} and {{status|Paralysis}} to restrict its movements.
+
+{| class="roundy" style="margin: auto; box-shadow: 0 0 0.2em #999999; background: #{{crystal color dark}}; padding: 1em;"
+|-
+|
+{| style="margin: auto; background: #{{crystal color}}; {{roundy}}; border: 3px solid #{{crystal color light}};"
+|- align="center"
+|{{Pokémon
+|walkthrough=yes
+|middle=yes
+|gen=2
+|ndex=0245
+|pokemon=Suicune
+|type1=Water
+|level=40
+|move1=Leer|move1type=Normal
+|move2=BubbleBeam|move2type=Water
+|move3=Rain Dance|move3type=Water
+|move4=Gust|move4type=Flying
+}}
+|}
+|}
+
+
+[[Eusine]] and the Wise Trio enter the tower when the battle ends. Eusine claims that {{p|Suicune}}'s mystic power is said to summon {{p|Ho-Oh|a rainbow-colored Pokémon}}, and wonders aloud if these events will cause it to appear. He intends to continue studying these legends, and thanks you for the fantastic battle as he leaves. If spoken with, the trio recounts the tale of the [[Burned Tower|Brass Tower]]; the [[Legendary beasts|three Pokémon]] that perished in the blaze, and the rainbow-colored Pokémon descending from the sky to give them new life.
+
+The next destination is [[Blackthorn City]], to the east of [[Mahogany Town]].
+
+==Mahogany Town==
+With [[Team Rocket]] gone, the souvenir shop's owner and her granddaughter have returned to reopen their store. The shady salesman who blocked the way eastward to {{rt|44|Johto}} has disappeared, as well.
+
+===Souvenir Shop===
+{| style="margin: auto;"
+|
+{{shop|}}
+{{shoprow|{{shopitem|Rage Candy Bar|300|display=RageCandyBar}}|{{shopitem|Great Ball|600}}}}
+{{shoprow|{{shopitem|Super Potion|700}}|{{shopitem|Hyper Potion|1200}}}}
+{{shoprow|{{shopitem|Antidote|100}}|{{shopitem|Paralyze Heal|200|display=Parlyz Heal}}}}
+{{shoprow|{{shopitem|Super Repel|500}}|{{shopitem|Revive|1500}}}}
+{{shoprow|{{shopitem|Flower Mail|50|5=None}}}}
+{{shopfooter}}
+|}
+
+
+==Route 44==
+[[File:Johto Route 44 GSC.png|thumb|350px|Route 44]]
+
+{{rt|44|Johto}} is a pleasant mountain path that links [[Mahogany Town]] to the [[Ice Path]]. It is filled with abundant greenery, and springs that feed into several large ponds. The only patch of tall grass lies tucked away between two of these ponds.
+
+{| class="expandable" align="center" style="background: #{{locationcolor/med|lake}}; {{roundy}}; border: 5px solid #{{locationcolor/light|lake}};"
+|- align="center"
+! Trainers
+|- 
+|
+{{trainerheader|lake}}
+{{Trainerentry|Spr GS Psychic.png|Psychic|Phil|972|2|177|Natu|♂|24|None|064|Kadabra|♂|26|None}}
+{{Trainerdiv|lake}}
+{{Trainerentry|Spr GS Fisher.png|Fisher|Edgar|1000|2|223|Remoraid|♂|25|None|223|Remoraid|♂|25|None}}
+{{Trainerdiv|lake}}
+{{Trainerentry|Spr GS Cooltrainer F.png|Cooltrainer|Cybil|1200|2|012|Butterfree|♀|25|None|182|Bellossom|♀|25|None}}
+{{Trainerdiv|lake}}
+{{Trainerentry|Spr GS Cooltrainer M.png|Cooltrainer|Allen|1296|1|005|Charmeleon|♂|27|None}}
+{{Trainerdiv|lake}}
+{{Trainerentry|Spr GS PokéManiac.png|PokéManiac|Zach|1620|1|111|Rhyhorn|♂|27|None}}
+{{Trainerdiv|lake}}
+{{Trainerentry|Spr GS Fisher.png|Fisher|[[Wilton]]|1000|3|118|Goldeen|♂|23|None|118|Goldeen|♂|23|None|119|Seaking|♂|25|None|38=phone}}
+{{Trainerdiv|lake}}
+{{Trainerentry|Spr GS Bird Keeper.png|Bird Keeper|Vance|600|2|017|Pidgeotto|♂|25|None|017|Pidgeotto|♂|25|None|38=phone}}
+{{Trainerfooter|lake|II}}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|lake}}; {{roundy}}; border: 5px solid #{{locationcolor/light|lake}};"
+|- align="center"
+! Available Pokémon
+|- 
+|
+{{Catch/header|lake}}
+{{Catch/entry2|060|Poliwag|no|no|yes|Grass|22|0%|0%|30%|type1=Water}}
+{{Catch/entry2|061|Poliwhirl|no|no|yes|Grass|24, 26|0%|0%|10%|type1=Water}}
+{{Catch/entry2|069|Bellsprout|no|no|yes|Grass|22|all=20%|type1=Grass|type2=Poison}}
+{{Catch/entry2|070|Weepinbell|no|no|yes|Grass|24|all=10%|type1=Grass|type2=Poison}}
+{{Catch/entry2|108|Lickitung|no|no|yes|Grass|22, 24, 26|40%|40%|0%|type1=Normal}}
+{{Catch/entry2|114|Tangela|no|no|yes|Grass|23|all=30%|type1=Grass}}
+{{Catch/div|lake|Surfing}}
+{{Catch/entry2|060|Poliwag|no|no|yes|Surf|20-29|all=90%|type1=Water}}
+{{Catch/entry2|061|Poliwhirl|no|no|yes|Surf|25-29|all=10%|type1=Water}}
+{{Catch/div|lake|Fishing}}
+{{Catch/entry2|129|Magikarp|no|no|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entry2|060|Poliwag|no|no|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entry2|060|Poliwag|no|no|yes|Fish Good|20|all=65%|type1=Water}}
+{{Catch/entry2|129|Magikarp|no|no|yes|Fish Good|20|all=35%|type1=Water}}
+{{Catch/div|lake|{{color2|000|Headbutt tree}}<br><small>(Moderate chances of battle)</small>}}
+{{Catch/entry2|021|Spearow|no|no|yes|Headbutt|10|all=80%|type1=Normal|type2=Flying}}
+{{Catch/entry2|190|Aipom|no|no|yes|Headbutt|10|all=20%|type1=Normal}}
+{{Catch/div|lake|{{color2|000|Headbutt tree}}<br><small>(Low chances of battle)</small>}}
+{{Catch/entry2|021|Spearow|no|no|yes|Headbutt|10|all=50%|type1=Normal|type2=Flying}}
+{{Catch/entry2|190|Aipom|no|no|yes|Headbutt|10|all=20%|type1=Normal}}
+{{Catch/entry2|214|Heracross|no|no|yes|Headbutt|10|all=30%|type1=Bug|type2=Fighting}}
+{{Catch/footer|lake}}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|lake}}; {{roundy}}; border: 5px solid #{{locationcolor/light|lake}};"
+|- align="center"
+! Items
+|- 
+|
+{{itlisth|lake}}
+{{Itemlist|None|On the tree in the northwest, near Mahogany Town (daily)|C=yes|display=[[Burnt Berry]]}}
+{{Itemlist|Max Repel|Between the two western ponds, north of the road, next to the trees|C=yes}}
+{{Itemlist|Max Revive|In the tall grass between the two ponds (requires {{m|Surf}})|C=yes}}
+{{Itemlist|Elixir|In the tall grass between the two ponds, southeast of the Max Revive (hidden; requires {{m|Surf}})|C=yes|display=[[Elixir|Elixer]]}}
+{{Itemlist|Ultra Ball|Northeast of the larger eastern pond|C=yes}}
+{{Itemlist|Carbos|From Bird Keeper Vance, after defeating him in a second rematch|C=yes}}
+{{itlistfoot|lake}}
+|}
+
+
+==Ice Path==
+[[File:Ice Path 1F C.png|thumb|Ice Path, 1F]]
+[[File:Ice Path B1F C.png|thumb|Ice Path, B1F]]
+[[File:Ice Path B2F C.png|thumb|Ice Path, B2F]]
+[[File:Ice Path B3F C.png|thumb|Ice Path, B3F]]
+
+The [[Ice Path]] is a frigid cave that connects {{rt|44|Johto}} and [[Blackthorn City]]. Travel is made difficult by large sheets of ice, and boulders that must be moved to reach new areas.
+
+{| class="expandable" align="center" style="background: #{{locationcolor/med|ice}}; {{roundy}}; border: 5px solid #{{locationcolor/light|ice}};"
+|- align="center"
+! Available Pokémon
+|- 
+|
+{| class="expandable" align="center" style="background: #{{locationcolor/med|ice}}; {{roundy}}; border: 5px solid #{{locationcolor/light|ice}};"
+|- align="center"
+! 1F
+|- 
+|
+{{Catch/header|ice}}
+{{Catch/div|ice|1F}}
+{{Catch/entry2|041|Zubat|no|no|yes|Cave|22|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|22, 24|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entry2|220|Swinub|no|no|yes|Cave|21, 23|40%|40%|0%|type1=Ice|type2=Ground}}
+{{Catch/entry2|225|Delibird|no|no|yes|Cave|21, 23|0%|0%|40%|type1=Ice|type2=Flying}}
+{{Catch/footer|ice}}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|ice}}; {{roundy}}; border: 5px solid #{{locationcolor/light|ice}};"
+|- align="center"
+! B1F
+|- 
+|
+{{Catch/header|ice}}
+{{Catch/entry2|041|Zubat|no|no|yes|Cave|23|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|23, 25|all=29%|type1=Poison|type2=Flying}}
+{{Catch/entry2|124|Jynx|no|no|yes|Cave|22|1%|1%|0%|type1=Ice|type2=Psychic}}
+{{Catch/entry2|215|Sneasel|no|no|yes|Cave|22|0%|0%|1%|type1=Dark|type2=Ice}}
+{{Catch/entry2|220|Swinub|no|no|yes|Cave|22, 24|40%|40%|0%|type1=Ice|type2=Ground}}
+{{Catch/entry2|225|Delibird|no|no|yes|Cave|22, 24|0%|0%|40%|type1=Ice|type2=Flying}}
+{{Catch/footer|ice}}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|ice}}; {{roundy}}; border: 5px solid #{{locationcolor/light|ice}};"
+|- align="center"
+! B2F
+|- 
+|
+{{Catch/header|ice}}
+{{Catch/entry2|041|Zubat|no|no|yes|Cave|24|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|24, 26|all=25%|type1=Poison|type2=Flying}}
+{{Catch/entry2|124|Jynx|no|no|yes|Cave|22, 24|5%|5%|0%|type1=Ice|type2=Psychic}}
+{{Catch/entry2|215|Sneasel|no|no|yes|Cave|22, 24|0%|0%|5%|type1=Dark|type2=Ice}}
+{{Catch/entry2|220|Swinub|no|no|yes|Cave|23, 25|40%|40%|0%|type1=Ice|type2=Ground}}
+{{Catch/entry2|225|Delibird|no|no|yes|Cave|23, 25|0%|0%|40%|type1=Ice|type2=Flying}}
+{{Catch/footer|ice}}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|ice}}; {{roundy}}; border: 5px solid #{{locationcolor/light|ice}};"
+|- align="center"
+! B3F
+|- 
+|
+{{Catch/header|ice}}
+{{Catch/entry2|041|Zubat|no|no|yes|Cave|25|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|25|all=20%|type1=Poison|type2=Flying}}
+{{Catch/entry2|124|Jynx|no|no|yes|Cave|22, 24, 26|10%|10%|0%|type1=Ice|type2=Psychic}}
+{{Catch/entry2|215|Sneasel|no|no|yes|Cave|22, 24, 26|0%|0%|10%|type1=Dark|type2=Ice}}
+{{Catch/entry2|220|Swinub|no|no|yes|Cave|24, 26|40%|40%|0%|type1=Ice|type2=Ground}}
+{{Catch/entry2|225|Delibird|no|no|yes|Cave|24, 26|0%|0%|40%|type1=Ice|type2=Flying}}
+{{Catch/footer|ice}}
+|}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|ice}}; {{roundy}}; border: 5px solid #{{locationcolor/light|ice}};"
+|- align="center"
+! Items
+|- 
+|
+{{itlisth|ice}}
+{{catch/div|ice|1F}}
+{{Itemlist|HM Water|Northwest; east edge of the third ice patch|C=yes|display={{HM|07|Waterfall}}}}
+{{Itemlist|Protein|Southeast; on the ridge north of the exit|C=yes}}
+{{Itemlist|PP Up|Southeast; northwest of the Blackthorn City exit|C=yes}}
+{{catch/div|ice|B1F}}
+{{Itemlist|Max Potion|South; on a rock in the center of the ice patch (hidden)|C=yes}}
+{{Itemlist|Iron|South; dead-end southwest tunnel|C=yes}}
+{{catch/div|ice|B2F}}
+{{Itemlist|Max Potion|West; in the northwest area|C=yes}}
+{{Itemlist|Carbos|West; in the southwest area (hidden)|C=yes}}
+{{Itemlist|Full Heal|West; clear patch in the center|C=yes}}
+{{Itemlist|TM Psychic|East; southeast corner|C=yes|display={{TM|44|Rest}}}}
+{{Itemlist|Ice Heal|East;  on the lone rock in the center of the larger ice patch (hidden)|C=yes}}
+{{catch/div|ice|B3F}}
+{{Itemlist|Never-Melt Ice|South of the row of stones|C=yes|display=[[Never-Melt Ice|NeverMeltIce]]}}
+{{itlistfoot|ice}}
+|}
+
+
+====1F (Northwest)====
+Go east to slide across the first patch of ice and continue on to the second in the northwest. Bumping into one of the rocks scattered here allows travelers to change direction.
+
+{| style="margin: auto; background: #{{ice color}}; {{roundy}}; border: 2px solid #{{ice color dark}};" cellspacing="2" cellpadding="4"
+|- style="background: #{{ice color light}};"
+! style="{{roundytl|5px}};" | Puzzle
+! style="{{roundytr|5px}};" | Solution
+|- style="background: #FFF;"
+| style="{{roundybl|5px}};" | Ice patch 2
+| style="{{roundybr|5px}};" | ↑ Up, ← Left, ↑ Up, ← Left, ↓ Down, ← Left, ↑ Up, ← Left, ↓ Down, → Right, ↓ Down, → Right
+|}
+
+
+Go east and pass by the stairway to reach the third ice patch. Be sure to pick up {{HM|07|Waterfall}} on the eastern edge.
+
+{| style="margin: auto; background: #{{ice color}}; {{roundy}}; border: 2px solid #{{ice color dark}};" cellspacing="2" cellpadding="4"
+|- style="background: #{{ice color light}};"
+! style="{{roundytl|5px}};" | Puzzle
+! style="{{roundytr|5px}};" | Solution
+|- style="background: #FFF;"
+| style="{{roundybl|5px}};" | Ice patch 3
+| style="{{roundybr|5px}};" | → Right, ↑ Up, ← Left, ↓ Down, → Right
+|}
+
+
+Backtrack and walk across the rocky ridge to reach the northeast ladder.
+
+====B1F (North)====
+There are four boulders scattered around this part of the cave, and each one must be dropped through a different hole in the floor to form a path on the ice below. Go north and loop around the northwest corner to find the first two boulders near the middle of B1F.
+
+{| style="margin: auto; background: #{{rock color}}; {{roundy}}; border: 2px solid #{{rock color dark}};" cellspacing="2" cellpadding="4"
+|- style="background: #{{rock color light}};"
+! style="{{roundytl|5px}};" | Puzzle
+! style="{{roundytr|5px}};" | Solution
+|- style="background: #FFF;"
+| Boulder 1 <small>(To Southwest)</small> || Right 1, Down 2, Left 5, Down 1, Right 1
+|- style="background: #FFF;"
+| Boulder 2 <small>(To Northwest)</small> || Left 2, Up 3, Down 1, Left 1, Down 1
+|- style="background: #FFF;"
+| Boulder 3 <small>(To Southeast)</small> || Right 1, Down 5, Left 3, Down 1, Left 3
+|- style="background: #FFF;"
+| style="{{roundybl|5px}};" | Boulder 4 <small>(To North)</small>
+| style="{{roundybr|5px}};" | Up 2, Left 1, Up 2, Right 2, Up 1, Left 1
+|}
+
+
+Of the two boulders in the southwest area, begin with the southernmost one. Use {{m|Strength}} to maneuver it around the scattered rocks and drop it down through the southwest hole. Backtrack a bit and move the second boulder northward to the second hole in the floor. Head to the southeast area to find the third boulder; move it to the southeast hole, then continue northward. Finally, push the fourth boulder to the north-central hole. With all four boulders cleared, climb down the northeast ladder.
+
+====B2F (West)====
+The four boulders from the floor above have fallen in a spiral shape that grants access to the ladder in the middle of the chamber. Before continuing on, there are several items that can be found nearby, including a [[Max Potion]]. To reach the middle area, begin in the northeast corner and stand on the southwestern-most point of clear ground, then slide westward across the ice. Move in a clockwise direction from here to reach the patch of clear ground in the center, and collect the [[Full Heal]] before climbing the ladder.
+
+====B3F====
+Use {{m|Rock Smash}}, or approach from the east, to reach the [[Never-Melt Ice|NeverMeltIce]]. Climb up the eastern ladder.
+
+====B2F (East)====
+Head east, then slide southward across the smaller ice patch to reach a ledge. Move a few steps westward, then jump the ledge to slide southward. From the south wall, slide eastward to reach {{TM|44|Rest}}. Slide westward, then northward to backtrack and return to the ledge. Walk up onto the ridge, stand on the western stairway, then slide southward to the ladder.
+
+====B1F (South)====
+Go east to reach the stairway and slide out across the ice. Pick up the [[Iron]] in the tunnel to the southwest, then climb up the ladder on the northwest ridge.
+
+{| style="margin: auto; background: #{{ice color}}; {{roundy}}; border: 2px solid #{{ice color dark}};" cellspacing="2" cellpadding="4"
+|- style="background: #{{ice color light}};"
+! style="{{roundytl|5px}};" | Puzzle
+! style="{{roundytr|5px}};" | Solution
+|- style="background: #FFF;"
+| style="{{roundybl|5px}};" | Ice patch 7
+| style="{{roundybr|5px}};" | ↓ Down, → Right, ↓ Down, ← Left, ↑ Up, ← Left, ↑ Up, ← Left
+|}
+
+
+====1F (Southeast)====
+Pick up the [[Protein]] from the ridge, then stand next to the west wall and slide southward to reach a [[PP Up]]. Backtrack and jump the ledge to slide to the exit.
+
+
+
+{{WalkthroughPrevNext
+|game=Crystal
+|gamename=Pokémon Crystal
+|prevsection=11
+|prevname=Mahogany Town, Route 43, Lake of Rage, Rocket Hideout, Mahogany Gym
+|nextsection=13
+|nextname=Blackthorn City, Dragon's Den, Route 45, Dark Cave, Route 46
+}}
+
+{{Project Walkthroughs notice}}
+[[Category:Crystal walkthrough|12]]

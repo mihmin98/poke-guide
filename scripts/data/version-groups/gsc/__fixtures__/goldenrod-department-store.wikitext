@@ -1,0 +1,332 @@
+<!-- poke-guide fixture: {"title":"Goldenrod Department Store","resolvedTitle":"Goldenrod Department Store","revid":4613769,"timestamp":"2026-08-17T02:28:29Z","fetchedAt":"2026-09-23T16:33:53.055Z"} -->
+{{Infobox location
+|image=Goldenrod Department Store HGSS.png
+|image_size=230
+|type=building
+|location_name=Goldenrod Department Store
+|japanese_name=コガネひゃっかてん
+|translated_name=Kogane Department Store
+|slogan=Full Selection of Pokémon Goods!
+|location=[[Goldenrod City]]
+|region=Johto
+||generation={{Gen|II}}, {{Gen|IV}}
+|map=Johto Goldenrod City Map.png
+}}
+[[File:Goldenrod Department Store GSC.png|thumb|right|Goldenrod Department Store in [[Generation II]]]]
+The '''Goldenrod Department Store''' (Japanese: '''コガネひゃっかてん''' ''Kogane Department Store'') is the largest store in [[Johto]]. It is located in south central [[Goldenrod City]], just north-east of the southern entrance to the city, and contains many items not found in a traditional [[Poké Mart]]. It is the Johto region's direct equivalent of [[Kanto]]'s [[Celadon Department Store]].
+
+==Floors==
+===1F Service Counter===
+Here, a receptionist welcomes customers. This is also where the postman delivers items.
+
+===2F Trainer's Market===
+This floor's slogan is "Your Travel Companion." It sells basic equipment and items Pokémon Trainers might need in their journeys.
+{{-}}
+{{shop|Upper cashier (Generation II)}}
+{{shoprow|{{shopitem|Potion|300}}|{{shopitem|Super Potion|700}}}}
+{{shoprow|{{shopitem|Antidote|100}}|{{shopitem|Paralyze Heal|200|display=Parlyz Heal}}}}
+{{shoprow|{{shopitem|Awakening|250}}|{{shopitem|Burn Heal|250}}}}
+{{shoprow|{{shopitem|Ice Heal|250}}}}
+{{shopfooter|multiple=yes}}
+{{shop|Lower cashier (Generation II)}}
+{{shoprow|{{shopitem|Poké Ball (item)|200|5=Poké Ball|display=Poké Ball}}|{{shopitem|Great Ball|600}}}}
+{{shoprow|{{shopitem|Escape Rope|550}}|{{shopitem|Repel|350}}}}
+{{shoprow|{{shopitem|Revive|1500}}|{{shopitem|Full Heal|600}}}}
+{{shoprow|{{shopitem|Poké Doll|1000}}|{{shopitem|Flower Mail|50|5=unknown}}}}
+{{shopfooter}}
+{{shop|Upper cashier (Generation IV)}}
+{{shoprow|{{shopitem|Poké Ball (item)|200|5=Poké Ball|display=Poké Ball}}|{{shopitem|Great Ball|600}}}}
+{{shoprow|{{shopitem|Ultra Ball|1200}}|{{shopitem|Escape Rope|550}}}}
+{{shoprow|{{shopitem|Poké Doll|1000}}|{{shopitem|Repel|350}}}}
+{{shoprow|{{shopitem|Super Repel|500}}|{{shopitem|Max Repel|700}}}}
+{{shoprow|{{shopitem|Grass Mail|50}}|{{shopitem|Flame Mail|50}}}}
+{{shoprow|{{shopitem|Bubble Mail|50}}|{{shopitem|Space Mail|50}}}}
+{{shopfooter|multiple=yes}}
+{{shop|Lower cashier (Generation IV)}}
+{{shoprow|{{shopitem|Potion|300}}|{{shopitem|Super Potion|700}}}}
+{{shoprow|{{shopitem|Hyper Potion|1200}}|{{shopitem|Max Potion|2500}}}}
+{{shoprow|{{shopitem|Revive|1500}}|{{shopitem|Antidote|100}}}}
+{{shoprow|{{shopitem|Paralyze Heal|200}}|{{shopitem|Burn Heal|250}}}}
+{{shoprow|{{shopitem|Ice Heal|250}}|{{shopitem|Awakening|250}}}}
+{{shoprow|{{shopitem|Full Heal|600}}}}
+{{shopfooter}}
+
+===3F Battle Collection===
+"For Victory Seekers" is the slogan of this floor. It sells [[battle item|temporary stat-enhancing items]].
+{{shop|Generation II}}
+{{shoprow|{{shopitem|X Speed|350}}|{{shopitem|X Sp. Atk|350|display=X Special}}}}
+{{shoprow|{{shopitem|X Defense|display=X Defend|550}}|{{shopitem|X Attack|500}}}}
+{{shoprow|{{shopitem|Dire Hit|650}}|{{shopitem|Guard Spec.|700}}}}
+{{shoprow|{{shopitem|X Accuracy|950}}}}
+{{shopfooter|multiple=yes}}
+{{shop|Generation IV}}
+{{shoprow|{{shopitem|X Speed|350}}|{{shopitem|X Attack|500}}}}
+{{shoprow|{{shopitem|X Defense|display=X Defend|550}}|{{shopitem|Guard Spec.|700}}}}
+{{shoprow|{{shopitem|Dire Hit|650}}|{{shopitem|X Accuracy|950}}}}
+{{shoprow|{{shopitem|X Sp. Atk|350|display=X Special}}|{{shopitem|X Sp. Def|350}}}}
+{{shopfooter}}
+
+===4F Medicine Box===
+A pharmacy selling [[vitamin|permanent stat-enhancing items]] is located on this floor. Its slogan is "Let us pump up your Pokémon!".
+{{shop|Generation II}}
+{{shoprow|{{shopitem|Protein|9800}}|{{shopitem|Iron|9800}}}}
+{{shoprow|{{shopitem|Carbos|9800}}|{{shopitem|Calcium|9800}}}}
+{{shoprow|{{shopitem|HP Up|9800}}}}
+{{shopfooter|multiple=yes}}
+{{shop|Generation IV}}
+{{shoprow|{{shopitem|Protein|9800}}|{{shopitem|Iron|9800}}}}
+{{shoprow|{{shopitem|Calcium|9800}}|{{shopitem|Zinc|9800}}}}
+{{shoprow|{{shopitem|Carbos|9800}}|{{shopitem|HP Up|9800}}}}
+{{shopfooter}}
+
+===5F TM Corner===
+This floor is devoted to the sale of [[TM|Technical Machines]]. The poster on the wall declares "Customize Your Pokémon!" Talking to {{ga|Carrie|the little girl}} on this floor unlocks the [[Mystery Events|Mystery Gift]] option. There is also a man who wants to trade a {{p|Drowzee}} ({{p|Abra}} in {{game|Crystal||Crystal}}) for a {{p|Machop}}.
+
+On Sundays, a woman will appear who will give the player {{TM|27|Return}} if the lead Pokémon in the player's [[party]] has high [[friendship]] or {{TM|21|Frustration}} if it has low friendship. While in the Generation II games she will only give one TM a week, in HeartGold and SoulSilver, once she has given the player one of the TMs, she will not give either again any time afterwards. If the Pokémon's friendship is neutral, she will not give the player any TM, but they may still show her a different Pokémon to get one.
+
+{{shop|Generation II}}
+{{shoprow|{{shopitem|TM41|3000|PD||TM Electric|ThunderPunch}}|{{shopitem|TM48|3000|PD||TM Fire|Fire Punch}}}}
+{{shoprow|{{shopitem|TM33|3000|PD||TM Ice|Ice Punch}}|{{shopitem|TM02|2000|PD||TM Normal|Headbutt|note=<br><small>After receiving TM02 in [[Ilex Forest]]</small>}}}}
+{{shoprow|{{shopitem|TM08|1000|PD|5=TM Fighting|6=Rock Smash|note=<br><small>After receiving TM08 on {{rt|36|Johto}}</small>}}}}
+{{shopfooter|multiple=yes}}
+{{shop|Generation IV}}
+{{shoprow|{{shopitem|TM70|1000|PD||TM Normal|Flash}}|{{shopitem|TM17|2000|PD||TM Normal|Protect}}}}
+{{shoprow|{{shopitem|TM54|2000|PD||TM Normal|False Swipe}}|{{shopitem|TM83|2000|PD||TM Normal|Natural Gift}}}}
+{{shoprow|{{shopitem|TM16|2000|PD||TM Psychic|Light Screen}}|{{shopitem|TM33|2000|PD||TM Psychic|Reflect}}}}
+{{shoprow|{{shopitem|TM22|3000|PD||TM Grass|SolarBeam}}|{{shopitem|TM52|5500|PD||TM Fighting|Focus Blast}}}}
+{{shoprow|{{shopitem|TM38|5500|PD||TM Fire|Fire Blast}}|{{shopitem|TM25|5500|PD||TM Electric|Thunder}}}}
+{{shoprow|{{shopitem|TM14|5500|PD||TM Ice|Blizzard}}|{{shopitem|TM15|7500|PD||TM Normal|Hyper Beam}}}}
+{{shopfooter}}
+
+===6F Rooftop Atrium===
+A picnic table and some [[vending machine]]s are located on this floor. A sign implores customers to "Take a Break from Shopping". In {{2v2|Gold|Silver}} as well as in {{2v2|HeartGold|SoulSilver}}, this is the uppermost floor, but in {{game|Crystal}}, there is an additional flight of stairs leading up to a higher floor. This floor is called the Rooftop Square in Gold and Silver, while in Crystal it is called Tranquil Square.
+
+{{shop|Generations II & IV}}
+{{shoprow|{{shopitem|Fresh Water|200}}|{{shopitem|Soda Pop|300}}}}
+{{shoprow|{{shopitem|Lemonade|350}}|}}
+{{shopfooter}}
+
+In addition to the vending machines, in Generation IV there is a raffle that can be entered for {{pdollar}}300 where the player may win a [[Berry]] (60% chance), a type of [[Poké Ball]] (35% chance), or a [[TM]] (5% chance). The first and second prizes change depending on the [[days of the week|day of the week]]. The player may play the raffle as many times as they wish.
+
+'''Lottery prizes by day:'''
+{| style="margin:auto"
+|
+{| class="roundy" style="text-align:center; border: 3px solid #{{soulsilver color dark}}; background: #{{soulsilver color light}};"
+! style="{{roundytl|5px}}; background: #{{heartgold color light}}" | Day
+! style="background: #{{heartgold color light}}" | First prize
+! style="{{roundytr|5px}}; background: #{{heartgold color light}}" | Second prize
+|- style="background:#{{#ifexpr: {{#time: w}} = 1|9999FF|FFF}};"
+| Monday
+| {{TM|65|Shadow Claw}}
+| [[Nest Ball]]
+|- style="background:#{{#ifexpr: {{#time: w}} = 2|9999FF|FFF}};"
+| Tuesday
+| {{TM|91|Flash Cannon}}
+| [[Repeat Ball]]
+|- style="background:#{{#ifexpr: {{#time: w}} = 3|9999FF|FFF}};"
+| Wednesday
+| {{TM|57|Charge Beam}}
+| [[Net Ball]]
+|- style="background:#{{#ifexpr: {{#time: w}} = 4|9999FF|FFF}};"
+| Thursday
+| {{TM|60|Drain Punch}}
+| [[Quick Ball]]
+|- style="background:#{{#ifexpr: {{#time: w}} = 5|9999FF|FFF}};"
+| Friday
+| {{TM|42|Facade}}
+| [[Dusk Ball]]
+|- style="background:#{{#ifexpr: {{#time: w}} = 6|9999FF|FFF}};"
+| Saturday
+| {{TM|62|Silver Wind}}
+| [[Timer Ball]]
+|-
+| style="background:#{{#ifexpr: {{#time: w}} = 0|9999FF|FFF}}; {{roundybl|5px}}" | Sunday
+| style="background:#{{#ifexpr: {{#time: w}} = 0|9999FF|FFF}}" | {{TM|02|Dragon Claw}}
+| style="background:#{{#ifexpr: {{#time: w}} = 0|9999FF|FFF}}; {{roundybr|5px}}" | [[Luxury Ball]]
+|}
+|
+{| class="roundy" style="text-align:center; border: 3px solid #{{soulsilver color dark}}; background: #{{soulsilver color light}};"
+! style="{{roundytop|5px}}; background: #{{heartgold color light}}" | Third prize (random)
+|- style="background:#FFF"
+| [[Cheri Berry]]
+|- style="background:#FFF"
+| [[Chesto Berry]]
+|- style="background:#FFF"
+| [[Pecha Berry]]
+|- style="background:#FFF"
+| [[Rawst Berry]]
+|- style="background:#FFF"
+| [[Aspear Berry]]
+|- style="background:#FFF"
+| [[Oran Berry]]
+|-
+| style="background:#FFF; {{roundybottom|5px}}" | [[Persim Berry]]
+|}
+|}
+
+===Rooftop Lookout===
+A floor exclusive to {{game|Crystal}}, the rooftop cannot be accessed by the elevator; instead the player must travel up the final flight of stairs. Some binoculars let spectators see things far away. Some people go up to the rooftop to take a break from shopping. There are also some vending machines for [[Pokémon doll]]s, but the player cannot buy anything from them as they are "almost empty".
+
+There will occasionally be a Rooftop Sale, allowing the player to buy several items. When the Rooftop Sale occurs, Camper Todd will call the player on the [[Pokégear]] to tell them about it. The items available will change after the player has entered the [[Hall of Fame]]. 
+
+{{shop|Before Hall of Fame}}
+{{shoprow|{{shopitem|Poké Ball (item)|150|5=Poké Ball|display=Poké Ball}}|{{shopitem|Great Ball|500}}}}
+{{shoprow|{{shopitem|Super Potion|500}}|{{shopitem|Full Heal|500}}}}
+{{shoprow|{{shopitem|Revive|1200}}}}
+{{shopfooter|multiple=yes}}
+{{shop|After Hall of Fame}}
+{{shoprow|{{shopitem|Hyper Potion|1000}}|{{shopitem|Full Restore|2000}}}}
+{{shoprow|{{shopitem|Ultra Ball|1000}}|{{shopitem|Protein|7800}}}}
+{{shoprow|{{shopitem|Full Heal|500}}}}
+{{shopfooter}}
+
+===Basement===
+The basement is only accessible from the Department Store via the elevator.
+
+A team of workers and a {{p|Machoke}} are moving boxes around. The player gets told off by the workers for going down and distracting them. This is one of the endpoints of the [[Goldenrod Tunnel]], although the door leading to the tunnel won't open until the player enters the Department Store through the tunnel.
+
+In [[Generation II]], every time the player enters the area, the boxes will be moved in various places, allowing access to items that are on the ground in blocked rooms. In {{2v2|HeartGold|SoulSilver}}, talking to the workers will cause each Machoke to move a box, allowing access to each blocked room and the items inside them, with no need to leave and reenter the area.
+
+==Items==
+{{Itlisth|building}}
+{{Itemlist|Ultra Ball|Basement; eastern side|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Ether|Basement; southern side|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Burn Heal|Basement; northern side|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Amulet Coin III|Basement; accessible via [[Goldenrod Tunnel|the Goldenrod Tunnel Warehouse]]|G=yes|S=yes|C=yes|HG=yes|SS=yes|display=[[Amulet Coin]]}}
+{{Itemlist|Antidote|Basement; small box, south of the elevator ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Super Potion|Basement; large brown box on the right, southwest of the elevator ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Paralyze Heal|Basement; westernmost large brown box ''(hidden)''|HG=yes|SS=yes|display=[[Paralyze Heal|Parlyz Heal]]}}
+{{Itemlist|TM Normal|5F; from a woman behind the counter if the player's lead Pokémon has high enough [[friendship]]{{dotw|Su}}|G=yes|S=yes|C=yes|HG=yes|SS=yes|display={{TM|27|Return}}}}
+{{Itemlist|TM Normal|5F; from a woman behind the counter if the player's lead Pokémon has low enough friendship{{dotw|Su}}|G=yes|S=yes|C=yes|HG=yes|SS=yes|display={{TM|21|Frustration}}}}
+{{Itemlist|None|5F; held by Muscle, a {{p|Machop}} the player receives in a trade|G=yes|S=yes|C=yes|display=[[Gold Berry]]}}
+{{Itemlist|Macho Brace|5F; held by Muscle, a Machop the player receives in a trade|HG=yes|SS=yes}}
+{{Itlistfoot|building}}
+
+==Pokémon==
+===Generation II===
+{{Catch/header|building|2}}
+{{Catch/div|building|Special}}
+{{Catch/entry2|066|Machop|yes|yes|no|Trade|The same as the traded Pokémon|all=One||tradenum=096|tradename=Drowzee|tradegender=|type1=Fighting|type2=Fighting}}
+{{Catch/entry2|066|Machop|no|no|yes|Trade|The same as the traded Pokémon|all=One||tradenum=063|tradename=Abra|tradegender=|type1=Fighting|type2=Fighting}}
+{{Catch/footer|building}}
+
+===Generation IV===
+{{Catch/header|building|4}}
+{{Catch/div|building|Special}}
+{{Catch/entryhs|066|Machop|yes|yes|Trade|The same as the traded Pokémon|all=One||tradenum=096|tradename=Drowzee|tradegender=|type1=Fighting|type2=Fighting}}
+{{Catch/footer|building}}
+
+==Layout==
+===Basement===
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{Locationcolor/dark|building}}"
+|-
+! style="background:#{{Locationcolor/light|building}}; {{roundytl|5px}}" | Version
+! style="background:#{{Locationcolor/light|building}}" | First visit
+! style="background:#{{Locationcolor/light|building}}" | Second visit
+! style="background:#{{Locationcolor/light|building}}; {{roundytr|5px}}" | Third visit
+|-
+! style="background:#{{gold  color}}" | {{color2|000|Pokémon Gold and Silver Versions|Gold}}
+| rowspan="3" | [[File:Goldenrod Department Store Basement GSC first.png|160px]]
+| rowspan="3" | [[File:Goldenrod Department Store Basement GSC second.png|160px]]
+| rowspan="3" | [[File:Goldenrod Department Store Basement GSC third.png|160px]]
+|-
+! style="background:#{{silver color}}" | {{color2|000|Pokémon Gold and Silver Versions|Silver}}
+|-
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon Crystal Version|Crystal}}
+|-
+| colspan="4" style="background:#{{Locationcolor/light|building}}" | &nbsp; 
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+! rowspan="2" colspan="3" | [[File:Goldenrod Department Store Basement HGSS.png|320px]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan="4" style="background:#{{Locationcolor/light|building}}; {{roundybottom|5px}}" | &nbsp; 
+|}
+
+===1F-Rooftop===
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{Locationcolor/dark|building}}"
+|-
+! style="background:#{{Locationcolor/light|building}}; {{roundytl|5px}}" | Version
+! style="background:#{{Locationcolor/light|building}}" | 1F
+! style="background:#{{Locationcolor/light|building}}" | 2F
+! style="background:#{{Locationcolor/light|building}}" | 3F
+! style="background:#{{Locationcolor/light|building}}" | 4F
+! style="background:#{{Locationcolor/light|building}}" | 5F
+! style="background:#{{Locationcolor/light|building}}" | 6F
+! style="background:#{{Locationcolor/light|building}}; {{roundytr|5px}}" | Rooftop
+|-
+! style="background:#{{gold  color}}" | {{color2|000|Pokémon Gold and Silver Versions|Gold}}
+| rowspan="2" | [[File:Celadon Department Store 1F GS.png|120px]]
+| rowspan="2" | [[File:Celadon Department Store 2F GS.png|120px]]
+| rowspan="2" | [[File:Celadon Department Store 3F GS.png|120px]]
+| rowspan="2" | [[File:Celadon Department Store 4F GS.png|120px]]
+| rowspan="2" | [[File:Goldenrod Department Store 5F GS.png|120px]]
+| rowspan="2" | [[File:Celadon Department Store 5F GS.png|120px]]
+| rowspan="2" | [[File:None.png|120px|center]]
+|-
+! style="background:#{{silver color}}" | {{color2|000|Pokémon Gold and Silver Versions|Silver}}
+|-
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon Crystal Version|Crystal}}
+| [[File:Goldenrod Department Store 1F C.png|120px]]
+| [[File:Goldenrod Department Store 2F C.png|120px]]
+| [[File:Goldenrod Department Store 3F C.png|120px]]
+| [[File:Goldenrod Department Store 4F C.png|120px]]
+| [[File:Goldenrod Department Store 5F C.png|120px]]
+| [[File:Goldenrod Department Store 6F C.png|120px]]
+| [[File:Goldenrod Department Store Rooftop C.png|120px|center]]
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+| rowspan="2" | [[File:Goldenrod Department Store 1F HGSS.png|120px]]
+| rowspan="2" | [[File:Goldenrod Department Store 2F HGSS.png|120px]]
+| rowspan="2" | [[File:Goldenrod Department Store 3F HGSS.png|120px]]
+| rowspan="2" | [[File:Goldenrod Department Store 4F HGSS.png|120px]]
+| rowspan="2" | [[File:Goldenrod Department Store 5F HGSS.png|120px]]
+| rowspan="2" | [[File:Goldenrod Department Store 6F HGSS.png|120px]]
+| rowspan="2" | [[File:None.png|120px|center]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan="8" style="background:#{{Locationcolor/light|building}}; {{roundybottom|5px}}" | &nbsp; 
+|}
+
+==In animation==
+[[File:Goldenrod Galleria.png|thumb|250px|Goldenrod Galleria in {{aniseries|GS}}]]
+===''Pokémon the Series''===
+===={{aniseries|GS}}====
+The Goldenrod Department Store, known as Goldenrod Galleria in the English [[dub]] and also known as "Department Store" ('''デパート''' ''Depāto'') in Japanese, appeared in ''[[EP158|A Goldenrod Opportunity]]'', where {{Ash}} and {{ashfr}} decided to visit it and were eventually led there by [[Whitney]], leading to {{an|Misty}} and her doing some shopping. Meanwhile, {{TRT}} ate some free samples to satisfy their hunger, but ended up eating non-free food as well. They were forced to work to pay for the food they had eaten, but they ended up running away when they spotted Whitney's {{p|Clefairy}} and decided to steal it.
+
+===={{aniseries|DP}}====
+In ''[[DP143|An Egg Scramble!]]'', the Goldenrod Galleria made a cameo appearance during {{an|Lyra}}'s presentation of the Johto region during the [[Johto Festival]].
+{{-}}
+
+==In other languages==
+{{langtable|color={{locationcolor/light|building}}|bordercolor={{locationcolor/dark|building}}
+|zh_cmn=滿金市的百貨 ''Mǎnjīn Shì de Bǎihuò''<ref group=n name="Anime">[[Pokémon animated series]]</ref><br>小金百貨公司 ''Xiǎojīn Bǎihuò Gōngsī''<ref group=n>[[Pokémon Adventures]] (Ching Win Publishing)</ref><br>满金百货店 ''Mǎnjīn Bǎihuòdiàn''<ref group=n>Pokémon Adventures (Jilin Fine Arts Press)</ref><br>小金百货店 ''Xiǎojīn Bǎihuòdiàn''<ref group=n>[[Pocket Monsters Film Comic]]</ref>
+|zh_yue=黃金市的百貨公司 ''Wòhnggām Síh dīk Baakfo Gūngsī''<ref group=n name="Anime" /><br>滿金百貨店 ''Múhngām Baakfodim''<ref group=n>Pokémon Gold and Silver guidebook</ref>
+|de=Kaufhaus von Dukatia City
+|fi=Goldenrodin kauppakeskus<ref group=n name="Anime" />
+|fr=Centre Commercial de Doublonville
+|it=Centro Commerciale di Fiordoropoli
+|ko=금빛시티백화점 ''Geumbit City Baekhwajeom''
+|es_eu=Centro Comercial de Ciudad Trigal
+|}}
+{{-}}
+
+===Notes===
+{{reflist|group=n}}
+
+{{Dept}}
+{{Johto}}
+{{Project Locations notice}}
+
+[[Category:Johto locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:HeartGold and SoulSilver locations]]
+
+[[de:Kaufhaus von Dukatia City]]
+[[es:Centro Comercial de Ciudad Trigal]]
+[[fr:Centre Commercial de Doublonville]]
+[[it:Centro Commerciale di Fiordoropoli]]
+[[ja:コガネひゃっかてん]]
+[[zh:满金百货店]]

@@ -1,0 +1,238 @@
+<!-- poke-guide fixture: {"title":"Dark Cave","resolvedTitle":"Dark Cave","revid":4576658,"timestamp":"2026-06-21T14:53:29Z","fetchedAt":"2026-09-23T16:33:53.055Z"} -->
+{{search|cave in Johto|the Pokéwalker Route|Dim Cave (Pokéwalker)}}
+{{redirect|Dark cave|a list of caves in which Flash is usable|Darkness#Areas covered in darkness|Darkness → Areas covered in darkness}}
+{{Infobox location
+|image=HGSS Dark Cave-Route {{#switch: {{#expr: {{#time: z}} mod 2}}|0=31|1=45}}-{{#switch: {{#time:
+G}}|23|0|1|2|3|4|5|6=Night|7|8|9|10|11|12=Morning|13|14|15|16|17|18=Day|19|20|21|22=Evening}}.png
+|image_size=256
+|location_name=Dark Cave
+|japanese_name=くらやみのほらあな
+|translated_name=Dark Cave
+|mapdesc=A dark, difficult-to-navigate tunnel that runs beneath the Johto region.
+|type=cave
+|location={{rt|31|Johto}} east of [[Violet City]], {{rt|45|Johto}} south of [[Blackthorn City]], {{rt|46|Johto}} north of {{rt|29|Johto}}
+|region=Johto
+|map=Johto Dark Cave Map.png
+|generation={{Gen|II}}, {{Gen|IV}}
+}}
+
+'''Dark Cave''' (Japanese: '''くらやみのほらあな''' ''Dark Cave'') is a single-level cave located in eastern [[Johto]]. Though it is not necessary to enter the cave to complete the storyline, Dark Cave is the only place in the [[Generation II]] games to capture {{pkmn2|wild}} {{p|Dunsparce}} and {{p|Wobbuffet}}. As its name implies, {{m|Flash}} is required to illuminate the cave.
+
+The cave is unique in that the cave is separated into two parts, yet the cave does not change floors between the two areas.
+
+==Geography==
+===Route 45 side===
+The northernmost point in the cave is at the entrance leading to and from {{rt|45|Johto}} just south of [[Blackthorn City]]. The path of the cave makes a 90-degree turn to the right before proceeding south for a short distance to the first of two underground ponds in the cave. Trainers can {{m|Surf}} directly south to reach a [[Revive]], to the southwest then to the north to reach a man who hands out the BlackGlasses, or to the southwest to make landfall near {{TM|13|Snore}}. West of TM13, the path from the BlackGlasses man merges with the TM13 path as it turns south and enters the southern portion of Dark Cave. Ledges on this side prevent access to {{rt|45|Johto}} and Blackthorn City from the south via Dark Cave.
+
+===Route 31 side===
+Immediately after emerging from the north half, the path comes to the second of two ponds. Trainers can Surf to the west from this point to snag a [[Potion]] and reach {{rt|31|Johto}}, or, if a Pokémon knows {{m|Rock Smash}}, they can also Surf to the south and dispose of a series of rocks as they head north and find a hidden [[Elixir]] and then eastward toward a [[Hyper Potion]]. Near the item, the path of the cave turns south, passing a [[Full Heal]] and a [[Dire Hit]] (in {{v2|Crystal}} only) before reaching its southernmost point at {{rt|46|Johto}}.
+
+In [[Generation IV]], some of the rocks that can be broken with Rock Smash have been replaced with boulders that require {{m|Strength}} to be moved.
+
+==Items==
+====Route 31 side====
+{{itlisth|cave}}
+{{Itemlist|Elixir|In the northernmost area of the {{rt|31|Johto}} side, at the end of a short dead-end path (requires {{m|Rock Smash}}) ''(hidden)''|G=yes|S=yes|C=yes|display=[[Elixir|Elixer]]}}
+{{Itemlist|Dire Hit|Northwest of the exit to {{rt|46|Johto}} (requires {{m|Rock Smash}})|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Hyper Potion|Directly north of the {{rt|46|Johto}} entrance in the northeast corner (requires {{m|Rock Smash}})|G=yes|S=yes|C=yes}}
+{{Itemlist|Hyper Potion|South of northeast corner (requires {{m|Rock Smash}})|HG=yes|SS=yes}}
+{{Itemlist|Potion|Near the exit to {{rt|31|Johto}}|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Poké Ball|In a rock northeast of the Potion ''(hidden)''|HG=yes|SS=yes|display={{i|Poké Ball}}}}
+{{Itemlist|Black Flute|East of the {{rt|31|Johto}} entrance (requires {{m|Surf}})|HG=yes|SS=yes}}
+{{Itemlist|Max Ether|In a wall between two rocks southeast of the Hyper Potion (requires {{m|Rock Smash}}) ''(hidden)'' |HG=yes|SS=yes}}
+{{Itemlist|Full Heal|North of the {{rt|46|Johto}} entrance (requires {{m|Rock Smash}})|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{itlistfoot|cave}}
+
+====Route 45 side====
+{{itlisth|cave}}
+{{Itemlist|TM Normal|Near the entrance separating the {{rt|45|Johto}} side from the {{rt|31|Johto}} side|G=yes|S=yes|C=yes|display={{TM|13|Snore}}}}
+{{Itemlist|Elixir|Southwest of entrance from {{rt|45|Johto}} ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Revive|Southeast corner (requires {{m|Surf}})|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|TM Normal|Northeast of the exit to the {{rt|31|Johto}} side (requires {{m|Surf}})|HG=yes|SS=yes|display={{TM|54|False Swipe}}}}
+{{Itemlist|Black Glasses|From the man in the northwest corner of the {{rt|45|Johto}} side (requires {{m|Surf}})|G=yes|S=yes|C=yes|HG=yes|SS=yes|display=[[Black Glasses|BlackGlasses]]}}
+{{Itemlist|Max Revive|On a rock, north of the man who gives BlackGlasses (requires {{m|Surf}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Hyper Potion|On a rock north of the exit to the {{rt|31|Johto}} side (requires {{m|Surf}}) ''(hidden)''|HG=yes|SS=yes}}
+{{itlistfoot|cave}}
+
+====Rock Smash====
+If the rock contains an item, the game will pick one of the following:
+{{Itlisth|cave}}
+{{Itemlist|Max Ether|Found by smashing [[breakable rock]]s (25%)|HG=yes|SS=yes}}
+{{Itemlist|Revive|Found by smashing [[breakable rock]]s (20%)|HG=yes|SS=yes}}
+{{Itemlist/5|Red Shard|Blue Shard|Yellow Shard|Green Shard|Heart Scale|Found by smashing [[breakable rock]]s (10% each)|HG=yes|SS=yes}}
+{{Itemlist|Star Piece|Found by smashing [[breakable rock]]s (5%)|HG=yes|SS=yes}}
+{{itlistfoot|cave}}
+
+==Pokémon==
+===Generation II===
+====Route 31 side====
+{{catch/header|cave|yes}}
+{{catch/entry2|041|Zubat|yes|yes|no|Cave|2-4|all=39%|type1=Poison|type2=Flying}}
+{{catch/entry2|041|Zubat|no|no|yes|Cave|2,4|34%|39%|39%|type1=Poison|type2=Flying}}
+{{catch/entry2|074|Geodude|yes|yes|yes|Cave|2-4|all=60%|type1=Rock|type2=Ground}}
+{{catch/entry2|206|Dunsparce|yes|yes|yes|Cave|4|all=1%|type1=Normal}}
+{{catch/entry2|216|Teddiursa|no|no|yes|Cave|2|5%|0%|0%|type1=Normal}}
+{{catch/div|water|Surfing}}
+{{catch/entry2|129|Magikarp|yes|yes|yes|Surf|5-19|all=100%|type1=Water}}
+{{catch/div|water|Fishing}}
+{{catch/entry2|118|Goldeen|yes|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{catch/entry2|118|Goldeen|yes|yes|yes|Fish Good|20|all=65%|type1=Water}}
+{{catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=Water}}
+{{catch/entry2|118|Goldeen|yes|yes|yes|Fish Super|40|all=70%|type1=Water}}
+{{catch/entry2|119|Seaking|yes|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{catch/entry2|129|Magikarp|yes|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{catch/div|cave|Rock Smash}}
+{{catch/entry2|098|Krabby|yes|yes|yes|Rock Smash|15|all=90%|type1=Water}}
+{{catch/entry2|213|Shuckle|yes|yes|yes|Rock Smash|15|all=10%|type1=Bug|type2=Rock}}
+{{catch/div|cave|During a Dunsparce swarm}}
+{{catch/entry2|041|Zubat|yes|yes|yes|Swarm|2|all=20%|type1=Poison|type2=Flying}}
+{{catch/entry2|074|Geodude|yes|yes|yes|Swarm|2-3|all=40%|type1=Rock|type2=Ground}}
+{{catch/entry2|206|Dunsparce|yes|yes|yes|Swarm|2-4|all=40%|type1=Normal}}
+{{catch/footer|cave}}
+
+====Route 45 side====
+{{catch/header|cave|yes}}
+{{catch/entry2|041|Zubat|yes|yes|yes|Cave|23|all=30%|type1=Poison|type2=Flying}}
+{{catch/entry2|042|Golbat|yes|yes|yes|Cave|23|all=5%|type1=Poison|type2=Flying}}
+{{catch/entry2|074|Geodude|yes|yes|yes|Cave|23|all=30%|type1=Rock|type2=Ground}}
+{{catch/entry2|075|Graveler|yes|yes|yes|Cave|25|all=20%|type1=Rock|type2=Ground}}
+{{catch/entry2|202|Wobbuffet|yes|yes|no|Cave|20,25|all=15%|type1=Psychic}}
+{{catch/entry2|202|Wobbuffet|no|no|yes|Cave|20,25|0%|0%|15%|type1=Psychic}}
+{{catch/entry2|216|Teddiursa|no|no|yes|Cave|20|5%|0%|0%|type1=Normal}}
+{{catch/entry2|217|Ursaring|no|no|yes|Cave|25|10%|0%|0%|type1=Normal}}
+{{catch/entry2|217|Ursaring|no|no|yes|Cave|25,30|0%|15%|0%|type1=Normal}}
+{{catch/div|water|Surfing}}
+{{catch/entry2|129|Magikarp|yes|yes|yes|Surf|5-19|all=100%|type1=Water}}
+{{catch/div|water|Fishing}}
+{{catch/entry2|118|Goldeen|yes|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{catch/entry2|118|Goldeen|yes|yes|yes|Fish Good|20|all=65%|type1=Water}}
+{{catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=Water}}
+{{catch/entry2|118|Goldeen|yes|yes|yes|Fish Super|40|all=70%|type1=Water}}
+{{catch/entry2|119|Seaking|yes|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{catch/entry2|129|Magikarp|yes|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{catch/footer|cave}}
+
+===Generation IV===
+====Route 31 side====
+{{catch/header|cave|4}}
+{{catch/entryhs|041|Zubat|yes|yes|Cave|2-4|all=39%|type1=Poison|type2=Flying}}
+{{catch/entryhs|074|Geodude|yes|yes|Cave|2-4|all=60%|type1=Rock|type2=Ground}}
+{{catch/entryhs|206|Dunsparce|yes|yes|Cave|4|all=1%|type1=Normal}}
+{{catch/div|water|Surfing}}
+{{catch/entryhs|129|Magikarp|yes|yes|Surf|2-20|all=100%|type1=Water}}
+{{catch/div|water|Fishing}}
+{{catch/entryhs|118|Goldeen|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{catch/entryhs|118|Goldeen|yes|yes|Fish Good|20|all=60%|type1=Water}}
+{{catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{catch/entryhs|118|Goldeen|yes|yes|Fish Super|40|all=70%|type1=Water}}
+{{catch/entryhs|119|Seaking|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{catch/entryhs|129|Magikarp|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{catch/div|cave|Rock Smash}}
+{{catch/entryhs|074|Geodude|yes|yes|Rock Smash|8-14|all=20%|type1=Rock|type2=Ground}}
+{{catch/entryhs|206|Dunsparce|yes|yes|Rock Smash|4-8|all=80%|type1=Normal}}
+{{catch/div|cave|Swarm}}
+{{catch/entryhs|206|Dunsparce|yes|yes|Swarm|2-3|all=40%|type1=Normal}}
+{{catch/div|cave|Special}}
+{{catch/entryhs|296|Makuhita|yes|yes|Hoenn|2|all=20%|type1=Fighting}}
+{{catch/entryhs|359|Absol|yes|yes|Hoenn|2-3|all=20%|type1=Dark}}
+{{catch/entryhs|433|Chingling|yes|yes|Sinnoh|2|all=20%|type1=Psychic}}
+{{catch/entryhs|436|Bronzor|yes|yes|Sinnoh|2-3|all=20%|type1=Steel|type2=Psychic}}
+{{catch/footer|cave}}
+
+====Route 45 side====
+{{catch/header|cave|4}}
+{{catch/entryhs|041|Zubat|yes|yes|Cave|23|all=30%|type1=Poison|type2=Flying}}
+{{catch/entryhs|042|Golbat|yes|yes|Cave|23|all=5%|type1=Poison|type2=Flying}}
+{{catch/entryhs|074|Geodude|yes|yes|Cave|23|all=30%|type1=Rock|type2=Ground}}
+{{catch/entryhs|075|Graveler|yes|yes|Cave|25|all=20%|type1=Rock|type2=Ground}}
+{{catch/entryhs|202|Wobbuffet|yes|yes|Cave|20, 25|all=15%|type1=Psychic}}
+{{catch/div|water|Surfing}}
+{{catch/entryhs|129|Magikarp|yes|yes|Surf|2-20|all=100%|type1=Water}}
+{{catch/div|water|Fishing}}
+{{catch/entryhs|118|Goldeen|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{catch/entryhs|118|Goldeen|yes|yes|Fish Good|20|all=60%|type1=Water}}
+{{catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{catch/entryhs|118|Goldeen|yes|yes|Fish Super|40|all=70%|type1=Water}}
+{{catch/entryhs|119|Seaking|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{catch/entryhs|129|Magikarp|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{catch/div|cave|Special}}
+{{catch/entryhs|296|Makuhita|yes|yes|Hoenn|25|all=20%|type1=Fighting}}
+{{catch/entryhs|359|Absol|yes|yes|Hoenn|23|all=20%|type1=Dark}}
+{{catch/entryhs|433|Chingling|yes|yes|Sinnoh|25|all=20%|type1=Psychic}}
+{{catch/entryhs|436|Bronzor|yes|yes|Sinnoh|23|all=20%|type1=Steel|type2=Psychic}}
+{{catch/footer|cave}}
+
+==Layout==
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{locationcolor/dark|cave}}"
+! style="background:#{{locationcolor/light|cave}}; {{roundytl|5px}}" | Version
+! style="background:#{{locationcolor/light|cave}}" | {{rt|31|Johto}} side
+! style="background:#{{locationcolor/light|cave}}; {{roundytr|5px}}" | {{rt|45|Johto}} side
+|-
+! style="background:#{{gold color}}" | {{color2|000|Pokémon Gold and Silver Versions|Gold}}
+| rowspan="3" | [[File:Dark Cave 1 GSC.png|195px]]
+| rowspan="3" | [[File:Dark Cave 2 GSC.png|180px]]
+|-
+! style="background:#{{silver color}}" | {{color2|000|Pokémon Gold and Silver Versions|Silver}}
+|-
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon Crystal Version|Crystal}}
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+| rowspan="2" | [[File:Dark Cave 1 HGSS.png|200px]]
+| rowspan="2" | [[File:Dark Cave 2 HGSS.png|200px]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan="3" style="background:#{{locationcolor/light|cave}}; {{roundybottom|5px}}" | &nbsp;
+|}
+
+==[[Location preview|Preview]]==
+<gallery perrow=3>
+HGSS Dark Cave-Route 31-Morning.png|Route 31, Morning (Dunsparce)
+HGSS Dark Cave-Route 31-Day.png|Route 31, Day/Evening (Dunsparce)
+HGSS Dark Cave-Route 31-Night.png|Route 31, Night (Dunsparce)
+HGSS Dark Cave-Route 45-Morning.png|Route 45, Morning (Wobbuffet)
+HGSS Dark Cave-Route 45-Day.png|Route 45, Day/Evening (Wobbuffet)
+HGSS Dark Cave-Route 45-Night.png|Route 45, Night (Wobbuffet)
+</gallery>
+
+==Walking Pokémon effects==
+When interacting with [[walking Pokémon]] in {{v2|HeartGold and SoulSilver|s}}, the Pokémon may occasionally show an altered mood specific to this location.
+*{{type|Ice}} Pokémon become happy that it's become a bit cold.
+*Non-{{type|Ice}} walking Pokémon become angry that they feel a bit cold and sometimes bump into the {{player}}.
+
+==In other languages==
+{{langtable|color={{locationcolor/light|cave}}|bordercolor={{locationcolor/dark|cave}}
+|zh_yue=黑暗穴 ''{{tt|Hākam Yuht|Dark Cave}}''
+|zh_cmn=黑暗穴 ''{{tt|Hēiàn Xuè / Hēiàn Xué|Dark Cave}}''
+|nl=Duistere Grot
+|fr=Antre Noir{{sup/4|HGSS}}<br>Antre Noire{{sup/2|GSC}}
+|de=Dunkelhöhle<br>Finsterhöhle{{tt|*|Webster's mail in Gold and Silver}}
+|it=Grotta Scura<br>Gr.Scura{{tt|*|Webster's mail in Generation II}}
+|ko=어둠의 동굴 ''{{tt|Eodum-ui Donggul|Dark Cave}}''
+|es=Cueva Oscura
+}}
+
+==References==
+*[http://www.psypokes.com/dex/index.php Psypoke Psydex] - Pokémon catch rates
+
+==Related articles==
+{{Johto}}
+{{-}}
+{{Project Routes notice}}
+
+[[Category:Johto locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Caves]]
+[[Category:Routes]]
+
+[[de:Dunkelhöhle]]
+[[es:Cueva Oscura]]
+[[fr:Antre Noir]]
+[[it:Grotta Scura]]
+[[ja:くらやみのほらあな]]
+[[zh:黑暗洞穴]]

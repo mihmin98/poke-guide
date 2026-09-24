@@ -1,0 +1,201 @@
+<!-- poke-guide fixture: {"title":"Johto Route 29","resolvedTitle":"Johto Route 29","revid":4614002,"timestamp":"2026-08-17T21:35:18Z","fetchedAt":"2026-09-23T16:33:53.055Z"} -->
+{{Route infobox
+|number=29
+|imageII=Johto Route 29 GSC.png
+|image=Johto Route 29 HGSS.png
+|type=land
+|north=Route 46
+|regionnorth=Johto
+|west=Cherrygrove City
+|east=New Bark Town
+|region=Johto
+|prev=Route 28
+|regionprev=Kanto
+|cut=yes
+|mapdesc=A road that begins a journey. The road smells like freshly cut grass.
+|generation=2
+}}
+'''Route 29''' (Japanese: '''２９ばんどうろ''' ''Route 29'') is a route in southern [[Johto]], connecting [[New Bark Town]] and [[Cherrygrove City]]. The southern part of {{rt|46|Johto}} can also be accessed from this route. This is the first route the {{player}} reaches after receiving a [[first partner Pokémon]] from [[Professor Elm]] in New Bark Town.
+
+==Route description==
+Just outside of New Bark Town, the player will meet [[Dude]], who teaches players how to capture Pokémon. Dude will turn any player who has not yet received a Pokémon from Professor Elm away from the rest of Route 29. In [[Generation IV]], the Dude is replaced by either {{ga|Lyra}} or {{ga|Ethan}}.
+
+Route 29 leads west from New Bark Town, traveling through multiple patches of [[tall grass]]. The path then opens up at an intersection. To the west is a [[Cuttable plant|cuttable tree]], beyond which is a more direct path to Cherrygrove City with no tall grass. Trainers without access to {{m|Cut}} must instead take the northern path through a break in a ledge.
+
+Once [[Falkner]], the [[Violet City]] [[Gym Leader]], has been defeated, [[Week Siblings|Tuscany]] can be found at this location on Tuesdays. The first time the player meets her, she will give them a [[Pink Bow]] in [[Generation II]] or a [[Twisted Spoon|TwistedSpoon]] in Generation IV. In Generation IV, if the player has met all of the Week Siblings, Tuscany will give a {{DL|List of Ribbons in the games|Shock Ribbon}} the second time she is spoken to and any time afterward.
+
+Just north of the intersection, Trainers will find another shortcut behind a second cuttable tree, which can be used to avoid two grass patches to the northeast. Trainers lacking Cut are forced to traverse either of the two grass patches. Regardless of which way a Trainer takes, the route curves to the west, passing a gate which leads north to Route 46. Route 29 continues west past the gate, leading Trainers through more tall grass before entering Cherrygrove City.
+
+Similar to {{rt|1|Kanto}} in [[Kanto]], Trainers traveling east from Cherrygrove to New Bark Town can hop over a series of [[ledge]]s to avoid tall grass, allowing them to travel quicker between the two areas.
+
+==Items==
+{{Itlisth|land}}
+{{Itemlist|Potion|East of the northeasternmost [[tall grass|grass]] patch|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|None|Northwest of the northwesternmost [[tall grass|grass]] patch, on the [[Berry]] tree on a plateau (daily)|G=yes|S=yes|C=yes|display={{i|Berry}}}}
+{{Itemlist|Green Apricorn|Northwest of the northwesternmost [[tall grass|grass]] patch, on the [[Apricorn]] tree on a plateau (requires [[Apricorn Box]]) (daily)|HG=yes|SS=yes|display=[[Green Apricorn|Grn Apricorn]]}}
+{{Itemlist|Poké Ball|Gift from {{ga|Lyra}}/{{ga|Ethan}} after teaching the {{player}} how to catch {{OBP|Pokémon|species}}|HG=yes|SS=yes|display={{i|Poké Ball}} ×5}}
+{{Itemlist|none|From [[Week Siblings|Tuscany]] after earning the {{badge|Zephyr}}{{dotw|Tu}}|G=yes|S=yes|C=yes|display=[[Pink Bow]]}}
+{{Itemlist|Twisted Spoon|From [[Week Siblings|Tuscany]] after earning the {{badge|Zephyr}}{{dotw|Tu}}|HG=yes|SS=yes|display=[[Twisted Spoon|TwistedSpoon]]}}
+{{Itemlist|none|sprite=Shock Ribbon|From [[Week Siblings|Tuscany]] after meeting all the [[Week Siblings]]{{dotw|Tu}}|HG=yes|SS=yes|display={{DL|List of Ribbons in the games|Shock Ribbon}}}}
+{{Itlistfoot|land}}
+
+==Pokémon==
+===Generation II===
+{{Catch/header|land|yes}}
+{{Catch/entry2|016|Pidgey|yes|yes|no|Grass|2-4|55%|55%|0%|type1=normal|type2=flying}}
+{{Catch/entry2|016|Pidgey|no|no|yes|Grass|2-3|50%|50%|0%|type1=normal|type2=flying}}
+{{Catch/entry2|019|Rattata|yes|yes|no|Grass|4|5%|5%|0%|type1=normal}}
+{{Catch/entry2|019|Rattata|yes|yes|no|Grass|2,4|0%|0%|15%|type1=normal}}
+{{Catch/entry2|019|Rattata|no|no|yes|Grass|2|5%|5%|0%|type1=normal}}
+{{Catch/entry2|019|Rattata|no|no|yes|Grass|2-3|0%|0%|45%|type1=normal}}
+{{Catch/entry2|161|Sentret|yes|yes|yes|Grass|2-3|40%|40%|0%|type1=normal}}
+{{Catch/entry2|163|Hoothoot|yes|yes|no|Grass|2-4|0%|0%|85%|type1=normal|type2=flying}}
+{{Catch/entry2|163|Hoothoot|no|no|yes|Grass|2-3|0%|0%|55%|type1=normal|type2=flying}}
+{{Catch/entry2|187|Hoppip|no|no|yes|Grass|3|5%|5%|0%|type1=grass|type2=flying}}
+{{Catch/div|land|{{color2|000|Headbutt tree}}<br><small>(Moderate chances of battle)</small>}}
+{{Catch/entry2|021|Spearow|yes|yes|no|Headbutt|10|all=80%|type1=Normal|type2=Flying}}
+{{Catch/entry2|102|Exeggcute|no|no|yes|Headbutt|10|all=20%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|163|Hoothoot|no|no|yes|Headbutt|10|all=50%|type1=Normal|type2=Flying}}
+{{Catch/entry2|165|Ledyba|no|no|yes|Headbutt|10|all=15%|type1=Bug|type2=Flying}}
+{{Catch/entry2|167|Spinarak|no|no|yes|Headbutt|10|all=15%|type1=Bug|type2=Poison}}
+{{Catch/entry2|190|Aipom|yes|yes|no|Headbutt|10|all=20%|type1=Normal}}
+{{Catch/div|land|{{color2|000|Headbutt tree}}<br><small>(Low chances of battle)</small>}}
+{{Catch/entry2|021|Spearow|yes|yes|no|Headbutt|10|all=50%|type1=Normal|type2=Flying}}
+{{Catch/entry2|102|Exeggcute|no|no|yes|Headbutt|10|all=20%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|163|Hoothoot|no|no|yes|Headbutt|10|all=50%|type1=Normal|type2=Flying}}
+{{Catch/entry2|190|Aipom|yes|yes|no|Headbutt|10|all=20%|type1=Normal}}
+{{Catch/entry2|204|Pineco|no|no|yes|Headbutt|10|all=30%|type1=Bug}}
+{{Catch/entry2|214|Heracross|yes|yes|no|Headbutt|10|all=30%|type1=Bug|type2=Fighting}}
+{{Catch/footer|land}}
+
+===Generation IV===
+{{Catch/header|land|yes}}
+{{Catch/entryhs|016|Pidgey|yes|yes|Grass|2-4|55%|55%|0%|type1=normal|type2=flying}}
+{{Catch/entryhs|019|Rattata|yes|yes|Grass|4|5%|5%|0%|type1=normal}}
+{{Catch/entryhs|019|Rattata|yes|yes|Grass|2, 4|0%|0%|15%|type1=normal}}
+{{Catch/entryhs|161|Sentret|yes|yes|Grass|2-3|40%|40%|0%|type1=normal}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Grass|2-4|0%|0%|85%|type1=normal|type2=flying}}
+{{Catch/div|land|Headbutt<br/><small>Group A</small>}}
+{{Catch/entryhs|102|Exeggcute|yes|yes|Headbutt|2-3|all=20%|type1=Grass|type2=Psychic|10=j}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|2-3|all=50%|type1=Normal|type2=Flying|10=j}}
+{{Catch/entryhs|204|Pineco|yes|yes|Headbutt|2-3|all=30%|type1=Bug|10=j}}
+{{Catch/div|land|Headbutt<br/><small>Group B</small>}}
+{{Catch/entryhs|102|Exeggcute|yes|yes|Headbutt|4-5|all=20%|type1=Grass|type2=Psychic|10=j}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|4-5|all=50%|type1=Normal|type2=Flying|10=j}}
+{{Catch/entryhs|165|Ledyba|no|yes|Headbutt|4-5|all=30%|type1=Bug|type2=Flying|10=j}}
+{{Catch/entryhs|167|Spinarak|yes|no|Headbutt|4-5|all=30%|type1=Bug|type2=Poison|10=j}}
+{{Catch/div|land|Special}}
+{{Catch/entryhs|311|Plusle|yes|yes|Hoenn|3|all=20%|type1=Electric}}
+{{Catch/entryhs|312|Minun|yes|yes|Hoenn|2-3|all=20%|type1=Electric}}
+{{Catch/entryhs|403|Shinx|yes|yes|Sinnoh|2-3|all=40%|type1=Electric}}
+{{Catch/footer|land}}
+
+==Walking Pokémon effects==
+When interacting with [[walking Pokémon]] in {{v2|HeartGold and SoulSilver|s}}, the Pokémon may occasionally show an [[List of walking Pokémon responses in Generation IV|altered response]] specific to this location.
+
+{| class="roundtable" style="margin: auto; text-align: center; background-color: #{{locationcolor/med|land}}; border: 3px solid #{{locationcolor/dark|land}}"
+|- style="background:#{{locationcolor/light|land}}"
+! Games
+! Pokémon
+! Area
+! Quote
+|- style="background-color: #FFF"
+! rowspan="8" | {{GameIcon|HG}}{{GameIcon|SS}}
+| All
+| Anywhere
+| ''<Pokémon's name> looks like it wants to lead!''
+|- style="background-color: #FFF"
+| All
+| Anywhere
+| ''<Pokémon's name> is blankly staring in this direction... Want to call its name?''
+|- style="background-color: #FFF"
+| rowspan=2 | [[File:Ani152OD.png]]<br>{{p|Chikorita}}
+| rowspan=2 | Anywhere
+| ''<Pokémon's name> is making its leaf twitch.''
+|- style="background-color: #FFF"
+| ''<Pokémon's name> is waving its leaf around.''
+|- style="background-color: #FFF"
+| rowspan=2 | [[File:Ani155OD.png]]<br>{{p|Cyndaquil}}
+| rowspan=2 | Anywhere
+| ''<Pokémon's name> blew out a fireball.''
+|- style="background-color: #FFF"
+| ''<Pokémon's name> blew out a couple of fireballs.''
+|- style="background-color: #FFF"
+| rowspan=2 | [[File:Ani158OD.png]]<br>{{p|Totodile}}
+| rowspan=2 | Anywhere
+| ''<Pokémon's name> is moving its jaw.''
+|- style="background-color: #FFF"
+| ''<Pokémon's name> is opening and closing its mouth.''
+|}
+
+==Music==
+{| class="roundtable" style="margin:auto; text-align: center; background: #{{locationcolor/med|land}}; border: 3px solid #{{locationcolor/dark|land}}"
+|- style="background:#{{locationcolor/light|land}}"
+! Games
+! Situation
+! Song name
+! Song name
+! Composition
+! Arrangement
+|- style="background:#FFF"
+! {{GameIcon|G}}{{GameIcon|S}}{{GameIcon|C}}
+| Everywhere
+| 29ばんどうろ
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Route 29]]
+| [[Junichi Masuda]]
+| [[Junichi Masuda]]
+|-
+|- style="background:#FFF"
+! rowspan=3 | {{GameIcon|HG}}{{GameIcon|SS}}
+| Everywhere
+| 29ばんどうろ
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Route 29]] || [[Junichi Masuda]] || [[Go Ichinose]]<br><small>[[GB Sounds]]:</small> [[Junichi Masuda]]
+|-
+| When encountering Ethan{{tt|*|If the player character is female}}
+| ヒビキ
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Ethan]]
+| [[Shota Kageyama]]
+| [[Shota Kageyama]]
+|-
+| When encountering Lyra{{tt|*|If the player character is male}}
+| コトネ
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Lyra]]
+| [[Shota Kageyama]]
+| [[Shota Kageyama]]
+|}
+
+==In animation==
+[[File:Johto Route 29 anime.png|thumb|250px|Route 29 in {{aniseries|GS}}]]
+===''Pokémon the Series''===
+===={{aniseries|GS}}====
+Route 29 first appeared in ''[[EP118|The Double Trouble Header]]'', where {{Ash}} and {{ashfr}} encountered a rookie {{pkmn|Trainer}} named {{an|Casey}}. Ash {{pkmn|battle}}d her twice, first time easily defeating her with his {{AP|Charizard}}, while the second battle, which took place at a [[baseball]] stadium, was interrupted by {{TRT}}.
+
+The route also served as the setting of the next several episodes. In ''[[EP119|A Sappy Ending]]'', Ash {{pkmn2|caught}} himself a {{AP|Heracross}}. In ''[[EP120|Roll On, Pokémon!]]'', the group encountered a woman named [[Rochelle]] and her {{p|Donphan}}, whom she used to search for {{wp|agate}} (a fictional mineral called amberite in the [[dub]]). In ''[[EP121|Illusion Confusion!]]'', the group met up with {{Gary}} while traversing through a forest filled with illusion-creating {{t|Ghost}} Pokémon. In ''[[EP126|The Chikorita Rescue]]'', Ash encountered and caught himself a sassy {{AP|Chikorita}}.
+
+[[Florando]], [[Catallia City]], [[Palm Hills]], and [[EP125|an unnamed city]] are located on this route.
+{{-}}
+
+==In the manga==
+[[File:Johto Route 29 Golden Boys.png|thumb|230px|Route 29 in [[Pokémon Gold & Silver: The Golden Boys]]]]
+===Pokémon Gold & Silver: The Golden Boys===
+Route 29 appeared in ''[[GB01|Let's Go! The Journey Towards The Championship]]''. After winning a {{pkmn|battle}} against {{tc|Youngster}} [[Joey]], {{GnB|Gold}} gave an injured {{TP|Gold|Pidgey}} a {{i|Berry}} to help it recover. Just as he parted ways with Joey, Gold was attacked by {{GnB|Black}}, who had stolen a {{TP|Black|Chikorita}} from [[Professor Elm]]'s laboratory. When [[Gold's Totodile]] was about to lose, the Pidgey from before returned and helped to defeat Chikorita. Black then declared Gold as his [[rival]], swearing to defeat him if they ever crossed paths again.
+
+===Pokémon Pocket Monsters===
+Route 29 was mentioned in ''[[PM067|A Finger Lickin' Battle!]]''.
+{{-}}
+
+==Related articles==
+{{Johto}}<br>
+{{Project Routes notice}}
+
+[[Category:Johto locations|Route 029]]
+[[Category:Routes|Route 029]]
+[[Category:Gold, Silver and Crystal locations|Route 029]]
+[[Category:HeartGold and SoulSilver locations|Route 029]]
+
+[[de:Route 29 (Johto)]]
+[[es:Ruta 29]]
+[[fr:Route 29]]
+[[it:Percorso 29 (Johto)]]
+[[ja:29ばんどうろ (ジョウト地方)]]
+[[zh:２９号道路（城都）]]

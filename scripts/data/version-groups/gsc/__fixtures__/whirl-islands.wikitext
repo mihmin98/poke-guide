@@ -1,0 +1,587 @@
+<!-- poke-guide fixture: {"title":"Whirl Islands","resolvedTitle":"Whirl Islands","revid":4615440,"timestamp":"2026-08-19T01:23:30Z","fetchedAt":"2026-09-23T16:33:53.055Z"} -->
+{{Infobox location
+|image=HGSS Whirl Islands-{{#switch: {{#time: G}}|4|5|6|7|8|9=Morning|10|11|12|13|14|15|16=Day|17|18|19=Evening|20|21|22|23|0|1|2|3=Night}}.png
+|image_size=256
+|type=water
+|mapdesc=Four islands that are protected by whirlpools and are difficult to reach.
+|location_name=Whirl Islands
+|japanese_name=うずまき島
+|translated_name=Whirlpool Islands
+|location={{rt|41|Johto}}
+|region=Johto
+|generation={{Gen|II}}, {{Gen|IV}} 
+}}
+
+The '''Whirl Islands''' (Japanese: '''うずまき{{ruby|島|じま}}''' ''Whirlpool Islands'') are a small archipelago located between the mainland of [[Johto]] and [[Cianwood City]], on {{rt|41|Johto}}. Beneath the sea, a maze of dark caves sprawl, with explorers able to travel between the four islands with some amount of difficulty. If the {{player}} has obtained the [[Silver Feather|Silver Wing]] and [[Tidal Bell]]{{sup/4|SS}}, {{p|Lugia}} can be found by entering the northeast island.
+
+Named after the dangerous {{OBP|whirlpool|obstacle}}s that surround them, some parts of the Whirl Islands are mysterious and largely inaccessible. Children in [[Olivine City]] are told that bad kids are sent to the islands.
+
+As explained in {{game|HeartGold and SoulSilver|s|Pokémon SoulSilver}}, the Whirl Islands used to be one large island. At some point in time, there were two countries fighting over the island. Lugia, the guardian of the island, got upset and cast lightning bolts to tear the island into four pieces. It then disappeared into the deep end of the {{OBP|waterfall|obstacle}} basin, longing for the invisible trust between people and Pokémon to manifest once more.
+
+==Items==
+{{itlisth|water}}
+{{Itemlist|Guard Spec.|Southwestern island section|G=yes|S=yes}}
+{{Itemlist|Full Restore|
+* B1F; southeast of northwest island ladder
+* B1F west; in the isolated boulder ''(hidden)''
+|G=yes|S=yes|C=yes|display=[[Full Restore]] ×2}}
+{{Itemlist|Ultra Ball|B1F east; northeast of southeast island ladder ''(hidden)''|G=yes|S=yes|C=yes}}
+{{Itemlist|Rare Candy|B1F northeast; northeast of northeast island ladder ''(hidden)''|G=yes|S=yes|C=yes}}
+{{Itemlist|Carbos|B1F; southwest of northwest island ladder|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Nugget|B1F; near center of northern edge of room|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Ultra Ball|Northeast island entrance; next to southern ladder|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Calcium|B1F; northeast of southeast island ladder|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Escape Rope|B1F; east of southwest island ladder|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Max Revive|B2F; west of main ladder located at the top|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Max Elixir|B2F; southwest of ladder in enclosed section|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Full Restore|B2F; east of ladder in enclosed section|G=yes|S=yes|C=yes}}
+{{Itemlist|Full Restore|B2F; northeast of ladder in enclosed section|HG=yes|SS=yes}}
+{{Itemlist|Ultra Ball|Southwest island entrance; east section|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Rare Candy|Southeast island entrance; in rock in northwest corner ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Pearl|B1F; in rock east of northwest ladder ''(hidden)''|HG=yes|SS=yes|display={{i|Pearl}}}}
+{{Itemlist|Full Restore|B1F; southeast of northwest ladder|HG=yes|SS=yes}}
+{{Itemlist|Revive|B1F; in a rock south of northeast ladder ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Super Repel|B1F; on rock west of northeast ladder ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Ultra Ball|B1F; in wall northwest of southeast ladder ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Full Restore|B2F; in wall northwest of main ladder ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Rare Candy|Ledge overlooking Lugia's chamber|HG=yes|SS=yes}}
+{{itlistfoot|water}}
+
+==Pokémon==
+===Generation II===
+====1F====
+{{Catch/header|water}}
+{{Catch/entry2|041|Zubat|yes|yes|yes|Cave|23|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|yes|yes|no|Cave|23|all=5%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|25|5%|5%|0%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|24-25|0%|0%|10%|type1=Poison|type2=Flying}}
+{{Catch/entry2|086|Seel|yes|yes|no|Cave|22,24|all=15%|type1=Water}}
+{{Catch/entry2|086|Seel|no|no|yes|Cave|22,24|25%|25%|0%|type1=Water}}
+{{Catch/entry2|098|Krabby|yes|yes|no|Cave|22,24|all=50%|type1=Water}}
+{{Catch/entry2|098|Krabby|no|no|yes|Cave|22,24|40%|40%|60%|type1=Water}}
+{{Catch/div|water|Surfing}}
+{{Catch/entry2|072|Tentacool|yes|yes|yes|Surf|20-24|all=60%|type1=Water|type2=Poison}}
+{{Catch/entry2|073|Tentacruel|yes|yes|yes|Surf|20-24|all=10%|type1=Water|type2=Poison}}
+{{Catch/entry2|116|Horsea|yes|yes|yes|Surf|15-19|all=30%|type1=Water}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry2|098|Krabby|yes|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entry2|098|Krabby|yes|yes|yes|Fish Good|20|all=55%|type1=Water}}
+{{Catch/entry2|116|Horsea|yes|yes|yes|Fish Good|20|all=10%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=Water}}
+{{Catch/entry2|098|Krabby|yes|yes|yes|Fish Super|40|all=40%|type1=Water}}
+{{Catch/entry2|099|Kingler|yes|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{Catch/entry2|116|Horsea|yes|yes|yes|Fish Super|40|all=30%|type1=Water}}
+{{Catch/entry2|117|Seadra|yes|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{Catch/footer|water}}
+
+====B1F====
+{{Catch/header|water}}
+{{Catch/entry2|041|Zubat|yes|yes|yes|Cave|24|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|yes|yes|no|Cave|24|all=5%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|26|5%|5%|0%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|25-26|0%|0%|10%|type1=Poison|type2=Flying}}
+{{Catch/entry2|086|Seel|yes|yes|no|Cave|23,25|all=15%|type1=Water}}
+{{Catch/entry2|086|Seel|no|no|yes|Cave|23,25|25%|25%|0%|type1=Water}}
+{{Catch/entry2|098|Krabby|yes|yes|no|Cave|23,25|all=50%|type1=Water}}
+{{Catch/entry2|098|Krabby|no|no|yes|Cave|23,25|40%|40%|60%|type1=Water}}
+{{Catch/footer|water}}
+
+====B2F====
+{{Catch/header|water}}
+{{Catch/entry2|041|Zubat|yes|yes|no|Cave|24|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entry2|041|Zubat|no|no|yes|Cave|25|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|yes|yes|no|Cave|24|all=5%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|27|5%|5%|0%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|26-27|0%|0%|10%|type1=Poison|type2=Flying}}
+{{Catch/entry2|086|Seel|yes|yes|no|Cave|23,25|all=15%|type1=Water}}
+{{Catch/entry2|086|Seel|no|no|yes|Cave|24,26|25%|25%|0%|type1=Water}}
+{{Catch/entry2|098|Krabby|yes|yes|no|Cave|23,25|all=50%|type1=Water}}
+{{Catch/entry2|098|Krabby|no|no|yes|Cave|24,26|40%|40%|60%|type1=Water}}
+{{Catch/div|water|Surfing}}
+{{Catch/entry2|073|Tentacruel|yes|yes|yes|Surf|20-24|all=10%|type1=Water|type2=Poison}}
+{{Catch/entry2|116|Horsea|yes|yes|yes|Surf|15-24|all=90%|type1=Water}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry2|098|Krabby|yes|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entry2|098|Krabby|yes|yes|yes|Fish Good|20|all=55%|type1=Water}}
+{{Catch/entry2|116|Horsea|yes|yes|yes|Fish Good|20|all=10%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=Water}}
+{{Catch/entry2|098|Krabby|yes|yes|yes|Fish Super|40|all=40%|type1=Water}}
+{{Catch/entry2|099|Kingler|yes|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{Catch/entry2|116|Horsea|yes|yes|yes|Fish Super|40|all=30%|type1=Water}}
+{{Catch/entry2|117|Seadra|yes|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{Catch/footer|water}}
+
+====B2F (Inner Cave)====
+{{Catch/header|water}}
+{{Catch/entry2|041|Zubat|yes|yes|no|Cave|25|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entry2|041|Zubat|no|no|yes|Cave|26|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|yes|yes|no|Cave|25|all=5%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|28|5%|5%|0%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|27-28|0%|0%|10%|type1=Poison|type2=Flying}}
+{{Catch/entry2|086|Seel|yes|yes|no|Cave|24,26|all=15%|type1=Water}}
+{{Catch/entry2|086|Seel|no|no|yes|Cave|25,27|25%|25%|0%|type1=Water}}
+{{Catch/entry2|098|Krabby|yes|yes|no|Cave|24,26|all=50%|type1=Water}}
+{{Catch/entry2|098|Krabby|no|no|yes|Cave|25,27|40%|40%|60%|type1=Water}}
+{{Catch/div|water|Surfing}}
+{{Catch/entry2|073|Tentacruel|yes|yes|yes|Surf|20-24|all=30%|type1=Water|type2=Poison}}
+{{Catch/entry2|116|Horsea|yes|yes|yes|Surf|20-24|all=60%|type1=Water}}
+{{Catch/entry2|117|Seadra|yes|yes|yes|Surf|20-24|all=10%|type1=Water}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry2|098|Krabby|yes|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entry2|098|Krabby|yes|yes|yes|Fish Good|20|all=55%|type1=Water}}
+{{Catch/entry2|116|Horsea|yes|yes|yes|Fish Good|20|all=10%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=Water}}
+{{Catch/entry2|098|Krabby|yes|yes|yes|Fish Super|40|all=40%|type1=Water}}
+{{Catch/entry2|099|Kingler|yes|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{Catch/entry2|116|Horsea|yes|yes|yes|Fish Super|40|all=30%|type1=Water}}
+{{Catch/entry2|117|Seadra|yes|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{Catch/footer|water}}
+
+===Generation IV===
+====1F-B1F====
+{{Catch/header|water|4}}
+{{Catch/entryhs|041|Zubat|yes|yes|Cave|23|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|042|Golbat|yes|yes|Cave|23|all=5%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|086|Seel|yes|yes|Cave|22, 24|all=15%|type1=Water}}
+{{Catch/entryhs|098|Krabby|yes|yes|Cave|22, 24|all=50%|type1=Water}}
+{{Catch/div|water|Surfing}}
+{{Catch/entryhs|072|Tentacool|yes|yes|Surf|15-25|all=60%|type1=Water|type2=Poison}}
+{{Catch/entryhs|073|Tentacruel|yes|yes|Surf|15-25|all=10%|type1=Water|type2=Poison}}
+{{Catch/entryhs|116|Horsea|yes|yes|Surf|10-20|all=30%|type1=Water}}
+{{Catch/div|water|Fishing}}
+{{Catch/entryhs|098|Krabby|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entryhs|098|Krabby|yes|yes|Fish Good|20|all=50%|type1=Water}}
+{{Catch/entryhs|116|Horsea|yes|yes|Fish Good|20|all=10%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{Catch/entryhs|098|Krabby|yes|yes|Fish Super|40|all=40%|type1=Water}}
+{{Catch/entryhs|099|Kingler|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{Catch/entryhs|116|Horsea|yes|yes|Fish Super|40|all=30%|type1=Water}}
+{{Catch/entryhs|117|Seadra|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{Catch/div|water|Special}}
+{{Catch/entryhs|296|Makuhita|yes|yes|Hoenn|24|all=20%|type1=Fighting}}
+{{Catch/entryhs|359|Absol|yes|yes|Hoenn|22-23|all=20%|type1=Dark}}
+{{Catch/entryhs|433|Chingling|yes|yes|Sinnoh|24|all=20%|type1=Psychic}}
+{{Catch/entryhs|436|Bronzor|yes|yes|Sinnoh|22-23|all=20%|type1=Steel|type2=Psychic}}
+{{Catch/footer|water}}
+
+====B2F====
+{{Catch/header|water|4}}
+{{Catch/entryhs|041|Zubat|yes|yes|Cave|23|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|042|Golbat|yes|yes|Cave|23|all=5%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|086|Seel|yes|yes|Cave|22, 24|all=15%|type1=Water}}
+{{Catch/entryhs|098|Krabby|yes|yes|Cave|22, 24|all=50%|type1=Water}}
+{{Catch/div|water|Surfing}}
+{{Catch/entryhs|073|Tentacruel|yes|yes|Surf|15-25|all=30%|type1=Water|type2=Poison}}
+{{Catch/entryhs|116|Horsea|yes|yes|Surf|15-25|all=60%|type1=Water}}
+{{Catch/entryhs|117|Seadra|yes|yes|Surf|15-30|all=10%|type1=Water}}
+{{Catch/div|water|Fishing}}
+{{Catch/entryhs|098|Krabby|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entryhs|098|Krabby|yes|yes|Fish Good|20|all=50%|type1=Water}}
+{{Catch/entryhs|116|Horsea|yes|yes|Fish Good|20|all=10%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{Catch/entryhs|098|Krabby|yes|yes|Fish Super|40|all=40%|type1=Water}}
+{{Catch/entryhs|099|Kingler|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{Catch/entryhs|116|Horsea|yes|yes|Fish Super|40|all=30%|type1=Water}}
+{{Catch/entryhs|117|Seadra|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{Catch/div|water|Special}}
+{{Catch/entryhs|296|Makuhita|yes|yes|Hoenn|24|all=20%|type1=Fighting}}
+{{Catch/entryhs|359|Absol|yes|yes|Hoenn|22-23|all=20%|type1=Dark}}
+{{Catch/entryhs|433|Chingling|yes|yes|Sinnoh|24|all=20%|type1=Psychic}}
+{{Catch/entryhs|436|Bronzor|yes|yes|Sinnoh|22-23|all=20%|type1=Steel|type2=Psychic}}
+{{Catch/footer|water}}
+
+====B3F====
+{{Catch/header|water|4}}
+{{Catch/entryhs|041|Zubat|yes|yes|Cave|24|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|042|Golbat|yes|yes|Cave|24|all=5%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|086|Seel|yes|yes|Cave|23, 25|all=15%|type1=Water}}
+{{Catch/entryhs|098|Krabby|yes|yes|Cave|23, 25|all=50%|type1=Water}}
+{{Catch/div|water|Special}}
+{{Catch/entryhs|296|Makuhita|yes|yes|Hoenn|25|all=20%|type1=Fighting}}
+{{Catch/entryhs|359|Absol|yes|yes|Hoenn|23-24|all=20%|type1=Dark}}
+{{Catch/entryhs|433|Chingling|yes|yes|Sinnoh|25|all=20%|type1=Psychic}}
+{{Catch/entryhs|436|Bronzor|yes|yes|Sinnoh|23-24|all=20%|type1=Steel|type2=Psychic}}
+{{Catch/footer|water}}
+
+==Special encounters==
+===Generation II===
+A {{p|Lugia}} appears on B2F if the [[Silver Feather|Silver Wing]] is in the bag.
+
+{{Pokémon/Grid}}
+{{Pokémon
+|caption='''Gold'''
+|gen=2
+|ndex=0249
+|pokemon=Lugia
+|type1=Psychic
+|type2=Flying
+|level=70
+|move1=Recover|move1type=Normal
+|move2=Hydro Pump|move2type=Water
+|move3=Rain Dance|move3type=Water
+|move4=Swift|move4type=Normal}}
+{{Pokémon
+|caption='''Silver'''
+|gen=2
+|ndex=0249
+|pokemon=Lugia
+|type1=Psychic
+|type2=Flying
+|level=40
+|move1=Aeroblast|move1type=Flying
+|move2=Safeguard|move2type=Normal
+|move3=Gust|move3type=Flying
+|move4=Recover|move4type=Normal}}
+{{Pokémon
+|caption='''Crystal'''
+|gen=2
+|ndex=0249
+|pokemon=Lugia
+|type1=Psychic
+|type2=Flying
+|level=60
+|move1=Gust|move1type=Flying
+|move2=Recover|move2type=Normal
+|move3=Hydro Pump|move3type=Water
+|move4=Rain Dance|move4type=Water}}
+{{Pokémon/Grid/end}}
+
+===Pokémon HeartGold and SoulSilver===
+A {{p|Lugia}} appears on B3F if the [[Silver Feather|Silver Wing]] is in the bag. If defeated or run from, it respawns after the player enters the [[Hall of Fame]].
+
+{{Pokémon/Grid}}
+{{Pokémon
+|caption='''HeartGold'''
+|gen=4
+|ndex=0249
+|pokemon=Lugia
+|type1=Psychic
+|type2=Flying
+|ability=Pressure
+|level=70
+|move1=Aeroblast|move1type=Flying|move1cat=Special
+|move2=Punishment|move2type=Dark|move2cat=Physical
+|move3=AncientPower|move3type=Rock|move3cat=Special
+|move4=Safeguard|move4type=Normal|move4cat=Status}}
+{{Pokémon
+|caption='''SoulSilver'''
+|gen=4
+|ndex=0249
+|pokemon=Lugia
+|type1=Psychic
+|type2=Flying
+|ability=Pressure
+|level=45
+|move1=Extrasensory|move1type=Psychic|move1cat=Special
+|move2=Rain Dance|move2type=Water|move2cat=Status
+|move3=Hydro Pump|move3type=Water|move3cat=Special
+|move4=Aeroblast|move4type=Flying|move4cat=Special}}
+{{Pokémon/Grid/end}}
+<gallery widths=256px heights=192px>
+Summoning Lugia.png|Kimono Girls summoning Lugia inside the Whirl Islands in SoulSilver
+Lugia Whirl HGSS.png|Lugia in the Whirl Islands in SoulSilver
+Lugia in SoulSilver.png|After the cutscene
+</gallery>
+
+==Layout==
+===Generation II===
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{Locationcolor/dark|water}}"
+|-
+! style="background:#{{Locationcolor/light|water}}; {{roundytl|5px}}" | Version
+! style="background:#{{Locationcolor/light|water}}" | 1F Northwest
+! style="background:#{{Locationcolor/light|water}}" | 1F Northeast
+! style="background:#{{Locationcolor/light|water}}" | 1F Southwest
+! style="background:#{{Locationcolor/light|water}}; {{roundytr|5px}}" | 1F Southeast
+|-
+! style="background:#{{gold color}}" | {{color2|000|Pokémon Gold and Silver Versions|Gold}}
+| rowspan="3" | [[File:Whirl Islands 1F NW GSC.png|130px]]
+| rowspan="3" | [[File:Whirl Islands 1F NE GSC.png|170px]]
+| rowspan="3" | [[File:Whirl Islands 1F SW GSC.png|170px]]
+| rowspan="3" | [[File:Whirl Islands 1F SE GSC.png|130px]]
+|-
+! style="background:#{{silver color}}" | {{color2|000|Pokémon Gold and Silver Versions|Silver}}
+|-
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon Crystal Version|Crystal}}
+|-
+| colspan="5" style="background:#{{Locationcolor/light|water}}; {{roundybottom|5px}}" | &nbsp; 
+|}
+{{-}}
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{Locationcolor/dark|water}}"
+|-
+! style="background:#{{Locationcolor/light|water}}; {{roundytl|5px}}" | Version 
+! style="background:#{{Locationcolor/light|water}}" | B1F
+! style="background:#{{Locationcolor/light|water}}" | B1F Middle
+! style="background:#{{Locationcolor/light|water}}" | B2F
+! style="background:#{{Locationcolor/light|water}}; {{roundytr|5px}}" | B2F Inner
+|-
+! style="background:#{{gold color}}" | {{color2|000|Pokémon Gold and Silver Versions|Gold}}
+| rowspan="3" | [[File:Whirl Islands B1F GSC.png|170px]]
+| rowspan="3" | [[File:Whirl Islands B1F Middle GSC.png|130px]]
+| rowspan="3" | [[File:Whirl Islands B2F GSC.png|130px]]
+| rowspan="3" | [[File:Whirl Islands B2F Inner GSC.png|170px]]
+|-
+! style="background:#{{silver color}}" | {{color2|000|Pokémon Gold and Silver Versions|Silver}}
+|-
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon Crystal Version|Crystal}}
+|-
+| colspan="5" style="background:#{{Locationcolor/light|water}}; {{roundybottom|5px}}" | &nbsp; 
+|}
+
+===Generation IV===
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{Locationcolor/dark|water}}"
+|-
+! style="background:#{{Locationcolor/light|water}}; {{roundytl|5px}}" | Version
+! style="background:#{{Locationcolor/light|water}}" | 1F Northwest
+! style="background:#{{Locationcolor/light|water}}" | 1F Northeast
+! style="background:#{{Locationcolor/light|water}}" | 1F Southwest
+! style="background:#{{Locationcolor/light|water}}; {{roundytr|5px}}" | 1F Southeast
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+| rowspan="2" | [[File:Whirl Islands 1F NW HGSS.png|125px]]
+| rowspan="2" | [[File:Whirl Islands 1F NE HGSS.png|175px]]
+| rowspan="2" | [[File:Whirl Islands 1F SW HGSS.png|175px]]
+| rowspan="2" | [[File:Whirl Islands 1F SE HGSS.png|125px]]
+|-
+!  style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan="5" style="background:#{{Locationcolor/light|water}}; {{roundybottom|5px}}" | &nbsp; 
+|}
+{{-}}
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{Locationcolor/dark|water}}"
+|-
+! style="background:#{{Locationcolor/light|water}}; {{roundytl|5px}}" | Version 
+! style="background:#{{Locationcolor/light|water}}" | B1F
+! style="background:#{{Locationcolor/light|water}}" | B2F
+! style="background:#{{Locationcolor/light|water}}" | B3F
+! style="background:#{{Locationcolor/light|water}}; {{roundytr|5px}}" | B3F Lugia's Cave
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+| rowspan="2" | [[File:Whirl Islands B1F HGSS.png|200px]]
+| rowspan="2" | [[File:Whirl Islands B2F HGSS.png|90px]]
+| rowspan="2" | [[File:Whirl Islands B3F HGSS.png|160px]]
+| rowspan="2" | [[File:Whirl Islands B3F Lugia HGSS.png|150px]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan="5" style="background:#{{Locationcolor/light|water}}; {{roundybottom|5px}}" | &nbsp; 
+|}
+
+==[[Location preview|Preview]]==
+<gallery>
+File:HGSS Whirl Islands-Morning.png|Morning (Seadra)
+File:HGSS Whirl Islands-Day.png|Day/Evening (Seel)
+File:HGSS Whirl Islands-Night.png|Night (Tentacool)
+</gallery>
+
+==In animation==
+{{incomplete|section|needs=The Journey of One Dream}}
+[[File:Whirl Islands anime map.png|thumb|250px|Map of the Whirl Islands in {{aniseries|GS}}]]
+===''Pokémon the Series''===
+===={{aniseries|GS}}====
+In {{aniseries|PTS}}, instead of being deserted, the Whirl Islands contain many towns and other inhabitable areas. The Whirl Islands are home to the [[Whirl Cup]], a competition held once every three years for [[Pokémon Trainer]]s who [[Type expert|specialize]] in {{type|Water}} {{OBP|Pokémon|species}}.
+
+Rumors circulate that families of {{p|Lugia}} reside there. A mother Lugia and her baby, {{OBP|Silver|Lugia}}, were sought by [[Dr. Namba]] and did, in fact, reveal themselves.
+
+There are four main islands, with many smaller ones scattered throughout. Together, the islands in the archipelago form a spiral shape.
+
+The table below shows the islands which make up the Whirl Islands:
+
+{| cellpadding="2" style="margin:auto; text-align:center; background: #{{water color dark}}; {{roundy|5px}}; border:2px solid #{{water color}}"
+|-
+! style="color:#fff; background:#{{water color}}; {{roundytl|5px}}" | Image
+! style="color:#fff; background:#{{water color}}" | Name
+! style="color:#fff; background:#{{water color}}" | Debut
+! style="color:#fff; background:#{{water color}}" | Map
+! style="color:#fff; background:#{{water color}}; {{roundytr|5px}}" | Areas of interest
+|- style="background: #fff;"
+| [[File:Blue Point Isle.png|150px]]
+| [[Blue Point Isle]]
+| ''[[EP210|Around the Whirlpool]]''
+| [[File:Blue Point Isle map.png|130px]]
+| [[Inland City]]<br>[[Blue Lagoon]]<br>[[Bluefinland]]
+|- style="background: #fff;"
+| [[File:Pudgy Pidgey Isle.png|150px]]
+| [[Pudgy Pidgey Isle]]
+| ''[[EP211|Fly Me to the Moon]]''
+| [[File:NOEP.png|130px]]
+|
+|- style="background: #fff;"
+| [[File:Yellow Rock Isle.png|150px]]
+| [[Yellow Rock Isle]]
+| ''[[EP213|A Corsola Caper!]]''
+| [[File:Yellow Rock Isle map.png|130px]]
+| [[Megi City]]<br>[[Ogi City]]
+|- style="background: #fff;"
+| [[File:Red Rock Isle.png|150px]]
+| [[Red Rock Isle]]
+| ''[[EP214|Mantine Overboard!]]''
+| [[File:Red Rock Isle map.png|130px]]
+| [[Scarlet City]]<br>[[Diglett Village]]<br>[[Transit Town]]
+|- style="background: #fff;"
+| [[File:Silver Rock Isle.png|150px]]
+| [[Silver Rock Isle]]
+| ''[[EP218|Plant It Now... Diglett Later]]''
+| [[File:Silver Rock Isle map.png|130px]]
+| [[Kasado City]]
+|- style="background: #fff;"
+| [[File:Ogi Isle.png|150px]]
+| [[Ogi Isle]]
+| ''[[EP219|Hi Ho Silver... Away!]]''
+| [[File:Ogi Isle map.png|130px]]
+|
+|}
+
+According to the [[Nurse Joy]] on Blue Point Isle, the climate varies from island to island.
+
+===={{aniseries|DP}}====
+The Whirl Islands were mentioned in ''[[DP115|Stealing the Conversation!]]'' when an [[Officer Jenny]] said she had been relocated there.
+
+===''Pokémon Horizons: The Series''===
+[[File:Whirl Islands anime.png|thumb|250px|Whirl Islands in {{aniseries|HZ}}]]
+In {{aniseries|HZ}}, the Whirl Islands are depicted closer to their portrayal in the {{pkmn|games}}, being uninhabited, small, rocky islands surrounded by {{OBP|whirlpool|obstacle}}s, standing off the coast of [[Olivine City]].
+
+In ''[[HZ077|Ludlow's Homecoming!]]'', [[Siskel]] took [[Liko]], [[Roy]], [[Dot]], and [[Ludlow]] to visit one of the islands, where several movies from the "Versus {{p|Sharpedo}}" movie series that he loved had been filmed, unaware that the main star of those movies had been Ludlow under a different name. When the [[Rising Volt Tacklers]]' {{p|Tatsugiri}} and Siskel's {{p|Wooper}} got caught in one of the whirlpools, Ludlow secretly changed into his superhero alter ego "Mighty G" and rescued the Pokémon in distress.
+
+===Pokémon Evolutions===
+The Whirl Islands appeared briefly in ''[[PE07|The Show]]''. After the [[Kimono Girl]]s held a performance detailing the history of [[Ecruteak City]] and the Legendary Pokémon that used to live there, {{p|Lugia}} itself stirred in the waters of the islands as if in response to its story being told.
+{{-}}
+
+==In the manga==
+===Pokémon Adventures===
+[[File:Whirl Islands Adventures.png|thumb|230px|Whirl Islands in [[Pokémon Adventures]]]]
+===={{MangaArc|Gold, Silver & Crystal}}====
+The Whirl Islands first appeared in ''[[PS142|Really Remoraid]]'', where [[Morty]] was able to locate {{adv|Gold}} and {{adv|Silver}} there at [[Lt. Surge]]'s request. The two [[Pokédex holder]]s had been brought to the islands by {{DL|Legendary beasts (Adventures)|Entei}} to recover after they had been defeated by the [[Masked Man]] at the [[Lake of Rage]]. After dealing with a herd of {{pkmn2|wild}} {{p|Sandslash}}, Gold and Silver were attacked by {{DL|Tower duo (Adventures)|Lugia}}. {{adv|Crystal}}, having arrived at the islands as well, soon joined the other two Trainers in their battle against Lugia. Gold was eventually able to lodge Lugia's mouth open with his {{wp|cue stick}}, thus preventing it from using {{m|Aeroblast}} anymore. During the battle, [[Exbo]], [[Silver's Feraligatr|Silver's Croconaw]], and [[Megaree]], the Pokédex holders' three [[first partner Pokémon]], evolved simultaneously. Although Crystal came close to {{pkmn2|caught|catching}} Lugia, the {{i|Poké Ball}} that she had tried to use on it turned out to be empty. As the group's [[Pokédex]]es' tracking functions couldn't find Lugia either, they came to realize that [[Masked Man|someone else]] had managed to capture Lugia before Crystal's Poké Ball made contact with it.
+
+In ''[[PS149|Curious Kingdra]]'', Silver traveled to a secret chamber in the Whirl Islands. In order to access it, he needed to use all the different {{type|Water}} [[HM]] moves to get past the natural obstacles protecting its entrance: his {{TP|Silver|Gyarados}}'s {{m|Whirlpool}} to calm down a raging {{OBP|whirlpool|obstacle}}, his {{p|Kingdra}}'s {{m|Waterfall}} to split up the {{OBP|waterfall|obstacle}} covering the entrance, and his Feraligatr's {{m|Surf}} to ride across the pool of water in front of it. In the chamber, he encountered its owner, [[Lance]], to whom he returned the {{p|Tyranitar}} he had borrowed from him, after which he demanded information about the Masked Man's plans from him. Using the clues at his disposal, Lance was able to figure out that the Masked Man's goal was to control {{adv|Celebi|time itself}}.
+
+===={{MangaArc|HeartGold & SoulSilver}}====
+In ''[[PS445|Dealing with a Koffing Fit]]'', Silver returned to Lance's hideout, only to find [[Clair]] there instead of Lance. Clair, having been unable to contact her cousin for a while, had come to investigate the chamber to see if she could find Lance there. However, the two soon found themselves surrounded by a massive group of {{p|Koffing}}. Silver was easily able to defeat them all with his Pokémon, even {{m|Thief|stealing}} a [[Plate|suspicious item]] from one of them in the process. As a result of all the [[experience]] gained during the battle, Silver's {{p|Sneasel}} and {{p|Murkrow}} then proceeded to evolve into {{TP|Silver|Weavile}} and {{TP|Silver|Honchkrow}}, respectively. Following a clue from Clair, Silver decided to head out to the {{safari|Johto}} next.
+
+===Pokémon Gold & Silver: The Golden Boys===
+[[File:Whirl Islands Golden Boys.png|thumb|250px|Whirl Islands in [[Pokémon Gold & Silver: The Golden Boys]]]]
+The Whirl Islands first appeared in ''[[GB18|Let's Survive This Sea Battle]]'', where {{GnB|Gold}} and {{GnB|Chris}} arrived there. In ''[[GB19|The Truth About The Mysterious Whirl Islands!!]]'', they encountered a {{pkmn2|talking}} {{p|Slowking}}, which demanded that they leave immediately. However, since Gold and Chris's wooden raft had been destroyed by [[Team Rocket]], they could not leave. Slowking revealed that it was in possession of a rubber {{wp|dinghy}}, which it agreed to hand over to them if they fulfilled a request for it. They agreed, and Slowking took them to a {{pkmn2|giant}} {{p|Blastoise}}, which had lived on the islands for a hundred years, but had grown violent recently. Slowking tasked them with defeating it, but even {{DL|Type|Type effectiveness|super effective}} or combination [[move]]s could not deal enough [[damage]]. Eventually, though, Gold managed to lure Blastoise into Slowking's home cave, where it fell into a pond full of {{p|Chinchou}}, whose combined {{m|Spark}} attacks were enough to defeat it. A gust of wind then blew Slowking's [[Silver Feather|Silver Wing]] into Gold's hand and {{p|Lugia}} appeared, challenging Gold.
+
+In ''[[GB20|A Serious Crisis!! The Battle With The Lugia]]'', Gold and Chris tried to fight Lugia, but their attacks phased right through it. Even when Chris's {{p|Cyndaquil}}'s {{m|Flame Wheel}} seemed to have an effect on Lugia's wing, the damage was quickly healed off. Deciding on a tactical retreat, Gold and Chris escaped through an underwater tunnel in Slowking's pond, coming out from another pond on the other side of the islands. Chris, having noticed that Lugia's form was affected by getting in contact with fire and water, figured that Lugia was actually composed of gas, held together by {{t|Psychic}} powers. Impressed by their observational skills, Lugia trapped Gold on a small islet in the midst of a pool of lava and offered him one chance to either defeat it or surrender. Gold refused to give up, so Lugia shattered the islet, disappearing as Gold had his Pokémon use {{m|Water Gun}} to solidify the lava and avoid falling into it. He and Chris tried to solidify more lava for him to get back to solid land, but the solidified lava started to crack under his feet. As Chris made a desperate jump to save him, they and their Pokémon were suddenly transported into an underground cave, where they met the real Lugia, who told them that the Lugia they had defeated had been just an illusion. Slowking told them that the real Lugia had to stay in this cave in order to support a stone pillar that was supporting the islands. Even though Lugia hadn't been fighting at full power due to being ill, it still admitted defeat and offered a prize to Gold and Chris. They wished for a ride to [[Cianwood City]], so they boarded an illusionary Lugia to travel there.
+
+In ''[[GB23|Let's Fight For The Future!!]]'', when the [[Black Tyranitar]] attempted to jump over the sea from Cianwood to {{ci|Olivine}}, Gold used his Silver Wing to call Lugia for assistance. Responding to his cry for help, an illusionary Lugia appeared over the Whirl Islands as the Black Tyranitar was flying over them, blasting it straight back to Cianwood City.
+
+== In the TCG ==
+The following gallery is of cards mentioning or featuring the Whirl Islands in the [[Pokémon Trading Card Game]].<gallery>
+File:TentacoolTriumphant80.jpg|[[Tentacool (Triumphant 80)|Tentacool]] ([[Triumphant (TCG)|Triumphant]] 80/102)
+File:WaterEnergyHeartGoldSoulSilver117.jpg|[[Basic Water Energy (TCG)|Water Energy]] ([[HeartGold & SoulSilver (TCG)|HeartGold & SoulSilver]] 117/123)
+</gallery>
+
+==Trivia==
+* In [[Generation II]], the player needs to go down a {{OBP|waterfall|obstacle}} if they want to find {{p|Lugia}}, which can be done without the {{m|Waterfall}} [[HM]] move. In [[Generation IV]], the Waterfall HM move is required to go down waterfalls, but the layout of this cave is somewhat different and doesn't require going through any waterfalls in the first place.
+* In [[Sinnoh]], a guest at [[Hotel Grand Lake]] by [[Lake Valor]] mentions a {{p|Lugia|silver-colored Pokémon}} at the Whirl Islands.
+
+===Origin===
+{{main|Pokémon world in relation to the real world#Johto|Pokémon world in relation to the real world → Johto}}
+Whirl Islands may correspond to {{wp|Awaji Island}} and its surrounding islands located by {{wp|Naruto Strait}} where the strait is famed for its {{wp|Naruto whirlpools|tidal whirlpools}}.
+
+==Names==
+{| class="roundtable" style="background:#{{locationcolor/med|water}}; border:3px solid #{{locationcolor/dark|water}}"
+|-
+! style="background:#{{locationcolor/light|water}}" | Language
+! style="background:#{{locationcolor/light|water}}" | Name
+! style="background:#{{locationcolor/light|water}}" | Origin
+|-
+| Japanese
+| うずまき島 ''Uzumaki-jima''
+| From 渦巻き ''uzumaki'' (whirlpool)
+|-
+| English
+| Whirl Islands
+| From ''whirlpool''
+|-
+| German
+| Strudelinseln
+| From ''Strudel'' (whirlpool)
+|-
+| European Spanish,<br>Latin American Spanish
+| Islas Remolino
+| From ''remolino'' (whirlpool)
+|-
+| French
+| Tourb'Îles
+| From ''tourbillon'' (whirlpool)
+|-
+| Italian
+| Isole Vorticose
+| From ''vorticose'' (vortical)
+|-
+| Korean
+| 소용돌이섬 ''Soyongdori Seom''
+| From 소용돌이 ''soyongdori'' (whirlpool)
+|-
+| Chinese (Traditional)
+| 漩渦島 ''Xuánwō Dǎo'' / ''Syùhnwō Dóu''
+| rowspan="5" | From 漩渦 / 漩涡 / 旋渦 ''xuánwō / syùhnwō'' (whirlpool)
+|-
+| Chinese (Simplified)
+| 漩涡岛 ''Xuánwō Dǎo''
+|-
+| Chinese (Taiwan)
+| 漩渦之島 ''Xuánwō zhī Dǎo''<ref group=n>[[Pokémon Adventures]] (''[[HeartGold & SoulSilver arc (Adventures)|HeartGold & SoulSilver]]'' arc)</ref><br>旋渦列島 ''Xuánwō Lièdǎo''<ref group=n>Pokémon Adventures (Volume [[Pokémon Adventures volume 12|12]])</ref><br>旋渦之島 ''Xuánwō zhī Dǎo''<ref group=n>Pokémon Adventures (Volume [[Pokémon Adventures volume 11|11]]-12 appendix)</ref>
+|-
+| Chinese (Hong Kong)
+| 漩渦列島 ''Syùhnwō Lihtdóu''<ref group=n>Pokémon Adventures (Volume 12 and [[Pokémon Adventures volume 41|41]])</ref><br>旋渦之島 ''Syùhnwō jī Dóu''<ref group=n>Pokémon Adventures (Volume 12 appendix)</ref><br>
+|-
+| Chinese (mainland China)
+| 漩涡列岛 ''Xuánwō Lièdǎo''<ref group=n>Pokémon Adventures (Volume 11 and 12 second edition, Volume 12 first edition)</ref><br>漩涡之岛 ''Xuánwō zhī Dǎo''<ref group=n>Pokémon Adventures (Volume 12 appendix second edition, Volume 11 first edition)</ref>
+|-
+| Brazilian Portuguese
+| Ilhas Redemoinho
+| From ''redemoinho'' (whirlpool)
+|-
+| Catalan
+| Illes Remolí<ref group="n">Pokémon animated series (Valencian dub)</ref>
+| From ''remolí'' (whirlpool)
+|-
+| Czech
+| Ostrov Whirl<ref group="n">Pokémon animated series ([[DP115]])</ref><br>Vířící ostrovy<ref group="n">Pokémon animated series ([[EP209]])</ref><br>Vířivé ostrovy<ref group="n">Pokémon Adventures</ref>
+| From its English name<br>From ''vířivka'' (whirlpool)
+|-
+| Finnish
+| Whirl-saaret
+| From its English name
+|-
+| Polish
+| Wyspy Wirowe<ref group="n">Pokémon animated series (''[[Pokémon Horizons: The Series|Horizons]]'' series onwards)</ref><br>Wyspy Wirów<ref group="n">Pokémon animated series ([[EP210]], [[EP212]], [[EP214]], [[EP222]]-[[EP226]], ''[[Pokémon the Series: Diamond and Pearl|Diamond and Pearl]]'' series)</ref><!--<br>Archipelag Wysp Wirów<ref group="n">Pokémon animated series ([[EP212]]-[[EP213]], [[EP217]]-[[EP218]])</ref><br>Archipelag Wirów<ref group="n">Pokémon animated series ([[EP211]])</ref><br>Wirujące Wyspy<ref group="n">Pokémon animated series ([[EP209]]-[[EP210]])</ref>-->
+| From ''wir'' (whirlpool)
+|-
+| Turkish
+| Girdap Adaları
+| From ''girdap'' (vortex)
+|-
+| Vietnamese
+| Quần đảo Xoắn Ốc<br>Quần Đảo Nước Xoáy<ref group="n">Pokémon animated series (VTC11 broadcast)</ref>
+| From ''xoắn ốc'' (spiral)<br>From ''nước'' (water) and ''xoáy'' (to whirl)
+|}
+{{-}}
+
+===Notes===
+{{reflist|group=n}}
+
+==Related articles==
+{{Johto}}
+{{legendarylocations|johto}}
+{{Project Locations notice}}
+
+[[Category:Whirl Islands|*]]
+[[Category:Johto locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Archipelagos]]
+
+[[de:Strudelinseln]]
+[[es:Islas Remolino]]
+[[fr:Tourb'Îles]]
+[[it:Isole Vorticose]]
+[[ja:うずまきじま]]
+[[zh:漩涡岛]]

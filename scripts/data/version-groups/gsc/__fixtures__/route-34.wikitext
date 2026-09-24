@@ -1,0 +1,302 @@
+<!-- poke-guide fixture: {"title":"Johto Route 34","resolvedTitle":"Johto Route 34","revid":4614006,"timestamp":"2026-08-17T21:52:14Z","fetchedAt":"2026-09-23T16:33:53.055Z"} -->
+{{Route infobox
+|number=34
+|size=250
+|image=Johto Route 34 HGSS.png
+|imageII=Johto Route 34 GSC.png
+|type=land
+|north=Goldenrod City
+|south=Ilex Forest
+|region=Johto
+|surf=yes
+|generation=2
+|mapdesc=A lush, green path, even though it's right next to a city.
+}}
+
+'''Route 34''' (Japanese: '''３４ばんどうろ''' ''Route 34'') is a route in central [[Johto]] connecting [[Ilex Forest]] and [[Goldenrod City]]. The route is home to Johto's {{pkmn|Day Care}}.
+
+==Route description==
+The route is essentially straightforward after exiting Ilex Forest. There is a path where no long grass grows; however, it is filled with many Trainers.
+
+The Day Care, run by an old couple, is one of the most prominent things located here. Found merely steps away from the famous [[Goldenrod City]], this center allows for [[Egg Group|compatible]] male and female Pokémon to {{pkmn|breeding|breed}} and produce an {{pkmn|Egg}}. It also allows Trainers to leave up to two of their Pokémon to level up, costing like other [[Pokémon Day Care]]s, {{PDollar}}100 plus an additional {{PDollar}}100 per level up for each Pokémon. In the [[Generation II]] games, the {{player}} can enter the Day Care's backyard to interact with their Pokémon and surf or fish in the pond, but this is not possible in {{game|HeartGold and SoulSilver|s}} due to the Pokémon now being off-limits to the player in an area inside the Day Care itself.
+
+After getting {{m|Surf}}, a secret area of the route is accessible. It has three {{tc|Ace Trainer}} sisters: Irene, Jenn, and Kate, who the player will battle in that order in Generation II. In {{v|HeartGold and SoulSilver|s}}, Irene and Jenn will instead battle a Double Battle with the player.
+
+==Items==
+{{Itlisth}}
+{{Itemlist|TM Normal|Received from the woman behind the counter in the [[gate]] connecting Route 34 with [[Ilex Forest]], unavailable when [[Ilex Forest]] is restless because she blocks the player's way until {{p|Celebi}} is summoned from the [[GS Ball]]|G=yes|S=yes|C=yes|display={{TM|12|Sweet Scent}}}}
+{{Itemlist|TM Dark|Received from the woman behind the counter in the gate connecting Route 34 with [[Ilex Forest]]|HG=yes|SS=yes|display={{TM|12|Taunt}}}}
+{{Itemlist|Super Potion|In the [[Pokémon Day Care]], where {{OBP|Pokémon|species}} given to the Day-Care Lady stand ''(hidden)''|G=yes|S=yes}}
+{{Itemlist|Super Potion|Next to the body of water in front of [[Pokémon Day Care]] ''(hidden)''|C=yes}}
+{{Itemlist|Super Potion|In the [[Headbutt tree]] in the corner straight east of {{tc|Youngster}} Ian ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|None|Received from the [[Day-Care Couple|Day-Care Man]] if the [[Mobile Game Boy Adapter]] is connected or has been connected before (Japanese version only)|C=yes|display=[[Egg Ticket]]}}
+{{Itemlist|TM Dark|In the northernmost patch of grass|HG=yes|SS=yes|display={{TM|63|Embargo}}}}
+{{Itemlist|Nugget|In the fenced area west of {{tc|Picnicker}} Gina (requires {{m|Surf}})|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Rare Candy|In the fenced area west of {{tc|Picnicker}} Gina, in the upper-left corner of the second tree from the right (requires {{m|Surf}}) ''(hidden)''|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Soft Sand|Reward for defeating {{tc|Ace Trainer|Cooltrainer}} Kate (requires {{m|Surf}})|G=yes|S=yes|C=yes}}
+{{Itemlist|Power Herb|Reward for defeating {{tc|Ace Trainer}} Kate (requires {{m|Surf}})|HG=yes|SS=yes}}
+{{Itemlist|Leaf Stone|Sometimes given out by {{tc|Picnicker}} Gina if the player has her number|C=yes|HG=yes|SS=yes}}
+{{Itlistfoot}}
+
+===Youngster Ian===
+{{Itlisth}}
+{{Itemlist|Cheri Berry|Sometimes given out after being defeated in a [[rematch]]|HG=yes|SS=yes}}
+{{Itemlist|Chesto Berry|Sometimes given out after being defeated in a [[rematch]]|HG=yes|SS=yes}}
+{{Itemlist|Pecha Berry|Sometimes given out after being defeated in a [[rematch]]|SS=yes}}
+{{Itemlist|Rawst Berry|Sometimes given out after being defeated in a [[rematch]]|HG=yes|SS=yes}}
+{{Itemlist|Aspear Berry|Sometimes given out after being defeated in a [[rematch]]|HG=yes}}
+{{Itemlist|Leppa Berry|Sometimes given out after being defeated in a [[rematch]]|HG=yes|SS=yes}}
+{{Itemlist|Oran Berry|Sometimes given out after being defeated in a [[rematch]]|HG=yes|SS=yes}}
+{{Itemlist|Persim Berry|Sometimes given out after being defeated in a [[rematch]]|HG=yes|SS=yes}}
+{{Itemlist|Lum Berry|Sometimes given out after being defeated in a [[rematch]]|HG=yes|SS=yes}}
+{{Itemlist|Sitrus Berry|Sometimes given out after being defeated in a [[rematch]]|HG=yes}}
+{{Itlistfoot}}
+
+==Pokémon==
+===Generation II===
+{{Catch/header|land|yes}}
+{{Catch/entry2|016|Pidgey|no|no|yes|Grass|12|20%|20%|0%|type1=Normal|type2=Flying}}
+{{Catch/entry2|019|Rattata|yes|yes|no|Grass|11,13|all=35%|type1=Normal}}
+{{Catch/entry2|019|Rattata|no|no|yes|Grass|11|all=30%|type1=Normal}}
+{{Catch/entry2|039|Jigglypuff|no|no|yes|Grass|12|all=5%|type1=Normal}}
+{{Catch/entry2|063|Abra|yes|yes|yes|Grass|10|all=10%|type1=Psychic}}
+{{Catch/entry2|096|Drowzee|yes|yes|no|Grass|10,12|all=50%|type1=Psychic}}
+{{Catch/entry2|096|Drowzee|no|no|yes|Grass|12|0%|0%|30%|type1=Psychic}}
+{{Catch/entry2|132|Ditto|yes|yes|yes|Grass|10|all=5%|type1=Normal}}
+{{Catch/entry2|163|Hoothoot|no|no|yes|Grass|12|0%|0%|20%|type1=Normal|type2=Flying}}
+{{Catch/entry2|209|Snubbull|no|no|yes|Grass|10|30%|30%|0%|type1=Normal}}
+{{Catch/div|water|Surfing}}
+{{Catch/entry2|072|Tentacool|yes|yes|yes|Surf|15-24|all=90%|type1=Water|type2=Poison}}
+{{Catch/entry2|073|Tentacruel|yes|yes|yes|Surf|20-24|all=10%|type1=Water|type2=Poison}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry2|098|Krabby|yes|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entry2|098|Krabby|yes|yes|yes|Fish Good|20|all=55%|type1=Water}}
+{{Catch/entry2|120|Staryu|yes|yes|yes|Fish Good|20|0%|0%|10%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=Water}}
+{{Catch/entry2|222|Corsola|yes|yes|yes|Fish Good|20|10%|10%|0%|type1=Water|type2=Rock}}
+{{Catch/entry2|098|Krabby|yes|yes|yes|Fish Super|40|all=60%|type1=Water}}
+{{Catch/entry2|099|Kingler|yes|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{Catch/entry2|120|Staryu|yes|yes|yes|Fish Super|40|0%|0%|30%|type1=Water}}
+{{Catch/entry2|222|Corsola|yes|yes|yes|Fish Super|40|30%|30%|0%|type1=Water|type2=Rock}}
+{{Catch/div|land|{{color2|000|Headbutt tree}}<br><small>(Moderate chances of battle)</small>}}
+{{Catch/entry2|010|Caterpie|yes|no|no|Headbutt|10|all=65%|type1=Bug}}
+{{Catch/entry2|011|Metapod|yes|no|no|Headbutt|10|all=15%|type1=Bug}}
+{{Catch/entry2|012|Butterfree|yes|no|no|Headbutt|10|all=5%|type1=Bug|type2=Flying}}
+{{Catch/entry2|013|Weedle|no|yes|no|Headbutt|10|all=65%|type1=Bug|type2=Poison}}
+{{Catch/entry2|014|Kakuna|no|yes|no|Headbutt|10|all=15%|type1=Bug|type2=Poison}}
+{{Catch/entry2|015|Beedrill|no|yes|no|Headbutt|10|all=5%|type1=Bug|type2=Poison}}
+{{Catch/entry2|102|Exeggcute|yes|yes|no|Headbutt|10|all=15%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|102|Exeggcute|no|no|yes|Headbutt|10|all=20%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|163|Hoothoot|no|no|yes|Headbutt|10|all=50%|type1=Normal|type2=Flying}}
+{{Catch/entry2|165|Ledyba|no|no|yes|Headbutt|10|all=15%|type1=Bug|type2=Flying}}
+{{Catch/entry2|167|Spinarak|no|no|yes|Headbutt|10|all=15%|type1=Bug|type2=Poison}}
+{{Catch/div|land|{{color2|000|Headbutt tree}}<br><small>(Low chances of battle)</small>}}
+{{Catch/entry2|010|Caterpie|yes|no|no|Headbutt|10|all=50%|type1=Bug}}
+{{Catch/entry2|012|Butterfree|yes|no|no|Headbutt|10|all=5%|type1=Bug|type2=Flying}}
+{{Catch/entry2|013|Weedle|no|yes|no|Headbutt|10|all=50%|type1=Bug|type2=Poison}}
+{{Catch/entry2|015|Beedrill|no|yes|no|Headbutt|10|all=5%|type1=Bug|type2=Poison}}
+{{Catch/entry2|102|Exeggcute|yes|yes|no|Headbutt|10|all=15%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|102|Exeggcute|no|no|yes|Headbutt|10|all=20%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|163|Hoothoot|no|no|yes|Headbutt|10|all=50%|type1=Normal|type2=Flying}}
+{{Catch/entry2|204|Pineco|yes|yes|yes|Headbutt|10|all=30%|type1=Bug}}
+{{Catch/div|land|{{color2|000|Odd Egg}}<br><small>In international versions of Pokémon Crystal, the Odd Egg can be obtained from the Day-Care Man at the Pokémon Day Care. It will hatch into one of the Pokémon shown below.</small>}}
+{{Catch/entry2|172|Pichu|no|no|yes|Egg|5|all=One|type1=Electric}}
+{{Catch/entry2|173|Cleffa|no|no|yes|Egg|5|all=One|type1=Normal}}
+{{Catch/entry2|174|Igglybuff|no|no|yes|Egg|5|all=One|type1=Normal}}
+{{Catch/entry2|236|Tyrogue|no|no|yes|Egg|5|all=One|type1=Fighting}}
+{{Catch/entry2|238|Smoochum|no|no|yes|Egg|5|all=One|type1=Ice|type2=Psychic}}
+{{Catch/entry2|239|Elekid|no|no|yes|Egg|5|all=One|type1=Electric}}
+{{Catch/entry2|240|Magby|no|no|yes|Egg|5|all=One|type1=Fire}}
+{{Catch/footer|land}}
+
+===Generation IV===
+[[File:Day Care HGSS.png|thumb|380px|Inside the {{pkmn|Day Care}} in {{game|HeartGold and SoulSilver|s}}]]
+{{Catch/header|land|yes}}
+{{Catch/entryhs|019|Rattata|yes|yes|Grass|11, 13|all=35%|type1=Normal}}
+{{Catch/entryhs|063|Abra|yes|yes|Grass|10|all=10%|type1=Psychic}}
+{{Catch/entryhs|096|Drowzee|yes|yes|Grass|10, 12|all=50%|type1=Psychic}}
+{{Catch/entryhs|132|Ditto|yes|yes|Grass|10|all=5%|type1=Normal}}
+{{Catch/div|water|Surfing}}
+{{Catch/entryhs|072|Tentacool|yes|yes|Surf|10-25|all=90%|type1=Water|type2=Poison}}
+{{Catch/entryhs|073|Tentacruel|yes|yes|Surf|15-29|all=10%|type1=Water|type2=Poison}}
+{{Catch/div|water|Fishing}}
+{{Catch/entryhs|098|Krabby|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entryhs|098|Krabby|yes|yes|Fish Good|20|all=50%|type1=Water}}
+{{Catch/entryhs|120|Staryu|yes|yes|Fish Good|20|0%|0%|10%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{Catch/entryhs|222|Corsola|yes|yes|Fish Good|20|10%|10%|0%|type1=Water|type2=Rock}}
+{{Catch/entryhs|098|Krabby|yes|yes|Fish Super|40|all=60%|type1=Water}}
+{{Catch/entryhs|099|Kingler|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{Catch/entryhs|120|Staryu|yes|yes|Fish Super|40|0%|0%|30%|type1=Water}}
+{{Catch/entryhs|222|Corsola|yes|yes|Fish Super|40|30%|30%|0%|type1=Water|type2=Rock}}
+{{Catch/div|land|Headbutt<br/><small>Group A</small>}}
+{{Catch/entryhs|102|Exeggcute|yes|yes|Headbutt|9-10|all=20%|type1=Grass|type2=Psychic|10=j}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|9-10|all=50%|type1=Normal|type2=Flying|10=j}}
+{{Catch/entryhs|204|Pineco|yes|yes|Headbutt|9-10|all=30%|type1=Bug|10=j}}
+{{Catch/div|land|Headbutt<br/><small>Group B</small>}}
+{{Catch/entryhs|102|Exeggcute|yes|yes|Headbutt|11-12|all=20%|type1=Grass|type2=Psychic|10=j}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|11-12|all=50%|type1=Normal|type2=Flying|10=j}}
+{{Catch/entryhs|165|Ledyba|no|yes|Headbutt|11-12|all=30%|type1=Bug|type2=Flying|10=j}}
+{{Catch/entryhs|167|Spinarak|yes|no|Headbutt|11-12|all=30%|type1=Bug|type2=Poison|10=j}}
+{{Catch/div|land|Swarm}}
+{{Catch/entryhs|280|Ralts|yes|yes|Swarm|10-11|all=40%|type1=Psychic}}
+{{Catch/div|land|Special}}
+{{Catch/entryhs|264|Linoone|yes|yes|Hoenn|12|all=20%|type1=Normal}}
+{{Catch/entryhs|293|Whismur|yes|yes|Hoenn|10-11|all=20%|type1=Normal}}
+{{Catch/entryhs|399|Bidoof|yes|yes|Sinnoh|12|all=20%|type1=Normal}}
+{{Catch/entryhs|418|Buizel|yes|yes|Sinnoh|10-11|all=20%|type1=Water}}
+{{Catch/footer|land}}
+
+==Trainers==
+===Generation II===
+{{Trainerheader|land}}
+{{Trainerentry|Spr GS Youngster.png|Youngster|Samuel|128|4|019|Rattata|M|7|None|027|Sandshrew|M|10|None|021|Spearow|M|8|None|021|Spearow|M|8|None|36=コウタ|37=Kōta}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr GS Pokéfan M.png|Pokéfan|Brandon|1040|1|209|Snubbull|F|13|Berry|36=コウサク|37=Kōsaku}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr GS Picnicker.png|Picnicker|Gina|240|3|187|Hoppip|F|9|None|187|Hoppip|F|9|None|001|Bulbasaur|M|12|None|36=ミズホ|37=Mizuho|38=phone}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr GS Youngster.png|Youngster|Ian|192|2|056|Mankey|M|10|None|050|Diglett|M|12|None|36=ショウへイ|37=Shōhei}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr GS Officer.png|Officer|Keith|680<br><small>[[Time#Times of day|Night]] only</small>|1|058|Growlithe|M|17|None|36=マモル|37=Mamoru}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr GS Camper.png|Camper|Todd|280|1|054|Psyduck|M|14|None|36=ヨウイチ|37=Yōichi|38=phone}}
+{{trainerdiv|land|Requires Surf}}
+{{Trainerentry|Spr GS Cooltrainer F.png|Cooltrainer|Irene|1152|2|118|Goldeen|F|22|None|119|Seaking|F|24|None|36=マリサ|37=Marisa}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr GS Cooltrainer F.png|Cooltrainer|Jenn|1248|2|120|Staryu||24|None|121|Starmie||26|None|36=マリカ|37=Marika}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr GS Cooltrainer F.png|Cooltrainer|Kate|1344|2|090|Shellder|F|26|None|091|Cloyster|F|28|None|36=マリア|37=Maria}}
+{{Trainerdiv|land|Rematch}}
+{{Trainerentry|Spr GS Picnicker.png|Picnicker|Gina|340<br><small>After reaching [[Mahogany Town]]<br/>and defeating the previous team{{sup/2|C}}</small>|3|187|Hoppip|F|14|None|187|Hoppip|F|14|None|002|Ivysaur|M|17|None|36=ミズホ|37=Mizuho|38=phone}}
+{{Trainerentry|Spr GS Picnicker.png|Picnicker|Gina|580<br><small>After the [[Goldenrod Radio Tower]] incident<br/>and defeating the previous team{{sup/2|C}}</small>|3|188|Skiploom|F|26|None|188|Skiploom|F|26|None|002|Ivysaur|M|29|None|36=ミズホ|37=Mizuho|38=phone}}
+{{Trainerentry|Spr GS Picnicker.png|Picnicker|Gina{{sup/2|C}}|640<br><small>After becoming {{pkmn|Champion}}<br/>and defeating the previous team</small>|3|188|Skiploom|F|30|None|188|Skiploom|F|30|None|002|Ivysaur|M|32|None|36=ミズホ|37=Mizuho|38=phone}}
+{{Trainerentry|Spr GS Picnicker.png|Picnicker|Gina{{sup/2|C}}|760<br><small>After returning the [[Machine Part]]<br/>and defeating the previous team</small>|3|189|Jumpluff|F|33|None|189|Jumpluff|F|33|None|003|Venusaur|M|38|None|36=ミズホ|37=Mizuho|38=phone}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr GS Camper.png|Camper|Todd|460<br><small>After reaching [[Cianwood City]]<br/>and defeating the previous team{{sup/2|C}}</small>|3|074|Geodude|M|17|None|074|Geodude|M|17|None|054|Psyduck|M|23|None|36=ヨウイチ|37=Yōichi|38=phone}}
+{{Trainerentry|Spr GS Camper.png|Camper|Todd|520<br><small>After reaching [[Blackthorn City]]<br/>and defeating the previous team{{sup/2|C}}</small>|3|074|Geodude|M|23|None|074|Geodude|M|23|None|054|Psyduck|M|26|None|36=ヨウイチ|37=Yōichi|38=phone}}
+{{Trainerentry|Spr GS Camper.png|Camper|Todd{{sup/2|C}}|640<br><small>After becoming {{pkmn|Champion}}<br/>and defeating the previous team</small>|4|075|Graveler|M|30|None|075|Graveler|M|30|None|218|Slugma|M|30|None|054|Psyduck|M|32|None|36=ヨウイチ|37=Yōichi|38=phone}}
+{{Trainerentry|Spr GS Camper.png|Camper|Todd{{sup/2|C}}|680<br><small>After returning the [[Machine Part]]<br/>and defeating the previous team</small>|4|075|Graveler|M|33|None|075|Graveler|M|33|None|219|Magcargo|M|36|None|055|Golduck|M|34|None|36=ヨウイチ|37=Yōichi|38=phone}}
+{{Trainerfooter|land|II}}
+
+===Generation IV===
+{{Trainerheader|land}}
+{{Trainerentry|Spr HGSS Youngster.png|Youngster|Samuel|128|4|019|Rattata|♂|7|None|027|Sandshrew|♂|10|None|021|Spearow|♂|8|None|021|Spearow|♂|8|None|36=コウタ|37=Kōta}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr DP Pokéfan M.png|Pokéfan|Brandon|832|2|209|Snubbull|♀|13|None|179|Mareep|♂|13|None|36=コウサク|37=Kōsaku}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr DP Picnicker.png|Picnicker|Gina|192|3|187|Hoppip|♀|9|None|187|Hoppip|♀|9|None|001|Bulbasaur|♂|12|None|36=ミズホ|37=Mizuho|38=phone}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr HGSS Youngster.png|Youngster|Ian|192|2|056|Mankey|♂|10|None|050|Diglett|♂|12|None|36=ショウへイ|37=Shōhei|38=phone}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr DP Officer.png|Policeman|Keith|680<br><small>[[Time#Times of day|Night]] only</small>|1|058|Growlithe|♂|17|None|36=マモル|37=Mamoru}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr DP Camper.png|Camper|Todd|224|1|054|Psyduck|♂|14|None|36=ヨウイチ|37=Yōichi|38=phone}}
+{{trainerdiv|land|Requires Surf}}
+{{Trainerentry|Spr HGSS Ace Trainer F.png|Ace Trainer|Irene|1440<br><sup>[[Double Battle]] with Jenn</sup>|2|118|Goldeen|F|22|None|119|Seaking|F|24|None|36=マリサ|37=Marisa}}
+{{Trainerentry|Spr HGSS Ace Trainer F.png|Ace Trainer|Jenn|1560<br><sup>[[Double Battle]] with Irene</sup>|2|120|Staryu||24|None|121|Starmie||26|None|36=マリカ|37=Marika}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr HGSS Ace Trainer F.png|Ace Trainer|Kate|1680|2|090|Shellder|F|26|None|091|Cloyster|F|28|None|36=マリア|37=Maria}}
+{{Trainerdiv|land|Rematch}}
+{{Trainerentry|Spr DP Picnicker.png|Picnicker|Gina{{tt|*|First rematch}}|512<br/>{{dotw|Su}}{{sup/t|D}}|3|187|Hoppip|♀|24|None|187|Hoppip|♀|24|None|002|Ivysaur|♂|32|None|36=ミズホ|37=Mizuho|38=phone}}
+{{Trainerentry|Spr DP Picnicker.png|Picnicker|Gina{{tt|*|Second rematch}}|704<br/>{{dotw|Su}}{{sup/t|D}}|3|188|Skiploom|♀|26|None|188|Skiploom|♀|26|None|002|Ivysaur|♂|44|None|36=ミズホ|37=Mizuho|38=phone}}
+{{Trainerentry|Spr DP Picnicker.png|Picnicker|Gina{{tt|*|Third rematch onward}}|880<br/>{{dotw|Su}}{{sup/t|D}}|3|188|Skiploom|♀|30|None|189|Jumpluff|♀|36|None|003|Venusaur|♂|55|None|36=ミズホ|37=Mizuho|38=phone}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr HGSS Youngster.png|Youngster|Ian{{tt|*|First rematch}}|528<br/>{{dotw|Sa}}{{sup/t|M}}|2|056|Mankey|♂|27|None|051|Dugtrio|♂|33|None|36=ショウへイ|37=Shōhei|38=phone}}
+{{Trainerentry|Spr HGSS Youngster.png|Youngster|Ian|{{tt|640|Second rematch}}/{{tt|928|Third rematch onward}}<br/>{{dotw|Sa}}{{sup/t|M}}|2|057|Primeape|♂|{{tt|38|Second rematch}}/{{tt|47|Third rematch onward}}|None|051|Dugtrio|♂|{{tt|40|Second rematch}}/{{tt|58|Third rematch onward}}|None|36=ショウへイ|37=Shōhei|38=phone}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr DP Camper.png|Camper|Todd{{tt|*|First rematch}}|496<br/>{{dotw|Sa}}{{sup/t|M}}|3|074|Geodude|♂|17|None|074|Geodude|♂|17|None|054|Psyduck|♂|31|None|36=ヨウイチ|37=Yōichi|38=phone}}
+{{Trainerentry|Spr DP Camper.png|Camper|Todd{{tt|*|Second rematch}}|512<br/>{{dotw|Sa}}{{sup/t|M}}|4|074|Geodude|♂|23|None|075|Graveler|♂|33|None|218|Slugma|♂|32|None|055|Golduck|♂|36|None|36=ヨウイチ|37=Yōichi|38=phone}}
+{{Trainerentry|Spr DP Camper.png|Camper|Todd{{tt|*|Third rematch onward}}|896<br/>{{dotw|Sa}}{{sup/t|M}}|4|075|Graveler|♂|36|None|075|Graveler|♂|44|None|219|Magcargo|♂|54|None|055|Golduck|♂|56|None|36=ヨウイチ|37=Yōichi|38=phone}}
+{{Trainerfooter|land|II}}
+
+==Trainer Tips==
+===Generation II===
+{{sign|RBY|header}}
+{{sign|RBY|title|TRAINER TIPS}}
+BERRY trees grow new BERRIES everyday. Make a note of which trees bear which BERRIES.
+{{sign|RBY|footer}}
+
+===Generation IV===
+{{sign|DPtip|header}}
+{{sign|DPtip|title|Trainer Tips}}
+North to Goldenrod City The Radio Tower at Goldenrod is giving away Radio Cards. Answer their questions and receive a Radio Card!
+{{sign|DPtip|footer}}
+
+==Music==
+{| class="roundtable" style="margin:auto; text-align: center; background: #{{locationcolor/med|land}}; border: 3px solid #{{locationcolor/dark|land}}"
+|- style="background:#{{locationcolor/light|land}}"
+! Games
+! Situation
+! Song name
+! Song name
+! Composition
+! Arrangement
+|- style="background:#FFF"
+! {{GameIcon|G}}{{GameIcon|S}}{{GameIcon|C}}
+| Everywhere
+| 34ばんどうろ
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Route 34]]
+| [[Junichi Masuda]]
+| [[Junichi Masuda]]
+|-
+|- style="background:#FFF"
+! rowspan=3 | {{GameIcon|HG}}{{GameIcon|SS}}
+| Everywhere
+| 34ばんどうろ
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Route 34]] || [[Junichi Masuda]] || [[Shota Kageyama]]<br><small>[[GB Sounds]]:</small> [[Junichi Masuda]]
+|-
+| When encountering Ethan{{tt|*|If the player character is female}}
+| ヒビキ
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Ethan]]
+| [[Shota Kageyama]]
+| [[Shota Kageyama]]
+|-
+| When encountering Lyra{{tt|*|If the player character is male}}
+| コトネ
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Lyra]]
+| [[Shota Kageyama]]
+| [[Shota Kageyama]]
+|}
+
+==In animation==
+[[File:Johto Route 34 Day Care anime.png|thumb|250px|Route 34 Day Care in {{aniseries|GS}}]]
+===''Pokémon the Series''===
+===={{aniseries|GS}}====
+Route 34 appeared from ''[[EP146|Tricks of the Trade]]'' to ''[[EP157|The Fortune Hunters]]'', although some of the intervening episodes, such as ''[[EP154|Fowl Play!]]'', may have taken place in [[Ilex Forest]] instead. The route's landmarks include [[Palmpona]], [[Len Town]], [[Olesia]]'s {{p|Wooper}} preschool, and [[Onix Tunnel]]. {{Ash}} {{pkmn2|caught}} his {{AP|Totodile}} around this area in ''[[EP151|The Totodile Duel]]''. In ''The Fortune Hunters'', {{ashfr|Ash's group}} visited a {{pkmn|Day Care}} located in this area, similar to the {{pkmn|games}}, although this particular Day Care turned out to be just a front for [[Butch]] and [[Cassidy]]'s latest Pokémon-stealing scheme.
+{{-}}
+
+==In the manga==
+===Pokémon Adventures===
+[[File:Johto Route 34 Adventures.png|thumb|230px|Route 34 in [[Pokémon Adventures]]]]
+===={{MangaArc|Gold, Silver & Crystal}}====
+Route 34 first appeared in ''[[PS107|Gligar Glide]]'', where {{adv|Gold}} was spending a night there, when the {{pkmn|Egg}} that [[Professor Elm]] had entrusted with him hatched into a [[Togebo|Togepi]] while he slept. While Professor Elm was happy to learn that Gold had succeeded in hatching the Egg, he was outraged when it turned out Gold had inadvertently caused Togepi to pick up his gambling habits before the {{pkmn|category|Spike Ball Pokémon}} had even hatched. The {{pkmn|Professor}} then sent Gold to check out the [[Pokémon Day Care]], from where Togepi's Egg had been found. After Gold had helped the [[Day-Care Couple]] catch some runaway [[baby Pokémon]], the Day-Care Lady invited him for some {{pkmn|training}} inside the Day Care. Meanwhile, the Day-Care Man made a phone call to [[Jasmine]], revealing that Gold's Togepi was actually the offspring of her two {{p|Togetic}}, and inviting her to come take a look at it.
+
+In ''[[PS108|Quilava Quandary]]'', the Day-Care Lady locked Gold into a room filled with powerful Pokémon and told him to battle them for his training. While reluctant at first, Gold was quickly forced to battle the Pokémon, although the Day-Care Lady forced him to do so without the goggles and {{wp|cue stick}} he usually used. While Gold was undergoing his training, the Day-Care Lady mused to herself how she was taking advantage of Gold's desire to train in order to make him make some of their lethargic Pokémon get some exercise without her having to do anything. As a result of the training, Gold's {{p|Cyndaquil}}, [[Exbo]], ended up [[Evolution|evolving]] into {{p|Quilava}}. When the Day-Care Couple heard of an earthquake that had struck [[Ecruteak City]], they got worried of Jasmine's safety and told Gold to go find her, giving him a [[King's Rock]] as a reward for completing his training.
+
+In ''[[PS159|Popular Pupitar]]'', {{adv|Yellow}} found herself and her uncle [[Wilton]] at the Day Care after {{DL|Tower duo (Adventures)|Lugia}} had attacked their boat at the [[Whirl Islands]]. In ''[[PS160|Playful Porygon2]]'', the Day-Care Couple revealed that the medics who had saved them had brought them to the Day Care, based on a sketch of Jasmine in Yellow's notebook. In addition, Yellow and {{adv|Red}}'s {{p|Pikachu}}, [[Chuchu]] and [[Pika]], had gotten friendly with each other while Yellow was unconscious and had ended up producing an Egg together, much to Yellow's shock.
+
+In ''[[PS173|The Last Battle VII]]'', the Day Care was attacked by [[Neo Team Rocket]] {{tc|Team Rocket Grunt|Grunts}}, who tried to steal the [[Rainbow Feather|Rainbow]] and [[Silver Feather|Silver Wings]] that {{adv|Green}} had hidden on Yellow's straw hat. Fortunately, though, Yellow managed to escape from them and fled to [[Ilex Forest]].
+
+==Trivia==
+* In {{game|HeartGold and SoulSilver|s}}, there is a [[List of glitches in Generation IV#Ace Trainer Kate oversight|glitch]] with {{tc|Ace Trainer}} Kate. She will only battle the player if they walk straight down the path. If the player walks to either side of her, she will apologize as she would after the player has defeated her. If the player walks down the path towards her after talking to her on the side she will somehow see them while facing the wrong way and then battle.
+* In the Japanese versions, the three {{tc|Ace Trainer}} sisters all have names which start with "Mari".
+* The Day Care man has [https://github.com/iimarckus/iimarck.us/blob/master/dumps/dcrystal.txt#L39945 an unused piece of dialogue] in the [[Generation II]] games, ''"Not yet..."''. This would likely be used during the breeding process to notify the player that the game needs more time to generate the {{pkmn|Egg}}.
+
+==Related articles==
+{{Johto}}<br>
+{{Project Routes notice}}
+
+[[Category:Johto locations|Route 034]]
+[[Category:Routes|Route 034]]
+[[Category:Gold, Silver and Crystal locations|Route 034]]
+[[Category:HeartGold and SoulSilver locations|Route 034]]
+
+[[de:Route 34 (Johto)]]
+[[es:Ruta 34]]
+[[fr:Route 34]]
+[[it:Percorso 34 (Johto)]]
+[[ja:34ばんどうろ (ジョウト地方)]]
+[[zh:３４号道路（城都）]]

@@ -1,0 +1,262 @@
+<!-- poke-guide fixture: {"title":"Johto Route 32","resolvedTitle":"Johto Route 32","revid":4619911,"timestamp":"2026-08-28T17:36:34Z","fetchedAt":"2026-09-23T16:33:53.055Z"} -->
+{{Route infobox
+|number=32
+|size=150
+|image=Johto Route 32 HGSS.png
+|imageII=Johto Route 32 GSC.png
+|type=land
+|north=Violet City
+|west=Ruins of Alph
+|south=Union Cave
+|region=Johto
+|cut=yes
+|surf=yes
+|rocksmash={{sup/4|HGSS}}
+|generation=2
+|mapdesc=A path crossed by the Magnet Train bridge--nature meets technology.
+}}
+
+'''Route 32''' (Japanese: '''３２ばんどうろ''' ''Route 32'') is a route in central [[Johto]] connecting [[Violet City]] and [[Union Cave]]. The eastern entrance to the [[Ruins of Alph]] lies at the route's northern end.
+
+==Route description==
+Route 32 begins with a small path leading away from Violet City, which splits into two. One path leads west, to the eastern entrance of the Ruins of Alph. The other path leads south to the rest of Route 32. The player cannot continue south of the intersection until they have obtained the {{pkmn|Egg}} from [[Professor Elm]]'s aide in Violet City.
+
+The southern path begins with two large hills separated by a [[ledge]]. Going around the southern edge of the second hill will bring players to a [[Cuttable plant|cuttable tree]] on its western side, behind which is a path leading to a man who will give the player {{TM|05|Roar}}. 
+
+From there, the path continues south, where it splits around another hill. The western path leads through [[tall grass]], while the eastern path leads past a {{pkmn|Trainer}}. These paths briefly join before splitting once more. Players can choose to follow the western path along the shoreline of the ocean, traveling through tall grass; or they can cross the ocean on the pier, where three [[Fisher (Trainer class)|Fishermen]] can be found. 
+
+Shortly after the pier ends, the two paths rejoin and continue south. A [[Pokémon Center]] can be found near the end of the route, allowing players to heal their Pokémon before entering Union Cave. A man inside the Pokémon Center will give players an [[Old Rod]], and in [[Generation IV]], a fan of [[Kurt]] located in the Pokémon Center will give the player two [[Lure Ball]]s.
+
+North of the Pokémon Center, [[Week Siblings|Frieda]] can be found on Fridays. She will give the player a [[Poison Barb]] the first time they meet her, and in Generation IV, she will give a {{DL|List of Ribbons in the games|Relax Ribbon}} all other times, provided the player has met each of her siblings. On days other than Friday, a [[Great Ball]] can be found where Frieda usually stands.
+
+South of the Pokémon Center is a final Trainer. Directly west of this Trainer is the entrance to Union Cave.
+
+In {{2v2|HeartGold|SoulSilver}}, the track for the [[Magnet Train]] can be seen crossing over the route near the sea.
+
+==Items==
+{{Itlisth}}
+{{Itemlist|Great Ball|In the dead end north of the Pokémon Center ''(hidden)'' (cannot be obtained while [[Week Siblings|Frieda]] is present)|G=yes|S=yes|C=yes}}
+{{Itemlist|Super Potion|In the patch of grass directly north of the pier ''(hidden)''|G=yes|S=yes|C=yes}}
+{{Itemlist|Miracle Seed|From an old man south of [[Violet City]] entrance after getting the {{Badge|Zephyr}} |G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Great Ball|Southwest of the pier, in a patch of grass|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Old Rod III|From the Fishing Guru inside the [[Pokémon Center]]|G=yes|S=yes|C=yes|HG=yes|SS=yes|display=[[Old Rod]]}}
+{{Itemlist|Poison Barb|From [[Week Siblings|Frieda]]{{dotw|Fr}}|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|TM Normal|From the man on the ledge on the northern side of the route (requires {{m|Cut}})|G=yes|S=yes|C=yes|HG=yes|SS=yes|display={{TM|05|Roar}}}}
+{{Itemlist|Potion|In the tall grass, west of {{tc|Picnicker}} Liz|G=yes|S=yes}}
+{{Itemlist|Repel|In the tall grass, west of {{tc|Picnicker}} Liz|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Super Potion|Next to the trees west of the man who gives {{TM|05|Roar}} (requires {{m|Cut}}) ''(hidden)'' |HG=yes|SS=yes}}
+{{Itemlist|TM Grass|On the ledge west of {{tc|Youngster}} Gordon|HG=yes|SS=yes|display={{TM|09|Bullet Seed}}}}
+{{Itemlist|none|sprite=Relax Ribbon|From [[Week Siblings|Frieda]] if all Week Siblings have been met{{dotw|Fr}}|HG=yes|SS=yes|display={{DL|List of Ribbons in the games|Relax Ribbon}}}}
+{{Itemlist|Shell Bell|Beyond a [[breakable rock]] near the [[Union Cave]] entrance (requires {{m|Rock Smash}})|HG=yes|SS=yes}}
+{{Itemlist|Lure Ball IV|From a fan of [[Kurt]] in the Pokémon Center|HG=yes|SS=yes|display=[[Lure Ball]] ×2}}
+{{Itemlist|Heart Scale|In the small rock in the water to the east of the fishermen, next to the leg of the train bridge (requires {{m|Surf}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Great Ball|Outside the entrance to [[Union Cave]] ''(hidden)''|HG=yes|SS=yes}}
+{{Itlistfoot}}
+
+==Pokémon==
+===Generation II===
+{{Catch/header|land|yes}}
+{{Catch/entry2|016|Pidgey|no|no|yes|Grass|7|5%|5%|0%|type1=Normal|type2=Flying}}
+{{Catch/entry2|019|Rattata|yes|no|no|Grass|4,6|35%|0%|0%|type1=Normal}}
+{{Catch/entry2|019|Rattata|yes|no|no|Grass|4,6,8|0%|40%|0%|type1=Normal}}
+{{Catch/entry2|019|Rattata|yes|no|no|Grass|4|0%|0%|30%|type1=Normal}}
+{{Catch/entry2|019|Rattata|no|yes|no|Grass|6|5%|0%|0%|type1=Normal}}
+{{Catch/entry2|019|Rattata|no|yes|no|Grass|6,8|0%|10%|0%|type1=Normal}}
+{{Catch/entry2|019|Rattata|no|no|yes|Grass|5|all=30%|type1=Normal}}
+{{Catch/entry2|023|Ekans|no|yes|no|Grass|4|all=30%|type1=Poison}}
+{{Catch/entry2|023|Ekans|no|no|yes|Grass|4|30%|30%|0%|type1=Poison}}
+{{Catch/entry2|041|Zubat|yes|yes|no|Grass|4|1%|0%|0%|type1=Poison|type2=Flying}}
+{{Catch/entry2|041|Zubat|yes|yes|no|Grass|8|0%|0%|5%|type1=Poison|type2=Flying}}
+{{Catch/entry2|041|Zubat|no|no|yes|Grass|6|0%|0%|10%|type1=Poison|type2=Flying}}
+{{Catch/entry2|069|Bellsprout|yes|yes|no|Grass|6|30%|30%|20%|type1=Grass|type2=Poison}}
+{{Catch/entry2|069|Bellsprout|no|no|yes|Grass|7|all=20%|type1=Grass|type2=Poison}}
+{{Catch/entry2|092|Gastly|no|no|yes|Grass|7|0%|0%|5%|type1=Ghost|type2=Poison}}
+{{Catch/entry2|163|Hoothoot|no|no|yes|Grass|7|0%|0%|5%|type1=Normal|type2=Flying}}
+{{Catch/entry2|179|Mareep|yes|yes|no|Grass|6|20%|20%|10%|type1=Electric}}
+{{Catch/entry2|187|Hoppip|yes|yes|no|Grass|6|10%|10%|0%|type1=Grass|type2=Flying}}
+{{Catch/entry2|187|Hoppip|no|no|yes|Grass|6-7|15%|15%|0%|type1=Grass|type2=Flying}}
+{{Catch/entry2|194|Wooper|yes|yes|no|Grass|4|4%|0%|0%|type1=Water|type2=Ground}}
+{{Catch/entry2|194|Wooper|yes|yes|no|Grass|6,8|0%|0%|35%|type1=Water|type2=Ground}}
+{{Catch/entry2|194|Wooper|no|no|yes|Grass|4|0%|0%|30%|type1=Water|type2=Ground}}
+{{Catch/div|water|Surfing}}
+{{Catch/entry2|072|Tentacool|yes|yes|yes|Surf|15-19|all=60%|type1=Water|type2=Poison}}
+{{Catch/entry2|073|Tentacruel|yes|yes|yes|Surf|20-24|all=10%|type1=Water|type2=Poison}}
+{{Catch/entry2|195|Quagsire|yes|yes|yes|Surf|20-24|all=30%|type1=Water|type2=Ground}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry2|072|Tentacool|yes|yes|yes|Fish Old|10|all=15%|type1=Water|type2=Poison}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entry2|072|Tentacool|yes|yes|yes|Fish Good|20|all=65%|type1=Water|type2=Poison}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=Water}}
+{{Catch/entry2|072|Tentacool|yes|yes|yes|Fish Super|40|all=70%|type1=Water|type2=Poison}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{Catch/entry2|211|Qwilfish|yes|yes|yes|Fish Super|40|all=10%|type1=Water|type2=Poison}}
+{{Catch/div|land|{{color2|000|Headbutt tree}}<br><small>(Moderate chances of battle)</small>}}
+{{Catch/entry2|021|Spearow|yes|yes|no|Headbutt|10|all=80%|type1=Normal|type2=Flying}}
+{{Catch/entry2|023|Ekans|no|no|yes|Headbutt|10|all=15%|type1=Poison}}
+{{Catch/entry2|102|Exeggcute|no|no|yes|Headbutt|10|all=20%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|163|Hoothoot|no|no|yes|Headbutt|10|all=65%|type1=Normal|type2=Flying}}
+{{Catch/entry2|190|Aipom|yes|yes|no|Headbutt|10|all=20%|type1=Normal}}
+{{Catch/div|land|{{color2|000|Headbutt tree}}<br><small>(Low chances of battle)</small>}}
+{{Catch/entry2|021|Spearow|yes|yes|no|Headbutt|10|all=50%|type1=Normal|type2=Flying}}
+{{Catch/entry2|102|Exeggcute|no|no|yes|Headbutt|10|all=20%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|163|Hoothoot|no|no|yes|Headbutt|10|all=50%|type1=Normal|type2=Flying}}
+{{Catch/entry2|190|Aipom|yes|yes|no|Headbutt|10|all=20%|type1=Normal}}
+{{Catch/entry2|204|Pineco|no|no|yes|Headbutt|10|all=30%|type1=Bug}}
+{{Catch/entry2|214|Heracross|yes|yes|no|Headbutt|10|all=30%|type1=Bug|type2=Fighting}}
+{{Catch/div|water|During a Qwilfish {{color2|000|Mass outbreak|swarm}}}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|5|all=85%|type1=Water}}
+{{Catch/entry2|211|Qwilfish|yes|yes|yes|Fish Old|5|all=15%|type1=Water|type2=Poison}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=Water}}
+{{Catch/entry2|211|Qwilfish|yes|yes|yes|Fish Good|20|all=65%|type1=Water|type2=Poison}}
+{{Catch/entry2|211|Qwilfish|yes|yes|yes|Fish Super|40|all=100%|type1=Water|type2=Poison}}
+{{Catch/footer|land}}
+
+===Generation IV===
+{{Catch/header|land|yes}}
+{{Catch/entryhs|019|Rattata|yes|no|Grass|4, 6|35%|40%|0%|type1=Normal}}
+{{Catch/entryhs|019|Rattata|yes|no|Grass|4|0%|0%|30%|type1=Normal}}
+{{Catch/entryhs|019|Rattata|no|yes|Grass|6|5%|0%|0%|type1=Normal}}
+{{Catch/entryhs|019|Rattata|no|yes|Grass|4-6|0%|10%|0%|type1=Normal}}
+{{Catch/entryhs|023|Ekans|no|yes|Grass|4|all=30%|type1=Poison}}
+{{Catch/entryhs|041|Zubat|yes|yes|Grass|4|5%|0%|5%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|069|Bellsprout|yes|yes|Grass|6|30%|30%|20%|type1=Grass|type2=Poison}}
+{{Catch/entryhs|179|Mareep|yes|yes|Grass|6|20%|20%|10%|type1=Electric}}
+{{Catch/entryhs|187|Hoppip|yes|yes|Grass|6|10%|10%|0%|type1=Grass|type2=Flying}}
+{{Catch/entryhs|194|Wooper|yes|yes|Grass|6|0%|0%|35%|type1=Water|type2=Ground}}
+{{Catch/div|water|Surfing}}
+{{Catch/entryhs|072|Tentacool|yes|yes|Surf|10-20|all=60%|type1=Water|type2=Poison}}
+{{Catch/entryhs|073|Tentacruel|yes|yes|Surf|15-36|all=10%|type1=Water|type2=Poison}}
+{{Catch/entryhs|195|Quagsire|yes|yes|Surf|15-25|all=30%|type1=Water|type2=Ground}}
+{{Catch/div|water|Fishing}}
+{{Catch/entryhs|072|Tentacool|yes|yes|Fish Old|10|all=15%|type1=Water|type2=Poison}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entryhs|072|Tentacool|yes|yes|Fish Good|20|all=55%|type1=Water|type2=Poison}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{Catch/entryhs|211|Qwilfish|yes|yes|Fish Good|20|all=5%|type1=Water|type2=Poison}}
+{{Catch/entryhs|072|Tentacool|yes|yes|Fish Super|40|all=70%|type1=Water|type2=Poison}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{Catch/entryhs|211|Qwilfish|yes|yes|Fish Super|40|all=10%|type1=Water|type2=Poison}}
+{{Catch/div|land|Headbutt<br/><small>Group A</small>}}
+{{Catch/entryhs|102|Exeggcute|yes|yes|Headbutt|4-5|all=20%|type1=Grass|type2=Psychic|10=j}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|4-5|all=50%|type1=Normal|type2=Flying|10=j}}
+{{Catch/entryhs|204|Pineco|yes|yes|Headbutt|4-5|all=30%|type1=Bug|10=j}}
+{{Catch/div|land|Headbutt<br/><small>Group B</small>}}
+{{Catch/entryhs|102|Exeggcute|yes|yes|Headbutt|6-7|all=20%|type1=Grass|type2=Psychic|10=j}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|6-7|all=80%|type1=Normal|type2=Flying|10=j}}
+{{Catch/div|water|{{color2|000|Mass outbreak|Swarm}}}}
+{{Catch/entryhs|211|Qwilfish|yes|yes|Fish Old|10|all=15%|type1=Water|type2=Poison}}
+{{Catch/entryhs|211|Qwilfish|yes|yes|Fish Good|20|all=55%|type1=Water|type2=Poison}}
+{{Catch/entryhs|211|Qwilfish|yes|yes|Fish Super|40|all=100%|type1=Water|type2=Poison}}
+{{Catch/div|land|Special}}
+{{Catch/entryhs|264|Linoone|yes|yes|Hoenn|6|all=20%|type1=Normal}}
+{{Catch/entryhs|293|Whismur|yes|yes|Hoenn|4, 6|all=20%|type1=Normal}}
+{{Catch/entryhs|399|Bidoof|yes|yes|Sinnoh|6|all=20%|type1=Normal}}
+{{Catch/entryhs|418|Buizel|yes|yes|Sinnoh|4, 6|all=20%|type1=Water}}
+{{Catch/footer|land}}
+
+==Trainers==
+===Generation II===
+{{Trainerheader}}
+{{Trainerentry|Spr GS Youngster.png|Youngster|Albert|128|2|019|Rattata|♂|6|None|041|Zubat|♂|8|None|36=シンゴ|37=Shingo}}
+{{Trainerdiv}}
+{{Trainerentry|Spr GS Picnicker.png|Picnicker|Liz|180|1|029|Nidoran♀||9|None|36=カオリ|37=Kaori|38=phone}}
+{{Trainerdiv}}
+{{Trainerentry|Spr GS Camper.png|Camper|Roland|180|1|032|Nidoran♂||9|None|36=タカヒロ|37=Takahiro}}
+{{Trainerdiv}}
+{{Trainerentry|Spr GS Fisher.png|Fisher|Henry|320|2|060|Poliwag|♂|8|None|060|Poliwag|♂|8|None|36=タクロウ|37=Takurō}}
+{{Trainerdiv}}
+{{Trainerentry|Spr GS Fisher.png|Fisher|Justin|200|4|129|Magikarp|♂|5|None|129|Magikarp|♂|5|None|129|Magikarp|♂|15|None|129|Magikarp|♂|5|None|36=ヒサシ|37=Hisashi}}
+{{Trainerdiv}}
+{{Trainerentry|Spr GS Fisher.png|Fisher|Ralph|400|1|118|Goldeen|♂|10|None|36=ヤスアキ|37=Yasuaki|38=phone}}
+{{Trainerdiv}}
+{{Trainerentry|Spr GS Youngster.png|Youngster|Gordon|160|1|194|Wooper|♂|10|None|36=マサタカ|37=Masataka}}
+{{Trainerdiv}}
+{{Trainerentry|Spr GS Bird Keeper.png|Bird Keeper|Peter|192|3|016|Pidgey|♂|6|None|016|Pidgey|♂|6|None|021|Spearow|♂|8|None|36=ノブマサ|37=Nobumasa}}
+{{Trainerdiv|land|Rematch}}
+{{Trainerentry|Spr GS Picnicker.png|Picnicker|Liz|300<br><small>After reaching [[Ecruteak City]]<br/>and defeating the previous team{{sup/2|C}}</small>|2|070|Weepinbell|F|15|None|030|Nidorina|F|15|None|36=カオリ|37=Kaori|38=phone}}
+{{Trainerentry|Spr GS Picnicker.png|Picnicker|Liz|420<br><small>After the [[Mahogany Town]] incident<br/>and defeating the previous team{{sup/2|C}}</small>|3|070|Weepinbell|F|19|None|033|Nidorino|M|19|None|031|Nidoqueen|F|21|None|36=カオリ|37=Kaori|38=phone}}
+{{Trainerentry|Spr GS Picnicker.png|Picnicker|Liz{{sup/2|C}}|520<br><small>After the [[Goldenrod Radio Tower]] incident<br/>and defeating the previous team</small>|3|070|Weepinbell|F|24|None|033|Nidorino|M|26|None|031|Nidoqueen|F|26|None|36=カオリ|37=Kaori|38=phone}}
+{{Trainerentry|Spr GS Picnicker.png|Picnicker|Liz{{sup/2|C}}|640<br><small>After becoming {{pkmn|Champion}}<br/>and defeating the previous team</small>|3|070|Weepinbell|F|30|None|034|Nidoking|M|32|None|031|Nidoqueen|F|32|None|36=カオリ|37=Kaori|38=phone}}
+{{Trainerdiv}}
+{{Trainerentry|Spr GS Fisher.png|Fisher|Ralph|680<br><small>After reaching [[Ecruteak City]]<br/>and defeating the previous team{{sup/2|C}}</small>|1|118|Goldeen|M|17|None|36=ヤスアキ|37=Yasuaki|38=phone}}
+{{Trainerentry|Spr GS Fisher.png|Fisher|Ralph|760<br><small>After reaching the [[Lake of Rage]]<br/>and defeating the previous team{{sup/2|C}}</small>|2|211|Qwilfish|M|17|None|118|Goldeen|M|19|None|36=ヤスアキ|37=Yasuaki|38=phone}}
+{{Trainerentry|Spr GS Fisher.png|Fisher|Ralph{{sup/2|C}}|1280<br><small>After becoming {{pkmn|Champion}}<br/>and defeating the previous team</small>|2|211|Qwilfish|M|30|None|118|Goldeen|M|32|None|36=ヤスアキ|37=Yasuaki|38=phone}}
+{{Trainerentry|Spr GS Fisher.png|Fisher|Ralph{{sup/2|C}}|1560<br><small>After returning the [[Machine Part]]<br/>and defeating the previous team</small>|2|211|Qwilfish|M|35|None|119|Seaking|M|39|None|36=ヤスアキ|37=Yasuaki|38=phone}}
+{{Trainerfooter|land|II}}
+
+===Generation IV===
+{{Trainerheader}}
+{{Trainerentry|Spr HGSS Youngster.png|Youngster|Albert|128|2|019|Rattata|♂|6|None|041|Zubat|♂|8|None|36=シンゴ|37=Shingo}}
+{{Trainerdiv}}
+{{Trainerentry|Spr DP Picnicker.png|Picnicker|Liz|128|1|029|Nidoran♀||8|None|36=カオリ|37=Kaori|38=phone}}
+{{Trainerdiv}}
+{{Trainerentry|Spr DP Camper.png|Camper|Roland|144|1|032|Nidoran♂||9|None|36=タカヒロ|37=Takahiro}}
+{{Trainerdiv}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Henry|256|2|060|Poliwag|♂|8|None|060|Poliwag|♂|8|None|36=タクロウ|37=Takurō}}
+{{Trainerdiv}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Justin|160|4|129|Magikarp|♂|5|None|129|Magikarp|♂|5|None|129|Magikarp|♂|15|None|129|Magikarp|♂|5|None|36=ヒサシ|37=Hisashi}}
+{{Trainerdiv}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Ralph|320|1|118|Goldeen|♂|10|None|36=ヤスアキ|37=Yasuaki|38=phone}}
+{{Trainerdiv}}
+{{Trainerentry|Spr HGSS Youngster.png|Youngster|Gordon|160|1|194|Wooper|♂|10|None|36=マサタカ|37=Masataka}}
+{{Trainerdiv}}
+{{Trainerentry|Spr HGSS Bird Keeper.png|Bird Keeper|Peter|256|3|016|Pidgey|♂|6|None|016|Pidgey|♂|6|None|021|Spearow|♂|8|None|36=ノブマサ|37=Nobumasa}}
+{{Trainerdiv|land|Rematch}}
+{{Trainerentry|Spr DP Picnicker.png|Picnicker|Liz|{{tt|608|First rematch}}<br/>{{dotw|Th}}{{sup/t|D}}|2|070|Weepinbell|♀|{{tt|35|First rematch}}|None|030|Nidorina|♀|{{tt|38|First rematch}}|None|36=カオリ|37=Kaori|38=phone}}
+{{Trainerentry|Spr DP Picnicker.png|Picnicker|Liz|{{tt|640|Second rematch}}<br/>{{dotw|Th}}{{sup/t|D}}|3|070|Weepinbell|♀|{{tt|39|Second rematch}}|None|033|Nidorino|♂|{{tt|38|Second rematch}}|None|031|Nidoqueen|♀|{{tt|40|Second rematch}}|None|36=カオリ|37=Kaori|38=phone}}
+{{Trainerentry|Spr DP Picnicker.png|Picnicker|Liz|{{tt|960|Third rematch onward}}<br/>{{dotw|Th}}{{sup/t|D}}|3|071|Victreebel|♀|{{tt|47|Third rematch onward}}|None|034|Nidoking|♂|{{tt|58|Third rematch onward}}|None|031|Nidoqueen|♀|{{tt|60|Third rematch onward}}|None|36=カオリ|37=Kaori|38=phone}}
+{{Trainerdiv}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Ralph|{{tt|1280|First rematch}}<br/>{{dotw|We}}{{sup/t|M}}|1|119|Seaking|♂|{{tt|40|First rematch}}|None|36=ヤスアキ|37=Yasuaki|38=phone}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Ralph|{{tt|1344|Second rematch}}/{{tt|1792|Third rematch onward}}<br/>{{dotw|We}}{{sup/t|M}}|2|211|Qwilfish|♂|{{tt|45|Second rematch}}/{{tt|53|Third rematch onward}}|None|119|Seaking|♂|{{tt|42|Second rematch}}/{{tt|56|Third rematch onward}}|None|36=ヤスアキ|37=Yasuaki|38=phone}}
+{{Trainerfooter|land|II}}
+
+==Music==
+{| class="roundtable" style="margin:auto; text-align: center; background: #{{locationcolor/med|land}}; border: 3px solid #{{locationcolor/dark|land}}"
+|- style="background:#{{locationcolor/light|land}}"
+! Games
+! Situation
+! Song name
+! Song name
+! Composition
+! Arrangement
+|- style="background:#FFF"
+! {{GameIcon|G}}{{GameIcon|S}}{{GameIcon|C}}
+| Everywhere
+| 30ばんどうろ
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Route 30]]
+| [[Junichi Masuda]]
+| [[Junichi Masuda]]
+|-
+|- style="background:#FFF"
+! rowspan=3 | {{GameIcon|HG}}{{GameIcon|SS}}
+| Everywhere
+| 30ばんどうろ
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Route 30]] || [[Junichi Masuda]] || [[Go Ichinose]] & [[Shota Kageyama]]<br><small>[[GB Sounds]]:</small> [[Junichi Masuda]]
+|-
+|}
+
+==In the manga==
+[[File:Johto Route 32 Adventures.png|thumb|left|180px|Route 32 in [[Pokémon Adventures]]]]
+[[File:Johto Route 32 Golden Boys.png|thumb|250px|Route 32 in [[Pokémon Gold & Silver: The Golden Boys]]]]
+===Pokémon Adventures===
+===={{MangaArc|Gold, Silver & Crystal}}====
+Route 32 appeared in ''[[PS101|Teddiursa's Picnic]]'', where {{adv|Gold}} arrived there after hearing from [[Bugsy]] that Pokémon in the area tended to disappear. After encountering [[Wilton]], Gold found out that the mysterious Pokémon thief was actually a {{p|Granbull}} with a dislocated jaw, who had been stealing people's [[Poké Ball]]s to catch their attention. As Gold hitting Granbull in the jaw with a Poké Ball to expose it had fixed its problem, it happily returned all the Poké Balls it had taken, including one containing Gold's lost [[Polibo|Poliwag]]. Soon afterwards, Gold met one of [[Professor Elm]]'s [[Professor's assistant|assistants]], who entrusted him with a [[Pokémon Egg]].
+
+===Pokémon Gold & Silver: The Golden Boys===
+Route 32 appeared in ''[[GB04|Let's Aim For The Goal!]]'', where {{GnB|Gold}} was seen traversing through it on his way to [[Azalea Town]]. Along the way, [[Gold's Pikachu]] was distracted by something and led its {{pkmn|Trainer}} to the [[Ruins of Alph]], where a basketball tournament was in progress.
+
+==Related articles==
+{{Johto}}<br>
+{{Project Routes notice}}
+
+[[Category:Johto locations|Route 032]]
+[[Category:Routes|Route 032]]
+[[Category:Gold, Silver and Crystal locations|Route 032]]
+[[Category:HeartGold and SoulSilver locations|Route 032]]
+
+[[de:Route 32 (Johto)]]
+[[es:Ruta 32]]
+[[fr:Route 32]]
+[[it:Percorso 32 (Johto)]]
+[[ja:32ばんどうろ (ジョウト地方)]]
+[[zh:３２号道路（城都）]]

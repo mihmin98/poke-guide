@@ -1476,10 +1476,18 @@ Adds the 251-species checklist and the walkthrough-ordered guide for Gold, Silve
 **Stage B — `version-groups/gsc/` config, locations and walkthroughs**
 - [ ] Research the real pages first (cache-first): the category, both walkthroughs, about 10 Johto pages,
   `In-game trade`, the Game Corners and the Johto dex list.
-- [ ] Config, `locations.ts` and `walkthrough.ts`:
-  - Johto gets new ids; Kanto reuses rby's ids.
-  - Placement per game: Gold/Silver from their walkthrough, Crystal from its own.
-- [ ] Fixtures, the category snapshot, and registration in `version-groups/index.ts`.
+- [x] Config, `locations.ts` and `walkthrough.ts` (done 2026-09-24):
+  - Johto gets new ids; Kanto reuses rby's ids. The `Pokémon Tower` page's Generation II content is the Kanto
+    Radio Tower, which gets its own id (`kanto-radio-tower`).
+  - Placement per game: Gold/Silver from their walkthrough, Crystal from its own. Both have the same 29 parts;
+    Tin Tower is the one real difference (Crystal Part 12, Gold/Silver Part 29), and the Battle Tower is
+    Crystal-only. Route 46, Dark Cave and Route 36 are placed where first reachable in all three games (Parts
+    1, 3 and 4, as in the Gold/Silver walkthrough), like rby's Route 22.
+  - Category pages with nothing to catch or pick up in Generation II (no encounters, no G/S/C item rows) are
+    ignored, e.g. Viridian Forest, Indigo Plateau, Seafoam Islands, Professor Oak's Laboratory. Towns stay.
+  - The prize shops (both Game Corners) move to Stage C, with the Coin Case unlock. Goldenrod's TM shop title
+    names no game, which `shop.ts` doesn't handle yet. The learnset columns move to Stage D.
+- [x] Fixtures, the category snapshot, and registration in `version-groups/index.ts`.
 
 **Stage C — curated overrides** (each with a source page and revid, plus pret `pokegold`/`pokecrystal` refs)
 - [ ] `encounters.ts`:

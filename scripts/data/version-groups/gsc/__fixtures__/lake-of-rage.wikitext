@@ -1,0 +1,298 @@
+<!-- poke-guide fixture: {"title":"Lake of Rage","resolvedTitle":"Lake of Rage","revid":4523285,"timestamp":"2026-04-04T19:58:48Z","fetchedAt":"2026-09-23T16:33:53.055Z"} -->
+{{search|location in [[Johto]]|the episode of [[Pokémon Generations]] titled "The Lake of Rage"|PG04}}
+{{Confused|Lake of Outrage|the1=yes|note1=a zone in the [[Galar]] [[region]]'s [[Wild Area]]}}
+{{Infobox location
+|image=Lake of Rage HGSS {{#switch: {{#time: w}}|3=dry|wet}}.png
+|type=lake
+|mapdesc=A huge lake full of clear, blue water.
+|location_name=Lake of Rage
+|japanese_name=いかりのみずうみ
+|translated_name=Lake of Rage
+|other_info=Gyarados Lake
+|location=North of [[Mahogany Town]]
+|region=Johto
+|generation={{Gen|II}}, {{Gen|IV}} 
+|map=Johto Lake of Rage Map.png
+}}
+
+The '''Lake of Rage''' (Japanese: '''{{j|いかりのみずうみ}}''' ''Lake of Rage''), also known as '''Gyarados Lake''' (Japanese: '''{{j|ギャラドスこ}}''' ''Gyarados Lake''), is a location in [[Johto]]. It is located just north of [[Mahogany Town]], connecting it with {{rt|43|Johto}}, making it the northern-most accessible point of the Johto [[region]]. A large lake spans the area of the Lake of Rage, with a few residents living nearby. It is said to be the largest [[lake]] in the region. West of the lake lies a labyrinth of trees, which hides a house.
+
+It is said the Lake of Rage was created the last time many {{p|Gyarados}} got together and stirred up a storm. The crater that remained filled with rainwater and became the Lake of Rage. In the middle of the lake dwells a {{Shiny}} {{p|Gyarados}} that had recently became irritable due to the radio waves transmitted by [[Team Rocket]] from their [[Team Rocket HQ|hideout]] in [[Mahogany Town]]. The Lake of Rage was considered a dangerous place to go, as the [[red Gyarados]] started tipping over boats and scaring swimmers.
+
+==Geography==
+[[File:Lake of Rage Red Gyarados GSC.png|left|thumb|160px|In [[Generation II]]]]
+[[File:Lake of Rage HGSS.png|thumb|256px|In [[Generation IV]]]]
+The Lake of Rage is located north of {{rt|43|Johto}}. Along the way to the Lake of Rage, the {{player}} will meet several members of [[Team Rocket]]. By {{m|surf}}ing into the middle of the lake, the player will encounter a [[red Gyarados]]. After catching, defeating or fleeing from it, the {{player}} will receive a [[Red Scale]]. [[Lance]], of the [[Elite Four]], will be waiting for the player on the shore afterwards, and will speak of the secret [[Team Rocket HQ]] in [[Mahogany Town]].
+
+In {{game|HeartGold and SoulSilver|s}}, it [[rain]]s at the Lake of Rage almost every day. In these games, after shutting down the transmitter at [[Team Rocket HQ]], on Wednesdays the rain stops and the lake's water level drops—different items are accessible and different Trainers appear depending on the water level.
+
+The player can {{m|Fly}} to the Lake of Rage. In [[Generation II]], the player lands in front of the sign; in {{game|HeartGold and SoulSilver|s}}, the player lands in front of the Fishing Guru's house.
+{{-}}
+==Places of interest==
+===Fishing Guru's house===
+There is a house located to the southeast of the lake, where a [[Fishing Brothers|Fishing Guru]] resides.
+
+After the transmitter at Team Rocket HQ is shut down, the Fishing Guru requests to see large Magikarp. His greatest dream is to see the world's largest {{p|Magikarp}}, and he regularly measures those brought to him in order to realize it. If he is shown a Magikarp, he will calculate its [[Size and weight variation|size]] and give the player an [[Ether]]{{sup/2|GS}}{{sup/4|HGSS}}/[[Elixir]]{{sup/2|C}} if it is bigger than the largest one he had seen before.
+
+In Generation II, the initial record is 3'6" (105.3&nbsp;cm), held by [[Johto Route 32#Trainers|Ralph]]; in Generation IV, the initial record is 41.9&nbsp;inches (106.5&nbsp;cm).
+
+The current record and record holder is displayed on the sign in front of the Fishing Guru's house. In Generation II, the record is first displayed after the Fishing Guru requests to see a Magikarp for the first time; in Generation IV, the record is first displayed after the player breaks the initial record for the first time. As a result, the name of the initial record-holder in Generation IV is not specified.
+
+===Hidden Power house===
+There is a house located to the northwest of the lake, within a labyrinth of trees. The path to this house begins on the western side of Route 43. In Generation IV, this house is only accessible when the lake is flooded.
+
+Inside, a man will give the player {{TM|10|Hidden Power}} for locating the reclusive house.
+
+On Wednesdays, [[Week Siblings|Wesley]] is found near this house, and will give the player a {{i|Black Belt}} the first time they meet. In Generation IV only, after having met all seven siblings, he gives a {{DL|List of Ribbons in the games|Downcast Ribbon}} every week.
+
+==Items==
+[[File:Lake of Rage GenIV.png|thumb|200px|Normal Lake appearance (top) and flooded appearance (bottom) in Generation IV]]
+{{itlisth|lake}}
+{{Itemlist|Full Restore|At the end of the indent on the right side, southwest of the lake ''(hidden)''|G=yes|S=yes|C=yes}}
+{{Itemlist|Full Restore|At the eastern end between the two ledges, southwest of the lake ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Red Flute|On the patch of land west of the lake, accessible when the lake is flooded (requires {{m|Surf}})|HG=yes|SS=yes}}
+{{Itemlist|Black Belt|From [[Week Siblings|Wesley]] in the northwestern corner, accessible when the lake is not flooded (requires {{m|Cut}}{{sup/2|GSC}}){{dotw|We}}|G=yes|S=yes|C=yes|HG=yes|SS=yes|display={{i|Black Belt}}}}
+{{Itemlist|None|sprite=Downcast Ribbon|From [[Week Siblings|Wesley]] in the northwestern corner after meeting all the week siblings, accessible when the lake is not flooded{{dotw|We}}|HG=yes|SS=yes|display={{DL|List of Ribbons in the games|Downcast Ribbon}}}}
+{{Itemlist|Rare Candy|At the end of the western path, west of the lake (requires {{m|Cut}}) (cannot be obtained while [[Week Siblings|Wesley]] is present) ''(hidden)''|G=yes|S=yes|C=yes}}
+{{Itemlist|Max Ether|At the end of the middle path, west of the lake (requires {{m|Cut}})|G=yes|S=yes}}
+{{Itemlist|Elixir|At the end of the middle path, west of the lake (requires {{m|Cut}})|C=yes}}
+{{Itemlist|Max Revive|At the end of the middle path, west of the lake, accessible when the lake is not flooded (requires {{m|Cut}}){{dotw|We}}|HG=yes|SS=yes}}
+{{Itemlist|TM Normal|On the patch of land north of the lake, accessible when the lake is flooded (requires {{m|Surf}})|HG=yes|SS=yes|display={{TM|43|Secret Power}}}}
+{{Itemlist|TM Normal|From the man in the northwestern house (requires {{m|Cut}})|G=yes|S=yes|C=yes|display={{TM|10|Hidden Power}}}}
+{{Itemlist|TM Normal|From the man in the northwestern house, accessible when the lake is flooded (requires {{m|Surf}})|HG=yes|SS=yes|display={{TM|10|Hidden Power}}}}
+{{Itemlist|TM Fighting|At the end of the northeastern path, accessible west of the lake (requires {{m|Cut}})|G=yes|S=yes|C=yes|display={{TM|43|Detect}}}}
+{{Itemlist|Full Restore|At the end of the northeastern path, accessible west of the lake when it is not flooded (requires {{m|Cut}}){{dotw|We}}|HG=yes|SS=yes}}
+{{Itemlist|Ether|From the Fishing Guru for showing him a larger Magikarp than the one listed|G=yes|S=yes|HG=yes|SS=yes}}
+{{Itemlist|Elixir|From the Fishing Guru for showing him a larger Magikarp than the one listed|C=yes}}
+{{Itemlist|Red Scale|Automatically obtained after battling the [[Red Gyarados]] (requires {{m|Surf}})|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Rare Candy|In the gap between the trees south of the path, east of the lake ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Max Potion|At the northern end of the path, east of the lake ''(hidden)''|G=yes|S=yes|C=yes}}
+{{Itemlist|Choice Specs|On the patch of land northeast of the lake, accessible when the lake is flooded (requires {{m|Surf}})|HG=yes|SS=yes}}
+{{Itemlist|Max Potion|On the patch of land northeast of the lake, accessible when the lake is flooded (requires {{m|Surf}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Full Heal|On the patch of land south of the lake, accessible when the lake is not flooded (requires {{m|Surf}}){{dotw|We}}|HG=yes|SS=yes}}
+{{itlistfoot|lake}}
+
+==Pokémon==
+===Generation II===
+{{Catch/header|lake|4}}
+{{Catch/div|lake|Surfing}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Surf|10–19|all=90%|type1=Water}}
+{{Catch/entry2|130|Gyarados|yes|yes|yes|Surf|15–19|all=10%|type1=Water|type2=Flying}}
+{{Catch/div|lake|Fishing}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=100%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=90%|type1=Water}}
+{{Catch/entry2|130|Gyarados|yes|yes|yes|Fish Good|20|all=10%|type1=Water|type2=Flying}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Super|40|all=70%|type1=Water}}
+{{Catch/entry2|130|Gyarados|yes|yes|yes|Fish Super|40|all=30%|type1=Water|type2=Flying}}
+{{Catch/div|lake|{{color2|000|Headbutt tree}}<br><small>(Moderate chances of battle)</small>}}
+{{Catch/entry2|010|Caterpie|yes|no|no|Headbutt|10|all=65%|type1=Bug}}
+{{Catch/entry2|011|Metapod|yes|no|no|Headbutt|10|all=15%|type1=Bug}}
+{{Catch/entry2|012|Butterfree|yes|no|no|Headbutt|10|all=5%|type1=Bug|type2=Flying}}
+{{Catch/entry2|013|Weedle|no|yes|no|Headbutt|10|all=65%|type1=Bug|type2=Poison}}
+{{Catch/entry2|014|Kakuna|no|yes|no|Headbutt|10|all=15%|type1=Bug|type2=Poison}}
+{{Catch/entry2|015|Beedrill|no|yes|no|Headbutt|10|all=5%|type1=Bug|type2=Poison}}
+{{Catch/entry2|048|Venonat|no|no|yes|Headbutt|10|all=15%|type1=Bug|type2=Poison}}
+{{Catch/entry2|102|Exeggcute|yes|yes|no|Headbutt|10|all=15%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|102|Exeggcute|no|no|yes|Headbutt|10|all=20%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|163|Hoothoot|no|no|yes|Headbutt|10|all=65%|type1=Normal|type2=Flying}}
+{{Catch/div|lake|{{color2|000|Headbutt tree}}<br><small>(Low chances of battle)</small>}}
+{{Catch/entry2|010|Caterpie|yes|no|no|Headbutt|10|all=50%|type1=Bug}}
+{{Catch/entry2|012|Butterfree|yes|no|no|Headbutt|10|all=5%|type1=Bug|type2=Flying}}
+{{Catch/entry2|013|Weedle|no|yes|no|Headbutt|10|all=50%|type1=Bug|type2=Poison}}
+{{Catch/entry2|015|Beedrill|no|yes|no|Headbutt|10|all=5%|type1=Bug|type2=Poison}}
+{{Catch/entry2|102|Exeggcute|yes|yes|no|Headbutt|10|all=15%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|102|Exeggcute|no|no|yes|Headbutt|10|all=20%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|163|Hoothoot|no|no|yes|Headbutt|10|all=50%|type1=Normal|type2=Flying}}
+{{Catch/entry2|204|Pineco|yes|yes|yes|Headbutt|10|all=30%|type1=Bug}}
+{{Catch/footer|lake}}
+
+===Generation IV===
+{{Catch/header|lake|4}}
+{{Catch/div|lake|Surfing}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Surf|5-20|all=90%|type1=Water}}
+{{Catch/entryhs|130|Gyarados|yes|yes|Surf|10-20|all=10%|type1=Water|type2=Flying}}
+{{Catch/div|lake|Fishing}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=100%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=90%|type1=Water}}
+{{Catch/entryhs|130|Gyarados|yes|yes|Fish Good|20|all=10%|type1=Water|type2=Flying}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Super|40|all=70%|type1=Water}}
+{{Catch/entryhs|130|Gyarados|yes|yes|Fish Super|40|all=30%|type1=Water|type2=Flying}}
+{{Catch/div|lake|Headbutt<br/><small>Group A</small>}}
+{{Catch/entryhs|102|Exeggcute|yes|yes|Headbutt|14-16|all=20%|type1=Grass|type2=Psychic|10=j}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|14-16|all=50%|type1=Normal|type2=Flying|10=j}}
+{{Catch/entryhs|204|Pineco|yes|yes|Headbutt|14-16|all=30%|type1=Bug|10=j}}
+{{Catch/div|lake|Headbutt<br/><small>Group B</small>}}
+{{Catch/entryhs|048|Venonat|yes|yes|Headbutt|17-19|all=15%|type1=Bug|type2=Poison|10=j}}
+{{Catch/entryhs|102|Exeggcute|yes|yes|Headbutt|17-19|all=20%|type1=Grass|type2=Psychic|10=j}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|17-19|all=65%|type1=Normal|type2=Flying|10=j}}
+{{Catch/footer|lake}}
+
+==Special encounters==
+===Generation II===
+The [[Red Gyarados]] appears here as part of the story. Its IVs are fixed: 0 HP, 14 Attack, 10 Defense, 10 Speed, and 10 Special. As a result, it is always male.
+
+After the battle, it will drop the [[Red Scale]].
+{{Pokémon
+| gen = 2
+| ndex = 0130
+| pokemon = Gyarados
+| shiny=yes
+| img=HOME0130 s
+| gender = male
+| level = 30
+| type1 = Water
+| type2 = Flying
+| move1 = Thrash | move1type = Normal
+| move2 = Bite | move2type = Dark
+| move3 = Dragon Rage | move3type = Dragon
+| move4 = Leer | move4type = Normal
+}}
+
+===Generation IV===
+The [[Red Gyarados]] appears here as part of the story. If defeated or run from, it respawns after entering the [[Hall of Fame]].
+
+After the battle, it will drop the [[Red Scale]].
+{{Pokémon
+| gen = 4
+| ndex = 0130
+| pokemon = Gyarados
+| shiny=yes
+| img=HOME0130 s
+| gender = both
+| level = 30
+| type1 = Water
+| type2 = Flying
+| ability = Intimidate
+| move1 = Bite | move1type = Dark | move1cat = Physical
+| move2 = Dragon Rage | move2type = Dragon | move2cat = Special
+| move3 = Leer | move3type = Normal | move3cat = Status
+| move4 = Twister | move4type = Dragon | move4cat = Special
+}}
+
+==Trainers==
+===Generation II===
+{{trainerheader|lake}}
+{{Trainerdiv|lake|After clearing Team Rocket HQ}}
+{{Trainerentry|Spr GS Cooltrainer M.png|Cooltrainer|Aaron|1152<br><small>Requires {{m|Cut}}</small>|3|002|Ivysaur|♂|24|None|005|Charmeleon|♂|24|None|008|Wartortle|♂|24|None|36=ユウ|37=Yū}}
+{{Trainerdiv|lake}}
+{{Trainerentry|Spr GS Fisher.png|Fisher|Raymond|880|4|129|Magikarp|♂|22|None|129|Magikarp|♂|22|None|129|Magikarp|♂|22|None|129|Magikarp|♂|22|None|36=ケイゾウ|37=Keizō}}
+{{Trainerdiv|lake}}
+{{Trainerentry|Spr GS Fisher.png|Fisher|Andre|1080|1|130|Gyarados|♂|27|None|36=ショウジ|37=Shōji}}
+{{Trainerdiv|lake}}
+{{Trainerentry|Spr GS Cooltrainer F.png|Cooltrainer|Lois|1200|2|188|Skiploom|♀|25|None|038|Ninetales|♀|25|None|36=チヒロ|37=Chihiro}}
+{{Trainerfooter|lake|II}}
+
+===Generation IV===
+{{trainerheader|lake}}
+{{Trainerdiv|lake|After battling the Red Gyarados}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Andre<br>{{dotw|Mo}}{{dotw|Tu}}{{dotw|Thu}}{{dotw|Fri}}{{dotw|Sa}}{{dotw|Su}}|864|1|130|Gyarados|♂|27|None|36=ショウジ|37=Shōji}}
+{{Trainerdiv|lake}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Raymond<br>{{dotw|Mo}}{{dotw|Tu}}{{dotw|Thu}}{{dotw|Fri}}{{dotw|Sa}}{{dotw|Su}}|704|4|129|Magikarp|♂|22|None|129|Magikarp|♂|22|None|129|Magikarp|♂|22|None|129|Magikarp|♂|22|None|36=ケイゾウ|37=Keizō}}
+{{Trainerdiv|lake}}
+{{Trainerentry|Spr HGSS Ace Trainer F.png|Ace Trainer|Lois|1500|2|179|Mareep|♀|25|None|038|Ninetales|♀|25|None|36=チヒロ|37=Chihiro}}
+{{Trainerdiv|lake|After clearing Team Rocket HQ}}
+{{Trainerentry|Spr HGSS Ace Trainer M.png|Ace Trainer|Alton{{dotw|We}}|1440|3|002|Ivysaur|♂|24|None|005|Charmeleon|♂|24|None|008|Wartortle|♂|24|None|36=ユウ|37=Yū}}
+{{Trainerfooter|lake|II}}
+
+==Layout==
+[[File:Lake of Rage HGSS {{#switch: {{#time: w}}|3=wet|dry}}.png|thumb|200px|Lake of Rage while {{#switch: {{#time: w}}|3=wet|dry}}]]
+{{Mapgen
+|colordark={{locationcolor/dark|lake}}
+|colorlight={{locationcolor/light|lake}}
+|hv=v
+|genII=Lake of Rage GSC.png
+|sizeII=150px
+|genIV=Lake of Rage HGSS {{#switch: {{#time: w}}|3=dry|wet}}.png
+|sizeIV=180px}}
+{{right clear}}
+
+==In animation==
+[[File:Lake Rage anime.png|thumb|220px|The Lake of Rage in {{aniseries|GS}}]]
+[[File:Lake Rage anime map.png|thumb|220px|left|A map of the Lake of Rage in {{aniseries|GS}}]]
+===''Pokémon the Series''===
+===={{aniseries|GS}}====
+The Lake of Rage, referred to as Lake Rage in the [[dub]], appeared in ''[[EP235|Talkin' 'Bout an Evolution]]'' and ''[[EP236|Rage Of Innocence]]''. {{Ash}}, {{ashfr}}, and {{an|Lance}} learned that [[Team Rocket]] was conducting experiments at the lake as a part of [[Project R]], which involved forcing Pokémon to [[Evolution|evolve]]. Since the {{TP|Lance|Red Gyarados|Gyarados}} was the only Pokémon in the lake to have been affected by their experiments, Team Rocket captured it for further studying. However, their project ended in a failure when Lance destroyed Team Rocket's research facility at the lake, followed by the Red Gyarados escaping and getting {{pkmn2|caught}} by Lance.
+{{left clear}}
+
+===Pokémon Generations===
+[[File:Lake of Rage PG.png|thumb|250px|The Lake of Rage in [[Pokémon Generations]]]]
+The Lake of Rage appeared in ''[[PG04|The Lake of Rage]]''. [[Lance]] had briefly encountered and battled the [[Red Gyarados]] before at the lake, motivating him in investigating the [[Team Rocket HQ]] in [[Mahogany Town]]. After the radio wave generator that had forced {{p|Gyarados}} to evolve had been destroyed, Lance revisited the lake to see that the Red Gyarados had calmed down.
+{{-}}
+
+==In the manga==
+[[File:Lake of Rage JBA.png|thumb|250px|Lake of Rage in [[Pocket Monsters HGSS Jō's Big Adventure]]]]
+===Pocket Monsters HGSS Jō's Big Adventure===
+The Lake of Rage appeared in [[JBA4]], where [[Jō]] defended the [[Red Gyarados]] from [[Ariana]] and [[Petrel]] by having a [[Multi Battle]] against them alongside [[Lance]]. With his and Gyarados's help, Jō was able to defeat the two {{tc|Executive}}s.
+
+===Pokémon Adventures===
+===={{MangaArc|Gold, Silver & Crystal}}====
+[[File:Lake of Rage Adventures.png|thumb|left|250px|Lake of Rage in [[Pokémon Adventures]]]]
+[[File:Red Gyarados Adventures debut.png|thumb|170px|The Red Gyarados at the Lake of Rage in Pokémon Adventures]]
+The Lake of Rage first appeared in ''[[PS112|Raise the Red Gyarados]]'', where {{adv|Silver}} came to inspect it per [[Lance]]'s instructions, followed by {{adv|Gold}}. The two were soon attacked by a swarm of {{p|Gyarados}}. Based on the static on their [[Pokégear]] screens, Silver deduced that a radio wave was behind the lake's {{p|Magikarp}} evolving and the Gyarados rampaging. Eventually, Silver managed to locate the source of the radio waves, a [[Silver's Gyarados|Red Gyarados]], and proceeded to {{pkmn2|caught|catch}} it with Gold's help, stopping the radio waves. However, they were then approached by the [[Masked Man]].
+
+In ''[[PS113|Delibird Delivery - 1]]'' and ''[[PS114|2]]'', Gold and Silver battled against the Masked Man, with Silver using his newly caught Red Gyarados to command the lake's other Gyarados to attack him. Despite this, however, both Gold and Silver suffered a crushing defeat.
+
+In ''[[PS139|Raising Raichu]]'' and ''[[PS140|Do-Si-Do with Dodrio]]'', [[Lt. Surge]] visited the Lake of Rage to investigate Gold and Silver's disappearance. After investigating a nearby [[Team Rocket HQ|souvenir shop]] and surviving an encounter with the Masked Man, he dived into the lake with his submarine and found the Red Gyarados {{status|frozen}} in ice, as well as some of Gold and Silver's belongings.
+
+===={{MangaArc|HeartGold & SoulSilver}}====
+In ''[[PS445|Dealing With A Koffing Fit]]'', it was revealed that [[Team Rocket]] had caused a swarm of Gyarados to appear at the Lake of Rage. Silver deduced this as one of their methods of announcing their return.
+{{-}}
+
+==Trivia==
+* Unused debug text in Japanese Crystal spells the lake's name as {{j|「イカリのみずうみ」}}, with ''ikari'' in katakana ({{j|イカリ}}) as opposed to the usual hiragana ({{j|いかり}}).
+* [[Pokémon FireRed & Pokémon LeafGreen: Super Music Collection|''Sevii Islands'']] in Pokémon FireRed and LeafGreen is a rearrangement of {{DL|Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Disc 3|''Route 42''}} from Pokémon Gold and Silver, which is shared with the Lake of Rage.
+* Even though it is said that Team Rocket's radio signal is evolving all the Magikarp in Lake of Rage, Magikarp can still be found there at any time. Even if the radio signal is being listened to on the Poké Gear, Gyarados do not show up more often.
+* In Pokémon HeartGold and SoulSilver, the red Gyarados is normally only seen in the flooded version of the lake. However, if it is defeated instead of being caught, it respawns after defeating the Elite Four and Champion, but the lake is no longer locked to the flooded version. If the Lake of Rage is visited on a Wednesday when it is not raining after causing it to respawn, the red Gyarados will appear in the low water-level version.<ref>[https://www.youtube.com/watch?v=EgAFI-d9A1s "I Tested UNCONFIRMED Pokemon Facts" - BlueBoyPhin - YouTube]</ref>
+* {{tc|Ace Trainer}} Lois makes comments regarding the Red Gyarados and, if talked to after winning the battle, mentions having also seen a pink {{p|Butterfree}}, which is the actual shiny form of this Pokémon. This dialogue also alludes to the fact this was the first time in the games that shiny Pokémon could be found in the wild.
+* In many languages, this lake has the same name as the move {{m|Rage}}. In French, it instead has the same name as the move {{m|Outrage}}. In German, it does not share a name with any particular move.
+
+==In other languages==
+<div style="display:inline-block">
+''Lake of Rage''
+{{Langtable|color={{locationcolor/light|lake}}|bordercolor={{locationcolor/dark|lake}}
+|zh_cmn=憤怒之湖 ''{{tt|Fènnù zhī Hú|Lake of Rage}}''
+|cs=Jezero Hněvu
+|nl=Meer van Razernij
+|fr=Lac Colère
+|no=Sinnevannet
+|de=See des Zorns
+|it=Lago d'Ira
+|ko={{k|분노의 호수}} ''Bunno-ui Hosu''
+|pl=Jezioro Wściekłości
+|pt_br=Lago da Fúria
+|es=Lago de la Furia
+|vi=Hồ Ikari
+}}
+</div>
+<div style="display:inline-block">
+''Gyarados Lake''
+{{Langtable|color={{locationcolor/light|lake}}|bordercolor={{locationcolor/dark|lake}}
+|zh_cmn=暴鯉龍之湖 / 暴鲤龙之湖 ''{{tt|Bàolǐlóng zhī Hú|Gyarados Lake}}''
+|cs=Jezero Gyaradosů
+|fr=Lac Leviator
+|de=Garados-See
+|it=Lago dei Gyarados
+|ko={{k|갸라도스호}} ''Gyarados Ho''
+|pt_br=Lago dos Gyarados
+|es=Lago de Gyarados
+}}
+</div>
+
+==References==
+<references/>
+
+==Related articles==
+{{Johto}}
+{{Project Locations notice}}
+
+[[Category:Johto locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Lakes|Rage]]
+
+[[de:See des Zorns]]
+[[es:Lago de la Furia]]
+[[fr:Lac Colère]]
+[[it:Lago d'Ira]]
+[[ja:いかりのみずうみ]]
+[[zh:愤怒之湖]]

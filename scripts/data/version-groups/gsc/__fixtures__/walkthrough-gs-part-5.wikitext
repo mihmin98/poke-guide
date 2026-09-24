@@ -1,0 +1,563 @@
+<!-- poke-guide fixture: {"title":"Walkthrough:Pokémon Gold and Silver/Part 5","resolvedTitle":"Walkthrough:Pokémon Gold and Silver/Part 5","revid":4399659,"timestamp":"2025-10-15T00:54:32Z","fetchedAt":"2026-09-24T09:59:22.804Z"} -->
+{{WalkthroughNotice|GS}}
+==Azalea Town==
+[[File:Azalea Town GSC.png|thumb|300px|Azalea Town]]
+
+{{to|Azalea}} is a small, isolated town on the south end of [[Johto]]'s peninsula. Due to its remote location between [[Union Cave]] and [[Ilex Forest]], the town sees few visitors aside from those looking to challenge the [[Azalea Gym]]. A Poké Ball craftsman named [[Kurt]] lives in the northwest part of town. The [[Slowpoke Well]] is located in the east, and its resident {{p|Slowpoke}} freely wander around town.
+
+{| class="expandable" align="center" style="background: #5A7D38; {{roundy}}; border: 5px solid #688D43;"
+|- align="center"
+! Items
+|-
+|
+{{itlisth|forest}}
+{{itemlist|Full Heal|On the north wall of Slowpoke Well ''(hidden)''|G=yes|S=yes}}
+{{itemlist|White Apricorn|Behind Kurt's house in the northwest, on a tree (daily)|G=yes|S=yes|display=[[White Apricorn|Wht Apricorn]]}}
+{{itemlist|Lure Ball IV|From Kurt, after chasing Team Rocket away|G=yes|S=yes|display=[[Lure Ball]]}}
+{{itemlist|TM Bug|From [[Gym Leader]] [[Bugsy]], after defeating him|G=yes|S=yes|display={{TM|49|Fury Cutter}}}}
+{{catch/div|forest|Later visit}}
+{{itemlist|Charcoal|Charcoal Kiln; from the apprentice, after {{p|Farfetch'd}} is returned from Ilex Forest|G=yes|S=yes}}
+{{itlistfoot|forest}}
+|}
+
+
+===Charcoal Kiln===
+The house in the southeast part of town houses a charcoal kiln. The owner uses a {{p|Farfetch'd}} to fell trees in [[Ilex Forest]] and obtain the necessary materials. The wood is then treated and turned into [[Charcoal]], which is then supplied to the local Poké Mart for sale.
+
+===Save the Slowpoke!===
+Visit the northwest house and speak to [[Kurt]]. If you were looking to have some custom Poké Balls made, it will have to wait. He informs you that members of a criminal organization known as [[Team Rocket]] have been sighted in [[Slowpoke Well]], even though the group was supposedly disbanded [[Generation I|three years ago]]. The rumor around town is that they have been cutting off [[Slowpoke Tail|SlowpokeTails]] to sell! Kurt was just about to confront them when you stopped by, and rushes off to save the Pokémon.
+
+[[File:Slowpoke Well B1F GS.png|thumb|Slowpoke Well, B1F]]
+[[File:Slowpoke Well B2F GSC.png|thumb|Slowpoke Well, B2F]]
+===Slowpoke Well===
+The [[Slowpoke Well]] is located on the east side of town, near {{rt|33|Johto}}. The cave is home to the town's {{p|Slowpoke}}, which they keep as pets. Legend has it that around 400 years ago, one of the Slowpoke from the well yawned, and in doing so ended a persistent drought that plagued [[Azalea Town]].
+
+{| class="expandable" align="center" style="background: #{{locationcolor/med|cave}}; {{roundy}}; border: 5px solid #{{locationcolor/light|cave}};"
+|- align="center"
+! Trainers
+|-
+|
+{{trainerheader|cave}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||360|2|019|Rattata|♂|9||019|Rattata|♂|9|}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr GS Rocket Grunt F.png|Rocket Grunt||440|2|041|Zubat|♀|9||023|Ekans|♀|11|}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||360|3|019|Rattata|♂|7||041|Zubat|♂|9||041|Zubat|♂|9|}}
+{{Trainerfooter|cave|I}}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|cave}}; {{roundy}}; border: 5px solid #{{locationcolor/light|cave}};"
+|- align="center"
+! Available Pokémon
+|-
+|
+{{Catch/header|cave|4}}
+{{catch/div|cave|B1F}}
+{{Catch/entry2|041|Zubat|yes|yes|no|Cave|5-8|all=85%|type1=Poison|type2=Flying}}
+{{Catch/entry2|079|Slowpoke|yes|yes|no|Cave|6, 8|all=15%|type1=Water|type2=Psychic}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry2|129|Magikarp|yes|yes|no|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entry2|118|Goldeen|yes|yes|no|Fish Old|10|all=15%|type1=Water}}
+{{Catch/footer|cave}}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|cave}}; {{roundy}}; border: 5px solid #{{locationcolor/light|cave}};"
+|- align="center"
+! Items
+|-
+|
+{{itlisth|cave}}
+{{catch/div|cave|B1F}}
+{{itemlist|Super Potion|On the northeast ridge|G=yes|S=yes}}
+{{catch/div|cave|B2F}}
+{{itemlist|TM Water|On the western ridge (requires {{m|Surf}}, {{m|Strength}})|G=yes|S=yes|display={{TM|18|Rain Dance}}}}
+{{itemlist|King's Rock|From a man on the eastern ridge (requires {{m|Surf}}, {{m|Strength}})|G=yes|S=yes}}
+{{itlistfoot|cave}}
+|}
+
+
+====B1F====
+[[Kurt]] can be found just inside the well, in the southeast corner of B1F. The {{tc|Team Rocket Grunt}} that was blocking the entrance was so startled when Kurt shouted at him that he fell down the well. Kurt tried to give chase but lost his footing as well, landing hard on his back. He cannot move for the moment, so you need to save the {{p|Slowpoke}} in his place. Go north to find and defeat that first Grunt. Climb onto the northeast ridge to battle a female Grunt and pick up the nearby [[Super Potion]]. Walk down the stairway and go west to fight a third Grunt. Head north past a couple of captive Slowpoke to battle [[Proton|one final Grunt]], the one in charge of the operation.
+
+{{Party
+|walkthrough=yes
+|background=666666
+|border=CC0000
+|headcolor=CCCCCC
+|sprite=Spr GS Rocket Grunt M.png
+|prize={{pdollar}}560
+|class=Rocket
+|classlink=Team Rocket Grunt (Trainer class)
+|name={{color2|000|Proton|Grunt}}
+|game=GS
+|location=Slowpoke Well
+|pokemon=1
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0109
+|pokemon=Koffing
+|gender=male
+|level=14
+|type1=Poison
+|move1=Tackle|move1type=Normal
+|move2=Smog|move2type=Poison
+|move3=Poison Gas|move3type=Poison
+}}
+{{Party/end}}
+
+
+Defeated, he admits that [[Team Rocket]] continued its activities in secret after the order to disband three years ago. He taunts you, saying that now you get to watch them stir up trouble. The Grunts flee, and [[Kurt]] is on his feet again. After checking on the two {{p|Slowpoke}}, he takes you back to his home.
+
+===Kurt, the Craftsman===
+[[Kurt]] would be happy to make custom Poké Balls for you anytime, but he only has one at the moment and gives you a [[Lure Ball]] as thanks for saving the {{p|Slowpoke}}. Kurt goes on to explain that he makes Poké Balls from [[Apricorn]]s; simply collect them from trees and bring them to him. He accepts one Apricorn at a time, and will have the Poké Ball completed the next day. There are seven varieties of Apricorn, each suited for a different type of Poké Ball.
+
+{| style="margin: auto; background: #{{apricorn color}}; {{roundy}}; border: 2px solid #{{apricorn color dark}};" cellspacing="2" cellpadding="4"
+|-
+! colspan="2" style="background: #{{apricorn color light}}; {{roundytl|5px}};" | Apricorn
+! colspan="2" style="background: #{{apricorn color light}};" | Ball
+! style="background: #{{apricorn color light}}; {{roundytr|5px}};" | Effect
+|- style="margin: auto; background: #FFF;"
+| {{bag|Black Apricorn}} || [[Black Apricorn|Blk Apricorn]] || {{bag|Heavy Ball}} || [[Heavy Ball]]
+| More effective against [[List of Pokémon by weight|heavier]] Pokémon.
+|- style="margin: auto; background: #FFF;"
+| {{bag|Blue Apricorn}} || [[Blue Apricorn|Blu Apricorn]] || {{bag|Lure Ball}} || [[Lure Ball]]
+| More effective against Pokémon hooked by a [[Fishing|fishing rod]].
+|- style="margin: auto; background: #FFF;"
+| {{bag|Green Apricorn}} || [[Green Apricorn|Grn Apricorn]] || {{bag|Friend Ball}} || [[Friend Ball]]
+| Makes a Pokémon more [[Friendship|friendly]]. Affects {{m|Frustration|certain}} {{m|Return|moves}} and [[friendship Evolution|Evolutions]].
+|- style="margin: auto; background: #FFF;"
+| {{bag|Pink Apricorn}} || [[Pink Apricorn|Pnk Apricorn]] || {{bag|Love Ball}} || [[Love Ball]]
+| Meant to be more effective against Pokémon of the same species but opposite gender of the active Pokémon.<br><small>''Due to {{DL|List of battle glitches in Generation II|Catch rate|a glitch}}, it is more effective against same-species, same-gender Pokémon instead.''</small>
+|- style="margin: auto; background: #FFF;"
+| {{bag|Red Apricorn}} || [[Red Apricorn]] || {{bag|Level Ball}} || [[Level Ball]]
+| More effective when target's level is lower and active Pokémon's level is higher.
+|- style="margin: auto; background: #FFF;"
+| {{bag|White Apricorn}} || [[White Apricorn|Wht Apricorn]] || {{bag|Fast Ball}} || [[Fast Ball]]
+| Meant to be more effective against {{cat|Pokémon that run from battle}}.<br><small>''Due to {{DL|List of battle glitches in Generation II|Catch rate|a glitch}}, it is more effective against {{p|Magnemite}}, {{p|Grimer}}, and {{p|Tangela}}, only.''</small>
+|- style="margin: auto; background: #FFF;"
+| {{bag|Yellow Apricorn}} || [[Yellow Apricorn|Ylw Apricorn]] || {{bag|Moon Ball}} || [[Moon Ball]]
+| Meant to be more effective against Pokémon that evolve by [[Moon Stone]].<br><small>''Due to {{DL|List of battle glitches in Generation II|Catch rate|a glitch}}, it has no additional effect and functions as a normal Poké Ball.''</small>
+|-
+| colspan="5" style="background: #{{apricorn color light}}; {{roundybottom|5px}};" |
+|}
+
+
+===Azalea Gym===
+[[File:Azalea Gym GSC.png|thumb|Azalea Gym]]
+
+{| class="roundy" style="background: linear-gradient(135deg, #{{bug color}} 50%, #{{bug color light}} 50%); padding: 0.5em;"
+|- 
+! colspan=2 style="font-size: 1.3em; color: #000;" | 
+|- style="background: #FFF;"
+| style="padding: 0.5em;" | '''Azalea Town Pokémon Gym<br>Leader: Bugsy'''<br>The Walking Bug Pokémon Encyclopedia
+|}
+
+
+The [[Azalea Gym]] specializes in {{type|Bug}} Pokémon. Bug-type moves are super effective against {{t|Dark}}-, {{t|Grass}}-, and {{type|Psychic}} Pokémon, while Bug-type Pokémon are weak to {{t|Fire}}-, {{t|Flying}}-, and {{type|Rock}} moves.
+
+The Gym has a simple layout, with a series of bushes arranged in two half-circles around a large tree. The gap near the front of the building is blocked by Twins Amy & May, so challengers must approach from the back of the building to reach the [[Gym Leader]].
+
+Neither of [[Bugsy]]'s first two Pokémon are much of a threat, though {{p|Kakuna}} may {{status|poison}} its target with {{m|Poison Sting}}. His {{p|Scyther}} is more dangerous, due in part to its high {{stat|Attack}} and {{stat|Speed}}. Its {{m|Fury Cutter}} attack starts out weak but doubles in power with every successful hit, and deals increased damage to {{t|Grass}} Pokémon like {{p|Chikorita}}. {{m|Leer}} cuts the target's {{stat|Defense}}, allowing it to deal further damage. Bug Pokémon can do little against the high Defense of {{type|Rock}} Pokémon; if you traded for the boy's {{p|Onix}} in [[Violet City]], counterattack with {{m|Rock Throw}} for an easy victory.
+
+{{WalkthroughGym
+| background = {{bug color}}
+| headcolor = {{bug color light}}
+| name = Azalea Gym
+| badge = Hive Badge
+| image = Hive Badge.png
+| trainers = 
+{{Trainerheader|Bug}}
+{{Trainerentry|Spr GS Twins.png|Twins|Amy & May|200|2|165|Ledyba|♀|10|None|167|Spinarak|♀|10|None}}
+{{Trainerdiv|Bug}}
+{{Trainerentry|Spr GS Bug Catcher.png|Bug Catcher|Al|192|2|010|Caterpie|♂|12|None|013|Weedle|♂|12|None}}
+{{Trainerdiv|Bug}}
+{{Trainerentry|Spr GS Bug Catcher.png|Bug Catcher|Benny|192|3|013|Weedle|♂|7|None|014|Kakuna|♂|9|None|015|Beedrill|♂|12|None}}
+{{Trainerdiv|Bug}}
+{{Trainerentry|Spr GS Bug Catcher.png|Bug Catcher|Josh|208|1|046|Paras|♂|13|None}}
+{{Trainerfooter|Bug|I}}
+| party = 
+{{Party
+|middle=yes
+|background={{bug color}}
+|headcolor={{bug color light}}
+|border={{bug color dark}}
+|sprite=Spr GS Bugsy.png
+|prize={{pdollar}}1600
+|class=Leader
+|classlink=Gym Leader
+|name={{color2|000000|Bugsy}}
+|game=GS
+|location=Azalea Gym
+|pokemon=3
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0011
+|pokemon=Metapod
+|gender=male
+|level=14
+|type1=Bug
+|move1=Tackle|move1type=Normal
+|move2=String Shot|move2type=Bug
+|move3=Harden|move3type=Normal
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0014
+|pokemon=Kakuna
+|gender=male
+|level=14
+|type1=Bug|type2=Poison
+|move1=Poison Sting|move1type=Poison
+|move2=String Shot|move2type=Bug
+|move3=Harden|move3type=Normal
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0123
+|pokemon=Scyther
+|gender=male
+|level=16
+|type1=Bug|type2=Flying
+|move1=Fury Cutter|move1type=Bug
+|move2=Quick Attack|move2type=Normal
+|move3=Leer|move3type=Normal
+}}
+{{Party/end}}
+}}
+
+
+After the battle, [[Bugsy]] awards you the {{badge|Hive}}, which ensures obedience of all Pokémon up to level 30 and enables the use of {{m|Cut}} in the field. He also gives you {{TM|49|Fury Cutter}} as a prize.
+
+===Ambush!===
+When you reach the west side of town, {{ga|Silver}} catches up to you. He asks if it is true that [[Team Rocket]] has returned, and accuses you of lying after learning that you defeated them. He draws you into battle to force you to prove yourself.
+
+===Rival Battle 2===
+{{ga|Silver}} has added two more Pokémon to his team since the previous battle. {{p|Gastly}} takes serious damage from {{t|Ghost}}-, {{t|Psychic}}-, and {{type|Dark}} attacks, but its defenses are low enough that attacks of nearly any type will be effective. Ghost Pokémon are immune to {{type|Normal}} moves, so moves like {{m|Tackle}} and {{m|Scratch}} are useless. {{p|Zubat}} is vulnerable to {{t|Rock}}-, {{t|Electric}}-, {{t|Psychic}}-, and {{type|Ice}} moves. The Pokémon that he took from {{prof|Elm}}'s lab has evolved since then and learned a move that matches its type, which boosts its power with a [[same-type attack bonus]]. Avoid pitting your own [[first partner Pokémon]] against it or risk taking serious damage.
+
+{{Party
+|caption={{PlayerChoice|0152|Chikorita}}
+|walkthrough=yes
+|background={{silver color}}
+|headcolor={{silver color light}}
+|border={{silver color dark}}
+|sprite=Spr GS Silver 1.png
+|prize={{pdollar}}960
+|name={{color2|000|Silver (game)|Silver}}
+|game=GS
+|location=Azalea Town
+|pokemon=3
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0092
+|pokemon=Gastly
+|type1=Ghost|type2=Poison
+|level=12
+|gender=male
+|move1=Hypnosis|move1type=Psychic
+|move2=Lick|move2type=Ghost
+|move3=Spite|move3type=Ghost
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0041
+|pokemon=Zubat
+|type1=Poison|type2=Flying
+|level=14
+|gender=male
+|move1=Leech Life|move1type=Bug
+|move2=Supersonic|move2type=Normal
+|move3=Bite|move3type=Dark
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0156
+|pokemon=Quilava
+|type1=Fire
+|level=16
+|gender=male
+|move1=Tackle|move1type=Normal
+|move2=Leer|move2type=Normal
+|move3=SmokeScreen|move3type=Normal
+|move4=Ember|move4type=Fire
+}}
+{{Party/end}}
+
+
+{{Party
+|caption={{PlayerChoice|0155|Cyndaquil}}
+|walkthrough=yes
+|background={{silver color}}
+|headcolor={{silver color light}}
+|border={{silver color dark}}
+|sprite=Spr GS Silver 1.png
+|prize={{pdollar}}960
+|name={{color2|000|Silver (game)|Silver}}
+|game=GS
+|location=Azalea Town
+|pokemon=3
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0092
+|pokemon=Gastly
+|type1=Ghost|type2=Poison
+|level=12
+|gender=male
+|move1=Hypnosis|move1type=Psychic
+|move2=Lick|move2type=Ghost
+|move3=Spite|move3type=Ghost
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0041
+|pokemon=Zubat
+|type1=Poison|type2=Flying
+|level=14
+|gender=male
+|move1=Leech Life|move1type=Bug
+|move2=Supersonic|move2type=Normal
+|move3=Bite|move3type=Dark
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0159
+|pokemon=Croconaw
+|type1=Water
+|level=16
+|gender=male
+|move1=Scratch|move1type=Normal
+|move2=Leer|move2type=Normal
+|move3=Rage|move3type=Normal
+|move4=Water Gun|move4type=Water
+}}
+{{Party/end}}
+
+
+{{Party
+|caption={{PlayerChoice|0158|Totodile}}
+|walkthrough=yes
+|background={{silver color}}
+|headcolor={{silver color light}}
+|border={{silver color dark}}
+|sprite=Spr GS Silver 1.png
+|prize={{pdollar}}960
+|name={{color2|000|Silver (game)|Silver}}
+|game=GS
+|location=Azalea Town
+|pokemon=3
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0092
+|pokemon=Gastly
+|type1=Ghost|type2=Poison
+|level=12
+|gender=male
+|move1=Hypnosis|move1type=Psychic
+|move2=Lick|move2type=Ghost
+|move3=Spite|move3type=Ghost
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0041
+|pokemon=Zubat
+|type1=Poison|type2=Flying
+|level=14
+|gender=male
+|move1=Leech Life|move1type=Bug
+|move2=Supersonic|move2type=Normal
+|move3=Bite|move3type=Dark
+}}
+{{Pokémon
+|walkthrough=yes
+|gen=2
+|ndex=0153
+|pokemon=Bayleef
+|type1=Grass
+|level=16
+|gender=male
+|move1=Growl|move1type=Normal
+|move2=Razor Leaf|move2type=Grass
+|move3=Reflect|move3type=Psychic
+|move4=PoisonPowder|move4type=Poison
+}}
+{{Party/end}}
+
+
+Afterward, he declares his hatred for anything weak, be it human or Pokémon. Silver vows to get stronger and wipe out the weak, including [[Team Rocket]]. He warns you to stay out of his way before leaving for [[Ilex Forest]].
+
+==Ilex Forest==
+[[File:Ilex Forest GSC.png|thumb|Ilex Forest]]
+
+[[Ilex Forest]] is a densely wooded area between [[Azalea Town]] and {{rt|34|Johto}}. Trees grow so close together that most sunlight never reaches the forest floor, leaving the area in what seems like perpetual night. A [[Ilex Forest shrine|shrine]] dedicated to {{p|Celebi|the forest's protector}} is located a short distance from the southern entrance.
+
+{| class="expandable" align="center" style="background: #{{locationcolor/med|forest}}; {{roundy}}; border: 5px solid #{{locationcolor/light|forest}};"
+|- align="center"
+! Available Pokémon
+|- 
+| 
+{{Catch/header|forest}}
+{{Catch/entry2|010|Caterpie|yes|no|no|Grass|5-6|50%|60%|0%|type1=bug}}
+{{Catch/entry2|011|Metapod|yes|no|no|Grass|6|30%|0%|0%|type1=bug}}
+{{Catch/entry2|011|Metapod|yes|no|no|Grass|5-6|0%|30%|0%|type1=bug}}
+{{Catch/entry2|013|Weedle|no|yes|no|Grass|5-6|50%|60%|0%|type1=bug|type2=poison}}
+{{Catch/entry2|014|Kakuna|no|yes|no|Grass|6|30%|0%|0%|type1=bug|type2=poison}}
+{{Catch/entry2|014|Kakuna|no|yes|no|Grass|5-6|0%|30%|0%|type1=bug|type2=poison}}
+{{Catch/entry2|041|Zubat|yes|yes|no|Grass|5|5%|5%|0%|type1=poison|type2=flying}}
+{{Catch/entry2|041|Zubat|yes|yes|no|Grass|5-6|0%|0%|25%|type1=poison|type2=flying}}
+{{Catch/entry2|043|Oddish|yes|yes|no|Grass|5-6|0%|0%|60%|type1=grass|type2=poison}}
+{{Catch/entry2|046|Paras|yes|yes|no|Grass|5-6|15%|0%|15%|type1=bug|type2=grass}}
+{{Catch/entry2|046|Paras|yes|yes|no|Grass|6|0%|5%|0%|type1=bug|type2=grass}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry2|129|Magikarp|yes|yes|no|Fish Old|10|all=85%|type1=water}}
+{{Catch/entry2|060|Poliwag|yes|yes|no|Fish Old|10|all=15%|type1=water}}
+{{Catch/div|forest|{{color2|000|Headbutt tree}}<br><small>(Moderate chances of battle)</small>}}
+{{Catch/entry2|010|Caterpie|yes|no|no|Headbutt|10|all=65%|type1=Bug}}
+{{Catch/entry2|011|Metapod|yes|no|no|Headbutt|10|all=15%|type1=Bug}}
+{{Catch/entry2|012|Butterfree|yes|no|no|Headbutt|10|all=5%|type1=Bug|type2=Flying}}
+{{Catch/entry2|013|Weedle|no|yes|no|Headbutt|10|all=65%|type1=Bug|type2=Poison}}
+{{Catch/entry2|014|Kakuna|no|yes|no|Headbutt|10|all=15%|type1=Bug|type2=Poison}}
+{{Catch/entry2|015|Beedrill|no|yes|no|Headbutt|10|all=5%|type1=Bug|type2=Poison}}
+{{Catch/entry2|102|Exeggcute|yes|yes|no|Headbutt|10|all=15%|type1=Grass|type2=Psychic}}
+{{Catch/div|forest|{{color2|000|Headbutt tree}}<br><small>(Low chances of battle)</small>}}
+{{Catch/entry2|010|Caterpie|yes|no|no|Headbutt|10|all=50%|type1=Bug}}
+{{Catch/entry2|012|Butterfree|yes|no|no|Headbutt|10|all=5%|type1=Bug|type2=Flying}}
+{{Catch/entry2|013|Weedle|no|yes|no|Headbutt|10|all=50%|type1=Bug|type2=Poison}}
+{{Catch/entry2|015|Beedrill|no|yes|no|Headbutt|10|all=5%|type1=Bug|type2=Poison}}
+{{Catch/entry2|102|Exeggcute|yes|yes|no|Headbutt|10|all=15%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|204|Pineco|yes|yes|no|Headbutt|10|all=30%|type1=Bug}}
+{{Catch/footer|forest}}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|forest}}; {{roundy}}; border: 5px solid #{{locationcolor/light|forest}};"
+|- align="center"
+! Items
+|- 
+| 
+{{itlisth|forest}}
+{{catch/div|forest|Southern area}}
+{{itemlist|Revive|Southeast area, in a corner next to two large trees|G=yes|S=yes}}
+{{itemlist|HM Normal|From the Charcoal Kiln's owner, after Farfetch'd is returned|G=yes|S=yes|display={{HM|01|Cut}}}}
+{{catch/div|forest|Northern area (requires {{color2|000|Cut (move)|Cut}})}}
+{{itemlist|Full Heal|South of the pond, in the dead-end path ''(hidden)''|G=yes|S=yes}}
+{{itemlist|TM Normal|East-southeast of the pond, from the man on the ledge|G=yes|S=yes|display={{TM|02|Headbutt}}}}
+{{itemlist|Super Potion|East-northeast of the pond, in the dead-end path ''(hidden)''|G=yes|S=yes}}
+{{itemlist|Ether|Northeast area of the forest ''(hidden)''|G=yes|S=yes}}
+{{itlistfoot|forest}}
+|}
+
+
+===Flight of the Farfetch'd===
+The apprentice from {{to|Azalea}}'s Charcoal Kiln can be found a short distance from the southern entrance. He tells you that the {{p|Farfetch'd}} that cuts down trees to be turned into [[Charcoal]] has wandered deeper into the forest. He is too scared of the dark forest to go looking for it, so it is up to you to find Farfetch'd. The Pokémon is startled easily, and approaching it from the wrong direction will only chase it deeper into the forest.
+
+Go east to find the Pokémon and interact with it, causing it to run off northward. Instead of following it, go east and circle around behind it to chase it back to the apprentice. He thanks you for your help, explaining that {{p|Farfetch'd}} will not listen to him as he has no [[Badge]]s. Speak to his boss to receive {{HM|01|Cut}} as thanks for saving his business. Teach this field move to a compatible Pokémon and use it to remove the small tree nearby, clearing a path forward. If you return to the Charcoal Kiln, the apprentice will reward you with a piece of [[Charcoal]].
+
+===Shake, Rattle, and Roll===
+Southeast of the pond, there is a man standing atop a ledge, facing a small pine tree. He explains that he has been shaking trees with {{m|Headbutt}}, and invites you to try it as well before giving you {{TM|02|Headbutt}}. This field move allows Trainers to shake these [[Headbutt tree|small trees]], which sometimes causes a wild Pokémon to fall out. Depending on the time of day, the Pokémon that appears may be {{status|asleep}}. There are {{p|Pineco|several}} {{p|Aipom|Pokémon}} {{p|Heracross|species}} that can only be encountered this way.
+
+==Route 34==
+[[File:Johto Route 34 GSC.png|thumb|Route 34]]
+
+{{rt|34|Johto}} is a lush, green path that runs along the sea from [[Ilex Forest]] to [[Goldenrod City]]. [[Johto]]'s [[Pokémon Day Care|Day Care]] center  is located on the north side.
+
+{| class="expandable" align="center" style="background: #{{locationcolor/med|land}}; {{roundy}}; border: 5px solid #{{locationcolor/light|land}};"
+|- align="center"
+! Trainers
+|- 
+|
+{{Trainerheader|land}}
+{{Trainerentry|Spr GS Youngster.png|Youngster|Samuel|128|4|019|Rattata|M|7|None|027|Sandshrew|M|10|None|021|Spearow|M|8|None|021|Spearow|M|8|None}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr GS Pokéfan M.png|Pokéfan|Brandon|1040|1|209|Snubbull|F|13|Berry}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr GS Picnicker.png|Picnicker|Gina|240|3|187|Hoppip|F|9|None|187|Hoppip|F|9|None|001|Bulbasaur|M|12|None|38=phone}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr GS Youngster.png|Youngster|Ian|192|2|056|Mankey|M|10|None|050|Diglett|M|12|None}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr GS Officer.png|Officer|Keith|680<br><small>[[Time#Times of day|Night]] only</small>|1|058|Growlithe|M|17|None}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr GS Camper.png|Camper|Todd|280|1|054|Psyduck|M|14|None|38=phone}}
+{{catch/div|land|Requires {{color2|000|Surf (move)|Surf}}}}
+{{Trainerentry|Spr GS Cooltrainer F.png|Cooltrainer|Irene|1152|2|118|Goldeen|F|22|None|119|Seaking|F|24|None}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr GS Cooltrainer F.png|Cooltrainer|Jenn|1248|2|120|Staryu||24|None|121|Starmie||26|None}}
+{{Trainerdiv|land}}
+{{Trainerentry|Spr GS Cooltrainer F.png|Cooltrainer|Kate|1344|2|090|Shellder|F|26|None|091|Cloyster|F|28|None}}
+{{Trainerfooter|land|II}}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|land}}; {{roundy}}; border: 5px solid #{{locationcolor/light|land}};"
+|- align="center"
+! Available Pokémon
+|- 
+|
+{{Catch/header|land|yes}}
+{{Catch/entry2|019|Rattata|yes|yes|no|Grass|11,13|all=35%|type1=Normal}}
+{{Catch/entry2|063|Abra|yes|yes|no|Grass|10|all=10%|type1=Psychic}}
+{{Catch/entry2|096|Drowzee|yes|yes|no|Grass|10,12|all=50%|type1=Psychic}}
+{{Catch/entry2|132|Ditto|yes|yes|no|Grass|10|all=5%|type1=Normal}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entry2|098|Krabby|yes|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/div|land|{{color2|000|Headbutt tree}}<br><small>(Moderate chances of battle)</small>}}
+{{Catch/entry2|010|Caterpie|yes|no|no|Headbutt|10|all=65%|type1=Bug}}
+{{Catch/entry2|011|Metapod|yes|no|no|Headbutt|10|all=15%|type1=Bug}}
+{{Catch/entry2|012|Butterfree|yes|no|no|Headbutt|10|all=5%|type1=Bug|type2=Flying}}
+{{Catch/entry2|013|Weedle|no|yes|no|Headbutt|10|all=65%|type1=Bug|type2=Poison}}
+{{Catch/entry2|014|Kakuna|no|yes|no|Headbutt|10|all=15%|type1=Bug|type2=Poison}}
+{{Catch/entry2|015|Beedrill|no|yes|no|Headbutt|10|all=5%|type1=Bug|type2=Poison}}
+{{Catch/entry2|102|Exeggcute|yes|yes|no|Headbutt|10|all=15%|type1=Grass|type2=Psychic}}
+{{Catch/div|land|{{color2|000|Headbutt tree}}<br><small>(Low chances of battle)</small>}}
+{{Catch/entry2|010|Caterpie|yes|no|no|Headbutt|10|all=50%|type1=Bug}}
+{{Catch/entry2|012|Butterfree|yes|no|no|Headbutt|10|all=5%|type1=Bug|type2=Flying}}
+{{Catch/entry2|013|Weedle|no|yes|no|Headbutt|10|all=50%|type1=Bug|type2=Poison}}
+{{Catch/entry2|015|Beedrill|no|yes|no|Headbutt|10|all=5%|type1=Bug|type2=Poison}}
+{{Catch/entry2|102|Exeggcute|yes|yes|no|Headbutt|10|all=15%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|204|Pineco|yes|yes|no|Headbutt|10|all=30%|type1=Bug}}
+{{Catch/footer|land}}
+|}
+{| class="expandable" align="center" style="background: #{{locationcolor/med|land}}; {{roundy}}; border: 5px solid #{{locationcolor/light|land}};"
+|- align="center"
+! Items
+|- 
+|
+{{itlisth|land}}
+{{itemlist|TM Normal|In the gate, from the woman behind the counter|G=yes|S=yes|display={{TM|12|Sweet Scent}}}}
+{{itemlist|Super Potion|Inside the Day Care enclosure ''(hidden)''|G=yes|S=yes}}
+{{catch/div|land|Later visit}}
+{{itemlist|Rare Candy|In the fenced western area near the tall grass, on a tree ''(hidden)'' (requires {{m|Surf}})|G=yes|S=yes}}
+{{itemlist|Soft Sand|Southwest clearing; from Cooltrainer Kate, after defeating her (requires {{m|Surf}})|G=yes|S=yes}}
+{{itlistfoot|land}}
+|}
+
+
+===Pokémon Day Care===
+The [[Pokémon Day Care]] is run by an elderly couple. The center allows Trainers to leave up to two of their Pokémon to be raised by the couple. Any Pokémon left in their care earns one [[Experience|experience point]] for every step you take. It costs a flat rate of {{pdollar}}100, plus another {{pdollar}}100 for every level gained, to withdraw a Pokémon.
+
+If a [[Egg Group|compatible]] male and female are left here at the same time, you may return to discover that the elderly couple has found an [[Pokémon Egg|Egg]]. Keep the Egg in your party, like with the [[Mystery Egg]], and it will eventually hatch. The Pokémon that appears will be the lowest species in the evolutionary line of the mother. If either parent is unavailable, {{p|Ditto}} may be used as a substitute; in this case, the newly-hatched Pokémon will be the lowest species in the evolutionary line of the non-Ditto parent. This is the only way to obtain additional members of a certain species, like {{p|Eevee}}, and newly-discovered {{cat|baby Pokémon}}, like {{p|Pichu}}.
+
+
+
+{{WalkthroughPrevNext
+|game=Gold
+|game2=Silver
+|gamename=Pokémon Gold and Silver
+|prevsection=4
+|prevname=Route 32, Ruins of Alph, Union Cave, Route 33
+|nextsection=6
+|nextname=Goldenrod City, Goldenrod Gym
+}}
+
+{{Project Walkthroughs notice}}
+[[Category:Gold and Silver walkthrough|05]]

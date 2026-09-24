@@ -1,0 +1,515 @@
+<!-- poke-guide fixture: {"title":"Bell Tower","resolvedTitle":"Bell Tower","revid":4513125,"timestamp":"2026-03-20T04:05:29Z","fetchedAt":"2026-09-23T16:33:53.055Z"} -->
+{{Infobox location
+|image=HGSS Bell Tower-{{#switch: {{#time: G}}|4|5|6|7|8|9=Morning|10|11|12|13|14|15|16=Day|17|18|19=Evening|20|21|22|23|0|1|2|3=Night}}.png
+|image_size=256
+|type=building
+|location_name=Bell Tower
+|japanese_name=スズの塔
+|translated_name=Bell/Suzu Tower
+|other_info=Tin Tower
+|mapdesc=A tower that's said to have a {{p|Ho-Oh|legendary Pokémon}} that lands there.
+|location=[[Ecruteak City]]
+|region=Johto
+|generation={{Gen|II}}, {{Gen|IV}}
+}}
+
+The '''Bell Tower''' (Japanese: '''スズの{{ruby|塔|とう}}''' ''{{wp|Suzu}} Tower''), known as the '''Tin Tower''' prior to {{game|HeartGold and SoulSilver|s}} and in English versions of {{g|Brilliant Diamond and Shining Pearl}}, is a location of [[Johto]] positioned in the northeast of [[Ecruteak City]]. {{p|Ho-Oh}} formerly perched at the top of this ten-story tower, but flew away after the [[Burned Tower|other tower]] in the west of Ecruteak City burned down mysteriously. The Bell Tower is an icon of Ecruteak City and a place of high sanctity among people in Johto, with only select people being qualified to enter it.
+
+==Geography==
+[[File:Bell Tower Clear Bells.png|thumb|200px|left|The top of the Bell Tower during {{p|Ho-Oh}}'s appearance]]
+The Bell Tower was once the perch of the [[Legendary Pokémon]] {{p|Ho-Oh}}; however, long before the events of the [[Generation II]] games and {{game|HeartGold and SoulSilver|s}}, Ho-Oh flew away, never to return. Many {{pkmn|Trainer}}s came to the tower, hoping for Ho-Oh's return, but no one had yet been successful. Finally, with the [[Rainbow Feather|Rainbow Wing]] and [[Clear Bell]], the {{player}} is able to summon Ho-Oh to the Bell Tower in order to {{pkmn|battle}} it atop the roof.
+
+In Generation II, the tower is known as the Tin Tower, and only the Rainbow Wing is required to reach the top and to have Ho-Oh appear.
+
+Though specifically in {{game|Crystal}}, the Clear Bell summons all three [[legendary beasts]] to the ground floor of the tower, but only {{p|Suicune}} via the aforementioned bell will remain to confront the {{player}} as the other two beasts flee. Whether Suicune has been defeated or captured, the Wise Trio will remain on the ground floor for the rest of the game, and Ho-Oh is hinted by them + one other sage to have returned to the top at that point. However, access to all the rest of the floors and the rooftop is only possible after the [[Elite Four]] have been defeated and all three of the legendary beasts have been captured in the current save file. Defeating the legendary beasts or trading them from other games will not activate this event.
+
+Once the proper conditions have been met, one of the sages of the Wise Trio will give the player the Rainbow Wing, and the stairs will appear next to him to access the second floor from that point on. Eusine will also remain here after Ho-Oh has either been captured or defeated alongside the Wise Trio.
+
+In Generation IV, the tower's statues are changed to be modeled directly after Ho-Oh as a notable aesthetic change. Via {{game|HeartGold}}, the player after receiving the Rainbow Wing and needing to follow the Kimono Girls to the top, must confront Ho-Oh in order to progress the story.
+{{-}}
+===History===
+[[File:Ho-Oh Bell HGSS.png|thumb|{{p|Ho-Oh}} flying around the tower]]
+Seven hundred years before the events of the games, two nine-tier towers were built opposite each other in Ecruteak City. The towers were built to foster friendship and hope between {{OBP|Pokémon|species}} and people. The view from atop the towers was said to be magnificent.
+
+The eastern tower was said to awaken Pokémon, while the western tower was where Pokémon were said to rest, similar to [[Hoenn]]'s [[Cave of Origin]] and [[Mt. Pyre]], respectively. {{p|Ho-Oh}} roosted at the top of the Bell Tower to the east.
+
+However, about 150 years before the games' events, a lightning bolt struck the western tower. It was engulfed in flames that raged for three days. A sudden downpour finally put out the blaze, but it had already burned to the ground. Three nameless Pokémon perished in the fire, but Ho-Oh descended from the sky and resurrected them. The Pokémon are said to embody three powers: the {{p|Raikou|lightning}} that struck the tower, the {{p|Entei|fire}} that burned it, and the {{p|Suicune|rain}} that extinguished the fire. When the Pokémon appeared, they struck terror in those who saw their rise. The three Pokémon, knowing their own power, fled, [[Roaming Pokémon|running like the wind]] off into the grassland.
+
+===Bellchime Trail===
+{{main|Bellchime Trail}}
+Bellchime Trail is a short path in [[Ecruteak City]] that joins the Barrier Station [[gate]] and the Bell Tower. It does not exist in [[Generation II]] as a separate location, instead being considered part of Ecruteak City's main area.
+
+==Items==
+[[File:Bell Tower HGSS.png|100px|thumb|The Bell Tower as seen in {{2v2|HeartGold|SoulSilver}}]]
+[[File:Tin Tower C.png|thumb|The Tin Tower as seen in {{game|Crystal}}]]
+{{Itlisth|building}}
+{{Itemlist|Rainbow Wing|1F; from a {{tc|Sage}} after capturing all [[Legendary beasts]] and entering the [[Hall of Fame]]|C=yes|display=[[Rainbow Feather|Rainbow Wing]]}}
+{{Itemlist|Full Heal|3F; lower-left platform|G=yes|S=yes|C=yes}}
+{{Itemlist|Full Heal|
+* 3F; lower-left platform
+* 6F; upper-left platform|HG=yes|SS=yes||display=[[Full Heal]] ×2}}
+{{Itemlist|Max Potion|
+* 3F; on the ramp obscured by the swaying pillar ''(hidden)''
+* 6F; left of the center pillar|HG=yes|SS=yes|display=[[Max Potion]] ×2}}
+{{Itemlist|Max Potion|4F; northeast of the swaying pillar ''(hidden)''|G=yes|S=yes|C=yes}}
+{{Itemlist|Ultra Ball|4F; on the series of ramps|G=yes|S=yes|C=yes}}
+{{Itemlist|Ultra Ball|4F; on the series of ramps|HG=yes|SS=yes}}
+{{Itemlist|Super Potion|4F; lower-right platform|G=yes|S=yes}}
+{{Itemlist|PP Up|4F; lower-right platform|C=yes}}
+{{Itemlist|PP Up|4F; lower-right platform|HG=yes|SS=yes}}
+{{Itemlist|Escape Rope|4F; lower-left platform|G=yes|S=yes|C=yes}}
+{{Itemlist|Escape Rope|4F; near the ladder on the lower-left platform|HG=yes|SS=yes}}
+{{Itemlist|Full Restore|5F; bottom right area, directly northwest of stairs leading to 4F ''(hidden)'' |G=yes|S=yes|C=yes}}
+{{Itemlist|Full Restore|
+* 5F; platform above the lower-right hand platform ''(hidden)''
+* 8F; upper-left platform|HG=yes|SS=yes|display=[[Full Restore]] ×2}}
+{{Itemlist|Rare Candy|5F; in front of the swaying pillar|G=yes|S=yes|C=yes}}
+{{Itemlist|Rare Candy|5F; in front of the swaying pillar|HG=yes|SS=yes}}
+{{Itemlist|Carbos|5F; bottom left area, directly southeast of stairs leading to 4F ''(hidden)'' |G=yes|S=yes|C=yes}}
+{{Itemlist|Max Potion|6F; left of the swaying pillar|C=yes}}
+{{Itemlist|Max Revive|7F; upper-right platform|G=yes|S=yes|C=yes}}
+{{Itemlist|Max Revive|7F; upper-right platform|HG=yes|SS=yes}}
+{{Itemlist|Full Restore|8F; upper platform, near left-most statue|G=yes|S=yes|C=yes}}
+{{Itemlist|Max Elixer|8F; near the swaying pillar|G=yes|S=yes|C=yes|display=[[Max Elixir|Max Elixer]]|sprite=Bag Max Elixir Sprite}}
+{{Itemlist|Max Elixir|8F; near the swaying pillar|HG=yes|SS=yes}}
+{{Itemlist|Nugget|8F; platform accessed via a [[warp panel]] on 9F|G=yes|S=yes|C=yes}}
+{{Itemlist|Nugget|8F; platform accessed via a warp panel on 9F|HG=yes|SS=yes}}
+{{Itemlist|Carbos|8F; where the right window's light shines ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|HP Up|9F; upper platform, between two statues|C=yes}}
+{{Itemlist|HP Up|9F; northern section accessed via a warp panel on 8F|HG=yes|SS=yes}}
+{{Itlistfoot|building}}
+
+==Pokémon==
+===Generation II===
+{{catch/header|building}}
+{{catch/div|building|2F-9F}}
+{{catch/entry2|019|Rattata|yes|yes|yes|2F-9F|20-24|100%|100%|0%|type1=Normal}}
+{{catch/entry2|019|Rattata|yes|yes|yes|2F-9F|22-24|0%|0%|20%|type1=Normal}}
+{{catch/entry2|092|Gastly|yes|yes|yes|2F-9F|20-22|0%|0%|80%|type1=Ghost|type2=Poison}}
+{{catch/footer|building}}
+
+===Generation IV===
+{{catch/header|building}}
+{{catch/div|building|2F-10F}}
+{{catch/entryhs|019|Rattata|yes|yes|2F-10F|20-24|100%|100%|0%|type1=Normal}}
+{{catch/entryhs|019|Rattata|yes|yes|2F-10F|22-24|0%|0%|20%|type1=Normal}}
+{{catch/entryhs|092|Gastly|yes|yes|2F-10F|20-22|0%|0%|80%|type1=Ghost|type2=Poison}}
+{{catch/div|building|Special}}
+{{Catch/entryhs|263|Zigzagoon|yes|yes|Hoenn|20-21|all=20%|type1=Normal}}
+{{Catch/entryhs|307|Meditite|yes|yes|Sinnoh|22|all=20%|type1=Fighting|type2=Psychic}}
+{{Catch/entryhs|327|Spinda|yes|yes|Hoenn|22|all=20%|type1=Normal}}
+{{Catch/entryhs|441|Chatot|yes|yes|Sinnoh|20-21|all=20%|type1=Normal|type2=Flying}}
+{{catch/footer|building}}
+
+==Special encounters==
+===Generation II===
+;Ho-Oh
+A {{p|Ho-Oh}} appears on the roof if the [[Rainbow Feather|Rainbow Wing]] is in the bag.
+{{Pokémon/Grid}}
+{{Pokémon
+|gen=2
+|caption='''Gold'''
+|ndex=0250
+|pokemon=Ho-Oh
+|type1=Fire
+|type2=Flying
+|held=Sacred Ash
+|level=40
+|move1=Sacred Fire|move1type=Fire
+|move2=Safeguard|move2type=Normal
+|move3=Gust|move3type=Flying
+|move4=Recover|move4type=Normal}}
+{{Pokémon
+|gen=2
+|caption='''Silver'''
+|ndex=0250
+|pokemon=Ho-Oh
+|type1=Fire
+|type2=Flying
+|held=Sacred Ash
+|level=70
+|move1=Recover|move1type=Normal
+|move2=Fire Blast|move2type=Fire
+|move3=Sunny Day|move3type=Fire
+|move4=Swift|move4type=Normal}}
+{{Pokémon
+|gen=2
+|caption='''Crystal'''
+|ndex=0250
+|pokemon=Ho-Oh
+|type1=Fire
+|type2=Flying
+|held=Sacred Ash
+|level=60
+|move1=Gust|move1type=Flying
+|move2=Recover|move2type=Normal
+|move3=Fire Blast|move3type=Fire
+|move4=Sunny Day|move4type=Fire}}
+{{Pokémon/Grid/end}}
+
+==== Crystal ====
+;Suicune
+In {{game|Crystal}}, a {{p|Suicune}} appears on 1F if the [[Clear Bell]] is in the bag.
+
+{{Pokémon
+|gen=2
+|game=Crystal
+|ndex=245
+|pokemon=Suicune
+|type1=Water
+|level=40
+|move1=Leer|move1type=Normal
+|move2=BubbleBeam|move2type=Water
+|move3=Rain Dance|move3type=Water
+|move4=Gust|move4type=Flying}}
+
+===Pokémon HeartGold and SoulSilver===
+A {{p|Ho-Oh}} appears on the roof if the [[Rainbow Feather|Rainbow Wing]] is in the bag. If defeated or run from, it respawns after the player enters the [[Hall of Fame]].
+{{Pokémon/Grid}}
+{{Pokémon
+|gen=4
+|ndex=0250
+|caption='''HeartGold'''
+|pokemon=Ho-Oh
+|type1=Fire
+|type2=Flying
+|ability=Pressure
+|held=Sacred Ash
+|level=45
+|move1=Extrasensory|move1type=Psychic|move1cat=Special
+|move2=Sunny Day|move2type=Fire|move2cat=Status
+|move3=Fire Blast|move3type=Fire|move3cat=Special
+|move4=Sacred Fire|move4type=Fire|move4cat=Physical}}
+{{Pokémon
+|gen=4
+|ndex=0250
+|caption='''SoulSilver'''
+|pokemon=Ho-Oh
+|type1=Fire
+|type2=Flying
+|ability=Pressure
+|held=Sacred Ash
+|level=70
+|move1=Sacred Fire|move1type=Fire|move1cat=Physical
+|move2=Punishment|move2type=Dark|move2cat=Physical
+|move3=AncientPower|move3type=Rock|move3cat=Special
+|move4=Safeguard|move4type=Normal|move4cat=Status}}
+{{Pokémon/Grid/end}}
+<gallery widths=256px heights=192px>
+Ho-Oh Bell Tower HGSS.png|Ho-Oh on top of the Bell Tower in HeartGold
+Ho-Oh Encounter.png|Battling Ho-Oh on top of the Bell Tower in HeartGold
+</gallery>
+
+==Walking Pokémon effects==
+When interacting with [[walking Pokémon]] in {{v2|HeartGold and SoulSilver|s}}, the Pokémon may occasionally show an altered mood specific to this location.
+
+{| class="roundtable" style="margin: auto; text-align: center; background-color: #{{locationcolor/med|cave}}; border: 3px solid #{{locationcolor/dark|cave}}"
+|- style="background:#{{locationcolor/light|cave}}"
+! Games
+! Pokémon
+! Area
+! Quote
+|- style="background-color: #FFF"
+! rowspan="3" | {{GameIcon|HG}}{{GameIcon|SS}}
+|- style="background-color: #FFF"
+| [[File:Ani250OD.png]]<br>{{p|Ho-Oh}}
+| Anywhere
+| <Pokémon's name> shook the tower with its voice!
+|- style="background-color: #FFF"
+| [[File:Ani250OD.png]]<br>{{p|Ho-Oh}}
+| Anywhere
+| <Pokémon's name> is looking to the sky and shouting!
+|}
+
+==Layout==
+===Outside and 1F-5F===
+{| class="roundy" style="margin:auto; background:#000; border:3px solid #{{locationcolor/dark|building}}"
+|-
+! style="background:#{{locationcolor/light|building}}; {{roundytl|5px}}" | Version
+! style="background:#{{locationcolor/light|building}}" | Outside
+! style="background:#{{locationcolor/light|building}}" | 1F
+! style="background:#{{locationcolor/light|building}}" | 2F
+! style="background:#{{locationcolor/light|building}}" | 3F
+! style="background:#{{locationcolor/light|building}}" | 4F
+! style="background:#{{locationcolor/light|building}}; {{roundytr|5px}}" | 5F
+|-
+! style="background:#{{gold color}}" | {{color2|000|Pokémon Gold and Silver Versions|Gold}}
+| rowspan="2" | [[File:Tin Tower GS.png|60px]]
+| rowspan="3" | [[File:Tin Tower 1F GSC.png|135px]]
+| rowspan="3" | [[File:Tin Tower 2F GSC.png|135px]]
+| rowspan="3" | [[File:Tin Tower 3F GSC.png|135px]]
+| rowspan="3" | [[File:Tin Tower 4F GSC.png|135px]]
+| rowspan="3" | [[File:Tin Tower 5F GSC.png|135px]]
+|-
+! style="background:#{{silver color}}" | {{color2|000|Pokémon Gold and Silver Versions|Silver}}
+|-
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon Crystal Version|Crystal}}
+| [[File:Tin Tower C.png|60px]]
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+| rowspan="2" | [[File:Bell Tower HGSS.png|60px|center]]
+| rowspan="2" | [[File:Bell Tower 1F HGSS.png|135px]]
+| rowspan="2" | [[File:Bell Tower 2F HGSS.png|135px]]
+| rowspan="2" | [[File:Bell Tower 3F HGSS.png|135px]]
+| rowspan="2" | [[File:Bell Tower 4F HGSS.png|135px]]
+| rowspan="2" | [[File:Bell Tower 5F HGSS.png|135px]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan="7" style="background:#{{locationcolor/light|building}}; {{roundybottom|5px}}" | &nbsp;
+|}
+
+===6F-10F and Roof===
+{| class="roundy" style="margin:auto; background:#000; border:3px solid #{{locationcolor/dark|building}}"
+|-
+! style="background:#{{locationcolor/light|building}}; {{roundytl|5px}}" | Version
+! style="background:#{{locationcolor/light|building}}" | 6F
+! style="background:#{{locationcolor/light|building}}" | 7F
+! style="background:#{{locationcolor/light|building}}" | 8F
+! style="background:#{{locationcolor/light|building}}" | 9F
+! style="background:#{{locationcolor/light|building}}" | 10F
+! style="background:#{{locationcolor/light|building}}; {{roundytr|5px}}" | Roof
+|-
+! style="background:#{{gold color}}" | {{color2|000|Pokémon Gold and Silver Versions|Gold}}
+| rowspan="3" | [[File:Tin Tower 6F GSC.png|135px]]
+| rowspan="3" | [[File:Tin Tower 7F GSC.png|135px]]
+| rowspan="3" | [[File:Tin Tower 8F GSC.png|135px]]
+| rowspan="3" | [[File:Tin Tower 9F GSC.png|135px]]
+| rowspan="3" |
+| rowspan="3" | [[File:Tin Tower Summit GSC.png|110px]]
+|-
+! style="background:#{{silver color}}" | {{color2|000|Pokémon Gold and Silver Versions|Silver}}
+|-
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon Crystal Version|Crystal}}
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+| rowspan="2" | [[File:Bell Tower 6F HGSS.png|135px]]
+| rowspan="2" | [[File:Bell Tower 7F HGSS.png|135px]]
+| rowspan="2" | [[File:Bell Tower 8F HGSS.png|135px]]
+| rowspan="2" | [[File:Bell Tower 9F HGSS.png|135px]]
+| rowspan="2" | [[File:Bell Tower 10F HGSS.png|135px]]
+| rowspan="2" | [[File:Bell Tower Summit HGSS.png|110px]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan="7" style="background:#{{locationcolor/light|building}}; {{roundybottom|5px}}" | &nbsp;
+|}{{-}}
+
+==[[location preview|Preview]]==
+<gallery>
+File:HGSS Bell Tower-Morning.png|Morning (Rattata)
+File:HGSS Bell Tower-Day.png|Day (Rattata)
+File:HGSS Bell Tower-Evening.png|Evening (Rattata)
+File:HGSS Bell Tower-Night.png|Night (Gastly)
+</gallery>
+
+==In the spin-off games==
+===[[Pokémon Masters EX]]===
+Artwork depicting the Bell Tower is seen in [[Sygna suit|Sygna Suit]] {{mas|Morty}}'s mindscape.
+{| style="background: #{{masters color dark}}; {{roundy}}; border: #{{masters color dark}};"
+|
+{| style="background: #{{masters color light}}; {{roundy}}; border: #{{masters color light}};"
+|- style="text-align:center"
+|
+{| style="background: #{{fire color light}}; {{roundy}}; border: #{{fire color light}}; padding: 0px 5px 5px 5px"
+|-
+|<big>'''{{color2|000|Morty (Masters)#Ho-Oh|Sygna Suit Morty & Ho-Oh}}'''</big>
+|-
+| [[File:Morty Sygna Mindscape.png|200px]]
+|}
+|}
+|}
+
+==In animation==
+===''Pokémon the Series''===
+[[File:Tin Tower anime.png|thumb|left|220px|Tin Tower in {{aniseries|GS}}]]
+[[File:Bell Tower anime.png|thumb|250px|Bell Tower in {{aniseries|JN}}]]
+Neither of the towers has any relation to {{p|Lugia}} in this [[canon]]. This tower was also built after [[Burned Tower|the other tower]] had already burned down. It is said that {{p|Ho-Oh}} would occasionally appear at the old tower as a sign of peace to a chosen few who were [[Morty]]'s ancestors. However, several greedy people tried to take its power, burning down the original in the ensuing battle and forcing Ho-Oh to flee the tower. The people of Ecruteak City decided to make another tower in hope of Ho-Oh returning, though it never did.
+
+===={{aniseries|GS}}====
+The tower first appeared in ''[[EP181|A Ghost of a Chance]]'', where it was referred to as the Tin Tower by the [[dub]], like in the English [[Generation II]] games.
+
+In ''[[EP227|For Ho-Oh the Bells Toll!]]'', it was shown that the tower holds four bells on each floor, which will only ring if Ho-Oh or {{p|Suicune}} is coming. In addition, the [[Clear Bell|Crystal Bells]] on the top floor will only ring for Ho-Oh's appearance. {{TRT}}, falsely assuming that the bells could actually summon Ho-Oh, stole them and ended up accidentally breaking one of them before they were recovered.
+
+===={{aniseries|JN}}====
+The Bell Tower reappeared in ''[[JN009|Finding a Legend!]]''. While investigating rumors of a Ho-Oh sighting in Ecruteak, which turned out to be false, Ash and [[Goh]] encountered a boy named [[Chad]], who desperately wanted his grandfather [[Jaye]] to see Ho-Oh. With Goh's advice, they started climbing the tower, but they were caught in illusions created by a {{TP|Goh|Misdreavus}} and a {{p|Stantler}} until Goh {{pkmn2|caught}} them. At the top of the tower, they started waving Jaye's [[Rainbow Feather|Rainbow Wing]] around and calling for Ho-Oh to appear. Though their calls didn't seem to work, the Rainbow Wing started glowing in response to a rainbow appearing in the sky. When they started to leave, Jaye managed to get a view of {{an|Ho-Oh}} flying in the distance, though the others didn't see it.
+
+===''I Choose You!''===
+The Bell Tower was mentioned in ''[[M20|I Choose You!]]'', which is set in [[I Choose You! trilogy|an alternate continuity]] from the {{pkmn|animated series}}. According to [[Sorrel]], the tower burned down after lightning struck it and burned it down 150 years prior. Similar to the {{pkmn|games}}, three nameless Pokémon lost their lives in the fire, and {{an|Ho-Oh}} resurrected them as {{p|Raikou}}, {{p|Entei}}, and {{p|Suicune}}.
+
+===Pokémon Generations===
+[[File:Bell Tower PG.png|thumb|250px|Bell Tower in [[Pokémon Generations]]]]
+The Bell Tower first appeared briefly in ''[[PG01|The Adventure]]''. It was shown in the background as {{ga|Red}} and his {{TP|Red|Pikachu}} visited Ecruteak City.
+
+The tower next appeared in ''[[PG06|The Reawakening]]'', where it also appeared in the background of Ecruteak City but was shown in a little more detail.
+
+===Pokémon Evolutions===
+The Bell Tower appeared in ''[[PE07|The Show]]'', where it was seen in the background of Ecruteak City. It was later shown as the focus of the [[Kimono Girl]]s' performance about the histories of it and the Brass Tower.
+{{-}}
+
+==In the manga==
+[[File:Tin Tower Adventures.png|thumb|150px|Tin Tower in [[Pokémon Adventures]]]]
+===Pokémon Adventures===
+===={{MangaArc|Gold, Silver & Crystal}}====
+The Tin Tower first appeared in ''[[PS109|Ampharos Amore]]''. Having been caught up in an {{m|earthquake}} that struck [[Ecruteak City]], [[Jasmine]] managed to climb to the top of the tower for her {{p|Ampharos}}, [[Amphy]], to send out a distress signal, but passed out when rubble fell on her. {{adv|Gold}} and {{adv|Silver}} both noticed Amphy's light, with Silver reaching Jasmine first. The tower begun to collapse on their way out, and Amphy was able to carry Jasmine out before the collapse trapped both Gold and Silver inside. After escaping from the tower, they were surrounded by {{tc|Team Rocket Grunt}}s and {{tc|Executive|Rocket Executive}} [[Carl]], whose {{p|Piloswine}} had been responsible for the earthquake, its intention being to draw the attention of {{DL|Tower duo (Adventures)|Ho-Oh}}. Once [[Team Rocket]] had been driven away, [[Morty]] ordered the Tin Tower to be reconstructed before any other building in the city, fearing Ho-Oh's wrath over its destruction.
+
+From ''[[PS130|Suddenly Suicune (Part 1)]]'' to ''[[PS132|Suddenly Suicune (Part 3)]]'', {{adv|Crystal}} battled against {{DL|Legendary beasts (Adventures)|Suicune}} at the Tin Tower in the hopes of {{pkmn2|caught|capturing}} it. Although she managed to hit it with a [[Heavy Ball]], Suicune ended up [[Escape|getting away]], marking the first time Crystal had ever failed to capture a Pokémon. As a result of this shock, she became unable to capture any Pokémon at all.
+
+In ''[[PS153|Oh, It's Ho-Oh!]]'', the [[Masked Man]] arrived at the sky over the Tin Tower to confront Ho-Oh, which had escaped from his control nine years earlier. Determined to make Ho-Oh his servant once more, the leader of [[Neo Team Rocket]] started battling against the [[Legendary Pokémon]], ultimately catching it and forcing it under his command once more.
+
+The top floor of the Tin Tower houses a {{p|Ho-Oh}} statue, which is said to glow when Ho-Oh is about to return. According to the Masked Man, this statue was made by him.
+{{-}}
+
+==Trivia==
+* In {{game|HeartGold and SoulSilver|s}}, the [[Pokégear]] radio will not function on the roof of the Bell Tower.
+* It is possible to use {{m|Dig}} to escape from the Bell Tower, except from the roof, and return to the entrance; this is because, as can be seen from the in-{{pkmn|battle}} background used in Pokémon HeartGold and SoulSilver, the Bell Tower is classified as a cave area, rather than a building, likely to allow {{pkmn2|wild}} {{OBP|Pokémon|species}} to be found. This also applies to [[Sprout Tower]] and [[Burned Tower]].
+** Due to this, unlike in other buildings, {{p|Burmy}} will take on its {{form|Burmy and Wormadam|Sandy Cloak}} rather than its {{form|Burmy and Wormadam|Trash Cloak}} if it battles here.
+* In {{game|HeartGold and SoulSilver|s}}, if {{p|Diglett}} or {{p|Dugtrio}} is the {{player}}'s [[Walking Pokémon|partner Pokémon]], it will return to its [[Poké Ball]] and not follow the player while in the Bell Tower.
+* The [[Radio Director]] in [[Goldenrod City]] mentions that there was a similar tower that once stood in [[Goldenrod Radio Tower]]'s place in the past. The tower was also visited by the [[Legendary Pokémon]] {{p|Ho-Oh}}, which is evident by the [[Rainbow Feather|Rainbow Wing]] that he found and kept. While it is not mentioned if this tower preceded the Bell Tower, the city shares its namesake with the game titles for which Ho-Oh acts as the [[game mascot|mascot]].
+* In ''[[EP227|For Ho-Oh the Bells Toll!]]'', [[Morty]] refers to the tower by its [[Generation IV]] name at one point, years before the name was made official in the games. 
+* In {{g|Ultra Sun and Ultra Moon}}, the Bell Tower appears as a backdrop in the [[Alola Photo Club]], if the player has a Pokémon who originated from either a [[Generation II]] game or {{game|HeartGold and SoulSilver|s}}.
+
+===Origin===
+{{main|Pokémon world in relation to the real world#Johto|Pokémon world in relation to the real world → Johto}}
+The Bell Tower may be an amalgamation of the Buddhist temples of {{wp|Tō-ji}} and {{wp|Kinkaku-ji}} in {{wp|Kyoto}}.
+
+Its architecture may correspond to the Five-Storied Pagoda of Tō-ji, where it stands as the tallest wooden tower in Japan. Tō-ji (East Temple) also once had a twin temple called {{wp|Sai-ji}} (West Temple), where the latter's pagoda was burnt down centuries ago and never rebuilt. The Bell Tower may also incorporate features of the Golden Pavilion in Kinkaku-ji, whose two storeys are covered in gold leaf with the roof topped with a brass {{wp|Fenghuang|phoenix}} ornament.
+
+==Names==
+{| class="roundtable" style="background:#{{locationcolor/med|building}}; border:3px solid #{{locationcolor/dark|building}}"
+|-
+! style="background:#{{locationcolor/light|building}}" | Language
+! style="background:#{{locationcolor/light|building}}" | Name
+! style="background:#{{locationcolor/light|building}}" | Origin
+|-
+| Japanese
+| スズの塔 ''Suzu no Tō''
+| From 鈴 ''{{wp|Suzu (bell)|suzu}}'' (small, round, hollow bell commonly used in {{wp|Shinto}} rituals)
+|-
+| rowspan="2" | English
+| Bell Tower{{sup/4|HGSS}}
+| From ''bell''
+|-
+| Tin Tower{{sup/2|GSC}}{{sup/4|DPPt}}{{sup/8|BDSP}}
+| From the alternative reading of the Japanese name as 錫 ''suzu'' ({{wp|tin}}), a silvery-white metal used in making bells
+|-
+| rowspan="2" | German
+| Glockenturm{{sup/4|HGSS}}{{sup/8|BDSP}}
+| From ''Glocke'' (bell)
+|-
+| Zinnturm{{sup/2|GSC}}{{sup/4|DPPt}}
+| From ''Zinn'' (tin)
+|-
+| rowspan="3" | European Spanish
+| Torre Campana{{sup/4|HGSS}}{{sup/8|BDSP}}
+| From ''campana'' (bell)
+|-
+| Torre Lata{{sup/4|DPPt}}
+| From ''lata'' (tin)
+|-
+| Torre Hojalata{{sup/2|GSC}}
+| From ''hojalata'' ({{wp|tinplate}})
+|-
+| rowspan="3" | Latin American Spanish
+| Torre de la Campana<ref group=n>Pokémon animated series ([[M20]], [[JN009]])</ref>
+| From ''campana'' (bell)
+|-
+| Torre de Latón<ref group=n>Pokémon animated series ([[EP227]])</ref>
+| From ''latón'' (brass)
+|-
+| Torre Tin<ref group=n>Pokémon animated series ([[EP181]])</ref>
+| From its English name
+|-
+| rowspan="2" | French
+| Tour Carillon{{sup/4|HGSS}}{{sup/8|BDSP}}
+| From ''{{wp|carillon}}'' (set of bells in a tower)
+|-
+| Tour Ferraille{{sup/2|GSC}}{{sup/4|DPPt}}
+| From ''ferraille'' (scrap metal)
+|-
+| rowspan="2" | Italian
+| Torre Campana{{sup/4|HGSS}}{{sup/8|BDSP}}
+| From ''campana'' (bell)
+|-
+| Torre di Latta{{sup/2|GSC}}{{sup/4|DPPt}}
+| From ''latta'' (tin)
+|-
+| Korean
+| 방울탑 ''Bang'ul Tap''
+| From 방울 ''bang'ul'' (small bell)
+|-
+| Chinese (Traditional)
+| 鈴鐺塔 ''Língdang Tǎ'' / ''Lìhngdōng Taap''
+| rowspan="2" | From 鈴鐺 / 铃铛 ''língdang / lìhngdōng'' (small bell)
+|-
+| Chinese (Simplified)
+| 铃铛塔 ''Língdāng Tǎ''
+|-
+| Chinese (Taiwan)
+| 鈴鈴塔 ''Línglíng Tǎ''<ref group=n>Pokémon animated series (Top Insight dub), [[Pokémon Adventures]] (''[[Gold, Silver & Crystal arc (Adventures)|Gold, Silver & Crystal]]'' arc)</ref>
+| From 鈴 ''líng'' (bell) {{wp|Reduplication|reduplicated}}
+|-
+| Chinese (Hong Kong)
+| 錫塔 ''Sek Taap''<ref group=n>Pokémon Gold and Silver guidebook</ref>
+| From 錫 ''sek'' (tin)
+|-
+| Chinese (mainland China)
+| 锡塔 ''Xī Tǎ''<ref group=n>Pokémon Adventures (second edition)</ref><br>铃塔 ''Líng Tǎ''<ref group=n>Pokémon Adventures (first edition)</ref><br>铃之塔 ''Líng zhī Tǎ''<ref group=n>[[Let's Find Pokémon!]]</ref>
+| From 錫 ''xī'' (tin)<br>From 铃 ''líng'' (bell)
+|-
+| Brazilian Portuguese
+| Torre do Sino<ref group=n>Pokémon Adventures ([[PS110]])</ref><br>Torre dos Sinos<ref group=n>Pokémon Adventures ([[PS111]])</ref>
+| From ''sino'' (bell)<br>From ''sinos'' (bells)
+|-
+| European Portuguese
+| Torre de Latão<ref group=n>Pokémon animated series ([[EP181]])</ref>
+| From ''latão'' (brass)
+|-
+| rowspan="2" | Catalan
+| Torre Cascavell<ref group="n">Pokémon animated series ([[JN009]] Catalan dub)</ref>
+| From ''cascavell'' (jingle bell)
+|-
+| Torre de Llauna<ref group="n">Pokémon animated series (([[EP227]] Valencian dub)</ref>
+| From ''llauna'' (tin plate)
+|-
+| Czech
+| Zvonice<ref group="n">Pokémon animated series ([[M20]], [[JN009]])</ref><br>Cínová věž<ref group="n">Pokémon animated series ([[EP181]])</ref><br>Cínová zvonice<ref group="n">Pokémon Adventures</ref>
+| From ''zvonice'' (bell tower)<br>From ''cínová'' (of tin)
+|-
+| Finnish
+| Kellotorni<ref group="n">Pokémon animated series (''[[Pokémon Journeys: The Series|Journeys]]'' series)</ref><br>Tinatorni<ref group="n">Pokémon animated series (''[[Original series|Gold and Silver]]'' series)</ref>
+| From ''kello'' (bell)<br>From ''tina'' (tin)
+|-
+| Polish
+| Wieża Dzwonów<ref group="n">Pokémon animated series ([[EP227]], [[M20]], [[JN009]])</ref><br>Cynowa Wieża<ref group="n">Pokémon animated series ([[EP181]]-[[EP227]])</ref>
+| From ''dzwonów'' (of bell)<br>From ''cynowa'' (of tin)
+|-
+| Vietnamese
+| Tháp Chuông
+| From ''chuông'' (bell)
+|}
+{{-}}
+
+===Notes===
+{{reflist|group=n}}
+
+==Related articles==
+* [[Burned Tower]]
+
+{{-}}
+{{Johto}}
+{{legendarylocations|johto}}
+{{Project Locations notice}}
+
+[[Category:Johto locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Towers]]
+[[Category:Monuments]]
+
+[[de:Glockenturm]]
+[[es:Torre Campana]]
+[[fr:Tour Carillon]]
+[[it:Torre Campana]]
+[[ja:スズのとう]]
+[[zh:铃铛塔]]

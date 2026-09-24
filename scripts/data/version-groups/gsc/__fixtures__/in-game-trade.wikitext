@@ -1,0 +1,3496 @@
+<!-- poke-guide fixture: {"title":"In-game trade","resolvedTitle":"In-game trade","revid":4617447,"timestamp":"2026-08-23T00:09:34Z","fetchedAt":"2026-09-15T14:21:51.081Z"} -->
+An '''in-game trade'''<ref>''"'''In-game trades'''"'' - Title of two lists of in-game trades, ''[[Pokémon Gold and Silver: Official Nintendo Player's Guide]]'', page 93; ''[[Pokémon Crystal: Official Nintendo Player's Guide]]'', page 24</ref> is a Pokémon [[trade]] made with a '''trader'''<ref>''"The '''trader''' won't deal with [[Pokémon Yellow Version|Yellow]] players [...]"'' (page 23); ''"The '''traders''' in the [[Cinnabar Lab|Lab]] won't give you the greatest deals [...]"'' (page 55) - ''[[Official Pokémon Special Pikachu Edition Perfect Guide]]''</ref> or '''trading post'''<ref>''"'''Trading Post'''"'' - Title of two sections about in-game trades, ''[[Pokémon: Official Nintendo Player's Guide]]'', pages 25 and 29</ref> [[Non-player character|NPC]] in the [[core series|core]] and [[side series]] [[Pokémon games]].
+
+The process uses the same trading sequence as player trades and is usually done for {{OBP|Pokémon|species}} that are difficult or impossible to obtain through other means, or for Pokémon unavailable at that point of the game. In later games, the traded Pokémon often has special moves, like [[Egg Move]]s. Starting in [[Generation III]], the player cannot initiate a trade with another game unless they have at least two Pokémon in their party, but this restriction does not apply to in-game trades.
+
+Prior to {{game|HeartGold and SoulSilver|s}}, the NPC {{pkmn|Trainer}} will always specify a Pokémon they want to trade for. The Pokémon the player receives in the trade will have a fixed [[Original Trainer]] and [[nickname]]; in later games the [[Trainer ID number]], [[held item]], [[Nature]], {{IV}}s, and/or [[level]] can be fixed as well.
+
+Like Pokémon traded externally, the traded Pokémon will be treated as an {{pkmn2|outsider}}, and gain a boosted amount of [[Experience|experience points]] in {{pkmn|battle}}. Prior to [[Generation V]], every Pokémon has the same level as the Pokémon it was traded for, except in {{g|XD: Gale of Darkness}}.
+
+==List of in-game trades==
+The following lists of in-game trade Pokémon only include their [[nickname]]s and [[Original Trainer]] names in English and Japanese. For these names in other languages, see [[List of in-game trades in other languages]].
+
+===Generation I===
+{{incomplete|section|needs=Check that the Gen II held items of trade Evolutions and Japanese Blue's Krabby are correct.}}
+All [[Trainer ID number]]s and {{IV}}s are random in the [[Generation I]] games. The [[Original Trainer]] always uses the [[Character encoding (Generation I)#Text control codes|hardcoded text string 0x5D]], which is displayed as "TRAINER" (Japanese: {{j|トレーナー}} ''Trainer'') in the game's language. In Western language versions of the handheld games and {{g|Stadium}}, this string is displayed in ALLCAPS ("TRAINER" in English), whereas in {{g|Stadium 2}} it is displayed in title case ("Trainer" in English). When transferred using [[Poké Transporter]], this string is permanently converted to title case in the language of the game it was transferred from, being changed to use a literal string instead of a language-sensitive control character.
+
+The [[held item]] column refers to the item the Pokémon will be holding if it is traded to a [[Generation II]] game. With the exception of Pokémon that evolve during that trade and Krabby in Japanese Blue, they have the same item a [[wild Pokémon]] of the same species [[List of Pokémon by wild held item (Generation II)|would have]] if it were traded to a Generation II game; Pokémon that evolve during the trade have the item their evolved form would have, while Krabby has {{TM|13|Snore}} instead of {{TM|33|Ice Punch}}. Because the Trainer ID numbers and IVs are random, these Pokémon can be {{Shiny}} when [[transfer]]red to a [[Generation II]] game or [[Pokémon Bank]].
+
+====Pokémon Red and Green (Japan), Pokémon Red and Blue (Western)====
+In {{game|Red and Blue|s}}, Nidoran♂ is traded for Nidoran♀; in {{game|Red and Green|s}}, Nidoran♀ is traded for Nidoran♂.
+
+{| class="roundtable" style="margin: auto; background: #{{green color light}}; border: 3px solid #{{red color}}; text-align:center"
+|- class="blacklinks"
+! Location
+! colspan="2" | Player's Pokémon
+! colspan="2" | NPC's Pokémon
+! English<br>[[nickname]]
+! Japanese<br>[[nickname]]
+! [[Held item]]<br><small>([[Generation II|Gen II]])</small>
+! [[Original Trainer|OT]]
+|-
+| {{rt|2|Kanto}}
+| {{MSP/3|063|Abra}}
+| {{p|Abra}}
+| {{MSP/3|122|Mr. Mime}}
+| {{p|Mr. Mime}}
+| MARCEL
+| {{j|バリバリ}}<br>''Baribari'' 
+| [[Bitter Berry]]
+| [[File:Mr Mime Trainer I OD.png]]
+|- style="background:#{{green color light}}" 
+| rowspan="2" style="background:#FFF" | {{OBP|Underground Path|Kanto Routes 5–6|Underground Path (Rt. 5–6)}}
+| {{MSP/3|029|Nidoran♀}}
+| {{p|Nidoran♀}}
+| {{MSP/3|032|Nidoran♂}}
+| {{p|Nidoran♂}}
+| ''N/A''
+| {{j|チャッピー}}<br>''Chappy''
+| rowspan="2" style="background:#FFF" | {{TM|43|Detect}}
+| rowspan="2" style="background:#FFF" | [[File:Reina I OD.png]]
+|- style="background:#{{blue color light}}"
+| {{MSP/3|032|Nidoran♂}}
+| {{p|Nidoran♂}}
+| {{MSP/3|029|Nidoran♀}}
+| {{p|Nidoran♀}}
+| SPOT
+| ''N/A''
+|-
+| {{rt|11|Kanto}}
+| {{MSP/3|033|Nidorino}}
+| {{p|Nidorino}}
+| {{MSP/3|030|Nidorina}}
+| {{p|Nidorina}}
+| TERRY
+| {{j|テリー}}<br>''Terry''
+| {{i|Berry}}
+| [[File:Psychic I OD.png]]
+|-
+| {{rt|18|Kanto}}
+| {{MSP/3|080|Slowbro}}
+| {{p|Slowbro}}
+| {{MSP/3|108|Lickitung}}
+| {{p|Lickitung}}
+| MARC
+| {{j|なめぞう}}<br>''Namezō''
+| [[Bitter Berry]]
+| [[File:Psychic I OD.png]]
+|-
+| [[Cerulean City]]
+| {{MSP/3|061|Poliwhirl}}
+| {{p|Poliwhirl}}
+| {{MSP/3|124|Jynx}}
+| {{p|Jynx}}
+| LOLA
+| {{j|まさこ}}<br>''Masako''
+| [[Bitter Berry]]
+| [[File:Old man I OD.png]]
+|-
+| [[Vermilion City]]
+| {{MSP/3|021|Spearow}}
+| {{p|Spearow}}
+| {{MSP/3|083|Farfetch'd}}
+| {{p|Farfetch'd}}
+| DUX
+| {{j|おしょう}}<br>''Oshō''
+| [[Bitter Berry]]
+| [[File:Reina I OD.png]]
+|-
+| [[Cinnabar Lab|Pokémon Lab]]
+| {{MSP/3|026|Raichu}}
+| {{p|Raichu}}
+| {{MSP/3|101|Electrode}}
+| {{p|Electrode}}
+| DORIS
+| {{j|おマル}}<br>''Omaru''
+| [[Silver Leaf]]
+| [[File:Cinnabar Trainer I OD.png]]
+|-
+| [[Cinnabar Lab|Pokémon Lab]]
+| {{MSP/3|048|Venonat}}
+| {{p|Venonat}}
+| {{MSP/3|114|Tangela}}
+| {{p|Tangela}}
+| CRINKLES
+| {{j|リンダ}}<br>''Linda''
+| [[Bitter Berry]]
+| [[File:Beauty I OD.png]]
+|-
+| [[Cinnabar Lab|Pokémon Lab]]
+| {{MSP/3|077|Ponyta}}
+| {{p|Ponyta}}
+| {{MSP/3|086|Seel}}
+| {{p|Seel}}
+| SAILOR
+| {{j|パウーン}}<br>''Paūn''
+| {{i|Berry}}
+| [[File:Scientist I OD.png]]
+|}
+
+====Pokémon Blue (Japan)====
+{| class="roundtable" style="margin: auto; background: #{{blue color light}}; border: 3px solid #{{blue color}}; text-align:center"
+|- class="blacklinks"
+! Location
+! colspan="2" | Player's Pokémon
+! colspan="2" | NPC's Pokémon
+! [[Nickname]]
+! [[Held item]]<br><small>([[Generation II|Gen II]])</small>
+! [[Original Trainer|OT]]
+|-
+| {{rt|2|Kanto}}
+| {{MSP/3|039|Jigglypuff}}
+| {{p|Jigglypuff}}
+| {{MSP/3|122|Mr. Mime}}
+| {{p|Mr. Mime}}
+| {{j|まさる}}<br>''Masaru''
+| [[Bitter Berry]]
+| [[File:Mr Mime Trainer I OD.png]]
+|-
+| {{OBP|Underground Path|Kanto Routes 5–6|Underground Path (Rt. 5–6)}}
+| {{MSP/3|019|Rattata}}
+| {{p|Rattata}}
+| {{MSP/3|060|Poliwag}}
+| {{p|Poliwag}}
+| {{j|ロモたん}}<br>''Romo-tan''
+| {{i|Berry}}
+| [[File:Reina I OD.png]]
+|-
+| {{rt|11|Kanto}}
+| {{MSP/3|112|Rhydon}}
+| {{p|Rhydon}}
+| {{MSP/3|115|Kangaskhan}}
+| {{p|Kangaskhan}}
+| {{j|ロダン}}<br>''Rodan''
+| [[Bitter Berry]]
+| [[File:Psychic I OD.png]]
+|-
+| {{rt|18|Kanto}}
+| {{MSP/3|053|Persian}}
+| {{p|Persian}}
+| {{MSP/3|128|Tauros}}
+| {{p|Tauros}}
+| {{j|ぎゅうた}}<br>''Gyūta''
+| [[Bitter Berry]]
+| [[File:Psychic I OD.png]]
+|-
+| [[Cerulean City]]
+| {{MSP/3|067|Machoke}}
+| {{p|Machoke}}
+| {{MSP/3|093|Haunter}}
+| {{p|Haunter}}<br><small>→{{p|Gengar}}</small><ref group="lower-alpha" name="tradeevo"/>
+| {{j|ゴーすけ}}<br>''Ghosuke''
+| [[Bitter Berry]]
+| [[File:Old man I OD.png]]
+|-
+| [[Vermilion City]]
+| {{MSP/3|016|Pidgey}}
+| {{p|Pidgey}}
+| {{MSP/3|083|Farfetch'd}}
+| {{p|Farfetch'd}}
+| {{j|アッカ}}<br>''Akka''
+| [[Bitter Berry]]
+| [[File:Reina I OD.png]]
+|-
+| [[Cinnabar Lab|Pokémon Lab]]
+| {{MSP/3|064|Kadabra}}
+| {{p|Kadabra}}
+| {{MSP/3|075|Graveler}}
+| {{p|Graveler}}<br><small>→{{p|Golem}}</small><ref group="lower-alpha" name="tradeevo"/>
+| {{j|さぶろう}}<br>''Saburō''
+| [[Bitter Berry]]
+| [[File:Cinnabar Trainer I OD.png]]
+|-
+| [[Cinnabar Lab|Pokémon Lab]]
+| {{MSP/3|086|Seel}}
+| {{p|Seel}}
+| {{MSP/3|079|Slowpoke}}
+| {{p|Slowpoke}}
+| {{j|オスカル}}<br>''Oscar''
+| {{i|Berry}}
+| [[File:Beauty I OD.png]]
+|-
+| [[Cinnabar Lab|Pokémon Lab]]
+| {{MSP/3|058|Growlithe}}
+| {{p|Growlithe}}
+| {{MSP/3|098|Krabby}}
+| {{p|Krabby}}
+| {{j|どうらく}}<br>''Dōraku''
+| {{TM|13|Snore}}
+| [[File:Scientist I OD.png]]
+|}
+<references group="lower-alpha">
+<ref name="tradeevo">This Pokémon will evolve due to being traded, but Pokédex data for the unevolved Pokémon will be registered before it evolves.</ref>
+</references>
+
+====Pokémon Yellow====
+{| class="roundtable" style="margin: auto; background: #{{yellow color light}}; border: 3px solid #{{yellow color}}; text-align:center"
+|- class="blacklinks"
+! Location
+! colspan="2" | Player's Pokémon
+! colspan="2" | NPC's Pokémon
+! English<br>[[nickname]]
+! Japanese<br>[[nickname]]
+! [[Held item]]<br><small>([[Generation II|Gen II]])</small>
+! [[Original Trainer|OT]]
+|-
+| {{rt|2|Kanto}}
+| {{MSP/3|035|Clefairy}}
+| {{p|Clefairy}}
+| {{MSP/3|122|Mr. Mime}}
+| {{p|Mr. Mime}}
+| MILES
+| {{j|マイム}}<br>''Mime''
+| [[Bitter Berry]]
+| [[File:Mr Mime Trainer I OD.png]]
+|-
+| {{OBP|Underground Path|Kanto Routes 5–6|Underground Path (Rt. 5–6)}}
+| {{MSP/3|104|Cubone}}
+| {{p|Cubone}}
+| {{MSP/3|067|Machoke}}
+| {{p|Machoke}}<br><small>→{{p|Machamp}}</small><ref group="lower-alpha" name="tradeevo"/>
+| RICKY
+| {{j|リッキー}}<br>''Ricky''
+| [[Bitter Berry]]
+| [[File:Reina I OD.png]]
+|-
+| {{rt|11|Kanto}}
+| {{MSP/3|108|Lickitung}}
+| {{p|Lickitung}}
+| {{MSP/3|051|Dugtrio}}
+| {{p|Dugtrio}}
+| GURIO
+| {{j|ぐりお}}<br>''Gurio''
+| [[Gold Berry]]
+| [[File:Psychic I OD.png]]
+|-
+| {{rt|18|Kanto}}
+| {{MSP/3|114|Tangela}}
+| {{p|Tangela}}
+| {{MSP/3|047|Parasect}}
+| {{p|Parasect}}
+| SPIKE
+| {{j|つんつん}}<br>''Tsuntsun''
+| [[Gold Leaf]]
+| [[File:Chef I OD.png]]
+|-
+| [[Cinnabar Lab|Pokémon Lab]]
+| {{MSP/3|055|Golduck}}
+| {{p|Golduck}}
+| {{MSP/3|112|Rhydon}}
+| {{p|Rhydon}}
+| BUFFY
+| {{j|ごんすけ}}<br>''Gonsuke''
+| [[Silver Leaf]]
+| [[File:Cinnabar Trainer I OD.png]]
+|-
+| [[Cinnabar Lab|Pokémon Lab]]
+| {{MSP/3|058|Growlithe}}
+| {{p|Growlithe}}
+| {{MSP/3|087|Dewgong}}
+| {{p|Dewgong}}
+| CEZANNE
+| {{j|セザンヌ}}<br>''Cezanne''
+| [[Gold Leaf]]
+| [[File:Beauty I OD.png]]
+|-
+| [[Cinnabar Lab|Pokémon Lab]]
+| {{MSP/3|115|Kangaskhan}}
+| {{p|Kangaskhan}}
+| {{MSP/3|089|Muk}}
+| {{p|Muk}}
+| STICKY
+| {{j|ベタぼう}}<br>''Betabō''
+| [[Gold Leaf]]
+| [[File:Scientist I OD.png]]
+|}
+<references group="lower-alpha">
+<ref name="tradeevo">This Pokémon will evolve due to being traded, but Pokédex data for the unevolved Pokémon will be registered before it evolves.</ref>
+</references>
+
+====Unused trades====
+There are a few in-game trades in the game data of Generation I games which are not assigned to any NPC.
+
+=====Pokémon Red, Green, and Blue (Japan), Pokémon Red and Blue (Western)=====
+{| class="roundtable" style="margin: auto; background: #{{blue color light}}; border: 3px solid #{{red color}}; text-align:center"
+|- class="blacklinks"
+! colspan="2" | Player's Pokémon
+! colspan="2" | NPC's Pokémon
+! English nickname
+! Japanese nickname
+! [[Held item]]<br><small>([[Generation II|Gen II]])</small>
+|-
+| rowspan=2 | {{MSP/3|012|Butterfree}}
+| rowspan=2 | {{p|Butterfree}}
+| rowspan=2 | {{MSP/3|015|Beedrill}}
+| rowspan=2 | {{p|Beedrill}}
+| rowspan=2 | CHIKUCHIKU
+| {{j|ピピん}}{{sup/1|RG}}<br>''Pipin''
+| rowspan=2 | [[Bitter Berry]]
+|-
+| {{j|チクチク}}{{sup/1|JB}}<br>''Chikuchiku''
+|}
+
+=====Pokémon Yellow=====
+{| class="roundtable" style="margin: auto; background: #{{yellow color light}}; border: 3px solid #{{yellow color}}; text-align:center"
+|- class="blacklinks"
+! colspan="2" | Player's Pokémon
+! colspan="2" | NPC's Pokémon
+! English [[nickname]]
+! Japanese [[nickname]]
+! [[Held item]]<br><small>([[Generation II|Gen II]])</small>
+|-
+| {{MSP/3|012|Butterfree}}
+| {{p|Butterfree}}
+| {{MSP/3|015|Beedrill}}
+| {{p|Beedrill}}
+| STINGER
+| {{j|チクチク}}<br>''Chikuchiku''
+| [[Bitter Berry]]
+|-
+| {{MSP/3|018|Pidgeot}}
+| {{p|Pidgeot}}
+| {{MSP/3|018|Pidgeot}}
+| {{p|Pidgeot}}
+| MARTY
+| rowspan="2" | {{j|まつみや}}<br>''[[Toshinobu Matsumiya|Matsumiya]]''
+| [[Bitter Berry]]
+|-
+| {{MSP/3|151|Mew}}
+| {{p|Mew}}
+| {{MSP/3|151|Mew}}
+| {{p|Mew}}
+| BART
+| [[Bitter Berry]]
+|}
+
+===Generation II===
+====Pokémon Gold, Silver, and Crystal====
+{| class="roundtable" style="margin: auto; background: #{{silver color light}}; border: 3px solid #{{gold color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" | Location
+! colspan="2" rowspan="2" | Player's Pokémon
+! colspan="2" rowspan="2" | NPC's Pokémon
+! colspan="2" | [[Nickname]]
+! rowspan="2" | [[Held item]]
+! colspan="4" | [[Original Trainer]]
+! rowspan="2" | [[Individual values|IVs]]<ref group="lower-alpha">In order: HP/Attack/Defense/Speed/Special.</ref>
+|- class="blacklinks"
+! English
+! Japanese
+! 
+! English
+! Japanese
+! [[Trainer ID number|ID]]
+|-
+| [[Violet City]]
+| {{MSP/3|069|Bellsprout}}
+| {{p|Bellsprout}}
+| {{MSP/3|095|Onix}}
+| {{p|Onix}}{{male}}
+| ROCKY
+| {{j|ブルブル}}<br>''Buruburu''
+| [[Bitter Berry]]
+| [[File:Kyle II OD.png]]
+| KYLE
+| {{j|コンタ}}<br>''Konta''
+| 48926
+| 8/9/6/6/6
+|-
+| rowspan=2 | [[Goldenrod Department Store]]
+| style="background:#{{gold color light}}" | {{MSP/3|096|Drowzee}}
+| style="background:#{{silver color light}}" | {{p|Drowzee}}
+| rowspan=2 | {{MSP/3|066|Machop}}
+| rowspan=2 | {{p|Machop}}{{female}}
+| rowspan=2 | MUSCLE
+| rowspan=2 | {{j|きんにく}}<br>''Kinniku''
+| rowspan=2 | [[Gold Berry]]
+| rowspan=2 | [[File:Mike II OD.png]]
+| rowspan=2 | MIKE
+| rowspan=2 | {{j|ナオキ}}<br>''Naoki''
+| rowspan=2 | 37460
+| rowspan=2 | 12/3/7/6/6
+|-
+| style="background:#{{crystal color light}}" |  {{MSP/3|063|Abra}}
+| style="background:#{{crystal color light}}" |  {{p|Abra}}
+|-
+| [[Olivine City]]
+| {{MSP/3|098|Krabby}}
+| {{p|Krabby}}
+| {{MSP/3|100|Voltorb}}
+| {{p|Voltorb}}
+| VOLTY
+| {{j|ビリー}}<br>''Billy''
+| [[PRZCureBerry]]
+| [[File:Tim II OD.png]]
+| TIM
+| {{j|ゲン}}<br>''Gen''
+| 29189
+| 8/9/8/8/8
+|-
+| rowspan=2 | [[Blackthorn City]]
+| rowspan=2 | {{MSP/3|148|Dragonair}}
+| rowspan=2 | {{p|Dragonair}}{{female}}
+| style="background:#{{gold color light}}" | {{MSP/3|112|Rhydon}}
+| style="background:#{{silver color light}}" | {{p|Rhydon}}{{female}}
+| style="background:#{{gold color light}}" | DON
+| style="background:#{{silver color light}}" | {{j|ドンドコ}}<br>''Dondoko''
+| style="background:#{{gold color light}}" | [[Bitter Berry]]
+| rowspan=2 | [[File:Picnicker II OD.png]]
+| rowspan=2 | EMY
+| rowspan=2 | {{j|ミサコ}}<br>''Misako''
+| rowspan=2 | 00283
+| rowspan=2 | 12/7/7/6/6
+|-
+| style="background:#{{crystal color light}}" | {{MSP/3|085|Dodrio}}
+| style="background:#{{crystal color light}}" |  {{p|Dodrio}}{{female}}
+| style="background:#{{crystal color light}}" |  DORIS
+| style="background:#{{crystal color light}}" |  {{j|ドリス}}<br>''Doris''
+| style="background:#{{crystal color light}}" |  [[Smoke Ball]]
+|-
+| {{rt|14|Kanto}}
+| {{MSP/3|113|Chansey}}
+| {{p|Chansey}}
+| {{MSP/3|142|Aerodactyl}}
+| {{p|Aerodactyl}}{{male}}
+| AEROY
+| {{j|プッチー}}<br>''Putchie''
+| [[Gold Berry]]
+| [[File:DJ Mary II OD.png]]
+| KIM
+| {{j|キヨミ}}<br>''Kiyomi''
+| 26491
+| 8/9/6/6/6
+|-
+| rowspan=2 | [[Pewter City]]
+| style="background:#{{gold color light}}" | {{MSP/3|044|Gloom}}
+| style="background:#{{silver color light}}" | {{p|Gloom}}
+| style="background:#{{gold color light}}" | {{MSP/3|078|Rapidash}}
+| style="background:#{{silver color light}}" | {{p|Rapidash}}{{male}}
+| style="background:#{{gold color light}}" | RUNNY
+| style="background:#{{silver color light}}" | {{j|カケアシ}}<br>''Kakeashi''
+| style="background:#{{gold color light}}" | [[Burnt Berry]]
+| rowspan=2 | [[File:PokéFan II OD.png]]
+| rowspan=2 | CHRIS
+| rowspan=2 | {{j|デンジ}}<br>''Denji''
+| rowspan=2 | 15616
+| style="background:#{{silver color light}}" | 8/9/6/6/6
+|-
+| style="background:#{{crystal color light}}" | {{MSP/3|093|Haunter}}
+| style="background:#{{crystal color light}}" | {{p|Haunter}}
+| style="background:#{{crystal color light}}" | {{MSP/3|178|Xatu}}
+| style="background:#{{crystal color light}}" | {{p|Xatu}}{{male}}
+| style="background:#{{crystal color light}}" | PAUL
+| style="background:#{{crystal color light}}" | {{j|ポール}}<br>''Paul''
+| style="background:#{{crystal color light}}" | [[MysteryBerry]]
+| style="background:#{{crystal color light}}" | 8/9/6/8/6
+|- 
+| style="background:#{{crystal color light}}"| [[Kanto Power Plant]]
+| style="background:#{{crystal color light}}"| {{MSP/3|051|Dugtrio}}
+| style="background:#{{crystal color light}}"| {{p|Dugtrio}}
+| style="background:#{{crystal color light}}"| {{MSP/3|082|Magneton}}
+| style="background:#{{crystal color light}}"| {{p|Magneton}}
+| style="background:#{{crystal color light}}"| MAGGIE
+| style="background:#{{crystal color light}}"| {{j|てつまる}}<br>''Tetsumaru''
+| style="background:#{{crystal color light}}"| [[Metal Coat]]
+| style="background:#{{crystal color light}}"| [[File:Gym guide II Kanto OD.png]]
+| style="background:#{{crystal color light}}"| FOREST
+| style="background:#{{crystal color light}}"| {{j|モリオ}}<br>''Morio''
+| style="background:#{{crystal color light}}"| 50082
+| style="background:#{{crystal color light}}"| 8/9/6/6/6
+|}
+<references group="lower-alpha" />
+
+====Pokémon Stadium 2====
+Due to the {{DL|Nickname|Pokémon Stadium series|color changing mechanic}} in the Pokémon Stadium series, these Pokémon have specific appearances in those games. This changes for each nickname and [[Original Trainer|OT]] name change in [[List of in-game trades in other languages|different languages]].
+
+{| style="background: #{{silver color light}}; margin:auto; text-align:center; font-size: 80%; {{roundy|20px}}; border: 2px solid #{{gold color}}"
+|-
+| style="{{roundy|80px}} border: 2px solid #{{ground color dark}}; background: #{{rock color light}}; width: 80px" | <div style="filter:hue-rotate(37deg)">[[File:Stadium095.png|x80px]]</div><div style="filter:hue-rotate(-4deg)">[[File:Stadium208.png|x80px]]</div>
+| style="{{roundy|80px}} border: 2px solid #{{fighting color dark}}; background: #{{fighting color light}}; width: 80px" | <div style="filter:hue-rotate(44deg)">[[File:Stadium066.png|x80px]]</div><div style="filter:hue-rotate(39deg)">[[File:Stadium067.png|x80px]]</div><div style="filter:hue-rotate(55deg)">[[File:Stadium068.png|x80px]]</div>
+| style="{{roundy|80px}} border: 2px solid #{{electric color dark}}; background: #{{electric color light}}; width: 80px" | <div style="filter:hue-rotate(10deg)">[[File:Stadium100.png|x80px]]</div><div style="filter:hue-rotate(10deg)">[[File:Stadium101.png|x80px]]</div>
+| style="{{roundy|80px}} border: 2px solid #{{rock color dark}}; background: #{{ground color light}}; width: 80px" | <div style="filter:hue-rotate(148deg)">[[File:Stadium112.png|80px]]</div>
+| style="{{roundy|80px}} border: 2px solid #{{flying color dark}}; background: #{{rock color light}}; width: 80px" | <div style="filter:hue-rotate(-28deg)">[[File:Stadium142.png|x80px]]</div>
+| style="{{roundy|80px}} border: 2px solid #{{fire color dark}}; background: #{{fire color light}}; width: 80px" | <div style="filter:hue-rotate(-11deg)">[[File:Stadium078.png|x80px]]</div>
+| style="{{roundy|80px}} border: 2px solid #{{flying color dark}}; background: #{{normal color light}}; width: 80px" | <div style="filter:hue-rotate(17deg)">[[File:Stadium085.png|x80px]]</div>
+| style="{{roundy|80px}} border: 2px solid #{{flying color dark}}; background: #{{psychic color light}}; width: 80px" | <div style="filter:hue-rotate(8deg)">[[File:Stadium178.png|x80px]]</div>
+| style="{{roundy|80px}} border: 2px solid #{{steel color dark}}; background: #{{electric color light}}; width: 80px" | <div style="filter:hue-rotate(139deg)">[[File:Stadium082.png|x80px]]</div>
+|-
+| ROCKY
+| MUSCLE
+| VOLTY
+| DON
+| AEROY
+| RUNNY
+| DORIS
+| PAUL
+| MAGGIE
+|}
+
+====Debug test trade data====
+This data appears in all Generation 2 ROMs within a debug function intended to test out trading. Kabīn is possibly a reference to the Game Freak [[Kōji Nishino]] and {{p|Snorlax}} (Japanese: カビゴン) in-jokes, and the [[List of unused Pokémon and character designs|early 'Kabīn battle' concept art]]. The code remains in English versions; however, the Japanese names were not translated, resulting in garbage text, which causes problems as the game expects the English name length.
+
+{| class="roundtable" style="margin: auto; background: #{{crystal color light}}; border: 3px solid #{{crystal color}}; text-align:center"
+|- class="blacklinks"
+! POV Trainer
+! [[Trainer ID number|ID]]
+! colspan=2 | Sent Pokémon
+! [[Original Trainer|OT]]
+! NPC Trainer
+! [[Trainer ID number|ID]]
+! colspan=2 | Received Pokémon
+! [[Original Trainer|OT]]
+|-
+| ゲーフリ
+''Game Freak''
+| 08961<ref group="lower-alpha">Derived from the hex-string '0123' which is read by the game as x2301, or 8961 in base-16</ref>
+| {{MSP/3|003|Venusaur}}
+| {{p|Venusaur}}
+| かびーん<br>''Kabīn''
+|クリーチャ
+''Creatures''
+|22020<ref group="lower-alpha">Derived from the hex-string '0456' which is read by the game as x5604, or 22020 in base-16</ref>
+|{{MSP/3|006|Charizard}}
+|{{p|Charizard}}
+|マツミヤ<br>''Matsumiya''
+|}
+
+<references group="lower-alpha" />
+
+===Generation III===
+====Pokémon Ruby and Sapphire====
+These Pokémon all have one [[Contest condition]] that is raised by 30 while the others are all raised by 5, but have a [[sheen]] of 10.
+
+{| class="roundtable" style="margin: auto; background: #{{sapphire color light}}; border: 3px solid #{{ruby color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" | Location
+! colspan="2" rowspan="2" | Player's Pokémon
+! colspan="2" rowspan="2" | NPC's Pokémon
+! colspan="2" | [[Nickname]]
+! colspan="2" rowspan="2" | [[Held item]]
+! rowspan="2" | [[Ability]]
+! rowspan="2" | [[Nature]]
+! colspan="4" | [[Original Trainer]]
+! rowspan="2" | [[Individual values|IVs]]<ref group="lower-alpha">In order: HP/Attack/Defense/Sp. Atk/Sp. Def/Speed</ref>
+! rowspan="2" | Enhanced<br>[[Contest condition|Contest stat]]
+|- class="blacklinks"
+! English
+! Japanese
+! 
+! English
+! Japanese
+! [[Trainer ID number|ID]]
+|-
+| [[Rustboro City]]
+| {{MSP/3|287|Slakoth}}
+| {{p|Slakoth}}
+| {{MSP/3|296|Makuhita}}
+| {{p|Makuhita}}{{male}}
+| MAKIT
+| {{j|ポテマル}}<br>''Potemaru''
+| {{bag|X Attack}}
+| [[X Attack]]
+| {{a|Guts}}
+| Hardy
+| [[File:Ninja Boy RSE OD.png]]
+| ELYSSA{{male}}
+| {{j|モーリン}}<br>''Maureen''
+| 49562
+| 5/5/4/4/4/4
+{{Contesttable|Tough}}
+|-
+| [[Fortree City]]
+| {{MSP/3|025|Pikachu}}
+| {{p|Pikachu}}
+| {{MSP/3|300|Skitty}}
+| {{p|Skitty}}{{female}}
+| SKITIT
+| {{j|ベル}}<br>''Bell''
+| {{bag|Glitter Mail}}
+| [[Glitter Mail]]
+| {{a|Cute Charm}}
+| Timid
+| [[File:RSE Flowers Girl OD.png]]
+| DARRELL{{female}}
+| {{j|ユキポン}}<br>''Yukipon''
+| 02259
+| 5/4/4/4/4/5
+{{Contesttable|Cute}}
+|-
+| [[Pacifidlog Town]]
+| {{MSP/3|182|Bellossom}}
+| {{p|Bellossom}}
+| {{MSP/3|222|Corsola}}
+| {{p|Corsola}}{{female}}
+| COROSO
+| {{j|モモちゃん}}<br>''Momo-chan''
+| {{bag|Tropic Mail}}
+| [[Tropic Mail]]
+| {{a|Natural Cure}}
+| Calm
+| [[File:Young Couple f RSE OD.png]]
+| LANE{{female}}
+| {{j|サトチン}}<br>''Satochin''
+| 50183
+| 4/4/5/4/5/4
+{{Contesttable|Beauty}}
+|}
+
+<references group="lower-alpha"/>
+
+====Pokémon FireRed and LeafGreen====
+These Pokémon all have one [[Contest condition]] that is raised by 30 while the others are all raised by 5, but have a [[sheen]] of 10.
+
+{| class="roundtable" style="margin: auto; background: #{{leafGreen color light}}; border: 3px solid #{{fireRed color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" | Location
+! colspan="2" rowspan="2" | Player's Pokémon
+! colspan="2" rowspan="2" | NPC's Pokémon
+! colspan="2" | [[Nickname]]
+! colspan="2" rowspan="2" | [[Held item]]
+! rowspan="2" | [[Ability]]
+! rowspan="2" | [[Nature]]
+! colspan="4" | [[Original Trainer]]
+! rowspan="2" | [[Individual values|IVs]]<ref group="lower-alpha">In order: HP/Attack/Defense/Sp. Atk/Sp. Def/Speed</ref>
+! rowspan="2" | Enhanced<br>[[Contest condition|Contest stat]]
+|- class="blacklinks"
+! English
+! Japanese
+! 
+! English
+! Japanese
+! [[Trainer ID number|ID]]
+|-
+| {{rt|2|Kanto}}
+| {{MSP/3|063|Abra}}
+| {{p|Abra}}
+| {{MSP/3|122|Mr. Mime}}
+| {{p|Mr. Mime}}{{male}}
+| MIMIEN
+| {{j|バリヤン}}<br>''Barrien''
+|
+| None
+| {{a|Soundproof}}
+| Timid
+| [[File:Reyley FRLG OD.png]]
+| REYLEY{{male}}
+| {{j|ひとまろ}}<br>''Hitomaro''
+| 01985
+| 20/15/17/23/22/24
+{{Contesttable|Smart}}
+|-
+| rowspan="2" | {{OBP|Underground Path|Kanto Routes 5–6|Underground Path (Rt. 5–6)}}
+| style="background:#{{fireRed color light}}" | {{MSP/3|032|Nidoran♂}}
+| style="background:#{{fireRed color light}}" | {{p|Nidoran♂}}
+| style="background:#{{fireRed color light}}" | {{MSP/3|029|Nidoran♀}}
+| style="background:#{{fireRed color light}}" | {{p|Nidoran♀}}
+| style="background:#{{fireRed color light}}" | MS. NIDO
+| style="background:#{{fireRed color light}}" | {{j|ニドちゃん}}<br>''Nido-chan''
+| rowspan="2" | {{bag|Tiny Mushroom}}
+| rowspan="2" | [[Tiny Mushroom|TinyMushroom]]
+| style="background:#{{fireRed color light}}" | {{a|Poison Point}}
+| style="background:#{{fireRed color light}}" | Bold
+| rowspan="2" | [[File:Lostelle OD.png]]
+| rowspan="2" | SAIGE{{female}}
+| rowspan="2" | {{j|めぐっぺ}}<br>''Meguppe''
+| rowspan="2" | 63184
+| style="background:#{{fireRed color light}}" | 22/18/25/15/22/19
+{{Contesttable|Tough}}
+|-
+| style="background:#{{leafGreen color light}}" | {{MSP/3|029|Nidoran♀}}
+| style="background:#{{leafGreen color light}}" | {{p|Nidoran♀}}
+| style="background:#{{leafGreen color light}}" | {{MSP/3|032|Nidoran♂}}
+| style="background:#{{leafGreen color light}}" | {{p|Nidoran♂}}
+| style="background:#{{leafGreen color light}}" | MR. NIDO
+| style="background:#{{leafGreen color light}}" | {{j|ニドくん}}<br>''Nido-kun''
+| style="background:#{{leafGreen color light}}" | {{a|Poison Point}}<ref group="lower-alpha" name="abilitychange"/>
+| style="background:#{{leafGreen color light}}" | Lonely
+| style="background:#{{leafGreen color light}}" | 19/25/18/22/15/22
+{{Contesttable|Cool}}
+|-
+| rowspan="2" | {{rt|11|Kanto}}
+| style="background:#{{fireRed color light}}" | {{MSP/3|033|Nidorino}}
+| style="background:#{{fireRed color light}}" | {{p|Nidorino}}
+| style="background:#{{fireRed color light}}" | {{MSP/3|030|Nidorina}}
+| style="background:#{{fireRed color light}}" | {{p|Nidorina}}
+| style="background:#{{fireRed color light}}" | NINA
+| style="background:#{{fireRed color light}}" | {{j|ニーナ}}<br>''Nina''
+| rowspan="2" |
+| rowspan="2" | None
+| rowspan="2" | {{a|Poison Point}}<ref group="lower-alpha" name="abilitychange"/>
+| style="background:#{{fireRed color light}}" | Lonely
+| rowspan="2" | [[File:Youngster FRLG OD.png]]
+| rowspan="2" | TURNER{{male}}
+| rowspan="2" | {{j|とーたん}}<br>''Tōtan''
+| rowspan="2" | 13637
+| style="background:#{{fireRed color light}}" | 22/25/18/22/15/19
+{{Contesttable|Cute}}
+|-
+| style="background:#{{leafGreen color light}}" | {{MSP/3|030|Nidorina}}
+| style="background:#{{leafGreen color light}}" | {{p|Nidorina}}
+| style="background:#{{leafGreen color light}}" | {{MSP/3|033|Nidorino}}
+| style="background:#{{leafGreen color light}}" | {{p|Nidorino}}
+| style="background:#{{leafGreen color light}}" | NINO
+| style="background:#{{leafGreen color light}}" | {{j|ニーノ}}<br>''Nino''
+| style="background:#{{leafGreen color light}}" | Bold
+| style="background:#{{leafGreen color light}}" | 19/18/25/15/22/22
+{{Contesttable|Tough}}
+|-
+| rowspan="2" | {{rt|18|Kanto}}
+| style="background:#{{fireRed color light}}" | {{MSP/3|055|Golduck}}
+| style="background:#{{fireRed color light}}" | {{p|Golduck}}
+| rowspan="2" | {{MSP/3|108|Lickitung}}
+| rowspan="2" | {{p|Lickitung}}{{male}}
+| rowspan="2" | MARC
+| rowspan="2" | {{j|なめぞう}}<br>''Namezō''
+| rowspan="2" |
+| rowspan="2" | None
+| rowspan="2" | {{a|Own Tempo}}<ref group="lower-alpha" name="abilitychange"/>
+| rowspan="2" | Relaxed
+| rowspan="2" | [[File:Haden FRLG OD.png]]
+| rowspan="2" | HADEN{{male}}
+| rowspan="2" | {{j|みちはる}}<br>''Michiharu''
+| rowspan="2" | 01239
+| rowspan="2" | 24/19/21/23/21/15
+| rowspan="2" style="text-align:center; background:#{{Tough color}}" | {{color2|fff|Tough (condition)|Tough}}
+|-
+| style="background:#{{leafGreen color light}}" | {{MSP/3|080|Slowbro}}
+| style="background:#{{leafGreen color light}}" | {{p|Slowbro}}
+|-
+| [[Cerulean City]]
+| {{MSP/3|061|Poliwhirl}}
+| {{p|Poliwhirl}}
+| {{MSP/3|124|Jynx}}
+| {{p|Jynx}}
+| ZYNX
+| {{j|コリンダ}}<br>''Corinda''
+| {{bag|Fab Mail}}
+| [[Fab Mail]]
+| {{a|Oblivious}}
+| Mild
+| [[File:Old man III OD.png]]
+| DONTAE{{male}}
+| {{j|もりべー}}<br>''Moribē''
+| 36728
+| 18/17/18/25/21/22
+{{Contesttable|Beauty}}
+|-
+| [[Vermilion City]]
+| {{MSP/3|021|Spearow}}
+| {{p|Spearow}}
+| {{MSP/3|083|Farfetch'd}}
+| {{p|Farfetch'd}} {{male}}
+| CH'DING
+| {{j|じんすけ}}<br>''Jinsuke''
+| {{bag|Stick}}
+| [[Leek|Stick]]
+| {{a|Keen Eye}}
+| Adamant
+| [[File:Lostelle OD.png]]
+| ELYSSA{{female}}
+| {{j|みどりん}}<br>''Midorin''
+| 08810
+| 20/25/21/15/20/24
+{{Contesttable|Cool}}
+|-
+| [[Cinnabar Lab|Pokémon Lab]]
+| {{MSP/3|026|Raichu}}
+| {{p|Raichu}}
+| {{MSP/3|101|Electrode}}
+| {{p|Electrode}}
+| ESPHERE
+| {{j|デンマル}}<br>''Denmaru''
+| 
+| None
+| {{a|Static}}
+| Hasty
+| [[File:Baoba III OD.png]]
+| CLIFTON{{male}}
+| {{j|タナーカ}}<br>''Tanāka''
+| 50298
+| 19/16/18/25/19/25
+{{Contesttable|Cool}}
+|-
+| [[Cinnabar Lab|Pokémon Lab]]
+| {{MSP/3|048|Venonat}}
+| {{p|Venonat}}
+| {{MSP/3|114|Tangela}}
+| {{p|Tangela}}{{male}}
+| TANGENY
+| {{j|じゃじゃお}}<br>''Jajao''
+| {{bag|Stardust}}
+| [[Stardust]]
+| {{a|Chlorophyll}}
+| Sassy
+| [[File:Selphy OD.png]]
+| NORMA{{female}}
+| {{j|なっつん}}<br>''Nattsun''
+| 60042
+| 22/17/25/23/20/16
+{{Contesttable|Cute}}
+|-
+| [[Cinnabar Lab|Pokémon Lab]]
+| {{MSP/3|077|Ponyta}}
+| {{p|Ponyta}}
+| {{MSP/3|086|Seel}}
+| {{p|Seel}}{{male}}
+| SEELOR
+| {{j|ぱたろー}}<br>''Patalor''
+|
+| None
+| {{a|Thick Fat}}<ref group="lower-alpha" name="abilitychange"/>
+| Bold
+| [[File:Haden FRLG OD.png]]
+| GARETT{{male}}
+| {{j|よしもつ}}<br>''Yoshimotsu''
+| 09853
+| 24/15/22/23/22/16
+{{Contesttable|Tough}}
+|}
+<references group="lower-alpha">
+<ref name="abilitychange">If this Pokémon is evolved in a [[Generation]] {{gen|IV}} or {{gen|V}} game, its Ability will become its second Ability.</ref>
+</references>
+
+====Pokémon Emerald====
+These Pokémon all have one [[Contest condition]] that is raised by 30 while the others are all raised by 5, but have a [[sheen]] of 10.
+
+{| class="roundtable" style="margin: auto; background: #{{emerald color light}}; border: 3px solid #{{emerald color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" | Location
+! colspan="2" rowspan="2" | Player's Pokémon
+! colspan="2" rowspan="2" | NPC's Pokémon
+! colspan="2" | [[Nickname]]
+! colspan="2" rowspan="2" | [[Held item]]
+! rowspan="2" | [[Ability]]
+! rowspan="2" | [[Nature]]
+! colspan="4" | [[Original Trainer]]
+! rowspan="2" | [[Individual values|IVs]]<ref group="lower-alpha">In order: HP/Attack/Defense/Sp. Atk/Sp. Def/Speed</ref>
+! rowspan="2" | Enhanced<br>[[Contest condition|Contest stat]]
+|- class="blacklinks"
+! English
+! Japanese
+! 
+! English
+! Japanese
+! [[Trainer ID number|ID]]
+|-
+| [[Rustboro City]]
+| {{MSP/3|280|Ralts}}
+| {{p|Ralts}}
+| {{MSP/3|273|Seedot}}
+| {{p|Seedot}}{{male}}
+| DOTS
+| {{j|セブン}}<br>''Seven''
+| {{bag|Chesto Berry}}
+| [[Chesto Berry]]
+| {{a|Early Bird}}
+| Relaxed
+| [[File:Camper RSE OD.png]]
+| KOBE{{male}}
+| {{j|マッチャン}}<br>''Matchan''
+| 38726
+| 5/4/5/4/4/4
+{{Contesttable|Cool}}
+|-
+| [[Fortree City]]
+| {{MSP/3|313|Volbeat}}
+| {{p|Volbeat}}
+| {{MSP/3|311|Plusle}}
+| {{p|Plusle}}{{female}}
+| PLUSES
+| {{j|プラプラ}}<br>''Purapura''
+| {{bag|Wood Mail}}
+| [[Wood Mail]]
+| {{a|Plus}}
+| Hasty
+| [[File:Ninja Boy RSE OD.png]]
+| ROMAN{{male}}
+| {{j|アッキー}}<br>''Akky''
+| 08460
+| 4/4/4/5/4/5
+{{Contesttable|Cute}}
+|-
+| [[Pacifidlog Town]]
+| {{MSP/3|371|Bagon}}
+| {{p|Bagon}}
+| {{MSP/3|116|Horsea}}
+| {{p|Horsea}}{{male}}
+| SEASOR
+| {{j|ゴロー}}<br>''Gorō''
+| {{bag|Wave Mail}}
+| [[Wave Mail]]
+| {{a|Swift Swim}}<ref group="lower-alpha" name="abilitychange"/>
+| Brave
+| [[File:Cooltrainer m RSE OD.png]]
+| SKYLAR{{male}}
+| {{j|ソガチン}}<br>''Sogachin''
+| 46285
+| 5/4/4/5/4/4
+{{Contesttable|Tough}}
+|-
+| {{Gdis|Battle Frontier|III}}
+| {{MSP/3|300|Skitty}}
+| {{p|Skitty}}
+| {{MSP/3|052|Meowth}}
+| {{p|Meowth}}{{male}}
+| MEOWOW
+| {{j|チー}}<br>''Chee''
+| {{bag|Retro Mail}}
+| [[Retro Mail]]
+| {{a|Pickup}}<ref group="lower-alpha" name="abilitychange"/>
+| Naive
+| [[File:Beauty RSE OD.png]]
+| ISIS{{female}}
+| {{j|マリッペ}}<br>''Marippe''
+| 25945
+| 4/5/4/4/4/5
+{{Contesttable|Smart}}
+|}
+<references group="lower-alpha">
+<ref name="abilitychange">If this Pokémon is evolved in a [[Generation]] {{gen|IV}} or {{gen|V}} game, its Ability will become its second Ability.</ref>
+</references>
+
+====Pokémon XD: Gale of Darkness====
+{{missing image|section|Hordel's image is missing}}
+These Pokémon have random natures, IVs, and [[personality value]]s. They have no held items and can be {{Shiny}}.
+
+{| class="roundtable" style="margin: auto; background: #{{XD color light}}; border: 3px solid #{{XD color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" | Location
+! colspan="2" rowspan="2" | Player's Pokémon
+! colspan="2" rowspan="2" | NPC's Pokémon
+! colspan="2" | [[Nickname]]
+! rowspan="2" | [[Level]]
+! rowspan="2" | [[Ability]]
+! rowspan="2" | Special moves
+! colspan="4" | [[Original Trainer]]
+|- class="blacklinks"
+! English
+! Japanese
+!
+! English
+! Japanese
+! [[Trainer ID number|ID]]
+|-
+| rowspan="2" | [[Outskirt Stand]]
+| [[File:Menu XD 175.png|link=Togepi (Pokémon)|Togepi]]
+| style="background:#{{cologne color light}}" | <small>Purified</small><br>{{p|Togepi}}
+| rowspan="2" | [[File:Menu XD 239.png|link=Elekid (Pokémon)|Elekid]]
+| rowspan="2" | {{p|Elekid}}
+| rowspan="2" | ZAPRONG
+| rowspan="2" | {{j|コンセント}}<br>''Concent''
+| rowspan="2" | 20
+| rowspan="2" | {{a|Static}}
+| rowspan="2" style="background:#{{cologne color light}}" | {{m|Cross Chop}}, {{m|Fire Punch}}, {{m|Ice Punch}}, {{m|ThunderPunch}}
+| rowspan="2" | <!--Hordel image here-->
+| rowspan="2" | [[Hordel|HORDEL]]{{male}}
+| rowspan="2" | {{j|ダニー}}<br>Danny
+| rowspan="2" | 41400
+|-
+| [[File:Menu XD 176.png|link=Togetic (Pokémon)|Togetic]]
+| style="background:#{{cologne color light}}" | <small>Purified</small><br>{{p|Togetic}}
+|-
+| rowspan="3" | [[Pyrite Town]]
+| [[File:Menu XD 328.png|link=Trapinch (Pokémon)|Trapinch]]
+| {{p|Trapinch}}
+| [[File:Menu XD 307.png|link=Meditite (Pokémon)|Meditite]]
+| {{p|Meditite}}
+| MEDITITE
+| {{j|アサナン}}<br>''Asanan''
+| rowspan="3" | 20
+| {{a|Pure Power}}
+| {{m|Shadow Ball}}, {{m|DynamicPunch}}
+| rowspan="3" | [[File:Duking XD.png|90px]]
+| rowspan="3" | [[Duking|DUKING]]{{male}}
+| rowspan="3" | {{j|ギンザル}}<br>''Ginzaru''
+| rowspan="3" | 37149
+|-
+| [[File:Menu XD 283.png|link=Surskit (Pokémon)|Surskit]]
+| {{p|Surskit}}
+| [[File:Menu XD 213.png|link=Shuckle (Pokémon)|Shuckle]]
+| {{p|Shuckle}}
+| SHUCKLE
+| {{j|ツボツボ}}<br>''Tsubotsubo''
+| {{a|Sturdy}}
+| {{m|Toxic}}, {{m|Sludge Bomb}}, {{m|Substitute}}
+|-
+| [[File:Menu XD 194.png|link=Wooper (Pokémon)|Wooper]]
+| {{p|Wooper}}
+| [[File:Menu XD 246.png|link=Larvitar (Pokémon)|Larvitar]]
+| {{p|Larvitar}}
+| LARVITAR
+| {{j|ヨーギラス}}<br>''Yogiras''
+| {{a|Guts}}
+| {{m|Dragon Dance}}, {{m|Outrage}}
+|}
+
+===Generation IV===
+====Pokémon Diamond, Pearl, and Platinum====
+In the English language version of {{game|Diamond and Pearl|s}}, Kazza, Charap, and Gaspar are functionally [[language of origin|Japanese in origin]]; in Pokémon Platinum and all other language versions of Pokémon Diamond and Pearl, these Pokémon have the same language of origin as the game they were obtained in. While language of origin is normally not visible in Pokémon Diamond and Pearl, being a different language of origin does still have functional effects, such as boosting their [[experience]] gained by 1.7× (instead of 1.5×) and being applicable for the [[Masuda method]]. If traded to {{game|Platinum}}, HeartGold or SoulSilver, these Pokémon can register [[foreign Pokédex entries|Japanese Pokédex entries]]; in later generations, language of origin is explicitly displayed on the status screen.
+
+{| class="roundtable" style="margin: auto; background: #{{platinum color light}}; border: 3px solid #{{diamond color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" | Location
+! colspan="2" rowspan="2" | Player's Pokémon
+! colspan="2" rowspan="2" | NPC's Pokémon
+! colspan="2" | [[Nickname]]
+! colspan="2" rowspan="2" | [[Held item]]
+! rowspan="2" | [[Ability]]
+! rowspan="2" | [[Nature]]
+! colspan="4" | [[Original Trainer]]
+! rowspan="2" | [[Individual values|IVs]]<ref group="lower-alpha">In order: HP/Attack/Defense/Sp. Atk/Sp. Def/Speed</ref>
+|- class="blacklinks"
+! English
+! Japanese
+! 
+! English
+! Japanese
+! [[Trainer ID number|ID]]
+|-
+| [[Oreburgh City]]
+| {{MSP/3|066|Machop}}
+| {{p|Machop}}
+| {{MSP/3|063|Abra}}
+| {{p|Abra}}{{male}}
+| Kazza
+| {{j|ケーケー}}<br>''Kēkē''
+| {{bag|Oran Berry}}
+| [[Oran Berry]]
+| {{a|Synchronize}}
+| Quiet
+| [[File:Hilary DPPt OD.png]]
+| Hilary{{female}}
+| {{j|ハッシー}}<br>''Hasshi''
+| 25643
+| 15/15/15/25/25/20
+|-
+| [[Eterna Condominiums]]
+| {{MSP/3|418|Buizel}}
+| {{p|Buizel}}
+| {{MSP/3|441|Chatot}}
+| {{p|Chatot}}{{female}}<ref group="lower-alpha" name="contest"/>
+| Charap
+| {{j|ペッチャラ}}<br>''Petchara''
+| {{bag|Leppa Berry}}
+| [[Leppa Berry]]
+| {{a|Tangled Feet}}
+| Lonely
+| [[File:Ninja Boy OD.png]]
+| Norton{{male}}
+| {{j|ノブリン}}<br>''Noburin''
+| 44142
+| 15/20/15/25/15/25
+|-
+| [[Snowpoint City]]
+| {{MSP/3|308|Medicham}}
+| {{p|Medicham}}
+| {{MSP/3|093|Haunter}}
+| {{p|Haunter}}{{male}}
+| Gaspar
+| {{j|ドロりん}}<br>''Dororin''
+| {{bag|Everstone}}
+| [[Everstone]]<ref group="lower-alpha" name="everstone"/>
+| {{a|Levitate}}
+| Hasty
+| [[File:Beauty DPPt OD.png]]
+| Mindy{{female}}
+| {{j|ミナッチ}}<br>''Minatchi''
+| 19248
+| 20/25/15/15/15/25
+|-
+| {{rt|226|Sinnoh}}
+| {{MSP/3|456|Finneon}}
+| {{p|Finneon}}
+| {{MSP/3|129|Magikarp}}
+| {{p|Magikarp}}{{female}}<br><small>[[Foreign Pokédex entries|(foreign)]]</small><ref group="lower-alpha" name="Foppa language"/>
+| Foppa
+| {{j|ポッちゃん}}<br>''Potchan''
+| {{bag|Lum Berry}}
+| [[Lum Berry]]
+| {{a|Swift Swim}}
+| Mild
+| [[File:Hiker IV OD.png]]
+| {{DL|Foreign Pokédex entries|In Generation IV|Meister}}{{male}}
+| {{j|マイスター}}<br>''Meister''
+| 53277
+| 15/25/15/25/15/20
+|}
+<references group="lower-alpha">
+<ref name="contest">Chatot has all five [[Contest condition]]s raised by 20, with a [[sheen]] of 0.</ref>
+<ref name="everstone">Due to holding an [[Everstone]], this Haunter [[Evolution prevention|will not evolve]] when obtained in this trade.</ref>
+<ref name="Foppa language">German [[language of origin|in origin]] in all games except German; Japanese in origin in German games.</ref>
+</references>
+
+====Pokémon HeartGold and SoulSilver====
+{| class="roundtable" style="margin: auto; background: #{{soulSilver color light}}; border: 3px solid #{{heartGold color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" | Location
+! colspan="2" rowspan="2" | Player's Pokémon
+! colspan="2" rowspan="2" | NPC's Pokémon
+! colspan="2" | [[Nickname]]
+! colspan="2" rowspan="2" | [[Held item]]
+! rowspan="2" | [[Ability]]
+! rowspan="2" | [[Nature]]
+! colspan="4" | [[Original Trainer]]
+! rowspan="2" | [[Individual values|IVs]]<ref group="lower-alpha">In order: HP/Attack/Defense/Sp. Atk/Sp. Def/Speed</ref>
+|- class="blacklinks"
+! English
+! Japanese
+! 
+! English
+! Japanese
+! [[Trainer ID number|ID]]
+|-
+| [[Violet City]]
+| {{MSP/3|069|Bellsprout}}
+| {{p|Bellsprout}}
+| {{MSP/3|095|Onix}}
+| {{p|Onix}}{{male}}
+| Rocky
+| {{j|ブルブル}}<br>''Buruburu''
+| {{bag|Persim Berry}}
+| [[Persim Berry]]
+| {{a|Sturdy}}
+| Hasty
+| [[File:School Kid m HGSS OD.png]]
+| Rudy{{male}}
+| {{j|コンタ}}<br>''Konta''
+| 48926
+| 25/20/25/15/15/15
+|-
+| [[Goldenrod Department Store]]
+| {{MSP/3|096|Drowzee}}
+| {{p|Drowzee}}
+| {{MSP/3|066|Machop}}
+| {{p|Machop}}{{female}}
+| Muscle
+| {{j|きんにく}}<br>''Kinniku''
+| {{bag|Macho Brace}}
+| [[Macho Brace]]
+| {{a|Guts}}
+| Lonely
+| [[File:Jose HGSS OD.png]]
+| Jose{{male}}
+| {{j|ナオキ}}<br>''Naoki''
+| 37460
+| 15/25/20/15/15/20
+|-
+| [[Olivine City]]
+| {{MSP/3|098|Krabby}}
+| {{p|Krabby}}
+| {{MSP/3|100|Voltorb}}
+| {{p|Voltorb}}
+| Billy
+| {{j|ビリー}}<br>''Billy''
+| {{bag|Cheri Berry}}
+| [[Cheri Berry]]
+| {{a|Static}}
+| Hardy
+| [[File:Fisherman IV OD.png]]
+| Richard{{male}}
+| {{j|ジン}}<br>''Jin''
+| 29189
+| 15/20/15/25/15/25
+|-
+| [[Blackthorn City]]
+| {{MSP/3|148|Dragonair}}
+| {{p|Dragonair}}{{female}}
+| {{MSP/3|085|Dodrio}}
+| {{p|Dodrio}}{{female}}
+| Doris
+| {{j|ドンドコ}}<br>''Dondoko''
+| {{bag|Smoke Ball}}
+| [[Smoke Ball]]
+| {{a|Run Away}}
+| Impish
+| [[File:Lass HGSS OD.png]]
+| Ayana{{female}}
+| {{j|ミサコ}}<br>''Misako''
+| 00283
+| 20/20/20/15/15/15
+|-
+| [[Kanto Power Plant]]
+| {{MSP/3|051|Dugtrio}}
+| {{p|Dugtrio}}
+| {{MSP/3|082|Magneton}}
+| {{p|Magneton}}
+| Maggie
+| {{j|さてつ}}<br>''Satetsu''
+| {{bag|Metal Coat}}
+| [[Metal Coat]]
+| {{a|Magnet Pull}}
+| Impish
+| [[File:Super Nerd OD.png]]
+| Lorenzo{{male}}
+| {{j|モリオ}}<br>''Morio''
+| 50082
+| 15/20/15/20/20/20
+|-
+| [[Pewter City]]
+| {{MSP/3|093|Haunter}}
+| {{p|Haunter}}
+| {{MSP/3|178|Xatu}}
+| {{p|Xatu}}{{male}}
+| Paul
+| {{j|チーフ}}<br>''Chief''
+| {{bag|Wacan Berry}}
+| [[Wacan Berry]]
+| {{a|Synchronize}}
+| Modest
+| [[File:Pokéfan HGSS OD.png]]
+| Mondo{{male}}
+| {{j|モンド}}<br>''Mondo''
+| 15616
+| 15/20/15/20/20/20
+|-
+| [[Saffron City]]
+| {{MSP/3|025|Pikachu}}
+| {{p|Pikachu}}
+| {{MSP/3|025|Pikachu}}
+| {{TP|Lt. Surge|Pikachu}}{{female}}<br><small>[[Foreign Pokédex entries|(foreign)]]</small><ref group="lower-alpha" name="Volty language"/>
+| Volty
+| VOLTY
+| {{bag|Yellow Shard}}
+| [[Yellow Shard]]
+| {{a|Static}}
+| Jolly
+| [[File:Lt Surge IV OD.png]]
+| [[Lt. Surge|Surge]]{{male}}
+| {{j|マチス}}<br>''Matisse''
+| 33038
+| 20/25/18/25/13/31
+|-
+| [[Silph Co.]]
+| {{MSP/3|205|Forretress}}
+| {{p|Forretress}}
+| {{MSP/3|374|Beldum}}
+| {{p|Beldum}}
+| Iron
+| {{j|こうてつ}}<br>''Kōtetsu''
+| {{bag|Dawn Stone}}
+| [[Dawn Stone]]
+| {{a|Clear Body}}
+| Brave
+| [[File:Steven IV OD.png]]
+| {{Steven}}{{male}}
+| {{j|ダイゴ}}<br>''Daigo''
+| 23478
+| 28/29/24/24/25/23
+|-
+| [[Diglett's Cave]]<ref group="lower-alpha" name="Brock's time"/>
+| {{MSP/3|438|Bonsly}}
+| {{TP|Brock|Bonsly}}
+| {{MSP/3|111|Rhyhorn}}
+| {{p|Rhyhorn}}{{female}}<ref group="lower-alpha" name="move"/>
+| Hornlette
+| {{j|つのこ}}<br>''Tsunoko''
+| {{bag|Passho Berry}}
+| [[Passho Berry]]
+| {{a|Lightning Rod|Lightningrod}}
+| Relaxed
+| [[File:Brock IV OD.png]]
+| [[Brock]]{{male}}
+| {{j|タケシ}}<br>''Takeshi''
+| 06845
+| 22/31/13/22/9/0
+|-
+| [[Olivine Gym]]<ref group="lower-alpha" name="Jasmine's time"/>
+| [[File:000MS3.png|link=Pokémon (species)]]
+| Any Pokémon<ref group="lower-alpha" name="Jasmine's restriction"/> 
+| {{MSP/3|208|Steelix}}
+| {{TP|Jasmine|Steelix}}{{male}}
+| Rusty
+| {{j|ネール}}<br>''Neil''
+| {{bag|Soothe Bell}}
+| [[Soothe Bell]]
+| {{a|Rock Head}}
+| Brave
+| [[File:Jasmine HGSS OD.png]]
+| [[Jasmine]]{{female}}
+| {{j|ミカン}}<br>''Mikan''
+| 26491
+| 8/30/28/18/20/6
+|}
+<references group="lower-alpha">
+<ref name="Brock's time">Between 5 PM and 8 PM on Saturdays, after he is defeated at [[Pewter Gym]].</ref>
+<ref name="move">Brock's Rhyhorn knows {{m|Thunder Fang}}.</ref>
+<ref name="Volty language">French [[language of origin|in origin]] in English games; English in origin in all other language games.</ref>
+<ref name="Jasmine's time">Between 1 PM and 2 PM, after she is defeated in a rematch. She offers the trade after being talked to twice.</ref>
+<ref name="Jasmine's restriction">This trade is still subject to limitations put in trades between players; that is, she will not accept Shaymin in its Sky Forme, Giratina in its Origin Forme, Spiky-eared Pichu, or Rotom in non-default form</ref>
+</references>
+
+====[[My Pokémon Ranch]]====
+{{main|Hayley's trades}}
+
+===Generation V===
+Unique to this generation, some of the Pokémon that are traded to the NPC can be battled again by that NPC. These are marked with a † icon. The gender and Ability traded is kept in the new battle, and in Black and White, the traded Pokémon evolves, but the moves may change, even if [[HM]]s were taught to the Pokémon when traded. The new level is five levels above the initial level of the Pokémon traded to the NPC, with a minimum of 65 and a maximum of 100.
+
+Except for trades with Yancy and Curtis, all traded Pokémon are guaranteed to have 1 perfect IV and all others set to 20.
+
+====Pokémon Black and White====
+{| class="roundtable" style="margin: auto; background: #{{white color light}}; border: 3px solid #{{black color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" | Location
+! colspan="2" rowspan="2" | Player's Pokémon
+! colspan="2" rowspan="2" | NPC's Pokémon
+! colspan="2" | [[Nickname]]
+! rowspan="2" | [[Level]]
+! colspan="2" rowspan="2" | [[Held item]]
+! rowspan="2" | [[Ability]]
+! rowspan="2" | [[Nature]]
+! colspan="4" | [[Original Trainer]]
+! rowspan="2" | Perfect [[Individual values|IV]]
+|- class="blacklinks"
+! English
+! Japanese
+! 
+! English
+! Japanese
+! [[Trainer ID number|ID]]
+|-
+| rowspan="2" | [[Nacrene City]]<sup>†</sup>
+| style="background:#{{black color light}}" | {{MSP/3|546|Cottonee}}
+| style="background:#{{black color light}}" | {{p|Cottonee}}
+| style="background:#{{black color light}}" | {{MSP/3|548|Petilil}}
+| style="background:#{{black color light}}" | {{p|Petilil}}{{female}}
+| style="background:#{{black color light}}" | Lillil
+| style="background:#{{black color light}}" | {{j|チュりん}}<br>''Churin''
+| rowspan="2" | 15
+| rowspan="2" | {{bag|Cheri Berry}}
+| rowspan="2" | [[Cheri Berry]]
+| style="background:#{{black color light}}" | {{a|Chlorophyll}}
+| rowspan="2" | Modest
+| rowspan="2" | [[File:Lass OD.png]]
+| rowspan="2" | Dye{{female}}
+| rowspan="2" | {{j|アヤ}}<br>''Aya''
+| rowspan="2" | 39922
+| rowspan="2" | Sp. Attack
+|-
+| style="background:#{{white color light}}" | {{MSP/3|548|Petilil}}
+| style="background:#{{white color light}}" | {{p|Petilil}}
+| style="background:#{{white color light}}" | {{MSP/3|546|Cottonee}}
+| style="background:#{{white color light}}" | {{p|Cottonee}}{{female}}
+| style="background:#{{white color light}}" | Fluffee
+| style="background:#{{white color light}}" | {{j|モンモン}}<br>''Monmon''
+| style="background:#{{white color light}}" | {{a|Prankster}}
+|- 
+| rowspan="2" | [[Driftveil City]]<sup>†</sup>
+| style="background:#{{black color light}}" | {{MSP/3|572|Minccino}}
+| style="background:#{{black color light}}" | {{p|Minccino}}
+| style="background:#{{black color light}}" | {{MSP/3|550|Basculin}}
+| style="background:#{{black color light}}" | <small>[[List of Pokémon with form differences#Basculin|Red-Striped]]</small><br>{{p|Basculin}}{{male}}
+| style="background:#{{black color light}}" | Redeye
+| style="background:#{{black color light}}" | {{j|アカメ}}<br>''Akame''
+| rowspan="2" | 25
+| rowspan="2" | {{bag|Sitrus Berry}}
+| rowspan="2" | [[Sitrus Berry]]
+| style="background:#{{black color light}}" | {{a|Reckless}}
+| rowspan="2" | Adamant
+| rowspan="2" | [[File:Youngster OD.png]]
+| rowspan="2" | Kyle{{male}}
+| rowspan="2" | {{j|ナオキ}}<br>''Naoki''
+| rowspan="2" | 27646
+| rowspan="2" | Attack
+|-
+| style="background:#{{white color light}}" | {{MSP/3|572|Minccino}}
+| style="background:#{{white color light}}" | {{p|Minccino}}
+| style="background:#{{white color light}}" | {{MSP/3|550B|Basculin}}
+| style="background:#{{white color light}}" | <small>[[List of Pokémon with form differences#Basculin|Blue-Striped]]</small><br>{{p|Basculin}}{{male}}
+| style="background:#{{white color light}}" | Blueeye
+| style="background:#{{white color light}}" | {{j|アオメ}}<br>''Aome''
+| style="background:#{{white color light}}" | {{a|Rock Head}}
+|-
+| {{rt|7|Unova}}
+| {{MSP/3|525|Boldore}}
+| {{p|Boldore}}
+| {{MSP/3|587|Emolga}}
+| {{p|Emolga}}{{male}}
+| Minipete
+| {{j|トビマル}}<br>''Tobimaru''
+| 30
+| {{bag|Lum Berry}}
+| [[Lum Berry]]
+| {{a|Static}}
+| Lax
+| [[File:Hiker OD.png]]
+| Manny{{male}}
+| {{j|ゲンゾウ}}<br>''Genzō''
+| 11195
+| Defense
+|-
+| {{rt|15|Unova}}
+| {{MSP/3|132|Ditto}}
+| {{p|Ditto}}
+| {{MSP/3|479|Rotom}}
+| {{p|Rotom}}
+| Eeks
+| {{j|ドッキー}}<br>''Docky''
+| 60
+| {{bag|Max Elixir}}
+| [[Max Elixir]]
+| {{a|Levitate}}
+| Gentle
+| [[File:Scientist f OD.png]]
+| Lillian{{female}}
+| {{j|ユイ}}<br>''Yui''
+| 54673
+| Sp. Defense
+|-
+| [[Undella Town]]<br><small>({{season|summer}})</small>
+| {{MSP/3|573|Cinccino}}
+| {{p|Cinccino}}
+| {{MSP/3|446|Munchlax}}
+| {{p|Munchlax}}{{male}}
+| Gorge
+| {{j|まんぷく}}<br>''Manpuku''
+| 60
+| {{bag|Leftovers}}
+| [[Leftovers]]
+| {{a|Thick Fat}}
+| Serious
+| [[File:Ander V OD.png]]
+| Ander{{male}}
+| {{j|フトシ}}<br>''Futoshi''
+| 40217
+| HP
+|}
+
+====Pokémon Black 2 and White 2====
+{| class="roundtable" style="margin: auto; background: #{{white 2 color light}}; border: 3px solid #{{black 2 color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" | Location
+! colspan="2" rowspan="2" | Player's Pokémon
+! colspan="2" rowspan="2" | NPC's Pokémon
+! colspan="2" | [[Nickname]]
+! rowspan="2" | [[Level]]
+! colspan="2" rowspan="2" | [[Held item]]
+! rowspan="2" | [[Ability]]
+! rowspan="2" | [[Nature]]
+! colspan="4" | [[Original Trainer]]
+! rowspan="2" | Perfect [[Individual values|IV]]
+|- class="blacklinks"
+! English
+! Japanese
+! 
+! English
+! Japanese
+! [[Trainer ID number|ID]]
+|-
+| rowspan="2" | {{rt|4|Unova}}
+| style="background:#{{black 2 color light}}" | {{MSP/3|546|Cottonee}}
+| style="background:#{{black 2 color light}}" | {{p|Cottonee}}
+| style="background:#{{black 2 color light}}" | {{MSP/3|548|Petilil}}
+| style="background:#{{black 2 color light}}" | {{p|Petilil}}{{female}}
+| style="background:#{{black 2 color light}}" | Petulia
+| style="background:#{{black 2 color light}}" | {{j|チュりっぺ}}<br>''Churippe''
+| rowspan="2" | 20
+| style="background:#{{black 2 color light}}" | {{bag|Power Anklet}}
+| style="background:#{{black 2 color light}}" | [[Power Anklet]]
+| style="background:#{{black 2 color light}}" | {{a|Own Tempo}}
+| style="background:#{{black 2 color light}}" | Timid
+| style="background:#{{black 2 color light}}" | [[File:Lass OD.png]]
+| style="background:#{{black 2 color light}}" | Calla{{female}}
+| style="background:#{{black 2 color light}}" | {{j|ユリコ}}<br>''Yuriko''
+| style="background:#{{black 2 color light}}" | 65217
+| rowspan="2" | Sp. Attack
+|-
+| style="background:#{{white 2 color light}}" | {{MSP/3|548|Petilil}}
+| style="background:#{{white 2 color light}}" | {{p|Petilil}}
+| style="background:#{{white 2 color light}}" | {{MSP/3|546|Cottonee}}
+| style="background:#{{white 2 color light}}" | {{p|Cottonee}}{{male}}
+| style="background:#{{white 2 color light}}" | Fluffee
+| style="background:#{{white 2 color light}}" | {{j|メンメン}}<br>''Menmen''
+| style="background:#{{white 2 color light}}" | {{bag|Power Weight}}
+| style="background:#{{white 2 color light}}" | [[Power Weight]]
+| style="background:#{{white 2 color light}}" | {{a|Prankster}}
+| style="background:#{{white 2 color light}}" | Modest
+| style="background:#{{white 2 color light}}" | [[File:Youngster OD.png]]
+| style="background:#{{white 2 color light}}" | Cotton{{male}}
+| style="background:#{{white 2 color light}}" | {{j|ショウスケ}}<br>''Shōsuke''
+| style="background:#{{white 2 color light}}" | 05720
+|-
+| {{rt|7|Unova}}
+| {{MSP/3|587|Emolga}}
+| {{p|Emolga}}
+| {{MSP/3|526|Gigalith}}
+| {{p|Gigalith}}{{male}}
+| Gigalith
+| {{j|ギガイアス}}<br>''Gigaiath''
+| 35
+| {{bag|Leppa Berry}}
+| [[Leppa Berry]]
+| {{a|Sturdy}}
+| Adamant
+| [[File:Hiker OD.png]]
+| Manny{{male}}
+| {{j|ゲンゾウ}}<br>''Genzō''
+| 11195
+| Attack
+|-
+| [[Humilau City]]
+| {{MSP/3|226|Mantine}}
+| {{p|Mantine}}
+| {{MSP/3|465|Tangrowth}}
+| {{p|Tangrowth}}{{male}}
+| Tangles
+| {{j|フサフサ}}<br>''Fusafusa''
+| 45
+| {{bag|Sitrus Berry}}
+| [[Sitrus Berry]]
+| {{a|Chlorophyll}}
+| Hardy
+| [[File:Roughneck OD.png]]
+| Slick{{male}}
+| {{j|ツルマル}}<br>''Tsurumaru''
+| 27658
+| HP
+|-
+| {{rt|15|Unova}}
+| {{MSP/3|132|Ditto}}
+| {{p|Ditto}}
+| {{MSP/3|479|Rotom}}
+| {{p|Rotom}}
+| Bucky
+| {{j|バッキー}}<br>''Bucky''
+| 60
+| {{bag|Max Elixir}}
+| [[Max Elixir]]
+| {{a|Levitate}}
+| Calm
+| [[File:Scientist f OD.png]]
+| Lillian{{female}}
+| {{j|ユイ}}<br>''Yui''
+| 54673
+| Sp. Defense
+|-
+| rowspan="2" | [[Accumula Town]]<sup>†</sup>
+| {{MSP/3|530|Excadrill}}
+| {{p|Excadrill}}
+| {{MSP/3|424|Ambipom}}
+| {{p|Ambipom}}{{male}}
+| Ambidexter
+| {{j|シッポ}}<br>''Shippo''
+| 40
+| {{bag|Sitrus Berry}}
+| [[Sitrus Berry]]
+| {{a|Pickup}}
+| Jolly
+| rowspan="2" | [[File:Lass OD.png]]
+| rowspan="2" | Diana{{female}}
+| rowspan="2" | {{j|ハツネ}}<br>''Hatsune''
+| rowspan="2" | 17074
+| rowspan="2" | Speed
+|-
+| {{MSP/3|450|Hippowdon}}
+| {{p|Hippowdon}}
+| {{MSP/3|065|Alakazam}}
+| {{p|Alakazam}}{{male}}
+| Beardy
+| {{j|おヒゲ}}<br>''Ohige''
+| 40
+| {{bag|Lum Berry}}
+| [[Lum Berry]]
+| {{a|Synchronize}}
+| Timid
+|}
+
+=====Yancy/Curtis=====
+In [[Nimbasa City]], after returning the [[Dropped Item]] to the owner and calling them 15 times, [[Yancy]] or [[Curtis]] (depending on the player's [[gender]]) will trade the player a different {{OBP|Pokémon|species}} each day, in this order. Any Pokémon offered by the player will be accepted. Each Pokémon has its [[Hidden Ability]] and can be either male or female.
+
+<div style="float: left; margin-right: 10px">
+;If the player is {{ga|Nate|male}} [[File:Nate OD.png|link=Player character]]
+
+[[File:Yancy OD.png]] Yancy's Pokémon have the [[Original Trainer]] {{color|E03838|Yancy}} (Japanese: {{color|E03838|{{j|ルリ}}}} ''Ruri'') and [[Trainer ID number]] 10303.
+{| class="roundtable" style="margin: auto; background: #{{white 2 color light}}; border: 3px solid #{{white 2 color}}; text-align:center"
+|- class="blacklinks"
+! colspan="2" | [[Yancy]]'s Pokémon
+! [[Level]]
+! colspan="2" | [[Held item]]
+! [[Ability]]
+! [[Nature]]
+|-
+| {{MSP/3|052|Meowth}}
+| {{p|Meowth}}
+| rowspan="12" | 50
+| {{bag|Rare Candy}}
+| [[Rare Candy]]
+| {{a|Unnerve}}
+| rowspan="12" | Random
+|-
+| {{MSP/3|202|Wobbuffet}}
+| {{p|Wobbuffet}}
+| {{bag|Rage Candy Bar}}
+| [[Rage Candy Bar|RageCandyBar]]
+| {{a|Telepathy}}
+|-
+| {{MSP/3|280|Ralts}}
+| {{p|Ralts}}
+| {{bag|Lava Cookie}}
+| [[Lava Cookie]]
+| {{a|Telepathy}}
+|-
+| {{MSP/3|410|Shieldon}}
+| {{p|Shieldon}}
+| {{bag|Old Gateau}}
+| [[Old Gateau]]
+| {{a|Soundproof}}
+|-
+| {{MSP/3|111|Rhyhorn}}
+| {{p|Rhyhorn}}
+| {{bag|Rare Candy}}
+| [[Rare Candy]]
+| {{a|Reckless}}
+|-
+| {{MSP/3|422|Shellos}}
+| <small>[[List of Pokémon with form differences#Shellos and Gastrodon|West Sea]]</small><br>{{p|Shellos}}
+| {{bag|Old Gateau}}
+| [[Old Gateau]]
+| {{a|Sand Force}}
+|-
+| {{MSP/3|303|Mawile}}
+| {{p|Mawile}}
+| {{bag|Lava Cookie}}
+| [[Lava Cookie]]
+| {{a|Sheer Force}}
+|-
+| {{MSP/3|442|Spiritomb}}
+| {{p|Spiritomb}}
+| {{bag|Old Gateau}}
+| [[Old Gateau]]
+| {{a|Infiltrator}}
+|-
+| {{MSP/3|143|Snorlax}}
+| {{p|Snorlax}}
+| {{bag|Rare Candy}}
+| [[Rare Candy]]
+| {{a|Gluttony}}
+|-
+| {{MSP/3|216|Teddiursa}}
+| {{p|Teddiursa}}
+| {{bag|Rage Candy Bar}}
+| [[Rage Candy Bar|RageCandyBar]]
+| {{a|Honey Gather}}
+|-
+| {{MSP/3|327|Spinda}}
+| {{p|Spinda}}
+| {{bag|Lava Cookie}}
+| [[Lava Cookie]]
+| {{a|Contrary}}
+|-
+| {{MSP/3|175|Togepi}}
+| {{p|Togepi}}
+| {{bag|Rage Candy Bar}}
+| [[Rage Candy Bar|RageCandyBar]]
+| {{a|Super Luck}}
+|}
+</div>
+<div style="float: left; margin-right: 10px">
+;If the player is {{ga|Rosa|female}} [[File:Rosa OD.png|link=Player character]]
+
+[[File:Curtis OD.png]] Curtis's Pokémon have the Original Trainer {{color|00E8F8|Curtis}} (Japanese: {{color|00E8F8|{{j|テツ}}}} ''Tetsu'') and Trainer ID number 54118.
+
+{| class="roundtable" style="margin: auto; background: #{{black 2 color light}}; border: 3px solid #{{black 2 color}}; text-align:center"
+|- class="blacklinks"
+! colspan="2" | [[Curtis]]'s Pokémon
+! [[Level]]
+! colspan="2" | [[Held item]]
+! [[Ability]]
+! [[Nature]]
+|-
+| {{MSP/3|056|Mankey}}
+| {{p|Mankey}}
+| rowspan="12" | 50
+| {{bag|Rare Candy}}
+| [[Rare Candy]]
+| {{a|Defiant}}
+| rowspan="12" | Random
+|-
+| {{MSP/3|202|Wobbuffet}}
+| {{p|Wobbuffet}}
+| {{bag|Rage Candy Bar}}
+| [[Rage Candy Bar|RageCandyBar]]
+| {{a|Telepathy}}
+|-
+| {{MSP/3|280|Ralts}}
+| {{p|Ralts}}
+| {{bag|Lava Cookie}}
+| [[Lava Cookie]]
+| {{a|Telepathy}}
+|-
+| {{MSP/3|408|Cranidos}}
+| {{p|Cranidos}}
+| {{bag|Old Gateau}}
+| [[Old Gateau]]
+| {{a|Sheer Force}}
+|-
+| {{MSP/3|111|Rhyhorn}}
+| {{p|Rhyhorn}}
+| {{bag|Rare Candy}}
+| [[Rare Candy]]
+| {{a|Reckless}}
+|-
+| {{MSP/3|422E|Shellos}}
+| <small>[[List of Pokémon with form differences#Shellos and Gastrodon|East Sea]]</small><br>{{p|Shellos}}
+| {{bag|Old Gateau}}
+| [[Old Gateau]]
+| {{a|Sand Force}}
+|-
+| {{MSP/3|302|Sableye}}
+| {{p|Sableye}}
+| {{bag|Lava Cookie}}
+| [[Lava Cookie]]
+| {{a|Prankster}}
+|-
+| {{MSP/3|442|Spiritomb}}
+| {{p|Spiritomb}}
+| {{bag|Old Gateau}}
+| [[Old Gateau]]
+| {{a|Infiltrator}}
+|-
+| {{MSP/3|143|Snorlax}}
+| {{p|Snorlax}}
+| {{bag|Rare Candy}}
+| [[Rare Candy]]
+| {{a|Gluttony}}
+|-
+| {{MSP/3|231|Phanpy}}
+| {{p|Phanpy}}
+| {{bag|Rage Candy Bar}}
+| [[Rage Candy Bar|RageCandyBar]]
+| {{a|Sand Veil}}
+|-
+| {{MSP/3|327|Spinda}}
+| {{p|Spinda}}
+| {{bag|Lava Cookie}}
+| [[Lava Cookie]]
+| {{a|Contrary}}
+|-
+| {{MSP/3|175|Togepi}}
+| {{p|Togepi}}
+| {{bag|Rage Candy Bar}}
+| [[Rage Candy Bar|RageCandyBar]]
+| {{a|Super Luck}}
+|}
+</div>
+{{-}}
+
+===Generation VI===
+====Pokémon X and Y====
+{{missing image|section|Missing Punky's model}}
+{| class="roundtable" style="margin: auto; background: #{{y color light}}; border: 3px solid #{{x color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" | Location
+! colspan="2" rowspan="2" | Player's Pokémon
+! colspan="2" rowspan="2" | NPC's Pokémon
+! colspan="2" | [[Nickname]]
+! rowspan="2" | [[Level]]
+! colspan="2" rowspan="2" | [[Held item]]
+! rowspan="2" | [[Ability]]
+! rowspan="2" | [[Nature]]
+! colspan="4" | [[Original Trainer]]
+! rowspan="2" | [[Individual values|IVs]]<ref group="lower-alpha">If the name of a stat is given, then that stat has 31 IVs. Otherwise, IVs are shown in order: HP/Attack/Defense/Sp. Atk/Sp. Defense/Speed.</ref>
+|- class="blacklinks"
+! English
+! Japanese
+! 
+! English
+! Japanese
+! [[Trainer ID number|ID]]
+|-
+| [[Santalune City]]
+| {{MSP/6|659|Bunnelby}}
+| {{p|Bunnelby}}
+| {{MSP/6|083|Farfetch'd}}
+| {{p|Farfetch'd}}{{male}}
+| Quacklin'
+| {{j|マー}}<br>''Mā''
+| 10
+|
+| None
+| {{a|Keen Eye}}
+| Jolly
+| [[File:VSHiker.png|80px]]
+| Cliff
+| {{j|ぐりお}}<br>''Gurio''
+| 00185
+| Speed
+|-
+| [[Cyllage City]]
+| {{MSP/6|370|Luvdisc}}
+| {{p|Luvdisc}}
+| {{MSP/6|208XY|Steelix}}
+| {{p|Steelix}}{{female}}
+| Thumper
+| {{j|カッチ}}<br>''Katchi''
+| 20
+|
+| None
+| {{a|Rock Head}}
+| Impish
+| [[File:VSAce Trainer M.png|80px]]
+| Farris
+| {{j|アイン}}<br>''Ain''
+| 19250
+| Defense
+|-
+| [[Snowbelle City]]
+| {{MSP/6|039|Jigglypuff}}
+| {{p|Jigglypuff}}
+| {{MSP/6|625|Bisharp}}
+| {{p|Bisharp}}{{male}}
+| Pierce
+| {{j|キール}}<br>''Kill''
+| 50
+|
+| None
+| {{a|Defiant}}
+| Adamant
+| <!--[[File:Punky VI OD.png]]-->
+| Punky
+| {{j|パンク}}<br>''Punk''
+| 03447
+| Attack
+|-
+| rowspan="3" | [[Vaniville Town]]
+| rowspan="3" | [[File:000MS6.png|link=Pokémon (species)]]
+| rowspan="3" | Any Pokémon
+| {{MSP/6|650|Chespin}}
+| {{p|Chespin}}<ref group="lower-alpha">If the player started with Fennekin</ref>
+| Chester
+| {{j|ハリぼん}}<br>''Haribon''
+| rowspan="3" | 5
+| rowspan="3" |
+| rowspan="3" | None
+| {{a|Overgrow}}
+| Adamant
+| rowspan="3" | [[File:VSShauna.png|80px]]
+| rowspan="3" | [[Shauna]]
+| rowspan="3" | {{j|サナ}}<br>''Sana''
+| rowspan="3" | 00037
+| 20/31/20/20/20/20
+|-
+| {{MSP/6|653|Fennekin}}
+| {{p|Fennekin}}<ref group="lower-alpha">If the player started with Froakie</ref>
+| Kinniekins
+| {{j|フォッぷ}}<br>''Foppu''
+| {{a|Blaze}}
+| Modest
+| 20/20/20/31/20/20
+|-
+| {{MSP/6|656|Froakie}}
+| {{p|Froakie}}<ref group="lower-alpha">If the player started with Chespin</ref>
+| Froabble
+| {{j|ゲコっち}}<br>''Gekotchi''
+| {{a|Torrent}}
+| Jolly
+| 20/20/20/20/20/31
+|-
+| [[Lumiose City]]
+| [[File:000MS6.png|link=Pokémon (species)]]
+| Any Pokémon
+| {{MSP/6|280|Ralts}}
+| {{TP|Diantha|Ralts}}{{female}}
+| Ralts
+| {{j|ラルトス}}<br>''Ralts''
+| 5
+| {{bag|Gardevoirite}}
+| [[Gardevoirite]]
+| {{a|Synchronize}}
+| Modest
+| [[File:VSDiantha.png|80px]]
+| [[Diantha]]
+| {{j|カルネ}}<br>''Carne''
+| 37110
+| 20/20/20/31/20/31
+|-
+| rowspan="2" | [[Kalos hotels]]
+| {{MSP/6|130|Gyarados}}
+| {{p|Gyarados}}
+| {{MSP/6|129|Magikarp}}
+| {{p|Magikarp}}{{male}}
+| Carpe Diem
+| {{j|こいこい}}<br>''Koikoi''
+| 5
+|
+| None
+| {{a|Swift Swim}}
+| Random
+| [[File:VSHiker.png|80px]]
+| Caveat
+| {{j|カープ}}<br>''Carp''
+| 44285
+| Attack, Sp. Attack
+|-
+| [[File:000MS6.png|link=Pokémon (species)]]
+| Any Pokémon
+| {{MSP/6|133|Eevee}}
+| {{p|Eevee}}{{female}}
+| Stevie
+| {{j|アマヤル}}<br>''Amayaru''
+| 5
+| {{bag|Rare Candy}}
+| [[Rare Candy]]
+| {{a|Run Away}}
+| Docile
+| [[File:VSMaid.png|80px]]
+| Elena
+| {{j|ヘレン}}<br>''Helen''
+| 29294
+| Random
+|}
+
+<references group="lower-alpha" />
+
+====Pokémon Omega Ruby and Alpha Sapphire====
+{| class="roundtable" style="margin: auto; background: #{{Alpha Sapphire color light}}; border: 3px solid #{{Omega Ruby color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" | Location
+! colspan="2" rowspan="2" | Player's Pokémon
+! colspan="2" rowspan="2" | NPC's Pokémon
+! colspan="2" | [[Nickname]]
+! rowspan="2" | [[Level]]
+! colspan="2" rowspan="2" | [[Held item]]
+! rowspan="2" | [[Ability]]
+! rowspan="2" | [[Nature]]
+! colspan="4" | [[Original Trainer]]
+! rowspan="2" | Perfect [[Individual values|IV]]
+|- class="blacklinks"
+! English
+! Japanese
+! 
+! English
+! Japanese
+! [[Trainer ID number|ID]]
+|-
+| [[Rustboro City]]
+| {{MSP/6|287|Slakoth}}
+| {{p|Slakoth}}
+| {{MSP/6|296|Makuhita}}
+| {{p|Makuhita}}{{male}}
+| Makit
+| {{j|ポテマル}}<br>''Potemaru''
+| 9
+| {{bag|X Attack}}
+| [[X Attack]]
+| {{a|Guts}}
+| Brave
+| [[File:VSSchoolkid M.png|80px]]
+| Darrell
+| {{j|モーリン}}<br>''Maureen''
+| 30724
+| Attack
+|-
+| [[Fortree City]]
+| {{MSP/6|327|Spinda}}
+| {{p|Spinda}}
+| {{MSP/6|300|Skitty}}
+| {{p|Skitty}}{{female}}
+| Skitit
+| {{j|ベルベル}}<br>''Bell Bell''
+| 30
+| {{bag|Magost Berry}}
+| [[Magost Berry]]
+| {{a|Cute Charm}}
+| Naughty
+| [[File:VSSchoolkid F.png|80px]]
+| Elyssa
+| {{j|ユキポン}}<br>''Yukipon''
+| 03239
+| Speed
+|-
+| [[Pacifidlog Town]]
+| {{MSP/6|182|Bellossom}}
+| {{p|Bellossom}}
+| {{MSP/6|222|Corsola}}
+| {{p|Corsola}}{{female}}
+| Coroso
+| {{j|モモちゃん}}<br>''Momo-chan''
+| 50
+| {{bag|Heart Scale}}
+| [[Heart Scale]]
+| {{a|Regenerator}}
+| Calm
+| [[File:VSAroma Lady.png|80px]]
+| Lane
+| {{j|サトチン}}<br>''Satochin''
+| 00325
+| HP, Sp. Def
+|}
+
+===Generation VII===
+{{incomplete|section|needs=Can trade Pokémon in this generation be shiny?}}
+====Pokémon Sun and Moon====
+In-game trades have random IVs, except for the specified perfect IV.
+{| class="roundtable" style="margin: auto; background: #{{moon color light}}; border: 3px solid #{{sun color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" | Location
+! colspan="2" rowspan="2" | Player's Pokémon
+! colspan="2" rowspan="2" | NPC's Pokémon
+! colspan="2" | [[Nickname]]
+! rowspan="2" | [[Level]]
+! colspan="2" rowspan="2" | [[Held item]]
+! rowspan="2" | [[Ability]]
+! rowspan="2" | [[Nature]]
+! colspan="4" | [[Original Trainer]]
+! rowspan="2" | Perfect [[Individual values|IV]]
+|- class="blacklinks"
+! English
+! Japanese
+! 
+! English
+! Japanese
+! [[Trainer ID number|ID]]
+|-
+| {{rt|2|Alola}}
+| {{MSP/6|021|Spearow}}
+| {{p|Spearow}}
+| {{MSP/6|066|Machop}}
+| {{p|Machop}}{{male}}
+| Macho
+| {{j|シトサン}}<br>''Shito-san''
+| 9
+| {{bag|X Attack}}
+| [[X Attack]]
+| {{a|No Guard}}
+| Brave
+| [[File:Lass SM OD.png|50px]]
+| Hila
+| {{j|ヒラヒラ}}<br>''Hirahira''
+| 000410
+| Attack
+|-
+| {{rt|5|Alola}}
+| {{MSP/6|506|Lillipup}}
+| {{p|Lillipup}}
+| {{MSP/6|761|Bounsweet}}
+| {{p|Bounsweet}}{{female}}
+| Bouncee
+| {{j|タリーヨ}}<br>''Tarīyo''
+| 16
+| {{bag|Bright Powder}}
+| [[Bright Powder]]
+| {{a|Leaf Guard}}
+| Adamant
+| [[File:Rising Star m SM OD.png|50px]]
+| Kihei
+| キヘ<br>''Kihe''
+| 610507
+| Attack
+|-
+| [[Konikoni City]]
+| {{MSP/6|041|Zubat}}
+| {{p|Zubat}}
+| {{MSP/6|061|Poliwhirl}}
+| {{p|Poliwhirl}}{{female}}
+| Whirly
+| {{j|ヤンヤン}}<br>''Yanyan''
+| 22
+| [[File:Held Waterium Z Sprite.png]]
+| [[Waterium Z]]
+| {{a|Damp}}
+| Naughty
+| [[File:Preschooler f SM OD.png|50px]]
+| Laule'a
+| {{j|ラウレア}}<br>''Laule'a''
+| 590916
+| HP
+|-
+| [[Malie City]]
+| {{MSP/6|674|Pancham}}
+| {{p|Pancham}}
+| {{MSP/6|440|Happiny}}
+| {{p|Happiny}}{{female}}
+| Happini
+| {{j|うゆゆ}}<br>''Uyuyu''
+| 27
+| 
+| None
+| {{a|Serene Grace}}
+| Calm
+| [[File:Sightseer f SM OD.png|50px]]
+| Momoe
+| {{j|モエモエ}}<br>''Moemoe''
+| 010913
+| Sp. Attack
+|-
+| [[Tapu Village]]
+| {{MSP/6|093|Haunter}}
+| {{p|Haunter}}
+| {{MSP/6|075A|Graveler}}
+| <small>{{rf|Alolan}}</small><br>{{p|Graveler}}{{male}}<br><small>→{{p|Golem}}</small><ref group="lower-alpha" name="tradeevo"/>
+| Veler
+| {{j|シヨッカ}}<br>''Shiyokka''
+| 32
+| [[File:Held Rockium Z Sprite.png]]
+| [[Rockium Z]]
+| {{a|Magnet Pull}}
+| Impish
+| [[File:Hiker SM OD.png|50px]]
+| Sill
+| {{j|ヘパ}}<br>''Hepa''
+| 610602
+| Defense
+|-
+| [[Seafolk Village]]
+| {{MSP/6|210|Granbull}}
+| {{p|Granbull}}
+| {{MSP/6|762|Steenee}}
+| {{p|Steenee}}{{female}}
+| Stena
+| {{j|ノッキリア}}<br>''Nokkiria''
+| 43
+| [[File:Held Grassium Z Sprite.png]]
+| [[Grassium Z]]
+| {{a|Leaf Guard}}
+| Careful
+| [[File:Veteran f SM OD.png|50px]]
+| Kumu
+| {{j|クム}}<br>''Kumu''
+| 610503
+| Sp. Def
+|-
+| [[Poni Gauntlet]]
+| {{MSP/6|760|Bewear}}
+| {{p|Bewear}}
+| {{MSP/6|663|Talonflame}}
+| {{p|Talonflame}}{{male}}
+| Talo
+| {{j|ツノリー}}<br>''Tsunorī''
+| 59
+| [[File:Held Firium Z Sprite.png]]
+| [[Firium Z]]
+| {{a|Gale Wings}}
+| Jolly
+| [[File:Punk Guy SM OD.png|50px]]
+| Anga
+| {{j|フフー}}<br>''Fufū''
+| 581022
+| Speed
+|}
+<references group="lower-alpha">
+<ref name="tradeevo">This Pokémon will evolve due to being traded, but Pokédex data for the unevolved Pokémon will be registered before it evolves.</ref>
+</references>
+
+
+====Pokémon Ultra Sun and Ultra Moon====
+{| class="roundtable" style="margin: auto; background: #{{Ultra Moon color light}}; border: 3px solid #{{Ultra Sun color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" | Location
+! colspan="2" rowspan="2" | Player's Pokémon
+! colspan="2" rowspan="2" | NPC's Pokémon
+! colspan="2" | [[Nickname]]
+! rowspan="2" | [[Level]]
+! colspan="2" rowspan="2" | [[Held item]]
+! rowspan="2" | [[Ability]]
+! rowspan="2" | [[Nature]]
+! colspan="4" | [[Original Trainer]]
+! rowspan="2" | Perfect [[Individual values|IV]]
+|- class="blacklinks"
+! English
+! Japanese
+! 
+! English
+! Japanese
+! [[Trainer ID number|ID]]
+|-
+| {{rt|2|Alola}}
+| {{MSP/6|021|Spearow}}
+| {{p|Spearow}}
+| {{MSP/6|701|Hawlucha}}
+| {{p|Hawlucha}}{{male}}
+| Cha
+| {{j|オーガー}}<br>''Auger''
+| 8
+| {{bag|X Attack}}
+| [[X Attack]]
+| {{a|Unburden}}
+| Brave
+| [[File:Lass SM OD.png|50px]]
+| Hila
+| {{j|ヒラヒラ}}<br>''Hirahira''
+| 000410
+| Attack
+|-
+| {{rt|5|Alola}}
+| {{MSP/6|506|Lillipup}}
+| {{p|Lillipup}}
+| {{MSP/6|714|Noibat}}
+| {{p|Noibat}}{{male}}
+| Noinoi
+| {{j|りくひさ}}<br>''Rikuhisa''
+| 19
+| {{bag|Bright Powder}}
+| [[Bright Powder]]
+| {{a|Frisk}}
+| Modest
+| [[File:Rising Star m SM OD.png|50px]]
+| Kihei
+| {{j|キヘ}}<br>''Kihe''
+| 610507
+| Sp. Attack
+|-
+| [[Royal Avenue]]
+| {{MSP/6|072|Tentacool}}
+| {{p|Tentacool}}
+| {{MSP/6|339|Barboach}}
+| {{p|Barboach}}{{female}}
+| Babo
+| {{j|レナレナ}}<br>''Renarena''
+| 21
+| {{bag|Pecha Berry}}
+| [[Pecha Berry]]
+| {{a|Anticipation}}
+| Naughty
+| [[File:Cook SM OD.png|50px]]
+| Yuichi
+| {{j|ユイッチー}}<br>''Yuitchī''
+| 590916
+| HP
+|-
+| {{rt|8|Alola}}
+| {{MSP/6|732|Trumbeak}}
+| {{p|Trumbeak}}
+| {{MSP/6|024|Arbok}}
+| {{p|Arbok}}{{female}}
+| Arbo
+| {{j|ロイ}}<br>''Roy''
+| 22
+| {{bag|Balm Mushroom}}
+| [[Balm Mushroom]]
+| {{a|Intimidate}}
+| Impish
+| [[File:Backpacker SM OD.png|50x50px]]
+| Miyo
+| {{j|キーヤン}}<br>''Kīyan''
+| 010913
+| Defense
+|-
+| [[Tapu Village]]
+| {{MSP/6|708|Phantump}}
+| {{p|Phantump}}
+| {{MSP/6|708|Phantump}}
+| {{p|Phantump}}{{male}}<br><small>→{{p|Trevenant}}</small>
+| Tumptump
+| {{j|ワーイ}}<br>''Waai''
+| 33
+| [[File:Held Grassium Z Sprite.png]]
+| [[Grassium Z]]
+| {{a|Natural Cure}}
+| Calm
+| [[File:Hiker SM OD.png|50px]]
+| Sill
+| {{j|ヘパ}}<br>''Hepa''
+| 610602
+| Sp. Def
+|-
+| [[Seafolk Village]]
+| {{MSP/6|210|Granbull}}
+| {{p|Granbull}}
+| {{MSP/6|422|Shellos}}
+| <small>[[List of Pokémon with form differences#Shellos and Gastrodon|West Sea]]</small><br>{{p|Shellos}}{{female}}
+| Solle
+| {{j|バブコ}}<br>''Babuko''
+| 44
+| [[File:Held Waterium Z Sprite.png]]
+| [[Waterium Z]]
+| {{a|Storm Drain}}
+| Quiet
+| [[File:Veteran f SM OD.png|50px]]
+| Kumu
+| {{j|クム}}<br>''Kumu''
+| 610503
+| Defense
+|-
+| [[Poni Gauntlet]]
+| {{MSP/6|760|Bewear}}
+| {{p|Bewear}}
+| {{MSP/6|128|Tauros}}
+| {{p|Tauros}}{{male}}
+| Professor
+| {{j|きょうじゅ}}<br>''Professor''
+| 59
+| [[File:Held Normalium Z Sprite.png]]
+| [[Normalium Z]]
+| {{a|Intimidate}}
+| Jolly
+| [[File:Punk Guy SM OD.png|50px]]
+| Anga
+| {{j|フフー}}<br>''Fufū''
+| 581022
+| Speed
+|}
+
+====Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!====
+In [[Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!]], all in-game trades can be repeated an unlimited amount of times. These trades are the only way to obtain [[Alolan form]]s outside of [[GO Park]] or trading with other {{player}}s. All traded Pokémon have no nicknames, have randomized Natures, have two guaranteed perfect IVs, and can be either gender and {{Shiny}}.
+
+{| class="roundtable" style="margin: auto; background: #{{Let's Go Eevee color light}}; border: 3px solid #{{Let's Go Pikachu color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" | Location
+! colspan="2" rowspan="2" |Player's Pokémon
+! colspan="2" rowspan="2" |NPC's Pokémon
+! rowspan="2" | {{color2|{{Let's Go Eevee color dark}}|Level}}
+! colspan="4" | {{color2|{{Let's Go Eevee color dark}}|Original Trainer}}
+! rowspan="2" |Perfect {{color2|{{Let's Go Eevee color dark}}|Individual values|IVs}}
+|- class="blacklinks"
+!
+!English
+!Japanese
+!{{color2|{{Let's Go Eevee color dark}}|Trainer ID number|ID}}
+|-
+|[[Cerulean City]]
+|{{MSP/PE|019|Rattata}}
+|{{p|Rattata}}
+|{{MSP/PE|019A|Rattata}}
+|<small>{{rf|Alolan}}</small><br>{{p|Rattata}}
+|12
+|[[File:VSLass PE.png|50px]]
+|Tatianna
+|{{j|ミニコ}}<br>''Miniko''
+|121106
+|HP, Attack
+|-
+|[[Vermilion City]]
+|{{MSP/PE|074|Geodude}}
+|{{p|Geodude}}
+|{{MSP/PE|074A|Geodude}}
+|<small>{{rf|Alolan}}</small><br>{{p|Geodude}}
+|16
+|[[File:VSHiker PE.png|50px]]
+|Higeo
+|{{j|コツブ}}<br>''Kotsubu''
+| 551873
+|HP, Attack
+|-
+|[[Lavender Town]]
+|{{MSP/PE|050|Diglett}}
+|{{p|Diglett}}
+| {{MSP/PE|050A|Diglett}}
+|<small>{{rf|Alolan}}</small><br>{{p|Diglett}}
+|25
+|[[File:VSBeauty PE.png|50px]]
+|Diggette
+|{{j|レディダグ}}<br>''Ladydug''
+|520159
+|Attack, Speed
+|-
+| rowspan="2" |[[Celadon City]]
+| style="background:#{{Let's Go Pikachu color light}}" |{{MSP/PE|027|Sandshrew}}
+| style="background:#{{Let's Go Pikachu color light}}" |{{p|Sandshrew}}
+| style="background:#{{Let's Go Pikachu color light}}" |{{MSP/PE|027A|Sandshrew}}
+| style="background:#{{Let's Go Pikachu color light}}" |<small>{{rf|Alolan}}</small><br>{{p|Sandshrew}}
+| rowspan="2" |27
+| rowspan="2" |[[File:VSCamper PE.png|50px]]
+| rowspan="2" |Nicholice
+| rowspan="2" |{{j|ボーアイス}}<br>''Beauice''
+| rowspan="2" |703019
+| style="background:#{{Let's Go Pikachu color light}}" |Attack, Defense
+|-
+| style="background:#{{Let's Go Eevee color light}}" |{{MSP/PE|037|Vulpix}}
+| style="background:#{{Let's Go Eevee color light}}" |{{p|Vulpix}}
+| style="background:#{{Let's Go Eevee color light}}" |{{MSP/PE|037A|Vulpix}}
+| style="background:#{{Let's Go Eevee color light}}" |<small>{{rf|Alolan}}</small><br>{{p|Vulpix}}
+| style="background:#{{Let's Go Eevee color light}}" | Sp. Attack, Speed
+|-
+|[[Saffron City]]
+|{{MSP/PE|026|Raichu}}
+|{{p|Raichu}}
+|{{MSP/PE|026A|Raichu}}
+|<small>{{rf|Alolan}}</small><br>{{p|Raichu}}
+|30
+|[[File:VSAce Trainer F PE.png|50px]]
+|Psytrice
+|{{j|エリッチ}}<br>''Erich''
+|940711
+|Sp. Attack, Speed
+|-
+|[[Fuchsia City]]
+|{{MSP/PE|105|Marowak}}
+|{{p|Marowak}}
+|{{MSP/PE|105A|Marowak}}
+|<small>{{rf|Alolan}}</small><br>{{p|Marowak}}
+|38
+|[[File:VSGentleman PE.png|50px]]
+|Genmar
+|{{j|ジェンガラ}}<br>''Jengara''
+|102595
+|Attack, Defense
+|-
+| rowspan="2" |[[Cinnabar Island]]
+| style="background:#{{Let's Go Pikachu color light}}" |{{MSP/PE|088|Grimer}}
+| style="background:#{{Let's Go Pikachu color light}}" |
+{{p|Grimer}}
+| style="background:#{{Let's Go Pikachu color light}}" |{{MSP/PE|088A|Grimer}}
+| style="background:#{{Let's Go Pikachu color light}}" |<small>{{rf|Alolan}}</small><br>{{p|Grimer}}
+| rowspan="2" |44
+| rowspan="2" |[[File:VSPunk Guy PE.png|50px]]
+| rowspan="2" |Darko
+| rowspan="2" |{{j|ワルモン}}<br>''Warumon''
+| rowspan="2" |000219
+| style="background:#{{Let's Go Pikachu color light}}" |HP, Attack
+|-
+| style="background:#{{Let's Go Eevee color light}}" |{{MSP/PE|052|Meowth}}
+| style="background:#{{Let's Go Eevee color light}}" |{{p|Meowth}}
+| style="background:#{{Let's Go Eevee color light}}" |{{MSP/PE|052A|Meowth}}
+| style="background:#{{Let's Go Eevee color light}}" |<small>{{rf|Alolan}}</small><br>{{p|Meowth}}
+| style="background:#{{Let's Go Eevee color light}}" |HP, Speed
+|-
+|[[Indigo Plateau|Pokémon League]]
+|{{MSP/PE|103|Exeggutor}}
+|{{p|Exeggutor}}
+|{{MSP/PE|103A|Exeggutor}}
+|<small>{{rf|Alolan}}</small><br>{{p|Exeggutor}}
+|46
+|[[File:VSSuper Nerd PE.png|50px]]
+|Exemann
+|{{j|マニシ}}<br>''Manishi''
+|060310
+|Attack, Sp. Attack
+|}
+
+===Generation VIII===
+====Pokémon Sword and Shield====
+In the base game of Pokémon Sword and Shield all in-game trade Pokémon have nicknames, have set Natures, have set gender, cannot be {{Shiny}}, and have static IVs. Each in-game trade Pokémon has 15 IVs in every stat.
+{{missing image|section|Holly, Romeo, and Grimm avatars.}}
+{| class="roundtable" style="margin: auto; background: #{{Shield color light}}; border: 3px solid #{{Sword color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" |Location
+! colspan="2" rowspan="2" |Player's Pokémon
+! colspan="2" rowspan="2" |NPC's Pokémon
+! colspan="2" |[[Nickname]]
+! rowspan="2" |[[Level]]
+! rowspan="2" |[[Dynamax|Dynamax Level]]
+! colspan="2" rowspan="2" |[[Held item]]
+! rowspan="2" |[[Ability]]
+! rowspan="2" |[[Nature]]
+! colspan="4" |[[Original Trainer]]
+|- class="blacklinks"
+!English
+!Japanese
+!
+!English
+!Japanese
+![[Trainer ID number|ID]]
+|-
+|[[Motostoke]]
+|{{MSP/8c|659|Bunnelby}}
+|
+{{p|Bunnelby}}
+|{{MSP/8c|819|Skwovet}}
+|{{p|Skwovet}}{{male}}
+|Cheekers
+|{{j|ほっぺ}}<br>''Hoppe''
+|10 
+|1
+|{{bag|Oran Berry}}
+|
+[[Oran Berry]]
+|{{a|Cheek Pouch}}
+|Mild
+|[[File:Y-Comm Profile Lass.png|50px]]
+|Haley
+|{{j|ハツミ}}<br>''Hatsumi''
+|648753
+|-
+|[[Turffield Stadium]]
+|{{MSP/8c|052G|Meowth}}
+|<small>{{rf|Galarian}}</small><br>{{p|Meowth}}
+|{{MSP/8c|052|Meowth}}
+|{{p|Meowth}}{{male}}
+|Cash
+|{{j|コバン}}<br>''{{wp|Koban (coin)|Koban}}''
+|18
+|1
+|{{bag|Sitrus Berry}}
+|[[Sitrus Berry]]
+|{{a|Technician}}
+|Timid
+|[[File:Y-Comm Profile Schoolboy.png|50px]]
+|Mattia
+|{{j|ジョバンニ}}<br>''Giovanni''
+|263455
+|-
+|[[Hulbury]]
+|{{MSP/8c|572|Minccino}}
+|
+{{p|Minccino}}
+|{{MSP/8c|546|Cottonee}}
+|{{p|Cottonee}}{{female}}
+|Candyfloss
+|{{j|わたあめ}}<br>''Wataame''
+|23
+|1
+|
+|None
+|{{a|Prankster}}
+|Modest
+|[[File:Y-Comm Profile Backpacker.png|50px]]
+|Grazia 
+|{{j|マイド}}<br>''Maido''
+| 101154
+|-
+|[[Hammerlocke]]
+|{{MSP/8c|848|Toxel}}
+|{{p|Toxel}}
+|{{MSP/8c|175|Togepi}}
+|{{p|Togepi}}{{male}}
+|Snips
+|{{j|チョッキ}}<br>''Chokki''
+|25
+| 1
+|
+|None
+|{{a|Serene Grace}}
+|Timid 
+|
+| Holly 
+|{{j|タカラコ}}<br>''Takarako''
+| 109591
+|-
+| rowspan="2" |[[Stow-on-Side]]
+| rowspan="2" |{{MSP/8c|556|Maractus}}
+| rowspan="2" |
+{{p|Maractus}}
+| style="background: #{{sword color light}}" |{{MSP/8c|856|Hatenna}}
+| style="background: #{{sword color light}}" |{{p|Hatenna}}{{female}}
+| style="background: #{{sword color light}}" |Fringe
+| style="background: #{{sword color light}}" |{{j|まえがみ}}<br>''Maegami''
+| rowspan="2" |30
+| rowspan="2" |1
+| rowspan="2" |
+| rowspan="2" |None 
+| style="background: #{{sword color light}}" |{{a|Anticipation}}
+| style="background: #{{sword color light}}" |Quiet
+| rowspan="2" |
+| rowspan="2" |Romeo
+| rowspan="2" |{{j|ロミオ}}<br>''Romeo''
+| style="background: #{{sword color light}}" |101101
+|-
+| style="background: #{{shield color light}}" |{{MSP/8c|859|Impidimp}}
+| style="background: #{{shield color light}}" |{{p|Impidimp}}{{male}}
+| style="background: #{{shield color light}}" |Peepers
+| style="background: #{{shield color light}}" |{{j|ギョロギョロ}}<br>''Gyorogyoro''
+| style="background: #{{shield color light}}" |{{a|Prankster}}
+| style="background: #{{shield color light}}" | Brave
+| style="background: #{{shield color light}}" |256081
+|-
+|[[Ballonlea Stadium]]
+|{{MSP/8c|562G|Yamask}}
+|<small>{{rf|Galarian}}</small><br>{{p|Yamask}}
+|{{MSP/8c|562|Yamask}}
+|{{p|Yamask}}{{male}}
+|Masky
+|{{j|カーメン}}<br>''Carmen''
+|35
+|2
+|
+|None
+|{{a|Mummy}}
+|Bold 
+|[[File:Y-Comm Profile Poké Kid F.png|50px]]
+|Eve
+|{{j|イヴ}}<br>''Eve''
+|102534
+|-
+| rowspan="2" |
+[[Circhester]]
+| rowspan="2" |{{MSP/8c|583|Vanillish}}
+| rowspan="2" |{{p|Vanillish}}
+| style="background: #{{sword color light}}" |{{MSP/8c|538|Throh}}
+| style="background: #{{sword color light}}" |
+{{p|Throh}}♂
+| style="background: #{{sword color light}}" |Reddos
+| style="background: #{{sword color light}}" |{{j|あかなげ}}<br>''Akanage''
+| rowspan="2" |37
+| rowspan="2" |2
+| rowspan="2" |
+| rowspan="2" |None
+| style="background: #{{sword color light}}" |{{a|Inner Focus}}
+| rowspan="2" |Adamant
+| rowspan="2" |
+| rowspan="2" |Grimm
+| rowspan="2" |{{j|シラユキ}}<br>''Shirayuki''
+| style="background: #{{sword color light}}" |768945 
+|-
+| style="background: #{{shield color light}}" |{{MSP/8c|539|Sawk}}
+| style="background: #{{shield color light}}" |{{p|Sawk}}{{male}}
+| style="background: #{{shield color light}}" |Blubop 
+| style="background: #{{shield color light}}" |{{j|あおぱん}}<br>''Aopan''
+| style="background: #{{shield color light}}" |{{a|Sturdy}}
+| style="background: #{{shield color light}}" |881426
+|-
+|[[Spikemuth]]
+|{{MSP/8c|862|Obstagoon}}
+|{{p|Obstagoon}}
+|{{MSP/8c|122|Mr. Mime}}
+|{{p|Mr. Mime}}{{male}}
+|Mymo
+|{{j|バリさん}}<br>''Bari-san''
+|40
+|1
+|
+|None
+|{{a|Soundproof}}
+|Calm
+|[[File:VSTeam Yell Grunt M.png|75px]]
+|Edmund
+|{{j|タナベ}}<br>''Tanabe''
+| 891846
+|-
+|[[Wyndon]]
+|{{MSP/8c|873|Frosmoth}}
+|
+{{p|Frosmoth}}
+|{{MSP/8c|884|Duraludon}}
+|{{p|Duraludon}}{{male}}
+|Linear
+|{{j|ちょくせん}}<br>''Chokusen''
+|50
+|3
+|
+|None
+|{{a|Heavy Metal}}
+|Adamant
+|[[File:Y-Comm Profile Artist.png|50px]]
+| Kapoor
+|{{j|カプーア}}<br>''Kapoor''
+|101141
+|}
+
+===== The Isle of Armor=====
+{{incomplete|section|needs=Regina's model}}
+Regina's trades can be done an unlimited number of times. After trading with her, she will randomly relocate elsewhere on the [[Isle of Armor]], offering another Pokémon, randomly, from the table below. Regina relocates daily, can appear in more than one place at once, and offers a different Pokémon each day. All traded Pokémon have no nicknames, have randomized Natures, can be either gender, can be {{Shiny}}, and have a static [[Egg Move]]. Normal form Pokémon have their [[Hidden Ability]] (besides {{p|Weezing}}, which can have either its Hidden Ability or one of its 2 standard abilities), while Alolan Form Pokémon can have either of their standard Abilities. The trades for Farfetch'd and Darumaka are only available to players whose base game is [[Pokémon Sword and Shield|Pokémon Sword]], while the trades for Ponyta and Corsola are are only available to players whose base game is [[Pokémon Sword and Shield|Pokémon Shield]].
+{| class="roundtable" style="margin: auto; background: #{{Isle of Armor color light}}; border: 3px solid #{{Isle of Armor color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" | Location
+! colspan="2" rowspan="2" |Player's Pokémon
+! colspan="2" rowspan="2" |NPC's Pokémon
+! rowspan="2" |[[Level]]
+! rowspan="2" |[[Dynamax|Dynamax Level]]
+! rowspan="2" |[[Ability]]
+! rowspan="2" |[[Egg Move]]
+! colspan="4" |[[Original Trainer]]
+|- class="blacklinks"
+!English
+!Japanese
+![[Trainer ID number|ID]]
+|-
+| rowspan="11" |[[Brawlers' Cave]]<br>[[Challenge Beach]]<br>[[Challenge Road]]<br>[[Courageous Cavern]]<br>[[Fields of Honor]]<br>[[Forest of Focus]]<br>[[Honeycalm Island]]<br>[[Honeycalm Sea]]<br>[[Insular Sea]]<br>[[Loop Lagoon]]<br>[[Potbottom Desert]]<br>[[Soothing Wetlands]]<br>[[Stepping-Stone Sea]]<br>[[Training Lowlands]]<br>[[Workout Sea]]
+|{{MSP/8c|052G|Meowth}}
+|{{p|Meowth}}
+|{{MSP/8c|052|Meowth}}
+|{{p|Meowth}}
+| rowspan="11" |15
+| rowspan="11" |5
+|{{a|Unnerve}}
+|{{m|Last Resort}}
+| rowspan="11" |Regina
+| rowspan="11" |チホコ<br>''Chihoko''
+| rowspan="11" |101141
+|-
+| style="background: #{{shield color light}}" |{{MSP/8c|077G|Ponyta}}
+| style="background: #{{shield color light}}" |{{p|Ponyta}}
+| style="background: #{{shield color light}}" |{{MSP/8c|077|Ponyta}}
+| style="background: #{{shield color light}}" |{{p|Ponyta}}
+| style="background: #{{shield color light}}" |{{a|Flame Body}}
+| style="background: #{{shield color light}}" |{{m|Morning Sun}}
+|-
+| style="background: #{{sword color light}}" |{{MSP/8c|083G|Farfetch'd}}
+| style="background: #{{sword color light}}" |{{p|Farfetch'd}}
+| style="background: #{{sword color light}}" |{{MSP/8c|083|Farfetch'd}}
+| style="background: #{{sword color light}}" |{{p|Farfetch'd}}
+| style="background: #{{sword color light}}" |{{a|Defiant}}
+| style="background: #{{sword color light}}" |{{m|Quick Attack}}
+|-
+|{{MSP/8c|103|Exeggutor}}
+|{{p|Exeggutor}}
+|{{MSP/8c|103A|Exeggutor}}
+|{{p|Exeggutor}}
+|{{a|Frisk}}
+|{{m|Ancient Power}}
+|-
+|{{MSP/8c|105|Marowak}}
+|{{p|Marowak}}
+|{{MSP/8c|105A|Marowak}}
+|{{p|Marowak}}
+|{{a|Cursed Body}} or<br>{{a|Lightning Rod}}
+|
+{{m|Curse}}
+|-
+|{{MSP/8c|110G|Weezing}}
+|{{p|Weezing}}
+|{{MSP/8c|110|Weezing}}
+|{{p|Weezing}}
+|{{a|Stench}}, {{a|Levitate}} or<br>{{a|Neutralizing Gas}}
+|{{m|Pain Split}}
+|-
+|{{MSP/8c|122G|Mr. Mime}}
+|
+{{p|Mr. Mime}}
+|{{MSP/8c|122|Mr. Mime}}
+|
+{{p|Mr. Mime}}
+|{{a|Technician}}
+|
+{{m|Fake Out}}
+|-
+| style="background: #{{shield color light}}" |{{MSP/8c|222G|Corsola}}
+| style="background: #{{shield color light}}" |{{p|Corsola}}
+| style="background: #{{shield color light}}" |{{MSP/8c|222|Corsola}}
+| style="background: #{{shield color light}}" |{{p|Corsola}}
+| style="background: #{{shield color light}}" |{{a|Regenerator}}
+| style="background: #{{shield color light}}" |{{m|Head Smash}}
+|-
+|{{MSP/8c|263G|Zigzagoon}}
+|{{p|Zigzagoon}}
+|{{MSP/8c|263|Zigzagoon}}
+|{{p|Zigzagoon}}
+|{{a|Quick Feet}}
+|{{m|Extreme Speed}}
+|-
+| style="background: #{{sword color light}}" |{{MSP/8c|554G|Darumaka}}
+| style="background: #{{sword color light}}" |
+{{p|Darumaka}}
+| style="background: #{{sword color light}}" |{{MSP/8c|554|Darumaka}}
+| style="background: #{{sword color light}}" |
+{{p|Darumaka}}
+| style="background: #{{sword color light}}" |{{a|Inner Focus}}
+| style="background: #{{sword color light}}" |{{m|Extrasensory}}
+|-
+|{{MSP/8c|618G|Stunfisk}}
+|
+{{p|Stunfisk}}
+|{{MSP/8c|618|Stunfisk}}
+|
+{{p|Stunfisk}}
+|{{a|Sand Veil}}
+|
+{{m|Yawn}}
+|}
+
+====Pokémon Brilliant Diamond and Shining Pearl====
+{{missing image|section|Norton's model}}
+{| class="roundtable" style="margin: auto; background: #{{Shining Pearl color light}}; border: 3px solid #{{brilliant diamond color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" |Location
+! colspan="2" rowspan="2" | Player's Pokémon
+! colspan="2" rowspan="2" |NPC's Pokémon
+! colspan="2" |[[Nickname]]
+! rowspan="2" |[[Level]]
+! colspan="2" rowspan="2" |[[Held item]]
+! rowspan="2" |[[Ability]]
+! rowspan="2" |[[Nature]]
+! colspan="4" |[[Original Trainer]]
+|- class="blacklinks"
+!English
+!Japanese 
+!
+!English
+!Japanese
+![[Trainer ID number|ID]]
+|-
+|[[Oreburgh City]]
+|{{MSP/BDSP|066|Machop}}
+|{{p|Machop}}
+|{{MSP/BDSP|063|Abra}}
+|{{p|Abra}}{{male}}
+|Kazza
+|{{j|ケーケー}}<br>''Kēkē''
+|9
+|{{bag/s|Oran Berry|BDSP|size=24px}}
+|
+[[Oran Berry]]
+|{{a|Synchronize}}
+|Quiet
+|[[File:School Kid F BDSP OD.png|48px]]
+|Hilary{{female}}
+|{{j|ハッシー}}<br>''Hasshi''
+|025643 
+|-
+|[[Eterna Condominiums]]
+|{{MSP/BDSP|418|Buizel}}
+|{{p|Buizel}}
+|{{MSP/BDSP|441|Chatot}}
+|{{p|Chatot}}{{female}}<ref group="lower-alpha" name="contest" />
+|Charap
+|{{j|ペッチャラ}}<br>''Petchara''
+|15
+|{{bag/s|Leppa Berry|BDSP|size=24px}}
+|[[Leppa Berry]]
+|{{a|Tangled Feet}}
+|Lonely
+|
+|Norton{{male}}
+|{{j|ノブリン}}<br>''Noburin''
+|044142
+|-
+|[[Snowpoint City]]
+|{{MSP/BDSP|308|Medicham}}
+|
+{{p|Medicham}}
+|{{MSP/BDSP|093|Haunter}}
+|{{p|Haunter}}{{male}}
+|Gaspar
+|{{j|ドロりん}}<br>''Dororin''
+|33
+|{{bag/s|Everstone|BDSP|size=24px}}
+|[[Everstone]]<ref group="lower-alpha" name="everstone" />
+|
+{{a|Levitate}}
+|Hasty
+|[[File:Beauty BDSP OD.png|48px]]
+|Mindy{{female}}
+|{{j|ミナッチ}}<br>''Minatchi''
+|019248
+|-
+|{{rt|226|Sinnoh}}
+|{{MSP/BDSP|456|Finneon}}
+|{{p|Finneon}}
+|{{MSP/BDSP|129|Magikarp}}
+|{{p|Magikarp}}{{female}}<br><small>[[Foreign Pokédex entries|(foreign)]]</small><ref group="lower-alpha" name="Foppa language" />
+|Foppa
+|{{j|ポッちゃん}}<br>''Potchan''
+|45
+|{{bag/s|Lum Berry|BDSP|size=24px}}
+|[[Lum Berry]]
+|{{a|Swift Swim}}
+|Mild
+|[[File:Hiker BDSP OD.png|48px]]
+|{{DL|Foreign Pokédex entries|In Generation IV|Meister}}{{male}}
+|{{j|マイスター}}<br>''Meister''
+|053277
+|}
+<references group="lower-alpha">
+<ref name="contest">Chatot has all five [[Contest condition]]s raised by 20, with a [[sheen]] of 0.</ref>
+<ref name="everstone">Due to holding an [[Everstone]], this Haunter [[Evolution prevention|will not evolve]] when obtained in this trade.</ref>
+<ref name="Foppa language">German [[language of origin|in origin]] all games except German; Japanese in origin in German games.</ref>
+</references>
+
+===Generation IX===
+====Pokémon Scarlet and Violet====
+{{missing image|section|NPC avatars}}
+{| class="roundtable" style="margin: auto; background: #{{Violet color light}}; border: 3px solid #{{Scarlet color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" |Location
+! colspan="2" rowspan="2" |Player's Pokémon
+! colspan="2" rowspan="2" |NPC's Pokémon
+! colspan="2" |[[Nickname]]
+! rowspan="2" |[[Level]]
+! rowspan="2" |[[Terastal phenomenon|Tera Type]]
+! colspan="2" rowspan="2" |[[Held item]]
+! rowspan="2" |[[Ability]]
+! rowspan="2" |[[Nature]]
+! colspan="3" |[[Original Trainer]]
+! rowspan="2" |[[Individual values|IVs]]<ref group="lower-alpha">In order: HP/Attack/Defense/Sp. Atk/Sp. Def/Speed</ref>
+|- class="blacklinks"
+!English
+!Japanese
+!English
+!Japanese
+![[Trainer ID number|ID]]
+|-
+|[[Cortondo]]
+|{{MSP/9|0669|Flabébé}}
+|{{p|Flabébé}}<br>(any form)
+|{{MSP/9|0872|Snom}}
+|{{p|Snom}}{{female}}
+|Snowsalot
+|{{j|こゆきち}}<br>''Koyukichi''
+|10
+{{typetable|Ice}}
+|
+|None
+|{{a|Shield Dust}}
+|Bashful 
+|Glen{{male}}
+|{{j|ヒカタロ}}<br>''Hikataro''
+|50724
+|31/18/13/28/26/20
+|-
+|
+[[Cascarrafa]]
+|{{MSP/9|0194|Wooper|form=-Paldea}}
+|<small>{{rf|Paldean}}</small><br>{{p|Wooper}}
+|{{MSP/9|0194|Wooper}}
+|{{p|Wooper}}{{male}}
+|Manchester
+|{{j|マサオ}}<br>''Masao''
+|18
+{{typetable|Water}}
+|{{bag/s|Rare Candy|SV|size=24px}}
+|
+[[Rare Candy]]
+|{{a|Water Absorb}}
+|Relaxed
+|Sue{{female}}
+|{{j|チェミ}}<br>''Chemi''
+|33081
+|27/18/25/16/31/13
+|-
+|[[Levincia]]
+|{{MSP/9|0871|Pincurchin}}
+|{{p|Pincurchin}}
+|{{MSP/9|0093|Haunter}}
+|{{p|Haunter}}{{female}}<br><small>→{{p|Gengar}}</small><ref group="lower-alpha" name="tradeevo" />
+|Hauntikins
+|{{j|ちみちゃん}}<br>''Chimi-chan''
+|25
+{{typetable|Ghost}}
+|
+|None
+|{{a|Levitate}}<br><small>→{{a|Cursed Body}}</small>
+|Lonely
+| Blossom{{female}}
+|{{j|サキねえ}}<br>''Saki-nē''
+|16519
+|14/20/25/28/16/31
+|}
+<references group="lower-alpha">
+<ref name="tradeevo">This Pokémon will evolve due to being traded, and Pokédex data for the unevolved Pokémon will be registered before it evolves.</ref>
+</references>
+=====The Indigo Disk=====
+If the player invites a particular [[Gym Leader]], [[Elite Four]] member, [[Naranja Academy]]{{sup/9|S}}/[[Uva Academy]]{{sup/9|V}} staff member, [[Geeta]], or [[Cyrano]] to the [[League Club Room]] for the third time, then they will offer to trade a Pokémon of theirs for any of the player's Pokémon, as long as its OT is the player, and the Pokémon is not a {{Shiny}} or [[Special Pokémon]]. These Pokémon come without nicknames or held items. Each of these Pokémon has a {{DL|List of Ribbons in the games|Partner Ribbon}}.
+<!-- currently uses fallback colors -->
+{| class="roundtable" style="margin: auto; background: #{{blueberry color light}}; border: 3px solid #{{blueberry color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" |Location 
+! colspan="2" rowspan="2" |NPC's Pokémon
+! rowspan="2" |[[Level]]
+! rowspan="2" |[[Terastal phenomenon|Tera Type]]
+! rowspan="2" |[[Ability]]
+! rowspan="2" |[[Nature]]
+! colspan="4" |[[Original Trainer]]
+! rowspan="2" |[[Individual values|IVs]]<ref group="lower-alpha">In order: HP/Attack/Defense/Sp. Atk/Sp. Def/Speed</ref>
+|- class="blacklinks"
+!
+!English
+!Japanese
+![[Trainer ID number|ID]]
+|-
+| rowspan="30" |[[League Club Room]]
+|{{MSP/9|0240|Magby}}
+|{{p|Magby}}{{male}}<ref group="lower-alpha" name="quickball" />
+|12
+{{typetable|Fire}}
+|{{a|Vital Spirit}}
+|Docile
+|[[File:VSCrispin.png|50x50px]]
+|[[Crispin]]{{male}}
+|{{j|アカマツ}}<br>''Akamatsu''
+|418071
+|31/12/25/31/31/15 
+|-
+|{{MSP/9|0982|Dudunsparce}}
+|{{p|Dudunsparce}}{{male}}
+|35
+{{typetable|Flying}}
+|{{a|Serene Grace}}
+|Relaxed
+|[[File:VSLarry.png|50x50px]]
+|[[Larry]]{{male}}
+|{{j|アオキ}}<br>''Aoki''
+|766634
+|15/24/31/31/11/26
+|-
+|{{MSP/9|0194|Wooper|form=-Paldea}}
+|<small>{{rf|Paldean}}</small><br>{{p|Wooper}}{{male}}
+|8
+{{typetable|Poison}}
+|{{a|Unaware}}
+|Naughty
+|[[File:VSRika.png|50x50px]]
+|[[Rika]]{{female}}
+|{{j|チリ}}<br>''Chili''
+|591912
+|27/31/31/16/30/6
+|-
+|{{MSP/9|0922|Pawmo}}
+|{{p|Pawmo}}{{male}}
+|24
+{{typetable|Fighting}}
+|{{a|Volt Absorb}}
+|Hasty
+|[[File:VSClavell {{rand/2|S|V}}.png|50x50px]]
+|[[Clavell]]{{male}}
+|{{j|クラベル}}<br>''Clavel''
+|209896
+|15/22/31/14/3/29
+|-
+|{{MSP/9|0974|Cetoddle}}
+|{{p|Cetoddle}}{{male}}
+|37
+{{typetable|Ice}}
+|{{a|Sheer Force}}
+|Bashful
+|[[File:VSGrusha.png|50x50px]]
+|[[Grusha]]{{male}}
+|{{j|グルーシャ}}<br>''Grusha''
+|209896
+|31/23/18/15/9/31
+|-
+|{{MSP/9|0976|Veluza}}
+|{{p|Veluza}}{{female}}
+|20
+{{typetable|Water}}
+|{{a|Sharpness}}
+| Sassy
+|[[File:VSKofu.png|50x50px]]
+|[[Kofu]]{{male}}
+|{{j|ハイダイ}}<br>''Haidai''
+|373015
+|31/28/14/14/18/26
+|-
+|{{MSP/9|0997|Arctibax}}
+|{{p|Arctibax}}{{male}}
+|45
+{{typetable|Dragon}}
+|{{a|Thermal Exchange}}
+|Relaxed
+|[[File:VSHassel 2.png|50x50px]]
+|[[Hassel]]{{male}}
+|{{j|ハッサク}}<br>''Hassaku''
+|316242
+|24/22/21/30/31/30
+|-
+|{{MSP/9|0415|Combee}}
+|{{p|Combee}}{{female}}
+|15
+{{typetable|Bug}}
+|{{a|Hustle}}
+|Calm
+|[[File:VSKaty.png|50x50px]]
+|[[Katy]]{{female}}
+|{{j|カエデ}}<br>''Kaede''
+|993663
+|24/22/31/28/0/16
+|-
+|{{MSP/9|0884|Duraludon}}
+|{{p|Duraludon}}{{male}}
+|36
+{{typetable|Electric}}
+|
+{{a|Stalwart}}
+|Quiet
+|[[File:VSDrayton.png|50x50px]]
+|[[Drayton]]{{male}}
+|{{j|カキツバタ}}<br>''Kakitsubata''
+|217978
+|20/30/25/31/13/0
+|-
+|{{MSP/9|0307|Meditite}}
+|{{p|Meditite}}{{male}}
+|28
+{{typetable|Fire}}
+|{{a|Pure Power}}
+|Quirky
+|[[File:VSDendra.png|50x50px]]
+|[[Dendra]]{{female}}
+|{{j|キハダ}}<br>''Kihada''
+|137719
+|24/30/12/0/6/29
+|-
+|{{MSP/9|0192|Sunflora}}
+|{{p|Sunflora}}{{male}}
+|40
+{{typetable|Grass}}
+|{{a|Solar Power}}
+|Brave
+|[[File:VSBrassius.png|50x50px]]
+|[[Brassius]]{{male}}
+|{{j|コルサ}}<br>''Colsa''
+|584457
+|12/19/25/16/24/20
+|-
+|{{MSP/9|0747|Mareanie}}
+|{{p|Mareanie}}{{female}}
+|20
+{{typetable|Poison}}
+|{{a|Regenerator}}
+|Timid
+|[[File:VSMiriam.png|50x50px]]
+|[[Miriam]]{{female}}
+|{{j|ミモザ}}<br>''Mimosa''
+| 158604
+|30/21/10/22/29/16
+|-
+|{{MSP/9|0081|Magnemite}}
+|{{p|Magnemite}}
+| 22
+{{typetable|Electric}}
+|{{a|Magnet Pull}}
+|Rash
+|[[File:VSIono.png|50x50px]]
+|[[Iono]]{{female}}
+|{{j|ナンジャモ}}<br>''Nanjyamo''
+|568659
+|4/29/8/31/2/30
+|-
+|{{MSP/9|0227|Skarmory}}
+|{{p|Skarmory}}{{female}}<ref group="lower-alpha" name="heavyball" />
+|40
+{{typetable|Steel}}
+|{{a|Sturdy}}
+|Lonely
+|[[File:VSAmarys.png|50x50px]]
+|[[Amarys]]{{female}}
+|{{j|ネリネ}}<br>''Nerine''
+|745642
+| 24/15/22/14/9/19
+|-
+|{{MSP/9|0969|Glimmet}}
+|{{p|Glimmet}}{{female}}
+|5
+{{typetable|Psychic}}
+|{{a|Corrosion}}
+|Modest
+|[[File:VSGeeta.png|50x50px]]
+|[[Geeta]]{{female}}
+|{{j|オモダカ}}<br>''Omodaka''
+|661291
+| 31/0/22/30/31/31
+|-
+|{{MSP/9|0958|Tinkatuff}}
+|{{p|Tinkatuff}}{{female}}
+|25
+{{typetable|Fairy}}
+|{{a|Mold Breaker}}
+|Careful 
+|[[File:VSPoppy.png|50x50px]]
+|[[Poppy]]{{female}}
+|{{j|ポピー}}<br>''Poppy''
+|949475
+|12/29/29/28/22/26
+|-
+|{{MSP/9|0971|Greavard}}
+|{{p|Greavard}}{{male}}
+|10
+{{typetable|Ghost}}
+|{{a|Fluffy}}
+|Jolly
+|[[File:VSRyme.png|50x50px]]
+|[[Ryme]]{{female}}
+|{{j|ライム}}<br>''Lime''
+| 275703
+|15/26/14/4/31/16
+|-
+|{{MSP/9|0999|Gimmighoul}}
+|{{p|Gimmighoul}}
+|30 
+{{typetable|Steel}}
+|{{a|Rattled}}
+|Sassy
+|[[File:VSRaifort.png|50x50px]]
+|[[Raifort]]{{female}}
+|{{j|レホール}}<br>''Raifort''
+|361010
+|5/12/1/16/18/22
+|-
+|{{MSP/9|0955|Flittle}}
+|{{p|Flittle}}{{female}}
+|32
+{{typetable|Psychic}}
+|{{a|Speed Boost}}
+|Impish
+|[[File:VSTulip.png|50x50px]]
+|[[Tulip]]{{female}}
+|{{j|リップ}}<br>''Lip''
+|149671
+|13/20/12/21/21/12
+|-
+|{{MSP/9|0857|Hattrem}}
+|{{p|Hattrem}}{{female}}
+|33 
+{{typetable|Fairy}}
+|
+{{a|Healer}}
+|Serious
+|[[File:VSSaguaro.png|50x50px]]
+|[[Saguaro]]{{male}}
+|{{j|サワロ}}<br>''Saguaro''
+|654886
+|22/18/18/31/31/7
+|-
+|{{MSP/9|0052|Meowth|form=-Alola}}
+|<small>{{rf|Alolan}}</small><br>{{p|Meowth}}{{female}}
+|21
+{{typetable|Dark}}
+|{{a|Technician}}
+|Relaxed
+|[[File:VSSalvatore.png|50x50px]]
+|[[Salvatore]]{{male}}
+|{{j|セイジ}}<br>''Sage''
+|314512
+|9/31/24/12/12/11
+|-
+|{{MSP/9|0522|Blitzle}}
+|{{p|Blitzle}}{{male}}{{shinystar}}
+|20
+{{typetable|Electric}}
+|{{a|Lightning Rod}}
+|Hardy
+|[[File:VSCyrano.png|50x50px]]
+|[[Cyrano]]{{male}}
+|{{j|シアノ}}<br>''Cyano''
+|390518
+|31/25/23/23/31/31
+|-
+|{{MSP/9|0209|Snubbull}}
+|{{p|Snubbull}}{{male}}<ref group="lower-alpha" name="nestball" />
+|18
+{{typetable|Fairy}}
+|{{a|Intimidate}}
+|Adamant
+|[[File:VSLacey.png|50x50px]]
+|[[Lacey]]{{female}}
+|{{j|タロ}}<br>''Taro''
+|816963
+|18/30/24/24/25/31
+|-
+|{{MSP/9|0744|Rockruff}}
+|{{p|Rockruff}}{{female}}
+|12
+{{typetable|Ground}}
+|{{a|Steadfast}}
+|Impish
+|[[File:VSTyme.png|50x50px]]
+|[[Tyme]]{{female}}
+|{{j|タイム}}<br>''Thyme''
+|980975
+|20/30/2/15/17/19
+|-
+|{{MSP/9|0316|Gulpin}}
+|{{p|Gulpin}}{{female}}
+| 17
+{{typetable|Poison}}
+|
+{{a|Gluttony}}
+|Gentle
+|[[File:VSJacq.png|50x50px]]
+|[[Jacq]]{{male}}
+|{{j|ジニア}}<br>''Zinnia''
+|134745
+|12/28/25/17/31/19
+|-
+|{{MSP/9|0128|Tauros|form=-Paldea Combat}}
+|{{p|Tauros}}{{male}}
+|50
+{{typetable|Fighting}}
+|{{a|Intimidate}}
+|Jolly
+|[[File:VSNemona {{rand/2|S|V}}.png|50x50px]]
+|[[Nemona]]{{female}}
+|{{j|ネモ}}<br>''Nemo''
+|933665
+|31/31/26/31/31/31
+|-
+|{{MSP/9|0819|Skwovet}}
+|{{p|Skwovet}}{{female}}
+|7
+{{typetable|Fighting}}
+|
+{{a|Gluttony}}
+|Gentle
+|[[File:VSArven {{rand/2|S|V}}.png|50x50px]]
+|[[Arven]]{{male}}
+|{{j|ペパー}}<br>''Peper''
+|105971
+|14/12/22/23/22/10
+|-
+|{{MSP/9|0133|Eevee}}
+|{{p|Eevee}}{{male}}
+|1
+{{typetable|Dark}}
+|{{a|Anticipation}}
+|Modest
+|[[File:VSPenny.png|50x50px]]
+|[[Penny]]{{female}}
+|{{j|ボタン}}<br>''Botan''
+|376983
+|8/26/31/31/31/31
+|-
+|{{MSP/9|1012|Poltchageist}}
+|{{p|Poltchageist}}
+|30
+{{typetable|Water}}
+|{{a|Hospitality}}
+|Sassy
+|[[File:VSCarmine.png|50x50px]]
+|[[Carmine]]{{female}}
+|{{j|ゼイユ}}<br>''Seille''
+| 704310
+|12/19/29/31/3/22
+|-
+|{{MSP/9|0840|Applin}}
+|{{p|Applin}}{{male}}
+|15
+{{typetable|Dragon}}
+|{{a|Bulletproof}}
+|Modest
+|[[File:VSKieran 5.png|50x50px]]
+|[[Kieran]]{{male}}
+|{{j|スグリ}}<br>''Suguri''
+|184745
+|30/31/22/31/26/18
+|}
+<references group="lower-alpha">
+<ref name="quickball">This Pokémon is stored in a [[Quick Ball]].</ref>
+<ref name="heavyball">This Pokémon is stored in a [[Heavy Ball]].</ref>
+<ref name="nestball">This Pokémon is stored in a [[Nest Ball]].</ref>
+</references>
+
+====Pokémon Legends: Z-A====
+{{incomplete|section|needs=Porygon's IVs}}
+In [[Pokémon Legends: Z-A]], completing one in-game trade (Pikachu for Heracross) is required for the story, as part of [[Side Mission|Side Mission 002: A Use for an Evolution Stone!]], itself part of [[Main Mission|Main Mission 5: The City in the Shadow of Prism Tower]].
+{| class="roundtable" style="margin: auto; background: #{{Legends Z-A color light}}; border: 3px solid #{{Legends Z-A color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" |Location
+! colspan="2" rowspan="2" |Player's Pokémon
+! colspan="2" rowspan="2" |NPC's Pokémon
+! colspan="2" |[[Nickname]]
+! rowspan="2" |[[Level]]
+! colspan="2" rowspan="2" |[[Held item]]
+! rowspan="2" |[[Nature]]
+! colspan="3" |[[Original Trainer]]
+! rowspan="2" |[[Individual values|IVs]]<ref group="lower-alpha" name="iv-order">In order: HP/Attack/Defense/Sp. Atk/Sp. Def/Speed</ref>
+|- class="blacklinks"
+!English
+!Japanese
+!English
+!Japanese
+![[Trainer ID number|ID]]
+|-
+|[[Passage du Palais]]
+|{{MSP/ZA|0025|Pikachu}}
+|{{p|Pikachu}}
+|{{MSP/ZA|0214|Heracross}}
+|{{p|Heracross}}{{male}}
+|Bois
+|{{j|ボワ}}<br>''Bois''
+|12
+|
+|None
+|Brave
+|Tracie{{female}}
+|{{j|エシャン}}<br>''Échan''
+|797394
+|31/31/15/15/15/31
+|-
+|[[Académie Étoile]]
+|{{MSP/ZA|0063|Abra}}
+|{{p|Abra}}
+|{{MSP/ZA|0447|Riolu}}
+|{{p|Riolu}}{{Male}}
+|Riolouie
+|{{j|リオぼう}}<br>''Riobō''
+|25
+|
+|None
+|Rash
+|Bond{{Male}}
+|{{j|ボンド}}<br>''Bond''
+|348226
+|15/31/15/31/15/31
+|-
+|[[South Boulevard]]
+|{{MSP/ZA|0079|Slowpoke}}
+|{{p|Slowpoke}}
+|{{MSP/ZA|0079|Slowpoke|form=-Galar}}
+|{{p|Slowpoke}}{{Male}}
+|Spicy
+|{{j|スパイス}}<br>''Spice''
+|30
+|
+|None
+|Bold
+|Quille{{Male}}
+|{{j|トランキー}}<br>''Tranqui''
+|934764
+|1/31/31/25/31/26
+|-
+|{{OBP|Quasartico Inc.|Magenta District}}
+|{{MSP/ZA|0026|Raichu}}
+|{{p|Raichu}}
+|{{MSP/ZA|0026|Raichu|form=-Alola}}
+|{{p|Raichu}}{{Male}}
+|Floffy
+|{{j|ふわふわ}}<br>''Fuwafuwa''
+|64
+|
+|None
+|Jolly
+|Griddella{{Female}}
+|{{j|クレープ}}<br>''Crêpe''
+|693489
+|20/20/20/20/20/20
+|}
+
+=====Mega Dimension=====
+{| class="roundtable" style="margin: auto; background: #{{Mega Dimension color light}}; border: 3px solid #{{Mega Dimension color}}; text-align:center"
+|- class="blacklinks"
+! rowspan="2" |Location
+! colspan="2" rowspan="2" |Player's Pokémon
+! colspan="2" rowspan="2" |NPC's Pokémon
+! colspan="2" |[[Nickname]]
+! rowspan="2" |[[Level]]
+! colspan="2" rowspan="2" |[[Held item]]
+! rowspan="2" |[[Nature]]
+! colspan="3" |[[Original Trainer]]
+! rowspan="2" |[[Individual values|IVs]]<ref group="lower-alpha" name="iv-order"/>
+|- class="blacklinks"
+!English
+!Japanese
+!English
+!Japanese
+![[Trainer ID number|ID]]
+|-
+|[[Bleu Sector 6]]
+|{{MSP/ZA|0137|Porygon}}
+|{{p|Porygon}}
+|{{MSP/ZA|0137|Porygon}}
+|{{p|Porygon}}<br><small>→{{p|Porygon2}}</small>
+|Alias
+|{{j|なめらか}}<br>''Nameraka''
+|50
+|{{bag/s|Upgrade|ZA|size=24px}}
+|
+[[Upgrade]]
+|Modest
+|Trian{{male}}
+|{{j|トリアン}}<br>''Trian''
+|065536
+|???/???/???/???/???/???
+|}
+
+<references group="lower-alpha"/>
+
+==Trivia==
+* Prior to [[Generation V]], since the {{OBP|Pokémon|species}} received in an in-game trade is the same [[level]] as the Pokémon traded for it, it is [[Underleveled Pokémon#Underleveled Pokémon from in-game trade|sometimes possible]] to receive a Pokémon at a [[Underleveled Pokémon|lower level]] than normally possible.
+* In Japanese {{game|Red and Green|s}} and international {{game|Red and Blue|s}}, {{p|Lickitung}}, {{p|Jynx}}, {{p|Farfetch'd}}, and {{p|Mr. Mime}} could only be legitimately obtained as in-game trades, with the Original Trainer of "TRAINER" and their traded nicknames ("MARC", "LOLA", "DUX", and "MARCEL", respectively).
+** In Japanese [[Pokémon Blue Version (Japanese)|Pokémon Blue]], Lickitung and Jynx were made available in the wild. In {{game|Yellow}}, Lickitung and Farfetch'd were made available in the wild as well. Therefore, Mr. Mime (in all languages) and Jynx (in languages other than Japanese) remained exclusive to in-game trades until [[Generation II]].
+* In {{game|Red and Blue|s}}, the {{tc|Scientist}} at the [[Cinnabar Lab|Pokémon Lab]] on [[Cinnabar Island]] who [[trade]]s {{p|Electrode}} for {{p|Raichu}} claims that Raichu evolved, which is not possible. This is due to a context-ignorant translation of the Japanese {{game|Blue| (Japanese)}} text, in which the player trades {{p|Kadabra}} for {{p|Graveler}}, both of which [[Evolution|evolve]] by trade
+** Similarly, the old man who trades the player {{p|Jynx}} for {{p|Poliwhirl}} in [[Cerulean City]] claims that Poliwhirl "went and evolved". Poliwhirl does not evolve by trade in the [[Generation I]] games but rather through the use of a [[Water Stone]]. In the context of the Japanese Pokémon Blue, the old man trades away {{p|Haunter}} for {{p|Machoke}}, both of which evolve by trade.
+* The unused trades for {{p|Pidgeot|Pidgeot}} and {{p|Mew|Mew}} are named "MARTY" and "BART", after Marty McFly from the ''Back to the Future'' film franchise, and Bart Simpson from the TV series ''The Simpsons.''
+* In {{game|Crystal}}, once the player trades a {{p|Haunter}} for Chris's {{p|Xatu}} "Paul" in [[Pewter City]], Chris comments after the trade ''"Uh? What happened?"'', and then in later interactions ''"Trading is so odd... I still have a lot to learn about it."'' Although it is not explicitly said, Chris's surprise may suggest that Haunter evolved into {{p|Gengar}}. However, this dialogue does not change even if the player trades this Haunter holding an [[Everstone]], which would normally prevent this Evolution.
+** In {{game|HeartGold and SoulSilver|s}}, the player can trade a {{p|Haunter}} for Mondo's {{p|Xatu}} "Paul" in [[Pewter City]]. However, after the trade, Mondo says instead: ''"How wonderful! You made my day! Thanks to you, I have finally got the Pokémon I’ve been looking for... since forever!"'' It is not explicitly said if Haunter evolved into Gengar. As in the previous game, Mondo's dialogue does not change if Haunter is traded holding an [[Everstone]].
+* In {{game|Ruby and Sapphire|s}}, Elyssa and Darrell's names do not traditionally match their genders. Since their names are switched in [[Pokémon Omega Ruby and Alpha Sapphire|the games' remakes]], it is likely this was a mistake.
+* Pokémon received from in-game trades in the [[Generation VI]] and {{gen|VIII}} games have [[Memory (game mechanic)|memories]] set. For example, in {{g|Sword and Shield}}, the Togepi the player can trade for has the memory "Snips hatched from an Egg and saw Holly for the first time in a castle".
+* Kapoor's name and {{tc|Artist}} Trainer class are likely a reference to British artist {{wp|Anish Kapoor}}. The {{p|Duraludon}} he trades furthers this reference, since the real-life Kapoor has worked on numerous architectural projects.
+* In {{game2|Diamond|Pearl|Platinum}}, it is possible to become permanently trapped if the player trades away Finneon for Meister's Magikarp and has nothing else in their party that can learn {{m|Surf}} or {{m|Fly}}, as well as no [[Rare Candy|Rare Candies]] to evolve Magikarp, or [[fishing|fishing rods]] to [[black out]] or evolve Magikarp. This is only possible if the Finneon is traded from another game, since it is required for the player to have the Good Rod to catch it.
+* [[Pokémon Legends: Arceus]] is the only [[core series]] game to not feature in-game trades.
+* [[Pokémon Legends: Z-A]] is the only core series game to have an in-game trade that is required to complete the story.
+
+==References==
+{{reflist}}
+
+==Related articles==
+*[[List of in-game trades in other languages]]
+
+{{Pokémon availability}}
+{{Project Games notice|game mechanic}}
+
+[[Category:Methods of obtaining Pokémon]]
+
+[[de:Tausch#Liste von Tauschen innerhalb der Spiele]]
+[[es:Lista de intercambios Pokémon de los videojuegos]]
+[[fr:Échange interne]]
+[[it:Elenco degli scambi in-game]]
+[[ja:ゲーム内交換]]
+[[zh:游戏内连接交换列表]]

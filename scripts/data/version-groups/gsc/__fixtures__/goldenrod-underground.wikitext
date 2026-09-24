@@ -1,0 +1,960 @@
+<!-- poke-guide fixture: {"title":"Goldenrod Tunnel","resolvedTitle":"Goldenrod Tunnel","revid":4632948,"timestamp":"2026-09-19T17:20:17Z","fetchedAt":"2026-09-23T16:33:53.055Z"} -->
+{{search|location known as "the Underground" in [[Generation II]]|the Underground in [[Sinnoh]]|Underground}}
+{{Infobox location
+|image=Goldenrod Tunnel HGSS.png
+|type=road
+|location_name=Goldenrod Tunnel
+|other_info=The Underground
+|japanese_name=コガネちかつうろ
+|translated_name=Kogane Tunnel
+|location=Downtown [[Goldenrod City]]
+|region=Johto
+|map=Johto Goldenrod City Map.png
+|generation={{gen|II}}, {{gen|IV}}
+}}
+
+The '''Goldenrod Tunnel''' (Japanese: '''コガネちかつうろ''' ''Kogane Tunnel''), known as '''the Underground''' (Japanese: '''ちかつうろ''' ''Underground Path'') in [[Generation II]], is a shopping district stretching below [[Goldenrod City]]. The shops that are open in the Tunnel depend on the [[days of the week]] and, in some cases, the [[time]] of day.
+
+==Signs==
+{|
+! Generation II || Generation IV
+|-
+|
+{{sign|RBY|header}}
+{{sign|RBY|UNDERGROUND}}
+{{sign|RBY|ENTRANCE}}
+{{sign|RBY|footer}}
+|
+;<center><small>Northern entrance</small></center>
+{{sign|DPcity|header}}
+{{sign|DPcity|Watch Out!}}
+{{sign|DPcity|Get Off Your Bike in the Tunnel}}
+{{sign|DPcity|footer}}
+;<center><small>Southern entrance</small></center>
+{{sign|DPcity|header}}
+{{sign|DPcity|Be Careful!}}
+{{sign|DPcity|Get Off Your Bike in the Tunnel}}
+{{sign|DPcity|footer}}
+|}
+
+==Places of interest==
+===Shops===
+Goldenrod Tunnel contains a [[Haircut brothers|barber shop]], a Bargain Shop that sells [[valuable item]]s, and an [[Herb Shop]]. Each shop has set hours of operation and all three are never open at the same time.
+
+{| class="roundy" style="text-align:center; border: 3px solid #{{johto color}}; background: #{{johto color light}}"
+|-
+! style="{{roundytl|5px}} background: #{{soulsilver color}}" | Day
+! style="background: #{{soulsilver color}}" | Pokémon Salon
+! style="background: #{{soulsilver color}}" | Bargain shop
+! style="{{roundytr|5px}} background: #{{soulsilver color}}" | Herb shop
+|- style="background:#{{#ifexpr: {{#time: w}} = 1|{{#switch: {{#time: G}}|4|5|6|7|8|9={{heartgold color}}|C0C0C0}}|FFF}}"
+| {{DL|Days of the week|Monday}} || &mdash; || Open [[Time|morning]]s || &mdash;
+|- style="background:#{{#ifexpr: {{#time: w}} = 2|{{heartgold color}}|FFF}}"
+| {{DL|Days of the week|Tuesday}} || Older brother || &mdash; || &mdash;
+|- style="background:#{{#ifexpr: {{#time: w}} = 3|{{heartgold color}}|FFF}}"
+| {{DL|Days of the week|Wednesday}} || Younger brother || &mdash; || &mdash;
+|- style="background:#{{#ifexpr: {{#time: w}} = 4|{{heartgold color}}|FFF}}"
+| {{DL|Days of the week|Thursday}} || Older brother || &mdash; || &mdash;
+|- style="background:#{{#ifexpr: {{#time: w}} = 5|{{heartgold color}}|FFF}}"
+| {{DL|Days of the week|Friday}} || Younger brother || &mdash; || &mdash;
+|- style="background:#{{#ifexpr: {{#time: w}} = 6|{{heartgold color}}|FFF}}"
+| {{DL|Days of the week|Saturday}} || Older brother || &mdash; || Open
+|-
+| style="background:#{{#ifexpr: {{#time: w}} = 0|{{heartgold color}}|FFF}}; {{roundybl|5px}}" | {{DL|Days of the week|Sunday}}
+| style="background:#{{#ifexpr: {{#time: w}} = 0|{{heartgold color}}|FFF}}" | Younger brother
+| style="background:#{{#ifexpr: {{#time: w}} = 0|{{heartgold color}}|FFF}}" | &mdash;
+| style="background:#{{#ifexpr: {{#time: w}} = 0|{{heartgold color}}|FFF}}; {{roundybr|5px}}" | Open
+|}{{-}}
+
+====Pokémon Salon====
+{{main|Haircut brothers}}
+Once a day when the shop is open, the {{player}} may have one of the brothers give a Pokémon a haircut. This increases the Pokémon's [[friendship]]. In HeartGold and SoulSilver, it also raises the Pokémon's {{OBP|Beauty|condition}} stat.
+
+The younger of the Haircut brothers is cheaper at {{PDollar}}300, but his service is often less satisfactory. However, the younger brother has a chance of occasionally increasing a Pokémon's friendship to a greater degree than the older brother is capable of. The older brother is more reliable but more expensive at {{PDollar}}500.
+
+====Bargain shop====
+On [[Days of the week|Monday]] [[Time|mornings]], a man sells a set of valuable items for a discount. Each item can only be purchased once per week. The man can still sell his items on other mornings provided the player has saved in front of him and does not walk away and remove him from the screen. The prices here are approximately 6-10% cheaper than the items' normal sell prices. Buying out all five items and selling them in a regular shop will net a profit of {{PDollar}}1200.
+
+{{shop|Bargain shop}}
+{{shoprow|{{shopitem|Nugget|4500}}|{{shopitem|Pearl (item)|5=Pearl|display=Pearl|650}}}}
+{{shoprow|{{shopitem|Big Pearl|3500}}|{{shopitem|Stardust|900}}}}
+{{shoprow|{{shopitem|Star Piece|4600}}}}
+{{shopfooter}}
+
+====Kanpo====
+Kanpo (Japanese: カンポーや ''{{wp|Kampo}} Medicine Store'') is a shop that sells [[herbal medicine]].
+
+The name of the herb shop is mentioned in dialogue in the Japanese versions of the games, but was omitted from the English versions. This store is named Kanpo in English, per the ''[[Pokémon Gold and Silver: Official Nintendo Player's Guide]]'' and ''[[Pokémon Crystal: Official Nintendo Player's Guide]]''.
+
+{{shop|Herb shop}}<!--order corresponds to the Generation IV games; the items are listed in a different order in Generation II-->
+{{shoprow|{{shopitem|Heal Powder|450}}|{{shopitem|Energy Powder|500|display=EnergyPowder}}}}
+{{shoprow|{{shopitem|Energy Root|800}}|{{shopitem|Revival Herb|2800}}}}
+{{shopfooter}}
+
+===Goldenrod Department Store basement===
+The [[Goldenrod Department Store]]'s basement opens up onto the Goldenrod Tunnel. Although the basement is accessible from the main store right from the start, the back entrance is initially occupied by [[Team Rocket]] and cannot be accessed until later. [[Petrel]] hides the [[Goldenrod Radio Tower]] Director here while he impersonates him but will give the player the {{jo|Basement Key}} upon being defeated. Inside, there are {{tc|Team Rocket Grunt}}s and {{ga|Silver}} to {{pkmn|battle}} and a series of switches to turn ON/OFF in order to navigate through the basement completely.
+
+In {{3v2|Gold|Silver|Crystal}}, the basement maze involves three switches along the north wall, labelled 1 to 3 from right to left, that, when turned on or off, open or close doors in the maze. The doors are internally numbered according to the following diagram:
+[[File:Goldenrod_Underground_Maze_Door_Numbers_GSC.png|center|]]
+After a switch is flipped, the game calculates the sum of the numbers associated with the switches that are currently turned on (so, for instance, if Switch 1 is already turned on and the player flips Switch 3, the calculation returns 4), then applies the following rules:
+* If the sum equals 0 (all switches are turned off), all doors close.
+* Among doors 1 through 6, the door whose number is equal to the sum opens, and the door above or below it closes.
+* If the sum is odd, doors 7 and 10 open and doors 8 and 9 close.
+* Inversely, if the sum is even (and nonzero), doors 8 and 9 open, and doors 7 and 10 close.
+* If the sum equals 6 (all switches are turned on), the final door 11 opens.
+The end result of these rules is that, while all that matters for doors 7 through 11 is which switches are on or off, the order in which they were flipped changes how doors 1 through 6 open or close, with the following sequences being of particular interest:
+* Sequence 3-2-1 is the only one that opens the path to the next room.
+* Sequence 2-1-2-3 gives the player access to all items in the maze, while avoiding the Burglars.
+* Sequence 1-3-1-2 gives the player access to all items and both Burglars.
+Finally, flipping the switch next to the south exit activates the 3-2-1 sequence, opening the path to exit the maze.
+
+===Photo booth===
+In {{game|HeartGold and SoulSilver|s}}, there is a photo booth at the northern end of the Tunnel. {{pkmn|Trainer}}s can dress up and [[Photography|photograph]] their own {{OBP|Pokémon|species}} using [[Accessory|Accessories]], and a man offers to take photographs of Trainers with their on-hand party. This photo opportunity is unique, as {{player}}s can wear themselves a {{tc|Team Rocket Grunt}} costume.
+
+During [[Team Rocket]]'s invasion of the [[Goldenrod Radio Tower]], the player must wear this uniform as a disguise to enter the Radio Tower. They cannot {{pkmn|battle}} in this costume nor can they leave [[Goldenrod City]] or use multiplayer features such as the [[Union Room]] while wearing it.
+
+===Photo gallery===
+The saved photo of a dressed-up {{OBP|Pokémon|species}} from the photo booth is displayed in the photo gallery. In addition, photos from up to ten {{player}}s that have [[Record mixing|mixed records]] with will also have their photos displayed here.
+
+A {{tc|Hiker}} appears in the photo gallery who runs an [[Accessory]] drawing for {{PDollar}}100. For each entry, the player has a 6/101 (5.941%) chance of not winning anything at all. Otherwise, the game will try to reward the player with a randomly selected Accessory, with a separate 5/101 (4.950%) chance of also receiving a randomly selected [[Backdrop]].
+
+If the player already has the maximum amount of that particular Accessory, the player will not receive any Accessories for that entry, but may still receive a Backdrop. This means that the effective chance of winning another Accessory gets lower as the pool is exhausted, reaching a minimum of 2.412% <!--95/101 * 1/39--> for the last Accessory. By contrast, because the game will always select a Backdrop the player has not yet obtained, the chance of receiving another Backdrop remains constant until all of them have been obtained.
+
+On average, it takes about 300 entries to get all of the possible Accessories and Backdrops. Once they have all been obtained, the Hiker will compliment the player on their collection, and no longer offer the player the option to enter the raffle.
+
+The reward pool consists of the following 39 Accessories and 14 Backdrops.
+<div style="display:inline-block; vertical-align:top">
+{| class="roundy" style="background: #EBB7C6; border: 5px solid #E090A8"
+! style="background: #FFF; {{roundytl|5px}}" | [[File:Accessory Humming Note Sprite.png]] 
+| style="background: #FFF; {{roundytr|5px}}" | Humming Note
+|- style="background: #FFF"
+! [[File:Accessory Googly Specs Sprite.png]] 
+| Googly Specs
+|- style="background: #FFF"
+! [[File:Accessory Black Specs Sprite.png]] 
+| Black Specs
+|- style="background: #FFF"
+! [[File:Accessory Gorgeous Specs Sprite.png]] 
+| Gorgeous Specs
+|- style="background: #FFF"
+! [[File:Accessory Sweet Candy Sprite.png]] 
+| Sweet Candy
+|- style="background: #FFF"
+! [[File:Accessory Confetti Sprite.png]] 
+| Confetti
+|- style="background: #FFF"
+! [[File:Accessory Colored Parasol Sprite.png]] 
+| Colored Parasol
+|- style="background: #FFF"
+! [[File:Accessory Old Umbrella Sprite.png]] 
+| Old Umbrella
+|- style="background: #FFF"
+! [[File:Accessory Spotlight Sprite.png]] 
+| Spotlight
+|- style="background: #FFF"
+! [[File:Accessory Cape Sprite.png]] 
+| Cape
+|- style="background: #FFF"
+! [[File:Accessory Standing Mike Sprite.png]] 
+| Standing Mike
+|- style="background: #FFF"
+! [[File:Accessory Surfboard Sprite.png]] 
+| Surfboard
+|- style="background: #FFF"
+! [[File:Accessory Carpet Sprite.png]] 
+| Carpet
+|- style="background: #FFF"
+! [[File:Accessory Retro Pipe Sprite.png]] 
+| Retro Pipe
+|- style="background: #FFF"
+! [[File:Accessory Fluffy Bed Sprite.png]] 
+| Fluffy Bed
+|- style="background: #FFF"
+! [[File:Accessory Mirror Ball Sprite.png]] 
+| Mirror Ball
+|- style="background: #FFF"
+! [[File:Accessory Photo Board Sprite.png]] 
+| Photo Board
+|- style="background: #FFF"
+! [[File:Accessory Pink Barrette Sprite.png]] 
+| Pink Barrette
+|- style="background: #FFF"
+! [[File:Accessory Red Barrette Sprite.png]] 
+| Red Barrette
+|- style="background: #FFF"
+! [[File:Accessory Blue Barrette Sprite.png]] 
+| Blue Barrette
+|- style="background: #FFF"
+! [[File:Accessory Yellow Barrette Sprite.png]] 
+| Yellow Barrette
+|- style="background: #FFF"
+! [[File:Accessory Green Barrette Sprite.png]] 
+| Green Barrette
+|- style="background: #FFF"
+! [[File:Accessory Pink Balloon Sprite.png]] 
+| Pink Balloon
+|- style="background: #FFF"
+! [[File:Accessory Red Balloons Sprite.png]] 
+| Red Balloons
+|- style="background: #FFF"
+! [[File:Accessory Blue Balloons Sprite.png]] 
+| Blue Balloons
+|- style="background: #FFF"
+! [[File:Accessory Yellow Balloon Sprite.png]] 
+| Yellow Balloon
+|- style="background: #FFF"
+! [[File:Accessory Green Balloons Sprite.png]] 
+| Green Balloons
+|- style="background: #FFF"
+! [[File:Accessory Lace Headdress Sprite.png]] 
+| Lace Headdress
+|- style="background: #FFF"
+! [[File:Accessory Top Hat Sprite.png]] 
+| Top Hat
+|- style="background: #FFF"
+! [[File:Accessory Silk Veil Sprite.png]] 
+| Silk Veil
+|- style="background: #FFF"
+! [[File:Accessory Heroic Headband Sprite.png]] 
+| Heroic Headband
+|- style="background: #FFF"
+! [[File:Accessory Professor Hat Sprite.png]] 
+| Professor Hat
+|- style="background: #FFF"
+! [[File:Accessory Flower Stage Sprite.png]] 
+| Flower Stage
+|- style="background: #FFF"
+! [[File:Accessory Gold Pedestal Sprite.png]] 
+| Gold Pedestal
+|- style="background: #FFF"
+! [[File:Accessory Glass Stage Sprite.png]] 
+| Glass Stage
+|- style="background: #FFF"
+! [[File:Accessory Award Podium Sprite.png]] 
+| Award Podium
+|- style="background: #FFF"
+! [[File:Accessory Cube Stage Sprite.png]] 
+| Cube Stage
+|- style="background: #FFF"
+! [[File:Accessory Big Tree Sprite.png]] 
+| Big Tree
+|-
+! style="background: #FFF; {{roundybl|5px}}" | [[File:Accessory Flag Sprite.png]] 
+| style="background: #FFF; {{roundybr|5px}}" | Flag
+|}</div>
+<div style="display:inline-block; vertical-align:top">
+{| class="roundy" style="background: #EBB7C6; border: 5px solid #E090A8"
+! style="background: #FFF; {{roundytl|5px}}" | [[File:Dress Up Backdrop.png|64px]] 
+| style="background: #FFF; {{roundytr|5px}}" | Dress Up
+|- style="background: #FFF"
+! [[File:Ranch Backdrop.png|64px]] 
+| Ranch
+|- style="background: #FFF"
+! [[File:City Night Backdrop.png|64px]] 
+| City at Night
+|- style="background: #FFF"
+! [[File:Snowy Town Backdrop.png|64px]] 
+| Snowy Town
+|- style="background: #FFF"
+! [[File:Fiery Backdrop.png|64px]] 
+| Fiery
+|- style="background: #FFF"
+! [[File:Outer Space Backdrop.png|64px]] 
+| Outer Space
+|- style="background: #FFF"
+! [[File:Cumulus Cloud Backdrop.png|64px]] 
+| Cumulus Cloud
+|- style="background: #FFF"
+! [[File:Desert Backdrop.png|64px]] 
+| Desert
+|- style="background: #FFF"
+! [[File:Flower Patch Backdrop.png|64px]] 
+| Flower Patch
+|- style="background: #FFF"
+! [[File:Future Room Backdrop.png|64px]] 
+| Future Room
+|- style="background: #FFF"
+! [[File:Open Sea Backdrop.png|64px]] 
+| Open Sea
+|- style="background: #FFF"
+! [[File:Total Darkness Backdrop.png|64px]] 
+| Total Darkness
+|- style="background: #FFF"
+! [[File:Tatami Room Backdrop.png|64px]] 
+| Tatami Room
+|-
+! style="background: #FFF; {{roundybl|5px}}" | [[File:Gingerbread Room Backdrop.png|64px]] 
+| style="background: #FFF; {{roundybr|5px}}" | Gingerbread Room
+|}</div>
+
+==Items==
+{{Itlisth|road}}
+{{Itemlist|Fashion Case|Entrance (either); from {{ga|Lyra}}/{{ga|Ethan}} upon entering for the first time|HG=yes|SS=yes}}
+{{Itemlist|Coin Case|B1F; south of the three shops|G=yes|S=yes|C=yes}}
+{{Itemlist|Paralyze Heal|B1F; space between top two shops ''(hidden)''|G=yes|S=yes|C=yes|display=[[Paralyze Heal|Parlyz Heal]]}}
+{{Itemlist|Super Potion|B1F; middle of the floor between bottom two shops ''(hidden)''|G=yes|S=yes|C=yes}}
+{{Itemlist|Antidote|B1F; near the basement door ''(hidden)''|G=yes|S=yes|C=yes}}
+{{Itemlist|Full Heal|B2F; northeastern part|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Smoke Ball|B2F; southwestern corner of the door maze (reached by activating/deactivating switches in order 2-1-2-3 or 1-3-1-2) |G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Revive|B2F; northwestern part of the door maze (in the room below Switch 3) ''(hidden)''|G=yes|S=yes|C=yes}}
+{{Itemlist|Max Potion|B2F; in the middle of the door maze (in the room below Switch 2) ''(hidden)''|G=yes|S=yes|C=yes}}
+{{Itemlist|Coin Case|B2F; south part (Japanese versions only)|HG=yes|SS=yes}}
+{{Itemlist|Ultra Ball|Warehouse; west part|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Max Ether|Warehouse; southeastern corner|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Max Potion|Warehouse; in the middle of the mostly empty hallway ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Revive|Warehouse; in the center of four boxes that are in a C-shape ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|TM Normal|Warehouse; next to the [[Radio Director]]|G=yes|S=yes|C=yes|display={{TM|35|Sleep Talk}}}}
+{{Itemlist|TM Normal|Warehouse; next to the Radio Director|HG=yes|SS=yes|display={{TM|82|Sleep Talk}}}}
+{{Itemlist|Card Key|Warehouse; from the Radio Director|G=yes|S=yes|C=yes|HG=yes|SS=yes|display={{jo|Card Key}}}}
+{{Itlistfoot|road}}
+
+==Trainers==
+===Generation II===
+====B1F====
+{{trainerheader|road}}
+{{Trainerentry|Spr GS PokéManiac.png|PokéManiac|Donald|600|2|079|Slowpoke|♂|10|None|079|Slowpoke|♂|10|None|36=ヒロアキ|37=Hiroaki}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr GS Super Nerd.png|Super Nerd|Teru|288|4|081|Magnemite||7|None|100|Voltorb||11|None|081|Magnemite||7|None|081|Magnemite||9|None|36=テルキ|37=Teruki}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr GS PokéManiac.png|PokéManiac|Issac|720|1|108|Lickitung|♂|12|None|36=マサシ|37=Masashi}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr GS Super Nerd.png|Super Nerd|Eric|352|2|088|Grimer|♂|11|None|088|Grimer|♂|11|None|36=カズヒト|37=Kazuhito}}
+{{trainerfooter|road|2}}
+
+====B2F====
+{{Party
+| caption = {{PlayerChoice|0152|Chikorita}}
+| background = {{silver color}}
+| border = {{silver color dark}}
+| headcolor = {{silver color light}}
+| sprite = Spr GS Silver 1.png
+| prize = {{PDollar}}1920
+| name = {{color2|000|Silver (game)|Silver}}
+| location = Goldenrod Tunnel
+| locationname = Goldenrod Underground
+| game = GSC
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0042
+| pokemon = Golbat
+| gender = male
+| level = 30
+| type1 = Poison
+| type2 = Flying
+| move1 = Wing Attack | move1type = Flying
+| move2 = Confuse Ray | move2type = Ghost
+| move3 = Bite | move3type = Dark
+| move4 = Leech Life | move4type = Bug
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0081
+| pokemon = Magnemite
+| gender = none
+| level = 28
+| type1 = Electric
+| type2 = Steel
+| move1 = SonicBoom | move1type = Normal
+| move2 = Thunder Wave | move2type = Electric
+| move3 = Tackle | move3type = Normal
+| move4 = ThunderShock | move4type = Electric
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0093
+| pokemon = Haunter
+| gender = male
+| level = 30
+| type1 = Ghost
+| type2 = Poison
+| move1 = Shadow Ball | move1type = Ghost
+| move2 = Lick | move2type = Ghost
+| move3 = Curse | move3type = ???
+| move4 = Mean Look | move4type = Normal
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0215
+| pokemon = Sneasel
+| gender = male
+| level = 32
+| type1 = Dark
+| type2 = Ice
+| move1 = Faint Attack | move1type = Dark
+| move2 = Leer | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Screech | move4type = Normal
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0156
+| pokemon = Quilava
+| gender = male
+| level = 32
+| type1 = Fire
+| move1 = Ember | move1type = Fire
+| move2 = SmokeScreen | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Flame Wheel | move4type = Fire
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0155|Cyndaquil}}
+| background = {{silver color}}
+| border = {{silver color dark}}
+| headcolor = {{silver color light}}
+| sprite = Spr GS Silver 1.png
+| prize = {{PDollar}}1920
+| name = {{color2|000|Silver (game)|Silver}}
+| location = Goldenrod Tunnel
+| locationname = Goldenrod Underground
+| game = GSC
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0042
+| pokemon = Golbat
+| gender = male
+| level = 30
+| type1 = Poison
+| type2 = Flying
+| move1 = Wing Attack | move1type = Flying
+| move2 = Confuse Ray | move2type = Ghost
+| move3 = Bite | move3type = Dark
+| move4 = Leech Life | move4type = Bug
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0081
+| pokemon = Magnemite
+| gender = none
+| level = 28
+| type1 = Electric
+| type2 = Steel
+| move1 = SonicBoom | move1type = Normal
+| move2 = Thunder Wave | move2type = Electric
+| move3 = Tackle | move3type = Normal
+| move4 = ThunderShock | move4type = Electric
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0093
+| pokemon = Haunter
+| gender = male
+| level = 30
+| type1 = Ghost
+| type2 = Poison
+| move1 = Shadow Ball | move1type = Ghost
+| move2 = Lick | move2type = Ghost
+| move3 = Curse | move3type = ???
+| move4 = Mean Look | move4type = Normal
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0215
+| pokemon = Sneasel
+| gender = male
+| level = 32
+| type1 = Dark
+| type2 = Ice
+| move1 = Faint Attack | move1type = Dark
+| move2 = Leer | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Screech | move4type = Normal
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0160
+| pokemon = Feraligatr
+| gender = male
+| level = 32
+| type1 = Water
+| move1 = Bite | move1type = Dark
+| move2 = Scary Face | move2type = Normal
+| move3 = Rage | move3type = Normal
+| move4 = Water Gun | move4type = Water
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0158|Totodile}}
+| background = {{silver color}}
+| border = {{silver color dark}}
+| headcolor = {{silver color light}}
+| sprite = Spr GS Silver 1.png
+| prize = {{PDollar}}1920
+| name = {{color2|000|Silver (game)|Silver}}
+| location = Goldenrod Tunnel
+| locationname = Goldenrod Underground
+| game = GSC
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0042
+| pokemon = Golbat
+| gender = male
+| level = 30
+| type1 = Poison
+| type2 = Flying
+| move1 = Wing Attack | move1type = Flying
+| move2 = Confuse Ray | move2type = Ghost
+| move3 = Bite | move3type = Dark
+| move4 = Leech Life | move4type = Bug
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0081
+| pokemon = Magnemite
+| gender = none
+| level = 28
+| type1 = Electric
+| type2 = Steel
+| move1 = SonicBoom | move1type = Normal
+| move2 = Thunder Wave | move2type = Electric
+| move3 = Tackle | move3type = Normal
+| move4 = ThunderShock | move4type = Electric
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0093
+| pokemon = Haunter
+| gender = male
+| level = 30
+| type1 = Ghost
+| type2 = Poison
+| move1 = Shadow Ball | move1type = Ghost
+| move2 = Lick | move2type = Ghost
+| move3 = Curse | move3type = ???
+| move4 = Mean Look | move4type = Normal
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0215
+| pokemon = Sneasel
+| gender = male
+| level = 32
+| type1 = Dark
+| type2 = Ice
+| move1 = Faint Attack | move1type = Dark
+| move2 = Leer | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Screech | move4type = Normal
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0154
+| pokemon = Meganium
+| gender = male
+| level = 32
+| type1 = Grass
+| move1 = PoisonPowder | move1type = Poison
+| move2 = Razor Leaf | move2type = Grass
+| move3 = Body Slam | move3type = Normal
+| move4 = Reflect | move4type = Psychic
+}}
+{{Party/end}}{{-}}
+{{trainerheader|road}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||1080|1|019|Rattata|♂|27|None}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||1000|3|089|Muk|♂|23|None|109|Koffing|♂|23|None|019|Rattata|♂|25|None}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||960|2|109|Koffing|♂|24|None|089|Muk|♂|24|None}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr GS Burglar.png|Burglar|Eddie|2112|2|058|Growlithe|♂|26|None|109|Koffing|♂|24|None|36=ノリオ|37=Norio}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr GS Burglar.png|Burglar|Duncan|2024|3|109|Koffing|♂|23|None|126|Magmar|♂|25|None|109|Koffing|♂|23|None|36=ヤスジ|37=Yasuji}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr GS Rocket Grunt F.png|Rocket Grunt||1000|2|044|Gloom|♀|25|None|044|Gloom|♀|25|None}}
+{{trainerfooter|road|2}}
+
+====Warehouse====
+{{trainerheader|road}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||960|2|020|Raticate|♂|24|None|042|Golbat|♂|24|None}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||920|2|088|Grimer|♂|26|None|110|Weezing|♂|23|None}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr GS Rocket Grunt M.png|Rocket Grunt||1000|2|109|Koffing|♂|25|None|109|Koffing|♂|25|None}}
+{{trainerfooter|road|2}}
+
+===Generation IV===
+====B1F====
+{{trainerheader|road}}
+{{Trainerentry|Spr HGSS Poké Maniac.png|PokéManiac|Donald|704|2|079|Slowpoke|♂|11|None|079|Slowpoke|♂|11|None|36=ヒロアキ|37=Hiroaki}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr HGSS Super Nerd.png|Super Nerd|Teru|432|4|081|Magnemite||7|None|081|Magnemite||7|None|081|Magnemite||9|None|100|Voltorb||11|None|36=テルキ|37=Teruki}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr HGSS Poké Maniac.png|PokéManiac|Issac|768|1|108|Lickitung|♂|12|None|36=マサシ|37=Masashi}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr HGSS Super Nerd.png|Super Nerd|Eric|528|2|088|Grimer|♂|11|None|088|Grimer|♂|11|None|36=カズヒト|37=Kazuhito}}
+{{trainerfooter|road|2}}
+
+====B2F====
+{{Party
+| caption = {{PlayerChoice|0152|Chikorita}}
+| background = {{silver color}}
+| border = {{silver color dark}}
+| headcolor = {{silver color light}}
+| sprite = Spr HGSS Silver.png
+| prize = {{pdollar}}2176
+| class = Rival
+| name = {{color2|000|Silver (game)|Silver}}
+| location = Goldenrod Tunnel
+| game = HGSS
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0042
+| pokemon = Golbat
+| gender = male
+| level = 32
+| type1 = Poison
+| type2 = Flying
+| ability = Inner Focus
+| move1 = Air Cutter | move1type = Flying | move1cat = Special
+| move2 = Confuse Ray | move2type = Ghost | move2cat = Status
+| move3 = Bite | move3type = Dark | move3cat = Physical
+| move4 = Astonish | move4type = Ghost | move4cat = Physical
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0081
+| pokemon = Magnemite
+| gender = none
+| level = 30
+| type1 = Electric
+| type2 = Steel
+| ability = Magnet Pull
+| move1 = Thunder Wave | move1type = Electric | move1cat = Status
+| move2 = Spark | move2type = Electric | move2cat = Physical
+| move3 = Supersonic | move3type = Normal | move3cat = Status
+| move4 = SonicBoom | move4type = Normal | move4cat = Special
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0093
+| pokemon = Haunter
+| gender = male
+| level = 32
+| type1 = Ghost
+| type2 = Poison
+| ability = Levitate
+| move1 = Shadow Ball | move1type = Ghost | move1cat = Special
+| move2 = Confuse Ray | move2type = Ghost | move2cat = Status
+| move3 = Mean Look | move3type = Normal | move3cat = Status
+| move4 = Curse | move4type = ??? | move4cat = Status
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0215
+| pokemon = Sneasel
+| gender = male
+| level = 34
+| type1 = Dark
+| type2 = Ice
+| ability = Inner Focus
+| move1 = Faint Attack | move1type = Dark | move1cat = Physical
+| move2 = Quick Attack | move2type = Normal | move2cat = Physical
+| move3 = Icy Wind | move3type = Ice | move3cat = Special
+| move4 = Fury Swipes | move4type = Normal | move4cat = Physical
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0156
+| pokemon = Quilava
+| gender = male
+| level = 34
+| type1 = Fire
+| ability = Blaze
+| move1 = SmokeScreen | move1type = Normal | move1cat = Status
+| move2 = Swift | move2type = Normal | move2cat = Special
+| move3 = Quick Attack | move3type = Normal | move3cat = Physical
+| move4 = Flame Wheel | move4type = Fire | move4cat = Physical
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0155|Cyndaquil}}
+| background = {{silver color}}
+| border = {{silver color dark}}
+| headcolor = {{silver color light}}
+| sprite = Spr HGSS Silver.png
+| prize = {{pdollar}}2048
+| class = Rival
+| name = {{color2|000|Silver (game)|Silver}}
+| location = Goldenrod Tunnel
+| game = HGSS
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0042
+| pokemon = Golbat
+| gender = male
+| level = 30
+| type1 = Poison
+| type2 = Flying
+| ability = Inner Focus
+| move1 = Air Cutter | move1type = Flying | move1cat = Special
+| move2 = Confuse Ray | move2type = Ghost | move2cat = Status
+| move3 = Bite | move3type = Dark | move3cat = Physical
+| move4 = Astonish | move4type = Ghost | move4cat = Physical
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0081
+| pokemon = Magnemite
+| gender = none
+| level = 28
+| type1 = Electric
+| type2 = Steel
+| ability = Magnet Pull
+| move1 = Thunder Wave | move1type = Electric | move1cat = Status
+| move2 = Spark | move2type = Electric | move2cat = Physical
+| move3 = Supersonic | move3type = Normal | move3cat = Status
+| move4 = SonicBoom | move4type = Normal | move4cat = Special
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0093
+| pokemon = Haunter
+| gender = male
+| level = 30
+| type1 = Ghost
+| type2 = Poison
+| ability = Levitate
+| move1 = Shadow Ball | move1type = Ghost | move1cat = Special
+| move2 = Confuse Ray | move2type = Ghost | move2cat = Status
+| move3 = Mean Look | move3type = Normal | move3cat = Status
+| move4 = Curse | move4type = ??? | move4cat = Status
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0215
+| pokemon = Sneasel
+| gender = male
+| level = 32
+| type1 = Dark
+| type2 = Ice
+| ability = Inner Focus
+| move1 = Faint Attack | move1type = Dark | move1cat = Physical
+| move2 = Quick Attack | move2type = Normal | move2cat = Physical
+| move3 = Icy Wind | move3type = Ice | move3cat = Special
+| move4 = Fury Swipes | move4type = Normal | move4cat = Physical
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0160
+| pokemon = Feraligatr
+| gender = male
+| level = 32
+| type1 = Water
+| ability = Torrent
+| move1 = Water Gun | move1type = Water | move1cat = Special
+| move2 = Ice Fang | move2type = Ice | move2cat = Physical
+| move3 = Crunch | move3type = Dark | move3cat = Physical
+| move4 = Thrash | move4type = Normal | move4cat = Physical
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0158|Totodile}}
+| background = {{silver color}}
+| border = {{silver color dark}}
+| headcolor = {{silver color light}}
+| sprite = Spr HGSS Silver.png
+| prize = {{pdollar}}2176
+| class = Rival
+| name = {{color2|000|Silver (game)|Silver}}
+| location = Goldenrod Tunnel
+| game = HGSS
+| pokemon = 5
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0042
+| pokemon = Golbat
+| gender = male
+| level = 32
+| type1 = Poison
+| type2 = Flying
+| ability = Inner Focus
+| move1 = Air Cutter | move1type = Flying | move1cat = Special
+| move2 = Confuse Ray | move2type = Ghost | move2cat = Status
+| move3 = Bite | move3type = Dark | move3cat = Physical
+| move4 = Astonish | move4type = Ghost | move4cat = Physical
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0081
+| pokemon = Magnemite
+| gender = none
+| level = 30
+| type1 = Electric
+| type2 = Steel
+| ability = Magnet Pull
+| move1 = Thunder Wave | move1type = Electric | move1cat = Status
+| move2 = Spark | move2type = Electric | move2cat = Physical
+| move3 = Supersonic | move3type = Normal | move3cat = Status
+| move4 = SonicBoom | move4type = Normal | move4cat = Special
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0093
+| pokemon = Haunter
+| gender = male
+| level = 32
+| type1 = Ghost
+| type2 = Poison
+| ability = Levitate
+| move1 = Shadow Ball | move1type = Ghost | move1cat = Special
+| move2 = Confuse Ray | move2type = Ghost | move2cat = Status
+| move3 = Mean Look | move3type = Normal | move3cat = Status
+| move4 = Curse | move4type = ??? | move4cat = Status
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0215
+| pokemon = Sneasel
+| gender = male
+| level = 34
+| type1 = Dark
+| type2 = Ice
+| ability = Inner Focus
+| move1 = Faint Attack | move1type = Dark | move1cat = Physical
+| move2 = Quick Attack | move2type = Normal | move2cat = Physical
+| move3 = Icy Wind | move3type = Ice | move3cat = Special
+| move4 = Fury Swipes | move4type = Normal | move4cat = Physical
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0154
+| pokemon = Meganium
+| gender = male
+| level = 34
+| type1 = Grass
+| ability = Overgrow
+| move1 = Reflect | move1type = Psychic | move1cat = Status
+| move2 = Petal Dance | move2type = Grass | move2cat = Special
+| move3 = PoisonPowder | move3type = Poison | move3cat = Status
+| move4 = Synthesis | move4type = Grass | move4cat = Status
+}}
+{{Party/end}}{{-}}
+{{trainerheader|road}}
+{{Trainerentry|Spr HGSS Rocket Grunt M.png|Team Rocket Grunt||1080|1|019|Rattata|♂|27|None}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr HGSS Rocket Grunt M.png|Team Rocket Grunt||1000|3|089|Muk|♂|23|None|109|Koffing|♂|23|None|019|Rattata|♂|25|None}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr HGSS Burglar.png|Burglar|Duncan|2024|3|109|Koffing|♂|23|None|109|Koffing|♂|23|None|126|Magmar|♂|25|None|36=ヤスジ|37=Yasuji}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr HGSS Burglar.png|Burglar|Orson|2110|2|058|Growlithe|♂|26|None|109|Koffing|♂|24|None|36=ゴロゾー|37=Gorozō}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr HGSS Rocket Grunt M.png|Team Rocket Grunt||960|2|109|Koffing|♂|24|None|089|Muk|♂|24|None}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr HGSS Rocket Grunt F.png|Team Rocket Grunt||1000|2|044|Gloom|♀|25|None|044|Gloom|♀|25|None}}
+{{trainerfooter|road|2}}
+
+====Warehouse====
+{{trainerheader|road}}
+{{Trainerentry|Spr HGSS Rocket Grunt M.png|Team Rocket Grunt||960|2|020|Raticate|♂|24|None|042|Golbat|♂|24|None}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr HGSS Rocket Grunt M.png|Team Rocket Grunt||920|2|088|Grimer|♂|26|None|110|Weezing|♂|23|None}}
+{{Trainerdiv|road}}
+{{Trainerentry|Spr HGSS Rocket Grunt M.png|Team Rocket Grunt||1000|2|109|Koffing|♂|25|None|109|Koffing|♂|25|None}}
+{{trainerfooter|road|2}}
+
+==Layout==
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{locationcolor/dark|road}}"
+|-
+! style="background:#{{locationcolor/light|road}}; {{roundytl|5px}}" | Version
+! style="background:#{{locationcolor/light|road}}" | B1F
+! style="background:#{{locationcolor/light|road}}" | B2F
+! style="background:#{{locationcolor/light|road}}; {{roundytr|5px}}" | Warehouse
+|-
+! style="background:#{{gold color}}" | {{color2|000|Pokémon Gold and Silver Versions|Gold}}
+| rowspan="3" | [[File:The Underground GSC.png|120px]]
+| rowspan="3" | [[File:The Underground Basement GSC.png|150px]]
+| rowspan="3" | [[File:Underground Warehouse GSC.png|150px]]
+|-
+! style="background:#{{silver color}}" | {{color2|000|Pokémon Gold and Silver Versions|Silver}}
+|-
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon Crystal Version|Crystal}}
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+| rowspan="2" | [[File:Goldenrod Tunnel HGSS.png|120px]]
+| rowspan="2" | [[File:Goldenrod Tunnel Basement HGSS.png|150px]]
+| rowspan="2" | [[File:Underground Warehouse HGSS.png|150px]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan=4 style="background:#{{locationcolor/light|road}}; {{roundybottom|5px}}" | &nbsp;
+|}
+
+==Walking Pokémon effects==
+When interacting with [[walking Pokémon]] in {{v2|HeartGold and SoulSilver|s}}, the Pokémon may occasionally show an altered mood specific to this location.
+*The walking Pokémon pokes at garbage.
+
+==In animation==
+[[File:Underground Path anime.png|thumb|250px|The Underground Path in {{aniseries|GS}}]]
+===''Pokémon the Series''===
+In {{aniseries|PTS}}, the Underground Path is portrayed as much larger than it is in the {{pkmn|games}}, but staples from them still appear, including both [[haircut brothers]].
+
+===={{aniseries|GS}}====
+The Underground Path appeared in ''[[EP158|A Goldenrod Opportunity]]'', where {{Ash}} and {{ashfr}} explored it along with [[Whitney]]. She took them through the shopping plaza as an attempted shortcut to the [[Goldenrod Department Store|Goldenrod Galleria]], but got them lost several times along the way.
+{{-}}
+
+==In the manga==
+[[File:Goldenrod Tunnel PM.png|thumb|250px|The Underground Path in [[Pokémon Pocket Monsters]]]]
+===Pokémon Pocket Monsters===
+The Underground Path appeared in ''[[PM082|Don't Accuse Me]]''. The shopkeepers there framed {{PPM|Red}} and his Pokémon for being bad, but after {{TP|Red|Clefairy}} defeated their {{p|Feraligatr}}, they started to respect him and built an underground area in a department store, which ended up being accidentally destroyed by Clefairy.
+{{-}}
+
+==In other languages==
+{|
+|- style="vertical-align:top"
+|
+''Goldenrod Tunnel''
+{{Langtable|color={{locationcolor/light|road}}|bordercolor={{locationcolor/dark|road}}
+|zh_yue=滿金地下通道 ''Múhngām Deihhah Tūngdouh''
+|zh_cmn=滿金地下通道 ''Mǎnjīn Dìxìa Tōngdào''
+|fr=Doublon-Tunnel
+|de=Dukatia-Passage
+|it=Fiortunnel
+|ko=금빛지하통로 ''Geumbit Jihatongno''
+|pl=Metro Goldenrod
+|es=Túnel Trigal
+}}
+|
+''Underground''
+{{Langtable|color={{locationcolor/light|road}}|bordercolor={{locationcolor/dark|road}}
+|fr=Souterrain
+|de=Untergrund
+|it=Sotterranei
+|ko=지하통로 ''Jihatongno''
+|es=Subterráneo
+}}
+|}
+
+==Trivia==
+* The alcove on B1F across from the door to B2F is not visible in {{2v2|HeartGold|SoulSilver}}, but it is still physically there and the player can be entirely hidden behind the wall.
+
+==External links==
+* [https://pokemow.com/Gen2/ShutterPuzzle/ Pokémon Gold, Silver, and Crystal: The Switch and Shutter Puzzle]
+
+==Related articles==
+{{Johto}}
+{{Project Locations notice}}
+
+[[Category:Johto locations]]
+[[Category:Routes]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:Paths]]
+[[Category:HeartGold and SoulSilver locations]]
+
+[[de:Dukatia-Passage]]
+[[es:Túnel Trigal]]
+[[fr:Doublon-Tunnel]]
+[[it:Fiortunnel]]
+[[ja:ちかつうろ (コガネシティ)]]
+[[zh:满金地下通道]]

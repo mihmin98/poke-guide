@@ -1,0 +1,429 @@
+<!-- poke-guide fixture: {"title":"Ilex Forest","resolvedTitle":"Ilex Forest","revid":4630526,"timestamp":"2026-09-15T01:17:31Z","fetchedAt":"2026-09-23T16:33:53.055Z"} -->
+{{Infobox location
+|image=HGSS Ilex Forest-{{#switch: {{#time: G}}|4|5|6|7|8|9=Morning|10|11|12|13|14|15|16=Day|17|18|19=Evening|20|21|22|23|0|1|2|3=Night}}.png
+|image_size=256
+|type=forest
+|mapdesc=A large forest full of trees that are used to make charcoal.
+|location_name=Ilex Forest
+|japanese_name=ウバメの森
+|translated_name=Ubame Forest
+|location=Between [[Azalea Town]] and {{rt|34|Johto}}
+|region=Johto
+|generation={{gen|II}}, {{gen|IV}}
+|map=Johto Ilex Forest Map.png
+}}
+'''Ilex Forest''' (Japanese: '''ウバメの{{ruby|森|もり}}''' ''Ubame Forest'') is a dense [[forest]] located in southern [[Johto]], directly west of [[Azalea Town]]. The forest's trees are so close together that all light is blocked out, and in [[Generation II]], the forest seems to be in a perpetual night.
+
+There is a [[Ilex Forest shrine|shrine]] for the guardian of the forest, {{p|Celebi}}. In {{game|Crystal}}, if [[Kurt]] has already examined the [[GS Ball]], placing it in the shrine will cause a [[level]] 30 Celebi to face the {{player}}. Though the GS Ball was never distributed as an event item outside of Japan, the [[Virtual Console]] release of Crystal allows it to be obtained in all regions through normal gameplay. In {{game|HeartGold and SoulSilver|s}}, the shrine also may initiate a special event in which Celebi will take the player [[Time travel|back in time]] and allow them to battle [[Giovanni]].
+
+==Geography==
+Ilex Forest is a winding path through dense trees connecting [[Azalea Town]] and {{rt|34|Johto}}. Travelers can enter at either end with no trouble at all, but to pass through to the other side they must be able to use the move {{m|Cut}} outside of battle.
+
+===Cut===
+When the player enters the forest, the only way to proceed through the next section of the forest is to return runaway {{p|Farfetch'd}} for the charcoal maker's son, thus receiving {{HM|01|Cut}} as a reward, allowing the player to clear the path from a cuttable tree. The Farfetch'd will run away and allow the player to return them after the player defeats [[Silver (game)|the rival]] in [[Azalea Town]].
+
+In [[Generation II]], the player needs to use the forest's layout to chase it back, using a looped path on the far eastern side, as well as a [[ledge]]d area. In order to tactically return the runaway Farfetch'd to its owner, the player must corner it and lead it into the direction of the owner.
+
+In [[Generation IV]], there are two Farfetch'd and each needs to be approached while they are facing the other way. The player can do this by walking over sticks and, by doing so, causing them to rustle. This grabs the Farfetch'd's attention and, if no other sticks are rustled, may allow them to be approached from behind. Once the Farfetch'd are returned, the player will receive the HM01.
+
+===Headbutt===
+In the center of the forest is a man who, in Generation II, will hand out {{TM|02|Headbutt}}. Using Headbutt on one of the trees in the forest can sometimes yield a wild Pokémon, which Trainers may wish to capture.
+
+In Generation IV, as Headbutt is no longer a TM, the man is instead a [[Move Tutor]] who will teach Headbutt for free an unlimited number of times. Now all trees in all locations can be Headbutted, but not all will yield a Pokémon.
+
+===Ilex Forest Shrine===
+[[File:HGSS Prerelease Shiny Pichu event.png|thumb|right|200px|[[Spiky-eared Pichu]] near the shrine]]
+{{main|Ilex Forest shrine}}
+{{spoilers}}
+The shrine is a small structure located in the Ilex Forest. It is used in obtaining two event-exclusive Pokémon. It can be found in the deepest part of Ilex Forest, situated right in the center of the forest itself.
+
+In Japanese and [[Virtual Console]] versions of {{game|Crystal}}, the player can place the [[GS Ball]] on the shrine to make a Celebi appear, with an opportunity to capture it.
+
+In {{game|HeartGold and SoulSilver|s}}, the player can obtain a special Pichu here, [[Spiky-eared Pichu]], if the [[List of event Pokémon with in-game effects#Pichu|Pikachu-colored Pichu]] (or one of its Evolutions) is the first Pokémon in the party. This Pichu is unique from others as it has a different pattern on one of its ears. If the shrine is approached with a promotional event {{p|Celebi}} as the [[walking Pokémon|partner Pokémon]], Celebi will take the player [[Time travel|back in time]]—in which they witness the secret to {{ga|Silver}}'s past, and in which they {{pkmn|battle}} his father, [[Giovanni]] the boss of [[Team Rocket]], in [[Tohjo Falls]], before he responds to the hijacked [[Goldenrod Radio Tower]]'s broadcast pleading for his return.
+{{endspoilers}}
+
+==Items==
+In {{game|Crystal}}, as long as there are non-player characters blocking the way during the [[GS Ball]] event, the player will be unable to obtain the [[Antidote]], [[Ether]], hidden [[Full Heal]], {{TM|02|Headbutt}}, and [[X Attack]].
+
+{{itlisth|forest}}
+{{Itemlist|Revive|Southeast corner of the forest|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|HM Normal|Gift from the charcoal maker after the player has returned his {{p|Farfetch'd}}|G=yes|S=yes|C=yes|HG=yes|SS=yes|display={{HM|01|Cut}}}}
+{{Itemlist|Tiny Mushroom|In the flower patch near the sticks at the northeast corner of the southern area ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Full Heal|East of the sign near the pond ''(hidden)''|G=yes|S=yes}}
+{{Itemlist|Full Heal|Two tiles west of the sign near the pond ''(hidden)''|C=yes}}
+{{Itemlist|Antidote|Three tiles south and one tile east of the southwestern corner of the pond ''(hidden)'' |HG=yes|SS=yes}}
+{{Itemlist|X Attack|At the end of the narrow path east of the [[Trainer Tips]] sign (obscured by trees)|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Antidote|East of the pond|C=yes}}
+{{Itemlist|Antidote|At the tip of the eastern edge of the pond, between the pond and the trees (obscured by trees)|HG=yes|SS=yes}}
+{{Itemlist|Repel|In the flower patch in the indent east of the pond ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Super Potion|In the indent on the left side, north of the Move Tutor ''(hidden)''|G=yes|S=yes|HG=yes|SS=yes}}
+{{Itemlist|Tiny Mushroom|West of the easternmost flower patches on the one-way path to the Move Tutor ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Super Potion|Seven tiles east of the man who gives TM02 ''(hidden)''|C=yes}}
+{{Itemlist|TM Normal|Given by a man atop the ledge southeast of the pond|G=yes|S=yes|C=yes|display={{TM|02|Headbutt}}}}
+{{Itemlist|Ether|Northeast area of the forest ''(hidden)''|G=yes|S=yes}}
+{{Itemlist|Ether|Northeast area of the forest|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Tiny Mushroom|One tile east of the flowers right below the second northernmost isolated tree ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Full Heal|Northwest of the second northernmost isolated tree ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Ether|West of the northernmost isolated tree ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Ether|In the southeast corner just northeast of the pond ''(hidden)''|C=yes}}
+{{Itemlist|Big Mushroom|At the empty patch west of the pond (requires {{m|Surf}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Zap Plate|Held by [[Spiky-eared Pichu]]|HG=yes|SS=yes}}
+{{itlistfoot|forest}}
+
+==Pokémon==
+===Generation II===
+{{Catch/header|forest}}
+{{Catch/entry2|010|Caterpie|yes|no|no|Grass|5-6|50%|60%|0%|type1=bug}}
+{{Catch/entry2|010|Caterpie|no|no|yes|Grass|5|30%|30%|0%|type1=bug}}
+{{Catch/entry2|011|Metapod|yes|no|no|Grass|6|30%|0%|0%|type1=bug}}
+{{Catch/entry2|011|Metapod|yes|no|no|Grass|5-6|0%|30%|0%|type1=bug}}
+{{Catch/entry2|011|Metapod|no|no|yes|Grass|7|20%|20%|0%|type1=bug}}
+{{Catch/entry2|013|Weedle|no|yes|no|Grass|5-6|50%|60%|0%|type1=bug|type2=poison}}
+{{Catch/entry2|013|Weedle|no|no|yes|Grass|5|30%|30%|0%|type1=bug|type2=poison}}
+{{Catch/entry2|014|Kakuna|no|yes|no|Grass|6|30%|0%|0%|type1=bug|type2=poison}}
+{{Catch/entry2|014|Kakuna|no|yes|no|Grass|5-6|0%|30%|0%|type1=bug|type2=poison}}
+{{Catch/entry2|014|Kakuna|no|no|yes|Grass|7|10%|10%|0%|type1=bug|type2=poison}}
+{{Catch/entry2|016|Pidgey|no|no|yes|Grass|7|5%|5%|0%|type2=flying}}
+{{Catch/entry2|041|Zubat|yes|yes|no|Grass|5|5%|5%|0%|type1=poison|type2=flying}}
+{{Catch/entry2|041|Zubat|yes|yes|no|Grass|5-6|0%|0%|25%|type1=poison|type2=flying}}
+{{Catch/entry2|043|Oddish|yes|yes|no|Grass|5-6|0%|0%|60%|type1=grass|type2=poison}}
+{{Catch/entry2|043|Oddish|no|no|yes|Grass|5,7|0%|0%|50%|type1=grass|type2=poison}}
+{{Catch/entry2|046|Paras|yes|yes|no|Grass|5-6|15%|0%|15%|type1=bug|type2=grass}}
+{{Catch/entry2|046|Paras|yes|yes|no|Grass|6|0%|5%|0%|type1=bug|type2=grass}}
+{{Catch/entry2|046|Paras|no|no|yes|Grass|6|all=5%|type1=bug|type2=grass}}
+{{Catch/entry2|048|Venonat|no|no|yes|Grass|5|0%|0%|30%|type1=bug|type2=poison}}
+{{Catch/entry2|054|Psyduck|no|no|yes|Grass|7|0%|0%|10%|type1=water}}
+{{Catch/entry2|163|Hoothoot|no|no|yes|Grass|7|0%|0%|5%|type1=normal|type2=flying}}
+{{Catch/div|water|Surfing}}
+{{Catch/entry2|054|Psyduck|yes|yes|yes|Surf|10-19|all=90%|type1=water}}
+{{Catch/entry2|055|Golduck|yes|yes|yes|Surf|15-19|all=10%|type1=water}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry2|060|Poliwag|yes|yes|yes|Fish Old|10|all=15%|type1=water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=water}}
+{{Catch/entry2|060|Poliwag|yes|yes|yes|Fish Good|20|all=65%|type1=water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=water}}
+{{Catch/entry2|060|Poliwag|yes|yes|yes|Fish Super|40|all=80%|type1=water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Super|40|all=20%|type1=water}}
+{{Catch/div|forest|{{color2|000|Headbutt tree}}<br><small>(Moderate chances of battle)</small>}}
+{{Catch/entry2|010|Caterpie|yes|no|no|Headbutt|10|all=65%|type1=Bug}}
+{{Catch/entry2|011|Metapod|yes|no|no|Headbutt|10|all=15%|type1=Bug}}
+{{Catch/entry2|012|Butterfree|yes|no|yes|Headbutt|10|all=5%|type1=Bug|type2=Flying}}
+{{Catch/entry2|013|Weedle|no|yes|no|Headbutt|10|all=65%|type1=Bug|type2=Poison}}
+{{Catch/entry2|014|Kakuna|no|yes|no|Headbutt|10|all=15%|type1=Bug|type2=Poison}}
+{{Catch/entry2|015|Beedrill|no|yes|yes|Headbutt|10|all=5%|type1=Bug|type2=Poison}}
+{{Catch/entry2|102|Exeggcute|yes|yes|no|Headbutt|10|all=15%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|163|Hoothoot|no|no|yes|Headbutt|10|all=50%|type1=Normal|type2=Flying}}
+{{Catch/entry2|164|Noctowl|no|no|yes|Headbutt|10|all=10%|type1=Normal|type2=Flying}}
+{{Catch/entry2|204|Pineco|no|no|yes|Headbutt|10|all=30%|type1=Bug}}
+{{Catch/div|forest|{{color2|000|Headbutt tree}}<br><small>(Low chances of battle)</small>}}
+{{Catch/entry2|010|Caterpie|yes|no|no|Headbutt|10|all=50%|type1=Bug}}
+{{Catch/entry2|010|Caterpie|no|no|yes|Headbutt|10|all=15%|type1=Bug}}
+{{Catch/entry2|011|Metapod|no|no|yes|Headbutt|10|all=5%|type1=Bug}}
+{{Catch/entry2|012|Butterfree|yes|no|no|Headbutt|10|all=5%|type1=Bug|type2=Flying}}
+{{Catch/entry2|013|Weedle|no|yes|no|Headbutt|10|all=50%|type1=Bug|type2=Poison}}
+{{Catch/entry2|013|Weedle|no|no|yes|Headbutt|10|all=15%|type1=Bug|type2=Poison}}
+{{Catch/entry2|014|Kakuna|no|no|yes|Headbutt|10|all=5%|type1=Bug|type2=Poison}}
+{{Catch/entry2|015|Beedrill|no|yes|no|Headbutt|10|all=5%|type1=Bug|type2=Poison}}
+{{Catch/entry2|102|Exeggcute|yes|yes|no|Headbutt|10|all=15%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|163|Hoothoot|no|no|yes|Headbutt|10|all=60%|type1=Normal|type2=Flying}}
+{{Catch/entry2|204|Pineco|yes|yes|no|Headbutt|10|all=30%|type1=Bug}}
+{{Catch/footer|forest}}
+
+===Generation IV===
+{{Catch/header|forest}}
+{{Catch/entryhs|010|Caterpie|yes|no|Grass|5-6|50%|60%|0%|type1=bug}}
+{{Catch/entryhs|011|Metapod|yes|no|Grass|5|30%|0%|0%|type1=bug}}
+{{Catch/entryhs|011|Metapod|yes|no|Grass|5-6|0%|30%|0%|type1=bug}}
+{{Catch/entryhs|013|Weedle|no|yes|Grass|5-6|50%|60%|0%|type1=bug|type2=poison}}
+{{Catch/entryhs|014|Kakuna|no|yes|Grass|5-6|30%|30%|0%|type1=bug|type2=poison}}
+{{Catch/entryhs|041|Zubat|yes|yes|Grass|5|5%|5%|0%|type1=poison|type2=flying}}
+{{Catch/entryhs|041|Zubat|yes|yes|Grass|5, 6|0%|0%|25%|type1=poison|type2=flying}}
+{{Catch/entryhs|043|Oddish|yes|yes|Grass|5-6|0%|0%|60%|type1=grass|type2=poison}}
+{{Catch/entryhs|046|Paras|yes|yes|Grass|5-6|15%|5%|15%|type1=bug|type2=grass}}
+{{Catch/div|forest|Headbutt<br><small>Group A</small>}}
+{{Catch/entryhs|010|Caterpie|yes|no|Headbutt|3-5|all=30%|type1=bug}}
+{{Catch/entryhs|011|Metapod|yes|no|Headbutt|3-5|all=10%|type1=bug}}
+{{Catch/entryhs|013|Weedle|no|yes|Headbutt|3-5|all=30%|type1=bug|type2=poison}}
+{{Catch/entryhs|014|Kakuna|no|yes|Headbutt|3-5|all=10%|type1=bug|type2=poison}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|3-5|all=60%|type1=normal|type2=flying}}
+{{Catch/div|forest|Headbutt<br><small>Group B</small>}}
+{{Catch/entryhs|012|Butterfree|yes|no|Headbutt|6-8|all=10%|type1=bug|type2=flying}}
+{{Catch/entryhs|015|Beedrill|no|yes|Headbutt|6-8|all=10%|type1=bug|type2=poison}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|6-8|all=50%|type1=normal|type2=flying}}
+{{Catch/entryhs|164|Noctowl|yes|yes|Headbutt|6-8|all=10%|type1=normal|type2=flying}}
+{{Catch/entryhs|204|Pineco|yes|yes|Headbutt|6-8|all=30%|type1=bug}}
+{{Catch/div|water|Surfing}}
+{{Catch/entryhs|054|Psyduck|yes|yes|Surf|5-20|all=90%|type1=water}}
+{{Catch/entryhs|055|Golduck|yes|yes|Surf|10-20|all=10%|type1=water}}
+{{Catch/div|water|Fishing}}
+{{Catch/entryhs|060|Poliwag|yes|yes|Fish Old|10|all=15%|type1=water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=85%|type1=water}}
+{{Catch/entryhs|060|Poliwag|yes|yes|Fish Good|20|all=60%|type1=water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=40%|type1=water}}
+{{Catch/entryhs|060|Poliwag|yes|yes|Fish Super|40|all=80%|type1=water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Super|40|all=20%|type1=water}}
+{{Catch/div|forest|Special}}
+{{Catch/entryhs|172|Pichu|yes|yes|Pichu|30|all=One|type1=electric|form=Spiky-eared}}
+{{Catch/entryhs|322|Numel|yes|yes|Hoenn|6|all=20%|type1=fire|type2=ground}}
+{{Catch/entryhs|325|Spoink|yes|yes|Hoenn|5-6|all=20%|type1=psychic}}
+{{Catch/entryhs|406|Budew|yes|yes|Sinnoh|5-6|all=20%|type1=grass|type2=poison}}
+{{Catch/entryhs|455|Carnivine|yes|yes|Sinnoh|6|all=20%|type1=grass}}
+{{Catch/footer|forest}}
+
+==Special encounters==
+===Pokémon Crystal===
+A {{p|Celebi}} can be found here after [[Kurt]] has given the [[GS Ball]] back to the player.
+
+It has a 2% chance of holding a [[MiracleBerry]].
+
+{{Pokémon
+|gen=2
+|ndex=0251
+|pokemon=Celebi
+|type1=Psychic
+|type2=Grass
+|level=30
+|move1=Heal Bell|move1type=Normal
+|move2=Safeguard|move2type=Normal
+|move3=AncientPower|move3type=Rock
+|move4=Future Sight|move4type=Psychic}}
+
+==Trainers==
+===Generation II===
+{{trainerheader|forest}}
+{{Trainerentry|Spr GS Bug Catcher.png|Bug Catcher|Wayne{{sup/2|C}}|160|2|165|Ledyba|♂|8|None|046|Paras|♂|10|None|36=ケンイチ|37=Kenichi}}
+{{Trainerfooter|forest|II}}
+
+==[[Location preview|Preview]]==
+<gallery>
+File:HGSS Ilex Forest-Morning.png|Morning (Zubat)
+File:HGSS Ilex Forest-Day.png|Day (Paras)
+File:HGSS Ilex Forest-Evening.png|Evening (Paras)
+File:HGSS Ilex Forest-Night.png|Night (Oddish)
+</gallery>
+
+==Layout==
+{{Mapgen
+|hv=v
+|colordark={{locationcolor/dark|forest}}
+|colorlight={{locationcolor/light|forest}}
+|genII=Ilex Forest GSC.png
+|sizeII=180px
+|genIV=Ilex Forest HGSS.png
+|sizeIV=180px}}
+
+==Trainer Tips==
+===Generation II===
+{{sign|GSC|header}}
+<sc>Ilex Forest</sc> is so overgrown with trees that you can't see the sky. Please watch out for items that may have been dropped.
+{{sign|GSC|footer}}
+
+===Generation IV===
+{{sign|DPtip|header}}
+{{sign|DPtip|title|Trainer Tips}}
+Ilex Forest is so overgrown with trees that you can't see the sky. Please watch out for items that may have been dropped.
+{{sign|DPtip|footer}}
+
+==Music==
+{| class="roundtable" style="margin:auto; text-align: center; background: #{{locationcolor/med|forest}}; border: 3px solid #{{locationcolor/dark|forest}}"
+|- style="background:#{{locationcolor/light|forest}}"
+! Games
+! Situation
+! Song name
+! Song name
+! Composition
+! Arrangement
+|- style="background:#FFF"
+! {{GameIcon|G}}{{GameIcon|S}}{{GameIcon|C}}
+| Everywhere
+| つながりのどうくつ
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Union Cave]]
+| [[Junichi Masuda]]
+| [[Junichi Masuda]]
+|-
+|- style="background:#FFF"
+! rowspan=3 | {{GameIcon|HG}}{{GameIcon|SS}}
+| Everywhere
+| つながりのどうくつ
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Union Cave]] || [[Junichi Masuda]] || [[Go Ichinose]]<br><small>[[GB Sounds]]:</small> [[Junichi Masuda]]
+|-
+|}
+
+==In the spin-off games==
+===[[Pokémon Masters EX]]===
+Artwork depicting the Ilex Forest is seen in [[Sygna suit|Sygna Suit]] {{mas|Lyra}}'s mindscape.
+{| style="background: #{{masters color dark}}; {{roundy}}; border: #{{masters color dark}};"
+|
+{| style="background: #{{masters color light}}; {{roundy}}; border: #{{masters color light}};"
+|- style="text-align:center"
+|
+{| style="background: #{{grass color light}}; {{roundy}}; border: #{{grass color light}}; padding: 0px 5px 5px 5px"
+|-
+|<big>'''{{color2|000|Lyra (Masters)#Celebi|Sygna Suit Lyra & Celebi}}'''</big>
+|-
+| [[File:Lyra Sygna Mindscape.png|200px]]
+|}
+|}
+|}
+
+==In animation==
+===''Pokémon the Series''===
+[[File:Ilex Forest anime.png|thumb|250px|Ilex Forest in {{aniseries|JN}}]]
+In {{aniseries|GS}}, people live in Ilex Forest, and a [[Nurse Joy]] operates a [[Pokémon Center]] to cater for the many {{pkmn|Trainer}}s that use it as a thoroughfare. In {{aniseries|JN}}, the forest's portrayal is closer to its game portrayal, with no signs of permanent human residence shown there.
+
+===={{aniseries|GS}}====
+Ilex Forest first appeared in ''[[EP145|A Farfetch'd Tale]]'', where {{Ash}} and {{ashfr}} used it to travel from [[Azalea Town]] to [[Goldenrod City]]. It remains unclear if the episodes from ''[[EP146|Tricks of the Trade]]'' to ''[[EP157|The Fortune Hunters]]'' take place within Ilex Forest as well, however.
+
+In ''A Farfetch'd Tale'', the group met a young [[charcoal]]-making apprentice named {{OBP|Sylvester|EP145}} and his disobedient {{p|Farfetch'd}}, who continued to run away from him. Ash and his friends helped Sylvester track Farfetch'd down, only to realize it had been kidnapped by {{TRT}}. Sylvester and Farfetch'd went on to join forces to defeat the trio, and Sylvester then taught Farfetch'd how to use {{m|Cut}}. {{an|Brock}} was familiar with Ilex Forest's world-famous charcoal, and uses it for his cooking. After helping Sylvester, Brock received some charcoal from Sylvester's master (father in the English [[dub]]), the local charcoal maker [[Yosaku]].
+
+===={{aniseries|JN}}====
+In ''[[JN032|Time After Time!]]'', [[Goh]] was revealed to have visited Ilex Forest three years earlier, meeting a boy named [[Horace]] and looking for the [[Ilex Forest shrine]] together with him. However, when Horace didn't show up the next day to resume the search, Goh felt betrayed and thought Horace had lied about them being friends. In the present day, Goh revisited the forest while on holiday with his parents [[Camille]] and [[Walker]] in Azalea Town. There, he caught a {{DL|List of Goh's Pokémon|Pineco}} and an {{DL|List of Goh's Pokémon|Ariados}} and found his way to the shrine, where he discovered a letter left for him by Horace, in which he explained that he had been unable to meet him as promised due to him having caught a cold. Horace subsequently also appeared at the shrine, allowing the two boys to restore their childhood friendship in person while being unknowingly observed by two {{p|Celebi}}, including a {{Shiny}} one.
+
+====Gallery====
+{| style="margin:auto; text-align:center; background: #5a7d38; {{roundy}}; border: 3px solid #4E6E2E"
+|- style="background:#688D43"
+! style="{{roundytl|5px}}" | {{color2|000|Pokémon Center}} 
+! {{color2|000|Ilex Forest shrine}}
+! style="{{roundytr|5px}}" | {{color2|000|Sylvester (EP145)|Charcoal kiln}} house
+|- style="background:#fff"
+| [[File:Ilex Forest Pokémon Center.png|x150px]]
+| [[File:Ilex Forest shrine anime.png|x150px]]
+| [[File:Sylvester house.png|x150px]]
+|}
+
+==In the manga==
+===Pokémon Adventures===
+[[File:Ilex Forest Adventures.png|thumb|250px|Ilex Forest in [[Pokémon Adventures]]]]
+===={{MangaArc|Gold, Silver & Crystal}}====
+Ilex Forest first appeared in ''[[PS103|You Ain't Nothin' But A Houndour]]'', where a tree-cutter was doing his shift for the day. When {{adv|Gold}} arrived in the forest, he saw the tree-cutter and his {{p|Farfetch'd}} unconscious. A mysterious voice then told Gold to stay away, before revealing itself as the [[Masked Man]]. Gold engaged in a {{pkmn|battle}} with the Masked Man, and was about to be defeated when the Masked Man saw that the [[Ilex Forest shrine|forest's shrine]] started to glow. However, the glow faded before the Masked Man could reach it, after which he left the forest.
+{{spoilers}}
+Starting from ''[[PS173|The Last Battle VII]]'', Ilex Forest became the setting of the climax of the arc. {{adv|Green}} entered the forest in order to find the shrine, only to be confronted by [[Will]] and [[Karen]], whom the Masked Man had ordered to guard the shrine alongside {{adv|Tower duo|Lugia and Ho-Oh}}. To Will and Karen's surprise, Green had managed to overcome her {{wp|ornithophobia}} by {{pkmn2|caught|catching}} the {{adv|legendary birds}}, which she sent out to battle {{p|Lugia}} and {{p|Ho-Oh}}. Meanwhile, Gold contronted the Masked Man as he was en route to the forest after stealing the recipe of the [[GS Ball]] from [[Kurt]] at the [[Indigo Plateau]]. During the battle, Gold managed to shatter his mask, revealing his true identity as [[Pryce]] of the [[Mahogany Gym]]. When [[Pika]] and [[Chuchu]] intervened in the battle, Gold was forced to give up fighting so he could protect the two {{p|Pikachu}} and their {{pkmn|Egg}}. After Pryce had escaped, the Egg hatched in Gold's hands, revealing a {{p|Pichu}}, whom Gold [[nickname]]d [[Pibu]] and left with to pursue Pryce.
+
+Meanwhile, {{adv|Red}} and {{adv|Blue}} arrived at the forest from {{m|Dig|underground}} and joined the battle on Green's side. They witnessed countless Pokémon, sent to the [[Azalea Town]] [[Pokémon Center]] via the [[Pokémon Storage System]], gathering to connect with Lugia and Ho-Oh, freeing them from the Masked Man's control. {{adv|Yellow}} then also arrived, having been chased there from {{rt|34|Johto}} by [[Neo Team Rocket]] members, followed by {{adv|Crystal}}, who teleported to the forest with the help of the {{adv|Legendary beasts}}. With {{adv|Silver}} being present as well, the [[Pokédex holder]]s of [[Kanto]] and [[Johto]] joined to battle against Pryce, who used puppets made of ice to hold them off while he used the GS Ball to catch {{adv|Celebi}} as it emerged from the crack of time within the shrine and ordered it to [[time travel|transport him to the past]].
+
+Riding the Legendary beasts, Gold, Silver, and Crystal pursued Pryce into the crack of time, where they found out that Pryce's plans as the Masked Man, including the establishment of Neo Team Rocket and the atrocities he and his underlings had committed, had all been in an effort to allow him to acquire Celebi and travel into the past to save his two {{p|Lapras}}, which had died in an accident before his eyes when he was younger. Using Pibu's "{{m|Volt Tackle|Super Rising Thunder}}" attack, Gold was able to destroy the GS Ball and set Celebi free. When Pryce started hearing the song "[[Boy and his Lapras]]", which his friends had made for him in his youth to cure him of his depression, and saw the offspring of his two Lapras rejoining its parents in the past, he was finally able to let go of his anger, willingly leaving himself to float within the crack of time.
+
+Following Pryce's defeat, the Pokédex holders reunited in Ilex Forest. Blue intended to bring Silver to the police due to his [[PS093|theft]] of [[Professor Elm]]'s {{TP|Silver|Totodile}}, but Gold, who had given the police false testimony regarding Silver's appearance, told Blue to let him go, since he didn't look anything like the person on the {{wp|wanted poster}}. Gold subsequently departed with Red in order to {{pkmn|training|train}} with him on [[Mt. Silver]], while the other Pokédex holders returned to their everyday lives. Will and Karen, meanwhile, encountered [[Koga]] and [[Bruno]], whom they joined as fellow people with experiences of having been on the wrong side of the law.
+
+===={{MangaArc|HeartGold & SoulSilver}}====
+In a flashback in ''[[PS458|All About Arceus VII]]'', Celebi was seen rescuing Pryce from the crack of time, only for him to be confronted by {{adv|Giovanni}} the moment he exited the shrine. Since Pryce had been responsible for kidnapping Giovanni's son, Silver, years earlier, Giovanni attacked him on sight, but the situation was prevented escalating by the arrival of [[Lance]], who had helped to organize Pryce's return. The reason for this was that, while floating in the crack of time, Pryce had foreseen a disaster that could destroy the [[Johto]] and [[Sinnoh]] [[region]]s. Giovanni, who had come to the forest to seek Celebi's help in curing his long-time illness, ordered the [[Team Rocket Elite Trio]] to guard the forest and Celebi while he, Lance, and Pryce headed to the [[Sinjoh Ruins]] to stop the disaster from occurring.
+
+In ''[[PS460|All About Arceus IX]]'', the Team Rocket Elite Trio encountered Gold's Pibu and a [[spiky-eared Pichu]], who were helping Celebi in gathering ingredients for Giovanni's medicine. Deeming the two Pokémon harmless, they resumed their patrol, only to be confronted by a group of {{tc|Team Rocket Grunt}}s, who had grown suspicious of their unexplained activity. When they spotted Celebi, they tried to capture it, but the trio helped Celebi to escape and told it to deliver the completed medicine to Giovanni at the [[Ruins of Alph]].
+{{endspoilers}}
+
+===Pokémon Gold & Silver: The Golden Boys===
+[[File:Ilex Forest Golden Boys.png|thumb|250px|Ilex Forest in [[Pokémon Gold & Silver: The Golden Boys]]]]
+Ilex Forest appeared in ''[[GB08|For Pikachu's Sake!! The Search For The Missing Farfetch'd]]''. Soon after departing from [[Azalea Town]], {{GnB|Gold}} encountered a man who asked for his help in finding his runaway {{p|Farfetch'd}}. [[Whitney]] then also appeared, agreeing to help if she received a cute Pokémon as a reward once she was done. However, since the man didn't have any Pokémon other than Farfetch'd, Whitney declared that she'd instead take [[Gold's Pikachu]] if she won, whereas Gold would get a {{badge|Plain}} from her if he won, surprising Gold with her [[Gym Leader]] status.
+
+The search for Farfetch'd commenced, with [[Gold's Pidgey]] and Whitney's {{p|Ditto}} soon locating it. Since they reached Farfetch'd simultaneously, Gold and Whitney decided to settle things with a {{pkmn|battle}}. The battle between [[Gold's Bayleef]] and [[Whitney's Miltank]] was called off when it almost resulted in Whitney's {{p|Cleffa}} being buried under falling rubble. Whitney blamed herself of having put her own Pokémon's safety at risk and said that she had lost. Gold, however, declared that he was the true loser, as he considered his strategy and {{pkmn|training}} skills inferior to hers. As such, Whitney then proceeded to claim Gold's Pikachu as her own, much to Gold's disagreement. Meanwhile, the Farfetch'd man was left alone, with Gold and Whitney having completely forgotten about their mission to return his Pokémon to him.
+{{-}}
+
+==Trivia==
+* Ilex Forest is the only forest where [[wild Pokémon]] can be encountered but there is no [[tall grass]].
+* In the Generation II games, the [[Pokégear]]'s map made it appear that a route existed between Azalea Town and Ilex Forest, even though this is not the case. This was corrected for the map in [[Generation IV]].<!--we need an image of the map in Generation II-->
+* In {{game|Crystal}}, if the player has retrieved the [[GS Ball]] from [[Kurt]], the leaves on the big trees in Ilex Forest are moving. They stop moving again once {{p|Celebi}} has been encountered.
+* According to an interview uploaded in the official [[Game Freak]]'s [[YouTube]] channel about Celebi's creation<ref>https://www.youtube.com/watch?v=LIqv16TfQ3Q</ref>, it seems that no one at the company knows nor remembers why the shrine was added to the map. It wasn't until they heard rumors about Celebi having a relation with the shrine that they included an in-game {{pkmn2|event}} where it could be found there.
+
+==Names==
+{| class="roundtable" style="background:#{{locationcolor/med|forest}}; border:3px solid #{{locationcolor/dark|forest}}"
+|-
+! style="background:#{{locationcolor/light|forest}}" | Language
+! style="background:#{{locationcolor/light|forest}}" | Name
+! style="background:#{{locationcolor/light|forest}}" | Origin
+|-
+| Japanese
+| ウバメの森 ''Ubame no Mori''
+| From 姥目樫 ''ubamegashi'' ({{wp|Quercus phillyreoides|ubame oak}}), a species of tree used to make ''{{wp|binchōtan}}'' charcoal
+|-
+| English
+| Ilex Forest
+| From ''{{wp|Quercus ilex}}'' (scientific name of the holly oak) or the genus ''{{wp|Ilex}}'' (holly)
+|-
+| German
+| Steineichenwald
+| From ''Steineiche'' (holly oak)
+|-
+| European Spanish
+| Encinar
+| From ''encina'' (holly oak)
+|-
+| Latin American Spanish
+| Bosque Ilex<ref group=n>[[Pokémon animated series]]</ref>
+| From its English name
+|-
+| European French,<br>Canadian French
+| Bois aux Chênes
+| From ''chêne'' ({{wp|oak}})
+|-
+| Italian
+| Bosco di Lecci
+| From ''leccio'' (holly oak)
+|-
+| Korean
+| 너도밤나무숲 ''Neodobamnamu Sup''
+| From 너도밤나무 ''neodobamnamu'' ({{wp|beech}})
+|-
+| Chinese (Traditional)
+| 櫟樹林 ''Lìshùlín'' / ''Līksyuhlàhm''
+| From 櫟樹 ''lìshù  / līksyuh'' (oak)
+|-
+| Chinese (Taiwan)
+| 桐樹林 ''Tóngshùlín''<ref group=n>Pokémon animated series (Top Insight dub, Mighty Media dub), [[Pokémon Adventures]]</ref><br>梅野的森林 ''Méiyě de Sēnlín''<ref group=n>Pokémon animated series ([[M04]])</ref>
+| From 梧桐 ''wútóng'' ({{wp|Firmiana simplex|Chinese parasol tree}})<br>From the Japanese name 梅野 ''Umeno'' where the name literally means "plum field"
+|-
+| Chinese (Hong Kong)
+| 桐樹林 ''Tùhngsyuhlàhm''<ref group=n>Pokémon Adventures</ref><br>桐森林 ''Tùhngsāmlàhm''<ref group=n>Pokémon Adventures (volume {{pkmn|Adventures volume 9|9}} appendix)</ref><br>姥姥森林 ''Lóuhlóuh Sāmlàhm''<ref group=n>Pokémon animated series (M04)</ref>
+| From 梧桐 ''wútóng / ǹghtùhng'' (Chinese parasol tree)<br>From a partial borrowing of Japanese 姥目樫 ''ubamegashi'' (ubame oak) and 姥姥 ''lóuhlóuh'' (colloquial word for maternal grandmother)
+|-
+| Chinese (mainland China)
+| 栎树林 ''Lìshùlín''<ref group=n>Pokémon Adventures (third edition)</ref><br>桐树林 ''Tóngshùlín''<ref group=n>Pokémon Adventures (first and second edition)</ref><br>梧桐大森林 ''Wútóng Dà Sēnlín''<ref group=n>[[Let's Find Pokémon!]]</ref>
+| From 梧桐 ''wútóng'' (Chinese parasol tree)
+|-
+| Brazilian Portuguese
+| Floresta de Ilex<ref group=n>Pokémon Adventures (volume {{pkmn|Adventures volume 9|9}} onwards)</ref><br>Floresta Ilex<ref group=n>Pokémon Adventures (volume {{pkmn|Adventures volume 8|8}})</ref>
+| From its English name
+|-
+| Catalan
+| Alzinar
+| From ''alzina'' (holly oak)
+|-
+| Czech
+| Ilexový les<ref group=n>Pokémon animated series ([[JN032]]), Pokémon Adventures</ref><br>Cesmínový les<ref group=n>Pokémon animated series ([[EP145]])</ref>
+| From its English name<br>From ''cesmína'' (holly) and the suffix ''-ový'' (pertaining to)
+|-
+| Finnish
+| Ilex-metsä
+| From its English name
+|-
+| Polish
+| Las Ilex
+| From its English name
+|-
+| Vietnamese
+| Rừng Ubame
+| Transcription of its Japanese name
+|}
+{{-}}
+
+===Notes===
+{{reflist|group=n}}
+
+==References==
+<references />
+
+==Related articles==
+{{Johto}}
+{{legendarylocations|johto}}
+{{Project Locations notice}}
+
+[[Category:Johto locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Forests]]
+
+[[de:Steineichenwald]]
+[[es:Encinar]]
+[[fr:Bois aux Chênes]]
+[[it:Bosco di Lecci]]
+[[ja:ウバメのもり]]
+[[zh:栎树林]]

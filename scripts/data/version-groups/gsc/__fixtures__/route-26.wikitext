@@ -1,0 +1,226 @@
+<!-- poke-guide fixture: {"title":"Kanto Route 26","resolvedTitle":"Kanto Route 26","revid":4534887,"timestamp":"2026-04-19T15:59:56Z","fetchedAt":"2026-09-23T16:33:53.055Z"} -->
+{{Route infobox
+|number=26
+|size=150
+|image=Kanto Route 26 HGSS.png
+|imageII=Kanto Route 26 GSC.png
+|type=land
+|surf=yes
+|north=Pokémon League Reception Gate
+|west=Route 27
+|regionwest=Kanto
+|mapdesc=An unimaginably difficult mountain road that gives the impression of a test.
+|region=Kanto
+|generation=2
+}}
+
+'''Route 26''' (Japanese: '''２６ばんどうろ''' ''Route 26'') is a [[route]] located in western [[Kanto]]. It connects the [[Pokémon League Reception Gate]] in the north to {{rt|27|Kanto}} in the south.
+
+==Route description==
+From its southern terminus at {{rt|27|Kanto}}, Route 26 continues east on a bridge over a body of [[Water tile|water]] for eight paces before turning north, where a {{pkmn|Trainer}} waits. About fifteen paces north of the northward turn, Route 26 makes landfall for the first time. At this point, the [[route]] turns to the northeast for a short distance, passing through several [[Tall grass|grassy areas]] filled with [[wild Pokémon]], after which another Trainer waits at a three-way intersection. To the west is the southern exit of a southbound-only express route, which occupies the west side of Route 26 and can be used to quickly return to Route 27, the [[Tohjo Falls]], and [[Johto]]. To the north are more grass patches and the main path of Route 26 as it continues on.
+
+Free of grass for the remainder of the route, the road continues north for another twenty paces before intersecting the northern terminus of the express path. North of this intersection is a rest stop similar to that on {{rt|111|Hoenn}} in [[Hoenn]]. Next to this house is an [[Ice Berry]] tree{{sup/2|GSC}} or a [[Blue Apricorn|Blu Apricorn]]{{sup/4|HGSS}}.
+
+Route 26 turns northwest from the rest stop, passing another Trainer before returning northward. Twenty-five paces ahead, {{tc|Ace Trainer|Cooltrainer}} Gaven{{sup/2|GSC}} / {{tc|Ace Trainer}} Gaven{{sup/4|HGSS}} awaits on the west bank of a small pond located east of the route. Upon defeating him, he will offer to exchange numbers in the [[Pokégear]] for future rematches.
+
+Continuing towards the [[Pokémon League Reception Gate]], the road turns northeast ahead of another southbound-only express path. The route straightens out, taking on a northern alignment as it passes another Trainer hidden in an alcove and Cooltrainer Beth{{sup/2|GSC}} / Ace Trainer Jamie{{sup/4|HGSS}} at the northern terminus of both the express path and Route 26. She will also offer to exchange numbers after {{pkmn|battle|battling}}.
+
+Just north of her is the south entrance to the Pokémon League Reception Gate as well as the signpost that gives the gate its formal name.
+
+===Northern express path===
+Southwest of the [[Pokémon League Reception Gate]] is a series of ledges enclosed by the eastern side of a large mountain (which comprises the western edge of Route 26) and a series of hills between the express path and the main path of the route. Together, the ledges make a southbound-only path that can be used to quickly travel down Route 26. A [[Max Elixir]] is also located amongst the ledges. The path rejoins Route 26 northwest of a small pond.
+
+===Southern express path===
+The southern express path begins south of the rest stop at an intersection with Route 26. After heading west, the path enters a large area of grass, which encompasses most of the northern portion of the path. Eight paces to the west, the express route turns south for another ten paces before circling east around a house, which happens to be the home of the [[Week Siblings]], although none of them are present. A note on the table inside reveals the location of every sibling and the [[days of the week]] on which they will appear.
+
+South of the house, the path hops over a ledge, effectively making the path southbound-only. Here, it meets the southern entrance to the express path. Traveling east along the entrance is prohibited by a ledge that separates the entrance from the path.
+
+Continuing south of the one-way intersection, the path hops over two more ledges before reaching the body of water that encompasses most of the southern terminus. {{pkmn|Trainer}}s can either {{m|surf}} east across the water to the bridge or turn to the west and continue along the express path, which continues for a short distance before forcing Trainers to hop a ledge onto {{rt|27|Kanto}}.
+
+==Items==
+{{Itlisth}}
+{{Itemlist|none|North of rest stop (daily)|G=yes|S=yes|C=yes|display=[[Ice Berry]]}}
+{{Itemlist|Blue Apricorn|North-west of rest stop (daily)|HG=yes|SS=yes|display=[[Blue Apricorn|Blu Apricorn]]}}
+{{Itemlist|Tiny Mushroom|North-east of Ace Trainer Jake ''(hidden)''|HG=yes|SS=yes|display=[[Tiny Mushroom|TinyMushroom]]}}
+{{Itemlist|Max Elixir|On the northern express path after the second ledge|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itlistfoot}}
+
+==Pokémon==
+===Generation II===
+{{Catch/header|land}}
+{{Catch/entry2|020|Raticate|yes|no|no|Grass|30|4%|5%|0%|type1=Normal}}
+{{Catch/entry2|020|Raticate|yes|no|yes|Grass|28,30|0%|0%|40%|type1=Normal}}
+{{Catch/entry2|020|Raticate|no|yes|no|Grass|28,30|34%|35%|70%|type1=Normal}}
+{{Catch/entry2|020|Raticate|no|no|yes|Grass|30|10%|10%|0%|type1=Normal}}
+{{Catch/entry2|024|Arbok|no|yes|no|Grass|30|all=5%|type1=Poison}}
+{{Catch/entry2|024|Arbok|no|no|yes|Grass|30|5%|5%|0%|type1=Poison}}
+{{Catch/entry2|028|Sandslash|yes|no|no|Grass|28|all=30%|type1=Ground}}
+{{Catch/entry2|028|Sandslash|no|no|yes|Grass|28|30%|30%|0%|type1=Ground}}
+{{Catch/entry2|077|Ponyta|yes|yes|no|Grass|32|all=20%|type1=Fire}}
+{{Catch/entry2|077|Ponyta|no|no|yes|Grass|32|20%|20%|0%|type1=Fire}}
+{{Catch/entry2|084|Doduo|yes|yes|no|Grass|28,30|40%|40%|0%|type1=Normal|type2=Flying}}
+{{Catch/entry2|084|Doduo|no|no|yes|Grass|28,30|35%|35%|0%|type1=Normal|type2=Flying}}
+{{Catch/entry2|085|Dodrio|yes|no|no|Grass|30|5%|5%|0%|type1=Normal|type2=Flying}}
+{{Catch/entry2|164|Noctowl|no|no|yes|Grass|28,32|0%|0%|50%|type1=Normal|type2=Flying}}
+{{Catch/entry2|195|Quagsire|yes|no|no|Grass|30|1%|0%|0%|type1=Water|type2=Ground}}
+{{Catch/entry2|195|Quagsire|yes|no|no|Grass|30,32|0%|0%|10%|type1=Water|type2=Ground}}
+{{Catch/entry2|195|Quagsire|no|yes|no|Grass|30|1%|0%|5%|type1=Water|type2=Ground}}
+{{Catch/entry2|195|Quagsire|no|no|yes|Grass|30|0%|0%|10%|type1=Water|type2=Ground}}
+{{Catch/div|water|Surfing}}
+{{Catch/entry2|072|Tentacool|yes|yes|yes|Surf|25-34|all=90%|type1=Water|type2=Poison}}
+{{Catch/entry2|073|Tentacruel|yes|yes|yes|Surf|30-34|all=10%|type1=Water|type2=Poison}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry2|072|Tentacool|yes|yes|yes|Fish Old|10|all=15%|type1=Water|type2=Poison}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entry2|072|Tentacool|yes|yes|yes|Fish Good|20|all=35%|type1=Water|type2=Poison}}
+{{Catch/entry2|090|Shellder|yes|yes|yes|Fish Good|20|all=10%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=Water}}
+{{Catch/entry2|170|Chinchou|yes|yes|yes|Fish Good|20|all=20%|type1=Water|type2=Electric}}
+{{Catch/entry2|073|Tentacruel|yes|yes|yes|Fish Super|40|all=20%|type1=Water|type2=Poison}}
+{{Catch/entry2|090|Shellder|yes|yes|yes|Fish Super|40|all=30%|type1=Water}}
+{{Catch/entry2|170|Chinchou|yes|yes|yes|Fish Super|40|all=40%|type1=Water|type2=Electric}}
+{{Catch/entry2|171|Lanturn|yes|yes|yes|Fish Super|40|all=10%|type1=Water|type2=Electric}}
+{{Catch/div|land|{{color2|000|Headbutt tree}}<br><small>(Moderate chances of battle)</small>}}
+{{Catch/entry2|010|Caterpie|yes|no|no|Headbutt|10|all=65%|type1=Bug}}
+{{Catch/entry2|011|Metapod|yes|no|no|Headbutt|10|all=15%|type1=Bug}}
+{{Catch/entry2|012|Butterfree|yes|no|no|Headbutt|10|all=5%|type1=Bug|type2=Flying}}
+{{Catch/entry2|013|Weedle|no|yes|no|Headbutt|10|all=65%|type1=Bug|type2=Poison}}
+{{Catch/entry2|014|Kakuna|no|yes|no|Headbutt|10|all=15%|type1=Bug|type2=Poison}}
+{{Catch/entry2|015|Beedrill|no|yes|no|Headbutt|10|all=5%|type1=Bug|type2=Poison}}
+{{Catch/entry2|023|Ekans|no|no|yes|Headbutt|10|all=15%|type1=Poison}}
+{{Catch/entry2|102|Exeggcute|yes|yes|no|Headbutt|10|all=15%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|102|Exeggcute|no|no|yes|Headbutt|10|all=20%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|163|Hoothoot|no|no|yes|Headbutt|10|all=65%|type1=Normal|type2=Flying}}
+{{Catch/div|land|{{color2|000|Headbutt tree}}<br><small>(Low chances of battle)</small>}}
+{{Catch/entry2|010|Caterpie|yes|no|no|Headbutt|10|all=50%|type1=Bug}}
+{{Catch/entry2|012|Butterfree|yes|no|no|Headbutt|10|all=5%|type1=Bug|type2=Flying}}
+{{Catch/entry2|013|Weedle|no|yes|no|Headbutt|10|all=50%|type1=Bug|type2=Poison}}
+{{Catch/entry2|015|Beedrill|no|yes|no|Headbutt|10|all=5%|type1=Bug|type2=Poison}}
+{{Catch/entry2|102|Exeggcute|yes|yes|no|Headbutt|10|all=15%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|102|Exeggcute|no|no|yes|Headbutt|10|all=20%|type1=Grass|type2=Psychic}}
+{{Catch/entry2|163|Hoothoot|no|no|yes|Headbutt|10|all=50%|type1=Normal|type2=Flying}}
+{{Catch/entry2|204|Pineco|yes|yes|yes|Headbutt|10|all=30%|type1=Bug}}
+{{Catch/footer|land}}
+
+===Generation IV===
+{{Catch/header|land}}
+{{Catch/entryhs|020|Raticate|yes|no|Grass|30|5%|5%|0%|type1=Normal}}
+{{Catch/entryhs|020|Raticate|yes|no|Grass|28, 30|0%|0%|35%|type1=Normal}}
+{{Catch/entryhs|020|Raticate|no|yes|Grass|28, 30|35%|35%|0%|type1=Normal}}
+{{Catch/entryhs|020|Raticate|no|yes|Grass|28|0%|0%|65%|type1=Normal}}
+{{Catch/entryhs|024|Arbok|no|yes|Grass|30|all=5%|type1=Poison}}
+{{Catch/entryhs|028|Sandslash|yes|no|Grass|28|all=30%|type1=Ground}}
+{{Catch/entryhs|077|Ponyta|yes|yes|Grass|32|all=20%|type1=Fire}}
+{{Catch/entryhs|084|Doduo|yes|yes|Grass|28, 30|40%|40%|5%|type1=Normal|type2=Flying}}
+{{Catch/entryhs|085|Dodrio|yes|no|Grass|30|5%|5%|0%|type1=Normal|type2=Flying}}
+{{Catch/entryhs|195|Quagsire|yes|no|Grass|30|0%|0%|10%|type1=Water|type2=Ground}}
+{{Catch/entryhs|195|Quagsire|no|yes|Grass|30|0%|0%|5%|type1=Water|type2=Ground}}
+{{Catch/div|water|Surfing}}
+{{Catch/entryhs|072|Tentacool|yes|yes|Surf|25-30|all=90%|type1=Water|type2=Poison}}
+{{Catch/entryhs|073|Tentacruel|yes|yes|Surf|30|all=10%|type1=Water|type2=Poison}}
+{{Catch/div|water|Fishing}}
+{{Catch/entryhs|072|Tentacool|yes|yes|Fish Old|10|all=15%|type1=Water|type2=Poison}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entryhs|072|Tentacool|yes|yes|Fish Good|20|all=30%|type1=Water|type2=Poison}}
+{{Catch/entryhs|090|Shellder|yes|yes|Fish Good|20|all=10%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{Catch/entryhs|170|Chinchou|yes|yes|Fish Good|20|all=20%|type1=Water|type2=Electric}}
+{{Catch/entryhs|073|Tentacruel|yes|yes|Fish Super|40|all=20%|type1=Water|type2=Poison}}
+{{Catch/entryhs|090|Shellder|yes|yes|Fish Super|40|all=30%|type1=Water}}
+{{Catch/entryhs|170|Chinchou|yes|yes|Fish Super|40|all=40%|type1=Water|type2=electric}}
+{{Catch/entryhs|171|Lanturn|yes|yes|Fish Super|40|all=10%|type1=Water|type2=Electric}}
+{{Catch/div|land|Headbutt<br/><small>Group A</small>}}
+{{Catch/entryhs|102|Exeggcute|yes|yes|Headbutt|28-29|all=20%|type1=Grass|type2=Psychic|10=k}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|28-29|all=50%|type1=Normal|type2=Flying|10=k}}
+{{Catch/entryhs|204|Pineco|yes|yes|Headbutt|28-29|all=30%|type1=Bug|10=k}}
+{{Catch/div|land|Headbutt<br/><small>Group B</small>}}
+{{Catch/entryhs|102|Exeggcute|yes|yes|Headbutt|31-32|all=20%|type1=Grass|type2=Psychic|10=k}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|31-32|all=50%|type1=Normal|type2=Flying|10=k}}
+{{Catch/entryhs|165|Ledyba|no|yes|Headbutt|31-32|all=30%|type1=Bug|type2=Flying|10=k}}
+{{Catch/entryhs|167|Spinarak|yes|no|Headbutt|31-32|all=30%|type1=Bug|type2=Poison|10=k}}
+{{Catch/div|land|Special}}
+{{Catch/entryhs|264|Linoone|yes|yes|Hoenn|32|all=20%|type1=Normal}}
+{{Catch/entryhs|293|Whismur|yes|yes|Hoenn|28|all=20%|type1=Normal}}
+{{Catch/entryhs|399|Bidoof|yes|yes|Sinnoh|32|all=20%|type1=Normal}}
+{{Catch/entryhs|418|Buizel|yes|yes|Sinnoh|28|all=20%|type1=Water}}
+{{Catch/footer|land}}
+
+==Trainers==
+===Generation II===
+{{trainerheader}}
+{{Trainerentry|Spr GS Fisher.png|Fisher|Scott|1360|3|211|Qwilfish|♂|30|None|211|Qwilfish|♂|30|None|119|Seaking|♂|34|None|36=タカヨシ|37=Takayoshi}}
+{{Trainerdiv}}
+{{Trainerentry|Spr GS Psychic.png|Psychic|Richard|1152|1|196|Espeon|♂|36|None|36=ジン|37=Gin}}
+{{Trainerdiv}}
+{{Trainerentry|Spr GS Cooltrainer F.png|Cooltrainer|Joyce|1536|2|025|Pikachu|♀|36|None|009|Blastoise|♂|32|None|36=レイカ|37=Reika}}
+{{Trainerdiv}}
+{{Trainerentry|Spr GS  Cooltrainer M.png|Cooltrainer|Gaven|1536|3|071|Victreebel|♂|32|None|099|Kingler|♂|32|None|136|Flareon|♂|32|None|36=シュン|37=Shun|38=phone}}
+{{Trainerdiv}}
+{{Trainerentry|Spr GS  Cooltrainer M.png|Cooltrainer|Jake|1680|2|047|Parasect|♂|33|None|055|Golduck|♂|35|None|36=ユウキ|37=Yuki}}
+{{Trainerdiv}}
+{{Trainerentry|Spr GS  Cooltrainer F.png|Cooltrainer|Beth|1728|1|078|Rapidash|♀|36|None|36=ヒトミ|37=Hitomi|38=phone}}
+{{Trainerdiv|Land|Rematch}}
+{{Trainerentry|Spr GS  Cooltrainer M.png|Cooltrainer|Gaven{{sup/2|GS}}|1632<br><small>After becoming {{pkmn|Champion}}</small>|3|071|Victreebel|♂|34|None|099|Kingler|♂|34|None|136|Flareon|♂|34|None|36=シュン|37=Shun|38=phone}}
+{{Trainerentry|Spr GS  Cooltrainer M.png|Cooltrainer|Gaven{{sup/2|GS}}|1824<br><small>After returning the [[Machine Part]]</small>|3|071|Victreebel|♂|38|None|099|Kingler|♂|38|None|136|Flareon|♂|38|None|36=シュン|37=Shun|38=phone}}
+{{Trainerentry|Spr GS  Cooltrainer M.png|Cooltrainer|Gaven{{sup/2|C}}|1680<br><small>After becoming {{pkmn|Champion}}<br/>and defeating the previous team</small>|3|071|Victreebel|♂|35|None|099|Kingler|♂|35|None|136|Flareon|♂|35|None|36=シュン|37=Shun|38=phone}}
+{{Trainerentry|Spr GS  Cooltrainer M.png|Cooltrainer|Gaven{{sup/2|C}}|1872<br><small>After returning the [[Machine Part]]<br/>and defeating the previous team</small>|3|071|Victreebel|♂|39|None|099|Kingler|♂|39|King's Rock|136|Flareon|♂|39|None|36=シュン|37=Shun|38=phone}}
+{{Trainerdiv}}
+{{Trainerentry|Spr GS  Cooltrainer F.png|Cooltrainer|Beth{{sup/2|GS}}|1824<br><small>After becoming {{pkmn|Champion}}</small>|1|078|Rapidash|♀|38|None|36=ヒトミ|37=Hitomi|38=phone}}
+{{Trainerentry|Spr GS  Cooltrainer F.png|Cooltrainer|Beth{{sup/2|GS}}|2016<br><small>After returning the [[Machine Part]]</small>|1|078|Rapidash|♀|42|None|36=ヒトミ|37=Hitomi|38=phone}}
+{{Trainerentry|Spr GS  Cooltrainer F.png|Cooltrainer|Beth{{sup/2|C}}|1872<br><small>After becoming {{pkmn|Champion}}<br/>and defeating the previous team</small>|1|078|Rapidash|♀|39|None|36=ヒトミ|37=Hitomi|38=phone}}
+{{Trainerentry|Spr GS  Cooltrainer F.png|Cooltrainer|Beth{{sup/2|C}}|2064<br><small>After returning the [[Machine Part]]<br/>and defeating the previous team</small>|1|078|Rapidash|♀|43|Focus Band|36=ヒトミ|37=Hitomi|38=phone}}
+{{Trainerfooter|land|II}}
+
+===Generation IV===
+{{trainerheader}}
+{{Trainerentry|Spr DP Fisherman.png|Fisherman|Scott|1088|3|211|Qwilfish|♂|30|None|211|Qwilfish|♂|30|None|119|Seaking|♂|34|None|36=タカヨシ|37=Takayoshi}}
+{{Trainerdiv}}
+{{Trainerentry|Spr DP Psychic M.png|Psychic|Vernon|1152|1|196|Espeon|♂|36|None|36=ジン|37=Gin}}
+{{Trainerdiv}}
+{{Trainerentry|Spr HGSS Ace Trainer F.png|Ace Trainer|Joyce|2160|2|025|Pikachu|♀|36|None|009|Blastoise|♂|36|None|36=レイカ|37=Reika}}
+{{Trainerdiv}}
+{{Trainerentry|Spr HGSS Ace Trainer M.png|Ace Trainer|Gaven|1920|3|071|Victreebel|♂|32|None|099|Kingler|♂|32|None|136|Flareon|♂|32|None|36=シュン|37=Shun|38=phone}}
+{{Trainerdiv}}
+{{Trainerentry|Spr HGSS Ace Trainer M.png|Ace Trainer|Jake|1980|3|047|Parasect|♂|33|None|055|Golduck|♂|35|None|134|Vaporeon|♂|33|None|36=ユウキ|37=Yuki}}
+{{Trainerdiv}}
+{{Trainerentry|Spr HGSS Ace Trainer F.png|Ace Trainer|Jamie|1860|2|078|Rapidash|♀|36|None|180|Flaaffy|♀|31|None|36=ヒトミ|37=Hitomi|38=phone}}
+{{Trainerdiv|Land|Rematch}}
+{{Trainerentry|Spr HGSS Ace Trainer F.png|Ace Trainer|Jamie|{{tt|2220|First rematch}}/{{tt|2400|Second rematch}}/{{tt|3540|Third rematch onward}}<br/>{{dotw|Fr}}{{sup/t|D}}|2|078|Rapidash|♀|{{tt|38|First rematch}}/{{tt|42|Second rematch}}/{{tt|56|Third rematch onward}}|None|181|Ampharos|♀|{{tt|37|First rematch}}/{{tt|40|Second rematch}}/{{tt|59|Third rematch onward}}|None|36=ヒトミ|37=Hitomi|38=phone}}
+{{Trainerdiv}}
+{{Trainerentry|Spr HGSS Ace Trainer M.png|Ace Trainer|Gaven|{{tt|2040|First rematch}}/{{tt|2280|Second rematch}}/{{tt|3000|Third rematch onward}}<br/>{{dotw|Th}}{{sup/t|M}}|3|071|Victreebel|♂|{{tt|34|First rematch}}/{{tt|38|Second rematch}}/{{tt|52|Third rematch onward}}|None|099|Kingler|♂|{{tt|34|First rematch}}/{{tt|39|Second rematch}}/{{tt|49|Third rematch onward}}|None|136|Flareon|♂|{{tt|34|First rematch}}/{{tt|38|Second rematch}}/{{tt|50|Third rematch onward}}|None|36=シュン|37=Shun|38=phone}}
+{{Trainerfooter|land|II}}
+
+==Differences among generations==
+===Generation II===
+This [[route]] is very grassy yet with several rocky outcroppings in the east and west and tiny rocks along the road. The sea rocks follow the shape of the bridge and trees are in the south borders of the route. There is also a portion of sea at the northeastern end of the route.
+
+Although it is located in [[Kanto]], the route uses only [[Johto]] tile sets as opposed to Kanto's.
+
+===Generation IV===
+In this [[generation]], a large amount of rocky hills are added along the road, making the [[route]] less grassy and more like a mountain. While the hills are of an altitude of one tile in the original games, they have an altitude of thirteen rocky outcroppings in the [[remake]]s: two hills are placed after the two southern ledges, one hill is added north of the rest house and four hills are placed along the road, the others are only for decoration and they are placed in the borders of the route. There is also an island in the southeast, and now the {{player}} can {{m|surf}} under the bridges. The trees in the west section and the sea portion in the northeast are also removed.
+
+Unlike in [[Generation II]], the tile sets instead use [[Kanto]]-style trees and a mix of [[Johto]]-style and Kanto-style rocks.
+
+====Other changes====
+After entering the [[Hall of Fame]] and boarding the [[S.S. Aqua]], the [[List of battle music themes|battle music]] changes from the Johto style to the Kanto style. This change was not present in the original {{game|Gold and Silver|s}} nor in {{game|Crystal}}. This also occurs in the [[Tohjo Falls]], {{ka|Victory Road}}, {{rt|27|Kanto|Routes 27}} and {{rtn|28|Kanto}}.
+
+Unlike on Routes 27 and 28, the {{player}} is able to {{m|fly}} to both [[Kanto]] and [[Johto]] from this [[route]] (as well as from the [[Indigo Plateau]]). In [[Generation II]], the player cannot fly to Johto from anywhere in Kanto, which includes Routes 26 to 28 and the Indigo Plateau.
+
+==In other games==
+[[HarmoKnight]], a [[Game Freak]] title released on the {{wp|Nintendo eShop}} for the [[Nintendo 3DS|3DS]], has a stage level inspired by this [[route]].
+
+==Related articles==
+{{Kanto and Johto}}<br>
+{{Project Routes notice}}
+
+[[Category:Kanto locations|Route 026]]
+[[Category:Routes|Route 026]]
+[[Category:Gold, Silver and Crystal locations|Route 026]]
+[[Category:HeartGold and SoulSilver locations|Route 026]]
+
+[[de:Route 26 (Kanto)]]
+[[es:Ruta 26 (Kanto)]]
+[[fr:Route 26 (Kanto)]]
+[[it:Percorso 26 (Kanto)]]
+[[ja:26ばんどうろ (カントー地方)]]
+[[zh:２６号道路（关都）]]

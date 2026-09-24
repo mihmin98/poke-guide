@@ -11,9 +11,13 @@ import { parseArgs } from 'node:util';
 import { PageCache, PageSource, formatFixture } from './core/cache';
 import { MediaWikiClient } from './core/mediawiki-client';
 import { fixturesDir, rawCacheDir, repoRoot } from './core/paths';
+import { GSC_FIXTURE_PAGES } from './version-groups/gsc/fixture-pages';
 import { RBY_FIXTURE_PAGES, type FixturePage } from './version-groups/rby/fixture-pages';
 
-const FIXTURE_PAGES: Record<string, readonly FixturePage[]> = { rby: RBY_FIXTURE_PAGES };
+const FIXTURE_PAGES: Record<string, readonly FixturePage[]> = {
+  rby: RBY_FIXTURE_PAGES,
+  gsc: GSC_FIXTURE_PAGES,
+};
 
 async function main(): Promise<void> {
   const { values } = parseArgs({
@@ -23,7 +27,9 @@ async function main(): Promise<void> {
   for (const group of groups) {
     const pages = FIXTURE_PAGES[group];
     if (!pages)
-      throw new Error(`Unknown --group "${group}". Known: ${Object.keys(FIXTURE_PAGES).join(', ')}`);
+      throw new Error(
+        `Unknown --group "${group}". Known: ${Object.keys(FIXTURE_PAGES).join(', ')}`,
+      );
     await captureGroup(group, pages, values.refresh);
   }
 }

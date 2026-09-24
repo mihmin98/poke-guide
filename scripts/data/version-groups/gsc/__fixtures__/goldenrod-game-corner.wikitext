@@ -1,0 +1,220 @@
+<!-- poke-guide fixture: {"title":"Goldenrod Game Corner","resolvedTitle":"Goldenrod Game Corner","revid":4630647,"timestamp":"2026-09-15T01:42:34Z","fetchedAt":"2026-09-23T16:33:53.055Z"} -->
+{{Infobox location
+|image=Goldenrod Game Corner HGSS.png
+|image_size=130
+|type=building
+|location_name=Goldenrod Game Corner
+|japanese_name=コガネゲームコーナー
+|translated_name=Kogane Game Corner
+|location=[[Goldenrod City]]
+|region=Johto
+|generation={{Gen|II}}, {{Gen|IV}}
+|map=Johto Goldenrod City Map.png
+}}
+
+The '''Goldenrod Game Corner''' (Japanese: '''コガネゲームコーナー''' ''Kogane Game Corner'') is a [[Game Corner]] located in [[Goldenrod City]], [[Johto]]. It appears in {{game5|Gold|Silver|Crystal|HeartGold|SoulSilver}}, and is similar to the [[Celadon Game Corner]] in [[Kanto]] in these games, with the main differences between the two Game Corners being the prizes available in each.
+
+In the Korean and Western releases of HeartGold and SoulSilver, as a result of changes in the classification standards at {{wp|Pan European Game Information|PEGI}},<ref>[http://www.gamesradar.com/european-pokemon-platinums-missing-game-corner-explained/ European Pokemon Platinum's missing Game Corner explained | GamesRadar]</ref> which [[Slot machine#Korean Diamond, Pearl, and Platinum / European Platinum|previously impacted the European release]]s of {{game|Platinum}} (including the English version), the layout of the Goldenrod Game Corner was altered to better fit the replacement minigame [[Voltorb Flip]].
+
+==Slogans==
+"Your Playground!"{{sup/2|GSC}}, "A Safe and Sound Playground!"{{sup/4|HGSS}}
+
+==Games==
+===Slot machines===
+{{main|Slot machine}}
+====Generation II====
+[[File:Slot machine II.png|thumb|A slot machine in Generation II]]
+Like the [[Celadon Game Corner]], the Goldenrod Game Corner hosts a set of slot machines.
+
+One to three coins can be put in the [[slot machine]] each play. One coin will only count the center row across, two coins will count all three rows across, and three coins will count all three rows across as well as both diagonals. The reels stop spinning when the player presses the A button.
+
+In the [[Generation II]] games, having two 7s lined up on the first two reels may cause one of three special events when the player stops the third reel. The third reel may move by itself after being stopped, which will either cause a third 7 to line up and pay out the jackpot, or end up one space away from lining up to tease the player. Very rarely, a [[Chansey (Pokémon)|Chansey]] may appear; it will use {{m|Egg Bomb}} on the third reel repeatedly, until the last 7 falls in place for a jackpot. Alternatively, multiple [[Golem (Pokémon)|Golems]] may fall from the top of the screen, shifting the position of the third reel by one each.
+
+When using a slot machine, it has a 1 in 6 chance to enter a mode with enhanced odds. The second machine down in the second column from the left will ''always'' have enhanced odds, but the man using it will only vacate his seat in the [[Morning]].
+[[File:GoldenrodLuckyMachineGSC.png|frame|The slot machine with enhanced odds, currently occupied.]]
+
+=====Payouts=====
+{| class="roundy" style="background: #{{gold color}}; border: 2px solid #{{gold color}}"
+|- 
+! style="background: #{{gold color light}}; {{roundytl|5px}}" | Series of icons
+! style="{{roundytr|5px}}; background: #{{gold color light}}" | Payout
+|- style="background:#FFFFFF"
+| [[File:Celadon Game Corner 7 GSC.png]][[File:Celadon Game Corner 7 GSC.png]][[File:Celadon Game Corner 7 GSC.png]] || 300
+|- style="background:#FFFFFF"
+| [[File:Celadon Game Corner Poké Ball GSC.png|link=Poké Ball]][[File:Celadon Game Corner Poké Ball GSC.png|link=Poké Ball]][[File:Celadon Game Corner Poké Ball GSC.png|link=Poké Ball]] || 50
+|- style="background:#FFFFFF"
+| [[File:Celadon Game Corner Staryu GSC.png|link=Staryu (Pokémon)]][[File:Celadon Game Corner Staryu GSC.png|link=Staryu (Pokémon)]][[File:Celadon Game Corner Staryu GSC.png|link=Staryu (Pokémon)]] || 15
+|- style="background:#FFFFFF"
+| [[File:Celadon Game Corner Squirtle GSC.png|link=Squirtle (Pokémon)]][[File:Celadon Game Corner Squirtle GSC.png|link=Squirtle (Pokémon)]][[File:Celadon Game Corner Squirtle GSC.png|link=Squirtle (Pokémon)]] || 10
+|- style="background:#FFFFFF"
+| [[File:Celadon Game Corner Pikachu GSC.png|link=Pikachu (Pokémon)]][[File:Celadon Game Corner Pikachu GSC.png|link=Pikachu (Pokémon)]][[File:Celadon Game Corner Pikachu GSC.png|link=Pikachu (Pokémon)]] || 8
+|- style="background:#FFFFFF"
+| [[File:Celadon Game Corner Cherry GSC.png]][[File:Celadon Game Corner Cherry GSC.png]][[File:Celadon Game Corner Cherry GSC.png]] || 6
+|}
+
+====Japanese HeartGold and SoulSilver====
+{{main|Slot machine#HeartGold and SoulSilver|Slot machine → HeartGold and SoulSilver}}
+[[File:Slot Machine HGSS.png|thumb|150px|A slot machine in Japanese HeartGold and SoulSilver]]
+Only the Japanese version of {{game|HeartGold and SoulSilver|s}} has slot machines. These slot machines play differently than in the Generation II games. Pressing A stops the reels from left to right; however, the Control Pad controls both coin insertion and reel starting. Additionally, slot machine payouts can actually vary per machine, and are typically more in line with the [[Sinnoh]] games as opposed to the original Generation II games.
+
+As players use the slot machine, a {{p|Smeargle}} depicted on the top screen and seen painting can change the background of the top screen's monitor, and any change in background changes slot effects. A green background signals normal play, a red background signals that it's easier to obtain a 7 or {{i|Poké Ball}}, and a blue background signals that it's easier to obtain a {{p|Pikachu}} or {{p|Marill}}.
+
+The jackpot for three 7's is <math>100 + 2x</math>, while the jackpot for three Poké Balls is <math>100 + x</math>, where x starts at 0, may increase whenever a non-jackpot symbol is lined up, and resets to 0 after every bonus game.
+
+A bonus game is started by winning a jackpot. Lining up three 7's starts a 15-round bonus game, while three Poké Balls will trigger an 8-round bonus. In this bonus game, players attempt to perfectly line up a randomly chosen one of [[Johto]]'s [[first partner Pokémon]], and the machine may provide some assistance. Bonus game payouts vary depending on success, as well as the slot machine's speed during bonus games. At the end of a bonus game, the background automatically becomes red. This lets players "chain" together jackpots and bonus games; however, the bonus game difficulty increases (up to a maximum) with each chained jackpot.
+
+In the Japanese versions of {{game|HeartGold and SoulSilver|s}}, a bonus round is added for lining up three 7's or three Poké Balls lasting for 15 or 8 rounds respectively.
+
+=====Payouts=====
+{| class="roundy" style="background: #{{gold color}}; border: 2px solid #{{gold color}}"
+|- 
+! style="background: #{{gold color light}}; {{roundytl|5px}};" | Series of icons
+! style="{{roundytr|5px}}; background: #{{gold color light}}" | Payout
+|- style="background:#FFFFFF"
+| [[File:Goldenrod Corner 7.png]][[File:Goldenrod Corner 7.png]][[File:Goldenrod Corner 7.png]] || 100
+|- style="background:#FFFFFF"
+| [[File:Goldenrod Corner Poke Ball.png]][[File:Goldenrod Corner Poke Ball.png]][[File:Goldenrod Corner Poke Ball.png]] || 100
+|- style="background:#FFFFFF"
+| [[File:Goldenrod Corner Pikachu.png]][[File:Goldenrod Corner Pikachu.png]][[File:Goldenrod Corner Pikachu.png]] || 15
+|- style="background:#FFFFFF"
+| [[File:Goldenrod Corner Marill.png]][[File:Goldenrod Corner Marill.png]][[File:Goldenrod Corner Marill.png]] || 10
+|- style="background:#FFFFFF"
+| [[File:Goldenrod Corner Apricorn.png]] || 2
+|- style="background:#FFFFFF"
+| [[File:Goldenrod Corner Replay.png]][[File:Goldenrod Corner Replay.png]][[File:Goldenrod Corner Replay.png]] || Replay
+|}
+
+====Card flip====
+{{main|Card flip}}
+The card flip minigame is exclusive to the [[Generation II]] games. The player can pick either a card or a group of cards in a manner similar to [[Roulette]]. The 24-card deck has cards numbered from one through six, with suits marked by illustrations of {{p|Pikachu}}, {{p|Jigglypuff}}, {{p|Oddish}}, and {{p|Poliwag}}. Bets can be placed in a variety of ways, with the final payout depending on the bet method.
+
+===Korean and Western HeartGold and SoulSilver===
+{{main|Voltorb Flip}}
+The Voltorb Flip minigame is exclusive to the Korean and Western releases of {{game|HeartGold and SoulSilver|s}} and replaces the [[slot machine]]s present in the Japanese version. Pre-release reviews of the game described Voltorb Flip as "{{wp|Minesweeper (video game)|Minesweeper}} meets {{wp|Picross}}".<ref name="Voltorb Flip">[http://www.officialnintendomagazine.co.uk/article.php?id=14990 Official Nintendo Magazine pre-release review of Voltorb Flip]</ref>
+
+The game features a five-by-five grid of tiles, underneath which are hidden numbers (which multiply the player's score if located) and {{p|Voltorb}} (which {{m|Self-Destruct|Selfdestruct}} and cause the player to lose all points). The player has a chance to figure out where the Voltorb are located by using the clues provided: the number of coins and Voltorb in each line and column are noted at the sides of the playing field. If the player can find all of the 2× and 3× multipliers, they will be able to advance to harder levels. Winning at this game, as before, will earn the player {{OBP|Coin|Game Corner}}s, which can be traded for prizes.
+
+Additionally, the Korean and western releases removed the ability to exchange [[Pokémon Dollar]]s for Coins.
+
+==Items==
+{{itlisth|Building}}
+{{Itemlist|TM Normal|Next to the potted plant west of the entrance (Japanese version only)|HG=yes|SS=yes|display={{TM|78|Captivate}}}}
+{{Itemlist|Coin Case|From [[Mr. Game]] after agreeing to play Voltorb Flip (Korean and Western versions only)|HG=yes|SS=yes}}
+{{Itlistfoot|Building}}
+
+==Prize Corner==
+The left window exchanges coins for {{OBP|Pokémon|species}} and the right window exchanges coins for [[TM]]s and [[item]]s{{sup/4|HGSS}}. In the Korean and Western versions of {{game|HeartGold and SoulSilver|s}}, the windows were replaced by two men.
+
+===[[Generation II]]===
+{|cellspacing="0" cellpadding="0" style="background: #88a; border: 3px solid #88a; {{roundy|20px}};"
+|- style="height:29px"
+!Left Window
+!Right Window
+|-valign="top"
+|
+{{shop|[[TM]]s}}
+{{shoprow|{{shopitem|TM25|5500|C||TM Electric|Thunder}}|{{shopitem|TM14|5500|C||TM Ice|Blizzard}}}}
+{{shoprow|{{shopitem|TM38|5500|C||TM Fire|Fire&nbsp;Blast}}}}
+{{shopfooter}}
+|
+{{shop|{{color2|{{gold color dark}}|Pokémon Gold and Silver Versions|Pokémon Gold}}}}
+{{shoprow|{{shopmon|Abra|063|200|lv=10}}|{{shopmon|Ekans|023|700|lv=10}}}}
+{{shoprow|{{shopmon|Dratini|147|2100|lv=10}}}}
+{{shopfooter}}
+{{shop|{{color2|{{silver color dark}}|Pokémon Gold and Silver Versions|Pokémon Silver}}}}
+{{shoprow|{{shopmon|Abra|063|200|lv=10}}|{{shopmon|Sandshrew|027|700|lv=10}}}}
+{{shoprow|{{shopmon|Dratini|147|2100|lv=10}}}}
+{{shopfooter}}
+{{shop|{{color2|{{crystal color dark}}|Pokémon Crystal Version|Pokémon Crystal}}}}
+{{shoprow|{{shopmon|Abra|063|100|lv=5}}|{{shopmon|Cubone|104|800|lv=15}}}}
+{{shoprow|{{shopmon|Wobbuffet|202|1500|lv=15}}}}
+{{shopfooter}}
+|}
+
+===[[Generation IV]]===
+{|cellspacing="0" cellpadding="0" style="background: #88a; border: 3px solid #88a; {{roundy|20px}};"
+|- style="height:29px"
+!Left
+!Right
+|-valign="top"
+|
+{{shop|{{color2|{{heartgold color dark}}|Pokémon HeartGold and SoulSilver Versions|Pokémon HeartGold}}}}
+{{shoprow|{{shopmon|Abra|063|200|lv=15}}|{{shopmon|Ekans|023|700|lv=15}}}}
+{{shoprow|{{shopmon|Dratini|147|2,100|lv=15}}}}
+{{shopfooter}}
+{{shop|{{color2|{{soulsilver color dark}}|Pokémon HeartGold and SoulSilver Versions|Pokémon SoulSilver}}}}
+{{shoprow|{{shopmon|Abra|063|200|lv=15}}|{{shopmon|Sandshrew|027|700|lv=15}}}}
+{{shoprow|{{shopmon|Dratini|147|2,100|lv=15}}}}
+{{shopfooter}}
+|
+{{shop|[[TM|Technical Machine]]}}
+{{shoprow|{{shopitem|TM90|2,000|C||TM Normal|Substitute}}|{{shopitem|TM75|4,000|C||TM Normal|Swords&nbsp;Dance}}}}
+{{shoprow|{{shopitem|TM44|6,000|C||TM Psychic|Rest}}|{{shopitem|TM35|10,000|C||TM Fire|Flamethrower}}}}
+{{shoprow|{{shopitem|TM13|10,000|C||TM Ice|Ice Beam}}|{{shopitem|TM24|10,000|C||TM Electric|Thunderbolt}}}}
+{{shopfooter}}
+{{shop|[[Held item]]s}}
+{{shoprow|{{shopitem|Silk Scarf|1,000|C}}|{{shopitem|Wide Lens|1,000|C}}}}
+{{shoprow|{{shopitem|Zoom Lens|1,000|C}}|{{shopitem|Metronome (item)|1,000|C||Metronome|display=Metronome}}}}
+{{shopfooter}}
+|}
+
+==Gallery==
+<gallery>
+File:Goldenrod Game Corner Inside GS.png|{{game|Gold and Silver|s}}
+File:Goldenrod Game Corner Inside C.png|{{game|Crystal}}
+File:Goldenrod Game Corner JP HGSS.png|{{game|HeartGold and SoulSilver|s}} (Japanese)
+File:HGSS Goldenrod Game Corner.png|{{game|HeartGold and SoulSilver|s}} (Korean/Western)
+</gallery>
+
+==In the manga==
+[[File:Goldenrod Game Corner Adventures.png|thumb|200px|Goldenrod Game Corner in [[Pokémon Adventures]]]]
+===Pokémon Adventures===
+===={{MangaArc|Gold, Silver & Crystal}}====
+The Goldenrod Game Corner appeared in ''[[PS107|Gligar Glide]]'', where {{adv|Gold}} was seen playing a game of {{wp|Pool (cue sports)|pool}} there. However, as soon as it turned out that Gold was cheating by using [[Aibo]]'s disguised {{i|Poké Ball}} as a white ball, he was thrown out of the building.
+
+[[File:Goldenrod Game Corner Golden Boys.png|thumb|left|200px|Goldenrod Game Corner in [[Pokémon Gold & Silver: The Golden Boys]]]]
+===Pokémon Gold & Silver: The Golden Boys===
+The Goldenrod Game Corner appeared in ''[[GB09|Let's Use Fighting Type Pokémon!!]]'', where it was revealed to be hosting a Pokémon tournament, organized in cooperation with the [[Pokémon Day Care]]. The competing {{pkmn|Trainer}}s would use [[rental Pokémon]], with the winner getting a rare Pokémon as a reward. Wanting a Pokémon capable of dealing with [[Whitney]], {{GnB|Gold}} chose himself a team of {{type|Fighting}} Pokémon. Gold eventually made it to the finals, where he faced his [[rival]], {{GnB|Black}}. Although Black ended up winning, everyone hated the ruthless style of battling he used, so Gold got the reward instead, being {{pkmn2|gift}}ed with a {{p|Tyrogue}}, while Black took the {{p|Sneasel}} he had borrowed with him.
+{{-}}
+
+==In the TCG==
+[[File:CardFlipGameNeoGenesis92.jpg|thumb|200px|Goldenrod Game Corner card]]
+{{main|List of Goldenrod Game Corner cards}}
+The Goldenrod Game Corner cards were introduced as a type of {{TCG|Trainer card}} in the [[Pokémon Trading Card Game]] at the beginning of the English Neo Series (the Japanese neo Era). First released in the Japanese {{TCG|Gold, Silver, to a New World...}} expansion, the Goldenrod Game Corner cards later debuted in the English {{TCG|Neo Genesis}} expansion. Cards in this subclass are based on games played in the Goldenrod Game Corner, and thus their effect is largely based on luck. Like [[List of Rocket's Secret Machine cards|Rocket's Secret Machine cards]], Goldenrod Game Corner cards are normal {{TCG|Item card}}s and have no special ruling or effects unique to them. Only two cards of this subclass exist.
+{{-}}
+
+==Trivia==
+* Although the Goldenrod and [[Celadon Game Corner]]s were changed in the non-Japanese releases of {{game|HeartGold and SoulSilver|s}}, all versions (Japanese, Korean, and Western) have every map of the Game Corners: in the Japanese versions, the maps related to [[Voltorb Flip]] and [[Mr. Game]] are unused and have no events or warps programmed, while the Korean and Western versions have the original maps with their warps intact, plus the event to interact with the clerk is still present and the interface used to buy {{OBP|Coin|Game Corner}}s is functional and was translated. {{TM|78|Captivate}} also remains in the unused Goldenrod Game Corner in the Korean and Western versions, and the [[slot machine]]s in the leftover maps trigger [[Voltorb Flip]] in these versions.
+* In {{game|HeartGold and SoulSilver|s}}, it is possible to listen to the [[Poké Flute]] here after obtaining the EXPN Card for the [[Pokégear]].
+* The internal data for Pokémon Gold, Silver, and Crystal shows there were plans for a card memory game where the objective would have been to clear board of all matching cards and there would have been three difficulties to choose from.<ref>[https://tcrf.net/Pok%C3%A9mon_Gold_and_Silver#Unused_Memory_Game   Unused Memory Game] - tcrf.net Pokémon Gold and Silver article</ref>
+
+==In other languages==
+{{langtable|color={{locationcolor/light|building}}|bordercolor={{locationcolor/dark|building}}
+|fr=Casino de Doublonville
+|de=Spielhalle von Dukatia City
+|it=Casinò di Fiordoropoli
+|ko=금빛시티 게임코너 ''Geumbit City Game Corner''
+|pt_br=Fliperama Goldenrod
+|es=Casino de Ciudad Trigal
+|vi=Trung tâm trò chơi Kogane
+}}
+
+==References==
+{{reflist}}
+
+==Related articles==
+{{gamecorner}}
+{{Johto}}
+{{Project Locations notice}}
+
+[[Category:Johto locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Game Corners]]
+
+[[de:Spielhalle von Dukatia City]]
+[[es:Casino de Ciudad Trigal]]
+[[fr:Casino de Doublonville]]
+[[it:Casinò di Fiordoropoli]]
+[[ja:コガネゲームコーナー]]
+[[zh:满金游戏城]]

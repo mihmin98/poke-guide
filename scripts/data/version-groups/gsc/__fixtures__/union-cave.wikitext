@@ -1,0 +1,411 @@
+<!-- poke-guide fixture: {"title":"Union Cave","resolvedTitle":"Union Cave","revid":4619925,"timestamp":"2026-08-28T17:59:47Z","fetchedAt":"2026-09-23T16:33:53.055Z"} -->
+{{Infobox location
+|image=HGSS Union Cave-{{#switch: {{#time: G}}|4|5|6|7|8|9=Morning|10|11|12|13|14|15|16=Day|17|18|19=Evening|20|21|22|23|0|1|2|3=Night}}.png
+|image_size=256
+|type=cave
+|mapdesc=Deep underground, it's connected to the ocean. The water flows here.
+|location_name=Union Cave
+|japanese_name=つながりのどうくつ 
+|translated_name=Linking Cave
+|location=Between [[Route]]s {{rtn|32|Johto}} and {{rtn|33|Johto}}
+|region=Johto
+|generation={{Gen|II}}, {{Gen|IV}}
+}}
+[[File:Union Cave exterior HGSS.png|thumb|200px|The Route 32 side entrance to Union Cave in HeartGold and SoulSilver]]
+'''Union Cave''' (Japanese: '''つながりのどうくつ''' ''Linking Cave'') is a cave located in the [[Johto]] [[region]]. The main cave divides {{rt|32|Johto}} from {{rt|33|Johto}}, though two other exits in the basement levels of the cave lead to the [[Ruins of Alph]].
+
+==Geography==
+Union Cave is a simple cave, with many pools of water. The main floor has two different entrances to lower floor in the southern area{{sup/2|GSC}}/opposite ends of the cave{{sup/4|HGSS}}. The upper one leads to B1F, which, after crossing the pond, will lead to the Ruins of Alph. The lower one leads to a small hallway, which also has a pond, and another entrance to B2F. The lowest level of the cave has several ponds, the southern-most containing, on Fridays, a {{p|Lapras}}.
+
+==Items==
+{{Itlisth|cave}}
+{{Itemlist|Potion|1F, northwest corner|G=yes|S=yes}}
+{{Itemlist|X Attack|1F, northwest corner|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Great Ball|1F, southeast of {{tc|Firebreather}} Bill|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|X Attack|1F, west of {{tc|Firebreather}} Bill|G=yes|S=yes}}
+{{Itemlist|Potion|1F, west of {{tc|Firebreather}} Bill|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Awakening|1F, west of the {{rt|33|Johto}} exit|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Great Ball|1F, in the wall between two rocks southeast of {{tc|Hiker}} Russel ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Big Pearl|1F, in a stalagmite on an islet, north-west of {{tc|Poké Maniac}} Larry (requires {{m|Surf}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Paralyze Heal|1F, on a stalagmite northeast of {{tc|Poké Maniac}} Larry ''(hidden)''|HG=yes|SS=yes|display=[[Paralyze Heal|Parlyz Heal]]}}
+{{Itemlist|TM Normal|B1F, west of the ladder from 1F|G=yes|S=yes|C=yes|display={{TM|39|Swift}}}}
+{{Itemlist|X Defense|B1F, east of the ladder from 1F|G=yes|S=yes|C=yes|display=[[X Defense|X Defend]]}}
+{{Itemlist|X Defense|B1F, north of the stairs from 1F|HG=yes|SS=yes|display=[[X Defense|X Defend]]}}
+{{Itemlist|X Speed|B1F, on a rock west of the stairs from 1F ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|TM Rock|B1F, west of the stairs from 1F|HG=yes|SS=yes|display={{TM|39|Rock Tomb}}}}
+{{Itemlist|Revive|B1F, northeast of {{tc|Hiker}} Leonard (requires {{m|Surf}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Hyper Potion|B2F, northwest of {{tc|Ace Trainer}} Nick|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Elixir|B2F, northeast corner|G=yes|S=yes|C=yes|HG=yes|SS=yes}}
+{{Itemlist|Ultra Ball|B2F, on stalagmite northwest of {{tc|Ace Trainer}} Emma ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Calcium|B2F, northwest of {{tc|Ace Trainer}} Gwen ''(hidden)''|HG=yes|SS=yes}}
+{{Itlistfoot|cave}}
+
+==Pokémon==
+===Generation II===
+====1F====
+{{Catch/header|cave|yes}}
+{{Catch/entry2|019|Rattata|yes|no|no|Cave|4|all=10%|type1=Normal}}
+{{Catch/entry2|019|Rattata|no|yes|no|Cave|4,6|all=40%|type1=Normal}}
+{{Catch/entry2|019|Rattata|no|no|yes|Cave|4|10%|10%|0%|type1=Normal}}
+{{Catch/entry2|019|Rattata|no|no|yes|Cave|4,6|0%|0%|40%|type1=Normal}}
+{{Catch/entry2|027|Sandshrew|yes|no|no|Cave|6|all=30%|type1=Ground}}
+{{Catch/entry2|027|Sandshrew|no|no|yes|Cave|6|30%|30%|0%|type1=Ground}}
+{{Catch/entry2|041|Zubat|yes|yes|no|Cave|5,7|all=25%|type1=Poison|type2=Flying}}
+{{Catch/entry2|041|Zubat|no|no|yes|Cave|5,7|25%|25%|0%|type1=Poison|type2=Flying}}
+{{Catch/entry2|041|Zubat|no|no|yes|Cave|7|0%|0%|5%|type1=Poison|type2=Flying}}
+{{Catch/entry2|074|Geodude|yes|yes|yes|Cave|6|all=30%|type1=Rock|type2=Ground}}
+{{Catch/entry2|095|Onix|yes|yes|yes|Cave|6|all=5%|type1=Rock|type2=Ground}}
+{{Catch/entry2|194|Wooper|no|no|yes|Cave|5|0%|0%|20%|type1=Water|type2=Ground}}
+{{Catch/div|water|Surfing}}
+{{Catch/entry2|194|Wooper|yes|yes|yes|Surf|15-19|all=60%|type1=Water|type2=Ground}}
+{{Catch/entry2|195|Quagsire|yes|yes|yes|Surf|15-24|all=40%|type1=Water|type2=Ground}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry2|118|Goldeen|yes|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entry2|118|Goldeen|yes|yes|yes|Fish Good|20|all=65%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=Water}}
+{{Catch/entry2|118|Goldeen|yes|yes|yes|Fish Super|40|all=70%|type1=Water}}
+{{Catch/entry2|119|Seaking|yes|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{Catch/footer|cave}}
+
+====B1F====
+{{Catch/header|cave|yes}}
+{{Catch/entry2|019|Rattata|yes|no|no|Cave|6|all=5%|type1=Normal}}
+{{Catch/entry2|019|Rattata|no|yes|no|Cave|6,8|all=35%|type1=Normal}}
+{{Catch/entry2|019|Rattata|no|no|yes|Cave|6,8|all=10%|type1=Normal}}
+{{Catch/entry2|027|Sandshrew|yes|no|no|Cave|8|all=30%|type1=Ground}}
+{{Catch/entry2|041|Zubat|yes|yes|no|Cave|7,9|all=25%|type1=Poison|type2=Flying}}
+{{Catch/entry2|041|Zubat|no|no|yes|Cave|6,8|50%|50%|0%|type1=Poison|type2=Flying}}
+{{Catch/entry2|041|Zubat|no|no|yes|Cave|6|0%|0%|30%|type1=Poison|type2=Flying}}
+{{Catch/entry2|074|Geodude|yes|yes|yes|Cave|8|all=30%|type1=Rock|type2=Ground}}
+{{Catch/entry2|095|Onix|yes|yes|yes|Cave|8|all=10%|type1=Rock|type2=Ground}}
+{{Catch/entry2|194|Wooper|no|no|yes|Cave|8|0%|0%|20%|type1=Water|type2=Ground}}
+{{Catch/div|water|Surfing}}
+{{Catch/entry2|194|Wooper|yes|yes|yes|Surf|15-19|all=60%|type1=Water|type2=Ground}}
+{{Catch/entry2|195|Quagsire|yes|yes|yes|Surf|15-24|all=40%|type1=Water|type2=Ground}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry2|118|Goldeen|yes|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entry2|118|Goldeen|yes|yes|yes|Fish Good|20|all=65%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=Water}}
+{{Catch/entry2|118|Goldeen|yes|yes|yes|Fish Super|40|all=70%|type1=Water}}
+{{Catch/entry2|119|Seaking|yes|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{Catch/footer|cave}}
+
+====B2F====
+{{Catch/header|cave|yes}}
+{{Catch/entry2|019|Rattata|yes|yes|no|Cave|20|all=5%|type1=Normal}}
+{{Catch/entry2|020|Raticate|yes|yes|no|Cave|22|all=30%|type1=Normal}}
+{{Catch/entry2|020|Raticate|no|no|yes|Cave|21|all=10%|type1=Normal}}
+{{Catch/entry2|041|Zubat|yes|yes|no|Cave|22|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entry2|041|Zubat|no|no|yes|Cave|22|50%|50%|30%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|yes|yes|no|Cave|22|all=20%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|22|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entry2|074|Geodude|yes|yes|no|Cave|21|all=10%|type1=Rock|type2=Ground}}
+{{Catch/entry2|074|Geodude|no|no|yes|Cave|20|all=5%|type1=Rock|type2=Ground}}
+{{Catch/entry2|095|Onix|yes|yes|yes|Cave|23|all=5%|type1=Rock|type2=Ground}}
+{{Catch/entry2|195|Quagsire|no|no|yes|Cave|22|0%|0%|20%|type1=Water|type2=Ground}}
+{{Catch/div|water|Surfing}}
+{{Catch/entry2|072|Tentacool|yes|yes|yes|Surf|15-19|all=60%|type1=Water|type2=Poison}}
+{{Catch/entry2|073|Tentacruel|yes|yes|yes|Surf|20-24|all=10%|type1=Water|type2=Poison}}
+{{Catch/entry2|195|Quagsire|yes|yes|yes|Surf|20-24|all=30%|type1=Water|type2=Ground}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry2|098|Krabby|yes|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entry2|098|Krabby|yes|yes|yes|Fish Good|20|all=55%|type1=Water}}
+{{Catch/entry2|120|Staryu|yes|yes|yes|Fish Good|20|0%|0%|10%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=Water}}
+{{Catch/entry2|222|Corsola|yes|yes|yes|Fish Good|20|10%|10%|0%|type1=Water|type2=Rock}}
+{{Catch/entry2|098|Krabby|yes|yes|yes|Fish Super|40|all=60%|type1=Water}}
+{{Catch/entry2|099|Kingler|yes|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{Catch/entry2|120|Staryu|yes|yes|yes|Fish Super|40|0%|0%|30%|type1=Water}}
+{{Catch/entry2|222|Corsola|yes|yes|yes|Fish Super|40|30%|30%|0%|type1=Water|type2=Rock}}
+{{Catch/footer|cave}}
+
+===Generation IV===
+====1F, Ruins exits top rooms====
+{{Catch/header|cave|4}}
+{{Catch/entryhs|019|Rattata|yes|no|Cave|4|all=10%|type1=Normal}}
+{{Catch/entryhs|019|Rattata|no|yes|Cave|4, 6|all=40%|type1=Normal}}
+{{Catch/entryhs|027|Sandshrew|yes|no|Cave|6|all=30%|type1=Ground}}
+{{Catch/entryhs|041|Zubat|yes|yes|Cave|5, 7|all=25%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|074|Geodude|yes|yes|Cave|6|all=30%|type1=Rock|type2=Ground}}
+{{Catch/entryhs|095|Onix|yes|yes|Cave|6|all=5%|type1=Rock|type2=Ground}}
+{{Catch/div|water|Surfing}}
+{{Catch/entryhs|194|Wooper|yes|yes|Surf|10-20|all=60%|type1=Water|type2=Ground}}
+{{Catch/entryhs|195|Quagsire|yes|yes|Surf|10-25|all=40%|type1=Water|type2=Ground}}
+{{Catch/div|water|Fishing}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Fish Good|20|all=60%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Fish Super|40|all=70%|type1=Water}}
+{{Catch/entryhs|119|Seaking|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{Catch/div|cave|Special}}
+{{Catch/entryhs|296|Makuhita|yes|yes|Hoenn|5|all=20%|type1=Fighting}}
+{{Catch/entryhs|359|Absol|yes|yes|Hoenn|6|all=20%|type1=Dark}}
+{{Catch/entryhs|433|Chingling|yes|yes|Sinnoh|5|all=20%|type1=Psychic}}
+{{Catch/entryhs|436|Bronzor|yes|yes|Sinnoh|6|all=20%|type1=Steel|type2=Psychic}}
+{{Catch/footer|cave}}
+
+====B1F====
+{{Catch/header|cave|4}}
+{{Catch/entryhs|019|Rattata|yes|no|Cave|6|all=5%|type1=Normal}}
+{{Catch/entryhs|019|Rattata|no|yes|Cave|6, 8|all=35%|type1=Normal}}
+{{Catch/entryhs|027|Sandshrew|yes|no|Cave|8|all=30%|type1=Ground}}
+{{Catch/entryhs|041|Zubat|yes|yes|Cave|7, 9|all=25%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|074|Geodude|yes|yes|Cave|8|all=30%|type1=Rock|type2=Ground}}
+{{Catch/entryhs|095|Onix|yes|yes|Cave|8|all=10%|type1=Rock|type2=Ground}}
+{{Catch/div|water|Surfing}}
+{{Catch/entryhs|194|Wooper|yes|yes|Surf|10-20|all=60%|type1=Water|type2=Ground}}
+{{Catch/entryhs|195|Quagsire|yes|yes|Surf|10-25|all=40%|type1=Water|type2=Ground}}
+{{Catch/div|water|Fishing}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Fish Good|20|all=60%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Fish Super|40|all=70%|type1=Water}}
+{{Catch/entryhs|119|Seaking|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{Catch/div|cave|Special}}
+{{Catch/entryhs|296|Makuhita|yes|yes|Hoenn|7|all=20%|type1=Fighting}}
+{{Catch/entryhs|359|Absol|yes|yes|Hoenn|8|all=20%|type1=Dark}}
+{{Catch/entryhs|433|Chingling|yes|yes|Sinnoh|7|all=20%|type1=Psychic}}
+{{Catch/entryhs|436|Bronzor|yes|yes|Sinnoh|8|all=20%|type1=Steel|type2=Psychic}}
+{{Catch/footer|cave}}
+
+====B2F, Ruins exits lower rooms====
+{{Catch/header|cave|yes}}
+{{Catch/entryhs|019|Rattata|yes|yes|Cave|20|all=5%|type1=Normal}}
+{{Catch/entryhs|020|Raticate|yes|yes|Cave|22|all=30%|type1=Normal}}
+{{Catch/entryhs|041|Zubat|yes|yes|Cave|22|all=30%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|042|Golbat|yes|yes|Cave|22|all=20%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|074|Geodude|yes|yes|Cave|21|all=10%|type1=Rock|type2=Ground}}
+{{Catch/entryhs|095|Onix|yes|yes|Cave|23|all=5%|type1=Rock|type2=Ground}}
+{{Catch/div|water|Surfing}}
+{{Catch/entryhs|072|Tentacool|yes|yes|Surf|10-20|all=60%|type1=Water|type2=Poison}}
+{{Catch/entryhs|073|Tentacruel|yes|yes|Surf|15-25|all=10%|type1=Water|type2=Poison}}
+{{Catch/entryhs|195|Quagsire|yes|yes|Surf|15-25|all=30%|type1=Water|type2=Ground}}
+{{Catch/div|water|Fishing}}
+{{Catch/entryhs|098|Krabby|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entryhs|098|Krabby|yes|yes|Fish Good|20|all=50%|type1=Water}}
+{{Catch/entryhs|120|Staryu|yes|yes|Fish Good|20|0%|0%|10%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{Catch/entryhs|222|Corsola|yes|yes|Fish Good|20|10%|10%|0%|type1=Water|type2=Rock}}
+{{Catch/entryhs|098|Krabby|yes|yes|Fish Super|40|all=60%|type1=Water}}
+{{Catch/entryhs|099|Kingler|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{Catch/entryhs|120|Staryu|yes|yes|Fish Super|40|0%|0%|30%|type1=Water}}
+{{Catch/entryhs|222|Corsola|yes|yes|Fish Super|40|30%|30%|0%|type1=Water|type2=Rock}}
+{{Catch/div|cave|Special}}
+{{Catch/entryhs|296|Makuhita|yes|yes|Hoenn|22|all=20%|type1=Fighting}}
+{{Catch/entryhs|359|Absol|yes|yes|Hoenn|22|all=20%|type1=Dark}}
+{{Catch/entryhs|433|Chingling|yes|yes|Sinnoh|22|all=20%|type1=Psychic}}
+{{Catch/entryhs|436|Bronzor|yes|yes|Sinnoh|22|all=20%|type1=Steel|type2=Psychic}}
+{{Catch/footer|cave}}
+
+==Special encounters==
+===Generations II and IV===
+A {{p|Lapras}} appears on B2F every Friday.
+{{Pokémon/Grid}}
+{{Pokémon
+| caption = '''Gold, Silver, and Crystal'''
+| gen = 2
+| ndex = 0131
+| pokemon = Lapras
+| gender = both
+| level = 20
+| type1 = Water
+| type2 = Ice
+| move1 = Growl | move1type = Normal
+| move2 = Sing | move2type = Normal
+| move3 = Mist | move3type = Ice
+| move4 = Body Slam | move4type = Normal
+}}
+{{Pokémon
+| caption = '''HeartGold and SoulSilver'''
+| gen = 4
+| ndex = 0131
+| pokemon = Lapras
+| gender = both
+| level = 20
+| type1 = Water
+| type2 = Ice
+| ability = Water Absorb
+| ability2 = Shell Armor
+| move1 = Confuse Ray | move1type = Ghost | move1cat = Status
+| move2 = Ice Shard | move2type = Ice | move2cat = Physical
+| move3 = Water Pulse | move3type = Water | move3cat = Special
+| move4 = Body Slam | move4type = Normal | move4cat = Physical
+}}
+{{Pokémon/Grid/end}}
+
+==Trainers==
+===Generation II===
+{{trainerheader|cave}}
+{{Trainerdiv|cave|1F}}
+{{Trainerentry|Spr GS Hiker.png|Hiker|Daniel|352|1|095|Onix|♂|11|36=ユウゴ|37=Yūgo}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr GS Hiker.png|Hiker|Russell|256|3|074|Geodude|♂|4||074|Geodude|♂|6||074|Geodude|♂|8||36=ダイサク|37=Daisaku}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr GS Firebreather.png|Firebreather|Bill|288|2|109|Koffing|♂|6||109|Koffing|♂|6||36=フクオ|37=Fukuo}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr GS PokéManiac.png|PokéManiac|Larry|600|1|079|Slowpoke|♂|10|36=タダヒコ|37=Tadahiko}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr GS Firebreather.png|Firebreather|Ray|432|1|037|Vulpix|♀|9|36=ノリヤス|37=Noriyasu}}
+{{Trainerdiv|cave|B1F (North)}}
+{{Trainerentry|Spr GS Hiker.png|Hiker|Leonard|800|2|074|Geodude|♂|23||066|Machop|♂|25||36=マサフミ|37=Masafumi}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr GS Hiker.png|Hiker|Phillip|736|3|074|Geodude|♂|23||074|Geodude|♂|23||075|Graveler|♂|23||36=ケンゴ|37=Kengo}}
+{{Trainerdiv|cave|B1F (South)}}
+{{Trainerentry|Spr GS PokéManiac.png|PokéManiac|Andrew|1440|2|105|Marowak|♂|24||105|Marowak|♂|24||36=マサアキ|37=Masaaki}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr GS PokéManiac.png|PokéManiac|Calvin|1560|1|115|Kangaskhan|♀|26||36=ナオヤ|37=Naoya}}
+{{Trainerdiv|cave|B2F}}
+{{Trainerentry|Spr GS Cooltrainer M.png|Cooltrainer|Nick|1248|3|004|Charmander|♂|26||001|Bulbasaur|♂|26||007|Squirtle|♂|26||36=ケン|37=Ken}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr GS Cooltrainer F.png|Cooltrainer|Gwen|1248|4|133|Eevee|♂|26||134|Vaporeon|♂|22||135|Jolteon|♂|22||136|Flareon|♂|22||36=ヒヅキ|37=Hizuki}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr GS Cooltrainer F.png|Cooltrainer|Emma|1344|1|061|Poliwhirl|♀|28|36=サリナ|37=Sarina}}
+{{Trainerfooter|cave|II}}
+
+===Generation IV===
+{{trainerheader|cave}}
+{{Trainerdiv|cave|1F}}
+{{Trainerentry|Spr HGSS Firebreather.png|Firebreather|Ray|288|1|037|Vulpix|♀|9|36=ノリヤス|37=Noriyasu}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr DP Hiker.png|Hiker|Daniel|352|1|095|Onix|♂|11|36=ユウゴ|37=Yūgo}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr DP Hiker.png|Hiker|Russel|256|3|074|Geodude|♂|4||074|Geodude|♂|6||074|Geodude|♂|8||36=ダイサク|37=Daisaku}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr HGSS Firebreather.png|Firebreather|Bill|192|2|109|Koffing|♂|6||109|Koffing|♂|6||36=フクオ|37=Fukuo}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr HGSS Poké Maniac.png|Poké Maniac|Larry|704|1|079|Slowpoke|♂|11|36=タダヒコ|37=Tadahiko}}
+{{Trainerdiv|cave|B1F (North)}}
+{{Trainerentry|Spr DP Hiker.png|Hiker|Leonard|800|2|074|Geodude|♂|23||066|Machop|♂|25||36=マサフミ|37=Masafumi}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr DP Hiker.png|Hiker|Phillip|800|2|074|Geodude|♂|23||075|Graveler|♂|25||36=ケンゴ|37=Kengo}}
+{{Trainerdiv|cave|B1F (South)}}
+{{Trainerentry|Spr HGSS Poké Maniac.png|Poké Maniac|Andrew|1536|2|105|Marowak|♂|24||105|Marowak|♂|24||36=マサアキ|37=Masaaki}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr HGSS Poké Maniac.png|Poké Maniac|Calvin|1664|1|115|Kangaskhan|♀|26||36=ナオヤ|37=Naoya}}
+{{Trainerdiv|cave|B2F}}
+{{Trainerentry|Spr HGSS Ace Trainer M.png|Ace Trainer|Nick|1560|3|004|Charmander|♂|26||007|Squirtle|♂|26||001|Bulbasaur|♂|26||36=ケン|37=Ken}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr HGSS Ace Trainer F.png|Ace Trainer|Gwen|1320|4|133|Eevee|♂|26||134|Vaporeon|♂|22||136|Flareon|♂|22||135|Jolteon|♂|22||36=ヒヅキ|37=Hizuki}}
+{{Trainerdiv|cave}}
+{{Trainerentry|Spr HGSS Ace Trainer F.png|Ace Trainer|Emma|1680|1|061|Poliwhirl|♀|28||36=サリナ|37=Sarina}}
+{{Trainerfooter|cave|II}}
+
+==Layout==
+{{missing image|section|needs layout images for the two exits to Ruins of Alph in HGSS}}
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{locationcolor/dark|cave}}"
+|-
+! style="background:#{{locationcolor/light|cave}}; {{roundytl|5px}}" | Version
+! style="background:#{{locationcolor/light|cave}}" | 1F
+! style="background:#{{locationcolor/light|cave}}" | B1F
+! style="background:#{{locationcolor/light|cave}}; {{roundytr|5px}}" | B2F
+|-
+! style="background:#{{gold color}}" | {{color2|000|Pokémon Gold and Silver Versions|Gold}}
+| rowspan="2" | [[File:Union Cave 1F GS.png|150px]]
+| rowspan="2" | [[File:Union Cave B1F GS.png|150px]]
+| rowspan="2" | [[File:Union Cave B2F GS.png|150px]]
+|-
+! style="background:#{{silver color}}" | {{color2|000|Pokémon Gold and Silver Versions|Silver}}
+|-
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon Crystal Version|Crystal}}
+| [[File:Union Cave 1F C.png|150px]]
+| [[File:Union Cave B1F C.png|150px]]
+| [[File:Union Cave B2F C.png|150px]]
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+| rowspan="2" | [[File:Union Cave 1F HGSS.png|150px]]
+| rowspan="2" | [[File:Union Cave B1F HGSS.png|150px]]
+| rowspan="2" | [[File:Union Cave B2F HGSS.png|150px]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan="4" style="background:#{{locationcolor/light|cave}}; {{roundybottom|5px}}" | &nbsp; 
+|}
+
+==[[Location preview|Preview]]==
+<gallery>
+File:HGSS Union Cave-Morning.png|Morning (Zubat)
+File:HGSS Union Cave-Day.png|Day/Evening (Onix)
+File:HGSS Union Cave-Night.png|Night (Geodude)
+</gallery>
+
+==Music==
+{| class="roundtable" style="margin:auto; text-align: center; background: #{{locationcolor/med|cave}}; border: 3px solid #{{locationcolor/dark|cave}}"
+|- style="background:#{{locationcolor/light|cave}}"
+! Games
+! Situation
+! Song name
+! Song name
+! Composition
+! Arrangement
+|- style="background:#FFF"
+! {{GameIcon|G}}{{GameIcon|S}}{{GameIcon|C}}
+| Everywhere
+| つながりのどうくつ
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Union Cave]]
+| [[Junichi Masuda]]
+| [[Junichi Masuda]]
+|-
+|- style="background:#FFF"
+! rowspan=3 | {{GameIcon|HG}}{{GameIcon|SS}}
+| Everywhere
+| つながりのどうくつ
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Union Cave]] || [[Junichi Masuda]] || [[Go Ichinose]]<br><small>[[GB Sounds]]:</small> [[Junichi Masuda]]
+|-
+|}
+
+==In the manga==
+[[File:Union Cave PM.png|thumb|200px|left|Union Cave in [[Pokémon Pocket Monsters]]]]
+[[File:Union Cave Adventures.png|thumb|230px|Union Cave in [[Pokémon Adventures]]]]
+[[File:Union Cave Golden Boys.png|thumb|230px|Union Cave in [[Pokémon Gold & Silver: The Golden Boys]]]]
+===Pokémon Adventures===
+===={{MangaArc|Gold, Silver & Crystal}}====
+Union Cave appeared in ''[[PS121|Off Course with Corsola]]'', where {{adv|Crystal}} was traveling through the cave to get to the western part of Johto. While going through the cave, she noticed a {{p|Magneton}}, which was not native to the area. She was then attacked by a group of Magneton, all of which belonged to [[Lt. Surge]], who had ordered them to catch any [[wild Pokémon]] passing by. When the [[Gym Leader]] himself arrived, he saw that his [[Poké Ball]] trap hadn't caught anything, leading him to believe that the commotion was just a false alarm. He then proceeded to exit the cave through an underwater tunnel, not noticing that his Magneton had dropped the unconscious Crystal into his submarine.
+
+===Pokémon Gold & Silver: The Golden Boys===
+Union Cave appeared in ''[[GB05|Extreme Power!! The Friday Pokémon]]''. The cave is home to a {{p|Lapras}} that appears there on Fridays, but tourists littering the cave caused it to get angry. {{GnB|Gold}} and [[Bugsy]] set out to calm it down so they could get to [[Azalea Town]], only to find Gold's [[rival]] {{GnB|Black}} in the cave, looking for Lapras. A {{pkmn|battle}} between Gold and Black caused them to fall to a deeper floor in the cave, where they found Lapras. When [[Gold's Bayleef|Black's Bayleef]] fared badly against Lapras, Black abandoned it for being too weak. Gold saved Black from being hurt by Lapras by defeating it with his {{p|Elekid}}, after which he took Bayleef under his wing when Black left, swearing to settle their differences someday.
+
+===Pokémon Pocket Monsters===
+Union Cave appeared in ''[[PM073|Escape from Magma!?]]''. {{PPM|Red}} and his Pokémon went there by traveling on a Lapras. Inside, {{PPM|Giovanni}} and some {{tc|Team Rocket Grunt}}s took over the cave by building an amusement park. As Red and his Pokémon went in, it turned out to be a trap as Giovanni sealed the entrance. The group managed to escape when {{TP|Red|Clefairy}}'s digger drill dug a hole. However, it took them deeper in the cave, where Giovanni found them and summoned his {{p|Slugma}} from a lava pit. 
+{{-}}
+
+==In other languages==
+{{langtable|color={{locationcolor/light|cave}}|bordercolor={{locationcolor/dark|cave}}
+|zh_cmn=互連洞 / 互连洞 ''Hùlián Dòng''
+|zh_yue=互連洞 ''Wuhlìhn Duhng''
+|cs=Spojovací jeskyně
+|nl=Eenheidstunnel
+|fr_ca=Caves Jumelles
+|fr_eu=Caves Jumelles
+|de=Einheitstunnel
+|it=Grotta di mezzo
+|ko=연결동굴 ''Yeongyeol Donggul''
+|pt_br=Caverna da União<br>Túnel da União
+|es=Cueva Unión
+|vi=Động Tsunagari
+}}
+
+==Related articles==
+{{Johto}}
+{{Project Locations notice}}
+
+[[Category:Johto locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Caves]]
+
+[[de:Einheitstunnel]]
+[[es:Cueva Unión]]
+[[fr:Caves Jumelles]]
+[[it:Grotta di mezzo]]
+[[ja:つながりのどうくつ]]
+[[zh:互连洞]]

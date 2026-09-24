@@ -1,0 +1,552 @@
+<!-- poke-guide fixture: {"title":"Ruins of Alph","resolvedTitle":"Ruins of Alph","revid":4633235,"timestamp":"2026-09-20T18:59:07Z","fetchedAt":"2026-09-23T16:33:53.055Z"} -->
+{{Infobox location
+|image=HGSS Ruins of Alph-{{#switch: {{#time: G}}|4|5|6|7|8|9=Morning|10|11|12|13|14|15|16|17|18|19=Day|20|21|22|23|0|1|2|3=Night}}.png
+|image_size=256
+|type=ruins
+|mapdesc=A place where you can find a former adventure.
+|location_name=Ruins of Alph
+|japanese_name=アルフのいせき
+|translated_name=Ruins of Alph
+|location=Southwest of [[Violet City]], between [[Route]]s {{rtn|36|Johto}} and {{rtn|32|Johto}}
+|region=Johto
+|generation={{Gen|II}}, {{Gen|IV}}
+}}
+
+The '''Ruins of Alph''' (Japanese: '''アルフのいせき''' ''Ruins of Alph'') are located in [[Johto]] near [[Violet City]], with entrances to the south of {{rt|36|johto}} and west of {{rt|32|johto}}. The ruins are filled with {{p|Unown}} once any of the four slide puzzles inside the chambers have been activated. 
+
+If the {{player}} listens to the [[Pokégear]] radio while near or inside the ruins, they will hear strange noises known as Mysterious Transmission on channel 13.5. In {{game|HeartGold and SoulSilver|s}}, the player must be inside one of the chambers, and tuning the radio near the center will broadcast these noises. Having the transmission on in [[Generation IV]] forces the {{p|Unown}} encountered half the time to be a shape the player has not yet caught.<ref>https://x.com/AdAstra_GL/status/2053217807957938216</ref>
+
+==Geography==
+[[File:Ruins of Alph Sinjoh Ruins Event.png|thumb|200px|Activating the [[Sinjoh Ruins]] outside the ruins in {{2v2|HeartGold|SoulSilver}}]]
+
+===Outside the ruins===
+There are several {{tc|scientist}}s in the area listening and studying the ruins to discover more about them. They say it is more than it seems and that the puzzles in the caves must have something to do with the mystery of the past of the Ruins of Alph. 
+
+===Sinjoh Ruins===
+{{main|Sinjoh Ruins}}
+In {{game|HeartGold and SoulSilver|s}}, if the player has a [[fateful encounter]] or [[Hall of Origin]] {{p|Arceus}} in their party, they can travel to the [[Sinjoh Ruins]] via a scripted event.
+
+If the player has not already completed the Sinjoh Ruins event, if they attempt to enter the Ruins Research Center while Arceus is their walking Pokémon, the head researcher will emerge from the door and be shocked by the presence of Arceus. He then escorts the player inside the ruins, where he mentions that something feels different to normal. The player is then suddenly teleported to the Sinjoh Ruins.
+
+If the player has completed the Sinjoh Ruins event with either a Hall of Origin Arceus or a fateful encounter Arceus (but not both), if they enter the ruins hallway with the other Arceus as their walking Pokémon, they will be teleported to the Sinjoh Ruins.
+
+===Puzzle chambers===
+Four small chambers in the ruins hold slide puzzles that, when solved, cause the floor below the player to break, dropping the player into the underground hall of the ruins. The puzzles also cause {{p|Unown}} to appear in the underground hall. Each puzzle corresponds to a specific subset of the 26 alphabetic forms of Unown. To unlock all 26 alphabetic forms, all four slide puzzles must be activated. The puzzles can be completed in any order. {{game|Crystal}} explains that these puzzles are signals that summon the {{p|Unown}}.
+
+In [[Generation II]], catching three Unown and speaking to a researcher outside the ruins will cause him to unlock [[Unown Mode]] in the player's Pokédex. In {{game|HeartGold and SoulSilver|s}}, the first completed slide puzzle will cause a man to give the player the [[Unown Report]]. Once the first seven pages of the report are complete and the 26 alphabetic Unown forms have been caught, the ! and ? forms can be encountered in the entrance room.
+
+In Crystal, HeartGold, and SoulSilver, each puzzle chamber has a word written in [[Unown symbols]] on the far wall that is a hint to unlocking a secret room. When the player completes a certain criterion, the secret room opens, revealing several items. Additionally, in these games, completing the slide puzzles reveals part of the history of Unown written in Unown symbols on the floor of the underground hall. In the Japanese version of Crystal, a scientist theorizes that the sudden appearance of these patterns is related to the newly-built [[Pokémon Communication Center]] and the radio waves emanating from it.
+
+The puzzles cause the following Unown to appear in the underground hall:
+{| class="roundy" style="background:#{{psychic color}}; border: 3px solid #{{psychic color dark}}; {{roundy|10px}} padding: 1px; margin:auto"
+! style="background:#{{psychic color light}}; {{roundytl|10px}}" | Chamber
+! style="background:#{{psychic color light}}" | In [[Generation II]]
+! style="background:#{{psychic color light}}; {{roundytr|10px}}" | In [[Generation IV]]
+|- style="background:#FFF"
+| Upper-right entrance 1
+| {{MSP/3|201|Unown}} {{MSP/3|201B|Unown}} {{MSP/3|201C|Unown}} {{MSP/3|201D|Unown}} {{MSP/3|201E|Unown}} {{MSP/3|201F|Unown}} {{MSP/3|201G|Unown}}<br>{{MSP/3|201H|Unown}} {{MSP/3|201I|Unown}} {{MSP/3|201J|Unown}} {{MSP/3|201K|Unown}}
+| {{MSP/3|201|Unown}} {{MSP/3|201B|Unown}} {{MSP/3|201C|Unown}} {{MSP/3|201D|Unown}} {{MSP/3|201E|Unown}} {{MSP/3|201F|Unown}} {{MSP/3|201G|Unown}}<br>{{MSP/3|201H|Unown}} {{MSP/3|201I|Unown}} {{MSP/3|201J|Unown}}
+|- style="background:#FFF"
+| Lower-right entrance 1
+| {{MSP/3|201S|Unown}} {{MSP/3|201T|Unown}} {{MSP/3|201U|Unown}} {{MSP/3|201V|Unown}} {{MSP/3|201W|Unown}}
+| {{MSP/3|201R|Unown}} {{MSP/3|201S|Unown}} {{MSP/3|201T|Unown}} {{MSP/3|201U|Unown}} {{MSP/3|201V|Unown}}
+|- style="background:#FFF"
+| Upper-left entrance 1
+| {{MSP/3|201X|Unown}} {{MSP/3|201Y|Unown}} {{MSP/3|201Z|Unown}}
+| {{MSP/3|201W|Unown}} {{MSP/3|201X|Unown}} {{MSP/3|201Y|Unown}} {{MSP/3|201Z|Unown}}
+|-
+| style="background:#FFF; {{roundybl|10px}}" | Lower-left entrance 1
+| style="background:#FFF" | {{MSP/3|201L|Unown}} {{MSP/3|201M|Unown}} {{MSP/3|201N|Unown}} {{MSP/3|201O|Unown}} {{MSP/3|201P|Unown}} {{MSP/3|201Q|Unown}} {{MSP/3|201R|Unown}}
+| style="background:#FFF; {{roundybr|10px}}" | {{MSP/3|201K|Unown}} {{MSP/3|201L|Unown}} {{MSP/3|201M|Unown}} {{MSP/3|201N|Unown}} {{MSP/3|201O|Unown}} {{MSP/3|201P|Unown}} {{MSP/3|201Q|Unown}}
+|}
+
+====Upper-right entrance 1====
+[[File:Ruins of Alph.jpg|thumb|250px|Artwork of {{ga|Ethan}} at the entrance of the Ruins of Alph]]
+The upper-right entrance 1, near the Route 36 entrance, requires no HM moves to access. In Pokémon Crystal, HeartGold, and SoulSilver, the far wall reads <sc>escape</sc> upon inspection. Using an [[Escape Rope]] there opens a hidden room. In Crystal, the item is consumed and the player must re-enter the chamber in order to reach the hidden room. In HeartGold and SoulSilver, the item is not consumed and the room opens immediately.
+
+The chamber's puzzle forms an image of {{p|Kabuto}}. Completing this puzzle and falling through to the floor below reveals the following message spelled out on the ground in Unown:
+<blockquote><sc>Our words shall remain here for the ages</sc>'''{{sup/2|C}}'''<br/>
+<sc>Our clan engraved words in this place</sc>'''{{sup/4|HGSS}}'''</blockquote>
+
+====Lower-right entrance 1====
+The lower-right entrance 1 requires {{m|Surf}} to cross the pond on the south side of the ruins. In Pokémon Crystal, HeartGold, and SoulSilver, the far wall reads <sc>light</sc>. Using {{m|Flash}} will open the hidden room.
+
+The chamber's puzzle forms an image of {{p|Aerodactyl}}. Completing this puzzle and falling through to the floor below reveals the following message spelled out on the ground in Unown:
+<blockquote><sc>Thus we shall erect a Pokémon statue outside</sc>'''{{sup/2|C}}'''<br/>
+<sc>Our clan created Pokémon statue outside</sc>'''{{sup/4|HGSS}}'''</blockquote>
+
+====Upper-left entrance 1====
+The upper-left entrance 1 is accessible only from the basement of [[Union Cave]], which requires {{m|Surf}} to navigate. In Pokémon Crystal, HeartGold, and SoulSilver, the far wall reads <sc>Ho Oh</sc>. The hidden room will open if {{p|Ho-Oh}} is the first Pokémon in the player's [[party]] in Crystal, or anywhere in the player's party in Generation IV.
+
+The chamber's puzzle forms an image of {{p|Ho-Oh}}. Completing this puzzle and falling through to the floor below reveals the following message spelled out on the ground in Unown:
+<blockquote><sc>We humans must learn to walk in harmony with them. We depart for their sakes</sc>'''{{sup/2|C}}'''<br/>
+<sc>We humans need to walk with them. We leave here for the sake of them</sc>'''{{sup/4|HGSS}}'''</blockquote>
+
+====Lower-left entrance 1====
+The lower-left entrance 1 is accessible only by moving a boulder in the basement of [[Union Cave]], which requires {{m|Surf}} to navigate as well as {{m|Strength}}. In Pokémon Crystal, HeartGold, and SoulSilver, the far wall reads <sc>water</sc>. In Crystal, the hidden room will open if the player has a [[Water Stone]] in their inventory, and in HeartGold and SoulSilver, it will open when the player selects "Use" on a Water Stone from the [[Bag]] while facing the wall. This act will not consume the item.
+
+The chamber's puzzle forms an image of {{p|Omanyte}}. Completing this puzzle and falling through to the floor below reveals the following message spelled out on the ground in Unown:
+<blockquote><sc>They possess great insight and refuse the outside world</sc>'''{{sup/2|C}}'''<br/>
+<sc>They possess power to sense with mind and reject outside</sc>'''{{sup/4|HGSS}}'''</blockquote>
+
+====Puzzles====
+<gallery perrow="4">
+File:Ruins of Alph NE puzzle GSC.png|Puzzle in the upper-right entrance 1, featuring {{p|Kabuto}}<br>(Generation II)
+File:Ruins of Alph SE puzzle GSC.png|Puzzle in the lower-right entrance 1, featuring {{p|Aerodactyl}}<br>(Generation II)
+File:Ruins of Alph NW puzzle GSC.png|Puzzle in the upper-left entrance 1, featuring {{p|Ho-Oh}}<br>(Generation II)
+File:Ruins of Alph SW puzzle GSC.png|Puzzle in the lower-left entrance 1, featuring {{p|Omanyte}}<br>(Generation II)
+File:Ruins of Alph NE puzzle HGSS.png|Puzzle in the upper-right entrance 1, featuring {{p|Kabuto}}<br>(Generation IV)
+File:Ruins of Alph SE puzzle HGSS.png|Puzzle in the lower-right entrance 1, featuring {{p|Aerodactyl}}<br>(Generation IV)
+File:Ruins of Alph NW puzzle HGSS.png|Puzzle in the upper-left entrance 1 chamber, featuring {{p|Ho-Oh}}<br>(Generation IV)
+File:Ruins of Alph SW puzzle HGSS.png|Puzzle in the lower-left entrance 1, featuring {{p|Omanyte}}<br>(Generation IV)
+</gallery>
+
+==Items==
+{{itlisth|ruins}}
+{{itemlist|none|Given by a researcher outside the ruins as an upgrade to the [[Pokédex]] after catching at least three different {{p|Unown}} variants|G=yes|S=yes|C=yes|display=[[Unown Mode]]}}
+{{itemlist|Unown Report|Given by a researcher right after solving the first chamber puzzle|HG=yes|SS=yes}}
+{{itemlist|Potion|In the left wall of the building, southmost of the three in the northeast|HG=yes|SS=yes}}
+{{itemlist|Great Ball|In the central solid rock among a group near the southern entrance ''(hidden)''|HG=yes|SS=yes}}
+{{itemlist|Tiny Mushroom|In the small mound of dirt east of the western pond ''(hidden)''|HG=yes|SS=yes|display=[[Tiny Mushroom|TinyMushroom]]}}
+{{itemlist|Rare Candy|In a solid rock west of a [[breakable rock]] to the west of the northern entrance (requires {{m|Rock Smash}}) ''(hidden)''|HG=yes|SS=yes}}
+{{itemlist|Hyper Potion|North of the western pond (requires {{m|Rock Smash}} or {{m|Surf}})|HG=yes|SS=yes}}
+{{itemlist|Nugget|On a boulder outside the third chamber (accessed via [[Union Cave]]) ''(hidden)''|HG=yes|SS=yes}}
+{{itemlist|Big Mushroom|On a boulder outside the third chamber (accessed via [[Union Cave]]) ''(hidden)''|HG=yes|SS=yes}}
+{{itlistfoot|ruins}}
+
+===Rock Smash===
+If the rock contains an item, the game will pick one of the following:
+{{itlisth|ruins}}
+{{itemlist|Red Shard|Found by smashing [[breakable rock]]s (25%)|HG=yes}}
+{{itemlist|Yellow Shard|Found by smashing [[breakable rock]]s (20%)|HG=yes}}
+{{itemlist|Blue Shard|Found by smashing [[breakable rock]]s (25%)|SS=yes}}
+{{itemlist|Green Shard|Found by smashing [[breakable rock]]s (20%)|SS=yes}}
+{{itemlist|Helix Fossil|Found by smashing [[breakable rock]]s (10%)|HG=yes}}
+{{itemlist|Dome Fossil|Found by smashing [[breakable rock]]s (10%)|SS=yes}}
+{{itemlist/2|Max Ether|Old Amber|Found by smashing [[breakable rock]]s (10% each)|HG=yes|SS=yes}}
+{{itemlist/2|Blue Shard|Green Shard|Found by smashing [[breakable rock]]s (10% each)|HG=yes}}
+{{Itemlist/2|Red Shard|Yellow Shard|Found by smashing [[breakable rock]]s (10% each)|SS=yes}}
+{{itemlist|Max Revive|Found by smashing [[breakable rock]]s (5%)|HG=yes|SS=yes}}
+{{itlistfoot|ruins}}
+
+===Upper-right entrance 2===
+{{itlisth|ruins}}
+{{itemlist|none|Hidden room|C=yes|display={{i|Berry}}}}
+{{itemlist|none|Hidden room|C=yes|display=[[PSNCureBerry]]}}
+{{itemlist|Heal Powder|Hidden room|C=yes|HG=yes|SS=yes}}
+{{itemlist|Energy Powder|Hidden room|C=yes|HG=yes|SS=yes|display=[[Energy Powder|EnergyPowder]]}}
+{{itemlist|Oran Berry|Hidden room|HG=yes|SS=yes}}
+{{itemlist|Pecha Berry|Hidden room|HG=yes|SS=yes}}
+{{itlistfoot|ruins}}
+
+===Lower-right entrance 2===
+{{itlisth|ruins}}
+{{itemlist|Heal Powder|Hidden room|C=yes|HG=yes|SS=yes}}
+{{itemlist|Energy Root|Hidden room|C=yes|HG=yes|SS=yes}}
+{{itemlist|none|Hidden room|C=yes|display=[[Gold Berry]]}}
+{{itemlist|Moon Stone|Hidden room|C=yes|HG=yes|SS=yes}}
+{{itemlist|Sitrus Berry|Hidden room|HG=yes|SS=yes}}
+{{itlistfoot|ruins}}
+
+===Upper-left entrance 2===
+{{itlisth|ruins}}
+{{itemlist|Revival Herb|Hidden room|C=yes|HG=yes|SS=yes}}
+{{itemlist|Charcoal|Hidden room|C=yes|HG=yes|SS=yes}}
+{{itemlist|none|Hidden room|C=yes|display=[[Gold Berry]]}}
+{{itemlist|none|Hidden room|C=yes|display=[[MysteryBerry]]}}
+{{itemlist|Life Orb|Hidden room|HG=yes|SS=yes}}
+{{itemlist|Leppa Berry|Hidden room|HG=yes|SS=yes}}
+{{itlistfoot|ruins}}
+
+===Lower-left entrance 2===
+{{itlisth|ruins}}
+{{itemlist|Stardust|Hidden room|C=yes|HG=yes|SS=yes}}
+{{itemlist|Star Piece|Hidden room|C=yes|HG=yes|SS=yes}}
+{{itemlist|none|Hidden room|C=yes|display=[[MysteryBerry]]}}
+{{itemlist|Mystic Water|Hidden room|C=yes|HG=yes|SS=yes}}
+{{itemlist|Leppa Berry|Hidden room|HG=yes|SS=yes}}
+{{itlistfoot|ruins}}
+
+==Pokémon==
+===Generation II===
+====Inside====
+{{catch/header|ruins|4}}
+{{catch/div|ruins|After at least one puzzle has been solved}}
+{{catch/entry2|201|Unown|yes|yes|yes|Cave|5|all=100%|type1=Psychic}}
+{{catch/footer|ruins}}
+
+The forms of Unown that can appear depend on which puzzles have been solved. Due to how Unown's form is determined, all of the letters except Z have an even chance of appearing—Unown Z appears 2.34375% of the time instead of 3.90625% of the time.
+* The puzzle in the upper-right entrance 1 causes Unown A, B, C, D, E, F, G, H, I, J, and K to appear.
+* The puzzle in the lower-left entrance 1 causes Unown L, M, N, O, P, Q, and R to appear.
+* The puzzle in the lower-right entrance 1 causes Unown S, T, U, V, and W to appear.
+* The puzzle in the upper-left entrance 1 causes Unown X, Y, and Z to appear.
+
+====Outside====
+{{catch/header|ruins|yes}}
+{{catch/entry2|177|Natu|yes|yes|yes|Grass|18,20,22,24|all=90%|type1=Psychic|type2=Flying}}
+{{catch/entry2|194|Wooper|no|no|yes|Grass|22|0%|0%|5%|type1=Water|type2=Ground}}
+{{catch/entry2|195|Quagsire|no|no|yes|Grass|22|0%|0%|5%|type1=Water|type2=Ground}}
+{{catch/entry2|235|Smeargle|yes|yes|no|Grass|20,22|all=10%|type1=Normal}}
+{{catch/entry2|235|Smeargle|no|no|yes|Grass|20,22|10%|10%|0%|type1=Normal}}
+{{catch/div|water|Surfing}}
+{{catch/entry2|194|Wooper|yes|yes|yes|Surf|15-19|all=60%|type1=Water|type2=Ground}}
+{{catch/entry2|195|Quagsire|yes|yes|yes|Surf|15-24|all=40%|type1=Water|type2=Ground}}
+{{catch/div|water|Fishing}}
+{{catch/entry2|060|Poliwag|yes|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{catch/entry2|060|Poliwag|yes|yes|yes|Fish Good|20|all=65%|type1=Water}}
+{{catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=Water}}
+{{catch/entry2|060|Poliwag|yes|yes|yes|Fish Super|40|all=80%|type1=Water}}
+{{catch/entry2|129|Magikarp|yes|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{catch/footer|ruins}}
+
+===Generation IV===
+====Inside====
+=====Underground hall=====
+{{catch/header|ruins|4}}
+{{catch/div|ruins|After at least one puzzle has been solved}}
+{{catch/entryhs|201|Unown|yes|yes|Cave|5|all={{tt|100%|divided equally among all forms whose puzzles have been solved}}|type1=Psychic}}
+{{catch/footer|ruins}}
+* The puzzle in the upper-right entrance 1 causes Unown A, B, C, D, E, F, G, H, I, and J to appear.
+* The puzzle in the lower-left entrance 1 causes Unown K, L, M, N, O, P, and Q to appear.
+* The puzzle in the lower-right entrance 1 causes Unown R, S, T, U, and V to appear.
+* The puzzle in the upper-left entrance 1 causes Unown W, X, Y, and Z to appear.
+
+=====Entrance=====
+{{catch/header|ruins|4}}
+{{catch/div|ruins|After obtaining all 26 alphabetic Unown forms, completing all 4 tile puzzles, and unlocking all 4 secret rooms}}
+{{catch/entryhs|201QU|Unown|yes|yes|Cave|5|all=50%|type1=Psychic}}
+{{catch/entryhs|201EX|Unown|yes|yes|Cave|5|all=50%|type1=Psychic}}
+{{catch/footer|ruins}}
+
+====Outside====
+{{catch/header|ruins|4}}
+{{catch/entryhs|177|Natu|yes|yes|Grass|18, 20, 22, 24|all=90%|type1=Psychic|type2=Flying}}
+{{catch/entryhs|235|Smeargle|yes|yes|Grass|20, 22|all=10%|type1=Normal}}
+{{catch/div|water|Surfing}}
+{{catch/entryhs|194|Wooper|yes|yes|Surf|10-20|all=60%|type1=Water|type2=Ground}}
+{{catch/entryhs|195|Quagsire|yes|yes|Surf|10-25|all=40%|type1=Water|type2=Ground}}
+{{catch/div|water|Fishing}}
+{{catch/entryhs|060|Poliwag|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{catch/entryhs|060|Poliwag|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=60%|type1=Water}}
+{{catch/entryhs|060|Poliwag|yes|yes|Fish Super|40|all=80%|type1=Water}}
+{{catch/entryhs|129|Magikarp|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{catch/div|ruins|Rock Smash}}
+{{catch/entryhs|074|Geodude|yes|yes|Rock Smash|3-14|all=100%|type1=Rock|type2=Ground}}
+{{catch/div|ruins|Special}}
+{{catch/entryhs|264|Linoone|yes|yes|Hoenn|18|all=20%|type1=Normal}}
+{{catch/entryhs|293|Whismur|yes|yes|Hoenn|20, 22|all=20%|type1=Normal}}
+{{catch/entryhs|399|Bidoof|yes|yes|Sinnoh|18|all=20%|type1=Normal}}
+{{catch/entryhs|418|Buizel|yes|yes|Sinnoh|20, 22|all=20%|type1=Water}}
+{{catch/footer|ruins}}
+
+==Trainers==
+===Generation II===
+{{trainerheader|ruins}}
+{{trainerdiv|ruins|Accessed from Union Cave (requires Surf)}}
+{{trainerentry|Spr GS Psychic.png|Psychic|Nathan|832|1|203|Girafarig|♂|26|None|36=ジョウ|37=Jō}}
+{{trainerfooter|ruins|II}}
+
+===Generation IV===
+{{trainerheader|ruins}}
+{{trainerdiv|ruins|Accessed from Union Cave (requires Surf)}}
+{{trainerentry|Spr DP Psychic M.png|Psychic|Nathan|832|1|203|Girafarig|♂|26|None|36=ジョウ|37=Jō}}
+{{trainerfooter|ruins|II}}
+
+==Walking Pokémon effects==
+When interacting with [[walking Pokémon]] in {{v2|HeartGold and SoulSilver|s}}, the Pokémon may occasionally show an [[List of walking Pokémon responses in Generation IV|altered response]] specific to this location.
+
+{| class="roundtable" style="margin: auto; text-align: center; background-color: #{{locationcolor/med|ruins}}; border: 3px solid #{{locationcolor/dark|ruins}}"
+|- style="background:#{{locationcolor/light|ruins}}"
+! Games
+! Pokémon
+! Area
+! Quote
+|- style="background-color: #FFF"
+! rowspan="10" | {{GameIcon|HG}}{{GameIcon|SS}}
+| [[File:Ani201ODU.png]]<br>{{p|Unown}} (all forms)
+| Anywhere
+| <Pokémon's name> started spinning around in circles.
+|- style="background-color: #FFF"
+| [[File:Ani201ODN.png]]<br>{{p|Unown}} (all forms)
+| Anywhere
+| Your Pokémon seems to be singing something?
+|- style="background-color: #FFF"
+| [[File:Ani201ODO.png]]<br>{{p|Unown}} (all forms)
+| Anywhere
+| A strange sound is coming from <Pokémon's name>...
+|- style="background-color: #FFF"
+| [[File:Ani201ODW.png]]<br>{{p|Unown}} (all forms)
+| Anywhere
+| <Pokémon's name> is growling in a way that sounds almost like speech...
+|- style="background-color: #FFF"
+| [[File:Ani201ODN.png]]<br>{{p|Unown}} (all forms)
+| Anywhere
+| Your Pokémon isn't moving.
+|- style="background-color: #FFF"
+| [[File:Ani201ODEX.png]]<br>{{p|Unown}} (all forms)
+| Anywhere
+| [Name] is keeping close to you.
+|- style="background-color: #FFF"
+| Other Pokémon
+| Anywhere
+| <Pokémon's name> is wandering around and listening to the different sounds.
+|- style="background-color: #FFF"
+| Other Pokémon 
+| Anywhere
+| <Pokémon's name> suddenly turned around!
+|- style="background-color: #FFF"
+| Other Pokémon 
+| Anywhere
+| <Pokémon's name> is scratching at the ground as if searching for something.
+|- style="background-color: #FFF"
+| Other Pokémon 
+| Anywhere
+| Your Pokémon is staring intently at nothing...
+|}
+
+==Layout==
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{locationcolor/dark|ruins}}"
+|-
+! style="background:#{{locationcolor/light|ruins}}; {{roundytl|5px}}" | Version 
+! style="background:#{{locationcolor/light|ruins}}" | Outside
+! style="background:#{{locationcolor/light|ruins}}" | Entrance
+! style="background:#{{locationcolor/light|ruins}}" | Underground hall
+! style="background:#{{locationcolor/light|ruins}}" | Puzzle room
+! style="background:#{{locationcolor/light|ruins}}" | Item room
+! style="background:#{{locationcolor/light|ruins}}; {{roundytr|5px}}" | Research Center
+|-
+! style="background:#{{gold color}}" | {{color2|000|Pokémon Gold and Silver Versions|Gold}}
+| rowspan="3" | [[File:Ruins of Alph GSC.png|100px]]
+|
+| rowspan="3" | [[File:Ruins of Alph interior GSC.png|120px]]
+| rowspan="2" | [[File:Ruins of Alph Puzzle GS.png|120px]]
+|
+| rowspan="3" | [[File:Ruins of Alph Research Center GSC.png|100px]]
+|-
+! style="background:#{{silver color}}" | {{color2|000|Pokémon Gold and Silver Versions|Silver}}
+|-
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon Crystal Version|Crystal}}
+|
+| [[File:Ruins of Alph Puzzle C.png|120px]]
+| [[File:Ruins of Alph Item C.png|120px]]
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+| rowspan="2" | [[File:Ruins of Alph Outside HGSS.png|100px]]
+| rowspan="2" | [[File:Ruins of Alph Entrance HGSS.png|120px]]
+| rowspan="2" | [[File:Ruins of Alph Interior HGSS.png|120px]]
+| rowspan="2" | [[File:Ruins of Alph Puzzle HGSS.png|120px]]
+| rowspan="2" | [[File:Ruins of Alph Item HGSS.png|120px]]
+| rowspan="2" | [[File:Ruins of Alph Research Center HGSS.png|100px]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan="7" style="background:#{{locationcolor/light|ruins}}; {{roundybottom|5px}}" | &nbsp; 
+|}{{-}}
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{locationcolor/dark|ruins}}; text-align:center"
+|-
+! style="background:#{{locationcolor/light|ruins}}; {{roundytl|5px}}" | Version 
+! style="background:#{{locationcolor/light|ruins}}" | Upper-right chamber 3
+! style="background:#{{locationcolor/light|ruins}}" | Lower-right chamber 3
+! style="background:#{{locationcolor/light|ruins}}" | Lower-left chamber 3
+! style="background:#{{locationcolor/light|ruins}}; {{roundytr|5px}}" | Upper-left chamber 3
+|-
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon Crystal Version|Crystal}}
+| [[File:Ruins of Alph first chamber C.png|150px]]
+| [[File:Ruins of Alph second chamber C.png|150px]]
+| [[File:Ruins of Alph third chamber C.png|130px]]
+| [[File:Ruins of Alph fourth chamber C.png|100px]]
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+| rowspan="2" | [[File:Ruins of Alph first chamber HGSS.png|150px]]
+| rowspan="2" | [[File:Ruins of Alph second chamber HGSS.png|150px]]
+| rowspan="2" | [[File:Ruins of Alph third chamber HGSS.png|130px]]
+| rowspan="2" | [[File:Ruins of Alph fourth chamber HGSS.png|100px]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan="5" style="background:#{{locationcolor/light|ruins}}; {{roundybottom|5px}}" | &nbsp; 
+|}
+
+==[[Location preview|Preview]]==
+<gallery>
+File:HGSS Ruins of Alph-Morning.png|Morning (Unown S)
+File:HGSS Ruins of Alph-Day.png|Day/Evening (Unown G)
+File:HGSS Ruins of Alph-Night.png|Night (Unown T)
+</gallery>
+
+==In animation==
+[[File:Ruins of Alph anime.png|thumb|250px|Ruins of Alph in {{aniseries|GS}}]]
+===''Pokémon the Series''===
+===={{aniseries|GS}}====
+The Ruins of Alph appeared in ''[[EP163|Fossil Fools]]'', where {{Ash}} and {{ashfr}} visited them, meeting {{an|Professor Oak}} upon their arrival. Unlike the {{pkmn|games}}, no {{p|Unown}} were featured there. Instead, it was a site where multiple [[Fossil]]s had been dug out. One of the scientists working at the site was [[Foster]], one of Professor Oak's former top students at [[Celadon University]].
+
+Foster's research laboratory is close to the site and includes museum exhibits and the Ancient Pokémon Study Park, a man-made environment designed to replicate conditions from two million years ago. The study park includes a robotic {{p|Aerodactyl}} and a volcano. Foster hoped to open the study park to tourists within the next year. Several living {{p|Omanyte}} and {{p|Omastar}} had also decided to live at the park.
+
+After Ash's query, the group made their way to a nearby reservoir, which was being pumped dry of water and its {{pkmn2|wild}} Omanyte and Omastar populations being stolen by {{TRT}}. After rescuing the Fossil Pokémon, the group agreed that the ancient Pokémon should be left alone and promised Foster not to tell anyone about them.
+
+====Pokémon====
+{| style="margin:auto; width: 100%"
+|-
+| {{ActivePoké|Ruins of Alph|Omanyte|Ruins of Alph Omanyte.png|Rock|Water|link=no|disp=Omanyte (multiple)}}
+| {{ActivePoké|Ruins of Alph|Omastar|Ruins of Alph Omastar.png|Rock|Water|link=no|disp=Omastar (multiple)}}
+|
+|}
+
+==In the manga==
+[[File:Ruins of Alph Adventures.png|thumb|250px|Ruins of Alph in [[Pokémon Adventures]]]]
+===Pokémon Adventures===
+===={{MangaArc|Gold, Silver & Crystal}}====
+The Ruins of Alph first appeared in ''[[PS100|Into the Unown]]'' as the location where {{adv|Gold}} met [[Bugsy]] for the first time. He helped Bugsy rescue his research team who were trapped in the ruins, and also foiled a plan by the [[Team Rocket Elite Trio]] to capture the {{p|Unown}}.
+
+In ''[[PS134|Hurray for Heracross]]'', while doing research at the ruins, Bugsy was challenged by {{DL|Legendary beasts (Adventures)|Suicune}}, who was seeking a worthy Trainer to stand on its side during the upcoming confrontation with the [[Masked Man]]. Bugsy did his best, but in the end, he was unable to defeat and {{pkmn2|caught|catch}} the [[Legendary Pokémon]].
+
+===={{MangaArc|HeartGold & SoulSilver}}====
+In ''[[PS453|All About Arceus II]]'', Gold, having rescued Bugsy after [[Ecruteak Gym]] was destroyed by {{adv|Arceus}}, chased Arceus to the Ruins of Alph, where he also found an injured [[Lance]]. After leaving Lance in Bugsy's care, Gold confronted Arceus by himself. When {{adv|Silver}} and {{adv|Crystal}} soon arrived at the site, with Silver having managed to collect the 16 [[Plate]]s from across [[Johto]], Arceus transported the [[Pokédex holder]]s to the [[Sinjoh Ruins]], unintentionally bringing the four Team Rocket {{tc|Executive}}s along as well. Lance also departed on his own to fetch his allies for the upcoming battle.
+
+In ''[[PS460|All About Arceus IX]]'', Arceus returned the Pokédex holders, the Executives, Lance, {{adv|Giovanni}}, and [[Pryce]] to the Ruins of Alph. As thanks for helping to prevent the destruction of the Sinjoh Ruins, {{adv|Celebi}} brought Giovanni a medicine that cured him of his long-time illness, allowing him to return to leading [[Team Rocket]]. He asked Silver if he wanted to join him, but Silver refused, vowing to one day crush Team Rocket and make his father turn over a new leaf. Giovanni respected his son's choice and departed.
+
+===={{MangaArc|Omega Ruby & Alpha Sapphire}}====
+In [[PS614]], it was revealed that [[Archie]] and [[Maxie]] had appeared at the Ruins of Alph when their spirits were pulled out of the [[Distortion World]] during the events of the ''HeartGold & SoulSilver'' arc.
+{{-}}
+
+[[File:Ruins of Alph Golden Boys.png|thumb|250px|Ruins of Alph in [[Pokémon Gold & Silver: The Golden Boys]]]]
+===Pokémon Gold & Silver: The Golden Boys===
+In ''[[GB04|Let's Aim For The Goal!]]'', {{GnB|Gold}} arrived at the Ruins of Alph and met [[Bugsy]], who told him that a basketball tournament was being held at the ruins to celebrate their anniversary. Gold decided to participate, eventually facing and defeating {{tc|Firebreather}} Takeo in the finals. As a reward for winning, Gold was given an {{p|Elekid}}.
+
+In ''[[GB05|Extreme Power!! The Friday Pokémon]]'', Gold and Bugsy explored the ruins for a while before deciding to travel to [[Azalea Town]] together, only to learn that an accident had caused the [[Union Cave]] to be temporarily closed from the public.
+{{-}}
+
+[[File:Ruins of Alph PM.png|thumb|250px|Ruins of Alph in [[Pokémon Pocket Monsters]]]]
+===Pokémon Pocket Monsters===
+The Ruins of Alph appeared in ''[[PM072|Rampage at the Ruins of Alph!]]''. [[Red's Clefairy]] accidentally caused {{PPM|Red}} and his Pokémon to fall through a trap door and meet some {{p|Unown}}. After a while of hanging out together, the Unown got mad at Clefairy for attaching them together and attacked. Afterwards, Clefairy smashed a pillar and caused the ruins to crumble.
+{{-}}
+
+==In the TCG==
+The following gallery is of cards mentioning or featuring the Ruins of Alph in the [[Pokémon Trading Card Game]].<gallery>
+File:RuinsAlphUndaunted76.jpg|[[Ruins of Alph (Undaunted 76)|Ruins of Alph]] ([[Undaunted (TCG)|Undaunted]] 76/90)
+File:RuinWallNeoDiscovery74.jpg|[[Ruin Wall (Neo Discovery 74)|Ruin Wall]] ([[Neo Discovery (TCG)|Neo Discovery]] 74/75)
+File:RuinWallCrossingtheRuins.jpg|[[Ruin Wall (Neo Discovery 74)|Ruin Wall]] ([[Neo Discovery (TCG)|Crossing the Ruins]])
+File:AlphLithographHeartGoldSoulSilverONE.jpg|[[Alph Lithograph (HeartGold & SoulSilver ONE)|Alph Lithograph]] ([[HeartGold & SoulSilver (TCG)|HeartGold & SoulSilver]] ONE)
+File:AlphLithographUnleashedTWO.jpg|[[Alph Lithograph (Unleashed TWO)|Alph Lithograph]] ([[Unleashed (TCG)|Unleashed]] TWO)
+File:AlphLithographUndauntedTHREE.jpg|[[Alph Lithograph (Undaunted THREE)|Alph Lithograph]] ([[Undaunted (TCG)|Undaunted]] THREE)
+File:AlphLithographTriumphantFOUR.jpg|[[Alph Lithograph (Triumphant FOUR)|Alph Lithograph]] ([[Triumphant (TCG)|Triumphant]] FOUR)
+File:NatuUnleashed55.jpg|[[Natu (Unleashed 55)|Natu]] ([[Unleashed (TCG)|Unleashed]] 55/95)
+File:WooperHeartGoldSoulSilver88.jpg|[[Wooper (HeartGold & SoulSilver 88)|Wooper]] ([[HeartGold & SoulSilver (TCG)|HeartGold & SoulSilver]] 88/123)
+</gallery>
+
+== Merchandise ==
+Four keychains with each featuring a sliding puzzle version of one of the [[Ruins of Alph#Puzzle chambers|puzzles]] have been released on November 21, 2024 as part of the [[Pokémon Gold and Silver 25th Anniversary Commemorative Goods]] collection of merchandise exclusive to the [[Pokémon Center (store)|Pokémon Center]].<gallery>
+File:GS 25th Ruins of Alph Unown A.jpg|Kabuto puzzle keychain
+File:GS 25th Ruins of Alph Unown L.jpg|Aerodactyl puzzle keychain
+File:GS 25th Ruins of Alph Unown P.jpg|Ho-Oh puzzle keychain
+File:GS 25th Ruins of Alph Unown H.jpg|Omanyte puzzle keychain
+</gallery>
+
+==Trivia==
+===Origin===
+{{main|Pokémon world in relation to the real world#Johto|Pokémon world in relation to the real world → Johto}}
+Ruins of Alph may correspond to the {{wp|Ishibutai Kofun}} and {{wp|Takamatsuzuka Tomb}} burial mounds located in the village of {{wp|Asuka, Nara|Asuka}} in the {{wp|Nara Prefecture}}, both of which are designated as {{wp|Monuments of Japan|National Historic Site of Japan}}.
+
+==Names==
+{| class="roundtable" style="background:#{{locationcolor/med|ruins}}; border:3px solid #{{locationcolor/dark|ruins}}"
+|-
+! style="background:#{{locationcolor/light|ruins}}" | Language
+! style="background:#{{locationcolor/light|ruins}}" | Name
+! style="background:#{{locationcolor/light|ruins}}" | Origin
+|-
+| Japanese
+| アルフのいせき ''Alph no Iseki''
+| From ''{{wp|alphabet}}'', in reference to the {{p|Unown}} found in its chambers
+|-
+| English
+| Ruins of Alph
+| From ''alphabet''
+|-
+| German
+| Alph-Ruinen
+| From ''Alphabet''
+|-
+| rowspan="2" | European Spanish
+| Ruinas Alfa
+| rowspan="2" | From ''alfabeto'' (alphabet)
+|-
+| Ruinas Alfabeto<ref group=n name="Anime">[[Pokémon animated series]]</ref>
+|-
+| Latin American Spanish
+| Ruinas de Alph<ref group=n name="Anime" />
+| From its English name
+|-
+| French
+| Ruines d'Alpha
+| From ''alphabet''
+|-
+| Italian
+| Rovine d'Alfa
+| From ''alfabeto'' (alphabet)
+|-
+| Korean
+| 알프의 유적 ''Alph-ui Yujeok''
+| From ''alphabet''
+|-
+| Chinese (Taiwan)
+| 阿露福遺跡 ''Ālùfú Yíjī''
+| rowspan="3" | Transcription of its Japanese name
+|-
+| Chinese (Hong Kong)
+| 阿露福遺跡 ''Alouhfūk Wàihjīk''
+|-
+| Chinese (mainland China)
+| 阿露福遗迹 ''Ālùfú Yíjì''<ref group=n>Pokémon Adventures</ref><br>阿尔芙遗迹 ''Āěrfú Yíjì''<ref group=n>[[Pokémon Pocket Monsters]]</ref><br>阿卢萍遗迹 ''Ālúpíng Yíjì''<ref group=n>[[Pocket Monsters Film Comic]]</ref>
+|-
+| Brazilian Portuguese
+| Ruínas de Alfa
+| From ''alfabeto'' (alphabet)
+|-
+| Catalan
+| Ruïnes d'Alph<ref group="n">Pokémon animated series (Valencian dub)</ref>
+| From its English name
+|-
+| Czech
+| Ruiny Alph ([[Pokémon Adventures|manga]])<br>Rozvaliny Alph ([[EP163]])
+| From its English name
+|-
+| Finnish
+| Alphin rauniot
+| From its English name
+|-
+| Polish
+| Ruiny Alph
+| From its English name
+|-
+| Swedish
+| Alph-ruinerna
+| From its English name
+|-
+| Vietnamese
+| Di tích Arufu
+| Transcription of its Japanese name
+|}
+{{-}}
+
+===Notes===
+{{reflist|group=n}}
+==References==
+{{reflist}}
+==Related articles==
+{{Johto}}
+{{Project Locations notice}}
+
+[[Category:Johto locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Ruins|Alph]]
+
+[[de:Alph-Ruinen]]
+[[es:Ruinas Alfa]]
+[[fr:Ruines d'Alpha]]
+[[it:Rovine d'Alfa]]
+[[ja:アルフのいせき]]
+[[zh:阿露福遗迹]]

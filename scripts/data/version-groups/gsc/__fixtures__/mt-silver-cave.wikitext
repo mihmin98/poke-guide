@@ -1,0 +1,901 @@
+<!-- poke-guide fixture: {"title":"Mt. Silver Cave","resolvedTitle":"Mt. Silver Cave","revid":4554313,"timestamp":"2026-05-19T10:10:28Z","fetchedAt":"2026-09-23T16:33:53.055Z"} -->
+{{Infobox location
+|image=HGSS Mt. Silver-{{#switch: {{#time: G}}|4|5|6|7|8|9=Morning|10|11|12|13|14|15|16=Day|17|18|19=Evening|20|21|22|23|0|1|2|3=Night}}.png
+|image_size=256
+|type=mountain
+|mapdesc=A hallowed mountain that rises between the Johto and Kanto regions.
+|location_name=Mt. Silver Cave
+|japanese_name=シロガネ{{tt|山|やま}}どうくつ
+|translated_name=Mt. Shirogane Cave
+|other_info=Silver Cave
+|location=North of [[Mt. Silver]], west of {{rt|28|Kanto}}
+|region=Johto
+|generation={{Gen|II}}, {{Gen|IV}}
+|map=Johto Mt Silver Map.png
+}}
+'''Mt. Silver Cave''' (Japanese: '''シロガネやまどうくつ''' ''Mt. Shirogane Cave'') is the cave system of [[Mt. Silver]] in [[Johto]], located west of {{ka|Victory Road}} and [[Indigo Plateau]]. It can be entered from the outside area at the foot of the mountain after receiving the sixteen Gym [[Badge]]s of both Johto and Kanto. In [[Generation II]], both the outside area and the cave system are included under the location header '''Silver Cave''' (Japanese: '''シロガネやま''' ''Mt. Shirogane'').
+
+At the very summit, the {{player}} may battle {{ga|Red}}. If defeated, Red vanishes from Mt. Silver Cave, and returns every time the player enters the [[Hall of Fame]].
+
+==Geography==
+In the games, Mt. Silver is off-limits to all but the most skilled of Trainers. After the {{player}} has received all sixteen badges of Johto and Kanto, [[Professor Oak]] will give the player permission to travel here.
+
+There is a [[Pokémon Center]] just outside the entrance of Mt. Silver Cave, at the foot of [[Mt. Silver]]. Inside, however, the cave is dark, requiring {{m|Flash}} to see in the first room. Many high-level Pokémon reside in the cave, as well as rare Pokémon not found elsewhere in the Johto region, like {{p|Larvitar}} and {{p|Misdreavus}}.
+
+The cave has only one entrance, unlike all other caves found in {{game2|Gold|Silver|Crystal}}, but goes deep into the mountain. In the cave's final room, the player will encounter {{ga|Red}}, who will wordlessly challenge the player to what is the highest-leveled Trainer battle in the Pokémon series. If defeated, Red will vanish, and will only return for another battle after the player defeats the Elite Four again.
+
+In {{game|HeartGold and SoulSilver|s}}, Mt. Silver Cave is much larger than before. {{m|Flash}} is no longer needed to light up the cave. The higher sections of the cave, where Red is located, require {{m|Rock Climb}} to be accessible. At times, the player must also venture onto the slopes on the mountain's sides in order to climb higher. In addition, a {{weather|hail|heavy snowfall}} is present at the summit, which assumes the hail weather condition in battle; this weather becomes {{weather|diamond dust}} on certain days, which disables the hail weather condition in battle.
+
+==Items==
+===Generation II===
+{{itlisth|mountain}}
+{{Itemlist|Escape Rope|1F, west of the entrance|G=yes|S=yes|C=yes}}
+{{Itemlist|X Accuracy|1F, east of the entrance|G=yes|S=yes}}
+{{Itemlist|Protein|1F, east of the entrance|C=yes}}
+{{Itemlist|Ultra Ball|1F, in the middle of the floor|C=yes}}
+{{Itemlist|Dire Hit|1F, on the rock between the central ledges ''(hidden)''|G=yes|S=yes|C=yes}}
+{{Itemlist|Max Elixir|1F, northwest corner|G=yes|S=yes|C=yes}}
+{{Itemlist|Ultra Ball|1F, southeast area near the 2F entrance ''(hidden)''|G=yes|S=yes|C=yes}}
+{{Itemlist|Max Potion|2F, on the rock just west of the 2F entrance ''(hidden)''|G=yes|S=yes|C=yes}}
+{{Itemlist|PP Up|2F, on the tiny western shoreline (requires {{m|Surf}} and {{m|Waterfall}})|C=yes}}
+{{Itemlist|Max Revive|2F, southwestern interior, far western end of the cave (requires {{m|Surf}} and {{m|Waterfall}})|G=yes|S=yes|C=yes}}
+{{Itemlist|Ultra Ball|2F, east of the triple stairway|C=yes}}
+{{Itemlist|Calcium|2F, near the entrance of the northeastern interior cave (requires {{m|Surf}} and {{m|Waterfall}})|C=yes}}
+{{Itemlist|Full Restore|2F, northeastern interior, far northeastern end of the cave (requires {{m|Surf}} and {{m|Waterfall}})|G=yes|S=yes|C=yes}}
+{{itlistfoot|mountain}}
+
+===Generation IV===
+====1F====
+{{itlisth|mountain}}
+{{Itemlist|Expert Belt|Southern chamber, in the cave just north of the entrance to the main chamber (requires {{m|Surf}} and {{m|Waterfall}})|HG=yes|SS=yes}}
+{{Itemlist|Ultra Ball|Main chamber, on a rock between the two waterfalls (requires {{m|Surf}}, {{m|Waterfall}}, and {{m|Rock Climb}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Hyper Potion|Northwestern chamber, at the north-west corner of the ledge above {{p|Moltres}} (requires {{m|Surf}}, {{m|Waterfall}}, and {{m|Rock Climb}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Ultra Ball|Northwestern chamber, at the north-east corner of the ledge above {{p|Moltres}} (requires {{m|Surf}}, {{m|Waterfall}}, and {{m|Rock Climb}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Dire Hit|Main chamber, on a rock northeast of the entrance (requires {{m|Rock Climb}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Full Restore|Main chamber, in the northeast corner, accessed from the lower mountainside (requires {{m|Rock Climb}})|HG=yes|SS=yes}}
+{{Itemlist|Revive|Main chamber, on a rock right of the path to 2F (requires {{m|Rock Climb}}) ''(hidden)''|HG=yes|SS=yes}}
+{{itlistfoot|mountain}}
+
+====Lower mountainside====
+''{{m|Rock Climb}} is required to reach this area.''
+{{itlisth|mountain}}
+{{Itemlist|Escape Rope|On the southern part of the lowest cliff|HG=yes|SS=yes}}
+{{Itemlist|TM Rock|On the southern part of the highest cliff|HG=yes|SS=yes|display={{TM|76|Stealth Rock}}}}
+{{itlistfoot|mountain}}
+
+====2F====
+''{{m|Rock Climb}} is required to reach this area.''
+{{itlisth|mountain}}
+{{Itemlist|Max Elixir|Second ledge north of the entrance from the main chamber|HG=yes|SS=yes}}
+{{Itemlist|Max Revive|Third ledge north of the entrance from the main chamber|HG=yes|SS=yes}}
+{{Itemlist|Max Potion|On the westernmost cliff (requires {{m|Rock Smash}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Calcium|On the southernmost cliff (requires {{m|Rock Smash}})|HG=yes|SS=yes}}
+{{Itemlist|Iron|On a rock in the far north-east corner (requires {{m|Rock Smash}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Protein|On the easternmost cliff|HG=yes|SS=yes}}
+{{itlistfoot|mountain}}
+
+=====Rock Smash=====
+If the rock contains an item, the game will pick one of the following:
+{{Itlisth|mountain}}
+{{Itemlist|Max Ether|Found by smashing [[breakable rock]]s (25%)|HG=yes|SS=yes}}
+{{Itemlist|Revive|Found by smashing [[breakable rock]]s (20%)|HG=yes|SS=yes}}
+{{Itemlist/5|Red Shard|Blue Shard|Yellow Shard|Green Shard|Heart Scale|Found by smashing [[breakable rock]]s (10% each)|HG=yes|SS=yes}}
+{{Itemlist|Star Piece|Found by smashing [[breakable rock]]s (5%)|HG=yes|SS=yes}}
+{{itlistfoot|mountain}}
+
+====Upper mountainside====
+''{{m|Rock Climb}} is required to reach this area.''
+{{itlisth|snow}}
+{{Itemlist|Max Ether|On a rock just west of the northern exit ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Pure Incense|On the upper-east side of the mountain (requires {{m|Rock Climb}})|HG=yes|SS=yes}}
+{{Itemlist|Rare Candy|On a rock west of the Pure Incense (requires {{m|Rock Climb}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Hyper Potion|East of the western cave entrance leading to the summit (requires {{m|Rock Climb}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itemlist|Dawn Stone|West of the western cave entrance leading to the summit (requires {{m|Rock Climb}})|HG=yes|SS=yes}}
+{{itlistfoot|snow}}
+
+====3F====
+''{{m|Rock Climb}} is required to reach this area.''
+{{itlisth|mountain}}
+{{Itemlist|Max Revive|On a rock east of the exit to the summit ''(hidden)''|HG=yes|SS=yes}}
+{{itlistfoot|mountain}}
+
+====Summit====
+''{{m|Rock Climb}} is required to reach this area.''
+{{itlisth|snow}}
+{{Itemlist|None|sprite=Legend Ribbon|Given to all the Pokémon that participated in the battle against {{ga|Red}}, after defeating him|HG=yes|SS=yes|display={{DL|List of Ribbons in the games|Legend Ribbon}}}}
+{{itlistfoot|snow}}
+
+==Pokémon==
+===Generation II===
+''In the Japanese and Korean versions of {{2v2|Gold|Silver}}, {{p|Ursaring}} appears only in Silver, while {{p|Donphan}} appears only in Gold.''
+
+====1F====
+{{Catch/header|mountain}}
+{{Catch/entry2|042|Golbat|yes|yes|no|Cave|45|all=5%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|45|5%|5%|0%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|42,44,46|0%|0%|45%|type1=Poison|type2=Flying}}
+{{Catch/entry2|055|Golduck|no|no|yes|Cave|45|0%|0%|5%|type1=Water}}
+{{Catch/entry2|075|Graveler|yes|yes|yes|Cave|43|all=30%|type1=Rock|type2=Ground}}
+{{Catch/entry2|095|Onix|yes|yes|no|Cave|42|all=30%|type1=Rock|type2=Ground}}
+{{Catch/entry2|095|Onix|no|no|yes|Cave|42|all=20%|type1=Rock|type2=Ground}}
+{{Catch/entry2|126|Magmar|no|no|yes|Cave|45|10%|10%|0%|type1=Fire}}
+{{Catch/entry2|217|Ursaring|yes|no|no|Cave|44|all=30%|type1=Normal}}
+{{Catch/entry2|217|Ursaring|no|no|yes|Cave|44|30%|30%|0%|type1=Normal}}
+{{Catch/entry2|232|Donphan|no|yes|no|Cave|44|all=30%|type1=Ground}}
+{{Catch/entry2|246|Larvitar|yes|yes|no|Cave|15, 20|all=5%|type1=Rock|type2=Ground}}
+{{Catch/entry2|246|Larvitar|no|no|yes|Cave|15, 20|5%|5%|0%|type1=Rock|type2=Ground}}
+{{Catch/footer|mountain}}
+
+====2F====
+{{Catch/header|mountain}}
+{{Catch/entry2|042|Golbat|yes|yes|no|Cave|48|all=5%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|48|30%|30%|0%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|46, 48|0%|0%|50%|type1=Poison|type2=Flying}}
+{{Catch/entry2|047|Parasect|no|no|yes|Cave|46, 48|all=15%|type1=Bug|type2=Grass}}
+{{Catch/entry2|055|Golduck|yes|yes|no|Cave|48|all=30%|type1=Water}}
+{{Catch/entry2|055|Golduck|no|no|yes|Cave|48|0%|0%|30%|type1=Water}}
+{{Catch/entry2|067|Machoke|no|no|yes|Cave|48|30%|30%|0%|type1=Fighting}}
+{{Catch/entry2|195|Quagsire|yes|yes|no|Cave|45|40%|40%|30%|type1=Water|type2=Ground}}
+{{Catch/entry2|200|Misdreavus|yes|yes|no|Cave|45|0%|0%|10%|type1=Ghost}}
+{{Catch/entry2|200|Misdreavus|no|no|yes|Cave|45|0%|0%|5%|type1=Ghost}}
+{{Catch/entry2|217|Ursaring|yes|no|no|Cave|47|all=20%|type1=Normal}}
+{{Catch/entry2|217|Ursaring|no|no|yes|Cave|47|20%|20%|0%|type1=Normal}}
+{{Catch/entry2|232|Donphan|no|yes|no|Cave|47|all=20%|type1=Ground}}
+{{Catch/entry2|246|Larvitar|yes|yes|no|Cave|15, 20|all=5%|type1=Rock|type2=Ground}}
+{{Catch/entry2|246|Larvitar|no|no|yes|Cave|15, 20|5%|5%|0%|type1=Rock|type2=Ground}}
+{{Catch/div|water|Surfing}}
+{{Catch/entry2|055|Golduck|no|no|yes|Surf|35-39|all=30%|type1=Water}}
+{{Catch/entry2|118|Goldeen|yes|yes|yes|Surf|35-39|all=10%|type1=Water}}
+{{Catch/entry2|119|Seaking|yes|yes|no|Surf|35-44|all=90%|type1=Water}}
+{{Catch/entry2|119|Seaking|no|no|yes|Surf|35-39|all=60%|type1=Water}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry2|118|Goldeen|yes|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entry2|118|Goldeen|yes|yes|yes|Fish Good|20|all=65%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Good|20|all=35%|type1=Water}}
+{{Catch/entry2|118|Goldeen|yes|yes|yes|Fish Super|40|all=70%|type1=Water}}
+{{Catch/entry2|119|Seaking|yes|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{Catch/footer|mountain}}
+
+====Summit====
+{{Catch/header|mountain}}
+{{Catch/entry2|042|Golbat|yes|yes|no|Cave|48, 51|all=50%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|51|30%|30%|0%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|49,51,53|0%|0%|45%|type1=Poison|type2=Flying}}
+{{Catch/entry2|055|Golduck|yes|yes|no|Cave|51|all=5%|type1=Water}}
+{{Catch/entry2|055|Golduck|no|no|yes|Cave|45|0%|0%|5%|type1=Water}}
+{{Catch/entry2|075|Graveler|no|no|yes|Cave|48|all=20%|type1=Rock|type2=Ground}}
+{{Catch/entry2|095|Onix|yes|yes|yes|Cave|48|all=30%|type1=Rock|type2=Ground}}
+{{Catch/entry2|217|Ursaring|yes|no|no|Cave|50|all=10%|type1=Normal}}
+{{Catch/entry2|217|Ursaring|no|no|yes|Cave|50|10%|10%|0%|type1=Normal}}
+{{Catch/entry2|232|Donphan|no|yes|no|Cave|50|all=10%|type1=Ground}}
+{{Catch/entry2|246|Larvitar|yes|yes|no|Cave|15, 20|all=5%|type1=Rock|type2=Ground}}
+{{Catch/entry2|246|Larvitar|no|no|yes|Cave|15, 20|9%|9%|0%|type1=Rock|type2=Ground}}
+{{Catch/entry2|247|Pupitar|no|no|yes|Cave|20|1%|1%|0%|type1=Rock|type2=Ground}}
+{{Catch/footer|mountain}}
+
+====Chambers====
+{{Catch/header|mountain}}
+{{Catch/entry2|042|Golbat|yes|yes|no|Cave|48|all=5%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|46,48,50|80%|80%|0%|type1=Poison|type2=Flying}}
+{{Catch/entry2|042|Golbat|no|no|yes|Cave|48,50|0%|0%|50%|type1=Poison|type2=Flying}}
+{{Catch/entry2|047|Parasect|no|no|yes|Cave|46,48,50,52|all=20%|type1=Bug|type2=Grass}}
+{{Catch/entry2|055|Golduck|yes|yes|no|Cave|48|all=30%|type1=Water}}
+{{Catch/entry2|195|Quagsire|yes|yes|no|Cave|45|40%|40%|10%|type1=Water|type2=Ground}}
+{{Catch/entry2|217|Ursaring|yes|no|no|Cave|47|all=20%|type1=Normal}}
+{{Catch/entry2|232|Donphan|no|yes|no|Cave|47|all=20%|type1=Ground}}
+{{Catch/entry2|246|Larvitar|yes|yes|no|Cave|15, 20|all=5%|type1=Rock|type2=Ground}}
+{{Catch/entry2|200|Misdreavus|yes|yes|yes|Cave|45|0%|0%|30%|type1=Ghost}}
+{{Catch/footer|mountain}}
+
+===Generation IV===
+====1F====
+{{Catch/header|mountain|4}}
+{{Catch/entryhs|042|Golbat|yes|yes|Cave|45|all=5%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|075|Graveler|yes|yes|Cave|41-43|all=20%|type1=Rock|type2=Ground}}
+{{Catch/entryhs|095|Onix|yes|yes|Cave|42|all=30%|type1=Rock|type2=Ground}}
+{{Catch/entryhs|216|Teddiursa|no|yes|Cave|43|all=10%|type1=Normal}}
+{{Catch/entryhs|217|Ursaring|no|yes|Cave|44|all=30%|type1=Normal}}
+{{Catch/entryhs|231|Phanpy|yes|no|Cave|43|all=10%|type1=Ground}}
+{{Catch/entryhs|232|Donphan|yes|no|Cave|44|all=30%|type1=Ground}}
+{{Catch/entryhs|246|Larvitar|yes|yes|Cave|15, 20|all=5%|type1=Rock|type2=Ground}}
+{{Catch/div|cave|Special}}
+{{Catch/entryhs|296|Makuhita|yes|yes|Hoenn|43|all=20%|type1=Fighting}}
+{{Catch/entryhs|359|Absol|yes|yes|Hoenn|42, 44|all=20%|type1=Dark}}
+{{Catch/entryhs|433|Chingling|yes|yes|Sinnoh|43|all=20%|type1=Psychic}}
+{{Catch/entryhs|436|Bronzor|yes|yes|Sinnoh|42, 44|all=20%|type1=Steel|type2=Psychic}}
+{{Catch/div|water|Surfing}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Surf|30-40|all=9%|type1=Water}}
+{{Catch/entryhs|119|Seaking|yes|yes|Surf|30-50|all=91%|type1=Water}}
+{{Catch/div|water|Fishing}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Fish Good|20|all=30%|type1=Water}}
+{{Catch/entryhs|119|Seaking|yes|yes|Fish Good|20|all=20%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|50%|50%|40%|type1=Water}}
+{{Catch/entryhs|130|Gyarados|yes|yes|Fish Good|20|0%|0%|10%|type1=Water}}
+{{Catch/entryhs|119|Seaking|yes|yes|Fish Super|40|50%|50%|20%|type1=Water}}
+{{Catch/entryhs|130|Gyarados|yes|yes|Fish Super|40|50%|50%|80%|type1=Water}}
+{{Catch/footer|mountain}}
+
+====Expert Belt chamber====
+{{Catch/header|mountain}}
+{{Catch/entryhs|042|Golbat|yes|yes|Cave|48|all=5%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|055|Golduck|yes|yes|Cave|48|all=20%|type1=Water}}
+{{Catch/entryhs|195|Quagsire|yes|yes|Cave|45|35%|35%|5%|type1=Water|type2=Ground}}
+{{Catch/entryhs|200|Misdreavus|yes|yes|Cave|45|0%|0%|30%|type1=Ghost}}
+{{Catch/entryhs|216|Teddiursa|no|yes|Cave|46|all=10%|type1=Normal}}
+{{Catch/entryhs|217|Ursaring|no|yes|Cave|47-48|all=20%|type1=Normal}}
+{{Catch/entryhs|231|Phanpy|yes|no|Cave|46|all=10%|type1=Ground}}
+{{Catch/entryhs|232|Donphan|yes|no|Cave|47-48|all=20%|type1=Ground}}
+{{Catch/entryhs|246|Larvitar|yes|yes|Cave|15, 20|all=5%|type1=Rock|type2=Ground}}
+{{Catch/entryhs|247|Pupitar|yes|no|Cave|45|all=5%|type1=Rock|type2=Ground}}
+{{Catch/entryhs|247|Pupitar|no|yes|Cave|30|all=5%|type1=Rock|type2=Ground}}
+{{Catch/div|cave|Special}}
+{{Catch/entryhs|296|Makuhita|yes|yes|Hoenn|48, 50|all=20%|type1=Fighting}}
+{{Catch/entryhs|359|Absol|yes|yes|Hoenn|46, 48|all=20%|type1=Dark}}
+{{Catch/entryhs|433|Chingling|yes|yes|Sinnoh|48, 50|all=20%|type1=Psychic}}
+{{Catch/entryhs|436|Bronzor|yes|yes|Sinnoh|46, 48|all=20%|type1=Steel|type2=Psychic}}
+{{Catch/footer|mountain}}
+
+====Moltres's chamber====
+{{Catch/header|mountain}}
+{{Catch/entryhs|042|Golbat|yes|yes|Cave|48|all=5%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|055|Golduck|yes|yes|Cave|48|all=10%|type1=Water}}
+{{Catch/entryhs|195|Quagsire|yes|yes|Cave|45|40%|40%|30%|type1=Water|type2=Ground}}
+{{Catch/entryhs|200|Misdreavus|yes|yes|Cave|45|0%|0%|10%|type1=Ghost}}
+{{Catch/entryhs|208|Steelix|yes|yes|Cave|48|all=20%|type1=Steel|type2=Ground}}
+{{Catch/entryhs|217|Ursaring|no|yes|Cave|47-48|all=20%|type1=Normal}}
+{{Catch/entryhs|232|Donphan|yes|no|Cave|47-48|all=20%|type1=Ground}}
+{{Catch/entryhs|246|Larvitar|yes|yes|Cave|15, 20|all=5%|type1=Rock|type2=Ground}}
+{{Catch/div|cave|Special}}
+{{Catch/entryhs|296|Makuhita|yes|yes|Hoenn|47-48|all=20%|type1=Fighting}}
+{{Catch/entryhs|359|Absol|yes|yes|Hoenn|45, 48|all=20%|type1=Dark}}
+{{Catch/entryhs|433|Chingling|yes|yes|Sinnoh|47-48|all=20%|type1=Psychic}}
+{{Catch/entryhs|436|Bronzor|yes|yes|Sinnoh|45, 48|all=20%|type1=Steel|type2=Psychic}}
+{{Catch/footer|mountain}}
+
+====Lower mountainside====
+{{Catch/header|mountain|4}}
+{{Catch/entryhs|042|Golbat|yes|yes|Grass|48, 51|all=40%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|055|Golduck|yes|yes|Grass|51|all=5%|type1=Water}}
+{{Catch/entryhs|095|Onix|yes|yes|Grass|48|all=30%|type1=Rock|type2=Ground}}
+{{Catch/entryhs|216|Teddiursa|no|yes|Grass|48|all=10%|type1=Normal}}
+{{Catch/entryhs|217|Ursaring|no|yes|Grass|50|all=10%|type1=Normal}}
+{{Catch/entryhs|231|Phanpy|yes|no|Grass|48|all=10%|type1=Ground}}
+{{Catch/entryhs|232|Donphan|yes|no|Grass|50|all=10%|type1=Ground}}
+{{Catch/entryhs|246|Larvitar|yes|yes|Grass|15, 20|all=5%|type1=Rock|type2=Ground}}
+{{Catch/div|cave|Special}}
+{{Catch/entryhs|296|Makuhita|yes|yes|Hoenn|48|all=20%|type1=Fighting}}
+{{Catch/entryhs|359|Absol|yes|yes|Hoenn|48, 51|all=20%|type1=Dark}}
+{{Catch/entryhs|433|Chingling|yes|yes|Sinnoh|48|all=20%|type1=Psychic}}
+{{Catch/entryhs|436|Bronzor|yes|yes|Sinnoh|48, 51|all=20%|type1=Steel|type2=Psychic}}
+{{Catch/div|mountain|Headbutt<br><small>Group A</small>}}
+{{Catch/entryhs|177|Natu|yes|yes|Headbutt|42-44|all=20%|type1=Psychic|type2=Flying}}
+{{Catch/entryhs|190|Aipom|yes|yes|Headbutt|42-44|all=30%|type1=Normal}}
+{{Catch/entryhs|214|Heracross|yes|yes|Headbutt|42-44|all=50%|type1=Bug|type2=Fighting}}
+{{Catch/div|mountain|Headbutt<br><small>Group B</small>}}
+{{Catch/entryhs|177|Natu|yes|yes|Headbutt|45-48|all=20%|type1=Psychic|type2=Flying}}
+{{Catch/entryhs|190|Aipom|yes|yes|Headbutt|45-48|all=30%|type1=Normal}}
+{{Catch/entryhs|214|Heracross|yes|yes|Headbutt|45-48|all=50%|type1=Bug|type2=Fighting}}
+{{Catch/footer|mountain}}
+
+====2F====
+{{Catch/header|mountain}}
+{{Catch/entryhs|042|Golbat|yes|yes|Cave|48|all=5%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|055|Golduck|yes|yes|Cave|48|all=10%|type1=Water}}
+{{Catch/entryhs|195|Quagsire|yes|yes|Cave|45|30%|30%|20%|type1=Water|type2=Ground}}
+{{Catch/entryhs|200|Misdreavus|yes|yes|Cave|45|0%|0%|10%|type1=Ghost}}
+{{Catch/entryhs|215|Sneasel|yes|yes|Cave|48|all=20%|type1=Dark|type2=Ice}}
+{{Catch/entryhs|216|Teddiursa|no|yes|Cave|46|all=10%|type1=Normal}}
+{{Catch/entryhs|217|Ursaring|no|yes|Cave|48, 50|all=20%|type1=Normal}}
+{{Catch/entryhs|231|Phanpy|yes|no|Cave|46|all=10%|type1=Ground}}
+{{Catch/entryhs|232|Donphan|yes|no|Cave|48, 50|all=20%|type1=Ground}}
+{{Catch/entryhs|246|Larvitar|yes|yes|Cave|15, 20|all=5%|type1=Rock|type2=Ground}}
+{{Catch/div|cave|Special}}
+{{Catch/entryhs|296|Makuhita|yes|yes|Hoenn|48, 50|all=20%|type1=Fighting}}
+{{Catch/entryhs|359|Absol|yes|yes|Hoenn|46, 48|all=20%|type1=Dark}}
+{{Catch/entryhs|433|Chingling|yes|yes|Sinnoh|48, 50|all=20%|type1=Psychic}}
+{{Catch/entryhs|436|Bronzor|yes|yes|Sinnoh|46, 48|all=20%|type1=Steel|type2=Psychic}}
+{{Catch/footer|mountain}}
+
+====Upper mountainside====
+{{Catch/header|snow}}
+{{Catch/entryhs|042|Golbat|yes|yes|Grass|48|all=5%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|055|Golduck|yes|yes|Grass|48|30%|30%|20%|type1=Water}}
+{{Catch/entryhs|195|Quagsire|yes|yes|Grass|45|15%|15%|10%|type1=Water|type2=Ground}}
+{{Catch/entryhs|200|Misdreavus|yes|yes|Grass|45, 48|0%|0%|15%|type1=Ghost}}
+{{Catch/entryhs|215|Sneasel|yes|yes|Grass|45|all=20%|type1=Dark|type2=Ice}}
+{{Catch/entryhs|217|Ursaring|no|yes|Grass|47|all=20%|type1=Normal}}
+{{Catch/entryhs|232|Donphan|yes|no|Grass|47|all=20%|type1=Ground}}
+{{Catch/entryhs|246|Larvitar|yes|yes|Grass|15, 20, 30|all=10%|type1=Rock|type2=Ground}}
+{{Catch/div|snow|Special}}
+{{Catch/entryhs|296|Makuhita|yes|yes|Hoenn|47|all=20%|type1=Fighting}}
+{{Catch/entryhs|359|Absol|yes|yes|Hoenn|45, 48|all=20%|type1=Dark}}
+{{Catch/entryhs|433|Chingling|yes|yes|Sinnoh|47|all=20%|type1=Psychic}}
+{{Catch/entryhs|436|Bronzor|yes|yes|Sinnoh|45, 48|all=20%|type1=Steel|type2=Psychic}}
+{{Catch/footer|snow}}
+
+====3F====
+{{Catch/header|mountain}}
+{{Catch/entryhs|042|Golbat|yes|yes|Cave|48|all=5%|type1=Poison|type2=Flying}}
+{{Catch/entryhs|055|Golduck|yes|yes|Cave|48|all=30%|type1=Water}}
+{{Catch/entryhs|195|Quagsire|yes|yes|Cave|45|20%|20%|10%|type1=Water|type2=Ground}}
+{{Catch/entryhs|200|Misdreavus|yes|yes|Cave|45|0%|0%|10%|type1=Ghost}}
+{{Catch/entryhs|215|Sneasel|yes|yes|Cave|50|all=20%|type1=Dark|type2=Ice}}
+{{Catch/entryhs|217|Ursaring|no|yes|Cave|47|all=20%|type1=Normal}}
+{{Catch/entryhs|232|Donphan|yes|no|Cave|47|all=20%|type1=Ground}}
+{{Catch/entryhs|246|Larvitar|yes|yes|Cave|15, 20|all=5%|type1=Rock|type2=Ground}}
+{{Catch/div|cave|Special}}
+{{Catch/entryhs|296|Makuhita|yes|yes|Hoenn|47|all=20%|type1=Fighting}}
+{{Catch/entryhs|359|Absol|yes|yes|Hoenn|45, 48|all=20%|type1=Dark}}
+{{Catch/entryhs|433|Chingling|yes|yes|Sinnoh|47|all=20%|type1=Psychic}}
+{{Catch/entryhs|436|Bronzor|yes|yes|Sinnoh|45, 48|all=20%|type1=Steel|type2=Psychic}}
+{{Catch/footer|mountain}}
+
+==Special encounters==
+===Generation IV===
+A {{p|Moltres}} appears in a chamber on 1F on the first visit. If defeated or run from, it respawns after entering the [[Hall of Fame]].
+
+{{Pokémon
+|gen=4
+|ndex=0146
+|pokemon=Moltres
+|type1=Fire
+|type2=Flying
+|ability=Pressure
+|level=50
+|move1=AncientPower|move1type=Rock|move1cat=Special
+|move2=Flamethrower|move2type=Fire|move2cat=Special
+|move3=Safeguard|move3type=Normal|move3cat=Status
+|move4=Air Slash|move4type=Flying|move4cat=Special}}
+
+==Trainers==
+===Generation II===
+Red has two [[Full Restore]]s.
+{{Party
+| background = {{red color}}
+| border = {{red color dark}}
+| headcolor = {{red color light}}
+| sprite = Spr GS Red.png
+| prize = {{PDollar}}7700
+| class = {{PK}}{{MN}} Trainer
+| classlink = Pokémon Trainer
+| name = {{color2|000|Red (game)|Red}}
+| location = Mt. Silver Cave
+| locationname = Silver Cave
+| game = GSC
+| pokemon = 6
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0025
+| pokemon = Pikachu
+| gender = male
+| level = 81
+| type1 = Electric
+| move1 = Charm | move1type = Normal
+| move2 = Quick Attack | move2type = Normal
+| move3 = Thunderbolt | move3type = Electric
+| move4 = Thunder | move4type = Electric
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0196
+| pokemon = Espeon
+| gender = male
+| level = 73
+| type1 = Psychic
+| move1 = Mud-Slap | move1type = Ground
+| move2 = Swift | move2type = Normal
+| move3 = Reflect | move3type = Psychic
+| move4 = Psychic | move4type = Psychic
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0143
+| pokemon = Snorlax
+| gender = male
+| level = 75
+| type1 = Normal
+| move1 = Amnesia | move1type = Psychic
+| move2 = Snore | move2type = Normal
+| move3 = Rest | move3type = Psychic
+| move4 = Body Slam | move4type = Normal
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0003
+| pokemon = Venusaur
+| gender = male
+| level = 77
+| type1 = Grass
+| type2 = Poison
+| move1 = Sunny Day | move1type = Fire
+| move2 = Giga Drain | move2type = Grass
+| move3 = Synthesis | move3type = Grass
+| move4 = SolarBeam | move4type = Grass
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0006
+| pokemon = Charizard
+| gender = male
+| level = 77
+| type1 = Fire
+| type2 = Flying
+| move1 = Flamethrower | move1type = Fire
+| move2 = Wing Attack | move2type = Flying
+| move3 = Slash | move3type = Normal
+| move4 = Fire Spin | move4type = Fire
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0009
+| pokemon = Blastoise
+| gender = male
+| level = 77
+| type1 = Water
+| move1 = Rain Dance | move1type = Water
+| move2 = Blizzard | move2type = Ice
+| move3 = Surf | move3type = Water
+| move4 = Whirlpool | move4type = Water
+}}
+{{Party/end}}
+
+===Generation IV===
+Red has four [[Full Restore]]s.
+{{Party
+| background = {{red color}}
+| border = {{red color dark}}
+| headcolor = {{red color light}}
+| sprite = Spr HGSS Red.png
+| prize = {{PDollar}}16800
+| class = {{PK}}{{MN}} Trainer
+| classlink = Pokémon Trainer
+| name = {{color2|000|Red (game)|Red}}
+| location = Mt. Silver Cave
+| game = HGSS
+| pokemon = 6
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0025
+| pokemon = Pikachu
+| gender = male
+| level = 88
+| type1 = Electric
+| ability = Static
+| held = Light Ball
+| move1 = Volt Tackle | move1type = Electric | move1cat = Physical
+| move2 = Iron Tail | move2type = Steel | move2cat = Physical
+| move3 = Quick Attack | move3type = Normal | move3cat = Physical
+| move4 = Thunderbolt | move4type = Electric | move4cat = Special
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0131
+| pokemon = Lapras
+| gender = male
+| level = 80
+| type1 = Water
+| type2 = Ice
+| ability = Shell Armor
+| move1 = Blizzard | move1type = Ice | move1cat = Special
+| move2 = Brine | move2type = Water | move2cat = Special
+| move3 = Psychic | move3type = Psychic | move3cat = Special
+| move4 = Body Slam | move4type = Normal | move4cat = Physical
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0143
+| pokemon = Snorlax
+| gender = male
+| level = 82
+| type1 = Normal
+| ability = Thick Fat
+| move1 = Shadow Ball | move1type = Ghost | move1cat = Special
+| move2 = Crunch | move2type = Dark | move2cat = Physical
+| move3 = Blizzard | move3type = Ice | move3cat = Special
+| move4 = Giga Impact | move4type = Normal | move4cat = Physical
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0003
+| pokemon = Venusaur
+| gender = male
+| level = 84
+| type1 = Grass
+| type2 = Poison
+| ability = Overgrow
+| move1 = Sludge Bomb | move1type = Poison | move1cat = Special
+| move2 = Giga Drain | move2type = Grass | move2cat = Special
+| move3 = Sleep Powder | move3type = Grass | move3cat = Status
+| move4 = Frenzy Plant | move4type = Grass | move4cat = Special
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0006
+| pokemon = Charizard
+| gender = male
+| level = 84
+| type1 = Fire
+| type2 = Flying
+| ability = Blaze
+| move1 = Flare Blitz | move1type = Fire | move1cat = Physical
+| move2 = Air Slash | move2type = Flying | move2cat = Special
+| move3 = Blast Burn | move3type = Fire | move3cat = Special
+| move4 = Dragon Pulse | move4type = Dragon | move4cat = Special
+}}
+{{Pokémon
+| gen = 4
+| ndex = 0009
+| pokemon = Blastoise
+| gender = male
+| level = 84
+| type1 = Water
+| ability = Torrent
+| move1 = Focus Blast | move1type = Fighting | move1cat = Special
+| move2 = Hydro Cannon | move2type = Water | move2cat = Special
+| move3 = Blizzard | move3type = Ice | move3cat = Special
+| move4 = Flash Cannon | move4type = Steel | move4cat = Special
+}}
+{{Party/end}}
+
+==Walking Pokémon effects==
+When interacting with [[walking Pokémon]] in {{v2|HeartGold and SoulSilver|s}}, the Pokémon may occasionally show an altered mood specific to this location.
+
+{| class="roundtable" style="margin: auto; text-align: center; background-color: #{{locationcolor/med|cave}}; border: 3px solid #{{locationcolor/dark|cave}}"
+|- style="background:#{{locationcolor/light|cave}}"
+! Games
+! Pokémon
+! Area
+! Quote
+|- style="background-color: #FFF"
+! rowspan="4" | {{GameIcon|HG}}{{GameIcon|SS}}
+|- style="background-color: #FFF"
+| [[File:Ani006OD.png]]<br>{{p|Charizard}}
+| Anywhere
+| <Pokémon's name> blew out a plume of fire and looked eager!
+|- style="background-color: #FFF"
+| [[File:Ani025OD.png]]<br>{{p|Pikachu}}
+| Anywhere
+| <Pokémon's name> is trembling with eagerness!
+|- style="background-color: #FFF"
+| [[File:Ani143OD.png]]<br>{{p|Snorlax}}
+| Anywhere
+| <Pokémon's name> is feeling eager!
+|}
+
+==Layout==
+===Generation II===
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{locationcolor/dark|mountain}}"
+|-
+! style="background:#{{locationcolor/light|mountain}}; {{roundytl|5px}}" | Version
+! style="background:#{{locationcolor/light|mountain}}" | 1F
+! style="background:#{{locationcolor/light|mountain}}" | 2F
+! style="background:#{{locationcolor/light|mountain}}" | Max Revive chamber
+! style="background:#{{locationcolor/light|mountain}}" | Full Restore chamber
+! style="background:#{{locationcolor/light|mountain}}; {{roundytr|5px}}" | Summit
+|-
+! style="background:#{{gold color}}" | {{color2|000|Pokémon Gold and Silver Versions|Gold}}
+| rowspan="3" | [[File:Mt Silver 1F GSC.png|110px]]
+| rowspan="3" | [[File:Mt Silver 2F GSC.png|160px]]
+| rowspan="3" | [[File:Mt. Silver 2F Max Revive GSC.png|125px|center]]
+| rowspan="3" | [[File:Mt. Silver 2F Full Restore GSC.png|125px|center]]
+| rowspan="3" | [[File:Mt. Silver Summit GSC.png|75px]]
+|-
+! style="background:#{{silver color}}" | {{color2|000|Pokémon Gold and Silver Versions|Silver}}
+|-
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon Crystal Version|Crystal}}
+|-
+| colspan="7" style="background:#{{locationcolor/light|mountain}}; {{roundybottom|5px}}" | &nbsp;
+|}
+
+===Generation IV===
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{locationcolor/dark|mountain}}"
+|-
+! style="background:#{{locationcolor/light|mountain}}; {{roundytl|5px}}" | Version
+! style="background:#{{locationcolor/light|mountain}}" | 1F
+! style="background:#{{locationcolor/light|mountain}}" | 2F
+! style="background:#{{locationcolor/light|mountain}}" | Expert Belt chamber
+! style="background:#{{locationcolor/light|mountain}}; {{roundytr|5px}}" | Moltres's chamber
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+| rowspan="2" | [[File:Mt. Silver 1F HGSS.png|150px]]
+| rowspan="2" | [[File:Mt. Silver 2F HGSS.png|150px]]
+| rowspan="2" | [[File:Mt. Silver Expert Belt HGSS.png|150px|center]]
+| rowspan="2" | [[File:Mt. Silver Moltres HGSS.png|150px|center]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan="6" style="background:#{{locationcolor/light|mountain}}; {{roundybottom|5px}}" | &nbsp;
+|}
+{{-}}
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{locationcolor/dark|mountain}}"
+|-
+! style="background:#{{locationcolor/light|mountain}}; {{roundytl|5px}}" | Version
+! style="background:#{{locationcolor/light|mountain}}" | 3F
+! style="background:#{{locationcolor/light|mountain}}" | Lower mountainside
+! style="background:#{{locationcolor/light|mountain}}" | Upper mountainside
+! style="background:#{{locationcolor/light|mountain}}; {{roundytr|5px}}" | Summit
+|-
+! style="background:#{{heartgold color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|HeartGold}}
+| rowspan="2" | [[File:Mt. Silver 3F HGSS.png|188px]]
+| rowspan="2" | [[File:Mt. Silver Lower Mountainside HGSS.png|188px]]
+| rowspan="2" | [[File:Mt. Silver Upper Mountainside HGSS.png|188px]]
+| rowspan="2" | [[File:Mt. Silver Summit HGSS.png|188px]]
+|-
+! style="background:#{{soulsilver color}}" | {{color2|000|Pokémon HeartGold and SoulSilver Versions|SoulSilver}}
+|-
+| colspan="5" style="background:#{{locationcolor/light|mountain}}; {{roundybottom|5px}}" | &nbsp;
+|}
+
+==[[Location preview|Preview]]==
+<gallery>
+File:HGSS Mt. Silver-Morning.png|Morning (Quagsire)
+File:HGSS Mt. Silver-Day.png|Day/Evening (Larvitar)
+File:HGSS Mt. Silver-Night.png|Night (Misdreavus)
+</gallery>
+
+==In the side series games==
+===[[Pokémon Stadium 2]]===
+A field based on Silver Cave appears in [[Pokémon Stadium 2]]'s Kanto [[Gym Leader Castle]].
+
+====Trainers====
+=====Round 1=====
+{{Party
+| background = {{red color}}
+| border = {{red color dark}}
+| headcolor = {{red color light}}
+| sprite = S2 Pokémon Trainer Red.png
+| prize = none
+| class = Pokémon Trainer
+| name = {{color2|000|Red (game)|Red}}
+| location = Gym Leader Castle
+| locationname = Kanto Gym Leader Castle
+| game = Stadium2
+| pokemon = 6
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0154
+| pokemon = Meganium
+| gender = female
+| level = 50-100
+| type1 = Grass
+| held = Mint Berry
+| move1 = Razor Leaf | move1type = Grass
+| move2 = Body Slam | move2type = Normal
+| move3 = Giga Drain | move3type = Grass
+| move4 = Synthesis | move4type = Grass
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0160
+| pokemon = Feraligatr
+| gender = male
+| level = 50-100
+| type1 = Water
+| held = MiracleBerry
+| move1 = Surf | move1type = Water
+| move2 = Slash | move2type = Normal
+| move3 = Blizzard | move3type = Ice
+| move4 = Bite | move4type = Dark
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0157
+| pokemon = Typhlosion
+| gender = male
+| level = 50-100
+| type1 = Fire
+| held = Focus Band
+| move1 = Flamethrower | move1type = Fire
+| move2 = Quick Attack | move2type = Normal
+| move3 = ThunderPunch | move3type = Electric
+| move4 = Dig | move4type = Ground
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0135
+| pokemon = Jolteon
+| gender = female
+| level = 50-100
+| type1 = Electric
+| held = King's Rock
+| move1 = Thunder | move1type = Electric
+| move2 = Bite | move2type = Dark
+| move3 = Thunder Wave | move3type = Electric
+| move4 = Quick Attack | move4type = Normal
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0212
+| pokemon = Scizor
+| gender = male
+| level = 50-100
+| type1 = Bug
+| type2 = Steel
+| held = Quick Claw
+| move1 = Metal Claw | move1type = Steel
+| move2 = Quick Attack | move2type = Normal
+| move3 = Slash | move3type = Normal
+| move4 = Sleep Talk | move4type = Normal
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0128
+| pokemon = Tauros
+| gender = male
+| level = 50-100
+| type1 = Normal
+| held = Scope Lens
+| move1 = Headbutt | move1type = Normal
+| move2 = Earthquake | move2type = Ground
+| move3 = Iron Tail | move3type = Steel
+| move4 = Hyper Beam | move4type = Normal
+}}
+{{Party/end}}
+
+=====Round 2=====
+{{Party
+| background = {{red color}}
+| border = {{red color dark}}
+| headcolor = {{red color light}}
+| sprite = S2 Pokémon Trainer Red.png
+| prize = none
+| class = Pokémon Trainer
+| name = {{color2|000|Red (game)|Red}}
+| location = Gym Leader Castle
+| locationname = Kanto Gym Leader Castle
+| game = Stadium2
+| pokemon = 6
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0243
+| pokemon = Raikou
+| gender = none
+| level = 50-100
+| type1 = Electric
+| held = Focus Band
+| move1 = Thunderbolt | move1type = Electric
+| move2 = Bite | move2type = Dark
+| move3 = Iron Tail | move3type = Steel
+| move4 = Hidden Power | move4type = Ice
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0244
+| pokemon = Entei
+| gender = none
+| level = 50-100
+| type1 = Fire
+| held = Scope Lens
+| move1 = Fire Blast | move1type = Fire
+| move2 = Bite | move2type = Dark
+| move3 = Iron Tail | move3type = Steel
+| move4 = Hidden Power | move4type = Ground
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0245
+| pokemon = Suicune
+| gender = none
+| level = 50-100
+| type1 = Water
+| held = BrightPowder
+| move1 = Surf | move1type = Water
+| move2 = Ice Beam | move2type = Ice
+| move3 = Roar | move3type = Normal
+| move4 = Hidden Power | move4type = Grass
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0149
+| pokemon = Dragonite
+| gender = male
+| level = 50-100
+| type1 = Dragon
+| type2 = Flying
+| held = MiracleBerry
+| move1 = Fly | move1type = Flying
+| move2 = Body Slam | move2type = Normal
+| move3 = Thunder Wave | move3type = Electric
+| move4 = Hidden Power | move4type = Fighting
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0143
+| pokemon = Snorlax
+| gender = male
+| level = 50-100
+| type1 = Normal
+| held = Quick Claw
+| move1 = Body Slam | move1type = Normal
+| move2 = Earthquake | move2type = Ground
+| move3 = Shadow Ball | move3type = Ghost
+| move4 = Hidden Power | move4type = Flying
+}}
+{{Pokémon
+| gen = 2
+| ndex = 0196
+| pokemon = Espeon
+| gender = male
+| level = 50-100
+| type1 = Psychic
+| held = King's Rock
+| move1 = Psychic | move1type = Psychic
+| move2 = Bite | move2type = Dark
+| move3 = Reflect | move3type = Psychic
+| move4 = Hidden Power | move4type = Fire
+}}
+{{Party/end}}
+
+==In the spin-off games==
+===[[Pokémon Masters EX]]===
+Artwork depicting Mt. Silver Cave is seen in three of {{mas|Red}}'s mindscapes.
+
+{| style="background: #{{masters color dark}}; {{roundy}}; border: #{{masters color dark}};"
+|
+{| style="background: #{{masters color light}}; {{roundy}}; border: #{{masters color light}};"
+|- style="text-align:center"
+|
+{| style="background: #{{fire color light}}; {{roundy}}; border: #{{fire color light}}; padding: 0px 5px 5px 5px"
+|-
+|<big>'''{{color2|000|Red (Masters)#Charizard|Sygna Suit Red & Charizard}}'''</big>
+|-
+| [[File:Red Mindscape.png|200px]]
+|}
+|
+{| style="background: #{{electric color light}}; {{roundy}}; border: #{{electric color light}}; padding: 0px 5px 5px 5px"
+|-
+|<big>'''{{color2|000|Red (Masters)#Pikachu|Sygna Suit Red (Thunderbolt) & Pikachu}}'''</big>
+|-
+| [[File:Red Sygna Thunderbolt Mindscape.png|200px]]
+|}
+|
+{| style="background: #{{ice color light}}; {{roundy}}; border: #{{ice color light}}; padding: 0px 5px 5px 5px"
+|-
+|<big>'''{{color2|000|Red (Masters)#Articuno|Red (Champion) & Articuno}}'''</big>
+|-
+| [[File:Red Champion Mindscape.png|200px]]
+|}
+|}
+|}
+
+==Trivia==
+* Defeating Red at this location causes the [[Game credits|credits]] to roll. In [[Generation II]], progress is not [[save]]d and the player returns to the [[Pokémon Center]] outside Mt. Silver. In {{game|HeartGold and SoulSilver|s}}, progress is saved and the player returns to their home in [[New Bark Town]].
+* Like [[Snowpoint City]], Mt. Silver's summit features {{DL|Easter egg|diamond dust}} on certain special days in {{game|HeartGold and SoulSilver|s}}, including the anniversary of the release of {{game|Gold and Silver|s}} in Japan.
+** Mt. Silver is also the only location in Pokémon HeartGold and SoulSilver where a naturally occurring {{weather|hail}}storm can be experienced.
+* In {{game|HeartGold and SoulSilver|s}}, whenever the player is in or on the mountain, the location header pop-up is always "Mt. Silver Cave", even when the player is not inside the cave. This may possibly be a carryover from the original games, in which the in-game location header was "Silver Cave".
+* [[Fresh Water]] is collected from Mt. Silver, according to the Japanese item description in {{game2|Gold|Silver|Crystal}}, and {{g|Stadium 2}}. This is also mentioned in the Korean item description in Pokémon Gold and Silver. However, this is not mentioned in the English item descriptions.
+
+===Origin===
+Mt. Silver is based on {{wp|Mt. Fuji}} in the real-world {{wp|Japan}}.
+
+==In other languages==
+{{langtable|color={{locationcolor/light|mountain}}|bordercolor={{locationcolor/dark|mountain}}
+|zh_cmn=白銀窟 ''{{tt|Báiyín Kū|Silver Cave}}''
+|fr=Grotte Argentée
+|de=Silberhöhle{{sup/2|GSC}}<br>Silberberghöhle{{sup/4|HGSS}}
+|it=Monte Argento{{sup/2|GSC}}<br>Grotta Argento{{sup/4|HGSS}}
+|ko=은빛 산 ''{{tt|Eunbit San|Silver Mountain}}''{{sup/2|GSC}}<br>은빛산동굴 ''{{tt|Eunbit San Donggul|Silver Mountain Cave}}''{{sup/4|HGSS}}
+|es=Cueva Plateada{{sup/2|GSC}}<br>Cueva {{tt|M|Monte}} Plateado{{sup/4|HGSS}}
+}}
+
+==Related articles==
+{{legendarylocations|johto}}
+{{Kanto and Johto}}
+{{Project Locations notice}}
+
+[[Category:Johto locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Mountains|Silver]]
+
+[[fr:Grotte Argentée]]
+[[it:Grotta Argento]]
+[[ja:シロガネやまどうくつ]]

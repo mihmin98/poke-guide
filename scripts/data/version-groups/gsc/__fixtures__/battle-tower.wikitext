@@ -1,0 +1,297 @@
+<!-- poke-guide fixture: {"title":"Battle Tower (Generation II)","resolvedTitle":"Battle Tower (Generation II)","revid":4597944,"timestamp":"2026-07-29T07:16:38Z","fetchedAt":"2026-09-23T16:33:53.055Z"} -->
+{{incomplete|article|Research and more information about the exclusive features in the Japanese Crystal is required; identities of the prizes in Crystal is needed}}
+{{redirect|Battle Tower (Johto)|the Battle Tower located at the {{gdis|Battle Frontier|IV|Johto Battle Frontier}}|Battle Tower (Sinnoh)}}
+{{Infobox location
+|image=Battle Tower C.png
+|type=building
+|location_name=Battle Tower
+|japanese_name=バトルタワー
+|translated_name=Battle Tower
+|location=West of [[Olivine City]]{{sup/2|C}}
+|region=Johto
+|generation={{Gen|II}}
+|map=Johto Frontier Access Map.png
+}}
+The '''[[Battle Tower]]''' (Japanese: '''バトルタワー''' ''Battle Tower'') in [[Generation II]] was the first [[Battle Tower]] in the Pokémon games, debuting in {{game|Crystal}}. It is [[Johto]]'s premiere [[battle facility]], located at the northernmost part of {{rt|40|Johto}}, west of [[Olivine City]].
+
+As the first battle facility in the series, it introduced many of the special rules that would later be expanded upon for battle facilities introduced later. One addition, introduced in {{game|Emerald}}, that the Battle Tower in Crystal lacks is a leader who is in charge of the battle facility. Another difference with later battle facilities is that the Battle Tower in Pokémon Crystal is built on the same landmass as the rest of the [[region]] and may be challenged before the {{player}} has become the {{pkmn|Champion}}. The Battle Tower in Crystal also allows any [[Legendary Pokémon]] to participate, though later [[generation]]s would ban many of them.
+
+In the Japanese version of Pokémon Crystal, the Battle Tower utilizes the [[Mobile System GB]].
+
+==In the games==
+The original Battle Tower established the basic rules of all Battle Tower challenges. Later Battle Towers would modify some of these basic rules to be somewhat more restrictive.
+
+Its slogan is ''Take the Ultimate Trainer Challenge!'' (Japanese: {{j|「めざせ！　さいきょう　トレーナー」}} ''Become the Strongest Trainer!'').
+
+===Access===
+====Japanese version====
+In the Japanese version of {{game|Crystal}}, the Battle Tower is unlocked once the player connects to [[Mobile System GB]] for the first time, which requires the [[Mobile Game Boy Adapter]]. While the Battle Tower is locked, its doors display the message "The BATTLE TOWER's doors are closed…" ({{j|「バトルタワーの　いりぐちは　しまってる⋯」}}). After being unlocked, they instead return the message "It's open!" ({{j|「あいてる！」}}).
+
+Since the discontinuation of the Mobile System GB in 2002, it is no longer possible to unlock the Battle Tower in the Japanese version of Pokémon Crystal. The Battle Tower is also inaccessible in the Japanese [[Virtual Console]] version.
+
+====Western language versions====
+In the Western language versions of {{game|Crystal}}, the Battle Tower is always accessible (even in the [[Virtual Console]] version). The doors can no longer be interacted with, so the localized messages from the Japanese version are unused.
+
+===Challenges===
+Battle Tower challenges are made by entering three of the player's {{OBP|Pokémon|species}} with the attendant at the front desk. The attendant will then guide the player to a special room where they will {{pkmn|battle}} against seven opponents in a row, healing between each battle. After the seven {{pkmn|Trainer}}s have been defeated, the player will be rewarded with five of a [[Statistic|stat]]-increasing [[Vitamin|nutritious drink]].
+
+===Restrictions===
+The Battle Tower has several restrictions aside from the amount of {{OBP|Pokémon|species}} that can be entered.
+
+* All Pokémon must be less than or equal to the [[level]] of  battle challenged. Levels are in intervals of 10, and the {{player}} can only choose levels 50 to 100 after entering the [[Hall of Fame]].
+* No two Pokémon can be holding the same [[item]].
+* Items cannot be used by {{pkmn|Trainer}}s on their Pokémon.
+* {{p|Mewtwo}}, {{p|Mew}}, {{p|Lugia}}, {{p|Ho-Oh}}, and {{p|Celebi}} are only allowed to be entered if the level chosen is 70 or higher.
+* {{pkmn|Egg}}s are not allowed to enter.
+
+===Unobtainable Pokémon===
+[https://www.smogon.com/forums/threads/item-clause-overused-little-cup-middle-cup-pok%C3%A9-cup-ubers-and-pok%C3%A9mon-stadium-2-resources-discussion.3634609/page-3#post-9065407 Certain Pokémon] cannot normally be obtained at lower enough levels to enter low-level challenges (e.g. {{p|Dragonite}} and {{p|Zapdos}} cannot be legitimately obtained at level 10). However, the game does not validate whether a Pokémon is legitimately obtainable at a specific level.
+
+===Prizes===
+{{Itlisth|building}}
+{{Itemlist|Calcium|For winning 7 battles in a row|C=yes|display=[[Calcium]] ×5}}
+{{Itemlist|Carbos|For winning 7 battles in a row|C=yes|display=[[Carbos]] ×5}}
+{{Itemlist|HP Up|For winning 7 battles in a row|C=yes|display=[[HP Up]] ×5}}
+{{Itemlist|Iron|For winning 7 battles in a row|C=yes|display=[[Iron]] ×5}}
+{{Itemlist|Protein|For winning 7 battles in a row|C=yes|display=[[Protein]] ×5}}
+{{Itlistfoot|building}}
+
+===Japanese Crystal===
+In Japanese Crystal, the Battle Tower is directly associated with the Mobile System GB. Further multiplayer features are available, including mobile {{pkmn|battle}}s, for which a small price is charged on the players' mobile phones. If the player battled well enough, they could become a '''Room Leader''' (Japanese: '''{{j|ルームリーダー}}''' ''Room Leader''). All Room Leaders would be registered in the Honor Roll of the Mobile Center for posterity. This feature was later used as the basis for the Wi-Fi {{si|Battle Tower}} and [[Battle Subway]] challenges.
+
+==Trainers==
+The following Trainers may appear during the Battle Tower challenge. All of them use randomly-determined teams, depending on the [[level]] of the selected challenge.
+
+:''See also: [[List of Battle Tower Pokémon in Generation II]]
+
+{| class="roundy" style="margin:auto; background: #505050; text-align:center; border: 3px solid #6f6f6f"
+|- style="background: #fff; text-align:center"
+| [[File:Spr GS Fisher.png]]
+| <small>{{tc|Fisher}}</small><br>Hanson
+| [[File:Spr GS PokéManiac.png]]
+| <small>{{tc|Poké Maniac|PokéManiac}}</small><br>Sawyer
+| [[File:Spr GS Guitarist.png]]
+| <small>{{tc|Guitarist}}</small><br>[[Junichi Masuda|Masuda]]
+| [[File:Spr GS Scientist.png]]
+| <small>{{tc|Scientist}}</small><br>Nickel
+| [[File:Spr GS Pokéfan M.png]]
+| <small>{{tc|Poké Fan|Pokéfan}}</small><br>Olson
+| [[File:Spr GS Lass.png]]
+| <small>{{tc|Lass}}</small><br>Zaborowski
+| [[File:Spr GS Youngster.png]]
+| <small>{{tc|Youngster}}</small><br>Wright
+|- style="background: #fff; text-align:center"
+| [[File:Spr GS Hiker.png]]
+| <small>{{tc|Hiker}}</small><br>Alexander
+| [[File:Spr GS Teacher.png]]
+| <small>{{tc|Teacher}}</small><br>Kawakami
+| [[File:Spr GS Pokéfan M.png]]
+| <small>{{tc|Poké Fan|Pokéfan}}</small><br>Bickett
+| [[File:Spr GS Kimono Girl.png]]
+| <small>[[Kimono Girl]]</small><br>Saito
+| [[File:Spr GS Boarder.png]]
+| <small>{{tc|Boarder}}</small><br>Crawford
+| [[File:Spr GS Picnicker.png]]
+| <small>{{tc|Picnicker}}</small><br>Diaz
+| [[File:Spr GS Biker.png]]
+| <small>{{tc|Biker}}</small><br>Erickson
+|- style="background: #fff; text-align:center"
+| [[File:Spr GS Juggler.png]]
+| <small>{{tc|Juggler}}</small><br>Fairfield
+| [[File:Spr GS Pokéfan F.png]]
+| <small>{{tc|Poké Fan|Pokéfan}}</small><br>Hunter
+| [[File:Spr GS Firebreather.png]]
+| <small>{{tc|Firebreather}}</small><br>Hill
+| [[File:Spr GS Swimmer F.png]]
+| <small>{{tc|Swimmer|Swimmer♀}}</small><br>Javier
+| [[File:Spr GS Swimmer M.png]]
+| <small>{{tc|Swimmer|Swimmer♂}}</small><br>Kaufman
+| [[File:Spr GS Skier.png]]
+| <small>{{tc|Skier}}</small><br>Lancaster
+| [[File:Spr GS Camper.png]]
+| <small>{{tc|Camper}}</small><br>McMahill
+|- style="background: #fff; text-align:center"
+| [[File:Spr GS Gentleman.png]]
+| <small>{{tc|Gentleman}}</small><br>Obrien
+| [[File:Spr GS Beauty.png]]
+| <small>{{tc|Beauty}}</small><br>Frost
+| [[File:Spr GS Super Nerd.png]]
+| <small>{{tc|Super Nerd}}</small><br>Morse
+| [[File:Spr GS Blackbelt.png]]
+| <small>{{tc|Black Belt|Blackbelt}}</small><br>Yufune
+| [[File:Spr GS Cooltrainer F.png]]
+| <small>{{tc|Ace Trainer|Cooltrainer}}</small><br>Rajan
+| [[File:Spr GS Officer.png]]
+| <small>{{tc|Police Officer|Officer}}</small><br>Rodriguez
+| [[File:Spr GS Psychic.png]]
+| <small>{{tc|Psychic}}</small><br>Santiago
+|- style="background: #fff; text-align:center"
+| [[File:Spr GS Pokéfan M.png]]
+| <small>{{tc|Poké Fan|Pokéfan}}</small><br>Stock 
+| [[File:Spr GS Scientist.png]]
+| <small>{{tc|Scientist}}</small><br>Thurman
+| [[File:Spr GS Beauty.png]]
+| <small>{{tc|Beauty}}</small><br>Valentino
+| [[File:Spr GS Camper.png]]
+| <small>{{tc|Camper}}</small><br>Wagner
+| [[File:Spr GS Bird Keeper.png]]
+| <small>{{tc|Bird Keeper}}</small><br>Yates
+| [[File:Spr GS Picnicker.png]]
+| <small>{{tc|Picnicker}}</small><br>Andrews
+| [[File:Spr GS PokéManiac.png]]
+| <small>{{tc|Poké Maniac|PokéManiac}}</small><br>Bahn
+|- style="background: #fff; text-align:center"
+| [[File:Spr GS Scientist.png]]
+| <small>{{tc|Scientist}}</small><br>Mori
+| [[File:Spr GS Sage.png]]
+| <small>{{tc|Sage}}</small><br>Buckman
+| [[File:Spr GS Schoolboy.png]]
+| <small>{{tc|School Kid|Schoolboy}}</small><br>Cobb
+| [[File:Spr GS Fisher.png]]
+| <small>{{tc|Fisher}}</small><br>Hughes
+| [[File:Spr GS Kimono Girl.png]]
+| <small>[[Kimono Girl]]</small><br>Arita
+| [[File:Spr GS Psychic.png]]
+| <small>{{tc|Psychic}}</small><br>Easton
+| [[File:Spr GS Camper.png]]
+| <small>{{tc|Camper}}</small><br>Freeman
+|- style="background: #fff; text-align:center"
+| [[File:Spr GS Lass.png]]
+| <small>{{tc|Lass}}</small><br>Giese
+| [[File:Spr GS Gentleman.png]]
+| <small>{{tc|Gentleman}}</small><br>Hatcher
+| [[File:Spr GS Pokéfan F.png]]
+| <small>{{tc|Poké Fan|Pokéfan}}</small><br>Jackson
+| [[File:Spr GS PokéManiac.png]]
+| <small>{{tc|Poké Maniac|PokéManiac}}</small><br>Kahn
+| [[File:Spr GS Youngster.png]]
+| <small>{{tc|Youngster}}</small><br>Leong 
+| [[File:Spr GS Teacher.png]]
+| <small>{{tc|Teacher}}</small><br>Marino
+| [[File:Spr GS Sailor.png]]
+| <small>{{tc|Sailor}}</small><br>Newman
+|- style="background: #fff; text-align:center"
+| [[File:Spr GS Blackbelt.png]]
+| <small>{{tc|Black Belt|Blackbelt}}</small><br>Nguyen
+| [[File:Spr GS Super Nerd.png]]
+| <small>{{tc|Super Nerd}}</small><br>Ogden
+| [[File:Spr GS Cooltrainer F.png]]
+| <small>{{tc|Ace Trainer|Cooltrainer}}</small><br>Park
+| [[File:Spr GS Swimmer M.png]]
+| <small>{{tc|Swimmer|Swimmer♂}}</small><br>Raine
+| [[File:Spr GS Bird Keeper.png]]
+| <small>{{tc|Bird Keeper}}</small><br>Sells
+| [[File:Spr GS Boarder.png]]
+| <small>{{tc|Boarder}}</small><br>Rockwell
+| [[File:Spr GS Lass.png]]
+| <small>{{tc|Lass}}</small><br>Thornton
+|- style="background: #fff; text-align:center"
+| [[File:Spr GS Officer.png]]
+| <small>{{tc|Police Officer|Officer}}</small><br>Turner
+| [[File:Spr GS Skier.png]]
+| <small>{{tc|Skier}}</small><br>Van Dyke
+| [[File:Spr GS Schoolboy.png]]
+| <small>{{tc|School Kid|Schoolboy}}</small><br>Walker
+| [[File:Spr GS Swimmer F.png]]
+| <small>{{tc|Swimmer|Swimmer♀}}</small><br>Meyer
+| [[File:Spr GS Youngster.png]]
+| <small>{{tc|Youngster}}</small><br>Johnson
+| [[File:Spr GS Guitarist.png]]
+| <small>{{tc|Guitarist}}</small><br>Adams
+| [[File:Spr GS Bug Catcher.png]]
+| <small>{{tc|Bug Catcher}}</small><br>Smith
+|- style="background: #fff; text-align:center"
+| [[File:Spr GS Bug Catcher.png]]
+| <small>{{tc|Bug Catcher}}</small><br>[[Satoshi Tajiri|Tajiri]]
+| [[File:Spr GS PokéManiac.png]]
+| <small>{{tc|Poké Maniac|PokéManiac}}</small><br>Baker
+| [[File:Spr GS Scientist.png]]
+| <small>{{tc|Scientist}}</small><br>Collins
+| [[File:Spr GS Super Nerd.png]]
+| <small>{{tc|Super Nerd}}</small><br>Smart
+| [[File:Spr GS Swimmer F.png]]
+| <small>{{tc|Swimmer|Swimmer♀}}</small><br>Dykstra
+| [[File:Spr GS Biker.png]]
+| <small>{{tc|Biker}}</small><br>Eaton
+| [[File:Spr GS Firebreather.png]]
+| <small>{{tc|Firebreather}}</small><br>Wong
+|}
+
+==Layout==
+{| class="roundy" style="margin:auto; background: #000; border: 3px solid #{{locationcolor/dark|building}}"
+|-
+! style="background:#{{locationcolor/light|building}}; {{roundytl|5px}}" | Version
+! style="background:#{{locationcolor/light|building}}" | 1F
+! style="background:#{{locationcolor/light|building}}" | Elevator
+! style="background:#{{locationcolor/light|building}}" | Hallway
+! style="background:#{{locationcolor/light|building}}; {{roundytr|5px}}" | Battle Arena
+|-
+! style="background:#{{crystal color}}" | {{color2|000|Pokémon Crystal Version|Crystal}}
+| [[File:Battle Tower C 1F.png]]
+| [[File:Battle Tower C Elevator.png]]
+| [[File:Battle Tower C 2F.png]]
+| [[File:Battle Tower C Battle Room.png]]
+|-
+| colspan=5 style="background:#{{locationcolor/light|building}}; {{roundybottom|5px}}" | &nbsp; 
+|}
+
+==In animation==
+[[File:Battle Tower Johto anime.png|thumb|250px|The Battle Tower in {{aniseries|GS}}]]
+===''Pokémon the Series''===
+===={{aniseries|GS}}====
+The Battle Tower made a brief appearance in ''[[EP208|Fight for the Light!]]'', where {{TRT}} mistook it for an office building and tried to get in, but to no avail as the security officers asked for [[Gym]] [[Badge]]s.
+{{-}}
+
+==In the manga==
+[[File:Johto Battle Tower Adventures.png|thumb|200px|The Battle Tower in [[Pokémon Adventures]]]]
+===Pokémon Adventures===
+===={{MangaArc|Gold, Silver & Crystal}}====
+In ''[[PS122|Querulous Qwilfish]]'', the Battle Tower was under construction and was due to be finished in a month. A tank that was collecting waste from the construction cracked under pressure, spilling its contents into the sea nearby and contaminating the water. As a result, {{p|Qwilfish}} attacked a worker and {{adv|Crystal}} out of anger and to protect a baby Qwilfish that became sick due to the pollution. It was also where {{DL|Legendary beasts (Adventures)|Suicune}} first appeared, purifying the water and curing the baby Qwilfish in the process.
+
+In ''[[PS159|Popular Pupitar]]'', {{adv|Silver}} was revealed to have first met [[Lance]] at the Johto Battle Tower construction site, wanting to question him if he knew anything about the {{p|Ho-Oh|giant bird Pokémon}} that the [[Masked Man]] had used to kidnap him nine years earlier.
+
+===={{MangaArc|Platinum}}====
+In ''[[PS418|Deprogramming Porygon-Z]]'', {{adv|Platinum}} mentioned the Johto Battle Tower (as well as the [[Battle Tower (Generation III)|Hoenn Battle Tower]]) when she was explaining the {{si|Battle Tower|Sinnoh Battle Tower}}.
+{{-}}
+
+==Trivia== 
+* In {{game|Crystal}}, several {{pkmn|Trainer}}s are references to its [[Staff of Pokémon Crystal|development staff]].<ref>[https://iimarckus.org/i/tower-references/ Battle Tower In‐Jokes]</ref>
+** {{tc|Guitarist}} Masuda is a reference to [[Junichi Masuda]], the game's music director.
+** {{tc|Bug Catcher}} Tajiri is a reference to [[Pokémon]]'s creator, [[Satoshi Tajiri]], and his childhood fixation with bug catching.
+** {{tc|Scientist}} Mori and {{tc|Teacher}} Kawakami are, respectively, a reference to Akito Mori and Naoko Kawakami, who are listed under "special thanks" in the credits.
+
+==In other languages==
+{{langtable|color={{locationcolor/light|building}}|bordercolor={{locationcolor/dark|building}}
+|zh_cmn=對戰塔 ''{{tt|Duìzhàn Tǎ|Battle Tower}}'' {{tt|*|PS122, Crystal guidebook}}<br>鬥技塔 ''{{tt|Dòujì Tǎ|Battle Tower}}'' {{tt|*|PS159}}
+|cs=Zápasová věž <small>([[Pokémon Adventures|manga]])</small><br>Bitevní věž <small>([[EP208]])</small>
+|fr=Tour de Combat
+|de=Duellturm
+|it=Torre Lotta
+|no=Kamptårn
+|ko=대결탑 ''Daegyeol Tap''{{sup/2|GS}}<br>시합타워 ''Sihap Tawo''
+|pl=Wieża Walki
+|pt_br=Torre da Batalha
+|es_la=Torre de las Batallas
+|es_eu=Torre Batalla<br>Torre Combate <small>(animated series)</small>
+|vi=Tháp Thi Đấu
+|tr=Müsabaka Kulesi{{tt|*|Animated series}}
+}}
+
+==References==
+<references/>
+
+==Related articles==
+{{Johto}}
+{{Project Locations notice}} 
+
+[[Category:Johto locations]]
+[[Category:Towers]]
+[[Category:Battle facilities]]
+[[Category:Gold, Silver and Crystal locations]]
+
+[[de:Duellturm (Zweite Generation)]]
+[[es:Torre de Batalla/Torre Batalla (Pokémon Cristal)]]
+[[fr:Tour de Combat (deuxième génération)]]
+[[it:Torre Lotta (Johto)]]
+[[ja:バトルタワー (第二世代)]]
+[[zh:对战塔（水晶版）]]

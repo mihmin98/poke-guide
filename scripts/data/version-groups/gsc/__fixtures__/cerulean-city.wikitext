@@ -1,0 +1,1274 @@
+<!-- poke-guide fixture: {"title":"Cerulean City","resolvedTitle":"Cerulean City","revid":4607702,"timestamp":"2026-08-07T01:41:00Z","fetchedAt":"2026-09-15T14:21:51.081Z"} -->
+{{Samename|chapter in [[Pokémon Zensho]]|PZ03}}
+----
+{{Town infobox
+|name=Cerulean City
+|jpname=ハナダシティ
+|jptrans=Hanada City
+|image=Cerulean City PE.png
+|imageI=Cerulean City RBY.png
+|imageII=Cerulean City GSC.png
+|imageIII=Cerulean City FRLG.png
+|slogan=A Mysterious Blue Aura Surrounds It
+|region=Kanto
+|north=Route 24
+|south=Route 5
+|west=Route 4
+|east=Route 9
+|regionnorth=Kanto
+|regionsouth=Kanto
+|regionwest=Kanto
+|regioneast=Kanto
+|mapdesc=A beautiful city with flowing water and blooming flowers.{{sup/4|HGSS}}<br>The town surrounded by waterways. The Water-type Gym is located here.{{sup/7|PE}}
+|gym=Cerulean Gym
+|gymno=2
+|leader=Misty
+|leadervs=VSMisty PE.png{{!}}80x80px
+|badge=Cascade
+|gymtype=Water
+|colordark=007BA7
+|colormed=3F9BBC
+|colorlight=7FBCD2
+|map=Kanto Cerulean City Map.png
+}}
+
+'''Cerulean City''' (Japanese: '''ハナダシティ''' ''Hanada City'') is a seaside city located in northern [[Kanto]]. It is situated near a sea inlet to the north, with [[Saffron City]] to the south, and [[Mt. Moon]] to the west. It is home to [[Misty]], the Cerulean City [[Gym Leader]].
+
+The city is one of only two cities in Kanto to have four different [[route]]s enter the city, the other being [[Saffron City]]. Cerulean is a mid-sized city with a few attractions, including the [[Miracle Cycle|Bike Shop]] and the [[Berry Powder]] man.
+
+==Slogan==
+===Generations I-III===
+'''''A Mysterious, Blue Aura Surrounds It''''' (Japanese: '''ハナダは　みずいろ　しんぴのいろ''' ''Hanada is the color of aqua mysteries.'')
+
+===Generation IV===
+'''''The Floral Lagoon City''''' (Japanese: '''はなさく　みずの　まち''' ''The town of bursting water.'')
+
+===Generation VII===
+'''''A Mysterious Blue Aura Surrounds It''''' (Japanese: '''ハナダは　水色　神秘の色''' ''Hanada is the color of aqua mysteries.'')
+
+== Geography ==
+===Overworld===
+{| style="margin:auto; text-align:center; {{roundy|10px}} border:2px solid #007BA7; background:#3F9BBC; font-size:80%"
+|-
+|style="{{roundy|5px}} border:2px solid #007BA7; background:#7FBCD2; width:80px"| [[File:Cerulean City RBY.png|150px]]
+|style="{{roundy|5px}} border:2px solid #007BA7; background:#7FBCD2; width:80px"| [[File:Cerulean City GSC.png|150px]]
+|style="{{roundy|5px}} border:2px solid #007BA7; background:#7FBCD2; width:80px"| [[File:Cerulean City FRLG.png|150px]]
+|style="{{roundy|5px}} border:2px solid #007BA7; background:#7FBCD2; width:80px"| [[File:Cerulean City HGSS.png|150px]]
+|style="{{roundy|5px}} border:2px solid #007BA7; background:#7FBCD2; width:80px"| [[File:Cerulean City PE.png|150px]]
+|-
+|{{color2|000|Generation I}}
+|{{color2|000|Generation II}}
+|{{color2|000|Generation III}}
+|{{color2|000|Generation IV}}
+|{{color2|000|Generation VII}}
+|-
+|}
+==Places of interest==
+===Bike Shop===
+[[File:Miracle Cycle FRLG inside.png|thumb|200px|The Bike Shop in {{game|FireRed and LeafGreen|s}}]]
+{{main|Miracle Cycle}}
+
+In the [[Generation I]] games and {{game|FireRed and LeafGreen|s}}, the Bike Shop sells Bicycles produced by the company. Designs range from a plain city bike to a fast mountain bike; however, the {{player}} can only ever get one: the [[Bicycle]]. It can be bought for {{PDollar}}1,000,000 or exchanged for a [[Bike Voucher]]. As only {{PDollar}}999,999 can be held at maximum, there is no way for the player to obtain a Bicycle without a Bike Voucher. The [[Pokémon Fan Club Chairman]] in [[Vermilion City]] will hand over his Bike Voucher if the player listens to him talk about his {{p|Rapidash}}.
+
+In [[Generation II]], the shop is closed because the owner decided to move the shop to [[Goldenrod City]] in the [[Johto]] region. In {{game|HeartGold and SoulSilver|s}}, however, the shop in [[Kanto]] is also open, although nothing is obtainable inside. The manager mentions that since all the bicycles have been shipped to Johto for sale, all he has left to sell are inflatable tubes. The ''That Town, These People'' radio show profile of Cerulean City mentions this as well.
+
+The name "Miracle Cycle" only appears in the Japanese {{pkmn|games}}. In the English versions, the Miracle Cycle Shops are just called "Bike Shops" and no mention of Miracle Cycle is made at all.
+
+In [[Generation VII]], the shop is replaced with the home of the Bike Maniac, who collects different kinds of Bicycles, such as [[Mach Bike]]s and [[Acro Bike]]s. He doesn't sell or give away any of them.
+
+===Cerulean Cave===
+{{main|Cerulean Cave}}
+On the outskirts of Cerulean City lies Cerulean Cave, also known as the Unknown Dungeon. It is said to be home to "horribly strong {{OBP|Pokémon|species}}". The player can capture the [[level]] 70 {{p|Mewtwo}} in the [[Generation]] {{gen|I}}, {{gen|III}}, and {{gen|IV}} games. Only {{pkmn|Trainer}}s who compete and win in the [[Pokémon League]] at [[Indigo Plateau]] may enter due to the strength of the Pokémon in the cave, although in Generation IV, the player must also defeat all of Kanto's [[Gym Leader]]s in order to gain access. Mewtwo lies at the end of the cave, the only one of its species in the game.
+
+Another addition in {{2v2|FireRed|LeafGreen}} is that Trainers are now required to further prove themselves before entering the cave by completing the quest on the [[Sevii Islands]] and restoring the Network Machine of the [[Pokémon Network Center]] to operational status. This stipulation may or may not have been added due to the addition of {{p|Wobbuffet}} to the cave's selection of wild Pokémon, and the old set of requirements that would have allowed players to enter the cave before obtaining the National Pokédex.
+
+In Generation II, the Dungeon has collapsed, but Mewtwo's [[Berserk Gene]] has been left behind. In HeartGold and SoulSilver, however, the cave is still open. The [[Pokégear]] map mentions that it once collapsed but was rebuilt, and Mewtwo can still be found inside.
+
+In [[Pokémon Stadium 2]], the {{OBP|Pokédex|Stadium}} map displays the Cerulean Cave as part of the Cerulean City.
+
+===Cerulean Gym===
+{{main|Cerulean Gym}}
+[[File:Cerulean Gym FRLG.png|thumb|200px|Cerulean Gym in {{game|FireRed and LeafGreen|s}}]]
+The Cerulean Gym is the official [[Gym]] of Cerulean City. It is based on {{type|Water}} {{OBP|Pokémon|species}}. The [[Gym Leader]] is [[Misty]]. {{pkmn|Trainer}}s who defeat her will receive the {{Badge|Cascade}}. Other known Gym members include {{tc|Swimmer}} Briana, Swimmer Parker, Swimmer Diana, Swimmer Luis, and {{tc|Picnicker}} Diana. The Cerulean Gym is designed like an indoor swimming pool, with platforms above the water for the player to walk on. There are no puzzles to solve in this Gym.
+
+{| style="margin:auto; text-align:center; {{roundy|10px}} border:2px solid #{{water color dark}}; background:#{{water color}}; font-size:80%"
+|-
+|style="{{roundy|5px}} border:2px solid #{{water color dark}}; background:#{{water color light}}; width:80px"| [[File:Gym 2 RBGY.png]]
+|style="{{roundy|5px}} border:2px solid #{{water color dark}}; background:#{{water color light}}; width:80px"| [[File:Cerulean Gym exterior GSC.png]]
+|style="{{roundy|5px}} border:2px solid #{{water color dark}}; background:#{{water color light}}; width:80px"| [[File:Gym FRLG.png]]
+|style="{{roundy|5px}} border:2px solid #{{water color dark}}; background:#{{water color light}}; width:80px"| [[File:Cerulean Gym Exterior HGSS.png]]
+|style="{{roundy|5px}} border:2px solid #{{water color dark}}; background:#{{water color light}}; width:80px"| [[File:Cerulean Gym Exterior LGPE.png|250px]]
+|-
+|{{color2|000|Generation I}}
+|{{color2|000|Generation II}}
+|{{color2|000|Generation III}}
+|{{color2|000|Generation IV}}
+|{{color2|000|Generation VII}}
+|-
+|}
+
+===Berry Powder man===
+In Pokémon FireRed and LeafGreen, there is a man in a cottage in the northern part of town who concocts a variety of medicines from [[Berry Powder]] and will exchange Berry Powder for [[herbal medicine]] and [[vitamin]]s. When he is first visited, he gives the player the [[Powder Jar]], and will ask the player to make some Berry Powder from the new machine that crushes Berries in the [[Pokémon Center]] upstairs. There is also a sign on his wall that keeps a record of pressing-speed ranking the player achieves.
+
+{{shop|Berry Powder}}
+{{shoprow|{{shopitem|Energy Powder|50|Units|display=EnergyPowder}}|{{shopitem|Energy Root|80|Units}}}}
+{{shoprow|{{shopitem|Heal Powder|50|Units}}|{{shopitem|Revival Herb|300|Units}}}}
+{{shoprow|{{shopitem|Protein|1,000|Units}}|{{shopitem|Iron|1,000|Units}}}}
+{{shoprow|{{shopitem|Carbos|1,000|Units}}|{{shopitem|Calcium|1,000|Units}}}}
+{{shoprow|{{shopitem|Zinc|1,000|Units}}|{{shopitem|HP Up|1,000|Units}}}}
+{{shoprow|{{shopitem|PP Up|3,000|Units}}}}
+{{shopfooter}}
+
+===Gym Badge man===
+In Generations I and III, there is a man in a cottage in the northwest corner of the city who will explain exactly what the effects are for each of the eight {{DL|Badge|Indigo League}} [[Badge|Gym Badges]]. He also has a small backyard, where a [[Rare Candy]] can be found hidden among the flowers.
+
+===Dontae's house===
+There is a residential house located to the west of the Pokémon Center.
+
+In Pokémon Red, Blue, Gold, Silver, Crystal, FireRed, LeafGreen, HeartGold, and SoulSilver, this house belongs to Dontae and his wife. In Generation I and III, Dontae will offer to trade the player his {{p|Jynx}} for their {{p|Poliwhirl}}. In Generation II and IV, he is satisfied with the Pokémon he has received from trades over the years.
+
+In {{game|Yellow}}, this house belongs to [[Melanie|a girl]] who is taking care of an {{p|Oddish}}, {{p|Sandshrew}}, and {{p|Bulbasaur}}. If [[Pikachu (Yellow)|the player's Pikachu]]'s [[friendship]] is 147 or higher, she will offer to give the player her Bulbasaur.
+
+In [[Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!]], the girl once again inhabits the house. She will give the player a Bulbasaur if they have caught at least 30 Pokémon.
+
+===Burglarized house===
+In Generations I, III, and VII, a {{tc|Team Rocket Grunt}} stole the [[TM]] for {{m|Dig}} from its owner, leaving the house a mess. After defeating the Grunt, the player will receive the TM from him. The owner then says that since the TM was stolen, he'll find a way of teaching Dig to {{p|Diglett}} without a TM.
+
+The house is initially inaccessible because a Cerulean {{tc|Police Officer}} ([[Officer Jenny]] in {{v2|Yellow}} and Generation VII) blocks the door. The officer will only move aside from the door after the player talks to [[Bill]] at his [[Sea Cottage]] on {{rt|25|Kanto}}.
+
+In Generations II and IV, the man is actively fighting against robbers so the situation that occurred to him and his wife three years prior does not happen again. When he learns about the Team Rocket Grunt who stole the [[Machine Part]], he gets upset and claims that he won't even reconsider not reporting the Team Rocket Grunt if he turns out to be the same thief from three years ago.
+
+A notice outside the house in [[Generation II]] and {{2v2|HeartGold|SoulSilver}} reads:
+
+{{sign|DPtip|header}}
+{{sign|DPtip|There's a notice here...}}
+{{sign|DPtip|Stamp out thievery and make the city}}
+{{sign|DPtip|a friendlier, more cheerful place!}}
+{{sign|DPtip|Cerulean Police}}
+{{sign|DPtip|footer}}
+
+===Move Tutor===
+In [[Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!]], a {{tc|Tamer}} in the [[Pokémon Center]] will teach the player's {{OBP|Partner Pokémon|Let's Go, Pikachu! and Let's Go, Eevee!}} [[signature moves|exclusive moves]].
+
+{| style="margin:auto"
+| style="vertical-align:top" |
+{{tutormv/header|Let's Go Pikachu|none|no|disp={{color2|000|Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!|Let's Go, Pikachu!}}}}
+{{tutormv|Zippy Zap|Electric|cat=Physical}}
+|}
+|}
+| style="vertical-align:top" |
+{{tutormv/header|Let's Go Eevee|none|no|disp={{color2|000|Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!|Let's Go, Eevee!}}}}
+{{tutormv|Bouncy Bubble|Water|cat=Special}}
+{{tutormv|Buzzy Buzz|Electric|cat=Special}}
+{{tutormv|Sizzly Slide|Fire|cat=Physical}}
+|}
+|}
+|}
+
+==Demographics==
+===Pokémon Red, Blue, and Yellow===
+In {{game2|Red|Blue|Yellow}}, the population of Cerulean City is 27.
+
+===Pokémon Gold, Silver, and Crystal===
+In {{game2|Gold|Silver|Crystal}}, the population of Cerulean City is 24. The decrease in population is due to the Bike Shop moving to Goldenrod City.
+
+===Pokémon FireRed and LeafGreen===
+In {{game|FireRed and LeafGreen|s}}, the population of Cerulean City is 32.
+
+===Pokémon HeartGold and SoulSilver===
+In {{game|HeartGold and SoulSilver|s}}, the population of Cerulean City is 33, having increased by one since {{game|FireRed and LeafGreen|s}}.
+
+==Poké Mart==
+{{shop|Generation I}}
+{{shoprow|{{shopitem|Poké Ball (item)|200|5=Poké Ball|display=Poké Ball}}|{{shopitem|Potion|300}}}}
+{{shoprow|{{shopitem|Escape Rope|550|PD|note={{sup/1|Y}}}}|{{shopitem|Repel|350}}}}
+{{shoprow|{{shopitem|Antidote|100}}|{{shopitem|Burn Heal|250}}}}
+{{shoprow|{{shopitem|Awakening|200}}|{{shopitem|Paralyze Heal|200|display=Parlyz Heal}}}}
+{{shopfooter|multiple=yes}}
+{{shop|Generation II}}
+{{shoprow|{{shopitem|Great Ball|600}}|{{shopitem|Ultra Ball|1200}}}}
+{{shoprow|{{shopitem|Super Potion|700}}|{{shopitem|Super Repel|500}}}}
+{{shoprow|{{shopitem|Full Heal|600}}|{{shopitem|X Defense|display=X Defend|550}}}}
+{{shoprow|{{shopitem|X Attack|500}}|{{shopitem|Dire Hit|650}}}}
+{{shoprow|{{shopitem|Surf Mail|50|5=unknown}}}}
+{{shopfooter|multiple=yes}}
+{{shop|Generation III}}
+{{shoprow|{{shopitem|Poké Ball (item)|200|5=Poké Ball|display=Poké Ball}}|{{shopitem|Super Potion|700}}}}
+{{shoprow|{{shopitem|Potion|300}}|{{shopitem|Antidote|100}}}}
+{{shoprow|{{shopitem|Paralyze Heal|200|display=Paralyze Heal}}|{{shopitem|Awakening|250}}}}
+{{shoprow|{{shopitem|Burn Heal|250}}|{{shopitem|Escape Rope|550}}}}
+{{shoprow|{{shopitem|Repel|350}}}}
+{{shopfooter}}
+{{shop|Lower cashier (Generation IV)}}
+{{shoprow|{{shopitem|Poké Ball (item)|200|5=Poké Ball|display=Poké Ball}}|{{shopitem|Great Ball|600}}}}
+{{shoprow|{{shopitem|Ultra Ball|1200}}|{{shopitem|Potion|300}}}}
+{{shoprow|{{shopitem|Super Potion|700}}|{{shopitem|Hyper Potion|1200}}}}
+{{shoprow|{{shopitem|Max Potion|2500}}|{{shopitem|Full Restore|3000}}}}
+{{shoprow|{{shopitem|Revive|1500}}|{{shopitem|Antidote|100}}}}
+{{shoprow|{{shopitem|Paralyze Heal|200|display=Parlyz Heal}}|{{shopitem|Awakening|250}}}}
+{{shoprow|{{shopitem|Burn Heal|250}}|{{shopitem|Ice Heal|250}}}}
+{{shoprow|{{shopitem|Full Heal|600}}|{{shopitem|Escape Rope|550}}}}
+{{shoprow|{{shopitem|Repel|350}}|{{shopitem|Super Repel|500}}}}
+{{shoprow|{{shopitem|Max Repel|700}}|}}
+{{shopfooter|multiple=yes}}
+{{shop|Upper cashier (Generation IV)}}
+{{shoprow|{{shopitem|Air Mail|50}}|{{shopitem|Quick Ball|1000}}}}
+{{shopfooter|multiple=yes}}
+{{shop|Generation VII}}
+{{shoprow|{{shopitem|Poké Ball (item)|100|5=Poké Ball|display=Poké Ball}}|{{shopitem|Great Ball|300}}}}
+{{shoprow|{{shopitem|Ultra Ball|500|note=<sup>4 {{color2|000|Badge|Badges}}</sup>}}|{{shopitem|Potion|200}}}}
+{{shoprow|{{shopitem|Super Potion|700|note=<sup>2 {{color2|000|Badge|Badges}}</sup>}}|{{shopitem|Hyper Potion|1,500|note=<sup>4 {{color2|000|Badge|Badges}}</sup>}}}}
+{{shoprow|{{shopitem|Max Potion|2,500|note=<sup>6 {{color2|000|Badge|Badges}}</sup>}}|{{shopitem|Full Restore|3,000|note=<sup>8 {{color2|000|Badge|Badges}}</sup>}}}}
+{{shoprow|{{shopitem|Antidote|200}}|{{shopitem|Burn Heal|300}}}}
+{{shoprow|{{shopitem|Ice Heal|100}}|{{shopitem|Awakening|100}}}}
+{{shoprow|{{shopitem|Paralyze Heal|300}}|{{shopitem|Full Heal|400|note=<sup>3 {{color2|000|Badge|Badges}}</sup>}}}}
+{{shoprow|{{shopitem|Revive|2,000|note=<sup>3 {{color2|000|Badge|Badges}}</sup>}}|{{shopitem|Escape Rope|300}}}}
+{{shoprow|{{shopitem|Repel|400}}|{{shopitem|Super Repel|700|note=<sup>3 {{color2|000|Badge|Badges}}</sup>}}}}
+{{shoprow|{{shopitem|Max Repel|900|note=<sup>5 {{color2|000|Badge|Badges}}</sup>}}|{{shopitem|Lure|400|note=<sup>2 {{color2|000|Badge|Badges}}</sup>}}}}
+{{shoprow|{{shopitem|Super Lure|700|note=<sup>4 {{color2|000|Badge|Badges}}</sup>}}|{{shopitem|Max Lure|900|note=<sup>6 {{color2|000|Badge|Badges}}</sup>}}}}
+{{shoprow|{{shopitem|X Attack|550}}|{{shopitem|X Defense|500}}}}
+{{shoprow|{{shopitem|X Sp. Atk|350}}|{{shopitem|X Sp. Def|350}}}}
+{{shoprow|{{shopitem|X Speed|350}}|{{shopitem|X Accuracy|950}}}}
+{{shoprow|{{shopitem|Dire Hit|650}}|{{shopitem|Guard Spec.|700}}}}
+{{shopfooter}}
+
+==Items==
+{{Itlisth|road}}
+{{Itemlist|Fab Mail|Held by Zynx, a {{p|Jynx}} the {{player}} can obtain in a [[In-game trade|trade]]|FR=yes|LG=yes}}
+{{Itemlist|Heart Scale|Received from the Bike Maniac after listening to all of his [[Bicycle]] descriptions|LP=yes|LE=yes|display=[[Heart Scale]] ×5}}
+{{Itemlist|Rare Candy|One square south and three squares west of the northeast corner of the backyard of the [[Gym]] [[Badge]] man's house ''(hidden)''|R=yes|B=yes|Y=yes}}
+{{Itemlist|Rare Candy|One square south of the middle flower in the backyard of the Gym Badge man's house ''(hidden)''|FR=yes|LG=yes}}
+{{Itemlist|Rare Candy|In the backyard of the Gym Badge man's house|LP=yes|LE=yes}}
+{{Itemlist|Powder Jar|Received from an old man in the house next to the Gym Badge man's house|FR=yes|LG=yes}}
+{{Itemlist|Fame Checker|Received from {{ga|Blue}} after defeating him|FR=yes|LG=yes}}
+{{Itemlist|TM Ground|Received from the {{tc|Team Rocket Grunt}} after defeating him|R=yes|B=yes|Y=yes|FR=yes|LG=yes|display={{TM|28|Dig}}}}
+{{Itemlist|TM Ground VI|Received from the Team Rocket Grunt after defeating him|LP=yes|LE=yes|display={{TM|10|Dig}}}}
+{{Itemlist|Bicycle|Received from the [[Miracle Cycle|Bike Shop]] owner in return for a [[Bike Voucher]]|R=yes|B=yes|Y=yes|FR=yes|LG=yes}}
+{{Itemlist|Burn Heal|Southwest corner of town, south of the hedge wall|LP=yes|LE=yes}}
+{{Itemlist|TM Bug VI|Reward for defeating {{tc|Coach Trainer}} Harjit, after becoming {{pkmn|Champion}}|LP=yes|LE=yes|display={{TM|60|Megahorn}}}}
+{{Itemlist|Escape Rope|Received from {{ga|Trace}} outside [[Cerulean Cave]] after catching {{p|Mewtwo}}|LP=yes|LE=yes|display=[[Escape Rope]] ×3}}
+{{Itemlist|None|Near where the entrance to Cerulean Cave used to be (requires {{m|Surf}}) ''(hidden)''|G=yes|S=yes|C=yes|display=[[Berserk Gene]]}}
+{{Itemlist|Nugget|Southeast of the entrance to Cerulean Cave (requires {{m|Surf}}) ''(hidden)''|HG=yes|SS=yes}}
+{{Itlistfoot|road}}
+
+===Flower Bed===
+{{Itlisth}}
+{{Itemlist|Pretty Wing|Infrequently found by some [[walking Pokémon]] from the flower bed to the south of {{rt|24|Kanto|Nugget Bridge}}|LP=yes|LE=yes}}
+{{Itlistfoot}}
+
+==Pokémon==
+[[Wild Pokémon]] can be found in the water inside the [[Cerulean Gym]] ([[Generation I]] only), as well as in the channel along the northwest edge of town.
+
+In the house next to the [[Pokémon Center]], there is a man who will [[trade]] his {{p|Jynx}} for a {{p|Poliwhirl}} in {{game|Red and Blue|s}} and {{game|FireRed and LeafGreen|s}}.
+
+===Generation I===
+In this generation, no wild Pokémon is found while {{m|surf}}ing here.
+
+{{Catch/header|road|no}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry1|129|Magikarp|yes|yes|yes|Fish Old|5|100%|type1=Water}}
+{{Catch/entry1|060|Poliwag|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{Catch/entry1|118|Goldeen|yes|yes|yes|Fish Good|10|50%|type1=Water}}
+{{Catch/entry1|054|Psyduck|yes|yes|no|Fish Super|15|33%|type1=Water}}
+{{Catch/entry1|098|Krabby|yes|yes|no|Fish Super|15|33%|type1=Water}}
+{{Catch/entry1|118|Goldeen|yes|yes|no|Fish Super|15|33%|type1=Water}}
+{{Catch/entry1|118|Goldeen|no|no|yes|Fish Super|25, 30|70%|type1=Water}}
+{{Catch/entry1|119|Seaking|no|no|yes|Fish Super|30, 40|30%|type1=Water}}
+{{Catch/div|road|Gift Pokémon}}
+{{Catch/entry1|001|Bulbasaur|no|no|yes|Gift|10|{{tt|One|If Pikachu's friendship is 147 or higher.}}|type1=Grass|type2=Poison}}
+{{Catch/div|road|Special}}
+{{Catch/entry1|124|Jynx|yes|yes|no|Trade|tradenum=061|tradename=Poliwhirl|The same as the traded Pokémon|One|type1=Ice|type2=Psychic}}
+{{Catch/footer|road}}
+
+===Generation II===
+The Pokémon listed below appear only in {{game|Gold and Silver|s}} if surfing or fishing inside the [[Cerulean Gym]].
+{{Catch/header|road|yes}}
+{{Catch/div|water|Surfing}}
+{{Catch/entry2|118|Goldeen|yes|yes|no|Surf|5-14|all=90%|type1=Water}}
+{{Catch/entry2|119|Seaking|yes|yes|no|Surf|10-14|all=10%|type1=Water}}
+{{Catch/div|water|Fishing}}
+{{Catch/entry2|098|Krabby|yes|yes|no|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|no|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entry2|098|Krabby|yes|yes|no|Fish Good|20|all=55%|type1=Water}}
+{{Catch/entry2|120|Staryu|yes|yes|no|Fish Good|20|0%|0%|10%|type1=Water}}
+{{Catch/entry2|129|Magikarp|yes|yes|no|Fish Good|20|all=35%|type1=Water}}
+{{Catch/entry2|222|Corsola|yes|yes|no|Fish Good|20|10%|10%|0%|type1=Water|type2=Rock}}
+{{Catch/entry2|098|Krabby|yes|yes|no|Fish Super|40|all=60%|type1=Water}}
+{{Catch/entry2|099|Kingler|yes|yes|no|Fish Super|40|all=10%|type1=Water}}
+{{Catch/entry2|120|Staryu|yes|yes|no|Fish Super|40|0%|0%|30%|type1=Water}}
+{{Catch/entry2|222|Corsola|yes|yes|no|Fish Super|40|30%|30%|0%|type1=Water|type2=Rock}}
+{{Catch/footer|road}}
+
+===Generation III===
+{{Catch/header|road|no}}
+{{Catch/div|water|Surfing}}
+{{Catch/entryfl|072|Tentacool|yes|yes|Surf|5-40|100%|type1=Water|type2=Poison}}
+{{Catch/div|water|Fishing}}
+{{Catch/entryfl|129|Magikarp|yes|yes|Fish Old|5|100%|type1=Water}}
+{{Catch/entryfl|098|Krabby|yes|no|Fish Good|5-15|20%|type1=Water}}
+{{Catch/entryfl|098|Krabby|no|yes|Fish Good|5-15|60%|type1=Water}}
+{{Catch/entryfl|116|Horsea|yes|no|Fish Good|5-15|60%|type1=Water}}
+{{Catch/entryfl|116|Horsea|no|yes|Fish Good|5-15|20%|type1=Water}}
+{{Catch/entryfl|129|Magikarp|yes|yes|Fish Good|5-15|20%|type1=Water}}
+{{Catch/entryfl|054|Psyduck|yes|no|Fish Super|25-35|1%|type1=Water}}
+{{Catch/entryfl|079|Slowpoke|no|yes|Fish Super|25-35|1%|type1=Water|type2=Psychic}}
+{{Catch/entryfl|098|Krabby|no|yes|Fish Super|15-35|84%|type1=Water}}
+{{Catch/entryfl|116|Horsea|yes|no|Fish Super|15-35|84%|type1=Water}}
+{{Catch/entryfl|130|Gyarados|yes|yes|Fish Super|15-25|15%|type1=Water|type2=Flying}}
+{{Catch/div|road|Special}}
+{{Catch/entryfl|124|Jynx|yes|yes|Trade|tradenum=061|tradename=Poliwhirl|The same as the traded Pokémon|One|type1=Ice|type2=Psychic}}
+{{catch/footer|road}}
+
+===Generation IV===
+{{Catch/header|road|4}}
+{{Catch/div|water|Surfing}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Surf|5-10|all=90%|type1=Water}}
+{{Catch/entryhs|119|Seaking|yes|yes|Surf|10|all=10%|type1=Water}}
+{{Catch/div|water|Fishing}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Fish Old|10|all=15%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Old|10|all=85%|type1=Water}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Fish Good|20|all=40%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Good|20|all=60%|type1=Water}}
+{{Catch/entryhs|118|Goldeen|yes|yes|Fish Super|40|all=70%|type1=Water}}
+{{Catch/entryhs|119|Seaking|yes|yes|Fish Super|40|all=10%|type1=Water}}
+{{Catch/entryhs|129|Magikarp|yes|yes|Fish Super|40|all=20%|type1=Water}}
+{{catch/div|road|Headbutt<br/><small>Group A</small>}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|11-13|all=50%|type1=Normal|type2=Flying|10=k}}
+{{Catch/entryhs|204|Pineco|yes|yes|Headbutt|11-13|all=30%|type1=Bug|10=k}}
+{{Catch/entryhs|415|Combee|yes|yes|Headbutt|11-13|all=20%|type1=Bug|type2=Flying|10=k}}
+{{catch/div|road|Headbutt<br/><small>Group B</small>}}
+{{Catch/entryhs|163|Hoothoot|yes|yes|Headbutt|14-16|all=80%|type1=Normal|type2=Flying|10=k}}
+{{Catch/entryhs|415|Combee|yes|yes|Headbutt|14-16||all=20%|type1=Bug|type2=Flying|10=k}}
+{{catch/footer|road}}
+
+===Generation VII===
+{{Catch/header|road|no}}
+{{Catch/div|road|Gift Pokémon}}
+{{Catch/entrype|001|Bulbasaur|yes|yes|Gift|12|One|type1=Grass|type2=Poison}}
+{{Catch/div|road|Special Pokémon}}
+{{Catch/entrype|019A|Rattata|yes|yes|Trade|12|Unlimited|tradenum=019|tradename=Rattata|type1=Dark|type2=Normal|form=Alolan Form}}
+{{Catch/footer|road}}
+
+==Trainers==
+===Generation I===
+===={{game|Red and Blue|s}}====
+{{Party
+| caption = {{PlayerChoice|0001|Bulbasaur}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr RG Blue 1.png
+| prize = {{PDollar}}595
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Cerulean City
+| game = RGB
+| pokemon = 4
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0017
+| pokemon = Pidgeotto
+| level = 18
+| type1 = Normal
+| type2 = Flying
+| move1 = Gust | move1type = Normal
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0063
+| pokemon = Abra
+| level = 15
+| type1 = Psychic
+| move1 = Teleport | move1type = Psychic
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0019
+| pokemon = Rattata
+| level = 15
+| type1 = Normal
+| move1 = Tackle | move1type = Normal
+| move2 = Tail Whip | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Hyper Fang | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0004
+| pokemon = Charmander
+| level = 17
+| type1 = Fire
+| move1 = Scratch | move1type = Normal
+| move2 = Growl | move2type = Normal
+| move3 = Ember | move3type = Fire
+| move4 = Leer | move4type = Normal
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0004|Charmander}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr RG Blue 1.png
+| prize = {{PDollar}}595
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Cerulean City
+| game = RGB
+| pokemon = 4
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0017
+| pokemon = Pidgeotto
+| level = 18
+| type1 = Normal
+| type2 = Flying
+| move1 = Gust | move1type = Normal
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0063
+| pokemon = Abra
+| level = 15
+| type1 = Psychic
+| move1 = Teleport | move1type = Psychic
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0019
+| pokemon = Rattata
+| level = 15
+| type1 = Normal
+| move1 = Tackle | move1type = Normal
+| move2 = Tail Whip | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Hyper Fang | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0007
+| pokemon = Squirtle
+| level = 17
+| type1 = Water
+| move1 = Tackle | move1type = Normal
+| move2 = Tail Whip | move2type = Normal
+| move3 = Bubble | move3type = Water
+| move4 = Water Gun | move4type = Water
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0007|Squirtle}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr RG Blue 1.png
+| prize = {{PDollar}}595
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Cerulean City
+| game = RGB
+| pokemon = 4
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0017
+| pokemon = Pidgeotto
+| level = 18
+| type1 = Normal
+| type2 = Flying
+| move1 = Gust | move1type = Normal
+| move2 = Sand-Attack | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0063
+| pokemon = Abra
+| level = 15
+| type1 = Psychic
+| move1 = Teleport | move1type = Psychic
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0019
+| pokemon = Rattata
+| level = 15
+| type1 = Normal
+| move1 = Tackle | move1type = Normal
+| move2 = Tail Whip | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Hyper Fang | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0001
+| pokemon = Bulbasaur
+| level = 17
+| type1 = Grass
+| type2 = Poison
+| move1 = Tackle | move1type = Normal
+| move2 = Growl | move2type = Normal
+| move3 = Leech Seed | move3type = Grass
+| move4 = Vine Whip | move4type = Grass
+}}
+{{Party/end}}
+===={{game|Yellow}}====
+{{Party
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr Y Blue 1.png
+| prize = {{PDollar}}595
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Cerulean City
+| game = Y
+| pokemon = 4
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0021
+| pokemon = Spearow
+| level = 18
+| type1 = Normal
+| type2 = Flying
+| move1 = Peck | move1type = Flying
+| move2 = Growl | move2type = Normal
+| move3 = Leer | move3type = Normal
+| move4 = Fury Attack | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0027
+| pokemon = Sandshrew
+| level = 15
+| type1 = Ground
+| move1 = Scratch | move1type = Normal
+| move2 = Sand-Attack | move2type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0019
+| pokemon = Rattata
+| level = 15
+| type1 = Normal
+| move1 = Tackle | move1type = Normal
+| move2 = Tail Whip | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+| move4 = Hyper Fang | move4type = Normal
+}}
+{{Pokémon
+| gen = 1
+| ndex = 0133
+| pokemon = Eevee
+| level = 17
+| type1 = Normal
+| move1 = Tackle | move1type = Normal
+| move2 = Tail Whip | move2type = Normal
+| move3 = Sand-Attack | move3type = Normal
+| move4 = Growl | move4type = Normal
+}}
+{{Party/end}}
+====All versions====
+{{Trainerheader|road}}
+{{Trainerdiv|road|After obtaining the S.S. Ticket}}
+{{Trainerentry|Spr RG Rocket.png|game=1|Rocket||510|2|066|Machop||17|None|096|Drowzee||17|None}}
+{{Trainerfooter|road|1|Inside}}
+
+===Generation III===
+{{Party
+| caption = {{PlayerChoice|0001|Bulbasaur}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr FRLG Blue 1.png
+| prize = {{PDollar}}288
+| class = Rival
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Cerulean City
+| game = FRLG
+| pokemon = 4
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0017
+| pokemon = Pidgeotto
+| gender = male
+| level = 17
+| type1 = Normal
+| type2 = Flying
+| ability = Keen Eye
+| move1 = Tackle | move1type = Normal
+| move2 = Gust | move2type = Flying
+| move3 = Sand-Attack | move3type = Ground
+| move4 = Quick Attack | move4type = Normal
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0063
+| pokemon = Abra
+| gender = male
+| level = 16
+| type1 = Psychic
+| ability = Synchronize
+| move1 = Teleport | move1type = Psychic
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0019
+| pokemon = Rattata
+| gender = male
+| level = 15
+| type1 = Normal
+| ability = Guts
+| move1 = Tackle | move1type = Normal
+| move2 = Tail Whip | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0004
+| pokemon = Charmander
+| gender = male
+| level = 18
+| type1 = Fire
+| ability = Blaze
+| move1 = Scratch | move1type = Normal
+| move2 = Growl | move2type = Normal
+| move3 = Ember | move3type = Fire
+| move4 = Metal Claw | move4type = Steel
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0004|Charmander}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr FRLG Blue 1.png
+| prize = {{PDollar}}288
+| class = Rival
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Cerulean City
+| game = FRLG
+| pokemon = 4
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0017
+| pokemon = Pidgeotto
+| gender = male
+| level = 17
+| type1 = Normal
+| type2 = Flying
+| ability = Keen Eye
+| move1 = Tackle | move1type = Normal
+| move2 = Gust | move2type = Flying
+| move3 = Sand-Attack | move3type = Ground
+| move4 = Quick Attack | move4type = Normal
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0063
+| pokemon = Abra
+| gender = male
+| level = 16
+| type1 = Psychic
+| ability = Synchronize
+| move1 = Teleport | move1type = Psychic
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0019
+| pokemon = Rattata
+| gender = male
+| level = 15
+| type1 = Normal
+| ability = Guts
+| move1 = Tackle | move1type = Normal
+| move2 = Tail Whip | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0007
+| pokemon = Squirtle
+| gender = male
+| level = 18
+| type1 = Water
+| ability = Torrent
+| move1 = Tackle | move1type = Normal
+| move2 = Tail Whip | move2type = Normal
+| move3 = Withdraw | move3type = Water
+| move4 = Water Gun | move4type = Water
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|0007|Squirtle}}
+| background = {{blue color}}
+| border = {{green color dark}}
+| headcolor = {{blue color light}}
+| sprite = Spr FRLG Blue 1.png
+| prize = {{PDollar}}288
+| class = Rival
+| name = {{color2|000|Blue (game)|Blue}}
+| location = Cerulean City
+| game = FRLG
+| pokemon = 4
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0017
+| pokemon = Pidgeotto
+| gender = male
+| level = 17
+| type1 = Normal
+| type2 = Flying
+| ability = Keen Eye
+| move1 = Tackle | move1type = Normal
+| move2 = Gust | move2type = Flying
+| move3 = Sand-Attack | move3type = Ground
+| move4 = Quick Attack | move4type = Normal
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0063
+| pokemon = Abra
+| gender = male
+| level = 16
+| type1 = Psychic
+| ability = Synchronize
+| move1 = Teleport | move1type = Psychic
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0019
+| pokemon = Rattata
+| gender = male
+| level = 15
+| type1 = Normal
+| ability = Guts
+| move1 = Tackle | move1type = Normal
+| move2 = Tail Whip | move2type = Normal
+| move3 = Quick Attack | move3type = Normal
+}}
+{{Pokémon
+| gen = 3
+| ndex = 0001
+| pokemon = Bulbasaur
+| gender = male
+| level = 18
+| type1 = Grass
+| type2 = Poison
+| ability = Overgrow
+| move1 = Sleep Powder | move1type = Grass
+| move2 = PoisonPowder | move2type = Poison
+| move3 = Vine Whip | move3type = Grass
+| move4 = Leech Seed | move4type = Grass
+}}
+{{Party/end}}{{-}}
+{{trainerheader|road}}
+{{Trainerdiv|road|After obtaining the S.S. Ticket}}
+{{Trainerentry|Spr FRLG Team Rocket Grunt M.png|Team Rocket Grunt||544|2|066|Machop|♂|17|None|096|Drowzee|♂|17|None}}
+{{Trainerfooter|road|FRLG|Inside}}
+
+===Generation VII===
+{{Party
+| caption = {{PlayerChoice|LGP}}
+| background = {{green color light}}
+| border = {{black color dark}}
+| headcolor = {{black color light}}
+| sprite = VSTrace.png
+| size = 90px
+| prize = {{PDollar}}520
+| class = Pokémon Trainer
+| name = {{color2|000|Trace (game)|Trace}}
+| location = Cerulean City
+| game = LGP
+| pokemon = 3
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0016
+| pokemon = Pidgey
+| gender = male
+| level = 12
+| type1 = Normal
+| type2 = Flying
+| move1 = Quick Attack | move1type = Normal | move1cat = Physical
+| move2 = Sand Attack | move2type = Ground | move2cat = Status
+| move3 = Gust | move3type = Flying | move3cat = Special
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0043
+| pokemon = Oddish
+| gender = female
+| level = 12
+| type1 = Grass
+| type2 = Poison
+| move1 = Absorb | move1type = Grass | move1cat = Special
+| move2 = Acid | move2type = Poison | move2cat = Special
+| move3 = Poison Powder | move3type = Poison | move3cat = Status
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0133
+| pokemon = Eevee
+| gender = male
+| level = 13
+| type1 = Normal
+| move1 = Quick Attack | move1type = Normal | move1cat = Physical
+| move2 = Tail Whip | move2type = Normal | move2cat = Status
+| move3 = Double Kick | move3type = Fighting | move3cat = Physical
+}}
+{{Party/end}}
+{{Party
+| caption = {{PlayerChoice|LGE}}
+| background = {{green color light}}
+| border = {{black color dark}}
+| headcolor = {{black color light}}
+| sprite = VSTrace.png
+| size = 90px
+| prize = {{PDollar}}520
+| class = Pokémon Trainer
+| name = {{color2|000|Trace (game)|Trace}}
+| location = Cerulean City
+| game = LGE
+| pokemon = 3
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0016
+| pokemon = Pidgey
+| gender = male
+| level = 12
+| type1 = Normal
+| type2 = Flying
+| move1 = Quick Attack | move1type = Normal | move1cat = Physical
+| move2 = Sand Attack | move2type = Ground | move2cat = Status
+| move3 = Gust | move3type = Flying | move3cat = Special
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0043
+| pokemon = Oddish
+| gender = female
+| level = 12
+| type1 = Grass
+| type2 = Poison
+| move1 = Absorb | move1type = Grass | move1cat = Special
+| move2 = Acid | move2type = Poison | move2cat = Special
+| move3 = Poison Powder | move3type = Poison | move3cat = Status
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0025
+| pokemon = Pikachu
+| gender = male
+| level = 13
+| type1 = Electric
+| move1 = Thunder Shock | move1type = Electric | move1cat = Special
+| move2 = Tail Whip | move2type = Normal | move2cat = Status
+| move3 = Double Kick | move3type = Fighting | move3cat = Physical
+}}
+{{Party/end}}
+{{-}}
+
+[[File:Green Rematch Location LGPE.png|thumb|250px|Green's rematch location]]
+{{Trainerheader|road}}
+{{Trainerdiv|road|After obtaining the Cascade Badge and S.S. Ticket}}
+{{Trainerentry|VSTeam Rocket Grunt M PE.png{{!}}90px|game=PE|Team Rocket Grunt||420|1|020|Raticate|♂|15|None}}
+{{Trainerdiv|road|After becoming Champion}}
+{{trainerentry/master|VSBird Keeper Master PE.png{{!}}90px|Bird Keeper|Barney|084|Doduo|♂|70|Normal|Swords Dance|Fighting|Jump Kick|36=シンヤ|37=Shin'ya}}
+{{trainerdiv|road}}
+{{trainerentry/master|VSLass Master PE.png{{!}}90px|Lass|Kimberly|061|Poliwhirl|♀|70|Normal|Substitute|Water|Scald|Psychic|Psychic|36=マユミ|37=Mayumi}}
+{{trainerdiv|road}}
+{{trainerentry/master|VSBlack Belt Master PE.png{{!}}90px|Black Belt|Yuen|062|Poliwrath|♂|75|Fighting|Brick Break|Fighting|Bulk Up|Psychic|Psychic|36=タツオミ|37=Tatsuomi}}
+{{trainerdiv|road}}
+{{trainerentry/master|VSAce Trainer M Master PE.png{{!}}90px|Ace Trainer|Grayson|149|Dragonite|♂|75|Dragon|Outrage|Ice|Ice Beam|Water|Aqua Jet|Psychic|Reflect|36=シンイチロウ|37=Shin'ichirō}}
+{{trainerdiv|road}}
+{{trainerentry/master|VSYoungster Master PE.png{{!}}90px|Youngster|Denis|020|Raticate|♂|75|Normal|Double-Edge|Normal|Facade|Ice|Blizzard|36=タカオ|37=Takao}}
+{{trainerdiv|road|<small>Requires Sea Skim</small>}}
+{{trainerentry/master|VSPsychic Master PE.png{{!}}90px|Psychic|Avery|124|Jynx|♀|75|Psychic|Calm Mind|Normal|Lovely Kiss|Psychic|Dream Eater|Fighting|Seismic Toss|36=ナオキ|37=Naoki}}
+{{trainerdiv|road}}
+{{Trainerentry|VSCoach Trainer M PE.png{{!}}90px|game=PE|Coach Trainer|Harjit|5,200|5|112|Rhydon|♀|52|None|078|Rapidash|♂|52|None|087|Dewgong|♀|52|None|119|Seaking|♂|52|None|034|Nidoking|♂|52|None|36=ソウア|37=Soua}}
+{{Trainerfooter|road|I}}
+
+;After defeating Green in [[Cerulean Cave]]
+
+This battle can be repeated every time the player defeats the [[Indigo Plateau|Pokémon League]].
+{{Party
+| background = {{green color}}
+| border = {{blue color dark}}
+| headcolor = {{green color light}}
+| sprite = VSGreen PE.png
+| size = 80x80px
+| prize = {{PDollar}}19,040
+| class = Pokémon Trainer
+| name = {{color2|000|Green (game)|Green}}
+| location = Cerulean City
+| game = PE
+| pokemon = 6
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0036
+| pokemon = Clefable
+| gender = female
+| level = 66
+| type1 = Fairy
+| move1 = Moonblast | move1type = Fairy | move1cat = Special
+| move2 = Light Screen | move2type = Psychic | move2cat = Status
+| move3 = Reflect | move3type = Psychic | move3cat = Status
+| move4 = Tri Attack | move4type = Normal | move4cat = Special
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0094
+| pokemon = Gengar
+| gender = male
+| level = 66
+| type1 = Ghost
+| type2 = Poison
+| move1 = Dark Pulse | move1type = Dark | move1cat = Special
+| move2 = Shadow Ball | move2type = Ghost | move2cat = Special
+| move3 = Sludge Bomb | move3type = Poison | move3cat = Special
+| move4 = Will-O-Wisp | move4type = Fire | move4cat = Status
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0071
+| pokemon = Victreebel
+| gender = male
+| level = 66
+| type1 = Grass
+| type2 = Poison
+| move1 = Power Whip | move1type = Grass | move1cat = Physical
+| move2 = Poison Jab | move2type = Poison | move2cat = Physical
+| move3 = Sucker Punch | move3type = Dark | move3cat = Physical
+| move4 = Leech Life | move4type = Bug | move4cat = Physical
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0038
+| pokemon = Ninetales
+| gender = female
+| level = 66
+| type1 = Fire
+| move1 = Fire Blast | move1type = Fire | move1cat = Special
+| move2 = Dark Pulse | move2type = Dark | move2cat = Special
+| move3 = Foul Play | move3type = Dark | move3cat = Physical
+| move4 = Hyper Beam | move4type = Normal | move4cat = Special
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0115
+| pokemon = Kangaskhan
+| gender = female
+| level = 66
+| type1 = Normal
+| move1 = Dizzy Punch | move1type = Normal | move1cat = Physical
+| move2 = Sucker Punch | move2type = Dark | move2cat = Physical
+| move3 = Thunder Punch | move3type = Electric | move3cat = Physical
+| move4 = Brick Break | move4type = Fighting | move4cat = Physical
+}}
+{{Pokémon
+| gen = PE
+| ndex = 0009
+| pokemon = Blastoise
+| gender = male
+| level = 68
+| type1 = Water
+| megastone = Blastoisinite
+| move1 = Hydro Pump | move1type = Water | move1cat = Special
+| move2 = Flash Cannon | move2type = Steel | move2cat = Special
+| move3 = Ice Beam | move3type = Ice | move3cat = Special
+| move4 = Fake Out | move4type = Normal | move4cat = Physical
+}}
+{{Party/end}}
+
+==Trainer Tips==
+===Generation I===
+{{sign|RBY|header}}
+{{sign|RBY|title|TRAINER TIPS}}
+{{sign|RBY|Pressing B Button}}
+{{sign|RBY|during evolution}}
+{{sign|RBY|cancels the whole}}
+{{sign|RBY|process.}}
+{{sign|RBY|footer}}
+
+===Generation III===
+{{sign|FRLG|header}}
+{{sign|FRLG|title|TRAINER TIPS}}
+{{sign|FRLG|A POKéMON can be made to hold}}
+{{sign|FRLG|an item.}}
+{{sign|FRLG|Some items can even be used by}}
+{{sign|FRLG|the holding POKéMON in battle.}}
+{{sign|FRLG|footer}}
+
+==Music==
+{| class="roundtable" style="margin:auto; text-align: center; background: #3F9BBC; border: 3px solid #007BA7"
+|- style="background:#7FBCD2"
+! Games
+! Song name
+! Composition
+! Arrangement
+|- style="background:#FFF"
+! {{GameIcon|R}}{{GameIcon|Gr}}{{GameIcon|B}}{{GameIcon|Y}}
+| [[Pokémon Red & Pokémon Green: Super Music Collection|Cerulean City Theme]]
+| [[Junichi Masuda]]
+| [[Junichi Masuda]]
+|- style="background:#FFF"
+! {{GameIcon|G}}{{GameIcon|S}}{{GameIcon|C}}
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Pewter City]]
+| [[Junichi Masuda]]
+| [[Go Ichinose]]
+|- style="background:#FFF"
+! {{GameIcon|FR}}{{GameIcon|LG}}
+| [[Pokémon FireRed & Pokémon LeafGreen: Super Music Collection|Fuchsia City Theme]] || [[Junichi Masuda]] || [[Go Ichinose]]
+|- style="background:#FFF"
+! {{GameIcon|HG}}{{GameIcon|SS}}
+| [[Pokémon HeartGold & Pokémon SoulSilver: Super Music Collection|Cerulean City]] || [[Junichi Masuda]] || [[Takuto Kitsuta]]<br><small>[[GB Sounds]]:</small> [[Takuto Kitsuta]]
+|- style="background:#FFF"
+! {{GameIcon|LGP}}{{GameIcon|LGE}}
+| [[Pokémon: Let's Go, Pikachu! & Pokémon: Let's Go, Eevee! Super Music Collection|Cerulean City Theme]] || [[Junichi Masuda]] || [[Shota Kageyama]]
+|}
+
+==Artwork==
+{| style="margin:auto; text-align:center; {{roundy|10px}}; padding: 2px; border:2px solid #007BA7; background:#3F9BBC; font-size:80%"
+|style="{{roundy|5px}}; border:2px solid #007BA7; background:#7FBCD2"| [[File:Cerulean City LGPE Concept Art.jpg|x250px]]
+|-
+|Concept art from the {{color2|000|Pokémon: Let's Go, Pikachu! & Pokémon: Let's Go, Eevee! Super Music Collection|Let's Go, Pikachu and Eevee! Super Music Collection}} 
+|}
+
+==In the spin-off games==
+===Pokémon Pinball===
+In {{g|Pinball}}, Cerulean City appears on the Red and Blue tables; catchable Pokémon include {{p|Caterpie}}, {{p|Oddish}}, {{p|Meowth}}, {{p|Psyduck}}, {{p|Mankey}}, {{p|Abra}}, {{p|Bellsprout}}, {{p|Krabby}}, {{p|Goldeen}} and {{p|Jynx}}.
+
+===Pokémon Pokopia===
+In {{g|Pokopia Expansion Pass}}, [[Bubbly Basin]] is based on Cerulean City and the surrounding area. The entire city has flooded and sunken to the bottom of the sea following a series of catastrophic weather anomalies that caused the sea levels to rise and almost completely submerge the area. Only several small islands and unground air pockets, one of which houses the city's [[Pokémon Center]], remain on dry land. By the request of a local resident {{p|Popplio}}, it becomes {{poko|Ditto}}'s job to construct a large ocean temple in the area. Once finished, a {{p|Manaphy}} appears within the temple.
+
+==In animation==
+[[File:Cerulean City anime.png|thumb|250px|Cerulean City in {{aniseries|SM}}]]
+===''Pokémon the Series''===
+===={{aniseries|OS}}====
+Cerulean City first appeared in ''[[EP007|The Water Flowers of Cerulean City]]'', where {{Ash}} decided to challenge the [[Cerulean Gym]]. At the Gym, he found out that {{Gary}} and the other two {{pkmn|Trainer}}s from [[Pallet Town]] had already beaten the Gym. As their only remaining {{OBP|Pokémon|species}} after those challengers was a {{p|Goldeen}}, the [[Sensational Sisters]] were ready to give Ash the {{badge|Cascade}} without a {{pkmn|battle}}, until {{an|Misty}} appeared, revealing herself to be one of the Cerulean [[Gym Leader]]s as well. Ash and Misty started a Gym battle, but just when Ash was about to win, {{TRT}} busted their way into the Gym, interrupting the battle. After Team Rocket had been defeated, the Sensational Sisters decided to give Ash the Cascade Badge as thanks for saving the Gym.
+
+In ''[[EP061|The Misty Mermaid]]'', Misty reluctantly agreed to help her sisters in a new underwater ballet performance at Cerulean City. However, in the middle of the act, Team Rocket appeared again, once more trying to steal the Gym's Pokémon. A battle between Ash and company and Team Rocket ensued, during which Cerulean Gym's {{p|Seel}} evolved into a {{OBP|Dewgong|Cerulean Gym}}. Once the situation was solved and Ash and company prepared to leave, Misty left her {{TP|Misty|Horsea}} and {{TP|Misty|Starmie}} at the Gym, the latter due to her sisters' request.
+
+====[[Pokémon Chronicles]]====
+Several Pokémon Chronicles episodes mostly focused on the Cerulean Gym and Misty. In ''[[HS11|A Date With Delcatty]]'', Cerulean City was revealed to have a container port, the Cerulean Marine Stadium, and a lighthouse.
+
+===={{aniseries|RS}}====
+In ''[[AG133|The Right Place and the Right Mime]]'', the {{gdis|Battle Factory|III}} was revealed to be located near Cerulean City.
+
+===={{aniseries|SM}}====
+In ''[[SM042|Alola, Kanto!]]'' and ''[[SM043|When Regions Collide!]]'', Ash, {{ashcl}}, Misty, {{an|Brock}}, and {{an|Professor Kukui}} visited Cerulean City to visit the Cerulean Gym and teach Ash's [[Alola]]n friends about [[Gym]]s and [[Pokémon League]]s. To experience a Gym battle, {{an|Mallow}} and {{an|Lana}} had an unofficial Gym battle against Brock, while {{an|Lillie}} and {{an|Sophocles}} had a battle against Misty. After these battles had been called off with no clear winner, {{an|Kiawe}} requested to have a serious battle against Brock, while Ash issued a similar challenge to Misty. During these battles, Brock and Misty demonstrated their new ability to use [[Mega Evolution]] by Mega Evolving their {{TP|Brock|Steelix}} and {{TP|Misty|Gyarados}}, respectively. Kiawe lost his battle against Brock, while Ash managed to defeat Misty.
+
+===={{aniseries|JN}}====
+The Cerulean Gym made brief cameo appearances in ''[[JN132|Partners in Time!]]'' and ''[[JN136|This Could be the Start of Something Big!]]'', with the latter episode showing [[Goh]] meeting Misty after he parted ways with Ash.
+
+====Gallery====
+{| style="margin:auto; text-align:center; background: #3F9BBC; {{roundy}}; border: 3px solid #007BA7"
+|- style="background:#7FBCD2"
+! style="{{roundytl|5px}}" | {{color2|000|Pokémon Center}}
+! {{color2|000|Baseball|Cerulean Marine Stadium}}
+! Lighthouse
+! style="{{roundytr|5px}}" | {{color2|000|Cerulean Gym}}
+|- style="background:#fff"
+| [[File:Cerulean City Pokemon Center.png|x150px]]
+| [[File:Cerulean Marine Stadium.png|x150px]]
+| [[File:Cerulean Lighthouse.png|x150px]]
+| [[File:Cerulean Gym anime.png|x150px]]
+|}
+
+===Pokémon Origins===
+[[File:Cerulean City Evolutions.png|thumb|250px|Cerulean City in [[Pokémon Evolutions]]]]
+Cerulean City was seen briefly in ''[[PO02|File 2: Cubone]]'', where {{OBP|Red|Origins}} recalled having visited the city during his {{pkmn|journey}}. During his visit, he managed to retrieve the stolen [[TM]] for {{m|Dig}} from a member of [[Team Rocket]] and earn the {{badge|Cascade}} by defeating Misty at the Cerulean Gym.
+
+===Pokémon Evolutions===
+Cerulean City briefly appeared in the beginning of ''[[PE08|The Discovery]]'' when {{ga|Green}} entered the [[Kanto Route 24|Nugget Bridge]] on her way to [[Cerulean Cave]].
+{{-}}
+
+==In the manga==
+===Pokémon Adventures===
+[[File:Cerulean City Adventures.png|thumb|300px|Cerulean City in [[Pokémon Adventures]]]]
+===={{MangaArc|Red, Green & Blue}}====
+Cerulean City was first featured in ''[[PS008|Suddenly Starmie]]'' as the place where [[Misty]]'s mansion and the [[Cerulean Gym]] are located. Its streets surround a canal full of boats, resembling {{wp|Venice}}. After spending a night at the mansion, {{adv|Red}} and Misty trained at the Gym together for a while in order to be able to fight [[Team Rocket]] more effectively. Before departing, Red received a {{badge|Cascade}} from Misty.
+
+===={{MangaArc|Yellow}}====
+Starting from ''[[PS065|Karate Machop!]]'', Cerulean City was attacked by an army of {{t|Ghost}} Pokémon, sent there by [[Agatha]]. Misty, while protecting her Gym, found out that the [[Elite Four]] were after her Badge. After {{adv|Yellow}} defeated [[Lance]] at [[Cerise Island]], the Ghost army lost all of its strength.
+
+[[File:Cerulean City EToP.png|thumb|230px|Cerulean City in [[The Electric Tale of Pikachu]]]]
+===The Electric Tale of Pikachu===
+Cerulean City appeared in ''[[ET02|Play Misty For Me]]''. After defeating {{an|Brock}} at the [[Pewter Gym]], {{OBP|Ash Ketchum|EToP|Ash}} traveled to the [[Cerulean Gym]] in order to earn his second [[Badge]]. At the Gym, {{an|Misty}} challenged Ash into getting past her {{TP|Misty|Gyarados}} and retrieving his {{AP|hat}} from her in order to get the Badge. At first, Ash's Pokémon proved unhelpful in the given task, but his {{p|Metapod}} evolving into {{AP|Butterfree}} changed things in his favor, allowing him to eventually succeed and receive the {{badge|Cascade}} from the [[Sensational Sisters|Misty's sisters]].
+
+===Pokémon Zensho===
+Cerulean City appeared in ''[[PZ03|Cerulean City]]'', where {{zensho|Satoshi}} visited the city. Shortly after his arrival, he saved the bike shop from a {{tc|Team Rocket Grunt}}, before heading to the Gym. However, before Satoshi could even properly start a battle with Misty, another Team Rocket Grunt attacked the Gym with a {{p|Gyarados}}. Satoshi defeated the Gyarados, receiving a Cascade Badge from Misty as thanks.
+
+==Trivia==
+[[File:Cerulean City Slowbro SonicBoom FRLG.png|thumb|200px|The girl commanding her Slowbro to use SonicBoom in {{game|FireRed and LeafGreen|s}}]]
+* In [[Generation]]s {{gen|II}} and {{gen|IV}}, a {{tc|School Kid}} with an Itemfinder{{sup/2|GSC}}/[[Dowsing Machine|Dowsing MCHN]]{{sup/4|HGSS}} hints at an item outside of [[Cerulean Cave]]. However, his machine will keep responding even after the player has picked up the item.
+* The [[Badge|Gym Badge]] man is the only character in [[Generation III]] to define the {{Badge|Marsh}} and {{Badge|Volcano}} as having the effect of allowing the {{player}} to use the post-[[Generation I]] [[HM]] moves {{m|Rock Smash}} and {{m|Waterfall}} outside of battle, since [[Sabrina]] and [[Blaine]] do not explain it themselves.
+* In {{game|Red and Blue|s}} and [[Generation III]], when talked to, a girl will command her {{p|Slowbro}} to use {{m|Withdraw}} or {{m|Sonic Boom|SonicBoom}}, or to punch. However, while Slowbro learns Withdraw by leveling up and can be taught a {{cat|Punching moves|punching move}}, Slowbro is unable to learn SonicBoom by any legitimate means.
+** In {{game|Yellow}} and [[Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!]], the girl owns an {{p|Electrode}} instead, commanding it to use either {{m|Tackle}}, Sonic Boom, or {{m|Swift}}, all being moves that Electrode can learn.
+* In Generation II, Cerulean City shares its music with {{ci|Viridian}}, {{ci|Pewter}}, and {{ci|Saffron}}, instead of with [[Fuchsia City]] (which uses the [[Celadon City]] theme instead), like in all of the other games.
+* In Generation I, it is possible to skip {{rt|24|Kanto}} and {{rt|25|Kanto}} by defeating Misty and [[trade|trading]] over a Pokémon that knows {{m|Cut}}. In Generation III, this is prevented by having the disobedient Slowbro block the cuttable tree south of the city until the player has received the [[S.S. Ticket]] from [[Bill]] at the [[Sea Cottage]].
+* In Generation III, the house to the left of the Poké Mart contains an old man watching TV, noting there is nothing interesting on it. Dummied-out text in the debug build shows he would have had more dialogue, as switching on NEWS1 in the debug build changes his dialogue to wishing someone would tell him about stuff directly.
+
+==Names==
+{| class="roundtable" style="background:#3F9BBC; border:3px solid #007BA7"
+|-
+! style="background:#7FBCD2" | Language
+! style="background:#7FBCD2" | Name
+! style="background:#7FBCD2" | Origin
+|-
+| Japanese
+| ハナダシティ ''Hanada City''
+| From 縹色 ''hanada-iro'' (light blue color of {{wp|Commelina communis|dayflower}})
+|-
+| English, Danish
+| Cerulean City
+| From ''{{wp|cerulean}}'' (shade of blue that ranges from light azure to intense sky blue)
+|-
+| German
+| Azuria City
+| From ''Azur'' (azure) and the placename suffix ''-ia''
+|-
+| European Spanish
+| Ciudad Celeste
+| rowspan="2" | From ''celeste'' (light blue)
+|-
+| rowspan="2" | Latin American Spanish
+| Ciudad Celeste<ref group=n>[[Pokémon GO]], [[Pokémon animated series]]{{specify|check tooltip: which animated episodes/seasons/series?}}</ref>
+|-
+| Ciudad Cerulean<ref group=n>Pokémon animated series ([[AG092]], seasons [[S08|8]]–[[S10|10]], [[Pokémon Chronicles]], [[The Mastermind of Mirage Pokémon]])</ref><br>Ciudad Azulona<ref group=n>Pokémon animated series ([[EP151]], [[EP214]], original dub of [[EP269]], [[EP272]])</ref>
+| From its English name<br>Mix-up with ''Ciudad Azulona'' (Spanish name of [[Celadon City]])
+|-
+| rowspan="2"| French
+| Azuria
+| From ''azur'' (azure)
+|-
+| Céruléan<ref group=n>Pokémon animated series (Canadian VHS tape)</ref>
+| From its English name with accents added or ''céruléen'' (cerulean)
+|-
+| Italian
+| Celestopoli
+| From ''celeste'' (light blue) and the placename suffix ''-{{wp|polis|poli}}'' (city)
+|-
+| Korean
+| 블루시티 ''Blue City''
+| From ''blue''
+|-
+| Chinese (Traditional)
+| 華藍市 ''Huálán Shì'' / ''Wàhlàahm Síh''
+| rowspan="2" | From 華 / 华 ''huá / wàh'' (flowery, splendor) and 藍 / 蓝 ''lán / làahm'' (blue)
+|-
+| Chinese (Simplified)
+| 华蓝市 ''Huálán Shì''
+|-
+| Chinese (Taiwan)
+| 花藍市 ''Huālán Shì''<ref group=n>Pokémon animated series ([[EP007]]-[[EP061]] Top Insight dub)</ref>
+| From 花 ''huā'' (flower) and 藍 ''lán'' (blue)
+|-
+| Chinese (Hong Kong)
+| 淺藍市 ''Chínlàahm Síh''<ref group=n>Pokémon animated series (Medialink dub, TVB dub), [[Pokémon Adventures]], [[Pokémon Zensho]]</ref>
+| From 淺藍 ''chínlàahm'' (light blue)
+|-
+| Chinese (mainland China)
+| 花蓝市 ''Huālán Shì''<ref group=n>Pokémon animated series ([[EP007]]-[[EP061]] Top Insight dub)</ref><br>花田市 ''Huātián Shì''<ref group=n>21st Century Publishing</ref>
+| From 花 ''huā'' (flower) and 蓝 ''lán'' (blue)<br>From the alternative reading of its Japanese name as 花田 ''Hanada'' (flower field)
+|-
+| rowspan="2" | Catalan
+| Ciutat Celeste<ref group="n">Pokémon animated series (2025 Central Catalan dub)</ref>
+| From ''celeste'' (celestial)
+|-
+|Ciutat Celest<ref group="n">Pokémon animated series (Valencian dub)</ref>
+|From ''celest'' (celestial)
+|-
+| Czech
+| Blankytné město
+| From ''blankyt'' (azure)
+|-
+| Hindi
+| सेरुलियन सिटी ''̣Seruliyan Siṭī''<ref group=n name=GO>Pokémon GO</ref>
+| Transcription of its English name
+|-
+| Hungarian
+| Azúrkékváros
+| From ''azúrkék'' (azure) and ''város'' (city)
+|-
+| Indonesian
+| Kota Cerulean<ref group=n name=GO /><br>Kota Serulin<ref group=n>[[Pokémon Pocket Monsters]]</ref>
+| From its English name
+|-
+| Norwegian
+| Cerulean by{{specify|check tooltip: which animated episodes/seasons/series?}}<br>Cerulean City<ref group=n>VHS and Pokémon TV descriptions</ref>
+| From its English name<br>Same as English nme
+|-
+| Polish
+| Azuria<ref group=n>Pokémon animated series (original Series, ''[[Pokémon the Series: Sun & Moon|Sun & Moon]]'' series onwards)</ref><br>Cerulean City<ref group=n>Pokémon animated series ([[M03]], [[DP034]])</ref>
+| From its German name<br>From its English name
+|-
+| Brazilian Portuguese
+| Cidade de Cerulean<ref group=n>Pokémon GO, Pokémon animated series, Pokémon Adventures, The Electric Tale of Pikachu</ref><br>Cidade Cerulean<ref group=n>Red and Blue manual, Yellow manual, [[The Official Pokémon Handbook]]</ref>
+| From its English name
+|-
+| European Portuguese
+| Cidade de Cerulean<br>Cerulean City<ref group=n>[[Pokémon: Let's Go, Pikachu! and Let's Go, Eevee!]] website</ref>
+| From its English name<br>Same as English name
+|-
+| Romanian
+| Orașul Cerulean
+| From its English name
+|-
+| Russian
+| Церулин-Сити ''Tserulin-Siti''<ref group=n name=GO /><br>Азурия ''Azuriya''<br>Лазурный город ''Lazurnyy gorod''<ref group=n>[[The Official Pokémon Handbook 2]]</ref>
+| Transcription of its English name<br>Transcription of its German and Polish name<br>From лазурный ''lazúrnyj'' (azure)
+|-
+| Swedish
+| Cerulean City<ref group=n>Pokémon animated series (''Sun & Moon'' series)</ref><br>Cerulean staden<ref group=n>Pokémon animated series (original series)</ref>
+| From its English name
+|-
+| Thai
+| ฮานาดะซิตี้ ''Hanada Siti''<ref group=n name=GO />
+| Transcription of its Japanese name
+|-
+| Turkish
+| Cerulean Şehri
+| From its English name
+|-
+| Ukrainian
+| Лазурне Місто ''Lasurne Misto''
+| From лазуровий ''lazúrovyj'' (azure)
+|-
+| Vietnamese
+| Thành phố Hanada
+| Transcription of its Japanese name
+|}
+{{-}}
+
+===Notes===
+{{reflist|group=n}}
+
+==Related articles==
+{{Kanto}}
+{{Project Cities and Towns notice}}
+
+[[Category:Kanto locations]]
+[[Category:Red, Blue and Yellow locations]]
+[[Category:Gold, Silver and Crystal locations]]
+[[Category:FireRed and LeafGreen locations]]
+[[Category:HeartGold and SoulSilver locations]]
+[[Category:Let's Go, Pikachu! and Let's Go, Eevee! locations]]
+[[Category:Pokémon Pinball locations]]
+[[Category:Cities]]
+
+[[de:Azuria City]]
+[[es:Ciudad Celeste]]
+[[fr:Azuria]]
+[[it:Celestopoli]]
+[[ja:ハナダシティ]]
+[[zh:华蓝市]]
