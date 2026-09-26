@@ -1526,7 +1526,20 @@ Adds the 251-species checklist and the walkthrough-ordered guide for Gold, Silve
     Store Machop) stay warnings: types come from the species list, and the tables are only a cross-check.
 
 **Stage D — species and Pokédex data:** Gen II base stats (SpA/SpD), catch rates, Dex entries for all three
-games, and learnsets and moves (Gen II move types).
+games, and learnsets and moves (Gen II move types). Done 2026-09-26:
+- [x] Infobox numbers accept a footnote marker (`evsp=1{{tt|*|…}}`), which had dropped Yanma, Slowking,
+  Misdreavus and Blissey.
+- [x] Learnsets: `learnsetLevelColumns: { GS, C }` (the Gen II header puts a number before its labels),
+  `learnsetTutorColumns: [['crystal']]`, and prior-evolution flags `GS`/`C`.
+- [x] Curse's `???` type is a new **move-only** `PokemonType` `unknown` (label `???`, Bulbapedia's `#68A090`),
+  existing in Generations II–IV. It is left out of `VersionGroupData.types`, so it never shows in type filters.
+- [x] `Learnset.egg` became `{ move, games? }[]` like `tutor`: the pages flag egg moves `GS` or `C` (Crystal
+  dropped and added some). `overrides.eggMovePatches` fixes three wrong flags.
+- [x] `overrides.moveData` gives authoritative data for moves the pages disagree on (SonicBoom's power, one
+  Supersonic row).
+- [x] Checked against pret (pokegold for Gold/Silver, pokecrystal): all 251 species match in base stats, catch
+  rate, base experience, growth rate, gender ratio, egg groups, level-up moves per game, TM/HM and tutor moves, and
+  egg moves per game (counted at the family's base). Every species has a Pokédex entry for all three games.
 
 **Stage E — items:** the walkthrough cross-check, triaged overrides, and fruit trees as notes. The first
 build writes `gsc/item-numbers.json` from 1.

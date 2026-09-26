@@ -44,9 +44,11 @@ export function typesInGeneration(
   return [...(entry?.types ?? currentTypes)];
 }
 
-const ADDED_IN: Partial<Record<PokemonType, number>> = { dark: 2, steel: 2, fairy: 6 };
+const ADDED_IN: Partial<Record<PokemonType, number>> = { dark: 2, steel: 2, fairy: 6, unknown: 2 };
+/** The move-only `???` type was dropped in Generation V. */
+const REMOVED_IN: Partial<Record<PokemonType, number>> = { unknown: 5 };
 
-/** The types that exist in a generation: 15 in Gen I, 17 in Gen II–V, 18 from Gen VI. */
+/** The types that exist in a generation: 15 in Gen I, 17 in Gen II–V, 18 from Gen VI (plus `???` in II–IV). */
 export function typeExistsIn(type: PokemonType, generation: number): boolean {
-  return generation >= (ADDED_IN[type] ?? 1);
+  return generation >= (ADDED_IN[type] ?? 1) && generation < (REMOVED_IN[type] ?? Infinity);
 }

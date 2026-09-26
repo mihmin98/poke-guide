@@ -17,6 +17,10 @@ import type { BuildIssue } from './assemble';
 
 const int = z.int();
 const positive = z.int().positive();
+/** Learnset rows limited to some games (`games` absent: every game). */
+const gameRows = z.array(
+  z.strictObject({ move: z.string().min(1), games: z.array(z.string()).optional() }),
+);
 const typeId = z.enum(POKEMON_TYPES.map((t) => t.id) as [string, ...string[]]);
 const gameRecord = <T extends z.ZodType>(value: T) => z.record(z.string(), value);
 const sourceShort = z.strictObject({ title: z.string().min(1), revid: positive });
@@ -213,10 +217,8 @@ export const pokedexDataSchema = z.strictObject({
           games: z.array(z.string()).optional(),
         }),
       ),
-      egg: z.array(z.string().min(1)).optional(),
-      tutor: z
-        .array(z.strictObject({ move: z.string().min(1), games: z.array(z.string()).optional() }))
-        .optional(),
+      egg: gameRows.optional(),
+      tutor: gameRows.optional(),
     }),
   ),
   entries: z.record(

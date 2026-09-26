@@ -152,7 +152,10 @@ function placesIn(data: VersionGroupData, dex: number, game: GameId): OtherGameP
           locationId: location.id,
           locationName: location.name,
           methodLabel: findMethod(encounter.method)?.label ?? encounter.method,
-          levels: slots.reduce<LevelSpec | null>((acc, slot) => unionLevels(acc, slot.levels), null),
+          levels: slots.reduce<LevelSpec | null>(
+            (acc, slot) => unionLevels(acc, slot.levels),
+            null,
+          ),
           rate: bestRate(slots),
           ...(times ? { times } : {}),
         });
@@ -242,7 +245,8 @@ export function buildLearnset(
 
   const byName = (a: Move, b: Move) => a.name.localeCompare(b.name);
   const egg = (learnset.egg ?? [])
-    .map((id) => moves.get(id))
+    .filter((row) => !row.games || row.games.includes(game))
+    .map((row) => moves.get(row.move))
     .filter((move): move is Move => move !== undefined)
     .sort(byName);
   const tutor = (learnset.tutor ?? [])
@@ -270,5 +274,7 @@ export function entriesFor(
   game: GameId,
 ): PokemonEntryText[] {
   const entries = pokedex?.entries[String(dex)] ?? [];
-  return [...entries].sort((a, b) => Number(b.games.includes(game)) - Number(a.games.includes(game)));
+  return [...entries].sort(
+    (a, b) => Number(b.games.includes(game)) - Number(a.games.includes(game)),
+  );
 }

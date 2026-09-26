@@ -39,7 +39,10 @@ describe('typesInGeneration', () => {
 
   it('counts the types of each generation', () => {
     const count = (gen: number) => POKEMON_TYPES.filter((t) => typeExistsIn(t.id, gen)).length;
-    expect([count(1), count(2), count(5), count(6)]).toEqual([15, 17, 17, 18]);
+    expect([count(1), count(2), count(5), count(6)]).toEqual([15, 18, 17, 18]);
+    // Gen II–IV's extra one is the move-only ??? type.
+    expect(typeExistsIn('unknown', 2)).toBe(true);
+    expect(typeExistsIn('unknown', 5)).toBe(false);
   });
 
   it('has no duplicate entries', () => {

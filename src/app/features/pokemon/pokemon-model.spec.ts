@@ -24,7 +24,9 @@ function data() {
     ],
     locations: [
       testLocation('route-1', 1, [testEncounter(1, ['red'])], ['red', 'blue'], { name: 'Route 1' }),
-      testLocation('route-2', 2, [testEncounter(1, ['blue'])], ['red', 'blue'], { name: 'Route 2' }),
+      testLocation('route-2', 2, [testEncounter(1, ['blue'])], ['red', 'blue'], {
+        name: 'Route 2',
+      }),
     ],
   });
 }
@@ -46,7 +48,7 @@ const POKEDEX: PokedexData = {
       ],
       machines: ['cut'],
       prevo: [{ move: 'tackle', fromDex: [2], games: ['blue'] }],
-      egg: ['growl'],
+      egg: [{ move: 'growl' }, { move: 'cut', games: ['red'] }],
       tutor: [{ move: 'cut', games: ['blue'] }, { move: 'tackle' }],
     },
   },
@@ -135,7 +137,11 @@ describe('Pokémon detail model (plan §13.7)', () => {
     // The prior-evolution row is flagged Blue only.
     expect(red.prevo).toEqual([]);
     expect(buildLearnset(POKEDEX, 1, 'blue', () => 'Beta').prevo[0]!.from).toEqual(['Beta']);
-    expect(red.egg.map((move) => move.name)).toEqual(['Growl']);
+    // Egg rows flagged for another game are left out too.
+    expect(red.egg.map((move) => move.name)).toEqual(['Cut', 'Growl']);
+    expect(buildLearnset(POKEDEX, 1, 'blue', () => '').egg.map((move) => move.name)).toEqual([
+      'Growl',
+    ]);
     // Tutor rows flagged for another game are left out.
     expect(red.tutor.map((move) => move.name)).toEqual(['Tackle']);
     expect(buildLearnset(POKEDEX, 2, 'red', () => '')).toEqual({

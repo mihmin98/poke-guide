@@ -161,8 +161,11 @@ export interface Learnset {
   machines: string[];
   /** Moves only previous evolutions learn by level; `games` absent means every game of the version group. */
   prevo: { move: string; fromDex: number[]; games?: GameId[] }[];
-  /** Egg moves (Gen II+); absent when the generation has no breeding or the species has none. */
-  egg?: string[];
+  /**
+   * Egg moves (Gen II+); absent when the generation has no breeding or the species has none. `games` absent means
+   * every game of the version group (Crystal dropped some Gold/Silver egg moves and added others).
+   */
+  egg?: { move: string; games?: GameId[] }[];
   /** Move tutor moves; `games` absent means every game of the version group (Crystal's tutor is Crystal only). */
   tutor?: { move: string; games?: GameId[] }[];
 }

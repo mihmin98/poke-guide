@@ -5,6 +5,7 @@ import { GSC_CATCH_RATE_NOTES } from './overrides/catch-rate-notes';
 import { GSC_ENCOUNTER_OVERRIDES } from './overrides/encounters';
 import { GSC_EVOLUTIONS } from './overrides/evolutions';
 import { GSC_ITEM_OVERRIDES } from './overrides/items';
+import { GSC_EGG_MOVE_PATCHES, GSC_MOVE_DATA } from './overrides/moves';
 import { GSC_UNLOCKS } from './overrides/unlocks';
 import { CRYSTAL_WALKTHROUGH, GS_WALKTHROUGH } from './walkthrough';
 
@@ -28,7 +29,10 @@ export const gscConfig: VersionGroupConfig = {
     crystal: 'Walkthrough:Pokémon Crystal',
   },
   speciesRange: [1, 251],
-  learnsetLevelColumns: {},
+  // `{{learnlist/levelh/2|…|GS|C}}` columns and `GS`/`C` flags on prior-evolution rows.
+  learnsetLevelColumns: { GS: ['gold', 'silver'], C: ['crystal'] },
+  // `{{learnlist/tutor2|…}}`: the Move Tutor is in Crystal only.
+  learnsetTutorColumns: [['crystal']],
   itemGameFlags: { G: ['gold'], S: ['silver'], C: ['crystal'] },
   itemAliases: {},
   // Both Generation II prize windows (Goldenrod's TM window is titled `[[TM]]s`, naming no game).
@@ -72,5 +76,7 @@ export const gscConfig: VersionGroupConfig = {
     encounters: GSC_ENCOUNTER_OVERRIDES,
     // The Day-Care couple live on Route 34; Ditto breeds with every species of an egg group but Ditto and No Eggs.
     breeding: { dayCareLocationIds: ['route-34'], dittoDex: 132 },
+    moveData: GSC_MOVE_DATA,
+    eggMovePatches: GSC_EGG_MOVE_PATCHES,
   },
 };

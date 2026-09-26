@@ -1,4 +1,4 @@
-// FRAMEWORK-FREE: the 18 Pokémon types. No Angular imports.
+// FRAMEWORK-FREE: the 18 Pokémon types, plus the move-only ??? type. No Angular imports.
 // Which types exist in a generation is data (VersionGroupData.types); this list only drives display.
 
 export type PokemonType =
@@ -19,13 +19,17 @@ export type PokemonType =
   | 'dragon'
   | 'dark'
   | 'steel'
-  | 'fairy';
+  | 'fairy'
+  /** `???`: Curse's type in Generations II–IV. Never a species type. */
+  | 'unknown';
 
 export interface PokemonTypeDefinition {
   id: PokemonType;
   label: string;
   /** Badge background. The text color is derived for WCAG AA by `npm run theme:games`. */
   color: string;
+  /** Only moves have it (`???`), so it is left out of species type lists and filters. */
+  moveOnly?: true;
 }
 
 export const POKEMON_TYPES: readonly PokemonTypeDefinition[] = [
@@ -47,4 +51,5 @@ export const POKEMON_TYPES: readonly PokemonTypeDefinition[] = [
   { id: 'dark', label: 'Dark', color: '#705746' },
   { id: 'steel', label: 'Steel', color: '#B7B7CE' },
   { id: 'fairy', label: 'Fairy', color: '#D685AD' },
+  { id: 'unknown', label: '???', color: '#68A090', moveOnly: true },
 ];

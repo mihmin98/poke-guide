@@ -28,6 +28,7 @@ import {
 import { walkEncounterSection, type WalkedRow, type WalkResult } from './encounter-walker';
 import { diffEvolutionBoxes, type EvolutionBoxPage } from './evolution-boxes';
 import {
+  applyEggMovePatches,
   collectMoves,
   learnsetPageTitle,
   parseLearnsetPage,
@@ -404,6 +405,7 @@ export function assembleVersionGroup(
         levelColumns: config.learnsetLevelColumns,
         eggMoves: group.features.breeding,
         ...(config.learnsetTutorColumns ? { tutorColumns: config.learnsetTutorColumns } : {}),
+        ...(config.overrides.moveData ? { moveData: config.overrides.moveData } : {}),
       });
       for (const message of parsed.issues) issue('error', message, learnsetTitle);
       parsedLearnsets.push([entry.dex, parsed]);
@@ -411,6 +413,12 @@ export function assembleVersionGroup(
   }
 
   // Moves and learnsets.
+  for (const message of applyEggMovePatches(
+    parsedLearnsets,
+    config.overrides.eggMovePatches ?? [],
+    config.games,
+  ))
+    issue('error', message);
   const collected = collectMoves(parsedLearnsets.map(([, parsed]) => parsed));
   for (const message of collected.issues) issue('error', message);
   const learnsets: Record<string, Learnset> = {};
@@ -419,7 +427,9 @@ export function assembleVersionGroup(
       levelUp: parsed.levelUp.map((row) => ({ move: slugify(row.move), levels: row.levels })),
       machines: [...new Set(parsed.machines.map((m) => slugify(m.move)))],
       prevo: parsed.prevo.map((row) => ({ ...row, move: slugify(row.move) })),
-      ...(parsed.egg.length ? { egg: parsed.egg.map((move) => slugify(move)) } : {}),
+      ...(parsed.egg.length
+        ? { egg: parsed.egg.map((row) => ({ ...row, move: slugify(row.move) })) }
+        : {}),
       ...(parsed.tutor.length
         ? { tutor: parsed.tutor.map((row) => ({ ...row, move: slugify(row.move) })) }
         : {}),
@@ -651,7 +661,9 @@ export function assembleVersionGroup(
     generation,
     games: [...config.games],
     builtAt: options.builtAt,
-    types: POKEMON_TYPES.map((t) => t.id).filter((type) => typeExistsIn(type, generation)),
+    types: POKEMON_TYPES.filter((t) => !t.moveOnly && typeExistsIn(t.id, generation)).map(
+      (t) => t.id,
+    ),
     species,
     evolutions,
     breeding: breeding

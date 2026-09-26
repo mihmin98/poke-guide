@@ -41,6 +41,11 @@ describe('parseInfobox', () => {
     expect(baseExpIn(info, 9)).toBe(112);
   });
 
+  it('ignores footnote markers on numbers (Yanma)', () => {
+    const text = page('pikachu').replace(/\|evsp=\d+/, '|evsp=1{{tt|*|2 in Generation III}}');
+    expect(parseInfobox(text).evYield).toEqual({ spe: 1 });
+  });
+
   it('uses the visible text of tooltip categories and the original form (Rattata)', () => {
     expect(parseInfobox(page('rattata')).category).toBe('Mouse');
   });

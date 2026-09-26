@@ -14,6 +14,7 @@ import type {
 } from '../../../src/app/core/domain/models';
 import type { CatchTemplateAdapter } from '../adapters/catch-template-adapter';
 import type { CatchRateNoteClassification } from '../core/catch-rate-history';
+import type { EggMovePatch, MoveDataOverride } from '../core/learnsets';
 import type { EncounterOverrides } from '../core/encounter-overrides';
 import type { ItemOverrides } from '../core/location-items';
 import type { TitleMatcher } from '../core/sections';
@@ -110,5 +111,9 @@ export interface VersionGroupConfig {
     encounters: EncounterOverrides;
     /** Day Care rules, for generations with breeding (plan §7.6, §9). */
     breeding?: BreedingRules;
+    /** Moves whose data the learnset pages disagree on (plan §7.12); these values are used everywhere. */
+    moveData?: readonly MoveDataOverride[];
+    /** Egg moves whose game flags on the learnset pages are wrong (plan §7.12). */
+    eggMovePatches?: readonly EggMovePatch[];
   };
 }

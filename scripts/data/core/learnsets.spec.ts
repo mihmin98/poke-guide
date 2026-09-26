@@ -1,10 +1,12 @@
 import { rbyConfig } from '../version-groups/rby/config';
 import { fixture } from '../testing/fixtures';
 import {
+  applyEggMovePatches,
   collectMoves,
   learnsetPageTitle,
   parseLearnsetPage,
   type LearnsetParseOptions,
+  type ParsedLearnset,
 } from './learnsets';
 
 const options: LearnsetParseOptions = {
@@ -156,6 +158,7 @@ describe('parseLearnsetPage', () => {
       '{{learnlist/breed2|{{MSP/3|158|Totodile}}|AncientPower|Rock|60|100|5|*|grid=6}}',
       '{{learnlist/breed2|{{MSP/3|143|Snorlax}}|Belly Drum|Normal|—|—|10|grid=6}}',
       '{{learnlist/breed2|{{MSP/3|111|Rhyhorn}}|AncientPower|Rock|60|100|5|‡|grid=6}}',
+      '{{learnlist/breed2|{{MSP/3|236|Tyrogue}}|Crunch|Dark|80|100|15|||C|grid=6}}',
       '{{learnlist/breedf|Charmander|fire|fire|2|1}}',
       '====By [[Move Tutor|tutoring]]====',
       '{{learnlist/tutorh|Charmander|fire|fire|2|1}}',
@@ -166,17 +169,98 @@ describe('parseLearnsetPage', () => {
     const gen2: LearnsetParseOptions = {
       generation: 2,
       games: ['gold', 'silver', 'crystal'],
-      levelColumns: {},
+      levelColumns: { GS: ['gold', 'silver'], C: ['crystal'] },
       eggMoves: true,
       tutorColumns: [['crystal']],
     };
     const result = parseLearnsetPage(text, gen2);
     expect(result.issues).toEqual([]);
-    expect(result.egg).toEqual(['AncientPower', 'Belly Drum']);
+    expect(result.egg).toEqual([
+      { move: 'AncientPower' },
+      { move: 'Belly Drum' },
+      { move: 'Crunch', games: ['crystal'] },
+    ]);
     expect(result.tutor).toEqual([{ move: 'Flamethrower', games: ['crystal'] }]);
     // Without the options (Gen I), both sections are ignored.
     const gen1 = parseLearnsetPage(text, { ...gen2, eggMoves: false, tutorColumns: undefined });
     expect([gen1.egg, gen1.tutor, gen1.issues]).toEqual([[], [], []]);
+  });
+});
+
+describe('parseLearnsetPage (Generation II)', () => {
+  const gen2: LearnsetParseOptions = {
+    generation: 2,
+    games: ['gold', 'silver', 'crystal'],
+    levelColumns: { GS: ['gold', 'silver'], C: ['crystal'] },
+  };
+
+  it('reads split Gold/Silver and Crystal level columns after the header number, and ??? moves', () => {
+    const result = parseLearnsetPage(
+      [
+        '====By [[Level|leveling up]]====',
+        '{{learnlist/levelh/2|Magneton|Electric|Steel|1|GS|C}}',
+        '{{learnlist/levelII|35|N/A|Swift|Normal|60|—|20||}}',
+        '{{learnlist/levelII|N/A|35|Tri Attack|Normal|80|100|10||}}',
+        '====By [[TM]]/[[HM]]====',
+        '{{learnlist/tm2|TM03|Curse|???|—|—|10}}',
+      ].join('\n'),
+      gen2,
+    );
+    expect(result.issues).toEqual([]);
+    expect(result.levelUp).toEqual([
+      { move: 'Swift', levels: { gold: 35, silver: 35 } },
+      { move: 'Tri Attack', levels: { crystal: 35 } },
+    ]);
+    expect(result.moves.find((m) => m.name === 'Curse')?.type).toBe('unknown');
+  });
+
+  it('uses authoritative move data instead of rows that disagree', () => {
+    const text = [
+      '====By [[Level|leveling up]]====',
+      '{{learnlist/levelh|Electrode|Electric|Electric|2|1}}',
+      '{{learnlist/level2|1|SonicBoom|Normal|—|90|20}}',
+      '{{learnlist/level2|9|SonicBoom|Normal|20|90|20}}',
+    ].join('\n');
+    expect(parseLearnsetPage(text, gen2).issues).toEqual([
+      'learnlist/level2 "SonicBoom": conflicting move data on the page',
+    ]);
+    const data = { name: 'SonicBoom', type: 'normal', power: null, accuracy: 90, pp: 20 } as const;
+    const fixed = parseLearnsetPage(text, { ...gen2, moveData: [{ data, reason: 'pret' }] });
+    expect(fixed.issues).toEqual([]);
+    expect(fixed.moves).toEqual([data]);
+  });
+});
+
+describe('applyEggMovePatches', () => {
+  it('sets the games of an egg move, drops it with none, and reports species without it', () => {
+    const learnset = (egg: ParsedLearnset['egg']): ParsedLearnset => ({
+      levelUp: [],
+      machines: [],
+      prevo: [],
+      egg,
+      tutor: [],
+      moves: [],
+      issues: [],
+    });
+    const learnsets = [
+      [1, learnset([{ move: 'Charm', games: ['crystal'] }, { move: 'Petal Dance' }])],
+      [194, learnset([{ move: 'Rain Dance', games: ['crystal'] }])],
+    ] as const;
+    const errors = applyEggMovePatches(
+      learnsets,
+      [
+        { dex: [1, 2], move: 'Charm', games: ['gold', 'silver'], reason: 'pret' },
+        { dex: [194], move: 'Rain Dance', games: [], reason: 'pret' },
+        { dex: [1], move: 'Petal Dance', games: ['gold', 'silver', 'crystal'], reason: 'pret' },
+      ],
+      ['gold', 'silver', 'crystal'],
+    );
+    expect(errors).toEqual(['Egg move patch: #2 has no egg move "Charm"']);
+    expect(learnsets[0][1].egg).toEqual([
+      { move: 'Charm', games: ['gold', 'silver'] },
+      { move: 'Petal Dance' },
+    ]);
+    expect(learnsets[1][1].egg).toEqual([]);
   });
 });
 

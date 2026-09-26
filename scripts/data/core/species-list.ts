@@ -19,8 +19,10 @@ export interface SpeciesListEntry {
 
 const TYPE_IDS = new Set<string>(POKEMON_TYPES.map((t) => t.id));
 
+/** `Fire` → `fire`; `???` (Curse, Generations II–IV) → `unknown`. */
 export function toPokemonType(raw: string): PokemonType {
-  const id = stripMarkup(raw).toLowerCase();
+  const text = stripMarkup(raw).toLowerCase();
+  const id = text === '???' ? 'unknown' : text;
   if (!TYPE_IDS.has(id)) throw new Error(`Unknown type "${raw}"`);
   return id as PokemonType;
 }

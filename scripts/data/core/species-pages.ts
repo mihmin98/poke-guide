@@ -70,10 +70,14 @@ function findInfobox(text: string): TemplateCall {
   return infobox;
 }
 
-/** Reads a numeric field, ignoring a trailing note such as `218 (214 in V-VI)` (Raichu's `expyield`). */
+/**
+ * Reads a numeric field, ignoring a trailing note such as `218 (214 in V-VI)` (Raichu's `expyield`) or a footnote
+ * marker, `1{{tt|*|2 in Generation III}}` (Yanma's `evsp`).
+ */
 function numberField(call: TemplateCall, key: string): number {
   const raw = stripMarkup(call.named[key] ?? '')
     .replace(/\s*\([^)]*\)$/, '')
+    .replace(/\*$/, '')
     .replace(/,/g, '');
   const value = Number(raw);
   if (raw === '' || !Number.isFinite(value))

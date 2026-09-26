@@ -31,16 +31,61 @@ export interface LearnsetParseOptions {
    * Absent: "By tutoring" is ignored (Gen I's is the Stadium tutor).
    */
   tutorColumns?: readonly (readonly GameId[])[];
+  /** Move data that learnset pages disagree on: used instead of the rows' values, so differing rows aren't issues. */
+  moveData?: readonly MoveDataOverride[];
 }
 
 export type MoveData = Omit<Move, 'id' | 'machine'>;
+
+/** Corrects the games of an egg move on learnset pages (`config.overrides.eggMovePatches`). */
+export interface EggMovePatch {
+  /** Species whose pages list the move (a whole evolution family). */
+  dex: number[];
+  /** Move name as spelled on the pages. */
+  move: string;
+  /** The games it really is an egg move in; empty drops the move. */
+  games: GameId[];
+  reason: string;
+}
+
+/**
+ * Applies egg move patches to parsed learnsets (in place). Returns an error for every species a patch names whose
+ * learnset lacks the move.
+ */
+export function applyEggMovePatches(
+  learnsets: readonly (readonly [number, ParsedLearnset])[],
+  patches: readonly EggMovePatch[],
+  allGames: readonly GameId[],
+): string[] {
+  const errors: string[] = [];
+  for (const patch of patches) {
+    for (const dex of patch.dex) {
+      const learnset = learnsets.find(([d]) => d === dex)?.[1];
+      const row = learnset?.egg.find((r) => r.move === patch.move);
+      if (!learnset || !row) {
+        errors.push(`Egg move patch: #${dex} has no egg move "${patch.move}"`);
+        continue;
+      }
+      if (patch.games.length === 0) learnset.egg = learnset.egg.filter((r) => r !== row);
+      else if (allGames.every((game) => patch.games.includes(game))) delete row.games;
+      else row.games = [...patch.games];
+    }
+  }
+  return errors;
+}
+
+/** Authoritative data for one move (`config.overrides.moveData`), with a source. */
+export interface MoveDataOverride {
+  data: MoveData;
+  reason: string;
+}
 
 export interface ParsedLearnset {
   levelUp: { move: string; levels: Partial<Record<GameId, number>> }[];
   machines: { machine: string; move: string }[];
   prevo: { move: string; fromDex: number[]; games?: GameId[] }[];
-  /** Egg moves, by name, without duplicates. */
-  egg: string[];
+  /** Egg moves, by name, without duplicates; `games` from the row's game flag (`GS`, `C`). */
+  egg: { move: string; games?: GameId[] }[];
   tutor: { move: string; games?: GameId[] }[];
   /** Every move seen on the page, by name. */
   moves: MoveData[];
@@ -104,6 +149,11 @@ export function parseLearnsetPage(wikitext: string, options: LearnsetParseOption
       call.positional.slice(index);
     const name = stripMarkup(rawName);
     const where = `${call.name} "${name}"`;
+    const override = options.moveData?.find((m) => m.data.name === name);
+    if (override) {
+      moves.set(name, { ...override.data });
+      return name;
+    }
     let type;
     try {
       type = toPokemonType(rawType);
@@ -150,7 +200,11 @@ export function parseLearnsetPage(wikitext: string, options: LearnsetParseOption
     if (section === 'level' && call.name === 'learnlist/levelh') {
       columns = [options.games];
     } else if (section === 'level' && call.name === `learnlist/levelh/${gen}`) {
-      const labels = call.positional.slice(3).map(stripMarkup).filter(Boolean);
+      // Gen II headers put a number before the labels (`levelh/2|Magneton|Electric|Steel|1|GS|C`).
+      const labels = call.positional
+        .slice(3)
+        .map(stripMarkup)
+        .filter((label) => label && !/^\d+$/.test(label));
       const mapped = labels.map((label) => options.levelColumns[label]);
       if (labels.length === 0 || mapped.some((games) => !games)) {
         result.issues.push(`${call.name}: unknown level columns "${labels.join('|')}"`);
@@ -208,9 +262,18 @@ export function parseLearnsetPage(wikitext: string, options: LearnsetParseOption
         result.prevo.push(games ? { move, fromDex, games: [...games] } : { move, fromDex });
       }
     } else if (section === 'egg' && call.name === `learnlist/breed${gen}`) {
-      // `breed2|<parents as MSP icons>|AncientPower|Rock|60|100|5|*`: a move can repeat with other parents.
+      // `breed2|<parents as MSP icons>|AncientPower|Rock|60|100|5|*||GS`: a move can repeat with other parents;
+      // parameter 9 is an optional game flag.
       const move = readMove(call, 1);
-      if (move && !result.egg.includes(move)) result.egg.push(move);
+      const flag = stripMarkup(call.positional[8] ?? '');
+      const games = flag ? options.levelColumns[flag] : undefined;
+      if (flag && !games) result.issues.push(`${call.name} "${move}": unknown game flag "${flag}"`);
+      else if (move) {
+        const known = result.egg.find((row) => row.move === move);
+        if (!known) result.egg.push(games ? { move, games: [...games] } : { move });
+        else if (JSON.stringify(known.games) !== JSON.stringify(games))
+          result.issues.push(`${call.name} "${move}": listed for different games`);
+      }
     } else if (section === 'tutor' && call.name === `learnlist/tutor${gen}`) {
       // `tutor2|Flamethrower|Fire|95|100|15||'''|yes`: the move, two formatting markers, then one flag per column.
       const move = readMove(call, 0);
@@ -219,7 +282,8 @@ export function parseLearnsetPage(wikitext: string, options: LearnsetParseOption
         /^no$/i.test(stripMarkup(call.positional[7 + i] ?? 'yes')) ? [] : column,
       );
       const all = options.games.every((game) => games.includes(game));
-      if (move && games.length) result.tutor.push(all ? { move } : { move, games: [...new Set(games)] });
+      if (move && games.length)
+        result.tutor.push(all ? { move } : { move, games: [...new Set(games)] });
     } else {
       result.issues.push(`Unexpected template {{${call.name}}} in a "${section}" section`);
     }
