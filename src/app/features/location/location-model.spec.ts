@@ -65,7 +65,15 @@ function data() {
           }),
         ],
         ['red'],
-        { name: 'Route 2', items: [ITEM, { ...ITEM, itemId: 'potion', games: ['yellow'] }] },
+        {
+          name: 'Route 2',
+          items: [ITEM, { ...ITEM, itemId: 'potion', games: ['yellow'] }],
+          itemNotes: [
+            'Daily tree: Berry',
+            { text: 'Phone gift: Nugget', games: ['yellow'] },
+            { text: 'Phone gift: Pink Bow', games: ['red', 'blue'] },
+          ],
+        },
       ),
       testLocation('route-3', 3, [testEncounter(19, ['red'])], ['red']),
     ],
@@ -119,6 +127,10 @@ describe('location model (plan §13.5)', () => {
     const view = build('route-2')!;
     expect(view.items.map((i) => i.itemId)).toEqual(['rare-candy']);
     expect(view.dexes.sort((a, b) => a - b)).toEqual([16, 19, 122]);
+  });
+
+  it('keeps the item notes for every game and for this one', () => {
+    expect(build('route-2')!.itemNotes).toEqual(['Daily tree: Berry', 'Phone gift: Pink Bow']);
   });
 
   it('resolves the catch rate the capture actually uses', () => {
@@ -213,7 +225,11 @@ describe('slot lines (time of day, plan §16 Phase 10)', () => {
 
   it('leaves a time empty when the species does not appear then', () => {
     const [line] = slotLines([timed('night', 55)]);
-    expect(line?.byTime).toEqual({ morning: null, day: null, night: { kind: 'percent', value: 55 } });
+    expect(line?.byTime).toEqual({
+      morning: null,
+      day: null,
+      night: { kind: 'percent', value: 55 },
+    });
   });
 
   it('collapses equal rates into one all-day rate', () => {

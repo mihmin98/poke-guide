@@ -47,6 +47,8 @@ const GAME_HEADING = new RegExp(
   'i',
 );
 const FAKE_HEADING = /^fake items?$/i;
+/** `===Generation II===` inside an `Items` section (Mt. Silver Cave): the flags already say which games. */
+const GENERATION_HEADING = /^Generation [IVX]+$/;
 
 const REQUIRES = /\(requires\s+((?:[^()]|\([^()]*\))*)\)/i;
 const HIDDEN = /(?:'')?\(hidden\b[^)]*\)(?:'')?/i;
@@ -60,19 +62,45 @@ const INLINE: Record<string, (call: TemplateCall) => string> = {
   tm: (c) => `TM${c.positional[0] ?? ''} ${c.positional[1] ?? ''}`,
   hm: (c) => `HM${c.positional[0] ?? ''} ${c.positional[1] ?? ''}`,
   tc: (c) => c.positional[1] ?? c.positional[0] ?? '',
-  dl: (c) => c.positional[1] ?? c.positional[0] ?? '',
+  // `{{DL|page|section|text}}`: the text when given, otherwise the section.
+  dl: (c) => c.positional[2] ?? c.positional[1] ?? c.positional[0] ?? '',
   badge: (c) => `${c.positional[0] ?? ''} Badge`,
   '2v2': (c) => c.positional.join(' and '),
   daisy: () => 'Daisy',
-  player: () => 'the player',
+  // Pages write "the {{player}}".
+  player: () => 'player',
 };
 
-/** Drops tooltips and `{{sup/…}}` game notes, keeping the rest as wikitext. */
+const DAYS: Readonly<Record<string, string>> = {
+  Mo: 'Mondays',
+  Tu: 'Tuesdays',
+  We: 'Wednesdays',
+  Th: 'Thursdays',
+  Fr: 'Fridays',
+  Sa: 'Saturdays',
+  Su: 'Sundays',
+};
+/** Wraps a `{{dotw|Tu}}` day while templates are replaced; runs of days are joined afterwards. */
+const DAY_MARK = '\u0000';
+const DAY_RUN = new RegExp(`(?:${DAY_MARK}[A-Za-z]*${DAY_MARK})+`, 'g');
+
+/**
+ * Drops tooltips, footnote markers (`{{tt|*|…}}`) and `{{sup/…}}` game notes, and writes days of the week
+ * (`{{dotw|Tu}}{{dotw|Th}}`) as "(Tuesdays, Thursdays)", keeping the rest as wikitext.
+ */
 function clean(wikitext: string): string {
-  const { text } = splitTooltips(wikitext);
-  return replaceTemplates(text, (call) =>
-    call.name.startsWith('sup/') ? '' : text.slice(call.start, call.end),
+  const unmarked = replaceTemplates(wikitext, (call) =>
+    call.name === 'tt' && call.positional[0]?.trim() === '*'
+      ? ''
+      : wikitext.slice(call.start, call.end),
   );
+  const { text } = splitTooltips(unmarked);
+  return replaceTemplates(text, (call) => {
+    if (call.name.startsWith('sup/')) return '';
+    if (call.name === 'dotw')
+      return `${DAY_MARK}${DAYS[call.positional[0] ?? ''] ?? ''}${DAY_MARK}`;
+    return text.slice(call.start, call.end);
+  }).replace(DAY_RUN, (run) => ` (${run.split(DAY_MARK).filter(Boolean).join(', ')})`);
 }
 
 function plain(wikitext: string): string {
@@ -87,20 +115,23 @@ function itemName(
   index: number,
   count: number,
   aliases: ItemWalkOptions['aliases'],
-): { name: string; quantity: number } | null {
+): { name: string; quantity: number; explicit: boolean } | null {
   const display = count === 1 ? call.named['display'] : undefined;
   let quantity = 1;
+  let explicit = false;
   let name: string;
   if (display) {
     name = plain(display);
     const times = /\s*×\s*(\d+)$/.exec(name);
     if (times) {
       quantity = Number(times[1]);
+      explicit = true;
       name = name.slice(0, times.index);
     }
     const coins = /^(\d+) Coins?$/i.exec(name);
     if (coins) {
       quantity = Number(coins[1]);
+      explicit = true;
       name = 'Coins';
     }
   } else {
@@ -110,7 +141,7 @@ function itemName(
     name = name.replace(SPRITE_SUFFIX, '');
   }
   name = name.trim();
-  return { name: aliases[name] ?? name, quantity };
+  return { name: aliases[name] ?? name, quantity, explicit };
 }
 
 function obtainMethod(where: string, hidden: boolean): ItemObtainMethod {
@@ -118,7 +149,8 @@ function obtainMethod(where: string, hidden: boolean): ItemObtainMethod {
   if (hidden) return 'pickup';
   if (/\bdropped by\b/i.test(where)) return 'drop';
   if (/\breward\b|\b(?:after|for) defeating\b/i.test(where)) return 'reward';
-  if (/\b(?:received|obtained|gift) from\b|(?:^|[,;]\s*)from\b/i.test(where)) return 'gift';
+  if (/\b(?:received|obtained|gift) from\b|(?:^|[,;]\s*)from\b|^held by\b/i.test(where))
+    return 'gift';
   return 'pickup';
 }
 
@@ -174,7 +206,7 @@ function walkRows(
     if ('heading' in event) {
       const title = headingText(event.heading);
       fake = FAKE_HEADING.test(title);
-      if (!fake && !GAME_HEADING.test(title)) heading = title;
+      if (!fake && !GAME_HEADING.test(title) && !GENERATION_HEADING.test(title)) heading = title;
       continue;
     }
     const call = event.template;
@@ -217,7 +249,8 @@ function walkRows(
         result.notes.push(`Fake item balls: ${named.name} ×${named.quantity}`);
         continue;
       }
-      if (spots.length > 1 && named.quantity !== spots.length) {
+      // Without a stated `×N`, each spot holds one.
+      if (spots.length > 1 && named.explicit && named.quantity !== spots.length) {
         issue(
           'warning',
           `Quantity ×${named.quantity} doesn't match ${spots.length} spots: ${source}`,

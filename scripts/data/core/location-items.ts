@@ -22,7 +22,8 @@ export interface ItemAddition {
 
 export interface ItemRequirementOverride {
   locationId: string;
-  itemId: string;
+  /** Absent: every item of `subArea` (a chamber only reached with Surf). */
+  itemId?: string;
   /** Narrows the match when the item appears more than once. */
   subArea?: string;
   /** Added to the requirements the page states. */
@@ -43,16 +44,31 @@ export interface ItemPatch {
   locationId: string;
   itemId: string;
   subArea?: string;
-  set: Partial<Pick<LocationItem, 'name' | 'quantity' | 'games' | 'where' | 'obtain'>>;
+  set: Partial<Pick<LocationItem, 'name' | 'quantity' | 'games' | 'where' | 'obtain' | 'fromPart'>>;
   /** Page that shows the correct value (or a source link in `reason`); its revid is recorded. */
   sourcePage: string;
   reason: string;
 }
 
-/** A walkthrough quantity difference that is expected (items left out on purpose). */
+/**
+ * Drops exactly one parsed item: one another location page also lists, or one the international games don't have
+ * (Virtual Console or Japanese-only events).
+ */
+export interface ItemRemoval {
+  locationId: string;
+  itemId: string;
+  subArea?: string;
+  /** Page that shows why (the other page listing the item, or the event's page); its revid is recorded. */
+  sourcePage: string;
+  reason: string;
+}
+
+/** A walkthrough difference that is expected (items left out on purpose, or a walkthrough error). */
 export interface WalkthroughAccepted {
   itemId: string;
   games: readonly GameId[];
+  /** What is accepted: the total quantity (default), or the requirements the walkthrough states. */
+  difference?: 'quantity' | 'requirements';
   reason: string;
 }
 
@@ -70,6 +86,7 @@ export interface ItemOverrides {
   requires: readonly ItemRequirementOverride[];
   choiceGroups: readonly ItemChoiceGroup[];
   patch?: readonly ItemPatch[];
+  remove?: readonly ItemRemoval[];
   walkthroughAccepted?: readonly WalkthroughAccepted[];
   walkthroughGames?: readonly WalkthroughGamesFix[];
   /** Item numbers whose item is gone from the data for good (plan §7.13); never handed out again. */
@@ -94,7 +111,7 @@ export interface PageMessage {
 
 const requirementIds = (item: LocationItem) => new Set((item.requires ?? []).flat());
 
-/** Applies additions, unstated requirements and choice groups in place. Returns errors; every entry must match. */
+/** Applies removals, patches, additions, unstated requirements and choice groups in place. Returns errors; every entry must match. */
 export function applyItemOverrides(
   locations: GameLocation[],
   overrides: ItemOverrides,
@@ -107,6 +124,24 @@ export function applyItemOverrides(
     if (!location) errors.push(`Item override for ${what} names unknown location "${id}"`);
     return location;
   };
+
+  for (const removal of overrides.remove ?? []) {
+    const location = locationOf(removal.locationId, removal.itemId);
+    if (!location) continue;
+    const matches = location.items.filter(
+      (i) =>
+        i.itemId === removal.itemId &&
+        (removal.subArea === undefined || i.subArea === removal.subArea),
+    );
+    if (matches.length !== 1) {
+      errors.push(
+        `Item removal for ${removal.itemId} in ${location.id} matches ${matches.length} items, expected 1`,
+      );
+      continue;
+    }
+    if (!sourceOf(removal.sourcePage)) continue;
+    location.items.splice(location.items.indexOf(matches[0]!), 1);
+  }
 
   for (const patch of overrides.patch ?? []) {
     const location = locationOf(patch.locationId, patch.itemId);
@@ -149,29 +184,38 @@ export function applyItemOverrides(
   }
 
   for (const override of overrides.requires) {
-    const location = locationOf(override.locationId, override.itemId);
+    const what = override.itemId ?? `sub-area "${override.subArea ?? ''}"`;
+    const location = locationOf(override.locationId, what);
     if (!location) continue;
+    if (override.itemId === undefined && override.subArea === undefined) {
+      errors.push(`Requirement override in ${location.id} names neither an item nor a sub-area`);
+      continue;
+    }
     const matches = location.items.filter(
       (i) =>
-        i.itemId === override.itemId &&
+        (override.itemId === undefined || i.itemId === override.itemId) &&
         (override.subArea === undefined || i.subArea === override.subArea),
     );
-    if (matches.length !== 1) {
+    if (override.itemId !== undefined ? matches.length !== 1 : matches.length === 0) {
       errors.push(
-        `Requirement override for ${override.itemId} in ${location.id} matches ${matches.length} items, expected 1`,
+        `Requirement override for ${what} in ${location.id} matches ${matches.length} items, expected ${override.itemId !== undefined ? '1' : 'some'}`,
       );
       continue;
     }
-    const item = matches[0]!;
-    const stated = requirementIds(item);
-    if (override.requires.flat().every((id) => stated.has(id))) {
+    const stated = matches.filter((item) => {
+      const ids = requirementIds(item);
+      return override.requires.flat().every((id) => ids.has(id));
+    });
+    if (stated.length > 0) {
       errors.push(
-        `Requirement override for ${override.itemId} in ${location.id} is already stated by the page`,
+        `Requirement override for ${what} in ${location.id} is already stated by the page` +
+          (override.itemId === undefined ? ` (${stated.map((i) => i.itemId).join(', ')})` : ''),
       );
       continue;
     }
     if (!sourceOf(override.sourcePage)) continue;
-    item.requires = [...(item.requires ?? []), ...override.requires.map((group) => [...group])];
+    for (const item of matches)
+      item.requires = [...(item.requires ?? []), ...override.requires.map((group) => [...group])];
   }
 
   for (const group of overrides.choiceGroups) {
@@ -264,11 +308,18 @@ export function diffWalkthroughItems(
     }
     const listed = new Map<string, Tally>();
     const pages = new Map<number, string>();
+    // A revisited area's rows are repeated in each part that goes back there (Gold/Silver: Dark Cave in Parts 3,
+    // 7 and 13), so a row with the same item and text counts once.
+    const counted = new Set<string>();
     for (const entry of walkthrough) {
       if (entry.game !== game) continue;
       pages.set(entry.part, entry.page);
-      for (const item of entry.items)
-        if (item.games.includes(game)) tally(listed, entry.part, item);
+      for (const item of entry.items) {
+        const key = JSON.stringify([item.itemId, item.quantity, item.hidden ?? false, item.where]);
+        if (!item.games.includes(game) || counted.has(key)) continue;
+        counted.add(key);
+        tally(listed, entry.part, item);
+      }
     }
 
     const firstPart = (itemId: string) =>
@@ -282,14 +333,20 @@ export function diffWalkthroughItems(
       const inData = located.get(key);
       const inWalkthrough = listed.get(key);
       const name = (inData ?? inWalkthrough)!.name;
-      const isAccepted = accepted.some((a) => a.itemId === key && a.games.includes(game));
-      if (!isAccepted && (inData?.quantity ?? 0) !== (inWalkthrough?.quantity ?? 0)) {
+      const isAccepted = (difference: 'quantity' | 'requirements') =>
+        accepted.some(
+          (a) =>
+            a.itemId === key &&
+            a.games.includes(game) &&
+            (a.difference ?? 'quantity') === difference,
+        );
+      if (!isAccepted('quantity') && (inData?.quantity ?? 0) !== (inWalkthrough?.quantity ?? 0)) {
         push(
           page,
           `${name}: ×${inWalkthrough?.quantity ?? 0} in the walkthrough, ×${inData?.quantity ?? 0} in the location data`,
         );
       }
-      for (const item of inWalkthrough?.items ?? []) {
+      for (const item of isAccepted('requirements') ? [] : (inWalkthrough?.items ?? [])) {
         const ids = [...requirementIds(item)];
         if (ids.length === 0) continue;
         const covered = (inData?.items ?? []).some((l) =>

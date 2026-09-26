@@ -157,6 +157,66 @@ describe('applyItemOverrides', () => {
     expect(locations[0]!.items[0]).toMatchObject({ itemId: 'exp-all', name: 'Exp. All' });
   });
 
+  it('adds requirements to every item of a sub-area', () => {
+    const locations = [
+      location('mt-mortar', [
+        item('Elixer', { subArea: '2F' }),
+        item('Dragon Scale', { subArea: '2F', requires: [['strength']] }),
+        item('Ether', { subArea: '1F' }),
+      ]),
+    ];
+    const rule = { locationId: 'mt-mortar', sourcePage: 'Mt. Mortar', reason: 'area' };
+    const errors = applyItemOverrides(
+      locations,
+      overrides({
+        requires: [
+          { ...rule, subArea: '2F', requires: [['surf'], ['waterfall']] },
+          { ...rule, subArea: 'B9F', requires: [['surf']] },
+          { ...rule, requires: [['surf']] },
+        ],
+      }),
+      sourceOf,
+    );
+    expect(errors).toEqual([
+      'Requirement override for sub-area "B9F" in mt-mortar matches 0 items, expected some',
+      'Requirement override in mt-mortar names neither an item nor a sub-area',
+    ]);
+    expect(locations[0]!.items.map((i) => i.requires ?? null)).toEqual([
+      [['surf'], ['waterfall']],
+      [['strength'], ['surf'], ['waterfall']],
+      null,
+    ]);
+  });
+
+  it('removes exactly one item, and patches when it becomes available', () => {
+    const locations = [
+      location('radio-tower', [
+        item('GS Ball'),
+        item('Pink Bow', { subArea: '4F' }),
+        item('Potion', { subArea: '1F' }),
+        item('Potion', { subArea: '2F' }),
+      ]),
+    ];
+    const rule = { locationId: 'radio-tower', sourcePage: 'Walkthrough', reason: 'fix' };
+    const errors = applyItemOverrides(
+      locations,
+      overrides({
+        remove: [
+          { ...rule, itemId: 'gs-ball' },
+          { ...rule, itemId: 'potion' },
+        ],
+        patch: [{ ...rule, itemId: 'pink-bow', set: { fromPart: { red: 12 } } }],
+      }),
+      sourceOf,
+    );
+    expect(errors).toEqual(['Item removal for potion in radio-tower matches 2 items, expected 1']);
+    expect(locations[0]!.items.map((i) => [i.itemId, i.fromPart ?? null])).toEqual([
+      ['pink-bow', { red: 12 }],
+      ['potion', null],
+      ['potion', null],
+    ]);
+  });
+
   it('marks choice groups', () => {
     const locations = [
       location('mt-moon', [
@@ -235,5 +295,28 @@ describe('diffWalkthroughItems', () => {
     expect(
       diffWalkthroughItems(locations, walkthrough, accepted).map((m) => m.message),
     ).not.toContain('Potion: ×1 in the walkthrough, ×2 in the location data');
+  });
+
+  it('counts a row repeated in a later part once, and accepts stated requirement differences', () => {
+    const locations = [location('dark-cave', [item('Full Heal'), item('Revive')], 3)];
+    const repeated = [item('Full Heal'), item('Revive', { requires: [['surf']] })];
+    const walkthrough = [3, 7, 13].map((part) => ({
+      page: `GS/Part ${part}`,
+      part,
+      game: 'red' as const,
+      items: repeated,
+    }));
+    expect(diffWalkthroughItems(locations, walkthrough)).toEqual([
+      { page: 'GS/Part 3', message: 'Revive: the walkthrough says it requires surf ("Somewhere")' },
+    ]);
+    const accepted = [
+      {
+        itemId: 'revive',
+        games: ['red'] as const,
+        difference: 'requirements' as const,
+        reason: 'walkthrough error',
+      },
+    ];
+    expect(diffWalkthroughItems(locations, walkthrough, accepted)).toEqual([]);
   });
 });

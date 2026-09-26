@@ -136,7 +136,8 @@ export const GSC_LOCATIONS: LocationConfig[] = [
   johto('ice-path', 'Ice Path', 'Ice Path', 'cave', 12),
   // Part 13
   johto('blackthorn-city', 'Blackthorn City', 'Blackthorn City', 'town', 13),
-  johto('dragons-den', "Dragon's Den", "Dragon's Den", 'cave', 13),
+  // "The entrance is located behind the Gym, across a small pond" (Blackthorn City).
+  johto('dragons-den', "Dragon's Den", "Dragon's Den", 'cave', 13, { requires: ['surf'] }),
   johtoRoute(45, 13),
   // Part 14 (Routes 26 and 27 and Tohjo Falls are in Kanto, reached from Johto)
   kantoRoute(27, 14),

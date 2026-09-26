@@ -71,6 +71,8 @@ export interface LocationView {
   part: number;
   subAreas: LocationSubArea[];
   items: LocationItem[];
+  /** Item notes that apply to this game. */
+  itemNotes: string[];
   previous: { id: string; name: string } | undefined;
   next: { id: string; name: string } | undefined;
   /** Every species that can be obtained here, for "mark all as caught". */
@@ -133,7 +135,10 @@ export function slotLines(slots: readonly EncounterSlot[]): SlotLine[] {
       const time = timeOf(slot);
       for (const t of time ? [time] : TIMES_OF_DAY) byTime[t] = slot.rate;
     }
-    const levels = group.reduce<LevelSpec | null>((acc, slot) => unionLevels(acc, slot.levels), null);
+    const levels = group.reduce<LevelSpec | null>(
+      (acc, slot) => unionLevels(acc, slot.levels),
+      null,
+    );
     const line = { ...lineOf(first, others), levels };
     const rates = TIMES_OF_DAY.map((t) => byTime[t]);
     if (rates.every((rate) => rate && sameRate(rate, rates[0]!))) {
@@ -243,6 +248,9 @@ export function buildLocationView(input: LocationInput): LocationView | undefine
     part: location.placement[game]?.part ?? 0,
     subAreas,
     items: location.items.filter((item) => item.games.includes(game)),
+    itemNotes: location.itemNotes.flatMap((note) =>
+      typeof note === 'string' ? [note] : note.games.includes(game) ? [note.text] : [],
+    ),
     previous: neighbour(order - 1),
     next: neighbour(order + 1),
     dexes,

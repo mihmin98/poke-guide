@@ -5,6 +5,7 @@
 import type {
   GameId,
   GameLocation,
+  ItemNote,
   LocationItem,
   Learnset,
   PokedexData,
@@ -15,7 +16,7 @@ import type {
 } from '../../../src/app/core/domain/models';
 import { POKEMON_TYPES } from '../../../src/app/core/games/pokemon-types';
 import { GAMES, getVersionGroup } from '../../../src/app/core/games/registry';
-import type { LocationConfig, VersionGroupConfig } from '../version-groups/types';
+import type { ItemNoteRule, LocationConfig, VersionGroupConfig } from '../version-groups/types';
 import type { CachedPage } from './cache';
 import { CATCH_RATE_LIST_PAGE, parseCatchRateList, resolveCatchRates } from './catch-rate-history';
 import {
@@ -210,23 +211,37 @@ export function diffLocationCategory(
 const byTitle = (sources: Map<string, SourceRef>) =>
   [...sources.values()].sort((a, b) => a.title.localeCompare(b.title));
 
-/** Moves item rows matched by `config.itemNoteRules` (recurring Berry trees) into the location's notes. */
+const noteRuleFor = (item: LocationItem, rules: readonly ItemNoteRule[]) =>
+  rules.find((r) => r.match.test(item.name) || r.match.test(item.where));
+
+/**
+ * Moves item rows matched by `config.itemNoteRules` (recurring Berry trees, phone-call gifts) into the location's
+ * notes. A note that doesn't cover every game of the group names its games; rows with the same note text share it.
+ */
 export function splitItemNotes(
   items: readonly LocationItem[],
   notes: readonly string[],
-  config: Pick<VersionGroupConfig, 'itemNoteRules'>,
+  config: Pick<VersionGroupConfig, 'itemNoteRules' | 'games'>,
 ): Pick<GameLocation, 'items' | 'itemNotes'> {
   const rules = config.itemNoteRules ?? [];
   const kept: LocationItem[] = [];
-  const itemNotes = [...notes];
+  const noted = new Map<string, Set<GameId>>();
   for (const item of items) {
-    const rule = rules.find((r) => r.match.test(item.name) || r.match.test(item.where));
+    const rule = noteRuleFor(item, rules);
     if (!rule) {
       kept.push(item);
       continue;
     }
-    const note = rule.note(item.name, item.where);
-    if (!itemNotes.includes(note)) itemNotes.push(note);
+    const text = rule.note(item);
+    const games = noted.get(text) ?? new Set<GameId>();
+    for (const game of item.games) games.add(game);
+    noted.set(text, games);
+  }
+  const itemNotes: ItemNote[] = [...notes];
+  for (const [text, games] of noted) {
+    if (itemNotes.includes(text)) continue;
+    const covered = config.games.filter((game) => games.has(game));
+    itemNotes.push(covered.length === config.games.length ? text : { text, games: covered });
   }
   return { items: kept, itemNotes };
 }
@@ -633,7 +648,9 @@ export function assembleVersionGroup(
     const rows = walkthroughRows.get(title);
     if (!rows) continue;
     const fix = config.overrides.items.walkthroughGames?.find((f) => f.page === title);
-    const items = fix ? rows.items.map((i) => ({ ...i, games: [...fix.games] })) : rows.items;
+    const items = (
+      fix ? rows.items.map((i) => ({ ...i, games: [...fix.games] })) : rows.items
+    ).filter((i) => !noteRuleFor(i, config.itemNoteRules ?? []));
     walkthroughItems.push({ page: title, part, game, items });
   }
   for (const fix of config.overrides.items.walkthroughGames ?? []) {

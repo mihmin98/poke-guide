@@ -1,5 +1,6 @@
+import type { LocationItem } from '../../../../src/app/core/domain/models';
 import { entry2Adapter } from '../../adapters/entry2';
-import type { VersionGroupConfig } from '../types';
+import type { ItemNoteRule, VersionGroupConfig } from '../types';
 import { GSC_IGNORED_CATEGORY_PAGES, GSC_LOCATIONS } from './locations';
 import { GSC_CATCH_RATE_NOTES } from './overrides/catch-rate-notes';
 import { GSC_ENCOUNTER_OVERRIDES } from './overrides/encounters';
@@ -9,9 +10,40 @@ import { GSC_EGG_MOVE_PATCHES, GSC_MOVE_DATA } from './overrides/moves';
 import { GSC_UNLOCKS } from './overrides/unlocks';
 import { CRYSTAL_WALKTHROUGH, GS_WALKTHROUGH } from './walkthrough';
 
+const noteRule = (
+  match: RegExp,
+  label: string,
+  where: (item: LocationItem) => string = (item) => item.where,
+): ItemNoteRule => ({
+  match,
+  note: (item) => `${label}: ${item.name} — ${where(item)}`,
+});
+
 /**
- * Gold, Silver and Crystal (plan §16 Phase 10). The learnset columns and the item cross-check still arrive with
- * Stages D and E; until then the gsc build reports errors and writes nothing.
+ * Recurring item sources are location notes, not tickable items (plan §16 Phase 10): they give the item again and
+ * again, like Poké Mart stock.
+ */
+const GSC_ITEM_NOTE_RULES: ItemNoteRule[] = [
+  // Berry and Apricorn trees; walkthroughs write "(daily; requires Surf, Cut)".
+  noteRule(/\(daily\b/, 'Daily tree', (item) => item.where.replace(/\s*\(daily\)/, '')),
+  // Crystal's phone-call gifts, given again at random; Bug Catcher Wade's rows sit under his name.
+  noteRule(/^Sometimes given\b/, 'Phone gift', (item) =>
+    item.subArea && !item.where.includes(item.subArea.replace(/^\S+ /, ''))
+      ? item.where.replace(/^Sometimes given( out)?/, `Sometimes given$1 by ${item.subArea}`)
+      : item.where,
+  ),
+  noteRule(
+    /\bgiven out sometimes\b|Black ?belt Kenji,? after calling him|\(occasionally\)$/i,
+    'Phone gift',
+  ),
+  // The Radio Tower's weekly ID lottery.
+  noteRule(/^Pokémon ID matched\b/, 'Lottery prize'),
+  // Moomoo Milk at the farm and Mahogany Town's RageCandyBar salesman.
+  noteRule(/^(?:Buyable|Sold)\b|\bmay be purchased\b/i, 'For sale'),
+];
+
+/**
+ * Gold, Silver and Crystal (plan §16 Phase 10).
  */
 export const gscConfig: VersionGroupConfig = {
   id: 'gsc',
@@ -34,7 +66,16 @@ export const gscConfig: VersionGroupConfig = {
   // `{{learnlist/tutor2|…}}`: the Move Tutor is in Crystal only.
   learnsetTutorColumns: [['crystal']],
   itemGameFlags: { G: ['gold'], S: ['silver'], C: ['crystal'] },
-  itemAliases: {},
+  // Walkthroughs use later spellings; the location pages use the Generation II names.
+  itemAliases: {
+    'Black Belt': 'BlackBelt',
+    Elixir: 'Elixer',
+    'Max Elixir': 'Max Elixer',
+    'X Defense': 'X Defend',
+    Map: 'Map Card',
+    Radio: 'Radio Card',
+  },
+  itemNoteRules: GSC_ITEM_NOTE_RULES,
   // Both Generation II prize windows (Goldenrod's TM window is titled `[[TM]]s`, naming no game).
   prizeShops: [
     {

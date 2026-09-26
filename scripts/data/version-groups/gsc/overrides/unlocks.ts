@@ -7,6 +7,8 @@
 import type { GameId, Unlock } from '../../../../../src/app/core/domain/models';
 
 const SHARED: readonly Unlock[] = [
+  // Part 3: HM05 from the Elder atop Sprout Tower, usable with the Zephyr Badge from the same part.
+  { id: 'flash', label: 'Flash', kind: 'move', locationId: 'sprout-tower', part: 3 },
   // Part 4: the Fishing Guru in the Route 32 Pokémon Center.
   { id: 'old-rod', label: 'Old Rod', kind: 'key-item', locationId: 'route-32', part: 4 },
   // Part 5: TM02 from the man in Ilex Forest; HM01 from the Charcoal Kiln's owner, usable with the Hive Badge.
@@ -36,6 +38,14 @@ const SHARED: readonly Unlock[] = [
   { id: 'good-rod', label: 'Good Rod', kind: 'key-item', locationId: 'olivine-city', part: 9 },
   // Part 11: HM06 from Lance, usable with the Glacier Badge from the same part.
   { id: 'whirlpool', label: 'Whirlpool', kind: 'move', locationId: 'team-rocket-hq', part: 11 },
+  // Part 12: from the Rocket posing as the Director on the Radio Tower's 5F; opens the Underground's basement door.
+  {
+    id: 'basement-key',
+    label: 'Basement Key',
+    kind: 'key-item',
+    locationId: 'goldenrod-radio-tower',
+    part: 12,
+  },
   // Part 12: from the Director in the Underground Warehouse.
   {
     id: 'card-key',
@@ -64,6 +74,28 @@ const SHARED: readonly Unlock[] = [
   },
   // Part 22: the Fishing Guru's younger brother on Route 12.
   { id: 'super-rod', label: 'Super Rod', kind: 'key-item', locationId: 'route-12', part: 22 },
+];
+
+/**
+ * Crystal's Ruins of Alph hidden rooms (Ruins of Alph, "Puzzle chambers"): the Omanyte chamber's opens with a Water
+ * Stone in the Bag (the first one that isn't a random phone gift is from Bill's grandfather, Part 19), the Ho-Oh
+ * chamber's with Ho-Oh leading the party (caught in Tin Tower, Part 29).
+ */
+const RUINS_OF_ALPH: readonly Unlock[] = [
+  {
+    id: 'water-stone',
+    label: 'Water Stone',
+    kind: 'key-item',
+    locationId: 'sea-cottage',
+    part: 19,
+  },
+  {
+    id: 'ho-oh',
+    label: 'Ho-Oh leading the party',
+    kind: 'story',
+    locationId: 'tin-tower',
+    part: 29,
+  },
 ];
 
 /** A wing from the Goldenrod Radio Tower's Director after Team Rocket leaves (Part 12). */
@@ -97,6 +129,7 @@ export const GSC_UNLOCKS: Partial<Record<GameId, readonly Unlock[]>> = {
   ],
   crystal: [
     ...SHARED,
+    ...RUINS_OF_ALPH,
     directorWing('clear-bell', 'Clear Bell'),
     pewterWing('silver-wing', 'Silver Wing'),
     // Part 29: from one of the Wise Trio, after catching the legendary beasts and entering the Hall of Fame.

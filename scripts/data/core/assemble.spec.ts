@@ -1,7 +1,12 @@
 import { rbyConfig } from '../version-groups/rby/config';
 import type { LocationConfig, VersionGroupConfig } from '../version-groups/types';
 import type { GameLocation, LocationItem } from '../../../src/app/core/domain/models';
-import { addLocationRequirements, diffLocationCategory, placeLocations } from './assemble';
+import {
+  addLocationRequirements,
+  diffLocationCategory,
+  placeLocations,
+  splitItemNotes,
+} from './assemble';
 
 const location = (id: string, placement: LocationConfig['placement']): LocationConfig => ({
   id,
@@ -86,6 +91,44 @@ describe('addLocationRequirements', () => {
       [['surf'], ['whirlpool']],
       [['whirlpool'], ['surf'], ['strength']],
       undefined,
+    ]);
+  });
+});
+
+describe('splitItemNotes', () => {
+  it('turns matching rows into notes, naming the games of a note that not every game has', () => {
+    const item = (name: string, where: string, games: LocationItem['games']): LocationItem => ({
+      no: 0,
+      itemId: name,
+      name,
+      quantity: 1,
+      games,
+      obtain: 'pickup',
+      subArea: null,
+      where,
+    });
+    const config = {
+      games: ['gold', 'silver', 'crystal'] as const,
+      itemNoteRules: [
+        { match: /\(daily\)/, note: (i: LocationItem) => `Daily tree: ${i.name}` },
+        { match: /^Sometimes/, note: (i: LocationItem) => `Phone gift: ${i.name}` },
+      ],
+    };
+    const result = splitItemNotes(
+      [
+        item('Berry', 'On the tree (daily)', ['gold', 'silver']),
+        item('Berry', 'On the tree (daily)', ['crystal']),
+        item('Potion', 'On the ground', ['gold', 'silver', 'crystal']),
+        item('Nugget', 'Sometimes given out', ['crystal']),
+      ],
+      ['Fake item balls: Voltorb ×6'],
+      { ...config, games: [...config.games] },
+    );
+    expect(result.items.map((i) => i.name)).toEqual(['Potion']);
+    expect(result.itemNotes).toEqual([
+      'Fake item balls: Voltorb ×6',
+      'Daily tree: Berry',
+      { text: 'Phone gift: Nugget', games: ['crystal'] },
     ]);
   });
 });

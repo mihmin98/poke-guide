@@ -91,7 +91,9 @@ const location = z.strictObject({
     }),
   ),
   items: z.array(item),
-  itemNotes: z.array(z.string()),
+  itemNotes: z.array(
+    z.union([z.string(), z.strictObject({ text: z.string(), games: z.array(z.string()).min(1) })]),
+  ),
 });
 
 const statRecord = z.partialRecord(
@@ -311,6 +313,8 @@ export function validateVersionGroup(
         error(`Item number ${it.no} is used twice (${it.name} in ${loc.id})`);
       itemNumbers.add(it.no);
     }
+    for (const note of loc.itemNotes)
+      if (typeof note !== 'string') checkGames(`Item note in ${loc.id}`, note.games);
   }
   for (const group of data.exclusiveGroups) {
     checkGames(`Exclusive group ${group.id}`, group.games);

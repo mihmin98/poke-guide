@@ -1,5 +1,6 @@
 import type { LocationItem } from '../../../src/app/core/domain/models';
 import { fixture } from '../testing/fixtures';
+import { gscConfig } from '../version-groups/gsc/config';
 import { rbyConfig } from '../version-groups/rby/config';
 import { collectItemRows, walkItemSection, type ItemWalkOptions } from './items';
 
@@ -191,6 +192,64 @@ describe('walkItemSection on Red/Blue/Yellow fixtures', () => {
     expect(result.items.map((i) => i.requires)).toEqual([
       [['surf'], ['waterfall'], ['strength']],
       [['card-key']],
+    ]);
+  });
+});
+
+describe('walkItemSection on Gold/Silver/Crystal fixtures', () => {
+  const gsc = (name: string) => {
+    const page = fixture('gsc', name);
+    return walkItemSection(page.wikitext, {
+      pageTitle: page.resolvedTitle,
+      games: gscConfig.games,
+      gameFlags: gscConfig.itemGameFlags,
+      aliases: gscConfig.itemAliases,
+      requirementPhrases: gscConfig.overrides.items.requirementPhrases,
+    });
+  };
+
+  it('writes days of the week out (Route 29)', () => {
+    const result = gsc('route-29');
+    expect(result.issues).toEqual([]);
+    expect(result.items.find((i) => i.itemId === 'pink-bow')?.where).toBe(
+      'From Tuscany after earning the Zephyr Badge (Tuesdays)',
+    );
+  });
+
+  it('skips the Park Balls, whose "cannot be kept" is followed by days (National Park)', () => {
+    const items = gsc('national-park').items;
+    expect(items.map((i) => i.itemId)).not.toContain('park-ball');
+  });
+
+  it('keeps a "Generation II" heading from becoming a sub-area, so floors are read (Mt. Silver Cave)', () => {
+    const items = gsc('mt-silver-cave').items;
+    expect(new Set(items.map((i) => i.subArea))).toEqual(new Set(['1F', '2F']));
+  });
+});
+
+describe('item row details', () => {
+  const row = (wikitext: string) => collectItemRows(wikitext, options('Page'));
+
+  it('drops footnote markers, reads {{DL}} text and makes held items gifts', () => {
+    const result = row(
+      '{{Itemlist|PP Up|Given by Kenji after he asks{{tt|*|Random}}|R=yes}}\n' +
+        '{{Itemlist|None|From the guide|R=yes|display={{DL|Pokégear|Map|Map Card}}}}\n' +
+        "{{Itemlist|Berry|Held by the {{player}}'s first partner Pokémon|R=yes}}",
+    );
+    expect(result.items.map((i) => [i.name, i.where, i.obtain])).toEqual([
+      ['PP Up', 'Given by Kenji after he asks', 'pickup'],
+      ['Map Card', 'From the guide', 'gift'],
+      ['Berry', "Held by the player's first partner Pokémon", 'gift'],
+    ]);
+  });
+
+  it('puts one item on each spot unless a different ×N is stated', () => {
+    const plain = row('{{Itemlist|Nugget|\n* A\n* B|R=yes}}');
+    expect(plain.issues).toEqual([]);
+    expect(plain.items.map((i) => i.quantity)).toEqual([1, 1]);
+    const stated = row('{{Itemlist|Nugget|\n* A\n* B|R=yes|display=[[Nugget]] ×3}}');
+    expect(stated.issues).toMatchObject([
+      { level: 'warning', message: expect.stringMatching(/^Quantity ×3 doesn't match 2 spots/) },
     ]);
   });
 });

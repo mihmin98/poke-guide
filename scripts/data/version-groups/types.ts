@@ -6,6 +6,7 @@ import type {
   BreedingRules,
   EvolutionEdge,
   GameId,
+  LocationItem,
   LocationKind,
   RegionId,
   Unlock,
@@ -84,8 +85,9 @@ export interface VersionGroupConfig {
   /**
    * Item rows that are location notes rather than items, e.g. Berry and Apricorn trees that give an item
    * every day (plan §16 Phase 10). A row matches when its item name or its `where` text matches `match`.
+   * Walkthrough rows that match are left out of the item cross-check.
    */
-  itemNoteRules?: { match: RegExp; note: (itemName: string, where: string) => string }[];
+  itemNoteRules?: ItemNoteRule[];
   /**
    * Bulbagarden Archives file pattern per sprite set (plan §7.10), keyed by the registry's `spriteSetId`;
    * `{dex3}` is the zero-padded National Dex number. Every game's set must be listed.
@@ -116,4 +118,9 @@ export interface VersionGroupConfig {
     /** Egg moves whose game flags on the learnset pages are wrong (plan §7.12). */
     eggMovePatches?: readonly EggMovePatch[];
   };
+}
+
+export interface ItemNoteRule {
+  match: RegExp;
+  note: (item: LocationItem) => string;
 }

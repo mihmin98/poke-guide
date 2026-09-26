@@ -430,7 +430,7 @@ export interface VersionGroupConfig {
     evolutions: EvolutionEdge[];
     breeding?: BreedingRules;                  // gen 2+
     unlocks: Unlock[];
-    items: ItemOverrides;                      // add, requires, patch, requirementPhrases, choiceGroups, walkthroughAccepted, walkthroughGames (§7.13)
+    items: ItemOverrides;                      // add, requires, patch, remove, requirementPhrases, choiceGroups, walkthroughAccepted, walkthroughGames (§7.13)
   };
   spriteSets: Record<string, { filePattern: string; stillFrame?: true }>; // keyed by registry spriteSetId: 'gen1-y' → 'Spr_1y_{dex3}.png'
                                                // stillFrame: keep an animated PNG's first frame (Crystal, Phase 10)
@@ -736,9 +736,10 @@ A Gold/Silver/Crystal slot would look like `{ "levels": {…}, "rate": {"kind":"
   - `add`:
     - Gym leader TMs on their city (`subArea: 'Gym'`, sourced from the walkthrough parts). Viridian Gym's TM27 gets `fromPart: 14`.
     - The rooftop TMs on Celadon Department Store (`gift`, "give her a Fresh Water / Soda Pop / Lemonade").
-  - `requires`: unstated gates, matched by `(locationId, itemId, where substring)`, e.g. Silph Co. rooms behind Card Key doors. Curated from the walkthrough text and checked against the pret disassembly maps.
-  - `patch`: corrects fields (name, quantity, games, where, obtain) of exactly one parsed item; a new name changes the id. Route 15 `Exp. Share` → `Exp. All` (pret `Route15Gate2F.asm`). A patch that matches ≠ 1 item or changes nothing is an error.
-  - `walkthroughAccepted`: item/game quantity differences that are expected (Oak's 5 Poké Balls). `walkthroughGames`: a walkthrough part page whose rows carry wrong game flags (Yellow Part 3). Walkthrough rows whose text starts "Loaned" (Safari Balls) are skipped like "cannot be kept".
+  - `requires`: unstated gates, matched by `(locationId, itemId, subArea)`, e.g. Silph Co. rooms behind Card Key doors. Curated from the walkthrough text and checked against the pret disassembly maps. Without `itemId` it covers every item of `subArea` (Mt. Mortar's 2F behind Surf and Waterfall, added 2026-09-26).
+  - `patch`: corrects fields (name, quantity, games, where, obtain, `fromPart`) of exactly one parsed item; a new name changes the id. Route 15 `Exp. Share` → `Exp. All` (pret `Route15Gate2F.asm`). A patch that matches ≠ 1 item or changes nothing is an error.
+  - `remove` (added 2026-09-26): drops exactly one parsed item, for a duplicate another location page also lists (Moomoo Farm repeats Route 39's) or one the international games don't have (the Virtual Console GS Ball, the Japanese-only Egg Ticket).
+  - `walkthroughAccepted`: item/game differences that are expected: quantities by default (Oak's 5 Poké Balls), or with `difference: 'requirements'` the requirements a walkthrough states wrongly. `walkthroughGames`: a walkthrough part page whose rows carry wrong game flags (Yellow Part 3). Walkthrough rows whose text starts "Loaned" (Safari Balls) are skipped like "cannot be kept".
   - Additions and requirement overrides name a `sourcePage`; the build fetches it and records its revid (in the item's `source` and in `sources`).
   - `requirementPhrases`: non-standard `(requires …)` terms → unlock ids.
   - `choiceGroups`: Mt. Moon Helix/Dome Fossil → the `mt-moon-fossil` exclusive group id.
@@ -747,6 +748,7 @@ A Gold/Silver/Crystal slot would look like `{ "levels": {…}, "rate": {"kind":"
   - Oak's Lab's Gen I table is walked and provides the starters.
 - **Walkthrough cross-check (`core/location-items.ts`):** parse the `{{itemlist}}` rows of each game's walkthrough parts (34 pages, one batched request).
   - Compare each item's **total quantity per game** with the location data, and report walkthrough requirements that no location item with that id has. Differences are **warnings**, triaged in `PROGRESS.md` until `reports/rby.md` exists.
+  - A walkthrough row repeated with the same item and text in a later part counts once: the Gold/Silver walkthrough repeats a revisited area's rows (Dark Cave in Parts 3, 7 and 13). Walkthrough rows matching `itemNoteRules` are left out, like the location rows that become notes.
   - Totals are compared, not parts (changed 2026-09-13): the walkthrough groups some places in other parts (Route 2's east side in Part 7, the Pewter Museum's Old Amber in Part 3). A per-part diff gave 41 placement-only warnings.
   - The first rby build has 13 item warnings: Potion, Revive and Poké Ball counts, Yellow's Viridian Forest Antidote, Safari Balls (excluded on purpose), and Exp. All vs Exp. Share.
 - **Item numbers (Phase 9, decided 2026-09-23):** every item gets a number `no`, unique within the version group and **never reused**. Profiles store ticks as these numbers, and `PKG2` codes carry them as a bitfield, so they are a compatibility contract like `codecId`.
@@ -833,8 +835,10 @@ export interface GameLocation {
   notes: string[];
   subAreas: SubArea[];
   items: LocationItem[];                                // §7.13
-  itemNotes: string[];                                  // e.g. fake item balls
+  itemNotes: ItemNote[];                                // e.g. fake item balls, Berry trees
 }
+// A plain string applies to every game of the group; the object names its games (Crystal-only phone gifts).
+type ItemNote = string | { text: string; games: GameId[] };
 
 export type ItemObtainMethod = 'pickup' | 'gift' | 'reward' | 'drop' | 'choice' | 'purchase';
 
@@ -1441,6 +1445,10 @@ Adds the 251-species checklist and the walkthrough-ordered guide for Gold, Silve
   - Gold and Silver use `Spr 2g ###.png` / `Spr 2s ###.png` (static 56×56, checked 2026-09-23).
 - **Berry and Apricorn trees are location notes** (`itemNotes`), not tickable items: they give items
   every day, like Poké Mart stock.
+- **Every recurring item source is a location note** (user choice, 2026-09-26): besides the trees, Crystal's
+  phone-call gifts, the Radio Tower's ID lottery prizes and the Moomoo Milk and RageCandyBar sales. A note
+  that not every game has names its games (`ItemNote`, §8), so a Crystal-only phone gift only shows in
+  Crystal.
 
 **Stage A — generic groundwork** (no gsc data yet). Red/Blue/Yellow output must stay byte-identical except
 `builtAt`, and `rby/item-numbers.json` must be unchanged.
@@ -1542,7 +1550,24 @@ games, and learnsets and moves (Gen II move types). Done 2026-09-26:
   egg moves per game (counted at the family's base). Every species has a Pokédex entry for all three games.
 
 **Stage E — items:** the walkthrough cross-check, triaged overrides, and fruit trees as notes. The first
-build writes `gsc/item-numbers.json` from 1.
+build writes `gsc/item-numbers.json` from 1. Done 2026-09-26: 0 item warnings; Gold and Silver 332 items,
+Crystal 379, numbered 1–424. Each difference was checked against pret (`itemball`, `hiddenitem`,
+`verbosegiveitem` in `maps/*.asm`).
+- [x] Generic parser fixes (rby output changed in two `where` texts, both corrections; their item numbers kept):
+  `{{dotw|Tu}}` → "(Tuesdays)" (it also hid the Park Balls' "cannot be kept"), `{{tt|*|…}}` footnote markers
+  dropped, three-argument `{{DL}}` shows its text, `{{player}}` is "player" (pages write "the {{player}}"),
+  `Generation II` headings inside `Items` aren't sub-areas, "Held by …" rows are gifts, and multi-spot rows
+  without a stated `×N` hold one item per spot without a warning.
+- [x] `itemNoteRules` (daily trees, phone gifts, lottery, sales) get the whole item and yield `ItemNote`s with
+  games; walkthrough rows matching them are left out of the cross-check.
+- [x] Cross-check: a repeated walkthrough row counts once; `walkthroughAccepted.difference`.
+- [x] Overrides (`gsc/overrides/items.ts`): the nine Gym leader TMs and the Cerulean Gym Machine Part;
+  removals (Moomoo Farm's duplicates of Route 39, both GS Balls, the Egg Ticket); Radio Tower rewards from
+  Part 12 (`fromPart`); gates for the Underground's basement (new `basement-key` unlock), Mt. Mortar 2F,
+  Tin Tower's upper floors (Rainbow Wing), Dark Cave's TM13, Route 2's Elixer, Dragon's Den (the location
+  needs Surf; TM24 needs Whirlpool) and Crystal's Ruins of Alph hidden rooms (new `flash`, `water-stone` and
+  `ho-oh` unlocks; the walkthrough swaps two chambers); Generation II spellings as `itemAliases`.
+- Crystal's Battle Tower prizes are left out: they repeat for every 7-win streak and aren't item rows.
 
 **Stage F — sprites:** 3 × 251 files in `public/sprites/gen2-{g,s,c}/`.
 

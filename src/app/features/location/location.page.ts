@@ -289,7 +289,7 @@ const ALL_SUB_AREAS = '__all__';
         <p class="status">No Pokémon can be caught here in {{ gameName() }}.</p>
       }
 
-      @if (v.items.length || v.location.itemNotes.length) {
+      @if (v.items.length || v.itemNotes.length) {
         <section class="items">
           <h2>
             Items
@@ -366,7 +366,7 @@ const ALL_SUB_AREAS = '__all__';
             <p class="status">You have every item here.</p>
           }
 
-          @for (note of v.location.itemNotes; track note) {
+          @for (note of v.itemNotes; track note) {
             <p class="note">{{ note }}</p>
           }
         </section>

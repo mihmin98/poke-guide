@@ -72,9 +72,15 @@ export interface GameLocation {
   subAreas: SubArea[];
   /** Items found here (plan §7.13), in page order. */
   items: LocationItem[];
-  /** Item-related notes, e.g. fake item balls. */
-  itemNotes: string[];
+  /** Item-related notes, e.g. fake item balls or a Berry tree. */
+  itemNotes: ItemNote[];
 }
+
+/**
+ * A plain string applies to every game of the version group; the object form names its games (a Crystal-only
+ * phone-call gift).
+ */
+export type ItemNote = string | { text: string; games: GameId[] };
 
 export type ItemObtainMethod = 'pickup' | 'gift' | 'reward' | 'drop' | 'choice' | 'purchase';
 
