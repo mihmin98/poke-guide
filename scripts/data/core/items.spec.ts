@@ -180,6 +180,19 @@ describe('walkItemSection on Red/Blue/Yellow fixtures', () => {
     });
     expect(walk('route-1', '==Pokémon==\n').found).toBe(false);
   });
+
+  it('reads comma-separated requirements and Johto key items', () => {
+    const result = walk(
+      'route-1',
+      '==Items==\n{{Itemlist|Nugget|A (requires {{m|Surf}}, {{m|Waterfall}}, and {{m|Strength}})|R=yes}}\n' +
+        '{{Itemlist|Ultra Ball|B (requires {{jo|Card Key}})|R=yes}}\n',
+    );
+    expect(result.issues).toEqual([]);
+    expect(result.items.map((i) => i.requires)).toEqual([
+      [['surf'], ['waterfall'], ['strength']],
+      [['card-key']],
+    ]);
+  });
 });
 
 describe('collectItemRows on walkthrough pages', () => {

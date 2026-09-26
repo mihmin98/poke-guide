@@ -3,6 +3,9 @@
  * (`====Pokémon Yellow====`). Each row has the location, the species the player gives and gets (`{{MSP/3|dex|Name}}`,
  * in that order), and the English nickname; `N/A` there means the trade only exists in a Japanese release.
  * Location tables already hold the trade rows, so these are only diffed against them, and add the nicknames.
+ *
+ * Generation II has one table for three games: a trade that differs per game spans two rows (`rowspan=2` on the
+ * shared cells), and the cells of each variant carry the game's background color (`{{crystal color light}}`).
  */
 import type { GameId, GameLocation } from '../../../src/app/core/domain/models';
 import type { Issue } from './encounter-walker';
@@ -14,6 +17,11 @@ export interface TradeTable {
   /** Heading directly under the generation section, e.g. `Pokémon Yellow`. */
   heading: string;
   games: GameId[];
+  /**
+   * Cell background colors that mark a row's games (`crystal` for `{{crystal color light}}`). A row whose own cells
+   * carry any of them belongs to those games only; other rows belong to every game of the table.
+   */
+  cellColorGames?: Record<string, GameId[]>;
 }
 
 export interface TradePageConfig {
@@ -37,20 +45,64 @@ export interface TradeParseResult {
 
 const CELL_ATTRIBUTES = /^\s*(?:rowspan|colspan|style|class|align)\s*=/i;
 
-/** Wikitable cells of one row: lines starting with `|`, without their `attr=… |` prefix. */
-function rowCells(row: string): string[] {
-  const cells: string[] = [];
+interface Cell {
+  text: string;
+  /** The `attr=… ` prefix, empty when there is none. */
+  attributes: string;
+  rowspan: number;
+}
+
+/** Wikitable cells of one row: lines starting with `|`, split from their `attr=… |` prefix. */
+function rowCells(row: string): Cell[] {
+  const cells: Cell[] = [];
   for (const line of row.split('\n')) {
     if (!line.startsWith('|') || line.startsWith('|}') || line.startsWith('|-')) continue;
     const parts = splitTopLevel(line.slice(1));
-    cells.push(
-      (parts.length > 1 && CELL_ATTRIBUTES.test(parts[0]!)
-        ? parts.slice(1).join('|')
-        : line.slice(1)
-      ).trim(),
-    );
+    const hasAttributes = parts.length > 1 && CELL_ATTRIBUTES.test(parts[0]!);
+    const attributes = hasAttributes ? parts[0]! : '';
+    const rowspan = /\browspan\s*=\s*"?(\d+)/i.exec(attributes);
+    cells.push({
+      text: (hasAttributes ? parts.slice(1).join('|') : line.slice(1)).trim(),
+      attributes,
+      rowspan: rowspan ? Number(rowspan[1]) : 1,
+    });
   }
   return cells;
+}
+
+/** Fills in the cells spanning down from earlier rows (`rowspan`), so each row has every column. */
+function expandRows(rows: readonly Cell[][]): Cell[][] {
+  const pending: { cell: Cell; left: number }[] = [];
+  return rows.map((own) => {
+    const expanded: Cell[] = [];
+    const take = () => {
+      while (pending[expanded.length] && pending[expanded.length]!.left > 0) {
+        const span = pending[expanded.length]!;
+        span.left--;
+        expanded.push(span.cell);
+      }
+    };
+    for (const cell of own) {
+      take();
+      if (cell.rowspan > 1) pending[expanded.length] = { cell, left: cell.rowspan - 1 };
+      else delete pending[expanded.length];
+      expanded.push(cell);
+    }
+    take();
+    return expanded;
+  });
+}
+
+/** The games of a row from its own cells' background colors; `null` when they name none. */
+function rowGames(own: readonly Cell[], table: TradeTable): GameId[] | null {
+  if (!table.cellColorGames) return null;
+  const games = new Set<GameId>();
+  for (const cell of own) {
+    for (const [, color] of cell.attributes.matchAll(/\{\{\s*([a-z]+) color light\s*\}\}/gi)) {
+      for (const game of table.cellColorGames[color!.toLowerCase()] ?? []) games.add(game);
+    }
+  }
+  return games.size > 0 ? table.games.filter((g) => games.has(g)) : null;
 }
 
 /** The page a location cell links to; `null` when it holds no link. */
@@ -95,38 +147,43 @@ export function parseTradeTables(
       issue(`No wikitable under "${table.heading}"`);
       continue;
     }
-    let location: string | null = null;
-    for (const row of body
+    const ownRows = body
       .slice(start, end)
       .split(/\n\|-[^\n]*/)
-      .slice(1)) {
-      const cells = rowCells(row);
-      if (cells.length === 0) continue;
-      const species = findTemplates(row).filter((c) => c.name === 'msp/3');
-      if (species.length < 2) continue;
+      .slice(1)
+      .map(rowCells);
+    const expandedRows = expandRows(ownRows);
+    const isSpecies = (cell: Cell) => /\{\{MSP\/3\|/i.test(cell.text);
+    let location: string | null = null;
+    ownRows.forEach((own, index) => {
+      const cells = expandedRows[index]!;
+      if (cells.length === 0) return;
+      const species = cells
+        .filter(isSpecies)
+        .map((c) => findTemplates(c.text).find((call) => call.name === 'msp/3')!);
+      if (species.length < 2) return;
       const first = cells[0]!;
-      if (!/\{\{MSP\/3\|/i.test(first)) location = locationPageOf(first);
+      if (!isSpecies(first)) location = locationPageOf(first.text);
       if (!location) {
-        issue(`Trade row without a location under "${table.heading}": ${cells.join(' | ')}`);
-        continue;
+        issue(
+          `Trade row without a location under "${table.heading}": ${cells.map((c) => c.text).join(' | ')}`,
+        );
+        return;
       }
       // Cells: [location], give MSP, give name, get MSP, get name, English nickname, ...
       const getIndex = cells.findIndex(
-        (c, i) =>
-          i > 0 &&
-          /\{\{MSP\/3\|/i.test(c) &&
-          cells.slice(0, i).some((p) => /\{\{MSP\/3\|/i.test(p)),
+        (c, i) => i > 0 && isSpecies(c) && cells.slice(0, i).some(isSpecies),
       );
-      const nickname = stripMarkup(cells[getIndex + 2] ?? '');
-      if (/^N\/A$/i.test(nickname)) continue;
+      const nickname = stripMarkup(cells[getIndex + 2]?.text ?? '');
+      if (/^N\/A$/i.test(nickname)) return;
       result.trades.push({
-        games: [...table.games],
+        games: rowGames(own, table) ?? [...table.games],
         locationPage: location,
         giveDex: Number(species[0]!.positional[0]),
         getDex: Number(species[1]!.positional[0]),
         nickname,
       });
-    }
+    });
   }
   return result;
 }

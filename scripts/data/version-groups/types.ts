@@ -34,6 +34,11 @@ export interface LocationConfig {
   expectEmpty?: boolean;
   /** Listed for its items only (plan §7.13): the encounter section is not walked. */
   itemsOnly?: boolean;
+  /**
+   * Unlock ids needed to reach the location at all (the Whirl Islands need Whirlpool), added to every encounter and
+   * item there.
+   */
+  requires?: string[];
 }
 
 export interface VersionGroupConfig {

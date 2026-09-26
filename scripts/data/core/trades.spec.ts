@@ -1,5 +1,6 @@
 import type { Encounter, GameLocation } from '../../../src/app/core/domain/models';
 import { fixture } from '../testing/fixtures';
+import { gscConfig } from '../version-groups/gsc/config';
 import { rbyConfig } from '../version-groups/rby/config';
 import { diffTrades, parseTradeTables } from './trades';
 
@@ -29,6 +30,32 @@ describe('parseTradeTables', () => {
     ]);
     expect(forGame('yellow')).toHaveLength(7);
     expect(forGame('yellow')[1]).toEqual(['Underground Path (Kanto Routes 5–6)', 104, 67, 'RICKY']);
+  });
+});
+
+describe('parseTradeTables (Generation II)', () => {
+  const result = parseTradeTables(fixture('gsc', 'in-game-trade').wikitext, {
+    pageTitle: 'In-game trade',
+    generationHeading: 'Generation II',
+    tables: gscConfig.tradePage!.tables,
+  });
+
+  it('splits two-row trades by cell color and fills in the cells spanning both rows', () => {
+    expect(result.issues).toEqual([]);
+    expect(
+      result.trades.map((t) => [t.locationPage, t.giveDex, t.getDex, t.nickname, t.games]),
+    ).toEqual([
+      ['Violet City', 69, 95, 'ROCKY', ['gold', 'silver', 'crystal']],
+      ['Goldenrod Department Store', 96, 66, 'MUSCLE', ['gold', 'silver']],
+      ['Goldenrod Department Store', 63, 66, 'MUSCLE', ['crystal']],
+      ['Olivine City', 98, 100, 'VOLTY', ['gold', 'silver', 'crystal']],
+      ['Blackthorn City', 148, 112, 'DON', ['gold', 'silver']],
+      ['Blackthorn City', 148, 85, 'DORIS', ['crystal']],
+      ['Kanto Route 14', 113, 142, 'AEROY', ['gold', 'silver', 'crystal']],
+      ['Pewter City', 44, 78, 'RUNNY', ['gold', 'silver']],
+      ['Pewter City', 93, 178, 'PAUL', ['crystal']],
+      ['Kanto Power Plant', 51, 82, 'MAGGIE', ['crystal']],
+    ]);
   });
 });
 

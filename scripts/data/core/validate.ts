@@ -174,6 +174,9 @@ export const versionGroupDataSchema = z.strictObject({
     }),
   ),
   eventOnly: z.array(positive),
+  requiresOtherGame: z
+    .array(z.strictObject({ dex: z.array(positive).min(1), detail: z.string().min(1) }))
+    .optional(),
   locations: z.array(location),
   sources: z.array(sourceRef),
 });
@@ -312,6 +315,8 @@ export function validateVersionGroup(
     for (const dex of group.members) checkDex(`Exclusive group ${group.id}`, dex);
   }
   for (const dex of data.eventOnly) checkDex('eventOnly', dex);
+  for (const dex of data.requiresOtherGame?.flatMap((r) => r.dex) ?? [])
+    checkDex('requiresOtherGame', dex);
   for (const edge of data.evolutions) {
     checkDex('Evolution', edge.from);
     checkDex('Evolution', edge.to);

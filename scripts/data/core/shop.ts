@@ -1,7 +1,7 @@
 /**
  * Game Corner prize shops (plan §7.7): `{{shop|<title>}} {{shoprow|{{shopmon|Name|dex|coins|lv=N}}…}} {{shopfooter}}`
- * blocks inside a location page section. The shop title names the games through `{{color2}}` link texts
- * (`Pokémon Red`); shops for other versions (`Pocket Monsters Blue`) are skipped. Item prizes (`{{shopitem}}`) become
+ * blocks inside a location page section. The shop title names the games (`Pokémon Red`, `Pokémon Gold and Silver`) or
+ * none (`All versions`, `[[TM]]s`); shops for other versions (`Pocket Monsters Blue`) are skipped. Item prizes (`{{shopitem}}`) become
  * location items bought with coins (`obtain: 'purchase'`).
  */
 import type { GameId, LocationItem } from '../../../src/app/core/domain/models';
@@ -37,7 +37,10 @@ export interface PrizeShopResult {
   issues: Issue[];
 }
 
-const ALL_VERSIONS = /^all versions$/i;
+/** Release names in a shop title: `Pokémon Gold and Silver`, `Pokémon Red / Pocket Monsters Red`. */
+const RELEASES =
+  /\b(Pokémon|Pocket Monsters) ([A-Z][A-Za-z]*(?:(?:,\s*|\s+and\s+|\s*&\s*)[A-Z][A-Za-z]*)*)/g;
+const RELEASE_SEPARATOR = /,\s*|\s+and\s+|\s*&\s*/;
 /** `{{shopitem|TM23|3300|C||TM Dragon|Dragon Rage}}`: the machine number and the move it teaches. */
 const MACHINE = /^(?:TM|HM)\d+$/i;
 
@@ -50,16 +53,25 @@ function prizeItemName(call: TemplateCall): string {
   return MACHINE.test(name) && move ? `${name} ${move}` : name;
 }
 
-/** Games named by a shop title; `null` when the title names none of the version group's games. */
+/**
+ * Games named by a shop title. `Pokémon <Game>` names a registry game and `Pocket Monsters <Game>` a Japanese
+ * release. A title that names no release (`All versions`, `[[TM]]s`) covers every game of the version group, since
+ * the section path already selects the generation. `null` when the title only names other releases.
+ */
 function shopGames(title: string, games: readonly GameId[]): GameId[] | null {
-  if (ALL_VERSIONS.test(stripMarkup(title))) return [...games];
-  const texts = findTemplates(title)
-    .filter((c) => c.name === 'color2')
-    .map((c) => stripMarkup(c.positional[2] ?? c.positional[1] ?? ''));
-  const named = GAMES.filter((g) => games.includes(g.id) && texts.includes(g.name)).map(
-    (g) => g.id,
-  );
-  return named.length > 0 ? named : null;
+  const named = new Set<GameId>();
+  let releases = 0;
+  for (const [, series, list] of stripMarkup(title).matchAll(RELEASES)) {
+    releases++;
+    if (series !== 'Pokémon') continue;
+    for (const part of list!.split(RELEASE_SEPARATOR)) {
+      const game = GAMES.find((g) => g.name === `Pokémon ${part}`);
+      if (game) named.add(game.id);
+    }
+  }
+  if (releases === 0) return [...games];
+  const ours = games.filter((g) => named.has(g));
+  return ours.length > 0 ? ours : null;
 }
 
 export function parsePrizeShops(wikitext: string, options: PrizeShopOptions): PrizeShopResult {

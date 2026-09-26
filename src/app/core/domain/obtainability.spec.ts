@@ -103,6 +103,20 @@ describe('buildChecklist', () => {
     expect(entry(entries, 2).unobtainableReason).toBe('not-in-game');
   });
 
+  it('gives requires-other-game to listed species no game of the group has', () => {
+    const d = data({
+      requiresOtherGame: [{ dex: [1, 2], detail: 'Transfer from Red, Blue or Yellow' }],
+      locations: [location('route', 1, [encounter(1, ['blue'])])],
+    });
+    const entries = buildChecklist(d, red, OFF);
+    // Another version of the group is the more useful answer.
+    expect(entry(entries, 1).unobtainableReason).toBe('other-version');
+    expect(entry(entries, 2)).toMatchObject({
+      unobtainableReason: 'requires-other-game',
+      unobtainableDetail: 'Transfer from Red, Blue or Yellow',
+    });
+  });
+
   it('breeds the base of a family when a Day Care is reachable and a partner exists', () => {
     const d = data({
       species: [

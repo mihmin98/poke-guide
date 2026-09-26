@@ -112,7 +112,10 @@ export const GSC_LOCATIONS: LocationConfig[] = [
     { expectEmpty: true },
   ),
   johtoRoute(41, 9, 'water'),
-  johto('whirl-islands', 'Whirl Islands', 'Whirl Islands', 'cave', 9),
+  // "The rough seas make it impossible to reach them without Whirlpool" (Walkthrough:Pokémon Gold and Silver/Part 9).
+  johto('whirl-islands', 'Whirl Islands', 'Whirl Islands', 'cave', 9, {
+    requires: ['surf', 'whirlpool'],
+  }),
   // Part 10
   johto('cianwood-city', 'Cianwood City', 'Cianwood City', 'town', 10),
   johtoRoute(42, 10),

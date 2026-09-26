@@ -121,3 +121,37 @@ describe('parsePrizeShops', () => {
     ]);
   });
 });
+
+describe('parsePrizeShops (Generation II)', () => {
+  const gsc = { games: ['gold', 'silver', 'crystal'] as const, requires: ['coin-case'] };
+  const read = (name: string, pageTitle: string) =>
+    parsePrizeShops(fixture('gsc', name).wikitext, {
+      pageTitle,
+      sectionPath: [/^Prize corner/i, 'Generation II'],
+      games: [...gsc.games],
+      requires: gsc.requires,
+      itemSubArea: 'Prize corner',
+    });
+  const prizes = (result: ReturnType<typeof read>, game: 'gold' | 'silver' | 'crystal') =>
+    result.rows.filter((r) => r.row.games.includes(game)).map((r) => r.row.name);
+
+  it('covers every game with a title that names none, and reads "Gold and Silver" titles', () => {
+    const goldenrod = read('goldenrod-game-corner', 'Goldenrod Game Corner');
+    expect(goldenrod.issues).toEqual([]);
+    expect(goldenrod.notes).toEqual([]);
+    expect(goldenrod.items.map((i) => [i.name, i.games])).toEqual([
+      ['TM25 Thunder', ['gold', 'silver', 'crystal']],
+      ['TM14 Blizzard', ['gold', 'silver', 'crystal']],
+      ['TM38 Fire Blast', ['gold', 'silver', 'crystal']],
+    ]);
+    expect(prizes(goldenrod, 'gold')).toEqual(['Abra', 'Ekans', 'Dratini']);
+    expect(prizes(goldenrod, 'silver')).toEqual(['Abra', 'Sandshrew', 'Dratini']);
+    expect(prizes(goldenrod, 'crystal')).toEqual(['Abra', 'Cubone', 'Wobbuffet']);
+
+    const celadon = read('celadon-game-corner', 'Celadon Game Corner');
+    expect(celadon.issues).toEqual([]);
+    expect(prizes(celadon, 'gold')).toEqual(['Mr. Mime', 'Eevee', 'Porygon']);
+    expect(prizes(celadon, 'silver')).toEqual(['Mr. Mime', 'Eevee', 'Porygon']);
+    expect(prizes(celadon, 'crystal')).toEqual(['Pikachu', 'Porygon', 'Larvitar']);
+  });
+});

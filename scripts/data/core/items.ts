@@ -122,14 +122,14 @@ function obtainMethod(where: string, hidden: boolean): ItemObtainMethod {
   return 'pickup';
 }
 
-/** `A or B and C` → `[[A, B], [C]]` as unlock ids; unknown terms are returned as errors. */
+/** `A or B and C` (also `A, B, and C`) → `[[A, B], [C]]` as unlock ids; unknown terms are returned as errors. */
 function parseRequirements(
   body: string,
   phrases: ItemWalkOptions['requirementPhrases'],
 ): { requires: string[][]; unknown: string[] } {
   const requires: string[][] = [];
   const unknown: string[] = [];
-  for (const group of body.split(/\s+and\s+/)) {
+  for (const group of body.split(/\s*,\s*(?:and\s+)?|\s+and\s+/)) {
     const alternatives: string[] = [];
     for (const rawTerm of group.split(/\s+or\s+|\s*\/\s*/)) {
       // Walkthroughs write "requires the {{ka|Card Key}}".
@@ -144,7 +144,7 @@ function parseRequirements(
       const call = parseTemplate(term);
       const link = /^\[\[([^|\]]+)(?:\|[^\]]*)?\]\]$/.exec(term.trim());
       const target =
-        call && ['m', 'ka', 'i'].includes(call.name)
+        call && ['m', 'ka', 'jo', 'i'].includes(call.name)
           ? call.positional[0]
           : call
             ? undefined

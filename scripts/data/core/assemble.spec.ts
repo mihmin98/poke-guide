@@ -1,6 +1,7 @@
 import { rbyConfig } from '../version-groups/rby/config';
 import type { LocationConfig, VersionGroupConfig } from '../version-groups/types';
-import { diffLocationCategory, placeLocations } from './assemble';
+import type { GameLocation, LocationItem } from '../../../src/app/core/domain/models';
+import { addLocationRequirements, diffLocationCategory, placeLocations } from './assemble';
 
 const location = (id: string, placement: LocationConfig['placement']): LocationConfig => ({
   id,
@@ -57,5 +58,34 @@ describe('diffLocationCategory', () => {
 
   it('is silent when the category matches', () => {
     expect(diffLocationCategory(['Route 1', 'Route 2', 'Kanto', 'Old page'], config)).toEqual([]);
+  });
+});
+
+describe('addLocationRequirements', () => {
+  it("adds a location's entry requirements to its items, once", () => {
+    const item = (name: string, requires?: string[][]): LocationItem => ({
+      no: 0,
+      itemId: name,
+      name,
+      quantity: 1,
+      games: ['gold'],
+      obtain: 'pickup',
+      subArea: null,
+      where: '',
+      ...(requires ? { requires } : {}),
+    });
+    const locations = [
+      { id: 'whirl-islands', items: [item('a'), item('b', [['surf'], ['strength']])] },
+      { id: 'route-41', items: [item('c')] },
+    ] as GameLocation[];
+    addLocationRequirements(locations, [
+      { id: 'whirl-islands', requires: ['surf', 'whirlpool'] },
+      { id: 'route-41' },
+    ]);
+    expect(locations.flatMap((l) => l.items.map((i) => i.requires))).toEqual([
+      [['surf'], ['whirlpool']],
+      [['whirlpool'], ['surf'], ['strength']],
+      undefined,
+    ]);
   });
 });

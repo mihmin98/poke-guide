@@ -15,6 +15,11 @@ describe('stripMarkup', () => {
     expect(stripMarkup('{{tt|One|A note}}')).toBe('One');
     expect(stripMarkup('{{color2|000|Old Rod}}')).toBe('Old Rod');
     expect(stripMarkup('{{color2|000|Fishing|Fishing spots}}')).toBe('Fishing spots');
+    expect(
+      stripMarkup(
+        '[[Pokémon Gold and Silver Versions|{{color|000|Pokémon {{color|DAA520|Gold}} and Silver}}]]',
+      ),
+    ).toBe('Pokémon Gold and Silver');
     expect(stripMarkup('Purchase for {{PDollar}}500')).toBe('Purchase for ₽500');
     expect(stripMarkup('{{rt|2|Kanto}}')).toBe('Route 2');
     expect(stripMarkup('{{p|Nidoran♀}}')).toBe('Nidoran♀');

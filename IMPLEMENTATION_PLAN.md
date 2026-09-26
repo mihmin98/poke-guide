@@ -417,14 +417,16 @@ export interface VersionGroupConfig {
   catchAdapters: CatchTemplateAdapter[];       // [entry1Adapter]
   locationCategory: string;                    // 'Category:Red, Blue and Yellow locations'
   ignoredCategoryPages: string[];
-  locations: LocationConfig[];                 // page, id, kind, region, per-game {part, order}, itemsOnly? (§7.13)
+  locations: LocationConfig[];                 // page, id, kind, region, per-game {part, order}, itemsOnly? (§7.13),
+                                               // requires? (unlocks needed to reach it, added to its encounters and items)
   itemGameFlags: Record<string, GameId[]>;     // { R: ['red'], B: ['blue'], Y: ['yellow'] } on {{Itemlist}} rows (§7.13)
   itemAliases: Record<string, string>;         // spelling variants → item name ('Elixer' → 'Elixir')
   walkthroughs: Partial<Record<GameId, string>>; // 'Walkthrough:Pokémon Red and Blue'
   speciesRange: [number, number];              // [1, 151]
   extraParsers: ExtraParser[];                 // shop (prizes), trades
   overrides: {
-    encounters: EncounterOverrides;            // encounters (statics), patches, exclusiveGroups, eventOnly (§7.7)
+    encounters: EncounterOverrides;            // encounters (statics), patches, exclusiveGroups, eventOnly,
+                                               // requiresOtherGame (§7.7, §9)
     evolutions: EvolutionEdge[];
     breeding?: BreedingRules;                  // gen 2+
     unlocks: Unlock[];
@@ -886,6 +888,7 @@ export interface VersionGroupData {
   walkthroughs: Partial<Record<GameId, WalkthroughPart[]>>;
   unlocks: Partial<Record<GameId, Unlock[]>>;
   exclusiveGroups: ExclusiveGroup[]; eventOnly: number[];
+  requiresOtherGame?: { dex: number[]; detail: string }[];   // Phase 10: Gen I species moved in through the Time Capsule
   locations: GameLocation[];
   sources: { title: string; revid: number; url: string }[];
 }
@@ -938,7 +941,7 @@ Algorithm:
    - `trade-evolution`: reachable only through a `requiresTrade` edge.
    - `other-version`: the species appears for another game in the same version group.
    - `event-only`: listed in `eventOnly`.
-   - `requires-other-game`: exists in the version group's species list but has no source (e.g. FireRed/LeafGreen species that need Ruby/Sapphire/Emerald).
+   - `requires-other-game`: listed in `requiresOtherGame`, the species that only come from another game (Gold/Silver/Crystal: the Kanto starters, fossils, legendary birds and Mewtwo, moved in from Red/Blue/Yellow through the Time Capsule; later FireRed/LeafGreen species that need Ruby/Sapphire/Emerald).
    - `not-in-game`: the fallback.
 
 Marking one exclusive-group member as caught **doesn't block** the others. They show a hint: "you chose Kabuto".
@@ -947,7 +950,7 @@ Implementation notes (2026-09-13):
 - `maxInOneSave(data, game, features, entries?)` reruns source collection once per group choice, dropping the other members' group encounters, and subtracts the smallest loss per group. Groups are assumed independent. rby: Red/Blue lose 9 (starter 6, fossil 2, Dojo 1), Yellow loses 3.
 - A trade is an `encounter` source with `fromDex`; its part is the later of the location part and the given species' earliest part. Parts are relaxed to a fixed point, so a cheaper source found later lowers dependent parts.
 - `exclusiveGroupIds` come from group encounter sources and are inherited through evolution sources.
-- Reasons are checked in this order: `event-only`, `trade-evolution` (a `requiresTrade` edge from an obtainable species; detail names it), `other-version` (detail lists the games), then the `not-in-game` fallback. `requires-other-game` is never inferred yet: it needs data that says which species come from another game (FireRed/LeafGreen).
+- Reasons are checked in this order: `event-only`, `trade-evolution` (a `requiresTrade` edge from an obtainable species; detail names it), `other-version` (detail lists the games), then `requires-other-game` (listed in `requiresOtherGame`; detail from the data, added in Phase 10), then the `not-in-game` fallback.
 - Breeding: the offspring is the family root. A partner is Ditto (when obtainable) or the parent species itself when its `genderRatio` is strictly between 0 and 1. Offspring with baby-item requirements aren't bred until items are modelled as obtainable.
 
 ---
@@ -1490,20 +1493,37 @@ Adds the 251-species checklist and the walkthrough-ordered guide for Gold, Silve
 - [x] Fixtures, the category snapshot, and registration in `version-groups/index.ts`.
 
 **Stage C — curated overrides** (each with a source page and revid, plus pret `pokegold`/`pokecrystal` refs)
-- [ ] `encounters.ts`:
+- [x] `encounters.ts`:
   - **Statics:** Sudowoodo, the Red Gyarados (guaranteed Shiny, fixed DVs), Union Cave Lapras (Friday),
-    Snorlax, the Rocket HQ Electrode, Ho-Oh, Lugia, and Crystal's Suicune.
-  - **Roaming:** the beasts.
-  - **Gifts**, including the exclusive groups `gsc-starter` and `odd-egg` (random).
+    Snorlax, the Rocket HQ Electrode, Ho-Oh, Lugia, and Crystal's Suicune. Also the Rocket HQ trap floor's
+    Voltorb, Geodude and Koffing (pret `loadwildmon`, like rby's Power Plant Voltorbs).
+  - **Roaming:** the beasts, at the Burned Tower's B1F (level 40, pret `InitRoamMons`).
+  - **Gifts**, including the exclusive groups `gsc-starter` and `odd-egg` (random). The gifts themselves are in
+    the location tables; patches only set the starter method, shorten long group labels and add the Dragon Shrine's
+    Surf + Whirlpool to Crystal's Dratini.
   - `eventOnly: [151, 251]`.
-- [ ] `evolutions.ts`:
+  - `requiresOtherGame`: #1–9, #138–141, #144–146 and #150 ("Transfer from Red, Blue or Yellow through the
+    Time Capsule"). New data field, reason order in §9.
+- [x] `evolutions.ts` (122 edges generated from pret `evos_attacks.asm`, identical in pokegold and pokecrystal):
   - baby and friendship edges
   - Espeon (day) and Umbreon (night)
   - Tyrogue's stat edges
   - the held-item trade evolutions (`requiresTrade`)
-- [ ] Breeding `{ dayCareLocationIds: ['route-34'], dittoDex: 132 }`. Ditto is obtainable, so the engine's
+- [x] Breeding `{ dayCareLocationIds: ['route-34'], dittoDex: 132 }`. Ditto is obtainable, so the engine's
   partner rule needs no change.
-- [ ] Unlocks, catch-rate note classifications, and item overrides.
+- [x] Unlocks (per game: the wings and Crystal's Clear Bell differ), catch-rate note classifications (both Yellow
+  notes are note-only), and item requirement phrases. The item cross-check is Stage E.
+- [x] Prize shops (moved from Stage B): both Game Corners with the Coin Case unlock.
+- Generic changes made in Stage C (rby output byte-identical except `builtAt`):
+  - `shop.ts`: a shop title naming no release (`[[TM]]s`, `All versions`) covers every game of the group;
+    `Pokémon Gold and Silver` titles name both games. `stripMarkup` renders `{{color|hex|text}}`.
+  - `trades.ts`: rowspans are expanded, and a table's `cellColorGames` gives a row the games of its cells'
+    background colors (the Gen II table has one row per variant, colored for Gold/Silver or Crystal).
+  - `items.ts`: `(requires A, B, and C)` lists and `{{jo|…}}` key items.
+  - `OverrideEncounter.conditions` (Lapras: Friday), `EncounterPatch.set.requires`, and `LocationConfig.requires`
+    (the Whirl Islands can't be reached without Surf and Whirlpool).
+  - The table type mismatches (Route 30 Pidgey/Hoothoot `type2=flying` only, Route 36 Hoothoot, the Department
+    Store Machop) stay warnings: types come from the species list, and the tables are only a cross-check.
 
 **Stage D — species and Pokédex data:** Gen II base stats (SpA/SpD), catch rates, Dex entries for all three
 games, and learnsets and moves (Gen II move types).

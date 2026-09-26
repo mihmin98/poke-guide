@@ -4,10 +4,12 @@
  * work on walked rows before the merge, so they land in the same sub-areas as table rows.
  */
 import type {
+  EncounterCondition,
   EncounterMethodId,
   ExclusiveGroup,
   GameId,
   GameLocation,
+  RequiresOtherGame,
   Unlock,
 } from '../../../src/app/core/domain/models';
 import type { WalkedRow } from './encounter-walker';
@@ -27,6 +29,8 @@ export interface OverrideEncounter {
   requires?: string[];
   label?: string;
   note?: string;
+  /** E.g. Union Cave's Lapras only appears on Fridays. */
+  conditions?: EncounterCondition[];
   /** Defaults to the location page; its revid is recorded. */
   sourcePage?: string;
   /** Why the override exists, with a pret or Bulbapedia link for the values. */
@@ -37,8 +41,8 @@ export interface EncounterPatch {
   locationId: string;
   /** Rows to change; every given field must match. At least one row must match. */
   match: { method: EncounterMethodId; dex?: number; label?: string };
-  /** `drop` removes the rows. */
-  set: { method?: EncounterMethodId; label?: string | null } | 'drop';
+  /** `drop` removes the rows; `requires` replaces the rows' unlock ids. */
+  set: { method?: EncounterMethodId; label?: string | null; requires?: string[] } | 'drop';
   sourcePage?: string;
   reason: string;
 }
@@ -54,6 +58,8 @@ export interface EncounterOverrides {
   patches: readonly EncounterPatch[];
   exclusiveGroups: readonly ExclusiveGroupOverride[];
   eventOnly: readonly number[];
+  /** Species that only come from other games (plan §9, `requires-other-game`), with the reason shown. */
+  requiresOtherGame?: readonly RequiresOtherGame[];
 }
 
 /** Walked rows for a location's override encounters. */
@@ -77,6 +83,7 @@ export function overrideRows(
             levels: { min: o.level, max: o.level },
             rawLevels: String(o.level),
             rate: { kind: 'once' },
+            ...(o.conditions ? { conditions: [...o.conditions] } : {}),
             ...(o.note ? { note: o.note } : {}),
           },
         ],
@@ -125,6 +132,7 @@ export function applyEncounterPatches(
                   ...r,
                   method: set.method ?? r.method,
                   label: set.label === undefined ? r.label : set.label,
+                  requires: set.requires ? [...set.requires] : r.requires,
                 }
               : r,
           );

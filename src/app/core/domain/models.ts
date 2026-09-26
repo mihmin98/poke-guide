@@ -203,6 +203,13 @@ export interface EvolutionEdge {
   games?: GameId[];
 }
 
+/** Gold/Silver/Crystal: Gen I species that can only be moved in from Red/Blue/Yellow through the Time Capsule. */
+export interface RequiresOtherGame {
+  dex: number[];
+  /** Shown as the reason, e.g. "Transfer from Red, Blue or Yellow". */
+  detail: string;
+}
+
 export interface ExclusiveGroup {
   id: string;
   label: string;
@@ -251,6 +258,8 @@ export interface VersionGroupData {
   unlocks: Partial<Record<GameId, Unlock[]>>;
   exclusiveGroups: ExclusiveGroup[];
   eventOnly: number[];
+  /** Species that only come from other games (plan §9); absent when there are none. */
+  requiresOtherGame?: RequiresOtherGame[];
   locations: GameLocation[];
   sources: SourceRef[];
 }

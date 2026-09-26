@@ -230,6 +230,26 @@ export function splitItemNotes(
   return { items: kept, itemNotes };
 }
 
+/**
+ * Adds each location's entry requirements (`LocationConfig.requires`) to its items, in place. Encounters get them
+ * while the rows are collected.
+ */
+export function addLocationRequirements(
+  locations: readonly GameLocation[],
+  configs: readonly Pick<LocationConfig, 'id' | 'requires'>[],
+): void {
+  for (const config of configs) {
+    if (!config.requires) continue;
+    for (const item of locations.find((l) => l.id === config.id)?.items ?? []) {
+      const stated = item.requires ?? [];
+      const added = config.requires
+        .filter((id) => !stated.some((group) => group.length === 1 && group[0] === id))
+        .map((id) => [id]);
+      if (added.length > 0) item.requires = [...added, ...stated];
+    }
+  }
+}
+
 // ---- assembly ----
 
 export function assembleVersionGroup(
@@ -302,7 +322,11 @@ export function assembleVersionGroup(
   if (regionalNumbers) {
     for (const entry of list) {
       if (!regionalNumbers.has(entry.dex))
-        issue('warning', `#${entry.dex} ${entry.name} has no regional Pokédex number`, regionalPage!.title);
+        issue(
+          'warning',
+          `#${entry.dex} ${entry.name} has no regional Pokédex number`,
+          regionalPage!.title,
+        );
     }
   }
 
@@ -530,7 +554,11 @@ export function assembleVersionGroup(
         );
         continue;
       }
-      rows.push(walked);
+      rows.push(
+        location.requires
+          ? { ...walked, requires: [...new Set([...location.requires, ...walked.requires])] }
+          : walked,
+      );
     }
     locations.push({
       id: location.id,
@@ -571,6 +599,7 @@ export function assembleVersionGroup(
   // Items: overrides, prerequisites against unlocks, and the walkthrough cross-check (plan §7.13).
   for (const message of applyItemOverrides(locations, config.overrides.items, sourceOf))
     issue('error', message);
+  addLocationRequirements(locations, config.locations);
   for (const message of checkItemRequirements(locations, config.overrides.unlocks))
     issue('error', message);
   const numbered = assignItemNumbers(
@@ -612,7 +641,8 @@ export function assembleVersionGroup(
   if (group.features.breeding && !breeding)
     issue('warning', 'Breeding rules are not configured yet; breeding is left out');
   for (const id of breeding?.dayCareLocationIds ?? []) {
-    if (!locations.some((l) => l.id === id)) issue('error', `Day Care location "${id}" is not configured`);
+    if (!locations.some((l) => l.id === id))
+      issue('error', `Day Care location "${id}" is not configured`);
   }
 
   const data: VersionGroupData = {
@@ -644,6 +674,14 @@ export function assembleVersionGroup(
       members: [...members],
     })),
     eventOnly: [...encounterOverrides.eventOnly],
+    ...(encounterOverrides.requiresOtherGame?.length
+      ? {
+          requiresOtherGame: encounterOverrides.requiresOtherGame.map((r) => ({
+            dex: [...r.dex],
+            detail: r.detail,
+          })),
+        }
+      : {}),
     locations,
     sources: byTitle(mainSources),
   };

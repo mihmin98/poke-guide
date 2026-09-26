@@ -42,6 +42,9 @@ function renderTemplate(call: TemplateCall): string {
     case 'color2':
       // {{color2|<hex>|<link>|<text>}}: the text defaults to the link.
       return call.positional.length >= 3 ? arg(2) : arg(1);
+    case 'color':
+      // {{color|<hex>|<text>}}
+      return arg(1);
     case 'rt':
       return `Route ${arg(0)}`;
     case 'game':

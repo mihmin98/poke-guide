@@ -230,6 +230,7 @@ export function buildChecklist(
     if (!entry.obtainable) {
       const tradeEdge = edges.find((e) => e.to === dex && e.requiresTrade && sources.has(e.from));
       const elsewhere = others.filter(([, s]) => (s.get(dex)?.size ?? 0) > 0).map(([g]) => g);
+      const otherGame = data.requiresOtherGame?.find((r) => r.dex.includes(dex));
       if (data.eventOnly.includes(dex)) {
         entry.unobtainableReason = 'event-only';
       } else if (tradeEdge) {
@@ -238,6 +239,9 @@ export function buildChecklist(
       } else if (elsewhere.length > 0) {
         entry.unobtainableReason = 'other-version';
         entry.unobtainableDetail = `Available in ${elsewhere.join(', ')}`;
+      } else if (otherGame) {
+        entry.unobtainableReason = 'requires-other-game';
+        entry.unobtainableDetail = otherGame.detail;
       } else {
         entry.unobtainableReason = 'not-in-game';
       }

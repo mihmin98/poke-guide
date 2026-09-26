@@ -86,6 +86,29 @@ describe('overrideRows', () => {
       },
     ]);
   });
+
+  it('carries conditions onto the slot', () => {
+    const [lapras] = overrideRows(
+      'union-cave',
+      'Union Cave',
+      overrides({
+        encounters: [
+          {
+            locationId: 'union-cave',
+            dex: 131,
+            name: 'Lapras',
+            method: 'static',
+            games: ['gold'],
+            level: 20,
+            conditions: [{ kind: 'day-of-week', value: 'fri' }],
+            reason: 'prose',
+          },
+        ],
+      }),
+      sourceOf,
+    );
+    expect(lapras!.row.slots[0]!.conditions).toEqual([{ kind: 'day-of-week', value: 'fri' }]);
+  });
 });
 
 describe('applyEncounterPatches', () => {
@@ -129,6 +152,29 @@ describe('applyEncounterPatches', () => {
     expect(result.rows.map((r) => [r.row.dex, r.method, r.label])).toEqual([
       [1, 'starter', null],
       [133, 'gift', null],
+    ]);
+  });
+
+  it('replaces the requirements of matching rows', () => {
+    const result = applyEncounterPatches(
+      'dragons-den',
+      "Dragon's Den",
+      [row(147, 'gift'), row(147, 'surf')],
+      overrides({
+        patches: [
+          {
+            locationId: 'dragons-den',
+            match: { method: 'gift', dex: 147 },
+            set: { requires: ['surf', 'whirlpool'] },
+            reason: 'shrine',
+          },
+        ],
+      }),
+      sourceOf,
+    );
+    expect(result.rows.map((r) => [r.method, r.requires])).toEqual([
+      ['gift', ['surf', 'whirlpool']],
+      ['surf', []],
     ]);
   });
 });
