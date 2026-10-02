@@ -93,7 +93,10 @@ export const GSC_ENCOUNTER_OVERRIDES: EncounterOverrides = {
       requires: ['surf'],
       label: 'Red Gyarados',
       note: 'Always Shiny, with fixed DVs; drops the Red Scale',
-      reason: `Special encounter; level from ${pretBoth('maps/LakeOfRage.asm')}`,
+      // BATTLETYPE_FORCESHINY gives ATKDEFDV_SHINY $EA and SPDSPCDV_SHINY $AA (constants/battle_constants.asm).
+      ivs: { hp: 0, atk: 14, def: 10, spe: 10, spc: 10 },
+      shiny: 'guaranteed',
+      reason: `Special encounter; level, DVs and shininess from ${pretBoth('maps/LakeOfRage.asm')}`,
     },
     rocketHq(100, 'Voltorb', 23, 'B1F', 'maps/TeamRocketBaseB1F.asm'),
     rocketHq(74, 'Geodude', 21, 'B1F', 'maps/TeamRocketBaseB1F.asm'),

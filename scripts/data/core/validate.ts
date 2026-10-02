@@ -41,7 +41,18 @@ const slot = z.strictObject({
   levels: levels.nullable(),
   rate,
   conditions: z.array(z.looseObject({ kind: z.string() })).optional(),
-  ivs: z.unknown().optional(),
+  ivs: z
+    .discriminatedUnion('kind', [
+      z.strictObject({
+        kind: z.literal('fixed'),
+        values: z.partialRecord(
+          z.enum(['hp', 'atk', 'def', 'spa', 'spd', 'spe', 'spc']),
+          int.min(0).max(31),
+        ),
+      }),
+      z.strictObject({ kind: z.literal('min-perfect'), count: positive.max(6) }),
+    ])
+    .optional(),
   shiny: z.enum(['locked', 'guaranteed']).optional(),
   catchRateOverride: positive.optional(),
   note: z.string().optional(),

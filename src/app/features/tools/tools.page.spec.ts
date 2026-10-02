@@ -1,10 +1,11 @@
-import { signal } from '@angular/core';
+import { signal, type Type } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { routerFeatures } from '../../app.config';
 import { routes } from '../../app.routes';
 import { GameDataService } from '../../core/data/game-data.service';
 import { buildGameView } from '../../core/domain/game-view';
+import type { GameId } from '../../core/domain/models';
 import { testData, testSpecies } from '../../core/domain/testing/test-data';
 import { GEN1_MECHANICS, gen1HpDv, gen1Stat } from '../../core/mechanics/gen1';
 import { STATE_STORAGE } from '../../core/storage/storage.service';
@@ -42,11 +43,41 @@ const stub = {
   speciesByDex: signal(new Map(data.species.map((s) => [s.dex, s]))),
 };
 
+const SANDSHREW_BASE = { hp: 50, atk: 75, def: 85, spa: 20, spd: 30, spe: 40 };
+
+const gscData = testData({
+  versionGroupId: 'gsc',
+  generation: 2,
+  games: ['gold', 'silver', 'crystal'],
+  species: [
+    testSpecies(27, {
+      name: 'Sandshrew',
+      slug: 'sandshrew',
+      types: ['ground'],
+      catchRate: 30,
+      weightKg: 12,
+      genderRatio: 0.5,
+      baseStats: SANDSHREW_BASE,
+    }),
+  ],
+});
+
+const gscStub = {
+  ...stub,
+  data: signal(gscData),
+  view: signal(buildGameView(gscData, 'gold')),
+  species: signal(gscData.species),
+  speciesByDex: signal(new Map(gscData.species.map((s) => [s.dex, s]))),
+};
+
 function setUp(): void {
   TestBed.configureTestingModule({
     providers: [
       { provide: STATE_STORAGE, useValue: null },
-      { provide: GameDataService, useValue: { forGame: () => stub } },
+      {
+        provide: GameDataService,
+        useValue: { forGame: (game: GameId) => (gscData.games.includes(game) ? gscStub : stub) },
+      },
       provideRouter(routes, ...routerFeatures),
     ],
   });
@@ -97,14 +128,15 @@ describe('CatchToolPage (plan §13.11)', () => {
     expect(el.querySelector('.headline')!.textContent).not.toBe(before);
   });
 
-  it('offers the Safari Game controls and the remaining-balls hint', () => {
+  it('offers the Safari Game controls and the remaining-balls hint with a Safari Ball', () => {
     const { fixture, el } = render({ dex: '25' });
-    expect(el.textContent).toContain('Safari Game');
+    expect(el.querySelector('.controls')?.textContent).not.toContain('Safari Game');
     const ball = select(el, 1);
     ball.value = 'safari';
     ball.dispatchEvent(new Event('change'));
     fixture.detectChanges();
-    expect(el.querySelector('.safari')?.textContent).toContain('Safari Balls left');
+    expect(el.querySelector('.controls')?.textContent).toContain('Safari Game');
+    expect(el.querySelector('.limited')?.textContent).toContain('Safari Balls left');
   });
 
   it('estimates the max HP from the level and follows the slider', () => {
@@ -142,7 +174,7 @@ describe('CatchToolPage (plan §13.11)', () => {
   });
 
   it('explains that a generation without a module has no calculator yet', () => {
-    const { el } = render({ game: 'crystal' });
+    const { el } = render({ game: 'emerald' });
     expect(el.querySelector('.status')?.textContent).toContain('have not been written yet');
   });
 });
@@ -238,5 +270,65 @@ describe('IvToolPage (plan §13.11)', () => {
     const { el } = render();
     expect(el.querySelector('.shiny h2')?.textContent).toBe('Shiny if moved to Generation II');
     expect(el.querySelector('.shiny')?.textContent).toContain('tall grass');
+  });
+});
+
+describe('the tools with Generation II rules', () => {
+  beforeEach(setUp);
+  afterEach(() => TestBed.resetTestingModule());
+
+  function render<T>(page: Type<T>) {
+    const fixture = TestBed.createComponent(page);
+    fixture.componentRef.setInput('game', 'gold');
+    fixture.componentRef.setInput('dex', '27');
+    fixture.detectChanges();
+    return { fixture, el: fixture.nativeElement as HTMLElement };
+  }
+
+  function choose(fixture: { detectChanges(): void }, element: HTMLSelectElement, value: string) {
+    element.value = value;
+    element.dispatchEvent(new Event('change'));
+    fixture.detectChanges();
+  }
+
+  it('shows a ball’s own inputs and notes, and no shake count', () => {
+    const { fixture, el } = render(CatchToolPage);
+    expect(el.textContent).not.toContain('Shakes when it breaks free');
+    const ball = el.querySelectorAll('select')[1] as HTMLSelectElement;
+    choose(fixture, ball, 'level');
+    expect(el.querySelector('.controls')?.textContent).toContain('Your Pokémon’s level');
+    expect(el.querySelector('.notes')?.textContent).toContain('skips the HP and status steps');
+
+    choose(fixture, ball, 'love');
+    const love = [...el.querySelectorAll('.controls select')].find((s) =>
+      s.textContent?.includes('Same species, same gender'),
+    ) as HTMLSelectElement;
+    const before = el.querySelector('.headline')!.textContent;
+    choose(fixture, love, 'same-gender');
+    expect(el.querySelector('.headline')!.textContent).not.toBe(before);
+  });
+
+  it('offers the remaining-balls odds for Park Balls', () => {
+    const { fixture, el } = render(CatchToolPage);
+    choose(fixture, el.querySelectorAll('select')[1] as HTMLSelectElement, 'park');
+    expect(el.querySelector('.limited')?.textContent).toContain('Park Balls left');
+  });
+
+  it('lists the Generation II stats and narrows by gender and shininess', () => {
+    const { fixture, el } = render(IvToolPage);
+    const headers = [...el.querySelectorAll('table.readings thead th')].map((th) => th.textContent);
+    expect(headers).toContain('Sp. Atk');
+    expect(headers).toContain('Sp. Def');
+
+    const traits = [...el.querySelectorAll('.traits select')] as HTMLSelectElement[];
+    expect(traits.map((s) => s.parentElement?.querySelector('span')?.textContent)).toEqual([
+      'Gender',
+      'Shiny',
+    ]);
+    choose(fixture, traits[1]!, 'yes');
+    expect(el.querySelector('.result .headline')?.textContent).toContain('8 DV sets still match');
+    expect(el.querySelector('.trait-results')?.textContent).toContain('Male, Female');
+    choose(fixture, traits[0]!, 'female');
+    expect(el.querySelector('.result .headline')?.textContent).toContain('4 DV sets still match');
   });
 });

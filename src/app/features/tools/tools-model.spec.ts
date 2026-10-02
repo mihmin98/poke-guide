@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { GEN1_MECHANICS } from '../../core/mechanics/gen1';
+import { GEN2_MECHANICS } from '../../core/mechanics/gen2';
 import {
   alwaysWorks,
   buildCatchGrid,
@@ -8,6 +9,8 @@ import {
   formatChance,
   formatOdds,
   hpAtPercent,
+  inputsForBall,
+  resolveInputs,
 } from './catch-model';
 import { formatIvList, narrowingLabel, shinyLabel } from './iv-model';
 
@@ -63,6 +66,33 @@ describe('catch grid (plan §13.11)', () => {
   it('knows which balls always work', () => {
     expect(alwaysWorks(GEN1_MECHANICS, 'master')).toBe(true);
     expect(alwaysWorks(GEN1_MECHANICS, 'ultra')).toBe(false);
+  });
+});
+
+describe('capture inputs', () => {
+  it('shows an input only with the balls it is tied to', () => {
+    expect(inputsForBall(GEN1_MECHANICS, 'poke')).toEqual([]);
+    expect(inputsForBall(GEN1_MECHANICS, 'safari').map((def) => def.id)).toEqual(['safari']);
+    expect(inputsForBall(GEN2_MECHANICS, 'lure').map((def) => def.id)).toEqual(['fishing']);
+  });
+
+  it('fills in defaults, the wild level included, and ignores values of the wrong kind', () => {
+    expect(resolveInputs(GEN2_MECHANICS, {}, 12)).toEqual({
+      'your-level': 12,
+      fishing: false,
+      love: 'other',
+    });
+    expect(resolveInputs(GEN2_MECHANICS, { 'your-level': 40, fishing: 'yes' }, 12)).toMatchObject({
+      'your-level': 40,
+      fishing: false,
+    });
+    expect(resolveInputs(GEN2_MECHANICS, {}, undefined)).not.toHaveProperty('your-level');
+  });
+
+  it('gives every Gen II ball its own row in the grid', () => {
+    const grid = buildCatchGrid(GEN2_MECHANICS, { catchRate: 45, currentHp: 100, maxHp: 100 });
+    expect(grid.rows).toHaveLength(GEN2_MECHANICS.capture.balls.length);
+    expect(grid.rows.find((row) => row.ball.id === 'master')?.cells[0]?.best).toBe(false);
   });
 });
 

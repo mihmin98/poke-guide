@@ -99,6 +99,8 @@ export const gscConfig: VersionGroupConfig = {
         games: ['gold', 'silver', 'crystal'],
         // Trades that differ per game span two rows, one colored for Gold and Silver, one for Crystal.
         cellColorGames: { gold: ['gold'], silver: ['silver'], crystal: ['crystal'] },
+        // Every Gen II trade has fixed DVs, matching pret `data/events/npc_trades.asm` in pokegold and pokecrystal.
+        dvOrder: ['hp', 'atk', 'def', 'spe', 'spc'],
       },
     ],
   },

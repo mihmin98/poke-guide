@@ -246,14 +246,14 @@ describe('gen1 capture', () => {
 
   it('applies the Safari Game bait and rock modifiers', () => {
     const plain = capture({ ballId: 'safari', catchRate: 45 });
-    const bait = capture({ ballId: 'safari', catchRate: 45, context: { safari: 'bait' } });
-    const rock = capture({ ballId: 'safari', catchRate: 45, context: { safari: 'rock' } });
+    const bait = capture({ ballId: 'safari', catchRate: 45, inputs: { safari: 'bait' } });
+    const rock = capture({ ballId: 'safari', catchRate: 45, inputs: { safari: 'rock' } });
     expect(bait.effectiveCatchRate).toBe(22);
     expect(rock.effectiveCatchRate).toBe(90);
     expect(bait.probability).toBeLessThan(plain.probability);
     expect(rock.probability).toBeGreaterThan(plain.probability);
     // A rock doubles with an 8-bit saturate (pret `item_effects.asm`), so it stops at 255.
-    expect(capture({ ballId: 'safari', catchRate: 200, context: { safari: 'rock' } })
+    expect(capture({ ballId: 'safari', catchRate: 200, inputs: { safari: 'rock' } })
       .effectiveCatchRate).toBe(255);
   });
 
@@ -311,7 +311,7 @@ describe('mechanics registry', () => {
   });
 
   it('returns undefined for a generation without a module yet', () => {
-    expect(mechanicsForGame('crystal')).toBeUndefined();
+    expect(mechanicsForGame('emerald')).toBeUndefined();
     expect(findMechanics('gen9')).toBeUndefined();
   });
 

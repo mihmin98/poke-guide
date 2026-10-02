@@ -3,6 +3,8 @@ import type { StatId } from '../../core/domain/models';
 import type {
   BallDef,
   CaptureInput,
+  CaptureInputDef,
+  CaptureInputValue,
   CaptureResult,
   GenerationMechanics,
   StatusDef,
@@ -63,6 +65,38 @@ export function buildCatchGrid(
   });
 
   return { statuses, rows };
+}
+
+/** The inputs to show for a ball: the general ones and the ones tied to it. */
+export function inputsForBall(mechanics: GenerationMechanics, ballId: string): CaptureInputDef[] {
+  return (mechanics.capture.inputs ?? []).filter((def) => !def.balls || def.balls.includes(ballId));
+}
+
+/** An input's value: the player's choice, else its default (`'target-level'` → the wild level). */
+export function inputValue(
+  def: CaptureInputDef,
+  chosen: Readonly<Record<string, CaptureInputValue>>,
+  level: number | undefined,
+): CaptureInputValue | undefined {
+  const value = chosen[def.id];
+  if (typeof value === VALUE_TYPES[def.kind]) return value;
+  return def.defaultValue === 'target-level' ? level : def.defaultValue;
+}
+
+const VALUE_TYPES = { select: 'string', number: 'number', boolean: 'boolean' } as const;
+
+/** Every input's value, defaults filled in, for `CaptureInput.inputs`. */
+export function resolveInputs(
+  mechanics: GenerationMechanics,
+  chosen: Readonly<Record<string, CaptureInputValue>>,
+  level: number | undefined,
+): Record<string, CaptureInputValue> {
+  const values: Record<string, CaptureInputValue> = {};
+  for (const def of mechanics.capture.inputs ?? []) {
+    const value = inputValue(def, chosen, level);
+    if (value !== undefined) values[def.id] = value;
+  }
+  return values;
 }
 
 /** True when the ball catches even the hardest Pokémon at full HP with no status. */

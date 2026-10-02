@@ -12,7 +12,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 import { GameDataService } from '../../core/data/game-data.service';
 import type { GameId, Species } from '../../core/domain/models';
-import { mechanicsForGame } from '../../core/mechanics';
+import {
+  mechanicsForGame,
+  type CaptureInputDef,
+  type CaptureInputValue,
+} from '../../core/mechanics';
 import { findGame } from '../../core/games/registry';
 import { Sprite } from '../../shared/components/sprite';
 import { catchRateFor } from '../location/location-model';
@@ -23,6 +27,8 @@ import {
   formatChance,
   formatOdds,
   hpAtPercent,
+  inputsForBall,
+  resolveInputs,
 } from './catch-model';
 
 /** `/:game/tools/catch` (plan §13.11): exact capture odds, driven entirely by the generation's rules. */
@@ -67,15 +73,41 @@ import {
               </select>
             </label>
 
-            @for (context of m.capture.contexts ?? []; track context.id) {
-              <label class="field">
-                <span [title]="context.hint ?? ''">{{ context.label }}</span>
-                <select [value]="contextValue(context.id)" (change)="onContext(context.id, $event)">
-                  @for (option of context.options; track option.id) {
-                    <option [value]="option.id">{{ option.label }}</option>
-                  }
-                </select>
-              </label>
+            @for (def of visibleInputs(); track def.id) {
+              @switch (def.kind) {
+                @case ('select') {
+                  <label class="field">
+                    <span [title]="def.hint ?? ''">{{ def.label }}</span>
+                    <select [value]="inputText(def)" (change)="onSelectInput(def.id, $event)">
+                      @for (option of optionsOf(def); track option.id) {
+                        <option [value]="option.id">{{ option.label }}</option>
+                      }
+                    </select>
+                  </label>
+                }
+                @case ('number') {
+                  <label class="field narrow">
+                    <span [title]="def.hint ?? ''">{{ def.label }}</span>
+                    <input
+                      type="number"
+                      [min]="rangeOf(def).min"
+                      [max]="rangeOf(def).max"
+                      [value]="inputText(def)"
+                      (input)="onNumberInput(def, $event)"
+                    />
+                  </label>
+                }
+                @case ('boolean') {
+                  <label class="field check" [title]="def.hint ?? ''">
+                    <input
+                      type="checkbox"
+                      [checked]="resolvedInputs()[def.id] === true"
+                      (change)="onBooleanInput(def.id, $event)"
+                    />
+                    <span>{{ def.label }}</span>
+                  </label>
+                }
+              }
             }
           </div>
 
@@ -123,8 +155,9 @@ import {
             </label>
           </div>
           <p class="sub">
-            Max HP is an estimate for level {{ chosenLevel() }} with average DVs and no Stat Exp — type the
-            real number from the battle screen for an exact answer.
+            Max HP is an estimate for level {{ chosenLevel() }} with average {{ m.ivSystem.label }}s
+            and no {{ m.effortLabel }} — type the real number from the battle screen for an exact
+            answer.
           </p>
         </section>
 
@@ -136,7 +169,7 @@ import {
               <p class="sub">
                 Catch rate {{ catchRate() }}
                 @if (result().effectiveCatchRate !== catchRate()) {
-                  → {{ result().effectiveCatchRate }} after bait or rocks
+                  → {{ result().effectiveCatchRate }} for this throw
                 }
                 · {{ currentHp() }}/{{ maxHp() }} HP · {{ ballName() }} · {{ statusLabel() }}
               </p>
@@ -145,6 +178,13 @@ import {
 
           <p class="headline">{{ chance(result().probability) }}</p>
           <p class="sub">per throw — {{ odds(result().expectedThrows) }}</p>
+          @if (result().notes; as notes) {
+            <ul class="notes">
+              @for (note of notes; track note) {
+                <li>{{ note }}</li>
+              }
+            </ul>
+          }
 
           <dl class="facts">
             @if (result().throwsFor; as needed) {
@@ -161,35 +201,32 @@ import {
                 <dd>{{ needed.p99 }}</dd>
               </div>
             }
-            @if (m.capture.reportsShakes) {
+            @if (m.capture.reportsShakes && result().shakesOnFailure !== undefined) {
               <div>
                 <dt>Shakes when it breaks free</dt>
-                <dd>{{ shakeLabel(result().shakesOnFailure) }}</dd>
+                <dd>{{ shakeLabel(result().shakesOnFailure!) }}</dd>
               </div>
             }
           </dl>
 
-          @if (m.capture.reportsShakes) {
-            <p class="sub">
-              In this generation the shakes are fixed for a given ball, status and HP, so more shakes
-              than you have seen before with the same setup means the Pokémon is caught.
-            </p>
+          @if (m.capture.reportsShakes && m.capture.shakesNote) {
+            <p class="sub">{{ m.capture.shakesNote }}</p>
           }
 
-          @if (isSafari()) {
-            <p class="safari">
+          @if (limited(); as supply) {
+            <p class="limited">
               <mat-icon aria-hidden="true">pets</mat-icon>
-              With {{ safariBalls() }} Safari Balls left, the chance of catching it is
-              <strong>{{ chance(withinSafari()) }}</strong
+              With {{ ballsLeft() }} {{ supply.label }}, the chance of catching it is
+              <strong>{{ chance(withinLimited()) }}</strong
               >.
               <label>
-                <span class="sr-only">Safari Balls left</span>
+                <span class="sr-only">{{ supply.label }}</span>
                 <input
                   type="number"
                   min="1"
-                  max="30"
-                  [value]="safariBalls()"
-                  (input)="onSafariBalls($event)"
+                  [max]="supply.count"
+                  [value]="ballsLeft()"
+                  (input)="onBallsLeft($event)"
                 />
               </label>
             </p>
@@ -245,7 +282,7 @@ import {
             @for (source of m.sources; track source.url) {
               <li>
                 <a [href]="source.url" target="_blank" rel="noopener noreferrer">
-                  {{ source.label }} on Bulbapedia
+                  {{ source.label }} on {{ source.site ?? 'Bulbapedia' }}
                 </a>
               </li>
             }
@@ -363,7 +400,23 @@ import {
       margin: 0;
       font: var(--mat-sys-body-medium);
     }
-    .safari {
+    .field.check {
+      flex: 0 1 auto;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+      padding-bottom: 6px;
+    }
+    .field.check > span {
+      font: var(--mat-sys-body-medium);
+      color: var(--mat-sys-on-surface);
+    }
+    .notes {
+      margin: 12px 0 0;
+      padding-left: 20px;
+      font: var(--mat-sys-body-medium);
+    }
+    .limited {
       display: flex;
       align-items: center;
       gap: 8px;
@@ -371,7 +424,7 @@ import {
       margin: 16px 0 0;
       font: var(--mat-sys-body-medium);
     }
-    .safari input {
+    .limited input {
       width: 72px;
     }
     .table-wrap {
@@ -444,8 +497,8 @@ export class CatchToolPage {
 
   protected readonly ballId = signal('poke');
   protected readonly statusId = signal('none');
-  protected readonly context = signal<Record<string, string>>({});
-  protected readonly safariBalls = signal(30);
+  /** The player's input choices; the rest keep their defaults (`resolvedInputs`). */
+  private readonly chosenInputs = signal<Record<string, CaptureInputValue>>({});
 
   /** Seeded from `?level=`, then the player's to change. */
   protected readonly chosenLevel = linkedSignal(() => clampInt(this.level(), 1, 100, 20));
@@ -471,30 +524,41 @@ export class CatchToolPage {
     catchRateFor(this.species(), this.gameId(), undefined),
   );
 
-  protected readonly result = computed(() => {
-    const mechanics = this.mechanics()!;
-    return mechanics.capture.compute({
-      catchRate: this.catchRate() ?? 0,
+  protected readonly visibleInputs = computed(() =>
+    inputsForBall(this.mechanics()!, this.ballId()),
+  );
+  protected readonly resolvedInputs = computed(() =>
+    resolveInputs(this.mechanics()!, this.chosenInputs(), this.chosenLevel()),
+  );
+
+  /** Everything but the ball and status, shared by the headline result and the grid. */
+  private readonly situation = computed(() => ({
+    catchRate: this.catchRate() ?? 0,
+    currentHp: this.currentHp(),
+    maxHp: this.maxHp(),
+    level: this.chosenLevel(),
+    target: this.species(),
+    game: this.gameId(),
+    inputs: this.resolvedInputs(),
+  }));
+
+  protected readonly result = computed(() =>
+    this.mechanics()!.capture.compute({
+      ...this.situation(),
       ballId: this.ballId(),
       statusId: this.statusId(),
-      currentHp: this.currentHp(),
-      maxHp: this.maxHp(),
-      context: this.context(),
-    });
-  });
-
-  protected readonly grid = computed(() =>
-    buildCatchGrid(this.mechanics()!, {
-      catchRate: this.catchRate() ?? 0,
-      currentHp: this.currentHp(),
-      maxHp: this.maxHp(),
-      context: this.context(),
     }),
   );
 
-  protected readonly isSafari = computed(() => this.ballId() === 'safari');
-  protected readonly withinSafari = computed(() =>
-    chanceWithin(this.result().probability, this.safariBalls()),
+  protected readonly grid = computed(() => buildCatchGrid(this.mechanics()!, this.situation()));
+
+  /** Safari Balls, Park Balls: handed out in a fixed number. */
+  protected readonly limited = computed(
+    () => this.mechanics()?.capture.balls.find((b) => b.id === this.ballId())?.limited,
+  );
+  protected readonly ballsLeft = linkedSignal(() => this.limited()?.count ?? 1);
+  protected readonly withinLimited = computed(() =>
+    chanceWithin(this.result().probability, this.ballsLeft()),
   );
   protected readonly ballName = computed(
     () => this.mechanics()?.capture.balls.find((b) => b.id === this.ballId())?.name ?? '',
@@ -511,9 +575,14 @@ export class CatchToolPage {
   protected shakeLabel(shakes: number): string {
     return shakes === 0 ? 'the ball misses' : `${shakes} ${shakes === 1 ? 'shake' : 'shakes'}`;
   }
-  protected contextValue(id: string): string {
-    const context = this.mechanics()?.capture.contexts?.find((c) => c.id === id);
-    return this.context()[id] ?? context?.defaultOptionId ?? '';
+  protected inputText(def: CaptureInputDef): string {
+    return String(this.resolvedInputs()[def.id] ?? '');
+  }
+  protected optionsOf(def: CaptureInputDef): { id: string; label: string }[] {
+    return def.kind === 'select' ? def.options : [];
+  }
+  protected rangeOf(def: CaptureInputDef): { min: number; max: number } {
+    return def.kind === 'number' ? def : { min: 0, max: 0 };
   }
   protected onSpecies(event: Event): void {
     this.chosenDex.set(Number((event.target as HTMLSelectElement).value));
@@ -524,9 +593,19 @@ export class CatchToolPage {
   protected onStatus(event: Event): void {
     this.statusId.set((event.target as HTMLSelectElement).value);
   }
-  protected onContext(id: string, event: Event): void {
-    const value = (event.target as HTMLSelectElement).value;
-    this.context.update((current) => ({ ...current, [id]: value }));
+  protected onSelectInput(id: string, event: Event): void {
+    this.setInput(id, (event.target as HTMLSelectElement).value);
+  }
+  protected onNumberInput(def: CaptureInputDef, event: Event): void {
+    const { min, max } = this.rangeOf(def);
+    const raw = (event.target as HTMLInputElement).value;
+    this.setInput(def.id, clampInt(raw, min, max, Number(this.inputText(def)) || min));
+  }
+  protected onBooleanInput(id: string, event: Event): void {
+    this.setInput(id, (event.target as HTMLInputElement).checked);
+  }
+  private setInput(id: string, value: CaptureInputValue): void {
+    this.chosenInputs.update((current) => ({ ...current, [id]: value }));
   }
   protected onLevel(event: Event): void {
     this.chosenLevel.set(clampInt((event.target as HTMLInputElement).value, 1, 100, 20));
@@ -540,8 +619,9 @@ export class CatchToolPage {
   protected onHpPercent(event: Event): void {
     this.currentHp.set(hpAtPercent(this.maxHp(), Number((event.target as HTMLInputElement).value)));
   }
-  protected onSafariBalls(event: Event): void {
-    this.safariBalls.set(clampInt(Number((event.target as HTMLInputElement).value), 1, 30, 30));
+  protected onBallsLeft(event: Event): void {
+    const count = this.limited()?.count ?? 1;
+    this.ballsLeft.set(clampInt((event.target as HTMLInputElement).value, 1, count, count));
   }
 }
 

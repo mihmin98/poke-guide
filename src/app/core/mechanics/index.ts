@@ -2,14 +2,15 @@
 import { getGame, versionGroupOf } from '../games/registry';
 import type { GameId } from '../games/types';
 import { GEN1_MECHANICS } from './gen1';
+import { GEN2_MECHANICS } from './gen2';
 import type { GenerationMechanics } from './types';
 
 export * from './types';
 
-const MECHANICS: readonly GenerationMechanics[] = [GEN1_MECHANICS];
+const MECHANICS: readonly GenerationMechanics[] = [GEN1_MECHANICS, GEN2_MECHANICS];
 const BY_ID = new Map(MECHANICS.map((m) => [m.id, m]));
 
-/** `undefined` for a generation whose module isn't written yet (gen2, gen3…). */
+/** `undefined` for a generation whose module isn't written yet (gen3…). */
 export function findMechanics(id: string): GenerationMechanics | undefined {
   return BY_ID.get(id);
 }

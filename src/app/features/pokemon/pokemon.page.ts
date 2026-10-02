@@ -139,9 +139,9 @@ const GROWTH_RATES: Record<string, string> = {
               <span class="stat-value">{{ statTotal() }}</span>
             </li>
           </ul>
-          <p class="sub">
-            Defeating one gives {{ effortLabel() }} equal to these values.
-          </p>
+          @if (effortDescription(); as description) {
+            <p class="sub">{{ description }}</p>
+          }
           <p class="sub">
             A Pokémon's own stats also depend on its {{ ivLabel() }}s and {{ effortLabel() }} —
             <a [routerLink]="['/', game(), 'tools', 'ivs']" [queryParams]="{ dex: v.species.dex }">
@@ -181,12 +181,22 @@ const GROWTH_RATES: Record<string, string> = {
             <a [routerLink]="['/', game(), 'tools', 'catch']" [queryParams]="{ dex: v.species.dex }">
               Open the catch calculator</a
             >
-            to change the HP, throw bait or rocks and see how many balls you need.
+            to change the HP and the situation and see how many balls you need.
           </p>
         </section>
       }
 
-      @if (shinyTransfer(); as transfer) {
+      @if (shinyRule(); as rule) {
+        <section>
+          <h2>{{ rule.label }}</h2>
+          <p>{{ rule.description }}</p>
+          <p class="sub">
+            <a [routerLink]="['/', game(), 'tools', 'ivs']" [queryParams]="{ dex: v.species.dex }">
+              Check a caught {{ v.species.name }} in the {{ ivLabel() }} calculator</a
+            >.
+          </p>
+        </section>
+      } @else if (shinyTransfer(); as transfer) {
         <section>
           <h2>{{ transfer.label }}</h2>
           <p>{{ transfer.description }}</p>
@@ -701,7 +711,9 @@ export class PokemonPage {
   private readonly mechanics = computed(() => mechanicsForGame(this.gameId()));
   protected readonly ivLabel = computed(() => this.mechanics()?.ivSystem.label ?? 'IV');
   protected readonly effortLabel = computed(() => this.mechanics()?.effortLabel ?? 'EVs');
+  protected readonly effortDescription = computed(() => this.mechanics()?.effortDescription);
   protected readonly shinyTransfer = computed(() => this.mechanics()?.shiny.transfer);
+  protected readonly shinyRule = computed(() => this.mechanics()?.shiny.dvRule);
   protected readonly generationName = computed(() => {
     const game = findGame(this.game());
     return game ? `Generation ${ROMAN[game.generation] ?? game.generation}` : 'this generation';
@@ -748,7 +760,13 @@ export class PokemonPage {
     const mechanics = this.mechanics();
     const catchRate = this.catchRate();
     if (!mechanics || catchRate === undefined) return undefined;
-    return buildCatchGrid(mechanics, { catchRate, currentHp: 100, maxHp: 100 });
+    return buildCatchGrid(mechanics, {
+      catchRate,
+      currentHp: 100,
+      maxHp: 100,
+      target: this.view()?.species,
+      game: this.gameId(),
+    });
   });
 
   protected readonly chance = formatChance;

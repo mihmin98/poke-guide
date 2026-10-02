@@ -1,20 +1,31 @@
 // FRAMEWORK-FREE: per-generation rules (plan §4.5). No Angular imports.
 //
 // A version group picks its module through `VersionGroupDefinition.mechanicsId`. Everything here is
-// generic: the tool pages (plan §13.11) render whatever balls, statuses and contexts a module declares,
-// so adding Gen II means adding `gen2.ts`, not touching the UI.
-import type { StatId } from '../domain/models';
+// generic: the tool pages (plan §13.11) render whatever balls, statuses, inputs and summary-screen traits
+// a module declares, so adding a generation means adding its module, not touching the UI.
+import type { Species, StatId } from '../domain/models';
+import type { GameId } from '../games/types';
 
 export interface SourceRef {
   label: string;
   url: string;
+  /** Where the page lives; Bulbapedia when absent. */
+  site?: string;
 }
+
+/** What a generation's rules may read about the target species (Heavy Ball weight, gender ratio). */
+export type TargetSpecies = Pick<Species, 'dex' | 'weightKg' | 'genderRatio'>;
 
 export interface BallDef {
   id: string;
   name: string;
   /** Shown as the default choice and first in comparison tables. */
   common?: boolean;
+  /**
+   * A ball handed out in a fixed number for one place (Safari Balls, Park Balls): the page also shows
+   * the chance of a catch before they run out.
+   */
+  limited?: { count: number; label: string };
 }
 
 export interface StatusDef {
@@ -22,15 +33,35 @@ export interface StatusDef {
   label: string;
 }
 
-/** A capture modifier that is not a ball or a status, e.g. the Gen I Safari Game's bait and rocks. */
-export interface CaptureContextDef {
+interface CaptureInputBase {
   id: string;
   label: string;
-  /** Explains when the context applies ("Only in the Safari Zone"). */
+  /** Explains when the input applies ("Only in the Safari Zone"). */
   hint?: string;
-  options: { id: string; label: string }[];
-  defaultOptionId: string;
+  /** Shown, and read by `compute`, only for these balls. Absent: it applies to every throw. */
+  balls?: string[];
 }
+
+/**
+ * A capture modifier that is not a ball or a status: the Gen I Safari Game's bait and rocks, or the
+ * situation a Gen II Apricorn ball checks (fishing, the player's Pokémon).
+ */
+export type CaptureInputDef =
+  | (CaptureInputBase & {
+      kind: 'select';
+      options: { id: string; label: string }[];
+      defaultValue: string;
+    })
+  | (CaptureInputBase & {
+      kind: 'number';
+      min: number;
+      max: number;
+      /** `'target-level'` starts the field at the wild Pokémon's level. */
+      defaultValue: number | 'target-level';
+    })
+  | (CaptureInputBase & { kind: 'boolean'; defaultValue: boolean });
+
+export type CaptureInputValue = string | number | boolean;
 
 export interface CaptureInput {
   /** The species' catch rate for the game, already resolved (`catchRateFor`, location-model.ts). */
@@ -39,8 +70,14 @@ export interface CaptureInput {
   statusId: string;
   currentHp: number;
   maxHp: number;
-  /** Context id → option id. Unknown ids are ignored. */
-  context?: Readonly<Record<string, string>>;
+  /** The wild Pokémon's level (the Gen II Level Ball compares it with the player's). */
+  level?: number;
+  /** Balls that read the species (weight, gender) give no bonus without it. */
+  target?: TargetSpecies;
+  /** The game played, for quirks that differ inside a version group (Crystal's Heavy Ball). */
+  game?: GameId;
+  /** `CaptureInputDef` id → value. Unknown ids are ignored; a missing one takes its default. */
+  inputs?: Readonly<Record<string, CaptureInputValue>>;
 }
 
 export interface CaptureResult {
@@ -50,20 +87,24 @@ export interface CaptureResult {
   expectedThrows: number | null;
   /** Balls needed to reach each confidence level, or `null` when capture is impossible. */
   throwsFor: { p50: number; p90: number; p99: number } | null;
-  /** The catch rate after context modifiers (Gen I bait/rock). */
+  /** The catch rate after the ball and inputs changed it (Gen I bait/rock, Gen II balls). */
   effectiveCatchRate: number;
-  /** How many times the ball shakes when the Pokémon breaks free (0 = the ball misses). */
-  shakesOnFailure: number;
+  /** Where `reportsShakes`: how many times the ball shakes when the Pokémon breaks free (0 = a miss). */
+  shakesOnFailure?: number;
   /** True when no throw can fail (a Master Ball, or a value the formula guarantees). */
   guaranteed: boolean;
+  /** What changed the odds and why, game bugs included ("The Moon Ball never gets its bonus"). */
+  notes?: string[];
 }
 
 export interface CaptureFormula {
   balls: BallDef[];
   statuses: StatusDef[];
-  contexts?: CaptureContextDef[];
-  /** Whether the generation's break-free animation carries information (Gen I shakes). */
+  inputs?: CaptureInputDef[];
+  /** Whether the break-free animation is fixed for a given throw, so it carries information (Gen I). */
   reportsShakes: boolean;
+  /** Explains how to read the shakes, where `reportsShakes`. */
+  shakesNote?: string;
   compute(input: CaptureInput): CaptureResult;
 }
 
@@ -90,15 +131,41 @@ export interface StatObservation {
 
 export type ShinyVerdict = 'yes' | 'no' | 'possible';
 
+/** The four DVs Gen I–II store; HP is built from them. */
+export type DvSet = Readonly<Record<'atk' | 'def' | 'spe' | 'spc', number>>;
+
+/**
+ * Something on the summary screen besides the stats that the DVs decide (Gen II: gender, Shiny,
+ * Unown's letter). The player can enter it to narrow the DVs, and the solver lists what still fits.
+ */
+export interface DvTraitDef {
+  id: string;
+  label: string;
+  options: { id: string; label: string }[];
+  /** Whether the species has the trait at all (gender: not for genderless or single-gender species). */
+  appliesTo(species: TargetSpecies): boolean;
+  /** The option id a complete DV set gives. */
+  valueOf(dvs: DvSet, species: TargetSpecies): string;
+}
+
+export interface IvSolveOptions {
+  /** Needed for `dvTraits`. */
+  species?: TargetSpecies;
+  /** Trait id → option id the player read off the summary screen. */
+  traits?: Readonly<Record<string, string>>;
+}
+
 export interface IvSolution {
   /** Possible values per stat, ascending. Empty for a stat with no consistent value. */
   possible: Partial<Record<StatId, number[]>>;
   /** How many complete IV/DV sets match every observation. */
   combinations: number;
-  /** True when nothing matches: the stats, level or base stats disagree. */
+  /** True when nothing matches: the stats, level, traits or base stats disagree. */
   contradiction: boolean;
-  /** Only meaningful where `shiny.transfer` is set (Gen I → II). */
+  /** Whether the matching sets are Shiny, by `shiny.transfer` or `shiny.dvRule`. */
   shiny: ShinyVerdict;
+  /** Trait id → option ids still possible, for the traits that apply to the species. */
+  traits?: Partial<Record<string, string[]>>;
 }
 
 export interface ShinyRules {
@@ -106,6 +173,12 @@ export interface ShinyRules {
   inGame: boolean;
   /** Base odds as a denominator (1/`odds`), when `inGame`. */
   odds?: number;
+  /** Where the DVs decide shininess in the game itself (Gen II): the rule as the UI states it. */
+  dvRule?: {
+    label: string;
+    description: string;
+    isShiny(dvs: Partial<Record<StatId, number>>): boolean;
+  };
   /**
    * Set when a Pokémon caught here becomes Shiny after transfer to a later generation (Gen I → II):
    * the rule is stated for the UI, and `isShiny` decides from a complete IV/DV set.
@@ -139,8 +212,16 @@ export interface GenerationMechanics {
   effortFromDefeat(baseStats: Partial<Record<StatId, number>>): Partial<Record<StatId, number>>;
   /** How that effort is described in this generation ("Stat Exp", "EVs"). */
   effortLabel: string;
+  /** One sentence for the base-stat table: what defeating the species gives. */
+  effortDescription: string;
+  /** Summary-screen details the DVs decide, for the IV/DV calculator. */
+  dvTraits?: DvTraitDef[];
   /** Narrows IVs/DVs from summary-screen stats (plan §13.11). */
-  solveIvs(base: Partial<Record<StatId, number>>, observations: readonly StatObservation[]): IvSolution;
+  solveIvs(
+    base: Partial<Record<StatId, number>>,
+    observations: readonly StatObservation[],
+    options?: IvSolveOptions,
+  ): IvSolution;
   /** Bulbapedia pages the rules come from; shown on the tool pages. */
   sources: SourceRef[];
 }

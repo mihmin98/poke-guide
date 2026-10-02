@@ -253,19 +253,27 @@ export interface GenerationMechanics {
   statValue(input: StatInput): number;          // base, iv/dv, level, effort (stat exp / EVs), nature?
   effortFromDefeat(baseStats): Partial<Record<StatId, number>>;  // gen1–2: the defeated species' base stats
   effortLabel: string;                          // 'Stat Exp' · 'EVs'
-  solveIvs(baseStats, observations): IvSolution; // possible values per stat, count, contradiction, shiny verdict
-  sources: { label: string; url: string }[];    // Bulbapedia pages the rules come from, shown in the UI
+  effortDescription: string;                    // one sentence under the base-stat table
+  dvTraits?: DvTraitDef[];                      // gen2: gender, Shiny, Unown letter (decided by the DVs)
+  solveIvs(baseStats, observations, { species, traits }?): IvSolution;
+                                                // possible values per stat and trait, count, contradiction,
+                                                // shiny verdict
+  sources: { label: string; url: string; site?: string }[];  // shown in the UI; site defaults to Bulbapedia
 }
 
 export interface CaptureFormula {
-  balls: BallDef[];                             // gen1: Poké, Great, Ultra, Safari, Master
+  balls: BallDef[];                             // gen1: Poké, Great, Ultra, Safari, Master; `limited` for
+                                                // Safari/Park Balls (odds before they run out)
   statuses: StatusDef[];                        // gen1: none · sleep/freeze · paralysis/burn/poison
-  contexts?: CaptureContextDef[];               // gen1: Safari Game (bait / rock)
-                                                // Phase 10: generalized to CaptureInputDef (select | number | boolean,
-                                                // optionally per ball) for the Gen II Apricorn balls
+  inputs?: CaptureInputDef[];                   // select | number | boolean, optionally tied to balls:
+                                                // gen1 Safari Game (bait / rock, Safari Ball only);
+                                                // gen2 player's level (Level), hooked (Lure), your Pokémon (Love)
   reportsShakes: boolean;                       // whether the break-free animation carries information
-  compute(input: CaptureInput): CaptureResult;  // exact P(catch) per throw, expected throws,
-                                                // throws for 50/90/99 %, shakes on failure (if applicable)
+  shakesNote?: string;
+  compute(input: CaptureInput): CaptureResult;  // input: catch rate, ball, status, HP, wild level, target species
+                                                // (dex, weight, gender ratio), game, input values.
+                                                // result: exact P(catch) per throw, expected throws, throws for
+                                                // 50/90/99 %, shakes on failure (if reported), notes (game bugs)
 }
 ```
 
@@ -278,6 +286,23 @@ export interface CaptureFormula {
   `pokered/engine/items/item_effects.asm` (`srl [hl]`, `add a` with the `$ff` carry branch).
 - `gen1SolveDvs` enumerates all 16⁴ DV sets against every reading, deriving the HP DV from the other four,
   and reports `'yes' | 'no' | 'possible'` for the Generation II Shiny condition.
+
+**Gen II module** (`core/mechanics/gen2.ts`, Phase 10 Stage G, from the same Bulbapedia pages plus `Poké Ball`
+rev 4631237 and `Shiny Pokémon` rev 4624856, every step checked against pret pokecrystal 5beda23 / pokegold 62388c7):
+- Capture: the ball multiplies the catch rate (8-bit, saturating), then the HP step
+  `max(⌊(3·HPmax − 2·HPcur) × rate / 3·HPmax⌋, 1)` (both products quartered when 3·HPmax > 255), then +10 for
+  sleep or freeze only (the paralysis/burn/poison bonus is skipped by a bug); P = (a + 1) / 256. Shakes are random,
+  so `reportsShakes` is off.
+- Apricorn balls with their bugs: Level Ball (2×/4×/8× below the player's level, ½ and ¼ of it; **skips the HP and
+  status steps**, from pret, not stated on the cached Bulbapedia pages), Lure Ball (3× when hooked), Moon Ball
+  (never boosts), Friend Ball (1×), Fast Ball (4× for Magnemite, Grimer, Tangela only), Heavy Ball (−20/0/+20/+30/+40
+  by weight; Crystal reads +40 for Kadabra, Tauros and Sunflora), Love Ball (8× for the same species and **same**
+  gender), Park Ball (1.5×, 20 per contest).
+- DVs: the shared `dv.ts` solver (also used by Gen I) with the Special DV driving Sp. Atk and Sp. Def, and the
+  summary-screen traits: gender (`16·Atk + Spe ≤` the ratio byte), Shiny (1/8192; 1/64 for an egg from a Shiny
+  parent) and Unown's letter.
+- Fixed DVs are data: the Gen II in-game trades (read from the `In-game trade` table's DV column, `dvOrder`,
+  with the HP DV cross-checked) and the Red Gyarados (`OverrideEncounter.ivs` and `shiny: 'guaranteed'`).
 
 Games that break their generation's rules (e.g. Let's Go) get their own module. Exceptions for single encounters (fixed IVs, Shiny-locked, guaranteed Shiny, a different catch rate) are **data** on the encounter slot (§8), not code.
 
@@ -1458,7 +1483,7 @@ Adds the 251-species checklist and the walkthrough-ordered guide for Gold, Silve
   - Methods `headbutt`, `rock-smash`, `bug-contest`, `roaming`, `egg`.
   - Time-of-day column labels and hours (Morning 4–10, Day 10–18, Night 18–4).
 - [ ] Model (§8): `EvolutionEdge.timeOfDay` / `.stat`; `Learnset.egg` / `.tutor`. The zod schema mirrors them.
-- [ ] Mechanics interface (§4.5):
+- [x] Mechanics interface (§4.5), done in Stage G:
   - `CaptureInputDef` (select, number or boolean, optionally tied to balls) replaces the select-only
     contexts.
   - A Shiny verdict for in-game DV shininess, with optional gender and Unown-letter hooks.
@@ -1571,12 +1596,17 @@ Crystal 379, numbered 1–424. Each difference was checked against pret (`itemba
 
 **Stage F — sprites:** 3 × 251 files in `public/sprites/gen2-{g,s,c}/`.
 
-**Stage G — `core/mechanics/gen2.ts`:**
-- The capture formula with the documented Gen II quirks: the status bonus applies only to sleep/freeze.
-- The Apricorn balls and their documented bugs.
-- Stats with the shared Special DV.
-- The in-game Shiny rule (1/8192), gender from the Attack DV, and the Unown letter.
-- Tests use Bulbapedia's worked examples.
+**Stage G — `core/mechanics/gen2.ts`:** done 2026-10-02 (details in §4.5).
+- [x] The capture formula with the documented Gen II quirks: the status bonus applies only to sleep/freeze.
+- [x] The Apricorn balls and their documented bugs.
+- [x] Stats with the shared Special DV.
+- [x] The in-game Shiny rule (1/8192), gender from the Attack DV, and the Unown letter.
+- [x] Tests use Bulbapedia's worked examples (Sandshrew A, Unown 1 and 2, the Red Gyarados DVs) and hand-worked
+  capture values.
+- [x] The interface work moved from Stage A: `CaptureInputDef` replaces `contexts`; `DvTraitDef`, `shiny.dvRule`,
+  `effortDescription`, `BallDef.limited`, `CaptureResult.notes`; the tool and Pokémon pages lost their Gen I
+  wording.
+- [x] Fixed DVs for the in-game trades and the Red Gyarados (data, §4.5).
 
 **Stage H — validation, goldens, report, go live:**
 - [ ] `gsc/golden.spec.ts` and `obtainability.golden.spec.ts`.

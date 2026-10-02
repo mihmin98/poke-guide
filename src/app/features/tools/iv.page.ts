@@ -4,6 +4,7 @@ import {
   computed,
   inject,
   input,
+  linkedSignal,
   signal,
   untracked,
 } from '@angular/core';
@@ -34,6 +35,10 @@ interface Reading {
         <p class="sub">
           Type the stats from the summary screen. Every {{ ivLabel() }} set that could produce them is
           listed; adding a second reading after a few level-ups narrows it further.
+          @if (traitNames(); as names) {
+            The {{ names }} fields below also come from the {{ ivLabel() }}s, so filling them in
+            narrows it too.
+          }
         </p>
 
         <section class="card">
@@ -114,6 +119,25 @@ interface Reading {
             </table>
           </div>
 
+          @if (traits().length) {
+            <div class="row traits">
+              @for (trait of traits(); track trait.id) {
+                <label class="field trait">
+                  <span>{{ trait.label }}</span>
+                  <select
+                    [value]="traitChoices()[trait.id] ?? ''"
+                    (change)="onTrait(trait.id, $event)"
+                  >
+                    <option value="">Not entered</option>
+                    @for (option of trait.options; track option.id) {
+                      <option [value]="option.id">{{ option.label }}</option>
+                    }
+                  </select>
+                </label>
+              }
+            </div>
+          }
+
           <div class="actions">
             <button matButton type="button" (click)="addReading()">
               <mat-icon aria-hidden="true">add</mat-icon>
@@ -154,6 +178,16 @@ interface Reading {
                 </tbody>
               </table>
             </div>
+            @if (traitRows().length) {
+              <dl class="trait-results">
+                @for (row of traitRows(); track row.id) {
+                  <div>
+                    <dt>{{ row.label }}</dt>
+                    <dd>{{ row.values }}</dd>
+                  </div>
+                }
+              </dl>
+            }
             @if (m.ivSystem.hpDerived) {
               <p class="sub">
                 The HP {{ ivLabel() }} is not stored: it is built from the last bit of the other four.
@@ -179,7 +213,7 @@ interface Reading {
             @for (source of m.sources; track source.url) {
               <li>
                 <a [href]="source.url" target="_blank" rel="noopener noreferrer">
-                  {{ source.label }} on Bulbapedia
+                  {{ source.label }} on {{ source.site ?? 'Bulbapedia' }}
                 </a>
               </li>
             }
@@ -282,6 +316,26 @@ interface Reading {
       color: var(--mat-sys-on-surface-variant);
       font: var(--mat-sys-label-medium);
     }
+    .traits {
+      margin: 12px 0 0;
+    }
+    .field.trait {
+      flex: 0 1 140px;
+    }
+    .trait-results {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 32px;
+      margin: 12px 0 0;
+    }
+    .trait-results dt {
+      color: var(--mat-sys-on-surface-variant);
+      font: var(--mat-sys-label-small);
+    }
+    .trait-results dd {
+      margin: 0;
+      font: var(--mat-sys-body-medium);
+    }
     .actions {
       display: flex;
       gap: 8px;
@@ -343,6 +397,24 @@ export class IvToolPage {
 
   protected readonly readings = signal<Reading[]>([{ level: 5, stats: {} }]);
 
+  /** Summary-screen details the DVs decide (Gen II gender, Shiny, Unown's letter) that this species has. */
+  protected readonly traits = computed(() => {
+    const species = this.species();
+    return species ? (this.mechanics()?.dvTraits ?? []).filter((t) => t.appliesTo(species)) : [];
+  });
+  protected readonly traitNames = computed(() => {
+    const names = this.traits().map((t) => t.label);
+    if (names.length === 0) return '';
+    return names.length === 1
+      ? names[0]!
+      : `${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}`;
+  });
+  /** Trait id → option id; cleared when the species changes. */
+  protected readonly traitChoices = linkedSignal<number | undefined, Record<string, string>>({
+    source: () => this.species()?.dex,
+    computation: () => ({}),
+  });
+
   protected readonly solution = computed(() => {
     const mechanics = this.mechanics()!;
     const species = this.species();
@@ -350,13 +422,31 @@ export class IvToolPage {
       level: reading.level,
       stats: reading.stats,
     }));
-    return mechanics.solveIvs(species?.baseStats ?? {}, observations);
+    return mechanics.solveIvs(species?.baseStats ?? {}, observations, {
+      species,
+      traits: this.traitChoices(),
+    });
+  });
+
+  protected readonly traitRows = computed(() => {
+    const solved = this.solution().traits ?? {};
+    return this.traits().map((trait) => {
+      const ids = solved[trait.id] ?? [];
+      const labels = trait.options.filter((o) => ids.includes(o.id)).map((o) => o.label);
+      return { id: trait.id, label: trait.label, values: labels.join(', ') || '—' };
+    });
   });
 
   protected readonly narrowing = computed(() => {
     const solution = this.solution();
-    const entered = this.readings().some((r) => Object.keys(r.stats).length > 0);
-    return narrowingLabel(entered ? solution.combinations : 0, solution.contradiction, this.ivLabel());
+    const entered =
+      this.readings().some((r) => Object.keys(r.stats).length > 0) ||
+      Object.keys(this.traitChoices()).length > 0;
+    return narrowingLabel(
+      entered ? solution.combinations : 0,
+      solution.contradiction,
+      this.ivLabel(),
+    );
   });
   protected readonly shiny = computed(() => shinyLabel(this.solution().shiny));
 
@@ -387,6 +477,15 @@ export class IvToolPage {
       }),
     );
   }
+  protected onTrait(id: string, event: Event): void {
+    const value = (event.target as HTMLSelectElement).value;
+    this.traitChoices.update((current) => {
+      const next = { ...current };
+      if (value === '') delete next[id];
+      else next[id] = value;
+      return next;
+    });
+  }
   protected addReading(): void {
     this.readings.update((list) => {
       const last = list[list.length - 1];
@@ -398,6 +497,7 @@ export class IvToolPage {
   }
   protected reset(): void {
     this.readings.set([{ level: 5, stats: {} }]);
+    this.traitChoices.set({});
   }
 }
 

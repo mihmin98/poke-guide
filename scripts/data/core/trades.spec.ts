@@ -57,6 +57,44 @@ describe('parseTradeTables (Generation II)', () => {
       ['Kanto Power Plant', 51, 82, 'MAGGIE', ['crystal']],
     ]);
   });
+
+  it('reads the fixed DVs, matching pret npc_trades.asm', () => {
+    const dvs = Object.fromEntries(result.trades.map((t) => [t.nickname, t.ivs]));
+    // ROCKY $96 $66: Attack 9, Defense 6, Speed 6, Special 6, so HP 8.
+    expect(dvs['ROCKY']).toEqual({ hp: 8, atk: 9, def: 6, spe: 6, spc: 6 });
+    expect(dvs['MUSCLE']).toEqual({ hp: 12, atk: 3, def: 7, spe: 6, spc: 6 });
+    expect(dvs['PAUL']).toEqual({ hp: 8, atk: 9, def: 6, spe: 8, spc: 6 });
+    expect(result.trades.every((t) => t.ivs)).toBe(true);
+  });
+
+  it('rejects a DV cell that is malformed or whose HP DV disagrees', () => {
+    const table = gscConfig.tradePage!.tables[0]!;
+    const page = (dvs: string) =>
+      [
+        '===Generation II===',
+        `====${table.heading}====`,
+        '{|',
+        '|-',
+        '| [[Violet City]]',
+        '| {{MSP/3|069|Bellsprout}}',
+        '| {{p|Bellsprout}}',
+        '| {{MSP/3|095|Onix}}',
+        '| {{p|Onix}}',
+        '| ROCKY',
+        `| ${dvs}`,
+        '|}',
+      ].join('\n');
+    const parse = (dvs: string) =>
+      parseTradeTables(page(dvs), {
+        pageTitle: 'In-game trade',
+        generationHeading: 'Generation II',
+        tables: [table],
+      });
+    expect(parse('8/9/6/6/6').trades[0]?.ivs).toEqual({ hp: 8, atk: 9, def: 6, spe: 6, spc: 6 });
+    expect(parse('9/9/6/6/6').issues[0]?.message).toContain("HP DV that doesn't match");
+    expect(parse('8/9/6/6').issues[0]?.message).toContain('is not 5 DVs');
+    expect(parse('8/9/6/6/16').issues[0]?.message).toContain('above 15');
+  });
 });
 
 describe('diffTrades', () => {
@@ -113,5 +151,27 @@ describe('diffTrades', () => {
       giveDex: 63,
       nickname: 'MARCEL',
     });
+  });
+
+  it('puts a trade’s fixed DVs on the matching games’ slots', () => {
+    const locations = [location('violet-city', [encounter(95, 69, ['gold', 'crystal'])])];
+    const ivs = { hp: 8, atk: 9, def: 6, spe: 6, spc: 6 };
+    diffTrades(
+      locations,
+      [
+        {
+          games: ['gold'],
+          locationPage: 'Violet City',
+          giveDex: 69,
+          getDex: 95,
+          nickname: 'ROCKY',
+          ivs,
+        },
+      ],
+      new Map([['Violet City', 'violet-city']]),
+    );
+    const games = locations[0]!.subAreas[0]!.encounters[0]!.games;
+    expect(games.gold![0]!.ivs).toEqual({ kind: 'fixed', values: ivs });
+    expect(games.crystal![0]!.ivs).toBeUndefined();
   });
 });

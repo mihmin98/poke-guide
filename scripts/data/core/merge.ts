@@ -72,6 +72,8 @@ function toSlot(raw: RawSlot): EncounterSlot {
     levels: raw.levels,
     rate: raw.rate,
     ...(raw.conditions?.length ? { conditions: raw.conditions } : {}),
+    ...(raw.ivs ? { ivs: raw.ivs } : {}),
+    ...(raw.shiny ? { shiny: raw.shiny } : {}),
     ...(raw.note ? { note: raw.note } : {}),
   };
 }

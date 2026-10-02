@@ -109,6 +109,33 @@ describe('overrideRows', () => {
     );
     expect(lapras!.row.slots[0]!.conditions).toEqual([{ kind: 'day-of-week', value: 'fri' }]);
   });
+
+  it('carries fixed DVs and shininess onto the slot', () => {
+    const [gyarados] = overrideRows(
+      'lake-of-rage',
+      'Lake of Rage',
+      overrides({
+        encounters: [
+          {
+            locationId: 'lake-of-rage',
+            dex: 130,
+            name: 'Gyarados',
+            method: 'static',
+            games: ['gold'],
+            level: 30,
+            ivs: { hp: 0, atk: 14, def: 10, spe: 10, spc: 10 },
+            shiny: 'guaranteed',
+            reason: 'prose',
+          },
+        ],
+      }),
+      sourceOf,
+    );
+    expect(gyarados!.row.slots[0]).toMatchObject({
+      ivs: { kind: 'fixed', values: { hp: 0, atk: 14, def: 10, spe: 10, spc: 10 } },
+      shiny: 'guaranteed',
+    });
+  });
 });
 
 describe('applyEncounterPatches', () => {

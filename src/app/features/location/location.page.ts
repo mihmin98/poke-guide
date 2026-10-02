@@ -14,7 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { Router, RouterLink } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
 import { GameDataService } from '../../core/data/game-data.service';
-import type { GameId, LocationItem } from '../../core/domain/models';
+import type { EncounterSlot, GameId, LocationItem } from '../../core/domain/models';
 import { TIMES_OF_DAY, timeOfDayHours, timeOfDayLabel } from '../../core/games/conditions';
 import { findGame, regionName } from '../../core/games/registry';
 import { mechanicsForGame } from '../../core/mechanics';
@@ -200,7 +200,9 @@ const ALL_SUB_AREAS = '__all__';
                             <span class="badge">Shiny-locked</span>
                           }
                           @if (line.ivs) {
-                            <span class="badge">Fixed {{ ivLabel() }}s</span>
+                            <span class="badge" [title]="ivsText(line.ivs)"
+                              >Fixed {{ ivLabel() }}s</span
+                            >
                           }
                           <app-level-range [levels]="line.levels" />
                           @if (showRates()) {
@@ -720,6 +722,14 @@ export class LocationPage {
   protected readonly ivLabel = computed(
     () => mechanicsForGame(this.gameId())?.ivSystem.label ?? 'IV',
   );
+  /** "Attack 14 · Defense 10 · …" for a fixed set, labelled by the generation's rules. */
+  protected ivsText(ivs: EncounterSlot['ivs']): string {
+    if (ivs?.kind !== 'fixed') return '';
+    const labels = mechanicsForGame(this.gameId())?.statLabels ?? {};
+    return Object.entries(ivs.values)
+      .map(([stat, value]) => `${labels[stat] ?? stat} ${value}`)
+      .join(' · ');
+  }
   protected readonly spriteSize = computed(() =>
     this.settings.settings().spriteScale === 3 ? 56 : 40,
   );

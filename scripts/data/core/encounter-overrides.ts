@@ -10,6 +10,7 @@ import type {
   GameId,
   GameLocation,
   RequiresOtherGame,
+  StatId,
   Unlock,
 } from '../../../src/app/core/domain/models';
 import type { WalkedRow } from './encounter-walker';
@@ -31,6 +32,9 @@ export interface OverrideEncounter {
   note?: string;
   /** E.g. Union Cave's Lapras only appears on Fridays. */
   conditions?: EncounterCondition[];
+  /** Fixed DVs/IVs, as the generation stores them (Gen II: `hp`, `atk`, `def`, `spe`, `spc`). */
+  ivs?: Partial<Record<StatId, number>>;
+  shiny?: 'locked' | 'guaranteed';
   /** Defaults to the location page; its revid is recorded. */
   sourcePage?: string;
   /** Why the override exists, with a pret or Bulbapedia link for the values. */
@@ -84,6 +88,8 @@ export function overrideRows(
             rawLevels: String(o.level),
             rate: { kind: 'once' },
             ...(o.conditions ? { conditions: [...o.conditions] } : {}),
+            ...(o.ivs ? { ivs: { kind: 'fixed' as const, values: { ...o.ivs } } } : {}),
+            ...(o.shiny ? { shiny: o.shiny } : {}),
             ...(o.note ? { note: o.note } : {}),
           },
         ],

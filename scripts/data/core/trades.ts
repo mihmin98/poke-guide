@@ -5,9 +5,11 @@
  * Location tables already hold the trade rows, so these are only diffed against them, and add the nicknames.
  *
  * Generation II has one table for three games: a trade that differs per game spans two rows (`rowspan=2` on the
- * shared cells), and the cells of each variant carry the game's background color (`{{crystal color light}}`).
+ * shared cells), and the cells of each variant carry the game's background color (`{{crystal color light}}`). Its
+ * last column holds the traded Pokémon's fixed DVs (`8/9/6/6/6`), which become the slots' `ivs`.
  */
-import type { GameId, GameLocation } from '../../../src/app/core/domain/models';
+import type { GameId, GameLocation, StatId } from '../../../src/app/core/domain/models';
+import { hpDv } from '../../../src/app/core/mechanics/dv';
 import type { Issue } from './encounter-walker';
 import { stripMarkup } from './markup';
 import { findNestedSection, headingText, headingsWithin, sectionAt } from './sections';
@@ -22,6 +24,11 @@ export interface TradeTable {
    * carry any of them belongs to those games only; other rows belong to every game of the table.
    */
   cellColorGames?: Record<string, GameId[]>;
+  /**
+   * The order of the slash-separated fixed DVs in the row's last cell (Gen II: HP/Attack/Defense/Speed/Special).
+   * Every row must have them, and an HP DV must match the one built from the other four.
+   */
+  dvOrder?: StatId[];
 }
 
 export interface TradePageConfig {
@@ -36,6 +43,8 @@ export interface ParsedTrade {
   giveDex: number;
   getDex: number;
   nickname: string;
+  /** Fixed DVs, when the table has them (`dvOrder`). */
+  ivs?: Partial<Record<StatId, number>>;
 }
 
 export interface TradeParseResult {
@@ -176,21 +185,56 @@ export function parseTradeTables(
       );
       const nickname = stripMarkup(cells[getIndex + 2]?.text ?? '');
       if (/^N\/A$/i.test(nickname)) return;
-      result.trades.push({
+      const trade: ParsedTrade = {
         games: rowGames(own, table) ?? [...table.games],
         locationPage: location,
         giveDex: Number(species[0]!.positional[0]),
         getDex: Number(species[1]!.positional[0]),
         nickname,
-      });
+      };
+      if (table.dvOrder) {
+        const ivs = parseDvs(stripMarkup(cells[cells.length - 1]?.text ?? ''), table.dvOrder);
+        if (typeof ivs === 'string') {
+          issue(`Trade #${trade.giveDex} → #${trade.getDex} under "${table.heading}": ${ivs}`);
+          return;
+        }
+        trade.ivs = ivs;
+      }
+      result.trades.push(trade);
     });
   }
   return result;
 }
 
+/** `8/9/6/6/6` in `order`; a string explains a cell that doesn't fit. */
+function parseDvs(
+  cell: string,
+  order: readonly StatId[],
+): Partial<Record<StatId, number>> | string {
+  const parts = cell.split('/').map((part) => part.trim());
+  if (parts.length !== order.length || parts.some((part) => !/^\d{1,2}$/.test(part))) {
+    return `"${cell}" is not ${order.length} DVs`;
+  }
+  const dvs: Partial<Record<StatId, number>> = {};
+  order.forEach((stat, i) => (dvs[stat] = Number(parts[i])));
+  if (Object.values(dvs).some((dv) => dv > 15)) return `"${cell}" has a DV above 15`;
+  const { hp, atk, def, spe, spc } = dvs;
+  if (
+    hp !== undefined &&
+    atk !== undefined &&
+    def !== undefined &&
+    spe !== undefined &&
+    spc !== undefined &&
+    hp !== hpDv(atk, def, spe, spc)
+  ) {
+    return `"${cell}" has an HP DV that doesn't match the other four`;
+  }
+  return dvs;
+}
+
 /**
- * Compares parsed trades with the location data's `trade` encounters per game, and sets `trade.nickname` on matches
- * (in place). Returns warning messages; unknown location pages are errors.
+ * Compares parsed trades with the location data's `trade` encounters per game, and sets `trade.nickname` and fixed
+ * DVs on matches (in place). Returns warning messages; unknown location pages are errors.
  */
 export function diffTrades(
   locations: GameLocation[],
@@ -233,6 +277,12 @@ export function diffTrades(
         continue;
       }
       encounter.trade!.nickname = trade.nickname;
+      if (trade.ivs) {
+        encounter.games[game] = encounter.games[game]!.map((slot) => ({
+          ...slot,
+          ivs: { kind: 'fixed', values: { ...trade.ivs } },
+        }));
+      }
     }
   }
 

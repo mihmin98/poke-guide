@@ -5,6 +5,7 @@
 import type {
   EncounterCondition,
   EncounterMethodId,
+  EncounterSlot,
   GameId,
   LevelSpec,
   LocationKind,
@@ -29,6 +30,9 @@ export interface RawSlot {
   rate: Rate;
   conditions?: EncounterCondition[];
   note?: string;
+  /** Only from overrides: fixed DVs and forced shininess (the Red Gyarados). */
+  ivs?: EncounterSlot['ivs'];
+  shiny?: EncounterSlot['shiny'];
 }
 
 export interface RawEncounterRow {
