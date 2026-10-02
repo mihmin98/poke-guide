@@ -149,7 +149,7 @@ function obtainMethod(where: string, hidden: boolean): ItemObtainMethod {
   if (hidden) return 'pickup';
   if (/\bdropped by\b/i.test(where)) return 'drop';
   if (/\breward\b|\b(?:after|for) defeating\b/i.test(where)) return 'reward';
-  if (/\b(?:received|obtained|gift) from\b|(?:^|[,;]\s*)from\b|^held by\b/i.test(where))
+  if (/\b(?:received|obtained|gift) from\b|(?:^|[,;]\s*)from\b|^(?:held|given) by\b/i.test(where))
     return 'gift';
   return 'pickup';
 }

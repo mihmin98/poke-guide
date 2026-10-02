@@ -204,6 +204,52 @@ describe('applyEncounterPatches', () => {
       ['surf', []],
     ]);
   });
+
+  it('matches rows by their games and replaces the levels of every slot', () => {
+    const slot = (value: number) => ({
+      levels: { min: 8, max: 8 },
+      rawLevels: '8',
+      rate: { kind: 'percent' as const, value },
+    });
+    const venonat = (games: WalkedRow['row']['games']): WalkedRow => ({
+      ...row(48, 'walk-grass'),
+      row: { ...row(48, 'walk-grass').row, games, slots: [slot(5), slot(30)] },
+    });
+    const result = applyEncounterPatches(
+      'route-24',
+      'Kanto Route 24',
+      [venonat(['gold', 'silver']), venonat(['crystal'])],
+      overrides({
+        patches: [
+          {
+            locationId: 'route-24',
+            match: { method: 'walk-grass', dex: 48, games: ['crystal'] },
+            set: { levels: { min: 10, max: 10 } },
+            reason: 'pret',
+          },
+        ],
+      }),
+      sourceOf,
+    );
+    expect(
+      result.rows.map((r) => [r.row.games, r.row.slots.map((s) => [s.levels, s.rawLevels])]),
+    ).toEqual([
+      [
+        ['gold', 'silver'],
+        [
+          [{ min: 8, max: 8 }, '8'],
+          [{ min: 8, max: 8 }, '8'],
+        ],
+      ],
+      [
+        ['crystal'],
+        [
+          [{ min: 10, max: 10 }, '10'],
+          [{ min: 10, max: 10 }, '10'],
+        ],
+      ],
+    ]);
+  });
 });
 
 describe('checkOverrideLocations', () => {

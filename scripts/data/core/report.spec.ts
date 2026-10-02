@@ -25,7 +25,7 @@ describe('renderReport', () => {
         { level: 'error', message: 'not in the report' },
       ],
     });
-    expect(report).toMatch(/^\| Pokémon Red \| \d+ \/ 151 \| \d+ \| \d+ \| 4 \| 1 \| 0 \|$/m);
+    expect(report).toMatch(/^\| Pokémon Red \| \d+ \/ 151 \| \d+ \| \d+ \| 4 \| 1 \| 0 \| 0 \|$/m);
     expect(report).toContain('- #65 Alakazam: trade-evolution (Evolves from Kadabra by trade)');
     expect(report).toContain('- #151 Mew: event-only');
     expect(report).toMatch(/### route-1\n\n- added: main · walk-grass · #\d+ /);

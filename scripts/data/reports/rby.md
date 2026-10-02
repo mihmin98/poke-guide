@@ -4,11 +4,11 @@
 
 ## Obtainable per game
 
-| Game | Obtainable | Max in one save | Other version | Trade evolution | Event-only | Not in game |
-|---|---|---|---|---|---|---|
-| Pokémon Red | 135 / 151 | 126 | 11 | 4 | 1 | 0 |
-| Pokémon Blue | 135 / 151 | 126 | 11 | 4 | 1 | 0 |
-| Pokémon Yellow | 134 / 151 | 131 | 12 | 4 | 1 | 0 |
+| Game | Obtainable | Max in one save | Other version | Trade evolution | Event-only | Other game | Not in game |
+|---|---|---|---|---|---|---|---|
+| Pokémon Red | 135 / 151 | 126 | 11 | 4 | 1 | 0 | 0 |
+| Pokémon Blue | 135 / 151 | 126 | 11 | 4 | 1 | 0 | 0 |
+| Pokémon Yellow | 134 / 151 | 131 | 12 | 4 | 1 | 0 | 0 |
 
 ## Unobtainable species
 

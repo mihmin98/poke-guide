@@ -109,7 +109,7 @@ export const GAMES: readonly GameDefinition[] = [
     regionalDex: { id: 'johto', name: 'New Pokédex' },
     accent: { seed: '#B8860B' },
     spriteSetId: 'gen2-g',
-    status: 'planned',
+    status: 'available',
   },
   {
     id: 'silver',
@@ -124,7 +124,7 @@ export const GAMES: readonly GameDefinition[] = [
     regionalDex: { id: 'johto', name: 'New Pokédex' },
     accent: { seed: '#8A9BB0' },
     spriteSetId: 'gen2-s',
-    status: 'planned',
+    status: 'available',
   },
   {
     id: 'crystal',
@@ -139,7 +139,7 @@ export const GAMES: readonly GameDefinition[] = [
     regionalDex: { id: 'johto', name: 'New Pokédex' },
     accent: { seed: '#4FB8D6' },
     spriteSetId: 'gen2-c',
-    status: 'planned',
+    status: 'available',
   },
   {
     id: 'firered',

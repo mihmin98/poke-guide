@@ -54,11 +54,14 @@ describe('game registry', () => {
     }
   });
 
-  it('ships Red, Blue and Yellow as available', () => {
+  it('ships Generations I and II as available', () => {
     expect(listGames({ includePlanned: false }).map((g) => g.id)).toEqual([
       'red',
       'blue',
       'yellow',
+      'gold',
+      'silver',
+      'crystal',
     ]);
     expect(listGames({ includePlanned: true }).length).toBe(GAMES.length);
   });

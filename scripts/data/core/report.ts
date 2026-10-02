@@ -46,14 +46,15 @@ export function renderReport({ data, previous, issues, checklists }: ReportInput
     '',
     '## Obtainable per game',
     '',
-    '| Game | Obtainable | Max in one save | Other version | Trade evolution | Event-only | Not in game |',
-    '|---|---|---|---|---|---|---|',
+    '| Game | Obtainable | Max in one save | Other version | Trade evolution | Event-only | Other game | Not in game |',
+    '|---|---|---|---|---|---|---|---|',
   );
   for (const { game, entries, maxInOneSave } of checklists) {
     const reason = (r: string) => entries.filter((e) => e.unobtainableReason === r).length;
     lines.push(
       `| ${gameName(game)} | ${entries.filter((e) => e.obtainable).length} / ${entries.length} | ${maxInOneSave} | ` +
-        `${reason('other-version')} | ${reason('trade-evolution')} | ${reason('event-only')} | ${reason('not-in-game')} |`,
+        `${reason('other-version')} | ${reason('trade-evolution')} | ${reason('event-only')} | ${reason('requires-other-game')} | ` +
+        `${reason('not-in-game')} |`,
     );
   }
 

@@ -4,11 +4,11 @@
 
 ## Obtainable per game
 
-| Game | Obtainable | Max in one save | Other version | Trade evolution | Event-only | Not in game |
-|---|---|---|---|---|---|---|
-| Pokémon Gold | 212 / 251 | 206 | 10 | 10 | 2 | 0 |
-| Pokémon Silver | 212 / 251 | 206 | 10 | 10 | 2 | 0 |
-| Pokémon Crystal | 212 / 251 | 206 | 10 | 10 | 2 | 0 |
+| Game | Obtainable | Max in one save | Other version | Trade evolution | Event-only | Other game | Not in game |
+|---|---|---|---|---|---|---|---|
+| Pokémon Gold | 212 / 251 | 206 | 10 | 10 | 2 | 17 | 0 |
+| Pokémon Silver | 212 / 251 | 206 | 10 | 10 | 2 | 17 | 0 |
+| Pokémon Crystal | 212 / 251 | 206 | 10 | 10 | 2 | 17 | 0 |
 
 ## Unobtainable species
 

@@ -230,14 +230,14 @@ describe('walkItemSection on Gold/Silver/Crystal fixtures', () => {
 describe('item row details', () => {
   const row = (wikitext: string) => collectItemRows(wikitext, options('Page'));
 
-  it('drops footnote markers, reads {{DL}} text and makes held items gifts', () => {
+  it('drops footnote markers, reads {{DL}} text and makes held and given items gifts', () => {
     const result = row(
       '{{Itemlist|PP Up|Given by Kenji after he asks{{tt|*|Random}}|R=yes}}\n' +
         '{{Itemlist|None|From the guide|R=yes|display={{DL|Pokégear|Map|Map Card}}}}\n' +
         "{{Itemlist|Berry|Held by the {{player}}'s first partner Pokémon|R=yes}}",
     );
     expect(result.items.map((i) => [i.name, i.where, i.obtain])).toEqual([
-      ['PP Up', 'Given by Kenji after he asks', 'pickup'],
+      ['PP Up', 'Given by Kenji after he asks', 'gift'],
       ['Map Card', 'From the guide', 'gift'],
       ['Berry', "Held by the player's first partner Pokémon", 'gift'],
     ]);

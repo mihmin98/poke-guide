@@ -1608,11 +1608,21 @@ Crystal 379, numbered 1–424. Each difference was checked against pret (`itemba
   wording.
 - [x] Fixed DVs for the in-game trades and the Red Gyarados (data, §4.5).
 
-**Stage H — validation, goldens, report, go live:**
-- [ ] `gsc/golden.spec.ts` and `obtainability.golden.spec.ts`.
-- [ ] Review `reports/gsc.md`.
-- [ ] A 10-location spot check.
-- [ ] Flip the three games to `available`.
+**Stage H — validation, goldens, report, go live:** done 2026-10-02.
+- [x] `gsc/golden.spec.ts` (structure, time-of-day rates, swarms, Headbutt, the contest, statics, roamers, gifts,
+  prizes, trades with DVs, items and their numbers, species, Pokédex data) and `obtainability.golden.spec.ts` (each
+  game's 212/251 with the reason lists, the starter-only "max in one save", breeding, time and stat evolutions).
+- [x] Review `reports/gsc.md`. Two fixes came out of it:
+  - The obtainable table gained an "Other game" column (`requires-other-game`); the columns now add up.
+  - `items.ts` makes "Given by …" rows gifts (nine Gen II rows, such as Mom's Pokégear, were `pickup`).
+- [x] A 10-location spot check (seeded random): Goldenrod City, Routes 26, 42, 24, 27, 45 and 36, Diglett's Cave,
+  Violet City and Blackthorn City.
+  - Bulbapedia blocks Node's `fetch` (HTTP 403), so the current revids couldn't be confirmed.
+  - The rows were compared with the cached pages and with pret: grass, cave and surf slots per time of day (surfing
+    adds 0–4 levels), fish groups, Headbutt tree sets (Route 45's map has no Headbutt trees), gifts and trades.
+  - One Bulbapedia error: Crystal's night Venonat on Route 24 is level 10 (pokecrystal), not 8. `EncounterPatch` gained
+    `match.games` and `set.levels` to correct it.
+- [x] Flip the three games to `available`.
 
 - [ ] Manual browser check (the user)
 - **Accept when:**

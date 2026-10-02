@@ -196,6 +196,12 @@ export const GSC_ENCOUNTER_OVERRIDES: EncounterOverrides = {
       reason:
         "The elder gives Dratini after his test in the Dragon Shrine, which needs Surf and Whirlpool (Walkthrough:Pokémon Crystal/Part 13: Clair's TM24 after the test is marked the same way)",
     },
+    {
+      locationId: 'route-24',
+      match: { method: 'walk-grass', dex: 48, games: ['crystal'] },
+      set: { levels: { min: 10, max: 10 } },
+      reason: `Bulbapedia (revid 4618421) gives Crystal's night Venonat level 8, Gold and Silver's level; Crystal's slot is level 10 in ${pretCrystal('data/wild/kanto_grass.asm')} (found by the Phase 10 spot check)`,
+    },
   ],
   exclusiveGroups: [
     {

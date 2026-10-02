@@ -9,6 +9,7 @@ import type {
   ExclusiveGroup,
   GameId,
   GameLocation,
+  LevelSpec,
   RequiresOtherGame,
   StatId,
   Unlock,
@@ -43,10 +44,20 @@ export interface OverrideEncounter {
 
 export interface EncounterPatch {
   locationId: string;
-  /** Rows to change; every given field must match. At least one row must match. */
-  match: { method: EncounterMethodId; dex?: number; label?: string };
-  /** `drop` removes the rows; `requires` replaces the rows' unlock ids. */
-  set: { method?: EncounterMethodId; label?: string | null; requires?: string[] } | 'drop';
+  /**
+   * Rows to change; every given field must match (`games`: exactly the row's games, in any order). At least one row
+   * must match.
+   */
+  match: { method: EncounterMethodId; dex?: number; label?: string; games?: GameId[] };
+  /** `drop` removes the rows; `requires` replaces the rows' unlock ids; `levels` replaces every slot's levels. */
+  set:
+    | {
+        method?: EncounterMethodId;
+        label?: string | null;
+        requires?: string[];
+        levels?: LevelSpec;
+      }
+    | 'drop';
   sourcePage?: string;
   reason: string;
 }
@@ -104,6 +115,16 @@ export function overrideRows(
   return rows;
 }
 
+function withLevels(row: WalkedRow['row'], levels: LevelSpec): WalkedRow['row'] {
+  const rawLevels =
+    levels.values?.join(',') ??
+    (levels.min === levels.max ? `${levels.min}` : `${levels.min}-${levels.max}`);
+  return {
+    ...row,
+    slots: row.slots.map((slot) => ({ ...slot, levels: { ...levels }, rawLevels })),
+  };
+}
+
 /** Applies a location's patches to its walked rows. Returns the rows and errors for patches that match nothing. */
 export function applyEncounterPatches(
   locationId: string,
@@ -116,11 +137,13 @@ export function applyEncounterPatches(
   const errors: string[] = [];
   for (const patch of overrides.patches) {
     if (patch.locationId !== locationId) continue;
-    const { method, dex, label } = patch.match;
+    const { method, dex, label, games } = patch.match;
     const matches = (r: WalkedRow) =>
       r.method === method &&
       (dex === undefined || r.row.dex === dex) &&
-      (label === undefined || r.label === label);
+      (label === undefined || r.label === label) &&
+      (games === undefined ||
+        (r.row.games.length === games.length && games.every((g) => r.row.games.includes(g))));
     if (!result.some(matches)) {
       errors.push(
         `Encounter patch for ${JSON.stringify(patch.match)} in ${locationId} matches no rows`,
@@ -139,6 +162,7 @@ export function applyEncounterPatches(
                   method: set.method ?? r.method,
                   label: set.label === undefined ? r.label : set.label,
                   requires: set.requires ? [...set.requires] : r.requires,
+                  row: set.levels ? withLevels(r.row, set.levels) : r.row,
                 }
               : r,
           );
