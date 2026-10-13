@@ -28,6 +28,8 @@ export interface SpriteJob {
 export interface SpriteSource {
   getImageInfo(fileTitles: readonly string[]): Promise<Map<string, ImageInfo | null>>;
   download(url: string): Promise<Uint8Array>;
+  /** Told how many downloads follow, for progress feedback. */
+  expectRequests?(count: number): void;
 }
 
 export interface SpriteSyncResult {
@@ -133,6 +135,8 @@ export async function syncSprites(
   };
 
   const infos = await source.getImageInfo(jobs.map((job) => job.fileTitle));
+  const stale: { job: SpriteJob; info: ImageInfo; archiveSha1: string; file: string; name: string }[] =
+    [];
   for (const job of jobs) {
     const info = infos.get(job.fileTitle);
     if (!info) {
@@ -145,10 +149,12 @@ export async function syncSprites(
     const current = job.stillFrame
       ? existsSync(file) && manifestOf(job.setId)[name] === archiveSha1
       : existsSync(file) && sha1(readFileSync(file)) === archiveSha1;
-    if (current) {
-      result.unchanged.push(job);
-      continue;
-    }
+    if (current) result.unchanged.push(job);
+    else stale.push({ job, info, archiveSha1, file, name });
+  }
+
+  source.expectRequests?.(stale.length);
+  for (const { job, info, archiveSha1, file, name } of stale) {
     const bytes = await source.download(info.url);
     if (sha1(bytes) !== archiveSha1) {
       result.corrupt.push(job);

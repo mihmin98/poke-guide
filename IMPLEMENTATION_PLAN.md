@@ -490,7 +490,8 @@ Dev dependencies: `tsx`, `zod`, `@material/material-color-utilities`, `fast-chec
 ### 7.3 Fetching (being polite to Bulbapedia)
 - Use the **batched API** (`titles=` up to 50 per request). Red/Blue/Yellow is about 70 location pages, 151 species pages and 5 list pages, so roughly **6–8 requests** in total.
 - Send a descriptive `User-Agent` such as `poke-guide-data-builder/1.0`. Add the repo URL once the repo exists (§17).
-- Send `maxlag=5`, allow at most 1 request per second, and retry with exponential backoff on 429/5xx or `maxlag` errors, respecting `Retry-After`.
+- Send `maxlag=5`, wait a random 2–5 s between requests, and retry with exponential backoff on 429/5xx or `maxlag` errors, respecting `Retry-After`. Any other error status (such as a 403 challenge) fails at once, without retrying.
+- Show progress while fetching: a one-line bar with the request count, a countdown to the next request and an ETA on a terminal, or one plain line per request elsewhere (`core/progress.ts`).
 - Cache files are `scripts/data/cache/raw/<title>.json`, holding `{title, resolvedTitle, revid, timestamp, wikitext}`. The cache is gitignored and shared between version groups, since one location page serves several generations.
 - Record each page's `revid` in the output under `sources[]`, for attribution links and for reviewing what changed between refreshes.
 

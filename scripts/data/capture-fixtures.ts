@@ -11,6 +11,7 @@ import { parseArgs } from 'node:util';
 import { PageCache, PageSource, formatFixture } from './core/cache';
 import { MediaWikiClient } from './core/mediawiki-client';
 import { fixturesDir, rawCacheDir, repoRoot } from './core/paths';
+import { RequestProgress } from './core/progress';
 import { GSC_FIXTURE_PAGES } from './version-groups/gsc/fixture-pages';
 import { RBY_FIXTURE_PAGES, type FixturePage } from './version-groups/rby/fixture-pages';
 
@@ -39,13 +40,15 @@ async function captureGroup(
   pages: readonly FixturePage[],
   refresh: boolean,
 ): Promise<void> {
+  const progress = new RequestProgress({ stream: process.stderr });
   const source = new PageSource({
     mode: refresh ? 'refresh' : 'cache-first',
     cache: new PageCache(rawCacheDir()),
-    client: new MediaWikiClient({ log: console.warn }),
+    client: new MediaWikiClient({ log: console.warn, progress }),
     log: console.log,
   });
   const fetched = await source.getPages(pages.map((p) => p.title));
+  progress.finish();
 
   const dir = fixturesDir(group);
   mkdirSync(dir, { recursive: true });

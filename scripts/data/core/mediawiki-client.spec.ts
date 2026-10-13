@@ -1,4 +1,5 @@
 import { MediaWikiClient, MediaWikiError, USER_AGENT, wikiUrl } from './mediawiki-client';
+import { RequestProgress } from './progress';
 
 function json(body: unknown, init: ResponseInit = {}): Response {
   return new Response(JSON.stringify(body), {
@@ -15,7 +16,10 @@ function revision(title: string, revid: number, content = `text of ${title}`) {
   };
 }
 
-function setup(responses: ((url: URL) => Response)[]) {
+function setup(
+  responses: ((url: URL) => Response)[],
+  options: { random?: () => number; progress?: RequestProgress } = {},
+) {
   let clock = 0;
   const sleeps: number[] = [];
   const calls: { url: URL; headers: Record<string, string> }[] = [];
@@ -33,6 +37,8 @@ function setup(responses: ((url: URL) => Response)[]) {
       sleeps.push(ms);
       clock += ms;
     },
+    random: options.random ?? (() => 0),
+    progress: options.progress,
   });
   return { client, calls, sleeps };
 }
@@ -66,7 +72,7 @@ describe('MediaWikiClient.getPages', () => {
     expect(calls[0]!.headers['User-Agent']).toBe(USER_AGENT);
   });
 
-  it('batches at most 50 titles per request and throttles to one request per second', async () => {
+  it('batches at most 50 titles per request and waits at least 2 s between requests', async () => {
     const titles = Array.from({ length: 60 }, (_, i) => `Page ${i}`);
     const respond = (url: URL) =>
       json({
@@ -81,7 +87,7 @@ describe('MediaWikiClient.getPages', () => {
     const pages = await client.getPages(titles);
     expect(calls.map((c) => c.url.searchParams.get('titles')!.split('|').length)).toEqual([50, 10]);
     expect(pages.size).toBe(60);
-    expect(sleeps).toEqual([1000]);
+    expect(sleeps).toEqual([2000]);
   });
 
   it('follows continuation when content is split across responses', async () => {
@@ -108,7 +114,8 @@ describe('MediaWikiClient.request retries', () => {
       () => json({ query: { pages: [] } }),
     ]);
     await client.request({ action: 'query' });
-    expect(sleeps).toEqual([1000, 7000]);
+    // A 1 s backoff is topped up to the 2 s minimum gap; the 7 s Retry-After already covers it.
+    expect(sleeps).toEqual([1000, 1000, 7000]);
   });
 
   it('retries maxlag errors', async () => {
@@ -166,7 +173,47 @@ describe('MediaWikiClient files', () => {
     expect(calls).toHaveLength(2);
     expect(calls[1]!.headers['User-Agent']).toBe(USER_AGENT);
     expect(calls[1]!.url.searchParams.has('format')).toBe(false);
-    expect(sleeps).toEqual([1000]);
+    expect(sleeps).toEqual([1000, 1000]);
+  });
+});
+
+describe('MediaWikiClient pacing and progress', () => {
+  it('draws each gap uniformly from 2–5 s', async () => {
+    // The first request's draw goes unused: nothing came before it.
+    const draws = [0, 0, 0.5, 0.999];
+    const { client, sleeps } = setup(
+      Array.from({ length: 4 }, () => () => json({ ok: true })),
+      { random: () => draws.shift() ?? 1 },
+    );
+    for (let i = 0; i < 4; i++) await client.request({ action: 'query' });
+    // Gaps are measured from the previous request's start.
+    expect(sleeps).toEqual([2000, 3500, 4997]);
+  });
+
+  it('fails a 403 at once, without retrying', async () => {
+    const { client, calls } = setup([() => new Response('', { status: 403 })]);
+    await expect(client.request({ action: 'query' })).rejects.toThrow(/HTTP 403/);
+    expect(calls).toHaveLength(1);
+  });
+
+  it('announces batches, continuations and retries to the progress bar', async () => {
+    const progress = new RequestProgress({ stream: { write: () => undefined } });
+    const expect_ = vi.spyOn(progress, 'expect');
+    const done = vi.spyOn(progress, 'done');
+    const titles = Array.from({ length: 60 }, (_, i) => `Page ${i}`);
+    const { client } = setup(
+      [
+        () => json({ continue: { rvcontinue: 'x' }, query: { pages: [] } }),
+        () => new Response('', { status: 503 }),
+        () => json({ query: { pages: [] } }),
+        () => json({ query: { pages: [] } }),
+      ],
+      { progress },
+    );
+    await client.getPages(titles);
+    // 2 batches up front, then 1 continuation and 1 retry.
+    expect(expect_.mock.calls).toEqual([[2], [1], [1]]);
+    expect(done).toHaveBeenCalledTimes(4);
   });
 });
 

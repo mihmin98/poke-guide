@@ -88,7 +88,7 @@ npm run data:validate           # planned, not yet implemented: validate committ
   - `redirects=1` is required.
 - Types come from the current National Dex list plus `type-history.ts`, which holds per-generation types (e.g. Gen I: Clefairy line is Normal, Magnemite is Electric).
 - Catch rates come from species infoboxes plus the "List of Pokémon by catch rate" history. Unclassified notes there must **fail the build**. For example, Yellow "27" notes describe a held-item quirk, not a catch rate.
-- Be polite to Bulbapedia: batched `titles=` (≤50), ≤1 request/s, `maxlag=5`, a descriptive User-Agent, and the on-disk cache (`scripts/data/cache/`, gitignored). Bulbapedia content is CC BY-NC-SA 2.5, so the attribution in the app must stay.
+- Be polite to Bulbapedia: batched `titles=` (≤50), a random 2–5 s gap between requests, `maxlag=5`, a descriptive User-Agent, and the on-disk cache (`scripts/data/cache/`, gitignored). Bulbapedia content is CC BY-NC-SA 2.5, so the attribution in the app must stay.
 
 ### Obtainability (plan §9)
 - `buildChecklist(data, game, features)` is a pure function:

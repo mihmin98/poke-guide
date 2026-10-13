@@ -9,6 +9,7 @@ import { join } from 'node:path';
 import { parseArgs } from 'node:util';
 import { ARCHIVES_API, MediaWikiClient } from './core/mediawiki-client';
 import { repoRoot } from './core/paths';
+import { RequestProgress } from './core/progress';
 import { spriteJobs, syncSprites } from './core/sprites';
 import { VERSION_GROUP_CONFIGS } from './version-groups';
 import type { VersionGroupConfig } from './version-groups/types';
@@ -26,7 +27,8 @@ async function main(): Promise<void> {
         );
   if (configs.length === 0) throw new Error(`Unknown --group "${values.group ?? ''}"`);
 
-  const client = new MediaWikiClient({ endpoint: ARCHIVES_API, log: console.warn });
+  const progress = new RequestProgress({ stream: process.stderr, label: 'Bulbagarden Archives' });
+  const client = new MediaWikiClient({ endpoint: ARCHIVES_API, log: console.warn, progress });
   const spritesDir = join(repoRoot(), 'public', 'sprites');
   let ok = true;
   for (const config of configs) {
@@ -48,6 +50,7 @@ async function main(): Promise<void> {
       console.log(`  SHA-1 MISMATCH ${job.fileTitle} (${job.path})`);
     if (result.missing.length > 0 || result.corrupt.length > 0) ok = false;
   }
+  progress.finish();
   console.log(`\n${client.requestCount} requests`);
   if (!ok) process.exitCode = 1;
 }

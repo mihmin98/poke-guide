@@ -156,7 +156,7 @@ None.
 - [Goldenrod Department Store] Machop has types fighting/fighting here, expected fighting
 - [Goldenrod Department Store] Machop has types fighting/fighting here, expected fighting
 
-## Notes (8)
+## Notes (7)
 
 - Meowth: unsupported box {{evobox/meowth-alola}}
 - Persian: unsupported box {{evobox/meowth-alola}}
@@ -165,4 +165,3 @@ None.
 - Umbreon: unsupported box {{evobox/setup}}
 - #133 Eevee → #196 Espeon: not checked, no readable evolution box covers it
 - #133 Eevee → #197 Umbreon: not checked, no readable evolution box covers it
-- Location category check skipped (Category:Gold, Silver and Crystal locations not available)

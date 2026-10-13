@@ -22,6 +22,7 @@ import {
 } from './core/assemble';
 import { PageCache, PageSource, loadFixtures, type CachedPage, type FetchMode } from './core/cache';
 import { MediaWikiClient } from './core/mediawiki-client';
+import { RequestProgress } from './core/progress';
 import { formatItemNumbers, parseItemNumbers } from './core/item-numbers';
 import { fixturesDir, rawCacheDir, repoRoot, versionGroupDir } from './core/paths';
 import type { VersionGroupData } from '../../src/app/core/domain/models';
@@ -52,9 +53,11 @@ async function buildGroup(
   config: VersionGroupConfig,
   mode: FetchMode,
   dryRun: boolean,
+  /** Shared by every group, so the gap between requests holds across groups. */
+  client: MediaWikiClient | undefined,
 ): Promise<boolean> {
   console.log(`\n== ${config.id} (${mode}) ==`);
-  const client = mode === 'offline' ? undefined : new MediaWikiClient({ log: console.warn });
+  const requestsBefore = client?.requestCount ?? 0;
   const source = new PageSource({
     mode,
     cache: new PageCache(rawCacheDir()),
@@ -82,7 +85,7 @@ async function buildGroup(
   } else {
     categoryMembers = categorySnapshot(config);
   }
-  if (client) console.log(`${client.requestCount} request(s) to Bulbapedia`);
+  if (client) console.log(`${client.requestCount - requestsBefore} request(s) to Bulbapedia`);
 
   const itemNumbersFile = join(versionGroupDir(config.id), 'item-numbers.json');
   const { data, pokedex, issues, itemNumbers } = assembleVersionGroup(
@@ -170,10 +173,14 @@ async function main(): Promise<void> {
     throw new Error(`Unknown --group "${values.group ?? ''}". Known groups: ${known}`);
   }
   const mode: FetchMode = values.offline ? 'offline' : values.refresh ? 'refresh' : 'cache-first';
+  const progress = new RequestProgress({ stream: process.stderr });
+  const client =
+    mode === 'offline' ? undefined : new MediaWikiClient({ log: console.warn, progress });
   let ok = true;
   for (const config of configs as VersionGroupConfig[]) {
-    ok = (await buildGroup(config, mode, values['dry-run'])) && ok;
+    ok = (await buildGroup(config, mode, values['dry-run'], client)) && ok;
   }
+  progress.finish();
   if (!ok) process.exitCode = 1;
 }
 

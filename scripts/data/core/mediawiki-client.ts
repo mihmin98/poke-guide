@@ -1,8 +1,10 @@
 /**
- * Polite MediaWiki API client for Bulbapedia: batched `titles=` (≤ 50), ≤ 1 request/s, `maxlag=5`,
- * a descriptive User-Agent, and exponential backoff on 429/5xx/maxlag honoring `Retry-After`.
+ * Polite MediaWiki API client for Bulbapedia: batched `titles=` (≤ 50), a random 2–5 s gap between
+ * requests, `maxlag=5`, a descriptive User-Agent, and exponential backoff on 429/5xx/maxlag honoring
+ * `Retry-After`. Any other error status (such as a 403 challenge) fails at once, without retrying.
  */
 import { z } from 'zod';
+import type { RequestProgress } from './progress';
 
 export const BULBAPEDIA_API = 'https://bulbapedia.bulbagarden.net/w/api.php';
 export const BULBAPEDIA_WIKI = 'https://bulbapedia.bulbagarden.net/wiki/';
@@ -37,12 +39,17 @@ export interface ImageInfo {
 export interface MediaWikiClientOptions {
   endpoint?: string;
   userAgent?: string;
+  /** The gap between request starts is drawn uniformly from [minIntervalMs, maxIntervalMs]. */
   minIntervalMs?: number;
+  maxIntervalMs?: number;
   maxRetries?: number;
   fetch?: typeof fetch;
   sleep?: (ms: number) => Promise<void>;
   now?: () => number;
+  random?: () => number;
   log?: (message: string) => void;
+  /** Progress bar and ETA; `log` messages go through it so they don't break the bar. */
+  progress?: RequestProgress;
 }
 
 export class MediaWikiError extends Error {
@@ -113,29 +120,43 @@ export class MediaWikiClient {
   private readonly endpoint: string;
   private readonly userAgent: string;
   private readonly minIntervalMs: number;
+  private readonly maxIntervalMs: number;
   private readonly maxRetries: number;
   private readonly fetchImpl: typeof fetch;
   private readonly sleep: (ms: number) => Promise<void>;
   private readonly now: () => number;
+  private readonly random: () => number;
   private readonly log: (message: string) => void;
+  private readonly progress: RequestProgress | undefined;
   private lastRequestAt = Number.NEGATIVE_INFINITY;
   requestCount = 0;
 
   constructor(options: MediaWikiClientOptions = {}) {
     this.endpoint = options.endpoint ?? BULBAPEDIA_API;
     this.userAgent = options.userAgent ?? USER_AGENT;
-    this.minIntervalMs = options.minIntervalMs ?? 1000;
+    this.minIntervalMs = options.minIntervalMs ?? 2000;
+    this.maxIntervalMs = Math.max(this.minIntervalMs, options.maxIntervalMs ?? 5000);
     this.maxRetries = options.maxRetries ?? 5;
     this.fetchImpl = options.fetch ?? fetch;
     this.sleep = options.sleep ?? ((ms) => new Promise((resolve) => setTimeout(resolve, ms)));
     this.now = options.now ?? Date.now;
-    this.log = options.log ?? (() => undefined);
+    this.random = options.random ?? Math.random;
+    this.progress = options.progress;
+    const log = options.log ?? (() => undefined);
+    this.log = this.progress ? (message) => this.progress!.print(message) : log;
+  }
+
+  /** Announces `count` upcoming requests to the progress bar (e.g. a known number of downloads). */
+  expectRequests(count: number): void {
+    this.progress?.expect(count);
   }
 
   /** Latest revision wikitext per requested title; `null` for missing or invalid pages. Follows redirects. */
   async getPages(titles: readonly string[]): Promise<Map<string, FetchedPage | null>> {
     const result = new Map<string, FetchedPage | null>();
-    for (const batch of chunk([...new Set(titles)], MAX_TITLES_PER_REQUEST)) {
+    const batches = chunk([...new Set(titles)], MAX_TITLES_PER_REQUEST);
+    this.progress?.expect(batches.length);
+    for (const batch of batches) {
       const normalized = new Map<string, string>();
       const redirects = new Map<string, string>();
       const pageByTitle = new Map<
@@ -144,8 +165,9 @@ export class MediaWikiClient {
       >();
       let continuation: Record<string, string> = {};
       do {
+        if (Object.keys(continuation).length > 0) this.progress?.expect(1);
         const body = revisionsResponse.parse(
-          await this.request({
+          await this.query({
             action: 'query',
             prop: 'revisions',
             rvprop: 'content|ids|timestamp',
@@ -192,9 +214,11 @@ export class MediaWikiClient {
   /** Direct URL and SHA-1 (hex) of the current version of `File:` titles; `null` for missing files. */
   async getImageInfo(fileTitles: readonly string[]): Promise<Map<string, ImageInfo | null>> {
     const result = new Map<string, ImageInfo | null>();
-    for (const batch of chunk([...new Set(fileTitles)], MAX_TITLES_PER_REQUEST)) {
+    const batches = chunk([...new Set(fileTitles)], MAX_TITLES_PER_REQUEST);
+    this.progress?.expect(batches.length);
+    for (const batch of batches) {
       const body = imageInfoResponse.parse(
-        await this.request({
+        await this.query({
           action: 'query',
           prop: 'imageinfo',
           iiprop: 'url|sha1',
@@ -211,7 +235,10 @@ export class MediaWikiClient {
     return result;
   }
 
-  /** Downloads a file (e.g. an `imageinfo` URL) with the same throttling, User-Agent and retries. */
+  /**
+   * Downloads a file (e.g. an `imageinfo` URL) with the same throttling, User-Agent and retries.
+   * Announce a batch of downloads with `expectRequests` for a meaningful ETA.
+   */
   async download(url: string): Promise<Uint8Array> {
     return this.send(new URL(url), '*/*', async (response) => ({
       value: new Uint8Array(await response.arrayBuffer()),
@@ -223,8 +250,9 @@ export class MediaWikiClient {
     const titles: string[] = [];
     let continuation: Record<string, string> = {};
     do {
+      this.progress?.expect(1);
       const body = categoryResponse.parse(
-        await this.request({
+        await this.query({
           action: 'query',
           list: 'categorymembers',
           cmtitle: category,
@@ -240,6 +268,11 @@ export class MediaWikiClient {
 
   /** One API request with throttling and retries. Returns the parsed JSON body. */
   async request(params: Record<string, string>): Promise<unknown> {
+    this.progress?.expect(1);
+    return this.query(params);
+  }
+
+  private async query(params: Record<string, string>): Promise<unknown> {
     const url = new URL(this.endpoint);
     const query = { format: 'json', formatversion: '2', maxlag: '5', ...params };
     for (const [key, value] of Object.entries(query)) url.searchParams.set(key, value);
@@ -269,6 +302,7 @@ export class MediaWikiClient {
         if (attempt >= this.maxRetries) {
           throw new MediaWikiError(`${reason} after ${attempt + 1} attempts: ${url}`);
         }
+        this.progress?.expect(1);
         const delay = retryAfterMs ?? 1000 * 2 ** attempt;
         this.log(`${reason}; retrying in ${delay} ms`);
         await this.sleep(delay);
@@ -277,13 +311,16 @@ export class MediaWikiClient {
       let response: Response;
       try {
         this.requestCount++;
+        this.progress?.sending();
         response = await this.fetchImpl(url, {
           headers: { 'User-Agent': this.userAgent, Accept: accept },
         });
       } catch (error) {
+        this.progress?.done();
         await retry(`Network error (${(error as Error).message})`, null);
         continue;
       }
+      this.progress?.done();
 
       const retryAfter = parseRetryAfter(response.headers.get('retry-after'));
       if (response.status === 429 || response.status >= 500) {
@@ -302,8 +339,10 @@ export class MediaWikiClient {
   }
 
   private async throttle(): Promise<void> {
-    const wait = this.lastRequestAt + this.minIntervalMs - this.now();
-    if (wait > 0) await this.sleep(wait);
+    const span = this.maxIntervalMs - this.minIntervalMs;
+    const gap = this.minIntervalMs + Math.round(this.random() * span);
+    const wait = this.lastRequestAt + gap - this.now();
+    if (wait > 0) await (this.progress ? this.progress.wait(wait, this.sleep) : this.sleep(wait));
     this.lastRequestAt = this.now();
   }
 }
