@@ -55,9 +55,13 @@ Games are added as data and configuration, not app changes: a registry entry, a 
 
 GitHub Actions builds and publishes the site to GitHub Pages:
 
-- **`deploy.yml`:** runs on every push to `master`, except pushes that only change the docs or the data reports. It runs the full `verify` first.
-- **`ci.yml`:** checks pull requests and other branches.
+- **`deploy.yml`:** runs when a release tag (`v1.2.3`) is pushed, so the live site is always a released version. It checks that the tag matches `package.json`, then runs the full `verify` first.
+- **`ci.yml`:** checks pull requests and every branch push.
 - **`data-refresh.yml`:** run by hand. It refetches the data and opens a pull request when something changed; it never merges on its own.
+
+## Versioning
+
+Poké Guide follows [Semantic Versioning](https://semver.org/) from the user's side: a major version only when saved profiles, export codes, backups or links would stop working, a minor version for new games and features, and a patch version for fixes and data corrections. Changes are listed in [`CHANGELOG.md`](CHANGELOG.md); the rules and the release steps are in [plan §17.1](IMPLEMENTATION_PLAN.md#171-versioning-and-releases).
 
 ## Credits and disclaimer
 

@@ -47,6 +47,8 @@ npm run typecheck:scripts       # tsc -p tsconfig.scripts.json (scripts/ + frame
 npm run format                  # prettier
 npm run theme:games             # regenerate src/theme/*.generated.scss from registry seeds and type colors (--check in verify)
 npm run fonts                   # re-download the self-hosted Roboto + icon-subset fonts into src/theme/fonts/ (--check in verify, offline)
+npm run version:sync            # copy the package.json version to src/app/core/version.ts and ngsw-config.json (--check in verify)
+npm version <major|minor|patch> # bump the version for a release (runs version:sync; never commits or tags, see .npmrc)
 ```
 
 **Icons:** the Material Symbols font is a subset holding only the icons the app uses. After adding an icon, run `npm run fonts` (verify fails until you do). The scanner only sees literal `<mat-icon>name</mat-icon>` text (or quoted names inside its interpolation), `icon: 'name'` properties, and `icon('name')` calls from `src/app/shared/icon.ts`. Wrap any other icon name picked in code in `icon()`.
@@ -117,7 +119,7 @@ Per-generation strategy modules (`core/mechanics/genN.ts`) provide the capture f
 - **Ask before installing anything outside the project.** Don't install global dependencies (`npm install -g`, global `npx` tool installs, `pip install --user`…) or additional programs (system packages, nvm Node versions, browsers, CLIs) without asking the user first.
 - **Ask before adding any new dependency**, including project-local ones in `package.json` (`dependencies` or `devDependencies`), even if the plan already names the package. `npm install`/`npm ci` of dependencies already in `package.json` is fine.
 - **Don't change files outside the project directory** (`/home/mih/Documents/Projects/poke-guide`). That includes dotfiles, shell profiles, global npm/git config and other projects. Allowed exceptions: Claude's memory folder (`~/.claude/projects/.../memory`), the session scratchpad under `/tmp/claude-*`, and tool caches such as `~/.npm`.
-- **Deployment (Phase 8, plan §17):** GitHub Actions publishes to https://mihmin98.github.io/poke-guide/ (base href `/poke-guide/`) on every push to `master`, except pushes that only change the docs or the data reports. Keep all asset and data URLs relative, since the app runs under a sub-path. The workflows live in `.github/workflows/` (`ci.yml`, `deploy.yml`, `data-refresh.yml`).
+- **Deployment (Phase 8, plan §17):** GitHub Actions publishes to https://mihmin98.github.io/poke-guide/ (base href `/poke-guide/`) when a release tag `vX.Y.Z` is pushed; pushes to `master` only run CI (see "Versioning and releases"). Keep all asset and data URLs relative, since the app runs under a sub-path. The workflows live in `.github/workflows/` (`ci.yml`, `deploy.yml`, `data-refresh.yml`).
 - The UI is English only. Sprites are the selected game's in-game sprites. Games are the international versions.
 
 ## Commit messages
@@ -135,8 +137,8 @@ solves or the decision behind it, not a line-by-line diff.>
 <optional notes: compatibility, follow-ups, plan section refs>
 ```
 
-- **Types:** `feat` (new capability, including new game data), `fix` (bug fix, or a Bulbapedia correction via `patches.ts`), `refactor`, `perf`, `test`, `docs` (PROGRESS.md, the plan, CLAUDE.md), `ci`, `chore` (dependencies, tooling, formatting), `data` (regenerated output only, e.g. `data(rby): refresh from Bulbapedia`).
-- **Scopes:** `data/<group>` (`data/rby`, `data/gsc`…), `pipeline` (shared `scripts/data` code), `registry`, `domain`, `mechanics`, `codec`, app areas (`guide`, `checklist`, `profiles`, `settings`, `layout`, `theme`…), `progress`, `plan`, `deploy`, `ci`. Leave the scope out when a change spans many areas.
+- **Types:** `feat` (new capability, including new game data), `fix` (bug fix, or a Bulbapedia correction via `patches.ts`), `refactor`, `perf`, `test`, `docs` (PROGRESS.md, the plan, CLAUDE.md), `ci`, `chore` (dependencies, tooling, formatting; `chore(release): X.Y.Z` for a release), `data` (regenerated output only, e.g. `data(rby): refresh from Bulbapedia`).
+- **Scopes:** `data/<group>` (`data/rby`, `data/gsc`…), `pipeline` (shared `scripts/data` code), `registry`, `domain`, `mechanics`, `codec`, app areas (`guide`, `checklist`, `profiles`, `settings`, `layout`, `theme`…), `progress`, `plan`, `deploy`, `ci`, `release`. Leave the scope out when a change spans many areas.
 - **Headline:** lowercase after the colon, imperative, no trailing period, at most about 72 characters. Put the phase or stage tag in parentheses at the end where it helps: `feat(data/gsc): add the curated overrides (Phase 10 Stage C)`.
 - **Body:** blank line after the headline, wrapped at 72 characters. Focus on the **why** and on what a later reader can't easily see in the diff (Bulbapedia quirks, rejected alternatives, compatibility guarantees). Use bullets only when the commit has separate parts. Put plan references (`See plan §9.2.`) at the end. Docs-only and trivial commits can have a one- or two-sentence body.
 - **Contract changes** (`codecId`, the `PKG*` format, item numbers, saved-state schema) get a `!` after the scope and a compatibility note in the body:
@@ -154,3 +156,29 @@ caught bitfield.
 Compatibility: every existing PKG1 code still decodes unchanged.
 codecIds are untouched.
 ```
+
+## Versioning and releases (plan §17.1)
+
+The app version (`package.json`, currently 1.0.0) follows SemVer **from the user's side**. What users hold is their saved state, `PKG*` codes, backup files and `/:game/...` links.
+
+- **MAJOR:** something a user holds stops working: a state that can't be migrated, a code or backup that no longer imports, a deep link that breaks without a redirect. The contracts above exist to prevent this. If a change would need a MAJOR bump, stop and ask the user first.
+- **MINOR:** a new capability that keeps everything working: a game becoming `available`, a new page or tool, a new `PKGn` format added on top, a state schema migration.
+- **PATCH:** bug fixes, `patches.ts` and override corrections, a merged data-refresh PR, UI polish, dependency bumps.
+- **No bump:** docs, CI, reports, tests and refactors nobody can see.
+
+Rules:
+- **A commit `!` doesn't mean MAJOR.** It marks any contract change, including compatible ones like `feat(codec)!` for PKG3. Pick the bump from the list above, never from commit types. Don't add release-please, changesets or similar tools.
+- **The app version is separate from the internal versions:** the state `schemaVersion`, the data file `schemaVersion`, the `PKG*` formats, `codecId`s and item and milestone numbers. Never bump or reset one to match another.
+- **Never edit the version by hand.** `src/app/core/version.ts` and `ngsw-config.json` → `appData` are generated from `package.json`. Change the version only with `npm version`, and only when the user asks for a release.
+- **Keep `CHANGELOG.md` current.** When you stage a change users can notice, add a line under `## [Unreleased]`. Use the *Added*, *Changed*, *Fixed*, *Data* and *Compatibility* subsections, written for users, not as commit headlines. If a contract changed, the *Compatibility* line says what still reads.
+
+**Release workflow** (when the user asks for a release):
+1. Read `## [Unreleased]` and `git log v<last>..HEAD`, and propose the bump with a one-line reason.
+2. Run `npm version <major|minor|patch>`. It updates `package.json`, `package-lock.json`, `src/app/core/version.ts` and `ngsw-config.json`, and never commits or tags.
+3. In `CHANGELOG.md`, rename `## [Unreleased]` to `## [X.Y.Z] - <date>` and add a new empty `## [Unreleased]` above it. Update the `[Unreleased]` compare link at the bottom and add an `[X.Y.Z]:` link.
+4. Run `npm run verify`, stage those five files, and give the user:
+   - the commit message: `chore(release): X.Y.Z`, with the changelog highlights in the body
+   - the commands to run: `git tag -a vX.Y.Z -m "Poké Guide X.Y.Z"` then `git push --follow-tags`
+
+   Never create the tag yourself.
+5. Pushing the tag deploys. `deploy.yml` fails unless the tag is `v` + the `package.json` version, and a manual run must be started from the tag. Add a log entry to `PROGRESS.md`.

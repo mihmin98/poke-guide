@@ -48,6 +48,7 @@ For each area it lists the Pokémon you can get, in the order you visit the area
 | License | **No license file** is added to the repo. The Bulbapedia attribution is still shown in the app (§15). |
 | Git | **The user handles all git operations manually** (init, commits, branches, remotes, pushing, creating the GitHub repo). Tooling never runs git commands, and the Angular scaffold uses `--skip-git`. "Committed" files in this plan are generated, and the user commits them. |
 | Deployment | GitHub Pages publishing (workflows, base href, repo setup) is the **last phase** (§17). Until then everything runs and is tested locally. |
+| Versioning | **SemVer from the user's side**, starting at **1.0.0** for the first public deploy. Only release tags `vX.Y.Z` deploy (§17.1, decided 2026-10-13). |
 | Framework conventions | Standalone components, signals, zoneless change detection, the built-in control flow (`@if`, `@for`), `OnPush`, lazy-loaded routes, and the `@angular/build` application builder. **Modern Angular 22 APIs only** (user rule, 2026-09-15): `input()`/`output()`/`model()`, `inject()`, functional guards, and **Signal Forms** (`@angular/forms/signals`) — never `FormsModule`/`ngModel` or reactive forms. RxJS is used only where an Angular API returns an Observable, consumed with `firstValueFrom` or `toSignal`. See `CLAUDE.md` for the full list. |
 
 ---
@@ -1237,7 +1238,7 @@ Binary layout, before encoding (all integers little-endian):
 ### 12.3 Export UI
 - A dialog shows the code in a read-only monospace field, plus **Copy code**, **Copy link** and **Share…** (`navigator.share`).
 - *Optional (Phase 7), done 2026-09-23:* a **QR code** button shows the share link as a QR code. `qrcode-generator` (MIT, no dependencies) is loaded through a signal `resource` only when the code is first shown, and the code is drawn as one SVG path, dark on white even in dark mode. Scanning it opens `/import#PKG1-…` on the other device.
-- **Full backup:** "Download all profiles (JSON)" produces `{app:'poke-guide', schemaVersion, exportedAt, profiles}`. It can be restored from the Import page.
+- **Full backup:** "Download all profiles (JSON)" produces `{app:'poke-guide', schemaVersion, appVersion, exportedAt, profiles}`; `appVersion` (§17.1) is informational and optional. It can be restored from the Import page.
 
 ### 12.4 Import UI
 1. Paste the code or link, open a share link (prefilled from the fragment), or pick a JSON file.
@@ -1376,7 +1377,7 @@ Binary layout, before encoding (all integers little-endian):
   - **Added 2026-10-13:** `lang`, `dir` and `categories`. Install-dialog `screenshots` (`public/screenshots/narrow.png` and `wide.png`, captured by the user) are listed once the files exist. They are not in `ngsw-config.json`, because only the online install dialog uses them.
   - The icons are a Poké Ball drawn by `npm run icons` (`scripts/icons/generate-icons.ts`): anti-aliased shapes encoded as PNG with Node's zlib, with no image dependency.
 - An update prompt via `SwUpdate` (`core/pwa/app-update.service.ts`):
-  - "A new version of Poké Guide is ready · Reload", flushing pending storage writes before reloading.
+  - "Poké Guide 1.1.0 is ready · Reload" (the version from the worker's `appData`, §17.1; "A new version of Poké Guide is ready" without it), flushing pending storage writes before reloading.
   - A reload prompt on an unrecoverable cache state.
   - An update check whenever the page becomes visible again.
 
@@ -1533,7 +1534,9 @@ Resumed 2026-10-13. The user chose to deploy before the pending manual checks of
 - [x] Add the repo URL to the scraper User-Agent and the About page.
 - [x] README (features, dev setup, data pipeline, adding a game, deployment).
 - [x] A local check of the `/poke-guide/` build served like Pages (shell on deep links, `ngsw.json` paths, relative assets).
-- [ ] Deploy, then run the smoke test on the live site (deep link reload, import link, offline).
+- [x] Versioning (§17.1, 2026-10-13): `1.0.0`, the version sync script, deploys from `v*` tags only.
+- [ ] Allow `v*` tags in the `github-pages` environment (the user).
+- [ ] Tag `v1.0.0` and push it to deploy, then run the smoke test on the live site (deep link reload, import link, offline).
 - [ ] Run the data refresh by hand once, then enable its monthly schedule.
 - **Accept when:** the live site passes the same manual smoke check (§14) as the local build.
 
@@ -1781,16 +1784,46 @@ Stages:
 - **Base href:** the site URL is `https://<owner>.github.io/<repo>/`, so build with `ng build --base-href /<repo>/`. The value comes from one variable (`PAGES_BASE_HREF`) in the workflow. All asset and data URLs in the app are **relative** (`data/rby.json`, `sprites/…`), so nothing else changes. A custom domain later means adding `CNAME` and using `/`.
 - **SPA deep links:** copy `dist/poke-guide/browser/index.html` to `404.html` and add `.nojekyll`.
 - **`npm run data:validate`** (`scripts/data/validate.ts`): checks the committed data files without the network. They must pass `validateVersionGroup`, and their item numbers must match `item-numbers.json` entry for entry.
-- **`ci.yml`** (pull requests, and pushes to branches other than `master`): `setup-node` from `.node-version` → `npm ci` → `npm run verify` → `npm run data:validate`. No e2e step (§14). Pushes to `master` get the same checks in `deploy.yml`.
-- **`deploy.yml`** (push to `master`, `workflow_dispatch`):
+- **`ci.yml`** (pull requests, and pushes to every branch, `master` included): `setup-node` from `.node-version` → `npm ci` → `npm run verify` → `npm run data:validate`. No e2e step (§14).
+- **`deploy.yml`** (push of a `v*` tag, `workflow_dispatch`; tag-only since 2026-10-13, §17.1):
+  - It first checks that the run is for a tag and that the tag is `v` + the `package.json` version, so a manual run must also be started from a release tag.
   - `npm run verify` and `data:validate` run first, so a failing check never deploys (user choice, 2026-10-13).
   - Then `ng build --base-href "$PAGES_BASE_HREF"` → `404.html` and `.nojekyll` → `actions/upload-pages-artifact` (with `include-hidden-files`, or `.nojekyll` is dropped) → `actions/deploy-pages`.
-  - `permissions: pages: write, id-token: write`, `environment: github-pages`. The push trigger has a `paths-ignore` list of doc-only files (`PROGRESS.md`, `IMPLEMENTATION_PLAN.md`, `CLAUDE.md`, `README.md`, `scripts/data/reports/**`), so a push that touches only those doesn't redeploy (decided 2026-10-13). A push that changes any other file deploys as usual, and a manual run always deploys. `[skip ci]` in the newest commit's message still skips every workflow for a single push.
+  - `permissions: pages: write, id-token: write`, `environment: github-pages`. The environment's "Deployment branches and tags" rules must allow tags matching `v*` (GitHub creates it allowing only the default branch).
+  - Pushes to `master` no longer deploy, so doc-only pushes need no `paths-ignore` list (replaced 2026-10-13).
 - **`data-refresh.yml`** (manual; the monthly `0 4 1 * *` schedule is enabled only after one green manual run, since Cloudflare has blocked Node before): `npm run data:refresh` → `npm run data:sprites`.
   - If any build output changed, it runs `verify` and `data:validate`. A PR opened with `GITHUB_TOKEN` doesn't trigger `ci.yml`, so the refresh run checks the data itself.
   - Then it pushes a `data-refresh/<date>-<run>` branch and opens a PR with `gh pr create`. The PR body holds the diff stat and the reports. **Never auto-merge.**
   - `data:build` leaves a data file untouched when only `builtAt` would change, so a refresh without real changes opens no PR.
   - Repo setting: "Allow GitHub Actions to create and approve pull requests".
+
+
+### 17.1 Versioning and releases (decided 2026-10-13)
+
+The app has no public API, so SemVer is read **from the user's side**: what users hold is their saved state, their `PKG*` export codes, their backup files and their bookmarked or shared `/:game/...` links.
+
+| Bump | When | Examples |
+|---|---|---|
+| **MAJOR** | Something a user holds stops working: a saved state that can't be migrated, an export code or backup that no longer imports, a deep link that breaks without a redirect | None planned. The contracts in §12 exist to prevent these. |
+| **MINOR** | A new capability that keeps everything working both ways | A game becoming `available`, a new page or tool, a new `PKGn` format added on top, a state schema migration |
+| **PATCH** | Fixes and corrections | Bug fixes, `patches.ts` and override corrections, a merged data-refresh PR, UI polish, dependency bumps |
+| none | Nothing a user sees | Docs, CI, data reports, tests and refactors with no visible change |
+
+- **Separate versions stay separate.** The app version is a label. The state `schemaVersion`, the data file `schemaVersion`, the `PKG*` formats, the `codecId`s and the item and milestone numbers keep their own numbering and rules. A release that changes any of them says so in the changelog's *Compatibility* line.
+- **Commit `!` ≠ MAJOR.** The commit convention marks every contract change with `!`, including backward-compatible ones such as `feat(codec)!` for PKG3. That's why no tool derives versions from commits (release-please, changesets, semantic-release); the bump is chosen by hand from the table above.
+- **Source of truth:** the `version` in `package.json`. `npm run version:sync` (`scripts/version/sync-version.ts`, run by `npm version` through the `version` lifecycle script) copies it to `src/app/core/version.ts` (`APP_VERSION`) and `ngsw-config.json` → `appData.version`. `verify` runs it with `--check`. `.npmrc` sets `git-tag-version=false`, so `npm version` never commits or tags.
+- **Where it shows:**
+  - The About page shows the version, with a link to `CHANGELOG.md`.
+  - The update snackbar (§13.10) names the new version from the service worker's `appData`: "Poké Guide 1.1.0 is ready." It falls back to the generic message when a version has no `appData`.
+  - Backup files (§12.3) carry an informational `appVersion`. Parsing ignores it, so it isn't a schema change.
+- **`CHANGELOG.md`** follows Keep a Changelog. Its sections are *Added*, *Changed*, *Fixed*, *Data* and *Compatibility*, and it's written by hand. Each user-visible change adds a line under `## [Unreleased]` when it's staged, and a release renames that section.
+- **Release flow** (git stays with the user):
+  1. Choose the bump from the table, and run `npm version <major|minor|patch>`.
+  2. Rename `## [Unreleased]` in `CHANGELOG.md` to the new version, then stage `package.json`, `package-lock.json`, `src/app/core/version.ts`, `ngsw-config.json` and `CHANGELOG.md`. The commit is `chore(release): X.Y.Z`.
+  3. The user commits, runs `git tag -a vX.Y.Z -m "Poké Guide X.Y.Z"` and pushes `master` and the tag (`git push --follow-tags`). The tag push deploys.
+  4. Optionally, the user creates a GitHub Release from the tag, with the changelog section as its notes.
+- Work can pile up on `master` between releases; CI checks it, and nothing goes live until the next tag. There are no pre-release versions, since there's no staging site.
+- **1.0.0** is the first public deploy (Phase 8): Red, Blue, Yellow, Gold, Silver and Crystal, item tracking and the Red/Blue/Yellow story checklist. Earlier phases aren't tagged.
 
 ---
 

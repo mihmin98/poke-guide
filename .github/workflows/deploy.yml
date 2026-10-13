@@ -1,17 +1,12 @@
 # Builds and publishes the app to GitHub Pages (plan §17): https://mihmin98.github.io/poke-guide/
-# Runs the full quality gate first, so a failing check never goes live. Pushes that only touch the docs or
-# the data reports don't redeploy; a manual run always does.
+# Runs on release tags only (plan §17.1), so the live site is always a tagged version. It runs the full
+# quality gate first, so a failing check never goes live. A manual run must be started from a release tag
+# too ("Use workflow from" → Tags).
 name: Deploy
 
 on:
   push:
-    branches: [master]
-    paths-ignore:
-      - PROGRESS.md
-      - IMPLEMENTATION_PLAN.md
-      - CLAUDE.md
-      - README.md
-      - 'scripts/data/reports/**'
+    tags: ['v*']
   workflow_dispatch:
 
 permissions:
@@ -31,6 +26,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+      # The tag must name the version in package.json, which the app shows and the update prompt reads.
+      - name: Check the release tag
+        run: |
+          expected="v$(node -p "require('./package.json').version")"
+          if [ "$GITHUB_REF_TYPE" != tag ] || [ "$GITHUB_REF_NAME" != "$expected" ]; then
+            echo "::error::Deploy runs from the release tag $expected, not $GITHUB_REF_TYPE $GITHUB_REF_NAME."
+            exit 1
+          fi
       - uses: actions/setup-node@v7
         with:
           node-version-file: .node-version

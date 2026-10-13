@@ -15,6 +15,12 @@ export const RELOAD_PAGE = new InjectionToken<() => void>('RELOAD_PAGE', {
 
 const isReady = (event: VersionEvent): event is VersionReadyEvent => event.type === 'VERSION_READY';
 
+/** The version number `npm run version:sync` puts in `ngsw-config.json` → `appData` (plan §17.1). */
+function versionOf(appData: object | undefined): string | null {
+  const version = (appData as { version?: unknown } | undefined)?.version;
+  return typeof version === 'string' ? version : null;
+}
+
 /**
  * The service worker's update prompt (plan §13.10). The worker downloads a new version (app and data
  * files together, so they always match) in the background; this offers a reload once it is ready, and
@@ -46,8 +52,11 @@ export class AppUpdateService {
   }
 
   private async promptWhenReady(updates: SwUpdate): Promise<void> {
-    await firstValueFrom(updates.versionUpdates.pipe(filter(isReady)));
-    await this.offerReload('A new version of Poké Guide is ready.');
+    const event = await firstValueFrom(updates.versionUpdates.pipe(filter(isReady)));
+    const version = versionOf(event.latestVersion.appData);
+    await this.offerReload(
+      version ? `Poké Guide ${version} is ready.` : 'A new version of Poké Guide is ready.',
+    );
   }
 
   private async recoverWhenBroken(updates: SwUpdate): Promise<void> {

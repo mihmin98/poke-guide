@@ -1,4 +1,5 @@
 import { buildBackup, parseBackup, BACKUP_APP_ID } from './backup';
+import { APP_VERSION } from '../version';
 import type { Profile } from './models';
 
 const PROFILE: Profile = {
@@ -15,11 +16,12 @@ const PROFILE: Profile = {
 describe('profile backup file (plan §12.3)', () => {
   it('round-trips every profile', () => {
     const backup = buildBackup([PROFILE], new Date('2026-09-15T10:00:00Z'));
-    expect(backup).toMatchObject({ app: BACKUP_APP_ID, schemaVersion: 3 });
+    expect(backup).toMatchObject({ app: BACKUP_APP_ID, schemaVersion: 3, appVersion: APP_VERSION });
     expect(backup.exportedAt).toBe('2026-09-15T10:00:00.000Z');
 
     const result = parseBackup(JSON.stringify(backup));
     expect(result.ok && result.value.profiles).toEqual([PROFILE]);
+    expect(result.ok && result.value.appVersion).toBe(APP_VERSION);
   });
 
   it('repairs what it can and drops profiles it cannot read', () => {

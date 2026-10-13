@@ -67,6 +67,17 @@ describe('AppUpdateService (plan §13.10)', () => {
     expect(reload).toHaveBeenCalledTimes(1);
   });
 
+  it('names the new version when the service worker reports it', async () => {
+    setup();
+    versionUpdates.next({
+      type: 'VERSION_READY',
+      currentVersion: { hash: 'a', appData: { version: '1.0.0' } },
+      latestVersion: { hash: 'b', appData: { version: '1.1.0' } },
+    });
+    await settle();
+    expect(messages).toEqual(['Poké Guide 1.1.0 is ready.']);
+  });
+
   it('does nothing when the prompt is dismissed', async () => {
     setup();
     versionUpdates.next({

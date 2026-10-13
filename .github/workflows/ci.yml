@@ -1,11 +1,11 @@
-# Quality gate for pull requests and side branches (plan §17). Pushes to master run the same checks in
-# deploy.yml before publishing, so they aren't repeated here.
+# Quality gate for pull requests and every branch push, master included (plan §17). Release tags are
+# checked again by deploy.yml before publishing.
 name: CI
 
 on:
   pull_request:
   push:
-    branches-ignore: [master]
+    branches: ['**']
 
 permissions:
   contents: read

@@ -1,12 +1,15 @@
 // FRAMEWORK-FREE: the JSON backup of every profile (plan §12.3). No Angular imports.
 import { STATE_SCHEMA_VERSION, sanitizeProfile } from './persisted-state';
 import type { Profile } from './models';
+import { APP_VERSION } from '../version';
 
 export const BACKUP_APP_ID = 'poke-guide';
 
 export interface ProfileBackup {
   app: typeof BACKUP_APP_ID;
   schemaVersion: number;
+  /** The app version that wrote the file; informational only, and missing from older backups. */
+  appVersion?: string;
   exportedAt: string;
   profiles: Profile[];
 }
@@ -28,6 +31,7 @@ export function buildBackup(profiles: readonly Profile[], now = new Date()): Pro
   return {
     app: BACKUP_APP_ID,
     schemaVersion: STATE_SCHEMA_VERSION,
+    appVersion: APP_VERSION,
     exportedAt: now.toISOString(),
     profiles: profiles.map((profile) => ({ ...profile })),
   };
@@ -69,6 +73,7 @@ export function parseBackup(text: string, now = new Date().toISOString()): Backu
     value: {
       app: BACKUP_APP_ID,
       schemaVersion,
+      ...(typeof file['appVersion'] === 'string' && { appVersion: file['appVersion'] }),
       exportedAt: typeof file['exportedAt'] === 'string' ? file['exportedAt'] : '',
       profiles,
     },

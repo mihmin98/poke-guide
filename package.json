@@ -1,6 +1,6 @@
 {
   "name": "poke-guide",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -23,7 +23,9 @@
     "data:offline": "tsx scripts/data/build.ts --offline",
     "data:sprites": "tsx scripts/data/sprites.ts",
     "data:validate": "tsx scripts/data/validate.ts",
-    "verify": "npm run theme:games -- --check && npm run fonts -- --check && npm run lint && npm run typecheck:scripts && npm run test:scripts && npm run test:ci && ng build"
+    "verify": "npm run theme:games -- --check && npm run fonts -- --check && npm run version:sync -- --check && npm run lint && npm run typecheck:scripts && npm run test:scripts && npm run test:ci && ng build",
+    "version:sync": "tsx scripts/version/sync-version.ts",
+    "version": "npm run version:sync"
   },
   "private": true,
   "packageManager": "npm@11.19.1",

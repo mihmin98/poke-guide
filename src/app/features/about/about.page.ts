@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { APP_VERSION } from '../../core/version';
 
 @Component({
   selector: 'app-about-page',
@@ -27,6 +28,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       <a href="https://github.com/mihmin98/poke-guide" rel="noopener" target="_blank">GitHub</a>,
       where you can also report a problem.
     </p>
+    <p>
+      Version {{ version }}. See
+      <a
+        href="https://github.com/mihmin98/poke-guide/blob/master/CHANGELOG.md"
+        rel="noopener"
+        target="_blank"
+        >what changed</a
+      >.
+    </p>
 
     <h2>Fonts</h2>
     <p>
@@ -50,4 +60,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
     }
   `,
 })
-export class AboutPage {}
+export class AboutPage {
+  protected readonly version = APP_VERSION;
+}
