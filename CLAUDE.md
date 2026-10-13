@@ -6,6 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 - **`PROGRESS.md`** is the resume point. Read it first. It records the current phase, the next task, open questions and a session log. **Update it before ending any work session** (check off tasks, set "Next step", add a log entry).
 - **`IMPLEMENTATION_PLAN.md`** is the authoritative design (about 1,200 lines). Don't read it top to bottom. Jump to the section you need (table of contents at the top; the phase checklists are in §16). If an implementation has to differ from the plan, update the plan and record the decision in `PROGRESS.md`.
+- **`docs/plans/`** holds one plan per Coming Soon row of the game picker (Phases 12–17, in picker order). Start a game's phase from its plan and confirm its open decisions with the user first.
 
 ## What this is
 

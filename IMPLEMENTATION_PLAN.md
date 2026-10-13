@@ -1802,6 +1802,20 @@ Stages:
 
 ---
 
+### Phases 12–17 — the Coming Soon games (planned 2026-10-13)
+Every game up to Black 2 and White 2 is registered as `planned` and shown as "Coming Soon" (§4.2, §13.3). Each
+picker row has its own plan under [`docs/plans/`](docs/plans/README.md), in picker order. Each phase confirms its
+open decisions with the user first and then records them here, as Phase 10 did.
+
+| Phase | Version group | Games | Plan |
+|---|---|---|---|
+| 12 | `rse` | Ruby, Sapphire, Emerald (Gen III groundwork) | [phase-12-rse.md](docs/plans/phase-12-rse.md) |
+| 13 | `frlg` | FireRed, LeafGreen | [phase-13-frlg.md](docs/plans/phase-13-frlg.md) |
+| 14 | `dppt` | Diamond, Pearl, Platinum (Gen IV groundwork) | [phase-14-dppt.md](docs/plans/phase-14-dppt.md) |
+| 15 | `hgss` | HeartGold, SoulSilver | [phase-15-hgss.md](docs/plans/phase-15-hgss.md) |
+| 16 | `bw` | Black, White (Gen V groundwork) | [phase-16-bw.md](docs/plans/phase-16-bw.md) |
+| 17 | `b2w2` | Black 2, White 2 | [phase-17-b2w2.md](docs/plans/phase-17-b2w2.md) |
+
 ## 17. Deployment to GitHub Pages (final phase)
 
 - **Base href:** the site URL is `https://<owner>.github.io/<repo>/`, so build with `ng build --base-href /<repo>/`. The value comes from one variable (`PAGES_BASE_HREF`) in the workflow. All asset and data URLs in the app are **relative** (`data/rby.json`, `sprites/…`), so nothing else changes. A custom domain later means adding `CNAME` and using `/`.
@@ -1885,6 +1899,9 @@ The app has no public API, so SemVer is read **from the user's side**: what user
 | Game(s) | Version group | Notes to prepare for |
 |---|---|---|
 | Gold / Silver / Crystal | `gsc` | Time-of-day slots, Johto plus Kanto regions, breeding, Headbutt trees, Rock Smash, swarms, roaming, Bug-Catching Contest, day-of-week NPCs. **In progress as Phase 10 (§16)**, with the decisions recorded there. |
-| FireRed / LeafGreen | `frlg` | `catch/entryfl`, reuses Kanto location ids plus the Sevii Islands region, National Dex unlock after the post-game, many species need a Ruby/Sapphire/Emerald trade (`requires-other-game`), breeding |
-| Ruby / Sapphire / Emerald | `rse` | Hoenn region, Dive/underwater, Rock Smash, fishing spots (Feebas tiles), Safari Zone expansions in Emerald, abilities (reserved), Mirage Island, weather-free |
-| HeartGold / SoulSilver and later | `hgss`, … | Radio (Hoenn/Sinnoh sound), swarms, Pokéwalker (counts as an external device, so excluded), seasons in Gen V (`season` condition) |
+| Ruby / Sapphire / Emerald | `rse` | Phase 12, [plan](docs/plans/phase-12-rse.md): `catch/entry3`, Hoenn, Dive, Feebas tiles, Mirage Island, abilities, natures and the `gen3` module |
+| FireRed / LeafGreen | `frlg` | Phase 13, [plan](docs/plans/phase-13-frlg.md): `catch/entryfl`, reuses Kanto location ids plus the Sevii Islands, the National Dex gate on encounters and evolutions, the starter-linked roaming beast, `requires-other-game` for Hoenn species |
+| Diamond / Pearl / Platinum | `dppt` | Phase 14, [plan](docs/plans/phase-14-dppt.md): `catch/entry4`, the physical/special split, forms on rows, Poké Radar, Honey trees, dual-slot (proposed: excluded), `requiresSpecies`, Gen IV hours |
+| HeartGold / SoulSilver | `hgss` | Phase 15, [plan](docs/plans/phase-15-hgss.md): `catch/entryhs`, radio sounds, swarms, the block-object Safari Zone, Pokéwalker (excluded), Apricorn balls |
+| Black / White | `bw` | Phase 16, [plan](docs/plans/phase-16-bw.md): `catch/entry5` under game headings, season columns, phenomena, critical captures, animated sprites |
+| Black 2 / White 2 | `b2w2` | Phase 17, [plan](docs/plans/phase-17-b2w2.md): `catch/entry5-2`, Hidden Grottoes, the key system (`other-version`), Unova Link features excluded |
