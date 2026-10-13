@@ -41,6 +41,47 @@ describe('shared components (plan §13.4–13.5)', () => {
       fixture.detectChanges();
       expect((el as HTMLElement).getAttribute('data-dimmed')).toBe('false');
     });
+
+    it('shows a same-size placeholder when the image fails to load', () => {
+      const { fixture, el } = render(Sprite, { dex: 25, game: 'red', name: 'Pikachu', size: 40 });
+      el.querySelector('img')!.dispatchEvent(new Event('error'));
+      fixture.detectChanges();
+      expect(el.querySelector('img')).toBeNull();
+      const placeholder = el.querySelector<HTMLElement>('.placeholder')!;
+      expect(placeholder.getAttribute('role')).toBe('img');
+      expect(placeholder.getAttribute('aria-label')).toBe('Pikachu');
+      expect(placeholder.getAttribute('aria-hidden')).toBeNull();
+      expect(placeholder.style.width).toBe('40px');
+      expect(placeholder.style.height).toBe('40px');
+    });
+
+    it('hides the placeholder of a decorative sprite from assistive technology', () => {
+      const { fixture, el } = render(Sprite, { dex: 25, game: 'red' });
+      el.querySelector('img')!.dispatchEvent(new Event('error'));
+      fixture.detectChanges();
+      const placeholder = el.querySelector('.placeholder')!;
+      expect(placeholder.getAttribute('aria-hidden')).toBe('true');
+      expect(placeholder.getAttribute('aria-label')).toBeNull();
+    });
+
+    it('tries the image again when the browser comes back online', () => {
+      const { fixture, el } = render(Sprite, { dex: 25, game: 'red' });
+      el.querySelector('img')!.dispatchEvent(new Event('error'));
+      fixture.detectChanges();
+      window.dispatchEvent(new Event('online'));
+      fixture.detectChanges();
+      expect(el.querySelector('.placeholder')).toBeNull();
+      expect(el.querySelector('img')).not.toBeNull();
+    });
+
+    it('resets the failed state for a different sprite', () => {
+      const { fixture, el } = render(Sprite, { dex: 25, game: 'red' });
+      el.querySelector('img')!.dispatchEvent(new Event('error'));
+      fixture.detectChanges();
+      fixture.componentRef.setInput('dex', 26);
+      fixture.detectChanges();
+      expect(el.querySelector('img')!.getAttribute('src')).toBe('sprites/gen1-rb/026.png');
+    });
   });
 
   it('TypeBadge shows the label and the generated type tokens', () => {

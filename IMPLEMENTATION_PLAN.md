@@ -1289,7 +1289,9 @@ Binary layout, before encoding (all integers little-endian):
 - `ngsw-config.json`: the app shell (JS, CSS, fonts under `/media/`) is cached `prefetch`.
   - **Changed 2026-09-23:** `data/*.json` is a `lazy` **asset group** (`updateMode: prefetch`), not a `freshness` data group. The data files are build outputs deployed with the app, and the app rejects a file whose `schemaVersion` doesn't match. As hashed assets they are always the version that shipped with the running code, served cache-first, and refreshed with the next app version. Only the games you open are cached.
   - Sprites and icons are a `lazy` asset group.
+  - **Added 2026-10-13:** an unseen sprite fails to load offline, so `Sprite` (`shared/components/sprite.ts`) swaps a broken image for a same-size placeholder (a dashed circle; labelled with the species name, or hidden when decorative). It tries again on the window `online` event or when the sprite changes.
 - A manifest (`public/manifest.webmanifest`, relative URLs so it works under the Pages sub-path) with the neutral shell color `#f9ebe9` (the base theme's `surface-container`) and maskable icons.
+  - **Added 2026-10-13:** `lang`, `dir` and `categories`. Install-dialog `screenshots` (`public/screenshots/narrow.png` and `wide.png`, captured by the user) are listed once the files exist. They are not in `ngsw-config.json`, because only the online install dialog uses them.
   - The icons are a Poké Ball drawn by `npm run icons` (`scripts/icons/generate-icons.ts`): anti-aliased shapes encoded as PNG with Node's zlib, with no image dependency.
 - An update prompt via `SwUpdate` (`core/pwa/app-update.service.ts`):
   - "A new version of Poké Guide is ready · Reload", flushing pending storage writes before reloading.
