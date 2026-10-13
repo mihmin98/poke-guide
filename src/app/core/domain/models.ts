@@ -315,6 +315,8 @@ export interface Profile {
   caught: number[];
   /** Sorted, unique `LocationItem.no` values of the game's version group (plan §16, Phase 9). */
   itemsTaken: number[];
+  /** Sorted, unique `Milestone.no` values of the game's version group (plan §16, Phase 11). */
+  milestonesDone: number[];
   /** Optional "I'm at walkthrough part N". */
   progressPart?: number;
   createdAt: string;

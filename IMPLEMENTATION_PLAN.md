@@ -1156,6 +1156,7 @@ setActive(id); setProgressPart(part); importProfile(p, mode: 'new' | 'replace', 
 - **Undo:** the last 20 changes are kept in memory, and toggles show a snackbar "Marked Pidgey as caught · Undo".
 - Profiles whose `game` isn't in the registry (e.g. data from a newer app version) are kept but shown as "unsupported game".
 - Implementation (2026-09-13, `core/profiles/profile.store.ts`): catch methods take the URL game — `toggleCaught(game, dex, label?)`, `setCaught(game, dex, caught, label?)`, `bulkSetCaught(game, dexes, caught, label?)` — and return `false` without changing anything unless `canEditCatches(game)` (active profile for that game, game in the registry) and every dex is in `1..nationalDexMax`. Invalid names (1–32 characters after trimming), unknown games and unknown ids throw `ProfileError`. Undo: `lastChange` / `undo()` over the last 20 profile changes; an outside change to the profiles (another tab) clears the history.
+- Phase 11 (2026-10-13): `milestonesDoneSet`, `milestonesDoneIn(game)` (empty for another game, like `itemsTakenIn`), and `bulkSetMilestonesDone(game, nos, done, label)` / `setMilestoneDone(…)`, which follow the item rules (only the active profile for that game, undoable, counted towards the save reminder) and never change `progressPart`. `ImportedProfile.milestonesDone` is carried by import (new and replace), backup restore and duplicate.
 
 **`SettingsStore`**
 - `theme: 'system' | 'light' | 'dark'`, `showRates`, `showCatchRates`, `showEmptyLocations`, `hideUnavailable` (uses `progressPart`), `spriteScale: 2 | 3`, `compactRows`, `checklistSort`.
@@ -1755,10 +1756,10 @@ Stages:
 - [x] **B.** Pipeline: `Milestone` model, `rby/overrides/milestones.ts`, `core/milestone-numbers.ts` and
   `rby/milestone-numbers.json`, `core/milestones.ts` checks and walkthrough cross-check, validator and zod schema,
   goldens, rebuilt `rby.json`
-- [ ] **C.** State and codec: `milestonesDone`, schema 3 migration, backup, `ProfileStore` milestone toggles with
-  undo, `PKG3` encode/decode, import replace
-- [ ] **D.** UI: game view `milestones`, milestone toggle, progress offer, Story page and route, nav tab, location
-  Story section, import preview
+- [x] **C.** State and codec: `milestonesDone`, schema 3 migration, backup, `ProfileStore` milestone toggles with
+  undo, `PKG3` encode/decode, import replace; also moved here: game view `milestones`, the import preview's
+  "N story milestones done" and the export dialog's summary of what the code holds
+- [ ] **D.** UI: milestone toggle, progress offer, Story page and route, nav tab, location Story section
 - [ ] Manual browser check (the user)
 - **Accept when:** ticks survive a reload, a data rebuild and a profile switch; the progress offer moves the part
   forward only; a Gold/Silver/Crystal profile shows no Story tab; and no export code written by an earlier version

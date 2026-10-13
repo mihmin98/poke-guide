@@ -18,6 +18,17 @@ export const MIGRATIONS: readonly Migration[] = [
         )
       : state['profiles'],
   }),
+  // 2 → 3 (Phase 11): profiles gain `milestonesDone`, for the same reason.
+  (state) => ({
+    ...state,
+    profiles: Array.isArray(state['profiles'])
+      ? state['profiles'].map((profile: unknown) =>
+          typeof profile === 'object' && profile !== null
+            ? { milestonesDone: [], ...profile }
+            : profile,
+        )
+      : state['profiles'],
+  }),
 ];
 
 export type MigrationResult =

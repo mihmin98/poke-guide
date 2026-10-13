@@ -12,6 +12,7 @@ const PROFILE: Profile = {
   game: 'red',
   caught: [1, 4, 7],
   itemsTaken: [],
+  milestonesDone: [],
   progressPart: 3,
   createdAt: '',
   updatedAt: '',
@@ -61,6 +62,25 @@ describe('ExportDialog (plan §12.3)', () => {
       caught: [1, 4, 7],
       progressPart: 3,
     });
+  });
+
+  it('says what the code holds, and writes PKG3 once a story milestone is done', () => {
+    expect(render().el.querySelector('.sub')?.textContent).toContain(
+      'This code holds 3 caught Pokémon for Pokémon Red.',
+    );
+    // The dialog data is a fresh object per test, so this only changes the next render.
+    TestBed.inject<ExportDialogData>(MAT_DIALOG_DATA).profile = {
+      ...PROFILE,
+      itemsTaken: [4, 9],
+      milestonesDone: [6],
+    };
+    const { el } = render();
+    expect(el.querySelector('.sub')?.textContent).toContain(
+      'This code holds 3 caught Pokémon, 2 picked-up items and 1 story milestone for Pokémon Red.',
+    );
+    const code = el.querySelector<HTMLTextAreaElement>('textarea')!.value;
+    expect(code.startsWith('PKG3-')).toBe(true);
+    expect(decodeProfile(code)).toMatchObject({ ok: true, value: { milestonesDone: [6] } });
   });
 
   it('copies the code, and clears the save-reminder counter', async () => {

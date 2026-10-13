@@ -39,6 +39,7 @@ const profile = {
   game: 'red' as const,
   caught: [1],
   itemsTaken: [],
+  milestonesDone: [],
   createdAt: 't',
   updatedAt: 't',
 };

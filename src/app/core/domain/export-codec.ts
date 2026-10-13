@@ -1,4 +1,4 @@
-// FRAMEWORK-FREE: the `PKG1` and `PKG2` export codes (plan §12.2). No Angular imports.
+// FRAMEWORK-FREE: the `PKG1`, `PKG2` and `PKG3` export codes (plan §12.2). No Angular imports.
 //
 // This is a **compatibility contract**: every code ever produced must keep decoding. The layouts,
 // the CRC and the `codecId` values are therefore fixed forever. A change means a new prefix
@@ -22,8 +22,16 @@
 // | …      | 2      | `itemCount` M (uint16 LE): the highest item number carried  |
 // | …      | ⌈M/8⌉  | items-taken bitfield, bit i = item number i + 1, LSB first   |
 //
-// The encoder writes `PKG1` when no items are taken, so those codes stay readable by every
-// earlier version; a `PKG1` code means "no items taken".
+// `PKG3`, format version 3 (Phase 11): the `PKG2` layout (its item block always present, `itemCount` 0 when no
+// items are taken), plus the story milestones done, between the item block and the name. Milestone numbers are
+// `Milestone.no` of the game's version group.
+//
+// | …      | 2      | `milestoneCount` K (uint16 LE): the highest milestone number |
+// | …      | ⌈K/8⌉  | milestones-done bitfield, bit i = milestone number i + 1     |
+//
+// The encoder writes the lowest format that holds the profile (`PKG1` with nothing ticked, `PKG2` with items
+// only), so those codes stay readable by earlier versions; `PKG1` means "no items taken" and `PKG1`/`PKG2`
+// mean "no milestones done".
 import { findGameByCodecId, getGame } from '../games/registry';
 import type { GameId } from '../games/types';
 import type { Profile } from './models';
@@ -33,8 +41,12 @@ export const EXPORT_PREFIX = 'PKG1-';
 export const EXPORT_FORMAT_VERSION = 1;
 /** Adds the items-taken bitfield (Phase 9). */
 export const EXPORT_FORMAT_ITEMS = 2;
+/** Adds the milestones-done bitfield (Phase 11). */
+export const EXPORT_FORMAT_MILESTONES = 3;
 /** `itemCount` is a uint16. */
 export const MAX_ITEM_NUMBER = 0xffff;
+/** `milestoneCount` is a uint16. */
+export const MAX_MILESTONE_NUMBER = 0xffff;
 
 export const exportPrefix = (format: number) => `PKG${format}-`;
 const PREFIX = /PKG(\d)-/gi;
@@ -68,12 +80,15 @@ export interface DecodedProfile {
   ignoredBeyondDex: number;
   /** Sorted `LocationItem.no` values; empty for a `PKG1` code. Not checked against the game data. */
   itemsTaken: number[];
+  /** Sorted `Milestone.no` values; empty for a `PKG1`/`PKG2` code. Not checked against the game data. */
+  milestonesDone: number[];
 }
 
 export type CodecResult = { ok: true; value: DecodedProfile } | { ok: false; error: CodecError };
 
 const ERROR_MESSAGES: Record<CodecErrorKind, string> = {
-  'bad-prefix': 'That doesn’t look like a Poké Guide code. Codes start with “PKG1-” or “PKG2-”.',
+  'bad-prefix':
+    'That doesn’t look like a Poké Guide code. Codes start with “PKG”, a number and a dash, like “PKG1-”.',
   'bad-base64': 'This code contains characters that don’t belong in it. Copy it again.',
   'too-short': 'This code is incomplete. Copy the whole thing and try again.',
   'bad-checksum': 'This code is damaged — a character is wrong or missing. Copy it again.',
@@ -157,25 +172,48 @@ export function encodeName(name: string): Uint8Array {
 }
 
 export type ExportableProfile = Pick<Profile, 'name' | 'game' | 'caught'> &
-  Partial<Pick<Profile, 'progressPart' | 'itemsTaken'>>;
+  Partial<Pick<Profile, 'progressPart' | 'itemsTaken' | 'milestonesDone'>>;
+
+/** Numbers that fit a uint16-counted bitfield. */
+const inRange = (numbers: readonly number[] | undefined, max: number) =>
+  (numbers ?? []).filter((no) => Number.isInteger(no) && no >= 1 && no <= max);
+
+/** Writes a count (uint16 LE) and its bitfield at `at`; returns the offset after it. */
+function writeCountedBitfield(body: Uint8Array, at: number, numbers: readonly number[]): number {
+  const count = numbers.length ? Math.max(...numbers) : 0;
+  new DataView(body.buffer).setUint16(at, count, true);
+  for (const no of numbers) {
+    const index = no - 1;
+    body[at + 2 + (index >> 3)]! |= 1 << (index & 7);
+  }
+  return at + 2 + Math.ceil(count / 8);
+}
+
+const countedLength = (numbers: readonly number[]) =>
+  2 + Math.ceil((numbers.length ? Math.max(...numbers) : 0) / 8);
 
 /**
- * The code for one profile: `PKG1-…` without items taken, `PKG2-…` with them. Caught numbers outside
- * the game's dex range, and item numbers outside 1–`MAX_ITEM_NUMBER`, are dropped.
+ * The code for one profile, in the lowest format that holds it: `PKG1-…` with nothing ticked, `PKG2-…` with
+ * items taken, `PKG3-…` once a milestone is done. Caught numbers outside the game's dex range, and item and
+ * milestone numbers outside 1–65535, are dropped.
  */
 export function encodeProfile(profile: ExportableProfile): string {
   const game = getGame(profile.game);
   const dexCount = game.nationalDexMax;
   const bitfieldLength = Math.ceil(dexCount / 8);
   const name = encodeName(profile.name);
-  const items = (profile.itemsTaken ?? []).filter(
-    (no) => Number.isInteger(no) && no >= 1 && no <= MAX_ITEM_NUMBER,
-  );
-  const itemCount = items.length ? Math.max(...items) : 0;
-  const format = itemCount > 0 ? EXPORT_FORMAT_ITEMS : EXPORT_FORMAT_VERSION;
-  const itemBlockLength = format === EXPORT_FORMAT_ITEMS ? 2 + Math.ceil(itemCount / 8) : 0;
+  const items = inRange(profile.itemsTaken, MAX_ITEM_NUMBER);
+  const milestones = inRange(profile.milestonesDone, MAX_MILESTONE_NUMBER);
+  const format =
+    milestones.length > 0
+      ? EXPORT_FORMAT_MILESTONES
+      : items.length > 0
+        ? EXPORT_FORMAT_ITEMS
+        : EXPORT_FORMAT_VERSION;
+  const itemBlockLength = format >= EXPORT_FORMAT_ITEMS ? countedLength(items) : 0;
+  const milestoneBlockLength = format >= EXPORT_FORMAT_MILESTONES ? countedLength(milestones) : 0;
 
-  const nameAt = 6 + bitfieldLength + itemBlockLength;
+  const nameAt = 6 + bitfieldLength + itemBlockLength + milestoneBlockLength;
   const body = new Uint8Array(nameAt + 1 + name.length);
   const bodyView = new DataView(body.buffer);
   body[0] = format;
@@ -188,13 +226,9 @@ export function encodeProfile(profile: ExportableProfile): string {
     const index = dex - 1;
     body[6 + (index >> 3)]! |= 1 << (index & 7);
   }
-  if (format === EXPORT_FORMAT_ITEMS) {
-    const itemsAt = 6 + bitfieldLength;
-    bodyView.setUint16(itemsAt, itemCount, true);
-    for (const no of items) {
-      const index = no - 1;
-      body[itemsAt + 2 + (index >> 3)]! |= 1 << (index & 7);
-    }
+  if (format >= EXPORT_FORMAT_ITEMS) {
+    const milestonesAt = writeCountedBitfield(body, 6 + bitfieldLength, items);
+    if (format >= EXPORT_FORMAT_MILESTONES) writeCountedBitfield(body, milestonesAt, milestones);
   }
   body[nameAt] = name.length;
   body.set(name, nameAt + 1);
@@ -224,7 +258,7 @@ function readBitfield(body: Uint8Array, at: number, count: number): number[] {
   return numbers;
 }
 
-/** Decodes a `PKG1-`/`PKG2-` code, a share link holding one, or fails with a message for the user. */
+/** Decodes a `PKG1-`/`PKG2-`/`PKG3-` code, a share link holding one, or fails with a message for the user. */
 export function decodeProfile(input: string): CodecResult {
   const code = normalizeCode(input);
   const prefix = /^PKG(\d)-/i.exec(code);
@@ -242,7 +276,7 @@ export function decodeProfile(input: string): CodecResult {
   // The version is checked after the CRC, so random text can't claim to be from a newer app.
   // The CRC doesn't cover the prefix, so a prefix that disagrees with the format byte was edited.
   const format = body[0]!;
-  if (format !== EXPORT_FORMAT_VERSION && format !== EXPORT_FORMAT_ITEMS)
+  if (format < EXPORT_FORMAT_VERSION || format > EXPORT_FORMAT_MILESTONES)
     return fail('unsupported-version');
   if (Number(prefix[1]) !== format) return fail('bad-prefix');
 
@@ -252,14 +286,25 @@ export function decodeProfile(input: string): CodecResult {
   const dexCount = view.getUint16(4, true);
   const bitfieldLength = Math.ceil(dexCount / 8);
   let nameAt = 6 + bitfieldLength;
+  /** Reads a counted bitfield at `nameAt` and moves `nameAt` past it; `undefined` when it's cut short. */
+  const readCounted = (): number[] | undefined => {
+    if (body.length < nameAt + 2) return undefined;
+    const count = view.getUint16(nameAt, true);
+    const at = nameAt + 2;
+    nameAt = at + Math.ceil(count / 8);
+    return body.length < nameAt ? undefined : readBitfield(body, at, count);
+  };
   let itemsTaken: number[] = [];
-  if (format === EXPORT_FORMAT_ITEMS) {
-    if (body.length < nameAt + 2) return fail('too-short');
-    const itemCount = view.getUint16(nameAt, true);
-    const itemsAt = nameAt + 2;
-    nameAt = itemsAt + Math.ceil(itemCount / 8);
-    if (body.length < nameAt) return fail('too-short');
-    itemsTaken = readBitfield(body, itemsAt, itemCount);
+  let milestonesDone: number[] = [];
+  if (format >= EXPORT_FORMAT_ITEMS) {
+    const read = readCounted();
+    if (!read) return fail('too-short');
+    itemsTaken = read;
+  }
+  if (format >= EXPORT_FORMAT_MILESTONES) {
+    const read = readCounted();
+    if (!read) return fail('too-short');
+    milestonesDone = read;
   }
   if (body.length < nameAt + 1) return fail('too-short');
   const nameLength = body[nameAt]!;
@@ -289,6 +334,7 @@ export function decodeProfile(input: string): CodecResult {
       dexCount,
       ignoredBeyondDex: carried.length - caught.length,
       itemsTaken,
+      milestonesDone,
     },
   };
 }

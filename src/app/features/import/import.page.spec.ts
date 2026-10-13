@@ -101,6 +101,26 @@ describe('ImportPage (plan §12.4)', () => {
     expect(profiles.activeProfile()?.itemsTaken).toEqual([3, 17, 999]);
   });
 
+  it('previews and imports the story milestones a PKG3 code carries (Phase 11)', async () => {
+    const withMilestones = encodeProfile({
+      name: 'Story run',
+      game: 'red',
+      caught: [1],
+      milestonesDone: [1, 6, 999],
+    });
+    const { fixture, el, type } = render();
+    type(withMilestones);
+    expect(el.querySelector('.preview .meta')?.textContent).toContain('3 story milestones done');
+
+    stub.view.set({ locations: [], milestones: [{ no: 6 }] });
+    fixture.detectChanges();
+    expect(el.querySelector('.preview .meta')?.textContent).toContain('1 story milestone done');
+
+    el.querySelector<HTMLButtonElement>('.actions button')!.click();
+    await fixture.whenStable();
+    expect(profiles.activeProfile()?.milestonesDone).toEqual([1, 6, 999]);
+  });
+
   it('explains an invalid code without offering to import it', () => {
     const { el, type } = render();
     type('PKG1-notreallyacode');
@@ -186,6 +206,7 @@ describe('ImportPage (plan §12.4)', () => {
         game: 'red',
         caught: [2],
         itemsTaken: [],
+        milestonesDone: [],
         createdAt: '',
         updatedAt: '',
       },
@@ -196,6 +217,7 @@ describe('ImportPage (plan §12.4)', () => {
         game: 'scarlet' as GameId,
         caught: [3],
         itemsTaken: [],
+        milestonesDone: [],
         createdAt: '',
         updatedAt: '',
       },

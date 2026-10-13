@@ -104,6 +104,7 @@ describe('ProfileStore', () => {
         game: 'platinum' as GameId,
         caught: [1],
         itemsTaken: [],
+        milestonesDone: [],
         createdAt: 't',
         updatedAt: 't',
       };
@@ -153,6 +154,46 @@ describe('ProfileStore', () => {
     });
   });
 
+  describe('milestones done (Phase 11)', () => {
+    beforeEach(() => store.createProfile('Red run', 'red'));
+
+    it('ticks and unticks milestones on the active profile, sorted, with undo', () => {
+      store.setProgressPart(2);
+      expect(store.setMilestoneDone('red', 6, true, 'Done: Defeat Brock')).toBe(true);
+      expect(store.bulkSetMilestonesDone('red', [1, 6, 59], true, 'Done: 3 milestones')).toBe(true);
+      expect(store.activeProfile()?.milestonesDone).toEqual([1, 6, 59]);
+      expect(store.milestonesDoneSet().has(59)).toBe(true);
+      expect(store.milestonesDoneIn('red').has(6)).toBe(true);
+      // Ticking never touches catches, items or the progress part (the page offers that separately).
+      expect(store.activeProfile()).toMatchObject({ caught: [], itemsTaken: [], progressPart: 2 });
+
+      expect(store.setMilestoneDone('red', 1, false, 'Not done: starter')).toBe(true);
+      expect(store.activeProfile()?.milestonesDone).toEqual([6, 59]);
+      expect(store.undo()?.label).toBe('Not done: starter');
+      expect(store.activeProfile()?.milestonesDone).toEqual([1, 6, 59]);
+    });
+
+    it('counts towards the save reminder, but only real changes', () => {
+      store.setMilestoneDone('red', 5, true, 'x');
+      store.setMilestoneDone('red', 5, true, 'x');
+      expect(storage.state().settings.changesSinceExport).toBe(1);
+    });
+
+    it('refuses another game and invalid numbers, and shows other games none', () => {
+      store.setMilestoneDone('red', 3, true, 'x');
+      expect(store.setMilestoneDone('blue', 5, true, 'x')).toBe(false);
+      expect(store.bulkSetMilestonesDone('red', [1, 0], true, 'x')).toBe(false);
+      expect(store.setMilestoneDone('red', 1.5, true, 'x')).toBe(false);
+      expect(store.activeProfile()?.milestonesDone).toEqual([3]);
+      expect(store.milestonesDoneIn('blue').size).toBe(0);
+    });
+
+    it('copies milestones when duplicating', () => {
+      store.setMilestoneDone('red', 9, true, 'x');
+      expect(store.duplicateProfile(store.activeProfileId()!).milestonesDone).toEqual([9]);
+    });
+  });
+
   describe('import', () => {
     it('adds an imported profile, dropping species beyond the game’s dex', () => {
       const id = store.importProfile(
@@ -161,6 +202,7 @@ describe('ProfileStore', () => {
           game: 'yellow',
           caught: [151, 3, 3, 152],
           itemsTaken: [40, 2, 40],
+          milestonesDone: [6, 1, 6],
           progressPart: 2,
         },
         'new',
@@ -171,6 +213,7 @@ describe('ProfileStore', () => {
         game: 'yellow',
         caught: [3, 151],
         itemsTaken: [2, 40],
+        milestonesDone: [1, 6],
         progressPart: 2,
       });
     });
@@ -179,12 +222,18 @@ describe('ProfileStore', () => {
       const red = store.createProfile('Red', 'red');
       store.setCaught('red', 1, true);
       store.setItemTaken('red', 12, true, 'x');
+      store.setMilestoneDone('red', 6, true, 'x');
       store.setProgressPart(5);
       expect(
         store.importProfile({ name: 'ignored', game: 'red', caught: [4, 7] }, 'replace', red.id),
       ).toBe(red.id);
-      // A code without items (PKG1) stands for a profile with none taken.
-      expect(store.activeProfile()).toMatchObject({ name: 'Red', caught: [4, 7], itemsTaken: [] });
+      // A code without items or milestones (PKG1) stands for a profile with none.
+      expect(store.activeProfile()).toMatchObject({
+        name: 'Red',
+        caught: [4, 7],
+        itemsTaken: [],
+        milestonesDone: [],
+      });
       expect(store.activeProfile()).not.toHaveProperty('progressPart');
       expect(() =>
         store.importProfile({ name: 'x', game: 'blue', caught: [] }, 'replace', red.id),

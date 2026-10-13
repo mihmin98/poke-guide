@@ -9,6 +9,7 @@ import {
   toBase64Url,
   EXPORT_PREFIX,
   MAX_ITEM_NUMBER,
+  MAX_MILESTONE_NUMBER,
   type ExportableProfile,
 } from './export-codec';
 
@@ -148,9 +149,9 @@ describe('PKG1 export codec (plan §12.2)', () => {
     )!;
 
     const newer = Uint8Array.from(valid);
-    newer[0] = 3;
+    newer[0] = 4;
     reseal(newer);
-    for (const prefix of ['PKG1-', 'PKG3-']) {
+    for (const prefix of ['PKG1-', 'PKG4-']) {
       expect(decodeProfile(prefix + toBase64Url(newer))).toMatchObject({
         error: { kind: 'unsupported-version' },
       });
@@ -221,6 +222,7 @@ describe('PKG2 export codec: items taken (Phase 9)', () => {
       dexCount: 151,
       ignoredBeyondDex: 0,
       itemsTaken: [3, 17, 235],
+      milestonesDone: [],
     });
   });
 
@@ -318,6 +320,142 @@ describe('PKG2 export codec: items taken (Phase 9)', () => {
     const code = encodeProfile({ ...RED, itemsTaken: [1] });
     expect(normalizeCode(`old: PKG1-xyz new: https://x.test/import#${code}`)).toBe(code);
     expect(normalizeCode(code.toLowerCase().replace('pkg2-', 'pkg2-'))).toMatch(/^pkg2-/);
+  });
+});
+
+describe('PKG3 export codec: story milestones done (Phase 11)', () => {
+  const RED: ExportableProfile = {
+    name: 'My Red run',
+    game: 'red',
+    caught: [1, 4, 25, 151],
+    progressPart: 7,
+  };
+
+  it('round-trips the milestones done, with and without items', () => {
+    const code = encodeProfile({ ...RED, itemsTaken: [17, 3], milestonesDone: [60, 6, 1, 6] });
+    expect(code.startsWith('PKG3-')).toBe(true);
+    expect(decodeProfile(code)).toEqual({
+      ok: true,
+      value: {
+        name: 'My Red run',
+        game: 'red',
+        caught: [1, 4, 25, 151],
+        progressPart: 7,
+        dexCount: 151,
+        ignoredBeyondDex: 0,
+        itemsTaken: [3, 17],
+        milestonesDone: [1, 6, 60],
+      },
+    });
+    const milestonesOnly = encodeProfile({ ...RED, milestonesDone: [2] });
+    expect(milestonesOnly.startsWith('PKG3-')).toBe(true);
+    expect(decodeProfile(milestonesOnly)).toMatchObject({
+      ok: true,
+      value: { itemsTaken: [], milestonesDone: [2] },
+    });
+  });
+
+  it('still writes the exact PKG1 or PKG2 code when no milestone is done', () => {
+    const pkg1 = encodeProfile(RED);
+    const pkg2 = encodeProfile({ ...RED, itemsTaken: [5] });
+    expect(encodeProfile({ ...RED, milestonesDone: [] })).toBe(pkg1);
+    expect(encodeProfile({ ...RED, itemsTaken: [5], milestonesDone: [] })).toBe(pkg2);
+    // Numbers the format can't hold are dropped, so they don't force a PKG3 code either.
+    expect(encodeProfile({ ...RED, milestonesDone: [0, -1, 2.5, MAX_MILESTONE_NUMBER + 1] })).toBe(
+      pkg1,
+    );
+    expect(decodeProfile(pkg1)).toMatchObject({ ok: true, value: { milestonesDone: [] } });
+    expect(decodeProfile(pkg2)).toMatchObject({ ok: true, value: { milestonesDone: [] } });
+  });
+
+  it('keeps decoding this fixed code forever', () => {
+    // Pinned, checked byte by byte: 03 | 01 00 (red) | 00 | 97 00 (151) | 08, 17 × 00, 40 (#4, #151) |
+    // 08 00 (8) | 80 (item 8) | 06 00 (6) | 21 (milestones 1 and 6) | 04 "Trip" | CRC.
+    const profile = {
+      name: 'Trip',
+      game: 'red' as const,
+      caught: [4, 151],
+      itemsTaken: [8],
+      milestonesDone: [1, 6],
+    };
+    const code = 'PKG3-AwEAAJcACAAAAAAAAAAAAAAAAAAAAAAAQAgAgAYAIQRUcmlwfbY';
+    expect(encodeProfile(profile)).toBe(code);
+    const bytes = fromBase64Url(code.slice('PKG3-'.length))!;
+    expect(bytes).toHaveLength(38);
+    expect([...bytes.subarray(0, 6)]).toEqual([3, 1, 0, 0, 0x97, 0]);
+    expect([...bytes.subarray(25, 36)]).toEqual([
+      0x08, 0x00, 0x80, 0x06, 0x00, 0x21, 0x04, 0x54, 0x72, 0x69, 0x70,
+    ]);
+    expect(decodeProfile(code)).toMatchObject({ ok: true, value: profile });
+  });
+
+  it('adds about 16 characters with every Red/Blue/Yellow milestone done', () => {
+    const everything = {
+      name: 'Nuzlocke #2',
+      game: 'yellow' as const,
+      caught: Array.from({ length: 151 }, (_, i) => i + 1),
+    };
+    const milestones = Array.from({ length: 60 }, (_, i) => i + 1);
+    const pkg1 = encodeProfile(everything);
+    const pkg3 = encodeProfile({ ...everything, milestonesDone: milestones });
+    // 39 bytes + 2 (empty item block) + 2 milestoneCount + 8 bitfield = 51 bytes → 68 characters.
+    expect(pkg3.length - pkg1.length).toBe(16);
+    expect(decodeProfile(pkg3)).toMatchObject({ ok: true, value: { milestonesDone: milestones } });
+  });
+
+  it('round-trips random item and milestone sets for every registry game', () => {
+    const random = rng(20261013);
+    for (const game of GAMES) {
+      for (let round = 0; round < 10; round++) {
+        const itemsTaken =
+          round % 3 === 0 ? [] : randomCaught(random, 1 + Math.floor(random() * 600));
+        const milestonesDone = randomCaught(random, 1 + Math.floor(random() * 200));
+        const caught = randomCaught(random, game.nationalDexMax);
+        const result = decodeProfile(
+          encodeProfile({ name: 'R', game: game.id, caught, itemsTaken, milestonesDone }),
+        );
+        expect(result.ok && result.value).toMatchObject({ caught, itemsTaken, milestonesDone });
+      }
+    }
+  });
+
+  it('never reads a different profile from a code with one wrong character', () => {
+    const code = encodeProfile({ ...RED, itemsTaken: [2, 40], milestonesDone: [3, 59] });
+    const original = decodeProfile(code);
+    for (let at = 'PKG3-'.length; at < code.length; at++) {
+      const result = decodeProfile(corrupt(code, at));
+      if (result.ok) expect(result, `character ${at} changed the profile`).toEqual(original);
+      else expect(result.error.kind).not.toBe('bad-prefix');
+    }
+  });
+
+  it('rejects a prefix that disagrees with the format byte', () => {
+    const pkg3 = encodeProfile({ ...RED, milestonesDone: [5] });
+    const pkg2 = encodeProfile({ ...RED, itemsTaken: [5] });
+    expect(decodeProfile('PKG2-' + pkg3.slice(5))).toMatchObject({ error: { kind: 'bad-prefix' } });
+    expect(decodeProfile('PKG3-' + pkg2.slice(5))).toMatchObject({ error: { kind: 'bad-prefix' } });
+  });
+
+  it('rejects a truncated milestone block', () => {
+    const bitfieldLength = Math.ceil(151 / 8);
+    const body = new Uint8Array(6 + bitfieldLength + 2 + 2 + 1);
+    const view = new DataView(body.buffer);
+    body[0] = 3;
+    view.setUint16(1, 1, true);
+    view.setUint16(4, 151, true);
+    expect(decodeProfile('PKG3-' + toBase64Url(sealed(body)))).toMatchObject({
+      ok: true,
+      value: { itemsTaken: [], milestonesDone: [], name: '' },
+    });
+    view.setUint16(6 + bitfieldLength + 2, 500, true);
+    expect(decodeProfile('PKG3-' + toBase64Url(sealed(body)))).toMatchObject({
+      error: { kind: 'too-short' },
+    });
+    // A PKG3 body that stops after the item block.
+    const short = body.subarray(0, 6 + bitfieldLength + 2);
+    expect(decodeProfile('PKG3-' + toBase64Url(sealed(short)))).toMatchObject({
+      error: { kind: 'too-short' },
+    });
   });
 });
 

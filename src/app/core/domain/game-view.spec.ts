@@ -1,4 +1,5 @@
 import { buildGameView, encountersFor } from './game-view';
+import type { GameId, Milestone } from './models';
 import { ONCE, testData, testEncounter, testLocation } from './testing/test-data';
 
 describe('buildGameView', () => {
@@ -62,6 +63,34 @@ describe('buildGameView', () => {
     expect(buildGameView(data, 'red').walkthrough).toHaveLength(1);
     expect(buildGameView(data, 'blue').unlocks).toEqual([]);
     expect(buildGameView(data, 'blue').walkthrough).toEqual([]);
+  });
+});
+
+describe('buildGameView: story milestones (Phase 11)', () => {
+  const milestone = (no: number, part: Partial<Record<GameId, number>>): Milestone => ({
+    no,
+    id: `m${no}`,
+    label: `M${no}`,
+    kind: 'event',
+    part,
+    locationId: 'early',
+  });
+
+  it("keeps the game's milestones in part order, and the list order within a part", () => {
+    const data = testData({
+      milestones: [
+        milestone(1, { red: 3, yellow: 3 }),
+        milestone(2, { yellow: 1 }),
+        milestone(3, { red: 1, yellow: 1 }),
+        milestone(4, { red: 3 }),
+      ],
+    });
+    expect(buildGameView(data, 'red').milestones.map((m) => m.no)).toEqual([3, 1, 4]);
+    expect(buildGameView(data, 'yellow').milestones.map((m) => m.no)).toEqual([2, 3, 1]);
+  });
+
+  it('is empty when the data has no milestones', () => {
+    expect(buildGameView(testData(), 'red').milestones).toEqual([]);
   });
 });
 

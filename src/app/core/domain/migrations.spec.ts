@@ -43,23 +43,33 @@ const v2Snapshot = {
   ],
 };
 
+/** Schema 3 (Phase 11): profiles carry the story milestone numbers they have done. */
+const v3Snapshot = {
+  ...v2Snapshot,
+  schemaVersion: 3,
+  profiles: [
+    { ...v2Snapshot.profiles[0]!, milestonesDone: [1, 6] },
+    { ...v2Snapshot.profiles[1]!, milestonesDone: [] },
+  ],
+};
+
 describe('migrateState', () => {
   it('matches the schema version constant', () => {
     expect(MIGRATIONS.length + 1).toBe(CURRENT_STATE_VERSION);
   });
 
-  it('loads a current (v2) snapshot unchanged', () => {
-    expect(migrateState(structuredClone(v2Snapshot), NOW)).toEqual({ ok: true, state: v2Snapshot });
+  it('loads a current (v3) snapshot unchanged', () => {
+    expect(migrateState(structuredClone(v3Snapshot), NOW)).toEqual({ ok: true, state: v3Snapshot });
   });
 
-  it('migrates a v1 snapshot: every profile gains an empty itemsTaken', () => {
+  it('migrates a v1 snapshot: every profile gains an empty itemsTaken and milestonesDone', () => {
     expect(migrateState(structuredClone(v1Snapshot), NOW)).toEqual({
       ok: true,
       migratedFrom: 1,
       state: {
         ...v1Snapshot,
-        schemaVersion: 2,
-        profiles: v1Snapshot.profiles.map((p) => ({ ...p, itemsTaken: [] })),
+        schemaVersion: 3,
+        profiles: v1Snapshot.profiles.map((p) => ({ ...p, itemsTaken: [], milestonesDone: [] })),
       },
     });
     // The migration itself leaves anything that isn't a profile object to the sanitizer.
@@ -67,6 +77,22 @@ describe('migrateState', () => {
       profiles: [{ id: 'a', itemsTaken: [5] }, 'junk'],
     });
     expect(MIGRATIONS[0]!({ profiles: 'junk' })).toEqual({ profiles: 'junk' });
+  });
+
+  it('migrates a v2 snapshot: every profile keeps its items and gains an empty milestonesDone', () => {
+    expect(migrateState(structuredClone(v2Snapshot), NOW)).toEqual({
+      ok: true,
+      migratedFrom: 2,
+      state: {
+        ...v2Snapshot,
+        schemaVersion: 3,
+        profiles: v2Snapshot.profiles.map((p) => ({ ...p, milestonesDone: [] })),
+      },
+    });
+    expect(MIGRATIONS[1]!({ profiles: [{ id: 'a', milestonesDone: [5] }, 'junk'] })).toEqual({
+      profiles: [{ id: 'a', milestonesDone: [5] }, 'junk'],
+    });
+    expect(MIGRATIONS[1]!({ profiles: 'junk' })).toEqual({ profiles: 'junk' });
   });
 
   it('runs migrations in order from the stored version and sanitizes the result', () => {
@@ -98,7 +124,7 @@ describe('migrateState', () => {
   });
 
   it('refuses state from a newer app version and rejects unreadable input', () => {
-    expect(migrateState({ ...v2Snapshot, schemaVersion: 3 }, NOW)).toMatchObject({
+    expect(migrateState({ ...v3Snapshot, schemaVersion: 4 }, NOW)).toMatchObject({
       ok: false,
       reason: 'newer',
     });
@@ -145,6 +171,7 @@ describe('sanitizing stored state', () => {
           name: `  ${'a'.repeat(40)} `,
           caught: [3, 1, 3, 0, -2, 1.5, '7'],
           itemsTaken: [9, 2, 'x', 2],
+          milestonesDone: [6, 1, 6, 'x'],
           progressPart: 0,
         },
         NOW,
@@ -155,6 +182,7 @@ describe('sanitizing stored state', () => {
       name: 'a'.repeat(32),
       caught: [1, 3],
       itemsTaken: [2, 9],
+      milestonesDone: [1, 6],
       createdAt: NOW,
       updatedAt: NOW,
     });
@@ -174,7 +202,7 @@ describe('sanitizing stored state', () => {
     );
     expect(result.ok && result.state.profiles.map((p) => p.game)).toEqual(['red']);
     expect(result.ok && result.state.activeProfileId).toBe('a');
-    expect(migrateState({ schemaVersion: 2, activeProfileId: 'gone' }, NOW)).toEqual({
+    expect(migrateState({ schemaVersion: 3, activeProfileId: 'gone' }, NOW)).toEqual({
       ok: true,
       state: defaultState(),
     });

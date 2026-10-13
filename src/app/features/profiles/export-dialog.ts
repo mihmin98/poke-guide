@@ -40,8 +40,8 @@ async function copyText(document: Document, text: string): Promise<boolean> {
 }
 
 /**
- * The export dialog (plan §12.3): the code (`PKG1`, or `PKG2` once items are ticked), a share link,
- * and the system share sheet.
+ * The export dialog (plan §12.3): the code (`PKG1`, `PKG2` once items are ticked, `PKG3` once story
+ * milestones are), a share link, and the system share sheet.
  */
 @Component({
   selector: 'app-export-dialog',
@@ -51,11 +51,8 @@ async function copyText(document: Document, text: string): Promise<boolean> {
     <h2 mat-dialog-title>Export “{{ data.profile.name }}”</h2>
     <mat-dialog-content>
       <p class="sub">
-        This code holds {{ data.profile.caught.length }} caught Pokémon
-        @if (data.profile.itemsTaken.length; as items) {
-          and {{ items }} picked-up {{ items === 1 ? 'item' : 'items' }}
-        }
-        for {{ gameName() }}. Paste it into Poké Guide on another device, or keep it somewhere safe.
+        This code holds {{ contents() }} for {{ gameName() }}. Paste it into Poké Guide on another
+        device, or keep it somewhere safe.
       </p>
 
       <label class="field">
@@ -174,6 +171,17 @@ export class ExportDialog {
   protected readonly status = signal('');
 
   protected readonly code = computed(() => encodeProfile(this.data.profile));
+  /** "151 caught Pokémon, 3 picked-up items and 1 story milestone". */
+  protected readonly contents = computed(() => {
+    const { caught, itemsTaken, milestonesDone } = this.data.profile;
+    const count = (n: number, one: string, many: string) => `${n} ${n === 1 ? one : many}`;
+    const parts = [`${caught.length} caught Pokémon`];
+    if (itemsTaken.length)
+      parts.push(count(itemsTaken.length, 'picked-up item', 'picked-up items'));
+    if (milestonesDone.length)
+      parts.push(count(milestonesDone.length, 'story milestone', 'story milestones'));
+    return parts.length > 1 ? `${parts.slice(0, -1).join(', ')} and ${parts.at(-1)}` : parts[0]!;
+  });
   protected readonly gameName = computed(
     () => findGame(this.data.profile.game)?.name ?? this.data.profile.game,
   );

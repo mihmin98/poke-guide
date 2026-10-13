@@ -7,6 +7,7 @@ import type {
   ExclusiveGroup,
   GameId,
   GameLocation,
+  Milestone,
   Species,
   Unlock,
   VersionGroupData,
@@ -26,6 +27,8 @@ export interface GameView {
   evolutionsTo: ReadonlyMap<number, readonly EvolutionEdge[]>;
   unlocks: readonly Unlock[];
   walkthrough: readonly WalkthroughPart[];
+  /** Story milestones in this game (plan §7.14), in walkthrough order; empty when the data has none. */
+  milestones: readonly Milestone[];
   /** Exclusive groups in this game that a species is a member of. */
   groupsByDex: ReadonlyMap<number, readonly ExclusiveGroup[]>;
 }
@@ -65,6 +68,10 @@ export function buildGameView(data: VersionGroupData, game: GameId): GameView {
     evolutionsTo,
     unlocks: data.unlocks[game] ?? [],
     walkthrough: data.walkthroughs[game] ?? [],
+    // A stable sort, so milestones of one part keep their curated order.
+    milestones: (data.milestones ?? [])
+      .filter((m) => m.part[game] !== undefined)
+      .sort((a, b) => a.part[game]! - b.part[game]!),
     groupsByDex,
   };
 }

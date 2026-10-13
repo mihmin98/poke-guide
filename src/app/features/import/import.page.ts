@@ -59,6 +59,13 @@ import { SettingsStore } from '../../core/settings/settings.store';
             @let items = itemsTakenCount(preview);
             <span>· {{ items }} {{ items === 1 ? 'item' : 'items' }} picked up</span>
           }
+          @if (preview.milestonesDone.length) {
+            @let milestones = milestonesDoneCount(preview);
+            <span
+              >· {{ milestones }} story
+              {{ milestones === 1 ? 'milestone' : 'milestones' }} done</span
+            >
+          }
           @if (preview.progressPart; as part) {
             <span>· Part {{ part }}</span>
           }
@@ -268,6 +275,14 @@ export class ImportPage {
     return preview.itemsTaken.filter((no) => known.has(no)).length;
   }
 
+  /** Milestones of that game the code has done; numbers the data doesn't know aren't counted. */
+  protected milestonesDoneCount(preview: DecodedProfile): number {
+    const view = untracked(() => this.gameData.forGame(preview.game)).view();
+    if (!view) return preview.milestonesDone.length;
+    const known = new Set(view.milestones.map((m) => m.no));
+    return preview.milestonesDone.filter((no) => known.has(no)).length;
+  }
+
   protected onInput(event: Event): void {
     this.input.set((event.target as HTMLTextAreaElement).value);
     this.replaceId.set('');
@@ -286,6 +301,7 @@ export class ImportPage {
         game: preview.game,
         caught: preview.caught,
         itemsTaken: preview.itemsTaken,
+        milestonesDone: preview.milestonesDone,
         ...partOf(preview),
       },
       'new',
@@ -300,6 +316,7 @@ export class ImportPage {
         game: preview.game,
         caught: preview.caught,
         itemsTaken: preview.itemsTaken,
+        milestonesDone: preview.milestonesDone,
         ...partOf(preview),
       },
       'replace',
@@ -327,6 +344,7 @@ export class ImportPage {
           game: profile.game,
           caught: profile.caught,
           itemsTaken: profile.itemsTaken,
+          milestonesDone: profile.milestonesDone,
           ...(profile.progressPart === undefined ? {} : { progressPart: profile.progressPart }),
         },
         'new',
