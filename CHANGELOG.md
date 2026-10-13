@@ -4,6 +4,8 @@ All notable changes to Poké Guide. The format follows [Keep a Changelog](https:
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-10-13
+
 ### Added
 
 - **Story checklist for Gold, Silver and Crystal:** gyms, rival and Team Rocket battles, the Elite Four, the Kanto journey up to Red, key items, gifts and legendary encounters, part by part. Optional extras cover the roaming beasts, the Bug-Catching Contest, the Pokégear cards and the Unown puzzles.
@@ -31,5 +33,6 @@ The first public release.
 
 Saved state schema 3, export codes `PKG1`–`PKG3` and data file schema 1. Every later 1.x release keeps reading all of them.
 
-[Unreleased]: https://github.com/mihmin98/poke-guide/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/mihmin98/poke-guide/compare/v1.1.0...HEAD
+[1.1.0]: https://github.com/mihmin98/poke-guide/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/mihmin98/poke-guide/releases/tag/v1.0.0
