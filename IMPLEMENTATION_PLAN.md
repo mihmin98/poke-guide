@@ -799,8 +799,9 @@ A Gold/Silver/Crystal slot would look like `{ "levels": {…}, "rate": {"kind":"
 
 ### 7.14 Story milestones (requested and designed 2026-10-13, Phase 11)
 A per-game checklist of story progress: gyms and badges, major battles, story events, key items and HMs,
-story encounters and gifts. **Red/Blue/Yellow only for now**; a version group without milestones leaves
-`VersionGroupData.milestones` out and the app hides the feature (no game checks in app code).
+story encounters and gifts. **Red/Blue/Yellow first; Gold/Silver/Crystal added 2026-10-13 (Stage E)**. A version
+group without milestones leaves `VersionGroupData.milestones` out, and the app hides the feature (no game checks
+in app code).
 - **Source: a curated list**, `version-groups/<id>/overrides/milestones.ts` (`milestones` and `retired`), in
   walkthrough order, written from the walkthrough part pages. Walkthrough prose isn't structured enough to parse
   events from, but the pages are cross-checked (below). Each entry: `id` (a curated slug), `label`, `kind`
@@ -822,15 +823,18 @@ story encounters and gifts. **Red/Blue/Yellow only for now**; a version group wi
   `assemble.ts`. `data:validate` also compares the data's numbers with `milestone-numbers.json` both ways.
   - `id` and `no` unique; `locationId` is a configured location placed in each of the milestone's games; each
     `part` is inside that game's walkthrough.
-  - `grants` are unlock ids of that game, and **every unlock is granted by exactly one milestone, no later than the
+  - Each `grants` id is an unlock of at least one of the milestone's games, and applies in the games that have it
+    (changed 2026-10-13 for Crystal's `ho-oh` and `water-stone`, which sit on all-games milestones). Unlocks that
+    come from different places per game (the Director's wing or bell) get one milestone per game instead.
+  - **Every unlock is granted by exactly one milestone, no later than the
     unlock's part**, so the unlock list (§7.13) and the story list can't drift apart. "No later than" rather than
     "in the same part" (changed 2026-10-13): becoming Champion (Part 16) grants `post-game`, whose part is 17 because
     that's where the post-game content starts.
   - An `encounter`/`gift` milestone with `dex` has an encounter of that species at its location in each of its
     games.
   - Walkthrough cross-check (**warnings**), over the part pages the item cross-check already fetches: every
-    badge a part page awards ("awards you the `{{badge|X}}`"; other mentions, like Part 5's badge table or the
-    Route 23 guards, don't count) needs a `gym` milestone with `badge: X` in that part, and the reverse; a part's
+    badge a part page awards ("awards you the `{{badge|X}}`", or Crystal Part 13's "award the
+    `{{badge|Rising}}`"; other mentions, like Part 5's badge table or the Route 23 guards, don't count) needs a `gym` milestone with `badge: X` in that part, and the reverse; a part's
     `{{Party}}` blocks shouldn't outnumber its `gym` and `battle` milestones. Party blocks sit inside other templates
     (a Gym box), and a run of blocks with the same location, prize and sprite (one per starter, or per rival Eevee
     evolution in Yellow) is one battle.
@@ -841,6 +845,18 @@ story encounters and gifts. **Red/Blue/Yellow only for now**; a version group wi
   (total, required, optional per game) in `reports/<id>.md`.
 - **First build (2026-10-13):** 60 milestones (Red/Blue 52, Yellow 59), 0 errors and no milestone warnings; `rby.json`
   grew from 300 to 320 KB raw.
+- **Gold/Silver/Crystal (Stage E, 2026-10-13):** `gsc/overrides/milestones.ts`, 101 milestones (Gold/Silver 92 with
+  57 required, Crystal 97 with 59 required). It covers:
+  - the 16 gyms, the rival battles, the Team Rocket executives, the Elite Four and Lance;
+  - the post-game Kanto story up to Red, which is **required** (user choice);
+  - story events, key items and HMs, statics and gifts;
+  - Crystal's own entries: Eusine, the Wise Trio, the Clear Bell, the Tin Tower Suicune, Dratini, the Odd Egg.
+  Optional extras at the user's request: catching the roaming beasts, the Bug-Catching Contest, the Map and Radio
+  Cards, and the four Unown puzzles. A milestone that needs a later field move sits in the part where the move
+  arrives (Lapras: Part 8, Surf). Sprout Tower is optional in Gen II, and Strength is required (the Ice Path).
+  Indigo Plateau became an `expectEmpty` gsc location in Part 15 to hold the League, and Blaine sits on `route-20`
+  (his Gym is in the Seafoam Islands). Goldens: the 16 badges in order, the League in Part 15, Red in Part 28, the
+  per-game wings, the Crystal-only list. 0 errors, no milestone warnings, item numbers unchanged.
 
 ---
 
@@ -1751,8 +1767,8 @@ Crystal 379, numbered 1–424. Each difference was checked against pret (`itemba
 ### Phase 11 — Story checklist (added and designed 2026-10-13)
 Requested by the user: a checklist of story encounters, events, gyms and so on, next to the Pokémon and items.
 It touches both compatibility contracts again. Design decisions (user choices in bold):
-- **Scope: Red/Blue/Yellow only for now.** Gold/Silver/Crystal get no milestones yet; the data field is optional,
-  so the app hides the feature for them without any game check.
+- **Scope: Red/Blue/Yellow first** (Gold/Silver/Crystal followed in Stage E). The data field is optional,
+  so a version group without milestones simply has no Story tab, without any game check.
 - **Tracking: the simple option.** Ticking a later milestone *offers* to move `progressPart` forward (§13.12).
   Reachability keeps using `progressPart` alone; deriving it from ticked unlocks was rejected as a second source
   of truth.
@@ -1772,10 +1788,14 @@ Stages:
   "N story milestones done" and the export dialog's summary of what the code holds
 - [x] **D.** UI: milestone toggle, progress offer, Story page and route, nav tab (registry `storyChecklist` flag),
   location Story section
+- [x] **E.** Gold/Silver/Crystal (requested 2026-10-13, released in 1.1.0): `gsc/overrides/milestones.ts` and
+  `gsc/milestone-numbers.json` (§7.14), Indigo Plateau as a gsc location, the registry flag on `gsc`, the
+  game-specific grants rule in `checkMilestones`, Crystal's "award the" badge wording in the cross-check, goldens.
+  No app code changed.
 - [ ] Manual browser check (the user)
 - **Accept when:** ticks survive a reload, a data rebuild and a profile switch; the progress offer moves the part
-  forward only; a Gold/Silver/Crystal profile shows no Story tab; and no export code written by an earlier version
-  is rejected or misread.
+  forward only; Gold/Silver/Crystal show their own Story tab and milestones; and no export code written by an
+  earlier version is rejected or misread.
 
 ---
 

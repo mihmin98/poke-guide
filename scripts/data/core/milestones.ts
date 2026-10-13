@@ -1,7 +1,7 @@
 /**
  * Story milestones against the walkthrough part pages (plan §7.14, Phase 11). The milestone list is curated;
  * these checks only catch drift, so every finding is a warning for the report:
- * - a badge a part awards ("awards you the {{badge|Boulder}}") needs a `gym` milestone with that badge in that
+ * - a badge a part awards ("awards you the {{badge|Boulder}}", or Crystal's "award the {{badge|Rising}}") needs a `gym` milestone with that badge in that
  *   part, and a gym milestone's badge must be awarded on its part's page;
  * - a part's `{{Party}}` blocks (the important battles) shouldn't outnumber its `gym` and `battle` milestones.
  *   Consecutive blocks for the same battle (one per starter, or per rival Eevee evolution in Yellow) count once.
@@ -18,7 +18,7 @@ export interface WalkthroughPartPage {
 }
 
 const PARTY_OPENING = /\{\{\s*Party\s*(?=[|}\n])/gi;
-const AWARDED_BADGE = /awards? you the \{\{badge\|([^}|]+)/gi;
+const AWARDED_BADGE = /awards? (?:you )?the \{\{badge\|([^}|]+)/gi;
 
 /** Badges awarded on a walkthrough page, in page order. */
 export function awardedBadges(wikitext: string): string[] {

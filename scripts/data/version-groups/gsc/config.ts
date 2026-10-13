@@ -6,6 +6,7 @@ import { GSC_CATCH_RATE_NOTES } from './overrides/catch-rate-notes';
 import { GSC_ENCOUNTER_OVERRIDES } from './overrides/encounters';
 import { GSC_EVOLUTIONS } from './overrides/evolutions';
 import { GSC_ITEM_OVERRIDES } from './overrides/items';
+import { GSC_MILESTONES, GSC_RETIRED_MILESTONES } from './overrides/milestones';
 import { GSC_EGG_MOVE_PATCHES, GSC_MOVE_DATA } from './overrides/moves';
 import { GSC_UNLOCKS } from './overrides/unlocks';
 import { CRYSTAL_WALKTHROUGH, GS_WALKTHROUGH } from './walkthrough';
@@ -117,6 +118,7 @@ export const gscConfig: VersionGroupConfig = {
     unlocks: GSC_UNLOCKS,
     items: GSC_ITEM_OVERRIDES,
     encounters: GSC_ENCOUNTER_OVERRIDES,
+    milestones: { milestones: GSC_MILESTONES, retired: GSC_RETIRED_MILESTONES },
     // The Day-Care couple live on Route 34; Ditto breeds with every species of an egg group but Ditto and No Eggs.
     breeding: { dayCareLocationIds: ['route-34'], dittoDex: 132 },
     moveData: GSC_MOVE_DATA,

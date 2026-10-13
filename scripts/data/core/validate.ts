@@ -391,7 +391,8 @@ export function validateVersionGroup(
 /**
  * Story milestones against the rest of the data (plan §7.14). Every unlock must be granted by exactly one
  * milestone of its game, no later than the unlock's part (becoming Champion in Part 16 grants the Part 17
- * post-game unlock), so the unlock list and the story list can't drift apart.
+ * post-game unlock), so the unlock list and the story list can't drift apart. A grant counts in the milestone's
+ * games that have that unlock.
  */
 export function checkMilestones(data: VersionGroupData): BuildIssue[] {
   const issues: BuildIssue[] = [];
@@ -419,17 +420,19 @@ export function checkMilestones(data: VersionGroupData): BuildIssue[] {
         error(`${what}: location ${m.locationId} is not in ${game}`);
       if (!(data.walkthroughs[game] ?? []).some((w) => w.part === part))
         error(`${what}: ${game} has no walkthrough part ${part}`);
-      const unlocks = data.unlocks[game] ?? [];
-      for (const id of m.grants ?? []) {
-        if (!unlocks.some((u) => u.id === id))
-          error(`${what} grants unknown ${game} unlock "${id}"`);
-      }
       if (
         m.dex !== undefined &&
         location &&
         !location.subAreas.some((a) => a.encounters.some((e) => e.dex === m.dex && e.games[game]))
       )
         error(`${what}: ${m.locationId} has no #${m.dex} encounter in ${game}`);
+    }
+    // A grant applies in the games that have the unlock (Crystal's Ho-Oh unlock on the all-games Ho-Oh
+    // milestone), but it must be an unlock of at least one of them.
+    const games = Object.keys(m.part) as GameId[];
+    for (const id of m.grants ?? []) {
+      if (!games.some((game) => (data.unlocks[game] ?? []).some((u) => u.id === id)))
+        error(`${what} grants "${id}", which is not an unlock of any of its games`);
     }
   }
   for (const game of data.games) {

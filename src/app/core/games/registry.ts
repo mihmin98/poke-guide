@@ -205,6 +205,7 @@ export const VERSION_GROUPS: readonly VersionGroupDefinition[] = [
     dataFile: 'data/gsc.json',
     features: GEN2_FEATURES,
     mechanicsId: 'gen2',
+    storyChecklist: true,
   },
   {
     id: 'frlg',

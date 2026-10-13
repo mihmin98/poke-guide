@@ -144,6 +144,10 @@ export const GSC_LOCATIONS: LocationConfig[] = [
   kanto('tohjo-falls', 'Tohjo Falls', 'Tohjo Falls', 'cave', 14),
   kantoRoute(26, 14),
   kanto('victory-road', 'Victory Road (Kanto)', 'Victory Road', 'cave', 14),
+  // Part 15: no Generation II encounters or items; the story milestones (Elite Four, Champion) are here.
+  kanto('indigo-plateau', 'Indigo Plateau', 'Indigo Plateau', 'building', 15, {
+    expectEmpty: true,
+  }),
   // Part 16
   johto('ss-aqua', 'S.S. Aqua', 'S.S. Aqua', 'building', 16, { expectEmpty: true }),
   kanto('vermilion-city', 'Vermilion City', 'Vermilion City', 'town', 16),
@@ -251,7 +255,6 @@ export const GSC_IGNORED_CATEGORY_PAGES: string[] = [
   'Bellchime Trail',
   // Lavender Town's Soul House: an NPC house.
   'House of Memories',
-  'Indigo Plateau',
   'Kanto Route 23',
   'Magnet Train',
   "Professor Oak's Laboratory",

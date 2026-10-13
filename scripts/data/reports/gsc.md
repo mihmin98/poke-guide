@@ -1,6 +1,6 @@
 # gsc data report
 
-251 species, 104 locations, 1554 encounters, 424 items, 417 source pages.
+251 species, 105 locations, 1554 encounters, 424 items, 418 source pages.
 
 ## Obtainable per game
 
@@ -9,6 +9,14 @@
 | Pokémon Gold | 212 / 251 | 206 | 10 | 10 | 2 | 17 | 0 |
 | Pokémon Silver | 212 / 251 | 206 | 10 | 10 | 2 | 17 | 0 |
 | Pokémon Crystal | 212 / 251 | 206 | 10 | 10 | 2 | 17 | 0 |
+
+## Story milestones
+
+| Game | Milestones | Required | Optional |
+|---|---|---|---|
+| Pokémon Gold | 92 | 57 | 35 |
+| Pokémon Silver | 92 | 57 | 35 |
+| Pokémon Crystal | 97 | 59 | 38 |
 
 ## Unobtainable species
 

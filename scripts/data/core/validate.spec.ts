@@ -108,11 +108,21 @@ describe('checkMilestones', () => {
       expect.arrayContaining([
         'red unlock "card-key" is granted by 0 milestones; it needs exactly one',
         'red unlock "strength" is granted by 2 milestones; it needs exactly one',
-        'Milestone "hm03-surf" grants unknown red unlock "no-such-unlock"',
+        'Milestone "hm03-surf" grants "no-such-unlock", which is not an unlock of any of its games',
         'red unlock "ss-ticket" is in part 5, but milestone "help-bill" grants it in part 7',
       ]),
     );
     expect(messages(d).some((m) => m.startsWith('blue unlock "ss-ticket"'))).toBe(false);
+  });
+
+  it('applies a grant only in the games that have the unlock', () => {
+    const d = data();
+    d.unlocks['yellow'] = [
+      ...d.unlocks['yellow']!,
+      { id: 'yellow-only', label: 'Yellow only', kind: 'story', locationId: 'oaks-lab', part: 2 },
+    ];
+    milestone(d, 'oaks-parcel').grants = ['yellow-only'];
+    expect(messages(d).filter((m) => m.includes('yellow-only'))).toEqual([]);
   });
 });
 

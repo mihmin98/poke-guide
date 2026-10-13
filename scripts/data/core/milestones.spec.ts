@@ -36,6 +36,9 @@ describe('awardedBadges', () => {
     expect(awardedBadges('| {{badge|Cascade}}\nthe guard checks for the {{badge|Earth}}')).toEqual(
       [],
     );
+    expect(awardedBadges('telling her to admit defeat and award the {{badge|Rising}}')).toEqual([
+      'Rising',
+    ]);
   });
 });
 

@@ -4,6 +4,11 @@ All notable changes to Poké Guide. The format follows [Keep a Changelog](https:
 
 ## [Unreleased]
 
+### Added
+
+- **Story checklist for Gold, Silver and Crystal:** gyms, rival and Team Rocket battles, the Elite Four, the Kanto journey up to Red, key items, gifts and legendary encounters, part by part. Optional extras cover the roaming beasts, the Bug-Catching Contest, the Pokégear cards and the Unown puzzles.
+- **Indigo Plateau** in the Gold, Silver and Crystal guide, where the Elite Four milestones live.
+
 ## [1.0.0] - 2026-10-13
 
 The first public release.

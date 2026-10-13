@@ -49,7 +49,13 @@ describe('App shell', () => {
     const red = await render('/red/guide');
     expect(labels(red)).toEqual(['Guide', 'Checklist', 'Story', 'Profiles', 'More']);
     expect(red.querySelector('a.nav-item[href="/red/story"]')).not.toBeNull();
-    expect(labels(await render('/gold/guide'))).toEqual(['Guide', 'Checklist', 'Profiles', 'More']);
+    expect(labels(await render('/gold/guide'))).toEqual([
+      'Guide',
+      'Checklist',
+      'Story',
+      'Profiles',
+      'More',
+    ]);
   });
 
   it('redirects unknown games to the game picker', async () => {

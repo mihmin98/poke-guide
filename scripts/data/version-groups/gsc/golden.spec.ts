@@ -1,5 +1,5 @@
 /**
- * Golden assertions over the generated Gold/Silver/Crystal data (plan §7.8, §7.11–§7.13, §16 Phase 10). They read
+ * Golden assertions over the generated Gold/Silver/Crystal data (plan §7.8, §7.11–§7.14, §16 Phases 10–11). They read
  * the files in `public/data/`, so regenerate them with `npm run data:build` after changing the pipeline. Values were
  * checked against Bulbapedia and pret's pokegold and pokecrystal.
  */
@@ -12,6 +12,7 @@ import type {
   VersionGroupData,
 } from '../../../../src/app/core/domain/models';
 import { parseItemNumbers } from '../../core/item-numbers';
+import { parseMilestoneNumbers } from '../../core/milestone-numbers';
 import { repoRoot, versionGroupDir } from '../../core/paths';
 import { gscConfig } from './config';
 import { GSC_EVOLUTIONS } from './overrides/evolutions';
@@ -467,5 +468,109 @@ describe('gsc pokédex data (plan §7.12)', () => {
       const games = pokedex.entries[String(dex)]!.flatMap((e) => e.games);
       expect([...new Set(games)].sort()).toEqual(['crystal', 'gold', 'silver']);
     }
+  });
+});
+
+describe('gsc data: story milestones (plan §7.14)', () => {
+  const milestones = data.milestones ?? [];
+  const inGame = (game: GameId) => milestones.filter((m) => m.part[game] !== undefined);
+  const byId = (id: string) => milestones.find((m) => m.id === id)!;
+
+  it('has the 16 gyms with their badges in walkthrough order in every game', () => {
+    for (const game of data.games) {
+      const gyms = inGame(game).filter((m) => m.kind === 'gym');
+      expect(gyms.map((m) => m.badge)).toEqual([
+        'Zephyr',
+        'Hive',
+        'Plain',
+        'Fog',
+        'Storm',
+        'Mineral',
+        'Glacier',
+        'Rising',
+        'Thunder',
+        'Marsh',
+        'Cascade',
+        'Rainbow',
+        'Soul',
+        'Boulder',
+        'Volcano',
+        'Earth',
+      ]);
+      const parts = gyms.map((m) => m.part[game]!);
+      expect(parts).toEqual([...parts].sort((a, b) => a - b));
+    }
+  });
+
+  it('has the Elite Four and Lance at Indigo Plateau in Part 15, and Red at Mt. Silver in Part 28', () => {
+    for (const game of data.games) {
+      const league = inGame(game).filter((m) => m.locationId === 'indigo-plateau');
+      expect(league.map((m) => [m.id, m.part[game]])).toEqual([
+        ['elite-four-will', 15],
+        ['elite-four-koga', 15],
+        ['elite-four-bruno', 15],
+        ['elite-four-karen', 15],
+        ['champion', 15],
+      ]);
+    }
+    expect(byId('red')).toMatchObject({
+      locationId: 'mt-silver-cave',
+      part: { gold: 28, silver: 28, crystal: 28 },
+    });
+    expect(byId('red').optional).toBeUndefined();
+  });
+
+  it("gives each game the Director's own reward and the other wing from Pewter City", () => {
+    const granting = (game: GameId, unlock: string) =>
+      inGame(game)
+        .filter((m) => m.grants?.includes(unlock))
+        .map((m) => m.id);
+    expect(granting('gold', 'rainbow-wing')).toEqual(['director-rainbow-wing']);
+    expect(granting('gold', 'silver-wing')).toEqual(['pewter-silver-wing']);
+    expect(granting('silver', 'silver-wing')).toEqual(['director-silver-wing']);
+    expect(granting('silver', 'rainbow-wing')).toEqual(['pewter-rainbow-wing']);
+    expect(granting('crystal', 'clear-bell')).toEqual(['director-clear-bell']);
+    expect(granting('crystal', 'silver-wing')).toEqual(['pewter-silver-wing']);
+    expect(granting('crystal', 'rainbow-wing')).toEqual(['wise-trio-rainbow-wing']);
+    // Crystal-only unlocks on milestones every game has.
+    expect(granting('crystal', 'ho-oh')).toEqual(['ho-oh']);
+    expect(granting('crystal', 'water-stone')).toEqual(['bills-grandfather']);
+    expect(Object.keys(byId('ho-oh').part)).toEqual(['gold', 'silver', 'crystal']);
+  });
+
+  it("has Crystal's own events, and Suicune where each game meets it", () => {
+    const crystalOnly = milestones.filter((m) => Object.keys(m.part).join() === 'crystal');
+    expect(crystalOnly.map((m) => m.id)).toEqual([
+      'receive-odd-egg',
+      'eusine-cianwood',
+      'director-clear-bell',
+      'wise-trio',
+      'suicune-tin-tower',
+      'receive-dratini',
+      'wise-trio-rainbow-wing',
+    ]);
+    expect(milestones.filter((m) => m.dex === 245).map((m) => [m.locationId, m.part])).toEqual([
+      ['burned-tower', { gold: 8, silver: 8 }],
+      ['tin-tower', { crystal: 12 }],
+    ]);
+    expect(byId('sudowoodo')).toMatchObject({ locationId: 'route-36', dex: 185 });
+    expect(byId('red-gyarados')).toMatchObject({ locationId: 'lake-of-rage', dex: 130 });
+    expect(inGame('gold')).toHaveLength(92);
+    expect(inGame('silver')).toHaveLength(92);
+    expect(inGame('crystal')).toHaveLength(97);
+  });
+
+  it('numbers every milestone as the committed registry does', () => {
+    const registry = parseMilestoneNumbers(
+      readFileSync(join(versionGroupDir('gsc'), 'milestone-numbers.json'), 'utf8'),
+    );
+    const numbered = milestones.map(({ no, id }) => ({ no, id }));
+    expect([...numbered].sort((a, b) => a.no - b.no)).toEqual(registry.milestones);
+    expect(registry.next).toBeGreaterThan(Math.max(...numbered.map((m) => m.no)));
+    // Spot checks: these numbers are stored in profiles and export codes, so they must never move.
+    expect(byId('choose-starter').no).toBe(1);
+    expect(byId('gym-falkner').no).toBe(6);
+    expect(byId('champion').no).toBe(72);
+    expect(byId('red').no).toBe(96);
   });
 });
