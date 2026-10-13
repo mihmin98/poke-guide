@@ -796,6 +796,41 @@ A Gold/Silver/Crystal slot would look like `{ "levels": {…}, "rate": {"kind":"
   - Power Plant has an item note for 6 Voltorb and 2 Electrode.
   - Per-game item totals match the report.
 
+### 7.14 Story milestones (requested and designed 2026-10-13, Phase 11)
+A per-game checklist of story progress: gyms and badges, major battles, story events, key items and HMs,
+story encounters and gifts. **Red/Blue/Yellow only for now**; a version group without milestones leaves
+`VersionGroupData.milestones` out and the app hides the feature (no game checks in app code).
+- **Source: a curated list**, `version-groups/<id>/overrides/milestones.ts` (`milestones` and `retired`), in
+  walkthrough order, written from the walkthrough part pages. Walkthrough prose isn't structured enough to parse
+  events from, but the pages are cross-checked (below). Each entry: `id` (a curated slug), `label`, `kind`
+  (`gym` · `battle` · `event` · `key-item` · `encounter` · `gift`), `part` per game (its keys are the games the
+  milestone exists in), `locationId`, and optionally `detail`, `badge`, `grants`, `dex`, `optional`.
+  - Red/Blue/Yellow: the 8 gyms; the rival battles, Giovanni ×3, the Elite Four and the Champion; story events
+    (Oak's Parcel, Bill, Mr. Fuji, Silph Co.); a milestone for each unlock; the static encounters and gifts
+    (Snorlax ×2, the legendary birds, Mewtwo, Lapras, Eevee, the Fighting Dojo choice…); Yellow-only entries such as
+    the Jessie & James battles.
+  - Ordinary trainers are left out: there are hundreds, and they would swamp the list.
+  - `dex` links an `encounter`/`gift` milestone to its species. Ticking it never marks the species caught.
+- **Numbers (a contract, like item numbers):** each milestone gets a `no`, never reused. Profiles store ticks as
+  these numbers and `PKG3` codes carry them (§12.2). `core/milestone-numbers.ts` matches milestones to the committed,
+  build-written registry `version-groups/<id>/milestone-numbers.json` (`{versionGroupId, next, milestones: [{no,
+  id}]}`) **by `id`**; new ids get `next`, `next + 1`, …. A registered id that's gone is an **error** until
+  `retired` lists its number with a reason. Renaming an id therefore means retiring the old number.
+- **Checks** (`core/milestones.ts`, from `assemble.ts`; errors unless noted):
+  - `id` and `no` unique; `locationId` is a configured location placed in each of the milestone's games; each
+    `part` is inside that game's walkthrough.
+  - `grants` are unlock ids of that game, and **every unlock is granted by exactly one milestone with the same
+    part**, so the unlock list (§7.13) and the story list can't drift apart.
+  - An `encounter`/`gift` milestone with `dex` has an encounter of that species at its location in each of its
+    games.
+  - Walkthrough cross-check (**warnings**), over the part pages the item cross-check already fetches: every
+    `{{badge|X}}` on a part page needs a `gym` milestone with `badge: X` in that part, and a part's `{{Party}}`
+    blocks (consecutive starter-variant blocks count once) shouldn't outnumber its `gym` and `battle` milestones.
+- **Golden assertions (Red/Blue/Yellow):** each game has the 8 gyms with the 8 badges in order; the Elite Four and
+  the Champion are in Part 16; Mewtwo is at Cerulean Cave in Part 17; Lapras is at Silph Co.; Yellow has the
+  Jessie & James battles and Red/Blue don't.
+- **Output:** `VersionGroupData.milestones` in the main data file, in list order.
+
 ---
 
 ## 8. Domain model (shared TypeScript types)
@@ -911,6 +946,22 @@ export interface ExclusiveGroup { id: string; label: string; games: GameId[]; me
 export interface Unlock { id: string; label: string; kind: 'move' | 'key-item' | 'badge' | 'story'; locationId: string; part: number }
 export interface WalkthroughPart { part: number; title: string; region: RegionId }
 
+// Phase 11 (§7.14): story milestones.
+export type MilestoneKind = 'gym' | 'battle' | 'event' | 'key-item' | 'encounter' | 'gift';
+export interface Milestone {
+  no: number;                                           // stable per version group, never reused; profiles store it
+  id: string;                                           // curated slug, unique in the version group
+  label: string;                                        // "Defeat Brock"
+  kind: MilestoneKind;
+  part: Partial<Record<GameId, number>>;                // keys = the games the milestone exists in
+  locationId: string;
+  detail?: string;                                      // "Boulder Badge · TM34 Bide"
+  badge?: string;                                       // gym: the badge, for the walkthrough cross-check
+  grants?: string[];                                    // unlock ids it gives
+  dex?: number;                                         // encounter/gift species: a link only, never marks it caught
+  optional?: true;                                      // not needed to finish the story
+}
+
 export interface VersionGroupData {
   schemaVersion: 1; versionGroupId: VersionGroupId; generation: number; games: GameId[]; builtAt: string;
   types: PokemonType[]; species: Species[]; evolutions: EvolutionEdge[];
@@ -920,6 +971,7 @@ export interface VersionGroupData {
   exclusiveGroups: ExclusiveGroup[]; eventOnly: number[];
   requiresOtherGame?: { dex: number[]; detail: string }[];   // Phase 10: Gen I species moved in through the Time Capsule
   locations: GameLocation[];
+  milestones?: Milestone[];                             // Phase 11; absent = no story checklist for the group
   sources: { title: string; revid: number; url: string }[];
 }
 
@@ -930,6 +982,7 @@ export interface Profile {
   game: GameId;
   caught: number[];            // sorted, unique National Dex numbers
   itemsTaken: number[];        // sorted, unique LocationItem.no of the profile's version group (Phase 9, schema 2)
+  milestonesDone: number[];    // sorted, unique Milestone.no of the profile's version group (Phase 11, schema 3)
   progressPart?: number;       // optional "I'm at walkthrough part N"
   createdAt: string; updatedAt: string;
 }
@@ -1052,6 +1105,7 @@ export const appConfig: ApplicationConfig = {
 | `/:game/guide` | `GuidePage` | Ordered location list grouped by part (and region) |
 | `/:game/guide/:locationId` | `LocationPage` | A side pane on desktop |
 | `/:game/checklist` | `ChecklistPage` | Query params: `status`, `type`, `method`, `q`, `view`, `sort=national\|regional\|walkthrough` |
+| `/:game/story` | `StoryPage` | Phase 11 (§13.12); the nav only links it when the game's data has milestones |
 | `/:game/pokemon/:slug` | `PokemonPage` | A bottom sheet on mobile when opened from lists |
 | `/:game/tools/catch` | `CatchToolPage` | Prefilled from query params `dex` and `level`; the catch rate on an encounter row links here. A context prefill was dropped: nothing links to a Safari state yet. |
 | `/:game/tools/ivs` | `IvToolPage` | Query param `dex`. Titled with the generation's label ("DV calculator" in Gen I). |
@@ -1100,7 +1154,7 @@ setActive(id); setProgressPart(part); importProfile(p, mode: 'new' | 'replace', 
 ### 11.5 Persisted state and migrations
 ```ts
 interface PersistedState {
-  schemaVersion: 2;
+  schemaVersion: 3;
   activeProfileId: string | null;
   profiles: Profile[];
   settings: Settings;
@@ -1108,6 +1162,9 @@ interface PersistedState {
 ```
 `migrations.ts` holds `[(s0) => s1, …]` and runs them in order on load. Each has snapshot unit tests.
 - **1 → 2 (Phase 9):** every profile gains `itemsTaken: []`. The bump matters even though the field could be optional: an older app that finds schema 2 refuses to overwrite it (`reason: 'newer'`) instead of silently dropping the ticks. Item numbers the current data doesn't know (a retired item) stay stored and are simply not shown or counted. The JSON backup carries `itemsTaken` and its `schemaVersion` becomes 2; schema-1 backups still restore.
+- **2 → 3 (Phase 11):** every profile gains `milestonesDone: []`, for the same reason. Unknown milestone numbers
+  are kept like unknown item numbers. Backups carry `milestonesDone` with `schemaVersion` 3; schema-1 and -2
+  backups still restore.
 
 ---
 
@@ -1150,6 +1207,19 @@ Binary layout, before encoding (all integers little-endian):
   - The encoder writes **`PKG1` when the profile has no items ticked**, so a Pokémon-only profile still gives a code every earlier version reads, and `PKG2` otherwise. The decoder reads both forever; a `PKG1` code means "no items taken".
   - The codec doesn't read the game data: numbers the data doesn't know are kept (like retired ones in storage) and the import preview counts only known items.
   - Red/Blue/Yellow with every item taken adds 2 + 30 bytes, about 43 characters.
+- **`PKG3` (Phase 11, decided 2026-10-13):** the `PKG2` layout with format version `3` and a milestone block after
+  the item block (the item block is always present, with `itemCount` 0 when no items are taken):
+
+  | Offset | Size | Field |
+  |---|---|---|
+  | … | 2 | `milestoneCount` K (uint16): the highest milestone number carried |
+  | … | ⌈K/8⌉ | **milestones-done bitfield**: bit *i* = milestone number *i*+1 of the game's version group |
+
+  - The encoder writes the **lowest format that holds the profile**: `PKG1` with nothing ticked, `PKG2` with items
+    only, `PKG3` once any milestone is ticked. The decoder reads all three forever; `PKG1` and `PKG2` codes mean
+    "no milestones done".
+  - Like item numbers, milestone numbers aren't checked against the game data by the codec.
+  - **Importing with "replace"** overwrites `milestonesDone` too (a code without milestones clears them).
 - `export-codec.ts` exports `encodeProfile(p): string` and `decodeProfile(s): CodecResult`. It reads the registry directly (both are framework-free), instead of taking it as a parameter as this section first sketched. The CRC is **CRC-16/CCITT-FALSE** (polynomial `0x1021`, initial value `0xFFFF`, no reflection, no final XOR), and `DecodedProfile` also carries `dexCount` and `ignoredBeyondDex` so the import preview can warn. The error types are `bad-prefix | bad-base64 | too-short | bad-checksum | unsupported-version | unknown-game | bad-name`. Since Phase 9 the decoder accepts any `PKG<digit>-` prefix: a format it doesn't know (`PKG3-`) is `unsupported-version`, and a format byte that disagrees with the prefix (an edited code; the CRC doesn't cover the prefix) is `bad-prefix`. **Importing with "replace"** overwrites `itemsTaken` too (a `PKG1` code clears it): a code stands for the whole profile.
 - The decoder is forgiving about input: it trims whitespace, removes line breaks and zero-width characters, and accepts a full URL or just the code.
 
@@ -1161,7 +1231,8 @@ Binary layout, before encoding (all integers little-endian):
 ### 12.4 Import UI
 1. Paste the code or link, open a share link (prefilled from the fragment), or pick a JSON file.
 2. Decode and validate as the user types, with specific error messages.
-3. **Preview card:** game, name, caught count out of the obtainable total, progress part.
+3. **Preview card:** game, name, caught count out of the obtainable total, progress part, and (Phase 9/11) the items
+   taken and story milestones done when the code carries them.
 4. Choose **Import as new profile** (the default; " (2)" is added if the name clashes) or **Replace existing profile** (same game only, with a confirmation step).
 5. Make the imported profile active, go to its checklist and clear the URL fragment.
 
@@ -1191,7 +1262,7 @@ Binary layout, before encoding (all integers little-endian):
 ### 13.2 Layout and breakpoints
 | Width | Navigation | Guide layout |
 |---|---|---|
-| < 600 px (phone) | Top app bar (game chip, profile switcher, search) and a **bottom navigation bar**: Guide · Checklist · Profiles · More | Single column. Tapping a location opens the full-screen `LocationPage`; back returns to the same scroll position. |
+| < 600 px (phone) | Top app bar (game chip, profile switcher, search) and a **bottom navigation bar**: Guide · Checklist · Story (Phase 11, only for games with milestones) · Profiles · More | Single column. Tapping a location opens the full-screen `LocationPage`; back returns to the same scroll position. |
 | 600–1199 px (tablet) | Navigation rail | Single column with wider cards |
 | ≥ 1200 px (desktop) | Navigation rail or side nav | **Two panes:** the location list (360 px, scrolls on its own) and the location detail. The URL still updates. |
 
@@ -1315,6 +1386,22 @@ Both tools are generic screens driven by `GenerationMechanics` (§4.5). Only the
   - Gen I's shake count is **fixed** for a given ball, status and HP, so the tool states the number (and that seeing more shakes than before means the Pokémon is caught) rather than a distribution.
   - The Pokémon detail page hosts the quick grid — every ball × status at full HP — and links to both tools with `?dex=`; the catch rate on an encounter row links with `?dex=&level=`.
   - The IV tool takes several readings (level + stats), each removable, and reports "Exactly one DV set matches" / "N DV sets still match" / "No DV set matches those stats".
+
+### 13.12 Story page (`/:game/story`, Phase 11)
+- **Header:** "Story 23 / 61" with a progress bar. It never feeds any Pokémon figure.
+- **Sections:** sticky part headers ("Part 3 · Viridian Forest, Pewter City") with done/total for the part, as on the
+  guide page, and a **"You are here"** FAB that jumps to the `progressPart` section.
+- **Row:** a square "done" checkbox (the item toggle's rules: only the active profile, only when its game matches),
+  the label, a kind badge (Gym · Battle · Event · Key item · Encounter · Gift), `detail`, an "Optional" badge, a
+  link to the location and, for `dex`, to the Pokémon.
+- **Filter:** "Hide done".
+- **Progress offer:** ticking a milestone whose part is later than the profile's `progressPart` (or when none is
+  set) shows a snackbar "Move your progress to Part N?" with a *Set* action, which then offers Undo. The part is
+  never moved back, and unticking never changes it. Reachability ("Only available now", the unlock badges) keeps
+  using `progressPart` alone (decided 2026-10-13).
+- Milestone ticks count towards the save reminder and can be undone, like item ticks.
+- **Location page:** a "Story" section above Items lists the location's milestones for the game, with the same
+  rows and a count.
 
 ---
 
@@ -1638,6 +1725,34 @@ Crystal 379, numbered 1–424. Each difference was checked against pret (`itemba
   - The spot check matches Bulbapedia.
   - Location pages show time-of-day columns correctly at 360 px and 1440 px.
   - The Gen II tools match hand-worked Bulbapedia examples.
+
+### Phase 11 — Story checklist (added and designed 2026-10-13)
+Requested by the user: a checklist of story encounters, events, gyms and so on, next to the Pokémon and items.
+It touches both compatibility contracts again. Design decisions (user choices in bold):
+- **Scope: Red/Blue/Yellow only for now.** Gold/Silver/Crystal get no milestones yet; the data field is optional,
+  so the app hides the feature for them without any game check.
+- **Tracking: the simple option.** Ticking a later milestone *offers* to move `progressPart` forward (§13.12).
+  Reachability keeps using `progressPart` alone; deriving it from ticked unlocks was rejected as a second source
+  of truth.
+- **Identity: a numbered registry** keyed by curated ids (§7.14), the same contract as item numbers.
+- **Stored state:** `Profile.milestonesDone: number[]`, `schemaVersion` 3 with a migration (§11.5).
+- **Export: `PKG3`**, written only when a milestone is ticked (§12.2).
+- **UI:** a Story page and tab (§13.12), a Story section on the location page, a "Story x/y" line in the import
+  preview. Milestones never count as caught or towards any Pokémon figure.
+
+Stages:
+- [ ] **A.** Record the design: §7.14, §8, §11.3, §11.5, §12.2, §13.2, §13.12, this phase; `PROGRESS.md`
+- [ ] **B.** Pipeline: `Milestone` model, `rby/overrides/milestones.ts`, `core/milestone-numbers.ts` and
+  `rby/milestone-numbers.json`, `core/milestones.ts` checks and walkthrough cross-check, validator and zod schema,
+  goldens, rebuilt `rby.json`
+- [ ] **C.** State and codec: `milestonesDone`, schema 3 migration, backup, `ProfileStore` milestone toggles with
+  undo, `PKG3` encode/decode, import replace
+- [ ] **D.** UI: game view `milestones`, milestone toggle, progress offer, Story page and route, nav tab, location
+  Story section, import preview
+- [ ] Manual browser check (the user)
+- **Accept when:** ticks survive a reload, a data rebuild and a profile switch; the progress offer moves the part
+  forward only; a Gold/Silver/Crystal profile shows no Story tab; and no export code written by an earlier version
+  is rejected or misread.
 
 ---
 
