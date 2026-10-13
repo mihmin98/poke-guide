@@ -112,9 +112,44 @@ Per-generation strategy modules (`core/mechanics/genN.ts`) provide the capture f
 ## Project constraints (decided with the user)
 
 - **No license file** is added to the repo. The Bulbapedia attribution and the fan-project disclaimer in the About page are still required.
-- **Git: stage, never commit (hard rule).** After each important step (a finished task or checklist item, a doc or rule change), run `git add` on the files that step changed, then end your message with a short commit message for the user. **Never run `git commit`** or any other git command that changes history, branches or remotes (`push`, `reset`, `checkout`, `stash`, `rebase`, `remote`…). The user commits, branches, pushes and creates the GitHub repo manually. Read-only commands (`git status`, `git diff`) are fine. Don't stage gitignored files (e.g. `scripts/data/cache/`) or changes unrelated to the step. Where the plan says data or sprites are "committed", generate the files and stage them.
+- **Git: stage, never commit (hard rule).** After each important step (a finished task or checklist item, a doc or rule change), run `git add` on the files that step changed, then end your message with a commit message for the user, in the format under "Commit messages" below. **Never run `git commit`** or any other git command that changes history, branches or remotes (`push`, `reset`, `checkout`, `stash`, `rebase`, `remote`…). The user commits, branches, pushes and creates the GitHub repo manually. Read-only commands (`git status`, `git diff`) are fine. Don't stage gitignored files (e.g. `scripts/data/cache/`) or changes unrelated to the step. Where the plan says data or sprites are "committed", generate the files and stage them.
 - **Ask before installing anything outside the project.** Don't install global dependencies (`npm install -g`, global `npx` tool installs, `pip install --user`…) or additional programs (system packages, nvm Node versions, browsers, CLIs) without asking the user first.
 - **Ask before adding any new dependency**, including project-local ones in `package.json` (`dependencies` or `devDependencies`), even if the plan already names the package. `npm install`/`npm ci` of dependencies already in `package.json` is fine.
 - **Don't change files outside the project directory** (`/home/mih/Documents/Projects/poke-guide`). That includes dotfiles, shell profiles, global npm/git config and other projects. Allowed exceptions: Claude's memory folder (`~/.claude/projects/.../memory`), the session scratchpad under `/tmp/claude-*`, and tool caches such as `~/.npm`.
 - **Deployment (Phase 8, plan §17):** GitHub Actions publishes to https://mihmin98.github.io/poke-guide/ (base href `/poke-guide/`) on every push to `master`, except pushes that only change the docs or the data reports. Keep all asset and data URLs relative, since the app runs under a sub-path. The workflows live in `.github/workflows/` (`ci.yml`, `deploy.yml`, `data-refresh.yml`).
 - The UI is English only. Sprites are the selected game's in-game sprites. Games are the international versions.
+
+## Commit messages
+
+Use Conventional Commits with the repo areas as scopes. Every commit has a headline **and** a body:
+
+```
+<type>(<scope>): <imperative summary>
+
+<1–3 sentences: what the commit does and why. Mention the problem it
+solves or the decision behind it, not a line-by-line diff.>
+
+- <optional bullets for the separate pieces of a larger change>
+
+<optional notes: compatibility, follow-ups, plan section refs>
+```
+
+- **Types:** `feat` (new capability, including new game data), `fix` (bug fix, or a Bulbapedia correction via `patches.ts`), `refactor`, `perf`, `test`, `docs` (PROGRESS.md, the plan, CLAUDE.md), `ci`, `chore` (dependencies, tooling, formatting), `data` (regenerated output only, e.g. `data(rby): refresh from Bulbapedia`).
+- **Scopes:** `data/<group>` (`data/rby`, `data/gsc`…), `pipeline` (shared `scripts/data` code), `registry`, `domain`, `mechanics`, `codec`, app areas (`guide`, `checklist`, `profiles`, `settings`, `layout`, `theme`…), `progress`, `plan`, `deploy`, `ci`. Leave the scope out when a change spans many areas.
+- **Headline:** lowercase after the colon, imperative, no trailing period, at most about 72 characters. Put the phase or stage tag in parentheses at the end where it helps: `feat(data/gsc): add the curated overrides (Phase 10 Stage C)`.
+- **Body:** blank line after the headline, wrapped at 72 characters. Focus on the **why** and on what a later reader can't easily see in the diff (Bulbapedia quirks, rejected alternatives, compatibility guarantees). Use bullets only when the commit has separate parts. Put plan references (`See plan §9.2.`) at the end. Docs-only and trivial commits can have a one- or two-sentence body.
+- **Contract changes** (`codecId`, the `PKG*` format, item numbers, saved-state schema) get a `!` after the scope and a compatibility note in the body:
+
+```
+feat(codec)!: add the PKG2 items-taken bitfield
+
+Profiles can now track picked-up items, so export codes need to carry
+them. PKG2 appends an items bitfield keyed by item number after the
+caught bitfield.
+
+- Encoder writes PKG1 when no items are ticked, PKG2 otherwise
+- Decoder accepts both formats
+
+Compatibility: every existing PKG1 code still decodes unchanged.
+codecIds are untouched.
+```
