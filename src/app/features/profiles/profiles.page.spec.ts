@@ -103,7 +103,9 @@ describe('ProfilesPage (plan §12.1)', () => {
     const [, future] = profiles.profiles();
     TestBed.inject(StorageService).update((s) => ({
       ...s,
-      profiles: s.profiles.map((p) => (p.id === future!.id ? { ...p, game: 'ruby' as GameId } : p)),
+      profiles: s.profiles.map((p) =>
+        p.id === future!.id ? { ...p, game: 'no-such-game' as GameId } : p,
+      ),
       activeProfileId: s.profiles[0]!.id,
     }));
     const { fixture, el } = render();

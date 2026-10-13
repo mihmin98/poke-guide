@@ -27,6 +27,21 @@ describe('game registry', () => {
     expect(findGame('crystal')?.codecId).toBe(6);
   });
 
+  it('keeps the codec ids reserved for planned games', () => {
+    const ids = [
+      'ruby',
+      'sapphire',
+      'emerald',
+      'firered',
+      'leafgreen',
+      'diamond',
+      'pearl',
+    ] as const;
+    expect(ids.map((id) => findGame(id)?.codecId)).toEqual([7, 8, 9, 10, 11, 12, 13]);
+    const later = ['platinum', 'heartgold', 'soulsilver', 'black', 'white', 'black2', 'white2'];
+    expect(later.map((id) => findGame(id)?.codecId)).toEqual([14, 15, 16, 17, 18, 19, 20]);
+  });
+
   it('uses codec ids that fit in a uint16', () => {
     for (const game of GAMES) {
       expect(Number.isInteger(game.codecId) && game.codecId > 0 && game.codecId <= 0xffff).toBe(
@@ -46,8 +61,9 @@ describe('game registry', () => {
     }
   });
 
-  it('has valid accent seeds, regions and dex sizes', () => {
+  it('has valid accent seeds, regions, dex sizes and release years', () => {
     for (const game of GAMES) {
+      expect(game.releaseYear).toBeGreaterThanOrEqual(1998);
       expect(game.accent.seed).toMatch(/^#[0-9a-f]{6}$/i);
       expect(game.regions.length).toBeGreaterThan(0);
       expect(game.nationalDexMax).toBeGreaterThan(0);
@@ -66,10 +82,33 @@ describe('game registry', () => {
     expect(listGames({ includePlanned: true }).length).toBe(GAMES.length);
   });
 
-  it('groups games by generation in ascending order', () => {
+  it('orders games by release, with the release year never going back', () => {
+    const games = listGames({ includePlanned: true });
+    expect(new Set(games.map((g) => g.releaseOrder)).size).toBe(games.length);
+    games.slice(1).forEach((game, i) => {
+      expect(game.releaseYear).toBeGreaterThanOrEqual(games[i]!.releaseYear);
+    });
+  });
+
+  it('groups games by generation, one row per version group in order of first release', () => {
     const groups = groupGamesByGeneration(listGames({ includePlanned: true }));
-    expect(groups.map((g) => g.generation)).toEqual([1, 2, 3]);
-    expect(groups[0]?.games.map((g) => g.id)).toEqual(['red', 'blue', 'yellow']);
+    expect(groups.map((g) => g.generation)).toEqual([1, 2, 3, 4, 5]);
+    expect(groups.map((g) => g.rows.map((row) => row.map((game) => game.id)))).toEqual([
+      [['red', 'blue', 'yellow']],
+      [['gold', 'silver', 'crystal']],
+      [
+        ['ruby', 'sapphire', 'emerald'],
+        ['firered', 'leafgreen'],
+      ],
+      [
+        ['diamond', 'pearl', 'platinum'],
+        ['heartgold', 'soulsilver'],
+      ],
+      [
+        ['black', 'white'],
+        ['black2', 'white2'],
+      ],
+    ]);
   });
 
   it('puts Gold, Silver and Crystal in one Gen II version group', () => {

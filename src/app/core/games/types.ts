@@ -12,11 +12,20 @@ export type GameId =
   | 'sapphire'
   | 'emerald'
   | 'firered'
-  | 'leafgreen';
+  | 'leafgreen'
+  | 'diamond'
+  | 'pearl'
+  | 'platinum'
+  | 'heartgold'
+  | 'soulsilver'
+  | 'black'
+  | 'white'
+  | 'black2'
+  | 'white2';
 
-export type VersionGroupId = 'rby' | 'gsc' | 'rse' | 'frlg';
+export type VersionGroupId = 'rby' | 'gsc' | 'rse' | 'frlg' | 'dppt' | 'hgss' | 'bw' | 'b2w2';
 
-export type RegionId = 'kanto' | 'johto' | 'hoenn' | 'sevii';
+export type RegionId = 'kanto' | 'johto' | 'hoenn' | 'sevii' | 'sinnoh' | 'unova';
 
 export type GameStatus = 'available' | 'planned';
 
@@ -49,12 +58,14 @@ export interface GameDefinition {
   regions: RegionId[];
   /** Sort order in the game picker. */
   releaseOrder: number;
+  /** North American release year, shown next to the name in the game picker. */
+  releaseYear: number;
   nationalDexMax: number;
   regionalDex?: { id: string; name: string };
   /** Hex seed; full M3 palettes are generated from it by `npm run theme:games`. */
   accent: { seed: string };
   spriteSetId: string;
-  /** `planned` games are hidden in production builds. */
+  /** `planned` games show as "Coming Soon" in the picker and only open in dev builds. */
   status: GameStatus;
 }
 

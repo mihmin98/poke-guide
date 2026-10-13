@@ -101,7 +101,7 @@ describe('ProfileStore', () => {
       const unsupported: Profile = {
         id: 'x',
         name: 'Future',
-        game: 'platinum' as GameId,
+        game: 'no-such-game' as GameId,
         caught: [1],
         itemsTaken: [],
         milestonesDone: [],
@@ -114,8 +114,8 @@ describe('ProfileStore', () => {
         activeProfileId: 'x',
       }));
       expect(store.activeProfile()?.name).toBe('Future');
-      expect(store.canEditCatches('platinum' as GameId)).toBe(false);
-      expect(store.toggleCaught('platinum' as GameId, 2)).toBe(false);
+      expect(store.canEditCatches('no-such-game' as GameId)).toBe(false);
+      expect(store.toggleCaught('no-such-game' as GameId, 2)).toBe(false);
     });
   });
 

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject, isDevMode } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
@@ -12,6 +12,7 @@ import { findGame, listGames } from '../../core/games/registry';
 import { ProfileSwitcherService } from '../../core/profiles/profile-switcher.service';
 import { ProfileStore } from '../../core/profiles/profile.store';
 import { UndoSnackbarService } from '../../core/profiles/undo-snackbar.service';
+import { PLANNED_GAMES_OPEN } from '../../core/routing/planned-games';
 import {
   ConfirmDialog,
   type ConfirmDialogData,
@@ -186,6 +187,7 @@ export class ProfilesPage {
   private readonly undoSnackbar = inject(UndoSnackbarService);
   private readonly switcher = inject(ProfileSwitcherService);
   private readonly document = inject(DOCUMENT);
+  private readonly plannedGamesOpen = inject(PLANNED_GAMES_OPEN);
 
   protected readonly rows = computed<ProfileRow[]>(() => {
     const activeId = this.profiles.activeProfileId();
@@ -220,7 +222,7 @@ export class ProfilesPage {
       title: 'New profile',
       confirmLabel: 'Create',
       name: '',
-      games: listGames({ includePlanned: isDevMode() }),
+      games: listGames({ includePlanned: this.plannedGamesOpen }),
     });
     if (!result) return;
     this.profiles.createProfile(result.name, result.game);

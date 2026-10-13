@@ -4,6 +4,14 @@ All notable changes to Poké Guide. The format follows [Keep a Changelog](https:
 
 ## [Unreleased]
 
+### Added
+
+- **Coming Soon games:** the Games page now lists the games still to come: Ruby, Sapphire and Emerald; FireRed and LeafGreen; Diamond, Pearl and Platinum; HeartGold and SoulSilver; Black and White; Black 2 and White 2. They can't be opened yet.
+
+### Changed
+
+- The Games page shows each game's release year next to its name and puts each set of versions on its own row, in release order.
+
 ## [1.1.0] - 2026-10-13
 
 ### Added

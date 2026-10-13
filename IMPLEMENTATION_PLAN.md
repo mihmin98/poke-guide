@@ -189,11 +189,12 @@ export interface GameDefinition {
   generation: number;               // 1
   regions: RegionId[];              // ['kanto']
   releaseOrder: number;             // for the game picker
+  releaseYear: number;              // North American release, shown in the game picker
   nationalDexMax: number;           // 151
   regionalDex?: { id: string; name: string };   // e.g. Johto Pokédex, for sort options
   accent: { seed: string };         // hex; full M3 palettes are generated from it (§13.1)
   spriteSetId: string;              // 'gen1-rb'
-  status: 'available' | 'planned';  // 'planned' games are hidden in production
+  status: 'available' | 'planned';  // 'planned' games show as "Coming Soon" and only open in dev builds
 }
 
 export interface VersionGroupDefinition {
@@ -216,9 +217,9 @@ export interface GenerationFeatures {
 }
 ```
 
-Codec ids follow international release order and are fixed: red 1, blue 2, yellow 3, gold 4, silver 5, crystal 6, ruby 7, sapphire 8, emerald 9, firered 10, leafgreen 11 (7 and 8 are reserved until those games are registered; gold 4 and silver 5 are registered in Phase 10).
+Codec ids are fixed: red 1, blue 2, yellow 3, gold 4, silver 5, crystal 6, ruby 7, sapphire 8, emerald 9, firered 10, leafgreen 11, diamond 12, pearl 13, platinum 14, heartgold 15, soulsilver 16, black 17, white 18, black2 19, white2 20 (gold 4 and silver 5 were registered in Phase 10; ruby 7, sapphire 8 and Gen IV–V on 2026-10-13).
 
-The initial registry contains `red`, `blue` and `yellow` as `available`. Crystal, FireRed, LeafGreen and Emerald can be listed as `planned`, which lets the game picker and codec ids be designed up front. They only appear in dev builds behind a flag.
+The initial registry contained `red`, `blue` and `yellow` as `available`. Every game up to Black 2 and White 2 is registered, the ones without data as `planned` (2026-10-13): version groups `rse`, `frlg`, `dppt`, `hgss`, `bw` and `b2w2`, with best-guess `GenerationFeatures` that each game's phase confirms. The game picker lists `planned` games as "Coming Soon" cards that don't open; in dev builds (`PLANNED_GAMES_OPEN`, from `isDevMode()`) they open so they can be built and checked. A release never makes a work-in-progress game playable. Each one has a plan under `docs/plans/` (§19.2).
 
 ### 4.3 What is generic and what is game-specific
 | Generic (written once) | Game or version-group specific (config and data) |
@@ -1127,7 +1128,7 @@ export const appConfig: ApplicationConfig = {
 | Path | Component (lazy) | Notes |
 |---|---|---|
 | `/` | redirect | To `/:game/guide` for the active profile's game, or to `/games` if there are no profiles |
-| `/games` | `GamePickerPage` | Games grouped by generation, only `available` ones (`planned` ones behind a dev flag). Picking a game with no profile goes to onboarding. |
+| `/games` | `GamePickerPage` | Games grouped by generation, one row per version group. `planned` games are "Coming Soon" cards that only open in dev builds. Picking a game with no profile goes to onboarding. |
 | `/:game/welcome` | `OnboardingPage` | Name the first profile for that game |
 | `/:game/guide` | `GuidePage` | Ordered location list grouped by part (and region) |
 | `/:game/guide/:locationId` | `LocationPage` | A side pane on desktop |
@@ -1141,7 +1142,7 @@ export const appConfig: ApplicationConfig = {
 | `/settings`, `/about` | | |
 | `**` | `NotFoundPage` | |
 
-- The `gameGuard` resolves `:game` through the registry and rejects unknown or `planned` games (in production builds).
+- The `gameGuard` resolves `:game` through the registry and rejects unknown games, and `planned` games unless `PLANNED_GAMES_OPEN` (dev builds).
 - **Switching profiles follows the profile** (added 2026-09-15): activating a profile from the toolbar switcher or the Profiles page navigates to the same section under that profile's game (`/red/checklist` → `/yellow/checklist`), dropping deeper segments. On a page with no game in the URL nothing navigates; `CurrentGameService.game` falls back to the active profile's game, so the nav repoints. Undoing a switch follows the restored profile back.
 - **Game in URL vs active profile:** the URL decides which data is shown. Catch toggles write to the active profile **only if its game matches**. If it doesn't match, a banner reads "Your active profile *My Blue run* is for Blue. [Switch to a Red profile] [Create Red profile]", and the toggles are disabled.
 
@@ -1298,7 +1299,9 @@ Binary layout, before encoding (all integers little-endian):
 - Touch targets are at least 48 px, the catch toggle fills the whole row on mobile, and bottom UI uses safe-area insets.
 
 ### 13.3 Game picker (`/games`)
-- Cards grouped by generation ("Generation I — Kanto"). Each card has the game name, its accent color, a mascot sprite, and "N profiles" or "Start".
+- Cards grouped by generation ("Generation I — Kanto"). Each card has the game name with its North American release year in a smaller font, its accent color, a mascot sprite, and "N profiles" or "Start".
+- Inside a generation, each version group is its own row, and rows are ordered by their first release (Ruby/Sapphire/Emerald before FireRed/LeafGreen). Games in a row are in release order.
+- `planned` games are dashed, dimmed cards with a "Coming Soon" badge and no link. In dev builds they are links that keep the badge (added 2026-10-13).
 
 ### 13.4 Guide page (`/:game/guide`)
 - **Header:** the game name and the profile's overall progress ring ("87 / 148").

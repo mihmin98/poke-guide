@@ -1,7 +1,8 @@
-import { ChangeDetectionStrategy, Component, computed, inject, isDevMode } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { groupGamesByGeneration, listGames, regionName } from '../../core/games/registry';
 import { ProfileStore } from '../../core/profiles/profile.store';
+import { PLANNED_GAMES_OPEN } from '../../core/routing/planned-games';
 
 const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
 
@@ -14,24 +15,38 @@ const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
     @for (group of groups; track group.generation) {
       <section [attr.aria-labelledby]="'gen-' + group.generation">
         <h2 [id]="'gen-' + group.generation">{{ group.title }}</h2>
-        <ul class="cards">
-          @for (game of group.games; track game.id) {
-            <li [class]="'game-' + game.id">
-              @let count = profileCounts()[game.id] ?? 0;
-              <!-- A game with no profile goes to onboarding (plan §11.3). -->
-              <a class="card" [routerLink]="['/', game.id, count > 0 ? 'guide' : 'welcome']">
-                <span class="swatch" aria-hidden="true"></span>
-                <span class="name">{{ game.name }}</span>
-                @if (game.status === 'planned') {
-                  <span class="badge">Planned</span>
+        @for (row of group.rows; track row[0]!.versionGroupId) {
+          <ul class="cards">
+            @for (game of row; track game.id) {
+              <li [class]="'game-' + game.id">
+                @if (game.status === 'available' || plannedGamesOpen) {
+                  @let count = profileCounts()[game.id] ?? 0;
+                  <!-- A game with no profile goes to onboarding (plan §11.3). -->
+                  <a class="card" [routerLink]="['/', game.id, count > 0 ? 'guide' : 'welcome']">
+                    <span class="swatch" aria-hidden="true"></span>
+                    <span class="name">
+                      {{ game.name }} <span class="year">{{ game.releaseYear }}</span>
+                    </span>
+                    @if (game.status === 'planned') {
+                      <span class="badge">Coming Soon</span>
+                    }
+                    <span class="action">
+                      {{ count === 0 ? 'Start' : count === 1 ? '1 profile' : count + ' profiles' }}
+                    </span>
+                  </a>
+                } @else {
+                  <div class="card soon">
+                    <span class="swatch" aria-hidden="true"></span>
+                    <span class="name">
+                      {{ game.name }} <span class="year">{{ game.releaseYear }}</span>
+                    </span>
+                    <span class="badge">Coming Soon</span>
+                  </div>
                 }
-                <span class="action">
-                  {{ count === 0 ? 'Start' : count === 1 ? '1 profile' : count + ' profiles' }}
-                </span>
-              </a>
-            </li>
-          }
-        </ul>
+              </li>
+            }
+          </ul>
+        }
       </section>
     }
   `,
@@ -40,10 +55,13 @@ const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
       font: var(--mat-sys-title-medium);
       color: var(--mat-sys-on-surface-variant);
     }
+    section {
+      margin-bottom: 24px;
+    }
     .cards {
       list-style: none;
       padding: 0;
-      margin: 0 0 24px;
+      margin: 0 0 12px;
       display: grid;
       gap: 12px;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -60,7 +78,7 @@ const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
       background: var(--mat-sys-surface-container-low);
       border: 1px solid var(--mat-sys-outline-variant);
     }
-    .card:hover {
+    a.card:hover {
       background: var(--mat-sys-surface-container-high);
     }
     .card:focus-visible {
@@ -78,6 +96,18 @@ const ROMAN = ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'];
     .name {
       flex: 1;
       font: var(--mat-sys-title-medium);
+    }
+    .year {
+      font: var(--mat-sys-label-medium);
+      color: var(--mat-sys-on-surface-variant);
+    }
+    .soon {
+      background: none;
+      border-style: dashed;
+      color: var(--mat-sys-on-surface-variant);
+    }
+    .soon .swatch {
+      opacity: 0.6;
     }
     .badge {
       font: var(--mat-sys-label-small);
@@ -104,10 +134,13 @@ export class GamePickerPage {
     return counts;
   });
 
-  protected readonly groups = groupGamesByGeneration(
-    listGames({ includePlanned: isDevMode() }),
-  ).map((group) => {
-    const regions = [...new Set(group.games.flatMap((g) => g.regions))].map(regionName);
-    return { ...group, title: `Generation ${ROMAN[group.generation]} — ${regions.join(', ')}` };
-  });
+  /** `planned` games are always listed, as "Coming Soon"; they only open in dev builds. */
+  protected readonly plannedGamesOpen = inject(PLANNED_GAMES_OPEN);
+
+  protected readonly groups = groupGamesByGeneration(listGames({ includePlanned: true })).map(
+    (group) => {
+      const regions = [...new Set(group.rows.flat().flatMap((g) => g.regions))].map(regionName);
+      return { ...group, title: `Generation ${ROMAN[group.generation]} — ${regions.join(', ')}` };
+    },
+  );
 }
