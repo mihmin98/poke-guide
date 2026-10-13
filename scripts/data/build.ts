@@ -17,8 +17,8 @@ import {
   assembleVersionGroup,
   listPageTitles,
   speciesForConfig,
+  printIssues,
   speciesPageTitles,
-  type BuildIssue,
 } from './core/assemble';
 import { PageCache, PageSource, loadFixtures, type CachedPage, type FetchMode } from './core/cache';
 import { MediaWikiClient } from './core/mediawiki-client';
@@ -31,16 +31,6 @@ import { NATIONAL_DEX_LIST_PAGE } from './core/species-list';
 import { validateVersionGroup } from './core/validate';
 import { VERSION_GROUP_CONFIGS } from './version-groups';
 import type { VersionGroupConfig } from './version-groups/types';
-
-function printIssues(issues: readonly BuildIssue[]): void {
-  for (const level of ['note', 'warning', 'error'] as const) {
-    const selected = issues.filter((i) => i.level === level);
-    if (selected.length === 0) continue;
-    console.log(`\n${level.toUpperCase()}S (${selected.length})`);
-    for (const found of selected)
-      console.log(`  ${found.page ? `[${found.page}] ` : ''}${found.message}`);
-  }
-}
 
 /** Offline builds use the committed category snapshot (`__fixtures__/category-members.json`) when there is one. */
 function categorySnapshot(config: VersionGroupConfig): string[] | null {
@@ -134,6 +124,14 @@ async function buildGroup(
   ] as const) {
     // Compact: pretty-printed rby.json is about 790 KB against 245 KB (both about 20–30 KB gzipped).
     const json = JSON.stringify(content) + '\n';
+    // Only `builtAt` changed: keep the file, so a rebuild without changes leaves nothing to commit.
+    if (existsSync(file)) {
+      const old = JSON.parse(readFileSync(file, 'utf8')) as typeof content;
+      if (JSON.stringify({ ...old, builtAt: content.builtAt }) + '\n' === json) {
+        console.log(`Unchanged ${relative(repoRoot(), file)}`);
+        continue;
+      }
+    }
     writeFileSync(file, json);
     console.log(
       `Wrote ${relative(repoRoot(), file)} (${Math.round(Buffer.byteLength(json) / 1024)} KB)`,

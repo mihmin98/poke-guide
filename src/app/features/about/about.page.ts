@@ -21,6 +21,13 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
       links to its source page.
     </p>
 
+    <h2>Source code</h2>
+    <p>
+      The app and its data pipeline are on
+      <a href="https://github.com/mihmin98/poke-guide" rel="noopener" target="_blank">GitHub</a>,
+      where you can also report a problem.
+    </p>
+
     <h2>Fonts</h2>
     <p>
       Text is set in Roboto (SIL Open Font License 1.1) and icons come from Material Symbols (Apache

@@ -10,9 +10,9 @@ export const BULBAPEDIA_API = 'https://bulbapedia.bulbagarden.net/w/api.php';
 export const BULBAPEDIA_WIKI = 'https://bulbapedia.bulbagarden.net/wiki/';
 /** Bulbagarden Archives hosts the sprite files (plan §7.10). */
 export const ARCHIVES_API = 'https://archives.bulbagarden.net/w/api.php';
-// TODO(Phase 8): add the repository URL once it exists.
 export const USER_AGENT =
-  'poke-guide-data-builder/0.1 (non-commercial fan companion app; build-time data fetch, cached)';
+  'poke-guide-data-builder/0.1 (+https://github.com/mihmin98/poke-guide; ' +
+  'non-commercial fan companion app; build-time data fetch, cached)';
 
 const MAX_TITLES_PER_REQUEST = 50;
 

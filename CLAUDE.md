@@ -59,7 +59,7 @@ npm run data:refresh            # same, ignoring the cache
 npm run data:offline            # build from fixtures/cache only (what tests use)
 npm run data:sprites            # download the sprite sets
 npm run data:fixtures           # capture parser-test fixtures into version-groups/<id>/__fixtures__
-npm run data:validate           # planned, not yet implemented: validate committed data files
+npm run data:validate           # check the committed data files and item registries (no network; CI runs it)
 ```
 
 ## Architecture (big picture)
@@ -116,5 +116,5 @@ Per-generation strategy modules (`core/mechanics/genN.ts`) provide the capture f
 - **Ask before installing anything outside the project.** Don't install global dependencies (`npm install -g`, global `npx` tool installs, `pip install --user`…) or additional programs (system packages, nvm Node versions, browsers, CLIs) without asking the user first.
 - **Ask before adding any new dependency**, including project-local ones in `package.json` (`dependencies` or `devDependencies`), even if the plan already names the package. `npm install`/`npm ci` of dependencies already in `package.json` is fine.
 - **Don't change files outside the project directory** (`/home/mih/Documents/Projects/poke-guide`). That includes dotfiles, shell profiles, global npm/git config and other projects. Allowed exceptions: Claude's memory folder (`~/.claude/projects/.../memory`), the session scratchpad under `/tmp/claude-*`, and tool caches such as `~/.npm`.
-- **GitHub Pages publishing is the last phase** (Phase 8). Until then everything runs locally. When deploying: build with `--base-href /<repo>/`, keep all asset/data URLs relative, copy `index.html` to `404.html`, and add `.nojekyll`.
+- **Deployment (Phase 8, plan §17):** GitHub Actions publishes to https://mihmin98.github.io/poke-guide/ (base href `/poke-guide/`) on every push to `master`, except pushes that only change the docs or the data reports. Keep all asset and data URLs relative, since the app runs under a sub-path. The workflows live in `.github/workflows/` (`ci.yml`, `deploy.yml`, `data-refresh.yml`).
 - The UI is English only. Sprites are the selected game's in-game sprites. Games are the international versions.

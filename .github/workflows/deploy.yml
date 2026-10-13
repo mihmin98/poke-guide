@@ -1,0 +1,63 @@
+# Builds and publishes the app to GitHub Pages (plan §17): https://mihmin98.github.io/poke-guide/
+# Runs the full quality gate first, so a failing check never goes live. Pushes that only touch the docs or
+# the data reports don't redeploy; a manual run always does.
+name: Deploy
+
+on:
+  push:
+    branches: [master]
+    paths-ignore:
+      - PROGRESS.md
+      - IMPLEMENTATION_PLAN.md
+      - CLAUDE.md
+      - README.md
+      - 'scripts/data/reports/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# One deployment at a time; a queued one waits rather than cancelling a deployment in progress.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  # The site lives under /<repo>/. A custom domain would mean adding public/CNAME and using '/'.
+  PAGES_BASE_HREF: /poke-guide/
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm run verify
+      - run: npm run data:validate
+      - run: npx ng build --base-href "$PAGES_BASE_HREF"
+      # Pages serves 404.html for unknown paths, so deep links load the app; .nojekyll skips Jekyll.
+      - run: |
+          cp dist/poke-guide/browser/index.html dist/poke-guide/browser/404.html
+          touch dist/poke-guide/browser/.nojekyll
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: dist/poke-guide/browser
+          include-hidden-files: true # keeps .nojekyll
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

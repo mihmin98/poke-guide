@@ -80,6 +80,17 @@ export interface BuildIssue {
   message: string;
 }
 
+/** Prints issues grouped by level, errors last so they end up next to the summary. */
+export function printIssues(issues: readonly BuildIssue[]): void {
+  for (const level of ['note', 'warning', 'error'] as const) {
+    const selected = issues.filter((i) => i.level === level);
+    if (selected.length === 0) continue;
+    console.log(`\n${level.toUpperCase()}S (${selected.length})`);
+    for (const found of selected)
+      console.log(`  ${found.page ? `[${found.page}] ` : ''}${found.message}`);
+  }
+}
+
 /** A fetched page by requested title, or `null` when it doesn't exist or isn't available. */
 export type PageLookup = (title: string) => CachedPage | null;
 

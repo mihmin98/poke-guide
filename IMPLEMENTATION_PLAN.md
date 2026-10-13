@@ -482,14 +482,14 @@ export interface CatchTemplateAdapter {
 // build.ts also accepts --dry-run (print the report, write nothing). Files are never written when there are errors.
 // Golden tests read the generated public/data files, so rebuild after pipeline changes.
 "data:sprites":  "tsx scripts/data/sprites.ts",             // skips files whose SHA-1 matches the archive (stillFrame sets: the manifest)
-"data:validate": "tsx scripts/data/core/validate.ts",
+"data:validate": "tsx scripts/data/validate.ts",            // committed data files vs. the build checks and item registry; no network
 "theme:games":   "tsx scripts/theme/generate-game-themes.ts"
 ```
 Dev dependencies: `tsx`, `zod`, `@material/material-color-utilities`, `fast-check`.
 
 ### 7.3 Fetching (being polite to Bulbapedia)
 - Use the **batched API** (`titles=` up to 50 per request). Red/Blue/Yellow is about 70 location pages, 151 species pages and 5 list pages, so roughly **6–8 requests** in total.
-- Send a descriptive `User-Agent` such as `poke-guide-data-builder/1.0`. Add the repo URL once the repo exists (§17).
+- Send a descriptive `User-Agent` (`poke-guide-data-builder/0.1 (+https://github.com/mihmin98/poke-guide; …)`, in `mediawiki-client.ts`).
 - Send `maxlag=5`, wait a random 2–5 s between requests, and retry with exponential backoff on 429/5xx or `maxlag` errors, respecting `Retry-After`. Any other error status (such as a 403 challenge) fails at once, without retrying.
 - Show progress while fetching: a one-line bar with the request count, a countdown to the next request and an ETA on a terminal, or one plain line per request elsewhere (`core/progress.ts`).
 - Cache files are `scripts/data/cache/raw/<title>.json`, holding `{title, resolvedTitle, revid, timestamp, wikitext}`. The cache is gitignored and shared between version groups, since one location page serves several generations.
@@ -1420,11 +1420,15 @@ Each phase ends with a working local state and its acceptance criteria met. **No
 - **Accept when:** the production build works offline after the first load, and the Lighthouse targets are met.
 
 ### Phase 8 — GitHub Pages publishing (last step)
-- [ ] The user creates the GitHub repo and pushes (all git is manual). Ask them for the repo name, which sets the base href.
-- [ ] Add the workflows and SPA fallback (§17), and set Pages → Source → GitHub Actions.
-- [ ] Add the repo URL to the scraper User-Agent and the About page.
-- [ ] README (features, dev setup, data pipeline, adding a game).
+Resumed 2026-10-13. The user chose to deploy before the pending manual checks of Phases 5, 6, 7, 9 and 10, which can run on the live site.
+- [x] The user creates the GitHub repo and pushes (all git is manual): `mihmin98/poke-guide`, branch `master`, base href `/poke-guide/`.
+- [x] Add the workflows and SPA fallback (§17), and `npm run data:validate`.
+- [ ] Set Pages → Source → GitHub Actions (the user).
+- [x] Add the repo URL to the scraper User-Agent and the About page.
+- [x] README (features, dev setup, data pipeline, adding a game, deployment).
+- [x] A local check of the `/poke-guide/` build served like Pages (shell on deep links, `ngsw.json` paths, relative assets).
 - [ ] Deploy, then run the smoke test on the live site (deep link reload, import link, offline).
+- [ ] Run the data refresh by hand once, then enable its monthly schedule.
 - **Accept when:** the live site passes the same manual smoke check (§14) as the local build.
 
 ### Phase 9 — Item pickup tracking (added 2026-09-15, designed 2026-09-23)
@@ -1641,9 +1645,17 @@ Crystal 379, numbered 1–424. Each difference was checked against pret (`itemba
 
 - **Base href:** the site URL is `https://<owner>.github.io/<repo>/`, so build with `ng build --base-href /<repo>/`. The value comes from one variable (`PAGES_BASE_HREF`) in the workflow. All asset and data URLs in the app are **relative** (`data/rby.json`, `sprites/…`), so nothing else changes. A custom domain later means adding `CNAME` and using `/`.
 - **SPA deep links:** copy `dist/poke-guide/browser/index.html` to `404.html` and add `.nojekyll`.
-- **`ci.yml`** (PRs and pushes): `setup-node` from `.node-version` → `npm ci` → `npm run verify` → `npm run data:validate`. No e2e step (§14).
-- **`deploy.yml`** (push to `main`, `workflow_dispatch`): build → `404.html` and `.nojekyll` → `actions/upload-pages-artifact` → `actions/deploy-pages`, with `permissions: pages: write, id-token: write` and `environment: github-pages`. The push trigger has a `paths-ignore` list of doc-only files (`PROGRESS.md`, `IMPLEMENTATION_PLAN.md`, `CLAUDE.md`, `README.md`, `scripts/data/reports/**`), so a push that touches only those doesn't redeploy (decided 2026-10-13). A push that changes any other file deploys as usual, and a manual run always deploys. `[skip ci]` in the newest commit's message still skips every workflow for a single push.
-- **`data-refresh.yml`** (manual and monthly, `0 4 1 * *`): `npm run data:build:all -- --refresh && npm run data:sprites` → if the data changed, open a PR whose body contains the reports. **Never auto-merge.**
+- **`npm run data:validate`** (`scripts/data/validate.ts`): checks the committed data files without the network. They must pass `validateVersionGroup`, and their item numbers must match `item-numbers.json` entry for entry.
+- **`ci.yml`** (pull requests, and pushes to branches other than `master`): `setup-node` from `.node-version` → `npm ci` → `npm run verify` → `npm run data:validate`. No e2e step (§14). Pushes to `master` get the same checks in `deploy.yml`.
+- **`deploy.yml`** (push to `master`, `workflow_dispatch`):
+  - `npm run verify` and `data:validate` run first, so a failing check never deploys (user choice, 2026-10-13).
+  - Then `ng build --base-href "$PAGES_BASE_HREF"` → `404.html` and `.nojekyll` → `actions/upload-pages-artifact` (with `include-hidden-files`, or `.nojekyll` is dropped) → `actions/deploy-pages`.
+  - `permissions: pages: write, id-token: write`, `environment: github-pages`. The push trigger has a `paths-ignore` list of doc-only files (`PROGRESS.md`, `IMPLEMENTATION_PLAN.md`, `CLAUDE.md`, `README.md`, `scripts/data/reports/**`), so a push that touches only those doesn't redeploy (decided 2026-10-13). A push that changes any other file deploys as usual, and a manual run always deploys. `[skip ci]` in the newest commit's message still skips every workflow for a single push.
+- **`data-refresh.yml`** (manual; the monthly `0 4 1 * *` schedule is enabled only after one green manual run, since Cloudflare has blocked Node before): `npm run data:refresh` → `npm run data:sprites`.
+  - If any build output changed, it runs `verify` and `data:validate`. A PR opened with `GITHUB_TOKEN` doesn't trigger `ci.yml`, so the refresh run checks the data itself.
+  - Then it pushes a `data-refresh/<date>-<run>` branch and opens a PR with `gh pr create`. The PR body holds the diff stat and the reports. **Never auto-merge.**
+  - `data:build` leaves a data file untouched when only `builtAt` would change, so a refresh without real changes opens no PR.
+  - Repo setting: "Allow GitHub Actions to create and approve pull requests".
 
 ---
 

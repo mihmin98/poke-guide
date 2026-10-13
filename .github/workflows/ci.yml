@@ -1,0 +1,28 @@
+# Quality gate for pull requests and side branches (plan §17). Pushes to master run the same checks in
+# deploy.yml before publishing, so they aren't repeated here.
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches-ignore: [master]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm run verify
+      - run: npm run data:validate

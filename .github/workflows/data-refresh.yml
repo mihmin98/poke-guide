@@ -1,0 +1,77 @@
+# Refetches every Bulbapedia page and the sprites, and opens a pull request when the committed data changed
+# (plan §17). It never merges: review the reports in the PR and merge by hand.
+#
+# Repo setting needed: Settings → Actions → General → Workflow permissions → "Allow GitHub Actions to
+# create and approve pull requests". A PR opened with GITHUB_TOKEN doesn't trigger CI, so this run checks
+# the refreshed data itself before opening it.
+name: Data refresh
+
+on:
+  workflow_dispatch:
+  # Monthly, once a manual run has succeeded from a GitHub runner (Cloudflare has blocked Node before):
+  # schedule:
+  #   - cron: '0 4 1 * *'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: data-refresh
+  cancel-in-progress: false
+
+env:
+  OUTPUTS: public/data public/sprites scripts/data/version-groups scripts/data/reports
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npm run data:refresh
+      - run: npm run data:sprites
+      - id: changes
+        run: |
+          git status --porcelain -- $OUTPUTS
+          if [ -n "$(git status --porcelain -- $OUTPUTS)" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "The data is unchanged; no pull request."
+          fi
+      - if: steps.changes.outputs.changed == 'true'
+        run: npm run verify
+      - if: steps.changes.outputs.changed == 'true'
+        run: npm run data:validate
+      - if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          day="$(date -u +%Y-%m-%d)"
+          branch="data-refresh/$day-$GITHUB_RUN_NUMBER"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git switch -c "$branch"
+          git add -- $OUTPUTS
+          git commit -m "Refresh data from Bulbapedia ($day)"
+          git push origin "$branch"
+          {
+            echo "Automated data refresh from Bulbapedia ($day). \`npm run verify\` and \`npm run data:validate\` passed in [this run]($GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID)."
+            echo
+            echo "Review the reports below before merging. Never merge item number changes you can't explain (plan §7.13)."
+            echo
+            echo '```'
+            git diff --stat HEAD~1
+            echo '```'
+            for report in scripts/data/reports/*.md; do
+              echo
+              cat "$report"
+            done
+          } | head -c 60000 > "$RUNNER_TEMP/body.md"
+          gh pr create --base master --head "$branch" \
+            --title "Data refresh $day" --body-file "$RUNNER_TEMP/body.md"
