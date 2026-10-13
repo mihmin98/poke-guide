@@ -1,0 +1,160 @@
+import { signal } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
+import { routerFeatures } from '../../app.config';
+import { routes } from '../../app.routes';
+import { GameDataService } from '../../core/data/game-data.service';
+import { buildGameView, type GameView } from '../../core/domain/game-view';
+import type { Milestone } from '../../core/domain/models';
+import { testData, testLocation, testSpecies } from '../../core/domain/testing/test-data';
+import { ProfileStore } from '../../core/profiles/profile.store';
+import { ProgressOfferService } from '../../core/profiles/progress-offer.service';
+import { STATE_STORAGE } from '../../core/storage/storage.service';
+import { StoryPage } from './story.page';
+
+const milestones: Milestone[] = [
+  {
+    no: 6,
+    id: 'gym-brock',
+    label: 'Defeat Brock',
+    kind: 'gym',
+    part: { red: 3 },
+    locationId: 'pewter-city',
+    detail: 'Boulder Badge · TM34 Bide',
+    badge: 'Boulder',
+  },
+  {
+    no: 40,
+    id: 'snorlax',
+    label: 'Wake the Snorlax',
+    kind: 'encounter',
+    part: { red: 11 },
+    locationId: 'route-16',
+    dex: 143,
+    optional: true,
+  },
+];
+
+const data = testData({
+  games: ['red'],
+  species: [testSpecies(143, { name: 'Snorlax', slug: 'snorlax' })],
+  walkthroughs: {
+    red: [
+      { part: 3, title: 'Pewter City', region: 'kanto' },
+      { part: 11, title: 'Route 16', region: 'kanto' },
+    ],
+  },
+  locations: [
+    testLocation('pewter-city', 3, [], ['red'], { name: 'Pewter City' }),
+    testLocation('route-16', 11, [], ['red'], { name: 'Route 16' }),
+  ],
+  milestones,
+});
+
+const stub = {
+  isLoading: signal(false),
+  error: signal(undefined),
+  view: signal<GameView | undefined>(buildGameView(data, 'red')),
+  checklist: signal([]),
+};
+
+describe('StoryPage (plan §13.12)', () => {
+  let profiles: ProfileStore;
+  let offers: [string, number][];
+
+  beforeEach(() => {
+    offers = [];
+    stub.view.set(buildGameView(data, 'red'));
+    TestBed.configureTestingModule({
+      providers: [
+        { provide: STATE_STORAGE, useValue: null },
+        { provide: GameDataService, useValue: { forGame: () => stub } },
+        {
+          provide: ProgressOfferService,
+          useValue: {
+            offer: (game: string, part: number) => (offers.push([game, part]), Promise.resolve()),
+          },
+        },
+        provideRouter(routes, ...routerFeatures),
+      ],
+    });
+    profiles = TestBed.inject(ProfileStore);
+  });
+
+  afterEach(() => TestBed.resetTestingModule());
+
+  function render() {
+    const fixture = TestBed.createComponent(StoryPage);
+    fixture.componentRef.setInput('game', 'red');
+    fixture.detectChanges();
+    return { fixture, el: fixture.nativeElement as HTMLElement };
+  }
+
+  const text = (el: Element | null) => el?.textContent?.replace(/\s+/g, ' ').trim();
+
+  it('lists milestones by part with their kind, detail and links', () => {
+    const { el } = render();
+    expect([...el.querySelectorAll('.part-title')].map(text)).toEqual([
+      'Part 3 · Pewter City',
+      'Part 11 · Route 16',
+    ]);
+    const rows = el.querySelectorAll('app-milestone-row');
+    expect(text(rows[0]!.querySelector('.label'))).toBe('Defeat Brock');
+    expect(text(rows[0]!.querySelector('.tags'))).toBe('Gym');
+    expect(text(rows[0]!.querySelector('.more'))).toContain('Boulder Badge · TM34 Bide');
+    expect(rows[0]!.querySelector('a')?.getAttribute('href')).toBe('/red/guide/pewter-city');
+    expect([...rows[1]!.querySelectorAll('.badge')].map(text)).toEqual(['Encounter', 'Optional']);
+    expect(rows[1]!.querySelector('a[href="/red/pokemon/snorlax"]')).not.toBeNull();
+  });
+
+  it('ticks a milestone on the active profile and offers to move the progress there', () => {
+    profiles.createProfile('Red run', 'red');
+    const { fixture, el } = render();
+    expect(el.querySelector('app-progress-ring')?.textContent).toContain('0');
+
+    el.querySelector<HTMLButtonElement>('app-milestone-toggle button')!.click();
+    fixture.detectChanges();
+    expect(profiles.activeProfile()?.milestonesDone).toEqual([6]);
+    expect(offers).toEqual([['red', 3]]);
+    expect(text(el.querySelector('.part-head .count'))).toBe('1/1');
+    expect(el.querySelector('app-milestone-toggle button')?.getAttribute('aria-checked')).toBe(
+      'true',
+    );
+
+    // Unticking never offers anything, and never touches the part.
+    el.querySelector<HTMLButtonElement>('app-milestone-toggle button')!.click();
+    fixture.detectChanges();
+    expect(profiles.activeProfile()?.milestonesDone).toEqual([]);
+    expect(offers).toHaveLength(1);
+  });
+
+  it('hides done milestones on request', () => {
+    profiles.createProfile('Red run', 'red');
+    profiles.setMilestoneDone('red', 6, true, 'x');
+    const { fixture, el } = render();
+    el.querySelector<HTMLButtonElement>('.controls .chip')!.click();
+    fixture.detectChanges();
+    expect([...el.querySelectorAll('.part-title')].map(text)).toEqual(['Part 11 · Route 16']);
+
+    profiles.setMilestoneDone('red', 40, true, 'x');
+    fixture.detectChanges();
+    expect(text(el.querySelector('.status'))).toBe('Every story milestone is done.');
+  });
+
+  it('disables the toggles without a profile for this game', () => {
+    profiles.createProfile('Blue run', 'blue');
+    const { el } = render();
+    const toggle = el.querySelector<HTMLButtonElement>('app-milestone-toggle button')!;
+    expect(toggle.disabled).toBe(true);
+    expect(toggle.title).toBe('Your active profile is for another game');
+  });
+
+  it('says so when the game has no story checklist', () => {
+    stub.view.set(buildGameView(testData({ games: ['red'] }), 'red'));
+    const { el } = render();
+    expect(text(el.querySelector('.status'))).toBe(
+      'There is no story checklist for Pokémon Red yet.',
+    );
+    expect(el.querySelector('app-progress-ring')).toBeNull();
+  });
+});

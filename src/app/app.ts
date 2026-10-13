@@ -10,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import type { Profile } from './core/domain/models';
-import { GAMES, findGame } from './core/games/registry';
+import { GAMES, findGame, getVersionGroup } from './core/games/registry';
 import { ProfileSwitcherService } from './core/profiles/profile-switcher.service';
 import { ProfileStore } from './core/profiles/profile.store';
 import { UndoSnackbarService } from './core/profiles/undo-snackbar.service';
@@ -86,6 +86,11 @@ export class App {
     const path = this.currentGame.path();
     const gameLink = (page: string) => (game ? `/${game.id}/${page}` : '/games');
     const isActive = (page: string) => !!game && path.startsWith(`/${game.id}/${page}`);
+    // Only version groups with story milestones get the Story page (plan §13.12); no data load needed.
+    const story: NavItem[] =
+      game && getVersionGroup(game.versionGroupId).storyChecklist
+        ? [{ label: 'Story', icon: 'flag', link: gameLink('story'), active: isActive('story') }]
+        : [];
     return [
       { label: 'Guide', icon: 'menu_book', link: gameLink('guide'), active: isActive('guide') },
       {
@@ -94,6 +99,7 @@ export class App {
         link: gameLink('checklist'),
         active: isActive('checklist'),
       },
+      ...story,
       {
         label: 'Profiles',
         icon: 'account_circle',

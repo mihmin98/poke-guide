@@ -43,6 +43,15 @@ describe('App shell', () => {
     expect(guide?.getAttribute('href')).toBe('/yellow/guide');
   });
 
+  it('adds the Story tab only for games whose version group has story milestones', async () => {
+    const labels = (el: HTMLElement) =>
+      [...el.querySelectorAll('.nav-item span')].map((s) => s.textContent?.trim());
+    const red = await render('/red/guide');
+    expect(labels(red)).toEqual(['Guide', 'Checklist', 'Story', 'Profiles', 'More']);
+    expect(red.querySelector('a.nav-item[href="/red/story"]')).not.toBeNull();
+    expect(labels(await render('/gold/guide'))).toEqual(['Guide', 'Checklist', 'Profiles', 'More']);
+  });
+
   it('redirects unknown games to the game picker', async () => {
     await render('/green/guide');
     expect(TestBed.inject(Router).url).toBe('/games');

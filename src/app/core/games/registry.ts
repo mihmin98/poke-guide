@@ -196,6 +196,7 @@ export const VERSION_GROUPS: readonly VersionGroupDefinition[] = [
     dataFile: 'data/rby.json',
     features: GEN1_FEATURES,
     mechanicsId: 'gen1',
+    storyChecklist: true,
   },
   {
     id: 'gsc',

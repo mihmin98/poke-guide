@@ -1115,7 +1115,7 @@ export const appConfig: ApplicationConfig = {
 | `/:game/guide` | `GuidePage` | Ordered location list grouped by part (and region) |
 | `/:game/guide/:locationId` | `LocationPage` | A side pane on desktop |
 | `/:game/checklist` | `ChecklistPage` | Query params: `status`, `type`, `method`, `q`, `view`, `sort=national\|regional\|walkthrough` |
-| `/:game/story` | `StoryPage` | Phase 11 (§13.12); the nav only links it when the game's data has milestones |
+| `/:game/story` | `StoryPage` | Phase 11 (§13.12); the nav only links it for version groups with `storyChecklist` in the registry |
 | `/:game/pokemon/:slug` | `PokemonPage` | A bottom sheet on mobile when opened from lists |
 | `/:game/tools/catch` | `CatchToolPage` | Prefilled from query params `dex` and `level`; the catch rate on an encounter row links here. A context prefill was dropped: nothing links to a Safari state yet. |
 | `/:game/tools/ivs` | `IvToolPage` | Query param `dex`. Titled with the generation's label ("DV calculator" in Gen I). |
@@ -1413,6 +1413,14 @@ Both tools are generic screens driven by `GenerationMechanics` (§4.5). Only the
 - Milestone ticks count towards the save reminder and can be undone, like item ticks.
 - **Location page:** a "Story" section above Items lists the location's milestones for the game, with the same
   rows and a count.
+- **Nav tab (implemented 2026-10-13):** "Story" sits between Checklist and Profiles for games whose registry version
+  group has `storyChecklist: true`. A registry flag rather than a look at the loaded data, so the shell never
+  downloads a data file just to draw the nav and the tab doesn't appear late; the data validator fails when the flag
+  and `VersionGroupData.milestones` disagree.
+- **Implementation:** `shared/components/milestone-row.ts` (used by both pages) and `milestone-toggle.ts`;
+  `core/profiles/progress-offer.service.ts` (the offer, re-checked when accepted in case the part moved meanwhile);
+  `features/story/story-model.ts` (pure) and `story.page.ts`; labels and counts in `core/domain/milestone-progress.ts`.
+  The flag icon joined the icon subset.
 
 ---
 
@@ -1759,7 +1767,8 @@ Stages:
 - [x] **C.** State and codec: `milestonesDone`, schema 3 migration, backup, `ProfileStore` milestone toggles with
   undo, `PKG3` encode/decode, import replace; also moved here: game view `milestones`, the import preview's
   "N story milestones done" and the export dialog's summary of what the code holds
-- [ ] **D.** UI: milestone toggle, progress offer, Story page and route, nav tab, location Story section
+- [x] **D.** UI: milestone toggle, progress offer, Story page and route, nav tab (registry `storyChecklist` flag),
+  location Story section
 - [ ] Manual browser check (the user)
 - **Accept when:** ticks survive a reload, a data rebuild and a profile switch; the progress offer moves the part
   forward only; a Gold/Silver/Crystal profile shows no Story tab; and no export code written by an earlier version

@@ -359,6 +359,13 @@ export function validateVersionGroup(
   }
   for (const key of Object.keys(pokedex.learnsets)) checkDex('Learnset', Number(key));
   if (data.milestones) issues.push(...checkMilestones(data));
+  const registryGroup = getVersionGroup(data.versionGroupId as VersionGroupId);
+  if ((registryGroup.storyChecklist === true) !== (data.milestones?.length ?? 0) > 0)
+    error(
+      data.milestones?.length
+        ? `The data has milestones, but registry version group ${data.versionGroupId} lacks storyChecklist`
+        : `Registry version group ${data.versionGroupId} has storyChecklist, but the data has no milestones`,
+    );
 
   const group = getVersionGroup(data.versionGroupId as VersionGroupId);
   const checklists: GameChecklist[] = [];

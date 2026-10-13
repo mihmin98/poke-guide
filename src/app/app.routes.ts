@@ -63,6 +63,12 @@ export const routes: Routes = [
           import('./features/checklist/checklist.page').then((m) => m.ChecklistPage),
       },
       {
+        // Story milestones (plan §13.12); the nav only links here for games whose data has them.
+        path: 'story',
+        title: 'Story · Poké Guide',
+        loadComponent: () => import('./features/story/story.page').then((m) => m.StoryPage),
+      },
+      {
         // Generic tools driven by the version group's `mechanicsId` (plan §13.11).
         path: 'tools',
         children: [

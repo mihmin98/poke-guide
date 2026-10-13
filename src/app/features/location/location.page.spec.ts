@@ -45,6 +45,26 @@ const data = testData({
     testSpecies(72, { name: 'Tentacool' }),
   ],
   unlocks: { red: [{ id: 'cut-hm', label: 'Cut', kind: 'move', locationId: 'a', part: 5 }] },
+  milestones: [
+    {
+      no: 1,
+      id: 'parcel',
+      label: 'Deliver the parcel',
+      kind: 'event',
+      part: { red: 1 },
+      locationId: 'route-1',
+    },
+    {
+      no: 2,
+      id: 'pidgey-gift',
+      label: 'Receive Pidgey',
+      kind: 'gift',
+      part: { red: 2 },
+      locationId: 'route-2',
+      dex: 16,
+      optional: true,
+    },
+  ],
   locations: [
     testLocation('route-1', 1, [testEncounter(16, ['red'])], ['red'], {
       name: 'Route 1',
@@ -270,6 +290,32 @@ describe('LocationPage (plan §13.5)', () => {
       expect(toggles(el)[0]!.disabled).toBe(true);
       expect(toggles(el)[0]!.getAttribute('aria-checked')).toBe('false');
     });
+  });
+
+  it('lists the story milestones that happen here, and ticks them (Phase 11)', () => {
+    profiles.createProfile('Red run', 'red');
+    const { fixture, el } = render();
+    const story = el.querySelector('section.story')!;
+    expect(story.querySelector('h2')?.textContent).toContain('0/1');
+    const rows = story.querySelectorAll('app-milestone-row');
+    expect([...rows].map((r) => r.querySelector('.label')?.textContent)).toEqual([
+      'Receive Pidgey',
+    ]);
+    // No link back to this location, but one to the Pokémon.
+    expect(rows[0]!.querySelector('a')?.getAttribute('href')).toBe('/red/pokemon/mon16');
+
+    rows[0]!.querySelector<HTMLButtonElement>('app-milestone-toggle button')!.click();
+    fixture.detectChanges();
+    expect(profiles.activeProfile()?.milestonesDone).toEqual([2]);
+    expect(story.querySelector('h2')?.textContent).toContain('1/1');
+  });
+
+  it('shows only the milestones of the location itself', () => {
+    const rows = render('route-1').el.querySelectorAll('section.story app-milestone-row');
+    expect([...rows].map((r) => r.querySelector('.label')?.textContent)).toEqual([
+      'Deliver the parcel',
+    ]);
+    expect(rows[0]!.querySelector('.more')).toBeNull();
   });
 
   it('follows the rate, sprite size and compact-row settings', () => {

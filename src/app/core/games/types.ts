@@ -67,4 +67,9 @@ export interface VersionGroupDefinition {
   features: GenerationFeatures;
   /** Selects `core/mechanics/<mechanicsId>.ts`. */
   mechanicsId: string;
+  /**
+   * The data file has story milestones (plan §7.14), so the nav offers the Story page without loading the data
+   * first. The data validator keeps this flag and the data in step.
+   */
+  storyChecklist?: true;
 }

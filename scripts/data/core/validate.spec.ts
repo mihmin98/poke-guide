@@ -115,3 +115,13 @@ describe('checkMilestones', () => {
     expect(messages(d).some((m) => m.startsWith('blue unlock "ss-ticket"'))).toBe(false);
   });
 });
+
+describe('validateVersionGroup: the registry storyChecklist flag', () => {
+  it('fails when the data and the registry disagree', () => {
+    const d = load<VersionGroupData>('rby.json');
+    delete d.milestones;
+    expect(
+      validateVersionGroup(d, load<PokedexData>('rby.pokedex.json')).issues.map((i) => i.message),
+    ).toContain('Registry version group rby has storyChecklist, but the data has no milestones');
+  });
+});

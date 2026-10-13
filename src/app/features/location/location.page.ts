@@ -14,7 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { Router, RouterLink } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
 import { GameDataService } from '../../core/data/game-data.service';
-import type { EncounterSlot, GameId, LocationItem } from '../../core/domain/models';
+import type { EncounterSlot, GameId, LocationItem, Milestone } from '../../core/domain/models';
 import { TIMES_OF_DAY, timeOfDayHours, timeOfDayLabel } from '../../core/games/conditions';
 import { findGame, regionName } from '../../core/games/registry';
 import { mechanicsForGame } from '../../core/mechanics';
@@ -22,10 +22,12 @@ import { ProfileStore } from '../../core/profiles/profile.store';
 import { UndoSnackbarService } from '../../core/profiles/undo-snackbar.service';
 import { SettingsStore } from '../../core/settings/settings.store';
 import { itemProgress } from '../../core/domain/item-progress';
+import { milestoneProgress } from '../../core/domain/milestone-progress';
 import { CatchToggle } from '../../shared/components/catch-toggle';
 import { ConditionChips } from '../../shared/components/condition-chips';
 import { GameMismatchBanner } from '../../shared/components/game-mismatch-banner';
 import { ItemToggle } from '../../shared/components/item-toggle';
+import { MilestoneRow } from '../../shared/components/milestone-row';
 import { LevelRange } from '../../shared/components/level-range';
 import { MethodIcon } from '../../shared/components/method-icon';
 import { formatRate, RateDisplay } from '../../shared/components/rate';
@@ -57,6 +59,7 @@ const ALL_SUB_AREAS = '__all__';
     ConditionChips,
     GameMismatchBanner,
     ItemToggle,
+    MilestoneRow,
     LevelRange,
     MethodIcon,
     RateDisplay,
@@ -289,6 +292,27 @@ const ALL_SUB_AREAS = '__all__';
 
       @if (v.subAreas.length === 0) {
         <p class="status">No Pokémon can be caught here in {{ gameName() }}.</p>
+      }
+
+      @if (milestones().length) {
+        <section class="story">
+          <h2>
+            Story
+            <span class="count">{{ milestoneCount().done }}/{{ milestoneCount().total }}</span>
+          </h2>
+          <ul class="rows">
+            @for (milestone of milestones(); track milestone.no) {
+              <li>
+                <app-milestone-row
+                  [milestone]="milestone"
+                  [game]="gameId()"
+                  [species]="speciesOf(milestone)"
+                  [done]="milestonesDone().has(milestone.no)"
+                />
+              </li>
+            }
+          </ul>
+        </section>
       }
 
       @if (v.items.length || v.itemNotes.length) {
@@ -762,6 +786,21 @@ export class LocationPage {
   });
 
   private readonly itemsTaken = computed(() => this.profiles.itemsTakenIn(this.gameId()));
+
+  /** Story milestones that happen here in this game (plan §13.12), in walkthrough order. */
+  protected readonly milestones = computed(() =>
+    (this.data().view()?.milestones ?? []).filter((m) => m.locationId === this.locationId()),
+  );
+  protected readonly milestonesDone = computed(() => this.profiles.milestonesDoneIn(this.gameId()));
+  protected readonly milestoneCount = computed(() =>
+    milestoneProgress(this.milestones(), this.milestonesDone()),
+  );
+
+  protected speciesOf(milestone: Milestone): { name: string; slug: string } | undefined {
+    const species =
+      milestone.dex === undefined ? undefined : this.data().view()?.speciesByDex.get(milestone.dex);
+    return species && { name: species.name, slug: species.slug };
+  }
 
   protected readonly items = computed(() =>
     buildItemRows(this.view()?.items ?? [], this.itemsTaken(), {
