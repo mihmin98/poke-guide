@@ -52,7 +52,7 @@ How to use it:
 - `/gold/tools/catch` and `/gold/tools/ivs` against hand-worked Bulbapedia examples (Apricorn balls, Gender/Shiny/Unown traits).
 - Profiles: a Gold profile's catches and item ticks, export and import (`PKG1`/`PKG2` with codec ids 4–6).
 
-Still open from Stage H: confirming the 10 spot-checked pages are still the current revisions on Bulbapedia (open question 24), once Node can reach the wiki.
+Stage H's revid check (open question 24) is done: the 10 spot-checked pages are current (2026-10-13).
 
 `npm run data:build` (every group) is safe again: the gsc item numbers are handed out, and later builds keep them.
 
