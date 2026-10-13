@@ -5,6 +5,7 @@ import { RBY_CATCH_RATE_NOTES } from './overrides/catch-rate-notes';
 import { RBY_ENCOUNTER_OVERRIDES } from './overrides/encounters';
 import { RBY_EVOLUTIONS } from './overrides/evolutions';
 import { RBY_ITEM_OVERRIDES } from './overrides/items';
+import { RBY_MILESTONES, RBY_RETIRED_MILESTONES } from './overrides/milestones';
 import { RBY_UNLOCKS } from './overrides/unlocks';
 import { RBY_WALKTHROUGH } from './walkthrough';
 
@@ -57,5 +58,6 @@ export const rbyConfig: VersionGroupConfig = {
     unlocks: { red: RBY_UNLOCKS, blue: RBY_UNLOCKS, yellow: RBY_UNLOCKS },
     items: RBY_ITEM_OVERRIDES,
     encounters: RBY_ENCOUNTER_OVERRIDES,
+    milestones: { milestones: RBY_MILESTONES, retired: RBY_RETIRED_MILESTONES },
   },
 };

@@ -10,6 +10,14 @@
 | Pokémon Blue | 135 / 151 | 126 | 11 | 4 | 1 | 0 | 0 |
 | Pokémon Yellow | 134 / 151 | 131 | 12 | 4 | 1 | 0 | 0 |
 
+## Story milestones
+
+| Game | Milestones | Required | Optional |
+|---|---|---|---|
+| Pokémon Red | 52 | 34 | 18 |
+| Pokémon Blue | 52 | 34 | 18 |
+| Pokémon Yellow | 59 | 38 | 21 |
+
 ## Unobtainable species
 
 ### Pokémon Red

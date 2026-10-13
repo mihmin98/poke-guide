@@ -1,6 +1,7 @@
 /**
  * Builds a version group's data files (plan §7.2): `public/data/<group>.json` and `<group>.pokedex.json`,
- * and updates the committed item number registry (`version-groups/<group>/item-numbers.json`, plan §7.13).
+ * and updates the committed item number registry (`version-groups/<group>/item-numbers.json`, plan §7.13)
+ * and, for groups with story milestones, the milestone number registry (`milestone-numbers.json`, §7.14).
  *
  *   npm run data:build      uses the cache, fetches only what's missing
  *   npm run data:refresh    refetches every page
@@ -24,6 +25,7 @@ import { PageCache, PageSource, loadFixtures, type CachedPage, type FetchMode } 
 import { MediaWikiClient } from './core/mediawiki-client';
 import { RequestProgress } from './core/progress';
 import { formatItemNumbers, parseItemNumbers } from './core/item-numbers';
+import { formatMilestoneNumbers, parseMilestoneNumbers } from './core/milestone-numbers';
 import { fixturesDir, rawCacheDir, repoRoot, versionGroupDir } from './core/paths';
 import type { VersionGroupData } from '../../src/app/core/domain/models';
 import { renderReport } from './core/report';
@@ -78,7 +80,8 @@ async function buildGroup(
   if (client) console.log(`${client.requestCount - requestsBefore} request(s) to Bulbapedia`);
 
   const itemNumbersFile = join(versionGroupDir(config.id), 'item-numbers.json');
-  const { data, pokedex, issues, itemNumbers } = assembleVersionGroup(
+  const milestoneNumbersFile = join(versionGroupDir(config.id), 'milestone-numbers.json');
+  const { data, pokedex, issues, itemNumbers, milestoneNumbers } = assembleVersionGroup(
     config,
     (title) => pages.get(title) ?? null,
     {
@@ -86,6 +89,9 @@ async function buildGroup(
       categoryMembers,
       itemNumbers: existsSync(itemNumbersFile)
         ? parseItemNumbers(readFileSync(itemNumbersFile, 'utf8'))
+        : null,
+      milestoneNumbers: existsSync(milestoneNumbersFile)
+        ? parseMilestoneNumbers(readFileSync(milestoneNumbersFile, 'utf8'))
         : null,
     },
   );
@@ -139,6 +145,12 @@ async function buildGroup(
   }
   writeFileSync(itemNumbersFile, formatItemNumbers(itemNumbers));
   console.log(`Wrote ${relative(repoRoot(), itemNumbersFile)} (${itemNumbers.items.length} items)`);
+  if (milestoneNumbers) {
+    writeFileSync(milestoneNumbersFile, formatMilestoneNumbers(milestoneNumbers));
+    console.log(
+      `Wrote ${relative(repoRoot(), milestoneNumbersFile)} (${milestoneNumbers.milestones.length} milestones)`,
+    );
+  }
   const reportFile = join(repoRoot(), 'scripts', 'data', 'reports', `${config.id}.md`);
   mkdirSync(dirname(reportFile), { recursive: true });
   writeFileSync(

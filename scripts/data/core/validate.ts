@@ -1,6 +1,7 @@
 /**
  * Output validation (plan §7.8): zod schemas for both data files, cross-reference checks, and obtainability
  * coverage: every species `1..nationalDexMax` must be obtainable or have a reason in every game (plan §9).
+ * Story milestones (plan §7.14) are checked against locations, walkthroughs, unlocks and encounters.
  */
 import { z } from 'zod';
 import type { PokedexData, VersionGroupData } from '../../../src/app/core/domain/models';
@@ -195,6 +196,23 @@ export const versionGroupDataSchema = z.strictObject({
     .array(z.strictObject({ dex: z.array(positive).min(1), detail: z.string().min(1) }))
     .optional(),
   locations: z.array(location),
+  milestones: z
+    .array(
+      z.strictObject({
+        no: positive,
+        id: z.string().min(1),
+        label: z.string().min(1),
+        kind: z.enum(['gym', 'battle', 'event', 'key-item', 'encounter', 'gift']),
+        part: gameRecord(positive).refine((r) => Object.keys(r).length > 0, 'names no game'),
+        locationId: z.string().min(1),
+        detail: z.string().min(1).optional(),
+        badge: z.string().min(1).optional(),
+        grants: z.array(z.string().min(1)).min(1).optional(),
+        dex: positive.optional(),
+        optional: z.literal(true).optional(),
+      }),
+    )
+    .optional(),
   sources: z.array(sourceRef),
 });
 
@@ -340,6 +358,7 @@ export function validateVersionGroup(
     if (edge.games) checkGames(`Evolution #${edge.from} → #${edge.to}`, edge.games);
   }
   for (const key of Object.keys(pokedex.learnsets)) checkDex('Learnset', Number(key));
+  if (data.milestones) issues.push(...checkMilestones(data));
 
   const group = getVersionGroup(data.versionGroupId as VersionGroupId);
   const checklists: GameChecklist[] = [];
@@ -360,4 +379,68 @@ export function validateVersionGroup(
     });
   }
   return { issues, checklists };
+}
+
+/**
+ * Story milestones against the rest of the data (plan §7.14). Every unlock must be granted by exactly one
+ * milestone of its game, no later than the unlock's part (becoming Champion in Part 16 grants the Part 17
+ * post-game unlock), so the unlock list and the story list can't drift apart.
+ */
+export function checkMilestones(data: VersionGroupData): BuildIssue[] {
+  const issues: BuildIssue[] = [];
+  const error = (message: string) => issues.push({ level: 'error', message });
+  const milestones = data.milestones ?? [];
+  const locations = new Map(data.locations.map((l) => [l.id, l]));
+  const ids = new Set<string>();
+  const numbers = new Set<number>();
+  for (const m of milestones) {
+    const what = `Milestone "${m.id}"`;
+    if (ids.has(m.id)) error(`${what} is listed twice`);
+    if (numbers.has(m.no)) error(`Milestone number ${m.no} is used twice ("${m.id}")`);
+    ids.add(m.id);
+    numbers.add(m.no);
+    if ((m.kind === 'gym') !== (m.badge !== undefined))
+      error(`${what}: gyms, and only gyms, name a badge`);
+    const location = locations.get(m.locationId);
+    if (!location) error(`${what}: unknown location "${m.locationId}"`);
+    for (const [game, part] of Object.entries(m.part) as [GameId, number][]) {
+      if (!data.games.includes(game)) {
+        error(`${what} has game "${game}", which is not in the version group`);
+        continue;
+      }
+      if (location && !location.placement[game])
+        error(`${what}: location ${m.locationId} is not in ${game}`);
+      if (!(data.walkthroughs[game] ?? []).some((w) => w.part === part))
+        error(`${what}: ${game} has no walkthrough part ${part}`);
+      const unlocks = data.unlocks[game] ?? [];
+      for (const id of m.grants ?? []) {
+        if (!unlocks.some((u) => u.id === id))
+          error(`${what} grants unknown ${game} unlock "${id}"`);
+      }
+      if (
+        m.dex !== undefined &&
+        location &&
+        !location.subAreas.some((a) => a.encounters.some((e) => e.dex === m.dex && e.games[game]))
+      )
+        error(`${what}: ${m.locationId} has no #${m.dex} encounter in ${game}`);
+    }
+  }
+  for (const game of data.games) {
+    for (const unlock of data.unlocks[game] ?? []) {
+      const granting = milestones.filter(
+        (m) => m.part[game] !== undefined && m.grants?.includes(unlock.id),
+      );
+      if (granting.length !== 1)
+        error(
+          `${game} unlock "${unlock.id}" is granted by ${granting.length} milestones; it needs exactly one`,
+        );
+      for (const m of granting) {
+        if (m.part[game]! > unlock.part)
+          error(
+            `${game} unlock "${unlock.id}" is in part ${unlock.part}, but milestone "${m.id}" grants it in part ${m.part[game]}`,
+          );
+      }
+    }
+  }
+  return issues;
 }

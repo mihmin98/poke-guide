@@ -42,6 +42,8 @@ import {
   type ItemWalkResult,
 } from './items';
 import { assignItemNumbers, type ItemNumberRegistry } from './item-numbers';
+import { assignMilestoneNumbers, type MilestoneNumberRegistry } from './milestone-numbers';
+import { checkMilestonesAgainstWalkthrough, type WalkthroughPartPage } from './milestones';
 import {
   applyItemOverrides,
   checkItemRequirements,
@@ -100,6 +102,8 @@ export interface AssembleOptions {
   categoryMembers: readonly string[] | null;
   /** The committed item number registry; `null` numbers every item from 1 (a new version group). */
   itemNumbers: ItemNumberRegistry | null;
+  /** The committed milestone number registry; `null` numbers every milestone from 1. */
+  milestoneNumbers: MilestoneNumberRegistry | null;
 }
 
 export interface AssembleResult {
@@ -108,6 +112,8 @@ export interface AssembleResult {
   issues: BuildIssue[];
   /** The registry after this build, for `build.ts` to write back. */
   itemNumbers: ItemNumberRegistry;
+  /** The milestone registry after this build; `null` when the version group has no milestones. */
+  milestoneNumbers: MilestoneNumberRegistry | null;
 }
 
 // ---- page lists (the build fetches these in two rounds) ----
@@ -649,6 +655,7 @@ export function assembleVersionGroup(
   for (const message of numbered.notes) issue('note', message);
   const walkthroughRows = new Map<string, ItemWalkResult | null>();
   const walkthroughItems: WalkthroughItems[] = [];
+  const walkthroughPages: WalkthroughPartPage[] = [];
   for (const { game, part, page: title } of walkthroughPartTitles(config)) {
     if (!walkthroughRows.has(title)) {
       const page = use(title, mainSources);
@@ -656,6 +663,8 @@ export function assembleVersionGroup(
       for (const found of rows?.issues ?? []) issue(found.level, found.message, found.page);
       walkthroughRows.set(title, rows);
     }
+    const page = getPage(title);
+    if (page) walkthroughPages.push({ game, part, page: title, wikitext: page.wikitext });
     const rows = walkthroughRows.get(title);
     if (!rows) continue;
     const fix = config.overrides.items.walkthroughGames?.find((f) => f.page === title);
@@ -671,6 +680,26 @@ export function assembleVersionGroup(
   const accepted = config.overrides.items.walkthroughAccepted;
   for (const { page, message } of diffWalkthroughItems(locations, walkthroughItems, accepted))
     issue('warning', message, page);
+
+  // Story milestones (plan §7.14): numbers, then the walkthrough cross-check. `validate.ts` checks the rest.
+  const milestoneConfig = config.overrides.milestones;
+  const milestoneResult = milestoneConfig
+    ? assignMilestoneNumbers(
+        milestoneConfig.milestones,
+        options.milestoneNumbers,
+        milestoneConfig.retired,
+        config.id,
+      )
+    : null;
+  for (const message of milestoneResult?.errors ?? []) issue('error', message);
+  for (const message of milestoneResult?.notes ?? []) issue('note', message);
+  if (milestoneResult) {
+    for (const { page, message } of checkMilestonesAgainstWalkthrough(
+      milestoneResult.milestones,
+      walkthroughPages,
+    ))
+      issue('warning', message, page);
+  }
 
   if (options.categoryMembers)
     issues.push(...diffLocationCategory(options.categoryMembers, config));
@@ -723,6 +752,7 @@ export function assembleVersionGroup(
         }
       : {}),
     locations,
+    ...(milestoneResult ? { milestones: milestoneResult.milestones } : {}),
     sources: byTitle(mainSources),
   };
   const pokedex: PokedexData = {
@@ -734,5 +764,11 @@ export function assembleVersionGroup(
     entries,
     sources: byTitle(pokedexSources),
   };
-  return { data, pokedex, issues, itemNumbers: numbered.registry };
+  return {
+    data,
+    pokedex,
+    issues,
+    itemNumbers: numbered.registry,
+    milestoneNumbers: milestoneResult?.registry ?? null,
+  };
 }

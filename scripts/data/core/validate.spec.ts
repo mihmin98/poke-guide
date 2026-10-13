@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { PokedexData, VersionGroupData } from '../../../src/app/core/domain/models';
 import { repoRoot } from './paths';
-import { validateVersionGroup } from './validate';
+import { checkMilestones, validateVersionGroup } from './validate';
 
 const load = <T>(file: string): T =>
   JSON.parse(readFileSync(join(repoRoot(), 'public', 'data', file), 'utf8')) as T;
@@ -45,5 +45,73 @@ describe('validateVersionGroup', () => {
       `#${encounter.dex} no-such-method in route-1/main slot has game "gold", which is not in the version group`,
     );
     expect(messages).toContain('#151 Mew has no source and no unobtainable reason in red');
+  });
+});
+
+describe('checkMilestones', () => {
+  const data = () => load<VersionGroupData>('rby.json');
+  const messages = (d: VersionGroupData) => checkMilestones(d).map((i) => i.message);
+  const milestone = (d: VersionGroupData, id: string) => {
+    const found = d.milestones!.find((m) => m.id === id);
+    if (!found) throw new Error(`No milestone ${id}`);
+    return found;
+  };
+
+  it('accepts the committed rby milestones', () => {
+    expect(messages(data())).toEqual([]);
+  });
+
+  it('reports duplicate ids and numbers, unknown locations, games and parts', () => {
+    const d = data();
+    const brock = milestone(d, 'gym-brock');
+    d.milestones!.push({ ...brock });
+    const misty = milestone(d, 'gym-misty');
+    misty.locationId = 'nowhere';
+    misty.part = { red: 99, gold: 5 };
+    expect(messages(d)).toEqual(
+      expect.arrayContaining([
+        'Milestone "gym-brock" is listed twice',
+        `Milestone number ${brock.no} is used twice ("gym-brock")`,
+        'Milestone "gym-misty": unknown location "nowhere"',
+        'Milestone "gym-misty": red has no walkthrough part 99',
+        'Milestone "gym-misty" has game "gold", which is not in the version group',
+      ]),
+    );
+  });
+
+  it('requires badges on gyms only', () => {
+    const d = data();
+    delete milestone(d, 'gym-brock').badge;
+    milestone(d, 'rival-1').badge = 'Boulder';
+    expect(messages(d)).toEqual([
+      'Milestone "rival-1": gyms, and only gyms, name a badge',
+      'Milestone "gym-brock": gyms, and only gyms, name a badge',
+    ]);
+  });
+
+  it('reports a species with no encounter at the milestone location', () => {
+    const d = data();
+    milestone(d, 'receive-lapras').dex = 25;
+    expect(messages(d)).toEqual([
+      'Milestone "receive-lapras": silph-co has no #25 encounter in red',
+      'Milestone "receive-lapras": silph-co has no #25 encounter in blue',
+      'Milestone "receive-lapras": silph-co has no #25 encounter in yellow',
+    ]);
+  });
+
+  it('needs every unlock granted by exactly one milestone, no later than its part', () => {
+    const d = data();
+    delete milestone(d, 'card-key').grants;
+    milestone(d, 'hm03-surf').grants = ['surf', 'strength', 'no-such-unlock'];
+    milestone(d, 'help-bill').part = { red: 7, blue: 5, yellow: 5 };
+    expect(messages(d)).toEqual(
+      expect.arrayContaining([
+        'red unlock "card-key" is granted by 0 milestones; it needs exactly one',
+        'red unlock "strength" is granted by 2 milestones; it needs exactly one',
+        'Milestone "hm03-surf" grants unknown red unlock "no-such-unlock"',
+        'red unlock "ss-ticket" is in part 5, but milestone "help-bill" grants it in part 7',
+      ]),
+    );
+    expect(messages(d).some((m) => m.startsWith('blue unlock "ss-ticket"'))).toBe(false);
   });
 });

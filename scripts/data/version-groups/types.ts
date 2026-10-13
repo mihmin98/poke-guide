@@ -18,6 +18,7 @@ import type { CatchRateNoteClassification } from '../core/catch-rate-history';
 import type { EggMovePatch, MoveDataOverride } from '../core/learnsets';
 import type { EncounterOverrides } from '../core/encounter-overrides';
 import type { ItemOverrides } from '../core/location-items';
+import type { MilestoneDefinition, RetiredMilestone } from '../core/milestone-numbers';
 import type { TitleMatcher } from '../core/sections';
 import type { TradePageConfig } from '../core/trades';
 
@@ -113,6 +114,14 @@ export interface VersionGroupConfig {
     encounters: EncounterOverrides;
     /** Day Care rules, for generations with breeding (plan §7.6, §9). */
     breeding?: BreedingRules;
+    /**
+     * The story checklist (plan §7.14), in walkthrough order; absent means the version group has none yet.
+     * `retired` lists numbers of removed or renamed milestones, which are never reused.
+     */
+    milestones?: {
+      milestones: readonly MilestoneDefinition[];
+      retired: readonly RetiredMilestone[];
+    };
     /** Moves whose data the learnset pages disagree on (plan §7.12); these values are used everywhere. */
     moveData?: readonly MoveDataOverride[];
     /** Egg moves whose game flags on the learnset pages are wrong (plan §7.12). */

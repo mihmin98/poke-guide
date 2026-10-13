@@ -58,6 +58,23 @@ export function renderReport({ data, previous, issues, checklists }: ReportInput
     );
   }
 
+  if (data.milestones) {
+    lines.push(
+      '',
+      '## Story milestones',
+      '',
+      '| Game | Milestones | Required | Optional |',
+      '|---|---|---|---|',
+    );
+    for (const game of data.games) {
+      const here = data.milestones.filter((m) => m.part[game] !== undefined);
+      const optional = here.filter((m) => m.optional).length;
+      lines.push(
+        `| ${gameName(game)} | ${here.length} | ${here.length - optional} | ${optional} |`,
+      );
+    }
+  }
+
   lines.push('', '## Unobtainable species', '');
   for (const { game, entries } of checklists) {
     lines.push(`### ${gameName(game)}`, '');

@@ -241,6 +241,34 @@ export interface WalkthroughPart {
   region: RegionId;
 }
 
+export type MilestoneKind = 'gym' | 'battle' | 'event' | 'key-item' | 'encounter' | 'gift';
+
+/** A story checklist entry (plan §7.14, Phase 11). Never counts as caught or towards any Pokémon figure. */
+export interface Milestone {
+  /**
+   * Stable within the version group and never reused: profiles store these in `milestonesDone` and `PKG3`
+   * codes carry them, so they are a compatibility contract like `LocationItem.no`.
+   */
+  no: number;
+  /** Curated slug, unique within the version group. */
+  id: string;
+  label: string;
+  kind: MilestoneKind;
+  /** Walkthrough part per game; the keys are the games the milestone exists in. */
+  part: Partial<Record<GameId, number>>;
+  locationId: string;
+  /** "Boulder Badge · TM34 Bide". */
+  detail?: string;
+  /** The badge a gym awards, as on Bulbapedia's `{{badge|…}}` ("Boulder"). */
+  badge?: string;
+  /** Unlock ids the milestone gives. */
+  grants?: string[];
+  /** The species met or received; a link only, ticking the milestone never marks it caught. */
+  dex?: number;
+  /** Not needed to finish the story. */
+  optional?: true;
+}
+
 export interface BreedingRules {
   dayCareLocationIds: string[];
   dittoDex: number;
@@ -270,6 +298,8 @@ export interface VersionGroupData {
   /** Species that only come from other games (plan §9); absent when there are none. */
   requiresOtherGame?: RequiresOtherGame[];
   locations: GameLocation[];
+  /** The story checklist (plan §7.14), in walkthrough order; absent when the version group has none. */
+  milestones?: Milestone[];
   sources: SourceRef[];
 }
 

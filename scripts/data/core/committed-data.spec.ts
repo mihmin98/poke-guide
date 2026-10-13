@@ -58,3 +58,34 @@ describe('checkCommittedGroup', () => {
     );
   });
 });
+
+describe('checkCommittedGroup: milestones', () => {
+  it('reports a milestone whose number belongs to another registry entry', () => {
+    const group = copy();
+    const [first, second] = group.data.milestones!;
+    [first!.no, second!.no] = [second!.no, first!.no];
+    expect(errors(group)).toContainEqual(
+      `Milestone #${first!.no} is "${first!.id}" in the data but "${second!.id}" in the milestone registry`,
+    );
+  });
+
+  it('reports registry entries missing from the data, and data missing from the registry', () => {
+    const group = copy();
+    const removed = group.data.milestones!.pop()!;
+    group.milestoneRegistry!.milestones = group.milestoneRegistry!.milestones.filter(
+      (e) => e.no !== 1,
+    );
+    expect(errors(group)).toEqual(
+      expect.arrayContaining([
+        `Registry milestone #${removed.no} ("${removed.id}") is missing from the data`,
+        expect.stringMatching(/^Milestone #1 .* is not in the milestone registry/),
+      ]),
+    );
+  });
+
+  it('needs a milestone registry when the data has milestones', () => {
+    const group = copy();
+    group.milestoneRegistry = null;
+    expect(errors(group)).toEqual(['The data has milestones, but there is no milestone registry']);
+  });
+});

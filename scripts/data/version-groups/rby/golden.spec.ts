@@ -8,6 +8,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import type { GameId, PokedexData, VersionGroupData } from '../../../../src/app/core/domain/models';
 import { parseItemNumbers } from '../../core/item-numbers';
+import { parseMilestoneNumbers } from '../../core/milestone-numbers';
 import { repoRoot, versionGroupDir } from '../../core/paths';
 import { rbyConfig } from './config';
 import { RBY_EVOLUTIONS } from './overrides/evolutions';
@@ -324,6 +325,89 @@ describe('rby data: items (plan §7.13)', () => {
     expect(find('route-12', 'tm16-pay-day')[0]!.no).toBe(165);
     const b1f = find('cerulean-cave', 'ultra-ball').filter((i) => i.subArea === 'B1F');
     expect(b1f.map((i) => i.no)).toEqual([218, 219, 227, 228]);
+  });
+});
+
+describe('rby data: story milestones (plan §7.14)', () => {
+  const milestones = data.milestones ?? [];
+  const inGame = (game: GameId) => milestones.filter((m) => m.part[game] !== undefined);
+  const byId = (id: string) => milestones.find((m) => m.id === id)!;
+
+  it('has the 8 gyms with their badges in walkthrough order in every game', () => {
+    for (const game of data.games) {
+      const gyms = inGame(game).filter((m) => m.kind === 'gym');
+      expect(gyms.map((m) => m.badge)).toEqual([
+        'Boulder',
+        'Cascade',
+        'Thunder',
+        'Rainbow',
+        'Marsh',
+        'Soul',
+        'Volcano',
+        'Earth',
+      ]);
+      const parts = gyms.map((m) => m.part[game]!);
+      expect(parts).toEqual([...parts].sort((a, b) => a - b));
+    }
+  });
+
+  it('has the Elite Four and the Champion at Indigo Plateau in Part 16', () => {
+    for (const game of data.games) {
+      const part16 = inGame(game).filter((m) => m.part[game] === 16);
+      expect(part16.map((m) => m.id)).toEqual([
+        'elite-four-lorelei',
+        'elite-four-bruno',
+        'elite-four-agatha',
+        'elite-four-lance',
+        'champion',
+      ]);
+      expect(part16.every((m) => m.locationId === 'indigo-plateau')).toBe(true);
+      expect(byId('champion').grants).toEqual(['post-game']);
+    }
+  });
+
+  it('has the story encounters and gifts where the encounters are', () => {
+    expect(byId('mewtwo')).toMatchObject({
+      locationId: 'cerulean-cave',
+      dex: 150,
+      part: { red: 17, blue: 17, yellow: 17 },
+    });
+    expect(byId('receive-lapras')).toMatchObject({ locationId: 'silph-co', dex: 131 });
+    expect(milestones.filter((m) => m.dex === 143).map((m) => m.locationId)).toEqual([
+      'route-16',
+      'route-12',
+    ]);
+  });
+
+  it('gives Yellow its own starter, gifts and Jessie & James battles', () => {
+    const yellowOnly = milestones.filter((m) => Object.keys(m.part).join() === 'yellow');
+    expect(yellowOnly.map((m) => m.id)).toEqual([
+      'receive-pikachu',
+      'jessie-james-mt-moon',
+      'receive-bulbasaur',
+      'receive-charmander',
+      'receive-squirtle',
+      'jessie-james-rocket-hideout',
+      'jessie-james-pokemon-tower',
+      'jessie-james-silph-co',
+    ]);
+    expect(byId('choose-starter').part).toEqual({ red: 1, blue: 1 });
+    expect(inGame('red')).toHaveLength(52);
+    expect(inGame('yellow')).toHaveLength(59);
+  });
+
+  it('numbers every milestone as the committed registry does', () => {
+    const registry = parseMilestoneNumbers(
+      readFileSync(join(versionGroupDir('rby'), 'milestone-numbers.json'), 'utf8'),
+    );
+    const numbered = milestones.map(({ no, id }) => ({ no, id }));
+    expect([...numbered].sort((a, b) => a.no - b.no)).toEqual(registry.milestones);
+    expect(registry.next).toBeGreaterThan(Math.max(...numbered.map((m) => m.no)));
+    // Spot checks: these numbers are stored in profiles and export codes, so they must never move.
+    expect(byId('choose-starter').no).toBe(1);
+    expect(byId('gym-brock').no).toBe(6);
+    expect(byId('champion').no).toBe(59);
+    expect(byId('mewtwo').no).toBe(60);
   });
 });
 

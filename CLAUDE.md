@@ -103,7 +103,8 @@ npm run data:validate           # check the committed data files and item regist
 - The route `/:game/...` decides which data is shown. Catch toggles write only to the active profile **if its game matches**; otherwise a mismatch banner is shown.
 - **The `PKG1-` export code is a compatibility contract:** binary → CRC-16 → base64url, holding the game `codecId` (uint16), `dexCount` and a caught bitfield keyed by National Dex. **Never reuse or change a `codecId`**, and never key saved state on array indexes. `PKG2-` (Phase 9) adds an items-taken bitfield; the encoder still writes `PKG1` when no items are ticked, and both formats decode forever.
 - **Item numbers (`LocationItem.no`) are a contract too:** profiles and `PKG2` codes store them. The build assigns them through the committed, build-written registry `scripts/data/version-groups/<id>/item-numbers.json` (plan §7.13). Never edit it by hand or renumber: a vanished item fails the build until it is listed in `overrides/items.ts` → `retiredItems`, and numbers are never reused. Stage the registry with the data files.
-- Items never count as "caught" or towards any Pokémon progress figure.
+- **Milestone numbers (`Milestone.no`, Phase 11) are the same kind of contract:** profiles and `PKG3` codes store them. The build assigns them by milestone id through the committed, build-written `scripts/data/version-groups/<id>/milestone-numbers.json`. Never edit it by hand, and never rename a milestone id in `overrides/milestones.ts`: retire its number in the file's retired list and add a new id.
+- Items and story milestones never count as "caught" or towards any Pokémon progress figure.
 - Catch status is **binary** (caught / not caught). There is intentionally no "seen" state.
 
 ### Mechanics (plan §4.5, §13.11)

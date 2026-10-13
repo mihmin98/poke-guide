@@ -816,20 +816,30 @@ story encounters and gifts. **Red/Blue/Yellow only for now**; a version group wi
   build-written registry `version-groups/<id>/milestone-numbers.json` (`{versionGroupId, next, milestones: [{no,
   id}]}`) **by `id`**; new ids get `next`, `next + 1`, …. A registered id that's gone is an **error** until
   `retired` lists its number with a reason. Renaming an id therefore means retiring the old number.
-- **Checks** (`core/milestones.ts`, from `assemble.ts`; errors unless noted):
+- **Checks** (errors unless noted). The cross-references are in `core/validate.ts` (`checkMilestones`), so
+  `data:validate` runs them on the committed files too; the walkthrough cross-check is `core/milestones.ts`, from
+  `assemble.ts`. `data:validate` also compares the data's numbers with `milestone-numbers.json` both ways.
   - `id` and `no` unique; `locationId` is a configured location placed in each of the milestone's games; each
     `part` is inside that game's walkthrough.
-  - `grants` are unlock ids of that game, and **every unlock is granted by exactly one milestone with the same
-    part**, so the unlock list (§7.13) and the story list can't drift apart.
+  - `grants` are unlock ids of that game, and **every unlock is granted by exactly one milestone, no later than the
+    unlock's part**, so the unlock list (§7.13) and the story list can't drift apart. "No later than" rather than
+    "in the same part" (changed 2026-10-13): becoming Champion (Part 16) grants `post-game`, whose part is 17 because
+    that's where the post-game content starts.
   - An `encounter`/`gift` milestone with `dex` has an encounter of that species at its location in each of its
     games.
   - Walkthrough cross-check (**warnings**), over the part pages the item cross-check already fetches: every
-    `{{badge|X}}` on a part page needs a `gym` milestone with `badge: X` in that part, and a part's `{{Party}}`
-    blocks (consecutive starter-variant blocks count once) shouldn't outnumber its `gym` and `battle` milestones.
+    badge a part page awards ("awards you the `{{badge|X}}`"; other mentions, like Part 5's badge table or the
+    Route 23 guards, don't count) needs a `gym` milestone with `badge: X` in that part, and the reverse; a part's
+    `{{Party}}` blocks shouldn't outnumber its `gym` and `battle` milestones. Party blocks sit inside other templates
+    (a Gym box), and a run of blocks with the same location, prize and sprite (one per starter, or per rival Eevee
+    evolution in Yellow) is one battle.
 - **Golden assertions (Red/Blue/Yellow):** each game has the 8 gyms with the 8 badges in order; the Elite Four and
   the Champion are in Part 16; Mewtwo is at Cerulean Cave in Part 17; Lapras is at Silph Co.; Yellow has the
   Jessie & James battles and Red/Blue don't.
-- **Output:** `VersionGroupData.milestones` in the main data file, in list order.
+- **Output:** `VersionGroupData.milestones` in the main data file, in list order, and a "Story milestones" table
+  (total, required, optional per game) in `reports/<id>.md`.
+- **First build (2026-10-13):** 60 milestones (Red/Blue 52, Yellow 59), 0 errors and no milestone warnings; `rby.json`
+  grew from 300 to 320 KB raw.
 
 ---
 
@@ -1741,8 +1751,8 @@ It touches both compatibility contracts again. Design decisions (user choices in
   preview. Milestones never count as caught or towards any Pokémon figure.
 
 Stages:
-- [ ] **A.** Record the design: §7.14, §8, §11.3, §11.5, §12.2, §13.2, §13.12, this phase; `PROGRESS.md`
-- [ ] **B.** Pipeline: `Milestone` model, `rby/overrides/milestones.ts`, `core/milestone-numbers.ts` and
+- [x] **A.** Record the design: §7.14, §8, §11.3, §11.5, §12.2, §13.2, §13.12, this phase; `PROGRESS.md`
+- [x] **B.** Pipeline: `Milestone` model, `rby/overrides/milestones.ts`, `core/milestone-numbers.ts` and
   `rby/milestone-numbers.json`, `core/milestones.ts` checks and walkthrough cross-check, validator and zod schema,
   goldens, rebuilt `rby.json`
 - [ ] **C.** State and codec: `milestonesDone`, schema 3 migration, backup, `ProfileStore` milestone toggles with

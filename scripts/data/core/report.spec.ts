@@ -33,6 +33,16 @@ describe('renderReport', () => {
     expect(report).not.toContain('not in the report');
   });
 
+  it('counts the story milestones per game, and leaves the section out without any', () => {
+    const report = renderReport({ data, previous: data, checklists, issues: [] });
+    expect(report).toContain('| Pokémon Yellow | 59 | 38 | 21 |');
+    const withoutMilestones = { ...data };
+    delete withoutMilestones.milestones;
+    expect(
+      renderReport({ data: withoutMilestones, previous: data, checklists, issues: [] }),
+    ).not.toContain('## Story milestones');
+  });
+
   it('says so when there is no previous build or no change', () => {
     expect(renderReport({ data, previous: null, checklists, issues: [] })).toContain(
       'No previous build.',
