@@ -115,7 +115,7 @@ Per-generation strategy modules (`core/mechanics/genN.ts`) provide the capture f
 ## Project constraints (decided with the user)
 
 - **No license file** is added to the repo. The Bulbapedia attribution and the fan-project disclaimer in the About page are still required.
-- **Git: stage, never commit (hard rule).** After each important step (a finished task or checklist item, a doc or rule change), run `git add` on the files that step changed, then end your message with a commit message for the user, in the format under "Commit messages" below. **Never run `git commit`** or any other git command that changes history, branches or remotes (`push`, `reset`, `checkout`, `stash`, `rebase`, `remote`…). The user commits, branches, pushes and creates the GitHub repo manually. Read-only commands (`git status`, `git diff`) are fine. Don't stage gitignored files (e.g. `scripts/data/cache/`) or changes unrelated to the step. Where the plan says data or sprites are "committed", generate the files and stage them.
+- **Git: stage, never commit (hard rule).** After each important step (a finished task or checklist item, a doc or rule change), run `git add` on the files that step changed, then end your message with a commit message for the user, in the format under "Commit messages" below. **Never run `git commit`** or any other git command that changes history, branches or remotes (`push`, `reset`, `checkout`, `stash`, `rebase`, `remote`…). The user commits, branches, pushes and creates the GitHub repo manually. Read-only commands (`git status`, `git diff`) are fine. Don't stage gitignored files (e.g. `scripts/data/cache/`) or changes unrelated to the step. Where the plan says data or sprites are "committed", generate the files and stage them. Tags are the user's too: whenever one is needed, give the manual steps from "Tag instructions" below.
 - **Ask before installing anything outside the project.** Don't install global dependencies (`npm install -g`, global `npx` tool installs, `pip install --user`…) or additional programs (system packages, nvm Node versions, browsers, CLIs) without asking the user first.
 - **Ask before adding any new dependency**, including project-local ones in `package.json` (`dependencies` or `devDependencies`), even if the plan already names the package. `npm install`/`npm ci` of dependencies already in `package.json` is fine.
 - **Don't change files outside the project directory** (`/home/mih/Documents/Projects/poke-guide`). That includes dotfiles, shell profiles, global npm/git config and other projects. Allowed exceptions: Claude's memory folder (`~/.claude/projects/.../memory`), the session scratchpad under `/tmp/claude-*`, and tool caches such as `~/.npm`.
@@ -176,9 +176,26 @@ Rules:
 1. Read `## [Unreleased]` and `git log v<last>..HEAD`, and propose the bump with a one-line reason.
 2. Run `npm version <major|minor|patch>`. It updates `package.json`, `package-lock.json`, `src/app/core/version.ts` and `ngsw-config.json`, and never commits or tags.
 3. In `CHANGELOG.md`, rename `## [Unreleased]` to `## [X.Y.Z] - <date>` and add a new empty `## [Unreleased]` above it. Update the `[Unreleased]` compare link at the bottom and add an `[X.Y.Z]:` link.
-4. Run `npm run verify`, stage those five files, and give the user:
-   - the commit message: `chore(release): X.Y.Z`, with the changelog highlights in the body
-   - the commands to run: `git tag -a vX.Y.Z -m "Poké Guide X.Y.Z"` then `git push --follow-tags`
-
-   Never create the tag yourself.
+4. Run `npm run verify` and stage those five files. End the message with the commit message (`chore(release): X.Y.Z`, with the changelog highlights in the body), followed by the tag instructions below.
 5. Pushing the tag deploys. `deploy.yml` fails unless the tag is `v` + the `package.json` version, and a manual run must be started from the tag. Add a log entry to `PROGRESS.md`.
+
+**Tag instructions (hard rule).** You never create, move, delete or push tags; the user does it by hand. So whenever a tag is needed, give the user the exact steps, with the real version filled in:
+- at the end of every message that stages a version bump, after the commit message
+- whenever `package.json` holds a version with no tag yet (`git tag -l vX.Y.Z` prints nothing) and the user commits, pushes, or asks about deploying or going live
+
+Use this block:
+
+````
+After committing the staged changes, release X.Y.Z by hand:
+
+```bash
+git tag -a vX.Y.Z -m "Poké Guide X.Y.Z"   # on the release commit
+git push origin master                     # CI runs; nothing deploys yet
+git push origin vX.Y.Z                     # Deploy publishes X.Y.Z
+```
+
+Then check the "Deploy" run for vX.Y.Z on the Actions tab. If you tagged the
+wrong commit and haven't pushed the tag yet: `git tag -d vX.Y.Z`, then tag again.
+````
+
+Never tell the user to move or delete a tag that has already been pushed. A released version is fixed: ship the fix as the next PATCH instead.
