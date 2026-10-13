@@ -1640,7 +1640,7 @@ Crystal 379, numbered 1–424. Each difference was checked against pret (`itemba
 - **Base href:** the site URL is `https://<owner>.github.io/<repo>/`, so build with `ng build --base-href /<repo>/`. The value comes from one variable (`PAGES_BASE_HREF`) in the workflow. All asset and data URLs in the app are **relative** (`data/rby.json`, `sprites/…`), so nothing else changes. A custom domain later means adding `CNAME` and using `/`.
 - **SPA deep links:** copy `dist/poke-guide/browser/index.html` to `404.html` and add `.nojekyll`.
 - **`ci.yml`** (PRs and pushes): `setup-node` from `.node-version` → `npm ci` → `npm run verify` → `npm run data:validate`. No e2e step (§14).
-- **`deploy.yml`** (push to `main`, `workflow_dispatch`): build → `404.html` and `.nojekyll` → `actions/upload-pages-artifact` → `actions/deploy-pages`, with `permissions: pages: write, id-token: write` and `environment: github-pages`.
+- **`deploy.yml`** (push to `main`, `workflow_dispatch`): build → `404.html` and `.nojekyll` → `actions/upload-pages-artifact` → `actions/deploy-pages`, with `permissions: pages: write, id-token: write` and `environment: github-pages`. The push trigger has a `paths-ignore` list of doc-only files (`PROGRESS.md`, `IMPLEMENTATION_PLAN.md`, `CLAUDE.md`, `README.md`, `scripts/data/reports/**`), so a push that touches only those doesn't redeploy (decided 2026-10-13). A push that changes any other file deploys as usual, and a manual run always deploys. `[skip ci]` in the newest commit's message still skips every workflow for a single push.
 - **`data-refresh.yml`** (manual and monthly, `0 4 1 * *`): `npm run data:build:all -- --refresh && npm run data:sprites` → if the data changed, open a PR whose body contains the reports. **Never auto-merge.**
 
 ---
