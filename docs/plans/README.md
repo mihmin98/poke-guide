@@ -18,6 +18,12 @@ Bulbapedia and the pret disassemblies before any override is written.
 | 16 | Black, White | `bw` | black 17, white 18 | [phase-16-bw.md](phase-16-bw.md) |
 | 17 | Black 2, White 2 | `b2w2` | black2 19, white2 20 | [phase-17-b2w2.md](phase-17-b2w2.md) |
 
+Feature plans (not games) live here too:
+
+| Phase | Feature | Plan |
+|---|---|---|
+| 19 | Story battles: trainer teams and encounter levels on story milestones | [phase-19-story-battles.md](phase-19-story-battles.md) |
+
 The phases build on each other: the first plan of a generation carries that generation's generic groundwork
 (model fields, mechanics module, vocabularies), and the second row of the generation reuses it. Doing them out of
 order means moving that groundwork with them.

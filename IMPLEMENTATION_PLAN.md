@@ -1890,6 +1890,27 @@ Stages:
   Cave; the Story's detail pane and Back work at 360 px and 1440 px; the Guide's story rows tick in step with the
   Story; and existing profiles, codes and links are unaffected.
 
+### Phase 19 — Story battle teams (added and planned 2026-10-15)
+Requested by the user: story battles should show what you face. Gyms, rival battles, the Rocket bosses and the
+Elite Four get the trainer's team (Pokémon, levels, moves, prize); static encounters and gifts get their level.
+Planned in [`docs/plans/phase-19-story-battles.md`](docs/plans/phase-19-story-battles.md), which holds the research,
+the design, the stages and the verification. Like Phase 18, it is numbered after the game phases but built before
+Phase 12. User choices: **Pokémon, levels and moves** (with prize money); **variant tabs** for rival teams,
+preselecting the starter you've marked caught when exactly one is; **levels for statics and gifts** too; a
+**collapsible Team panel** on the Story page and the location page's Story section, and **only the level range** in
+the Guide's compact rows. Source: the `{{Party}}` blocks of the cached walkthrough part pages (no new requests),
+matched to milestones by a curated `trainer` name in page order. No contract changes.
+
+Stages (details in the plan):
+- [ ] **A.** Docs: §7.14, §8, §13.12, §19.1, the game plans
+- [ ] **B.** Pipeline: model, `core/parties.ts`, `attachTeams`, `trainer` curation (rby, gsc), validation, report,
+  goldens, rebuilt data
+- [ ] **C.** App: levels helpers, `MilestoneTeam`, the `MilestoneRow` disclosure and level tag, callers, specs
+- [ ] Manual browser check (the user)
+- **Accept when:** every battle milestone with a party block shows its team (with variants) in each of its games;
+  statics and gifts show their level; no walkthrough party is left unclaimed without a reason; existing profiles,
+  codes and links are unaffected.
+
 ## 17. Deployment to GitHub Pages (final phase)
 
 - **Base href:** the site URL is `https://<owner>.github.io/<repo>/`, so build with `ng build --base-href /<repo>/`. The value comes from one variable (`PAGES_BASE_HREF`) in the workflow. All asset and data URLs in the app are **relative** (`data/rby.json`, `sprites/…`), so nothing else changes. A custom domain later means adding `CNAME` and using `/`.
