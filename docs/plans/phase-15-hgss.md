@@ -120,6 +120,9 @@ covers it (it's unfinished; check its state at the time).
 - [ ] Numbers file, flag, goldens.
 - [ ] Journey anchors (plan §7.14, §13.13): review the report's Journey section and give each revisit milestone an
   `after` anchor where its default position is wrong.
+- [ ] Battle teams (plan §7.14, Phase 19): give each `gym` and `battle` milestone whose part page has a `{{Party}}`
+  block a `trainer`, then check the report's "Story battles" table (no unclaimed parties without a reason). Extend
+  `core/parties.ts` if the pages use another party template.
 
 ## Stage I — validation, goldens, report, go live
 

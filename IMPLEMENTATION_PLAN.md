@@ -866,6 +866,35 @@ in app code).
   is placed in the milestone's part in every one of its games. Without `after`, a revisit milestone follows the
   previous step. `reports/<id>.md` has a "Journey" section per game for reviewing the result. Adding the field
   changes no milestone number, and the data `schemaVersion` stays 1 (the field is optional).
+- **Battle teams (Phase 19, planned 2026-10-15; details in
+  [`docs/plans/phase-19-story-battles.md`](docs/plans/phase-19-story-battles.md)):** `gym` and `battle` milestones
+  carry the trainer's team per game (`Milestone.teams`, §8): Pokémon, levels, gender, moves, trainer class and prize.
+  - **Source:** the `{{Party}}` blocks of the walkthrough part pages the cross-checks already fetch (no new
+    requests): `{{Party | name | class | sprite | prize | location | caption | pokemon=N }}`, then N `{{Pokémon}}`
+    members, then `{{Party/end}}`. Gym parties sit inside a `{{WalkthroughGym}}` box, so blocks are found by their
+    opening. `core/parties.ts` parses them in page order; the page's `game` parameter is ignored (the config's
+    `walkthroughPages` says which games a page covers). Held items aren't listed, even in Gen II.
+  - **Matching:** the curated entry names its trainer, `trainer: 'Brock'` or alternatives such as
+    `['???', 'Silver']` (the Gen II rival before you name him). Per game and part page, a milestone with `trainer`
+    claims the **first unclaimed run** of parties whose `name` matches, in page order; a run (consecutive parties
+    with the same name and location) is one battle's variants. Variants come from the `caption`:
+    `{{PlayerChoice|0001|Bulbasaur}}` (the player's starter) or Yellow's `{{BlueEevee|Vaporeon}}` (with
+    `evolved=no`). The input field `trainer` isn't written to the output.
+  - **Checks:** errors for a `trainer` with no unclaimed match on its part page in one of its games, `trainer` on a
+    kind other than `gym`/`battle`, and a move name missing from the group's Pokédex move list (`moves[].name`;
+    the type comes from our data). Warnings for a party no milestone claims (this replaces the Phase 11 count
+    heuristic) and for page types that differ from our species types. `checkMilestones` (`core/validate.ts`) also
+    checks the committed teams: the zod schema, `dex` (and variant `dex`) within the species list, level 1–100,
+    every move in `pokedex.moves` with the same type.
+  - Battles with no party block on their page (the Route 25 Jr. Trainer, the Gen II Nugget Bridge Rocket, Crystal's
+    Wise Trio) have no `trainer` and no team. Ordinary trainers stay out (§7.14 above).
+  - **Report:** a "Story battles" table per game in `reports/<id>.md`: battle milestones, how many have a team, the
+    unclaimed parties.
+  - **Levels for statics and gifts** aren't stored on the milestone: the app reads them from the `dex` encounter
+    at the milestone's location.
+  - No contract changes: milestone and item numbers, saved state and `PKG` codes are untouched, and the data
+    `schemaVersion` stays 1 (the field is optional). Red/Blue and Gold/Silver share pages, so their teams are stored
+    once per game (about +50–70 KB raw per main data file).
 
 ---
 
@@ -996,6 +1025,26 @@ export interface Milestone {
   grants?: string[];                                    // unlock ids it gives
   dex?: number;                                         // encounter/gift species: a link only, never marks it caught
   optional?: true;                                      // not needed to finish the story
+  after?: string;                                       // Phase 18: journey anchor for a revisit milestone
+  teams?: Partial<Record<GameId, TrainerTeam[]>>;      // Phase 19: gym/battle; one team, or one per variant
+}
+
+// Phase 19 (§7.14): a story battle's team, from the walkthrough's {{Party}} blocks.
+export interface TrainerTeam {
+  trainer: string;                                      // "Brock", "Blue", "Executive"
+  trainerClass?: string;                                // "Leader", "Elite Four"
+  prize?: number;                                       // 1386 (Pokédollars)
+  variant?: TeamVariant;                                // absent = the only team
+  pokemon: TeamMember[];
+}
+export type TeamVariant =
+  | { kind: 'starter'; dex: number }                    // "If you chose Bulbasaur"
+  | { kind: 'rival-eevee'; dex: number; evolved: boolean }; // Yellow: "If his Eevee becomes Vaporeon"
+export interface TeamMember {
+  dex: number;
+  level: number;
+  gender?: 'male' | 'female';                           // the page's "both" is left out
+  moves: { name: string; type: PokemonType }[];         // names as in the Pokédex file, types from our data
 }
 
 export interface VersionGroupData {
@@ -1450,6 +1499,19 @@ Both tools are generic screens driven by `GenerationMechanics` (§4.5). Only the
   `core/profiles/progress-offer.service.ts` (the offer, re-checked when accepted in case the part moved meanwhile);
   `features/story/story-model.ts` (pure) and `story.page.ts`; labels and counts in `core/domain/milestone-progress.ts`.
   The flag icon joined the icon subset.
+- **Team panel (Phase 19, planned 2026-10-15):** on full rows (the Story page, the location page's Story section),
+  a milestone with teams in the game gets a **"Team · Lv 12–14"** disclosure button, collapsed by default. It
+  expands `shared/components/milestone-team.ts`:
+  - variant tabs (`role="tablist"`): "If you chose Bulbasaur", or in Yellow "If his Eevee becomes Vaporeon". The
+    preselected tab is the starter variant whose `dex` the active profile has caught, when exactly one matches and
+    the profile is for this game; otherwise the first tab;
+  - a trainer line, "Leader Brock · ₽1,386";
+  - per member: the sprite and name (linking to the Pokémon page), `TypeBadge` types from our species data,
+    "Lv 14" and ♂/♀, and move chips tinted with the type colours.
+  - Static encounters and gifts get a plain "Lv 30" tag instead, from their `dex` encounter at the location.
+  - **Compact rows** (the Guide, §13.13) show only the level-range tag, with no panel.
+  - Levels are pure helpers (`teamLevels`, `encounterLevels`) in `core/domain`; the callers (`story-model.ts`,
+    `guide-model.ts`, the location page) pass the encounter levels in, shown with `shared/components/level-range.ts`.
 
 ### 13.13 Journey: Story ↔ Guide (Phase 18)
 Requested 2026-10-15: the Story showed milestones and the Guide showed areas, with nothing saying which areas
@@ -1902,7 +1964,7 @@ the Guide's compact rows. Source: the `{{Party}}` blocks of the cached walkthrou
 matched to milestones by a curated `trainer` name in page order. No contract changes.
 
 Stages (details in the plan):
-- [ ] **A.** Docs: §7.14, §8, §13.12, §19.1, the game plans
+- [x] **A.** Docs: §7.14, §8, §13.12, §19.1, the game plans (2026-10-15)
 - [ ] **B.** Pipeline: model, `core/parties.ts`, `attachTeams`, `trainer` curation (rby, gsc), validation, report,
   goldens, rebuilt data
 - [ ] **C.** App: levels helpers, `MilestoneTeam`, the `MilestoneRow` disclosure and level tag, callers, specs
@@ -1986,7 +2048,7 @@ The app has no public API, so SemVer is read **from the user's side**: what user
 5. **Overrides:** statics (e.g. roaming beasts, Suicune in Crystal, Red Gyarados, Sudowoodo, Lugia/Ho-Oh), gifts and choices (starters, Togepi egg, Eevee, Tyrogue, Shuckle, Odd Egg…), trades, Game Corner prizes (shop parser with the Gen II section), evolution graph (with `requiresTrade` for trade and held-item-trade edges, friendship triggers for Crossbat, Espeon/Umbreon, babies), breeding rules (Day Care location, egg groups and gender ratios from Bulbapedia), unlocks (rods, Surf, Whirlpool, Headbutt, Rock Smash), event-only species (e.g. Celebi), and the Gen II type history.
 6. **Sprites and mechanics:** the `gen2-c` sprite set and file pattern. Add `core/mechanics/gen2.ts` (the Gen II capture formula with its documented quirks, DV rules, shiny odds of 1/8192 and 1/64 for eggs from a Shiny parent, and the Gen II stat formula), then set `mechanicsId: 'gen2'`. Add fixed-DV data for in-game trades and the guaranteed-Shiny Red Gyarados.
 7. **Golden assertions and fixtures** for a handful of Gen II pages.
-8. `npm run data:build -- --group gsc`, review `reports/gsc.md`, fix patches, and leave `public/data/gsc.json` for the user to commit. With story milestones (§7.14), also review the report's Journey section and give each revisit milestone (one whose location is placed in an earlier part) an `after` anchor where its default position is wrong.
+8. `npm run data:build -- --group gsc`, review `reports/gsc.md`, fix patches, and leave `public/data/gsc.json` for the user to commit. With story milestones (§7.14), also review the report's Journey section and give each revisit milestone (one whose location is placed in an earlier part) an `after` anchor where its default position is wrong. Give each `gym` and `battle` milestone whose part page has a `{{Party}}` block a `trainer` (the party's `name`, §7.14 "Battle teams"), and check the report's "Story battles" table: no unclaimed parties without a reason. If the group's walkthrough pages use another party template, extend `core/parties.ts` rather than adding a game branch.
 9. `npm run theme:games`. Flip the game to `available`.
 10. **No app code changes should be needed.** If one is, it means a vocabulary or feature flag is missing from the generic layer. Add it there, not as a game-specific branch.
 

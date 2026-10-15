@@ -185,7 +185,7 @@ teams?: Partial<Record<GameId, TrainerTeam[]>>;  // one team, or one per variant
 
 ## Stages (stage the files after each one, give a commit message, never commit)
 
-- [ ] **A.** Docs: §7.14, §8, §13.12, §19.1 and the game plans' checklist line (this plan and the §16 entry
+- [x] **A.** Docs: §7.14, §8, §13.12, §19.1 and the game plans' checklist line (this plan and the §16 entry
   already exist).
 - [ ] **B.** Pipeline:
   - the model;
