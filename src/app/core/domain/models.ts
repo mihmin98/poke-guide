@@ -257,6 +257,11 @@ export interface Milestone {
   /** Walkthrough part per game; the keys are the games the milestone exists in. */
   part: Partial<Record<GameId, number>>;
   locationId: string;
+  /**
+   * For a milestone whose location isn't placed in its part (a revisit): the location of its part that it
+   * follows in the journey (plan §7.14, §13.13). Without it, the milestone follows the previous step.
+   */
+  after?: string;
   /** "Boulder Badge · TM34 Bide". */
   detail?: string;
   /** The badge a gym awards, as on Bulbapedia's `{{badge|…}}` ("Boulder"). */

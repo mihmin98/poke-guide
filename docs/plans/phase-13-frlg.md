@@ -104,6 +104,8 @@ Each override records its source page and revid, plus a pret `pokefirered` refer
 - [ ] `frlg/overrides/milestones.ts`: the Kanto story (its rby milestones are a starting point, but numbers are
   per group), the Sevii story, the National Dex.
 - [ ] `frlg/milestone-numbers.json`, `storyChecklist: true`, goldens.
+- [ ] Journey anchors (plan §7.14, §13.13): review the report's Journey section and give each revisit milestone an
+  `after` anchor where its default position is wrong.
 
 ## Stage I — validation, goldens, report, go live
 

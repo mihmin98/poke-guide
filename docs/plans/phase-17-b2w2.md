@@ -111,6 +111,8 @@ Each override records its source page and revid.
   Four.
 - [ ] Optional extras: the PWT, Join Avenue, Medals, the Hidden Grotto rounds.
 - [ ] Numbers file, flag, goldens.
+- [ ] Journey anchors (plan §7.14, §13.13): review the report's Journey section and give each revisit milestone an
+  `after` anchor where its default position is wrong.
 
 ## Stage I — validation, goldens, report, go live
 

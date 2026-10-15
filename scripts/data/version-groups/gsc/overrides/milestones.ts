@@ -7,6 +7,9 @@
  * Bug-Catching Contest, the Pokégear cards and the Unown puzzles are optional (user choices, 2026-10-13). A
  * milestone that needs a later field move sits in the part where that move arrives (Lapras: Surf, Part 8).
  *
+ * Revisits (a milestone at a location from an earlier part) need no `after` here: reviewed against the report's
+ * Journey section (2026-10-15), each one's default place, after the previous step, matches the walkthrough.
+ *
  * Ids are a contract: `milestone-numbers.json` maps them to the numbers profiles store. Never rename one;
  * retire its number below and add a new id instead.
  */

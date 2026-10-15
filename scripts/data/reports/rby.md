@@ -18,6 +18,48 @@
 | Pokémon Blue | 52 | 34 | 18 |
 | Pokémon Yellow | 59 | 38 | 21 |
 
+## Journey
+
+### Pokémon Red, Pokémon Blue
+
+- Part 1: Pallet Town → Professor Oak's Lab → **Choose your first Pokémon** → **Rival battle 1**
+- Part 2: Route 1 → Viridian City → **Deliver Oak's Parcel** (back to Professor Oak's Lab) → Route 22 → **Rival battle 2** → Route 2
+- Part 3: Viridian Forest → Pewter City → **Defeat Brock**
+- Part 4: Route 3 → Mt. Moon → Route 4
+- Part 5: Cerulean City → **Defeat Misty** → **Rival battle 3** → Route 24 → Route 25 → **Defeat the Jr. Trainer♂ on Route 25** → {Defeat the Jr. Trainer♂ on Route 25 opens: Route 25} → Sea Cottage → **Help Bill** → Route 5 → Underground Path (Routes 5–6)
+- Part 6: Route 6 → Vermilion City → **Get the Old Rod** → {Old Rod opens: Pallet Town, Viridian City, Route 22, Cerulean City, Route 24, Route 25, Route 6, Vermilion City} → **Get the Bicycle** (back to Cerulean City) → S.S. Anne → **Rival battle 4** → **Help the S.S. Anne's captain** → {Cut opens: Viridian City, Route 2, Vermilion City} → **Defeat Lt. Surge**
+- Part 7: Route 11 → Diglett's Cave → **Get HM05 Flash** (back to Route 2) → Pewter Museum of Science → Route 9 → Route 10
+- Part 8: Rock Tunnel → Lavender Town → Route 8 → Underground Path (Routes 7–8) → Route 7
+- Part 9: Celadon City → Celadon Department Store → Celadon Condominiums → **Receive Eevee** → **Get the Coin Case** → **Defeat Erika** → Celadon Game Corner → Team Rocket Hideout → **Get the Lift Key** → {Lift Key opens: Team Rocket Hideout} → **Defeat Giovanni in the Rocket Hideout** → Pokémon Tower → **Rival battle 5** → **Rescue Mr. Fuji**
+- Part 10: Saffron City → **Give the gate guards a drink** → Fighting Dojo → Silph Co. → **Get the Card Key** → {Card Key opens: Silph Co.} → **Rival battle 6** → **Receive Lapras** → **Defeat Giovanni at Silph Co.** → **Defeat the Karate Master** → **Defeat Sabrina**
+- Part 11: Route 16 → **Wake the Snorlax on Route 16** → **Get HM02 Fly** → Route 17 → Route 18 → Fuchsia City → **Get the Good Rod** → {Good Rod opens: Pallet Town, Viridian City, Route 22, Route 4, Cerulean City, Route 24, Route 25, Route 6, Vermilion City, Route 11, Route 10, Celadon City, Route 17, Route 18, Fuchsia City} → **Defeat Koga** → Safari Zone → **Get HM03 Surf** → {Surf opens: Vermilion City, Celadon City, Safari Zone} → **Return the Warden's Gold Teeth** → {Strength opens: Fuchsia City}
+- Part 12: Route 12 → **Wake the Snorlax on Route 12** → **Get the Super Rod** → {Super Rod opens: Pallet Town, Viridian City, Route 4, Cerulean City, Route 24, Route 25, Route 6, Vermilion City, Route 11, Route 10, Celadon City, Route 17, Route 18, Fuchsia City, Safari Zone, Route 12} → Route 13 → Route 14 → Route 15 → Route 19 → Route 20 → Seafoam Islands → **Battle Articuno**
+- Part 13: Cinnabar Island → Cinnabar Lab → Pokémon Mansion → **Get the Secret Key** → {Secret Key opens: Cinnabar Island} → **Revive the Helix or Dome Fossil** → **Revive the Old Amber** → **Defeat Blaine** → Route 21
+- Part 14: Power Plant → **Battle Zapdos** → **Defeat Giovanni** (back to Viridian City) → {Later items opens: Viridian City}
+- Part 15: **Rival battle 7** (back to Route 22) → Route 23 → Victory Road → **Battle Moltres**
+- Part 16: Indigo Plateau → **Defeat Lorelei** → **Defeat Bruno** → **Defeat Agatha** → **Defeat Lance** → **Defeat the Champion**
+- Part 17: Cerulean Cave → **Battle Mewtwo**
+
+### Pokémon Yellow
+
+- Part 1: Pallet Town → Professor Oak's Lab → **Receive Pikachu** → **Rival battle 1**
+- Part 2: Route 1 → Viridian City → **Deliver Oak's Parcel** (back to Professor Oak's Lab) → Route 22 → **Rival battle 2** → Route 2
+- Part 3: Viridian Forest → Pewter City → **Defeat Brock**
+- Part 4: Route 3 → Mt. Moon → **Battle Jessie and James** → Route 4
+- Part 5: Cerulean City → **Defeat Misty** → **Rival battle 3** → **Receive Bulbasaur** → Route 24 → **Receive Charmander** → Route 25 → **Defeat the Jr. Trainer♂ on Route 25** → {Defeat the Jr. Trainer♂ on Route 25 opens: Route 25} → Sea Cottage → **Help Bill** → Route 5 → Underground Path (Routes 5–6)
+- Part 6: Route 6 → Vermilion City → **Get the Old Rod** → {Old Rod opens: Pallet Town, Viridian City, Route 22, Cerulean City, Route 24, Route 25, Route 6, Vermilion City} → **Get the Bicycle** (back to Cerulean City) → S.S. Anne → **Rival battle 4** → **Help the S.S. Anne's captain** → {Cut opens: Viridian City, Route 2, Vermilion City} → **Defeat Lt. Surge** → **Receive Squirtle**
+- Part 7: Route 11 → Diglett's Cave → **Get HM05 Flash** (back to Route 2) → Pewter Museum of Science → Route 9 → Route 10
+- Part 8: Rock Tunnel → Lavender Town → Route 8 → Underground Path (Routes 7–8) → Route 7
+- Part 9: Celadon City → Celadon Department Store → Celadon Condominiums → **Receive Eevee** → **Get the Coin Case** → **Defeat Erika** → Celadon Game Corner → Team Rocket Hideout → **Battle Jessie and James** → **Get the Lift Key** → {Lift Key opens: Team Rocket Hideout} → **Defeat Giovanni in the Rocket Hideout** → Pokémon Tower → **Rival battle 5** → **Battle Jessie and James** → **Rescue Mr. Fuji**
+- Part 10: Saffron City → **Give the gate guards a drink** → Fighting Dojo → Silph Co. → **Get the Card Key** → {Card Key opens: Silph Co.} → **Rival battle 6** → **Battle Jessie and James** → **Receive Lapras** → **Defeat Giovanni at Silph Co.** → **Defeat the Karate Master** → **Defeat Sabrina**
+- Part 11: Route 16 → **Wake the Snorlax on Route 16** → **Get HM02 Fly** → Route 17 → Route 18 → Fuchsia City → **Get the Good Rod** → {Good Rod opens: Pallet Town, Viridian City, Route 22, Route 4, Cerulean City, Route 24, Route 25, Route 6, Vermilion City, Route 11, Route 10, Celadon City, Route 17, Route 18, Fuchsia City} → **Defeat Koga** → Safari Zone → **Get HM03 Surf** → {Surf opens: Route 6, Vermilion City, Celadon City, Safari Zone} → **Return the Warden's Gold Teeth** → {Strength opens: Fuchsia City}
+- Part 12: Route 12 → **Wake the Snorlax on Route 12** → **Get the Super Rod** → {Super Rod opens: Pallet Town, Route 22, Route 4, Cerulean City, Route 24, Route 25, Vermilion City, Route 11, Route 10, Route 17, Route 18, Fuchsia City, Safari Zone, Route 12} → Route 13 → Route 14 → Route 15 → Route 19 → Route 20 → Seafoam Islands → **Battle Articuno**
+- Part 13: Cinnabar Island → Cinnabar Lab → Pokémon Mansion → **Get the Secret Key** → {Secret Key opens: Cinnabar Island} → **Revive the Helix or Dome Fossil** → **Revive the Old Amber** → **Defeat Blaine** → Route 21
+- Part 14: Power Plant → **Battle Zapdos** → **Defeat Giovanni** (back to Viridian City) → {Later items opens: Viridian City}
+- Part 15: **Rival battle 7** (back to Route 22) → Route 23 → Victory Road → **Battle Moltres**
+- Part 16: Indigo Plateau → **Defeat Lorelei** → **Defeat Bruno** → **Defeat Agatha** → **Defeat Lance** → **Defeat the Champion**
+- Part 17: Cerulean Cave → **Battle Mewtwo**
+
 ## Unobtainable species
 
 ### Pokémon Red

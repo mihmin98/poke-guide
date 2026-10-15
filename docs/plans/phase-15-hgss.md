@@ -118,6 +118,8 @@ covers it (it's unfinished; check its state at the time).
   Red. Optional extras: the Pokéathlon, Battle Frontier, Safari Zone.
 - [ ] gsc's milestones are a starting point, but numbers are per group.
 - [ ] Numbers file, flag, goldens.
+- [ ] Journey anchors (plan §7.14, §13.13): review the report's Journey section and give each revisit milestone an
+  `after` anchor where its default position is wrong.
 
 ## Stage I — validation, goldens, report, go live
 

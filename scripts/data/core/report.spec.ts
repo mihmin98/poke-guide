@@ -41,6 +41,26 @@ describe('renderReport', () => {
     expect(
       renderReport({ data: withoutMilestones, previous: data, checklists, issues: [] }),
     ).not.toContain('## Story milestones');
+    expect(
+      renderReport({ data: withoutMilestones, previous: data, checklists, issues: [] }),
+    ).not.toContain('## Journey');
+  });
+
+  it('lists the journey per part, sharing a heading between games with the same one', () => {
+    const report = renderReport({ data, previous: data, checklists, issues: [] });
+    expect(report).toContain(
+      '## Journey\n\n### Pokémon Red, Pokémon Blue\n\n- Part 1: Pallet Town → ',
+    );
+    expect(report).toContain('### Pokémon Yellow');
+    expect(report).toContain(
+      "- Part 7: Route 11 → Diglett's Cave → **Get HM05 Flash** (back to Route 2) → Pewter Museum of Science",
+    );
+    expect(report).toContain(
+      '**Get HM03 Surf** → {Surf opens: Vermilion City, Celadon City, Safari Zone}',
+    );
+    expect(report).toContain(
+      '**Defeat Giovanni** (back to Viridian City) → {Later items opens: Viridian City}',
+    );
   });
 
   it('says so when there is no previous build or no change', () => {

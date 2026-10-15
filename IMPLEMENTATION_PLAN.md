@@ -858,6 +858,14 @@ in app code).
   Indigo Plateau became an `expectEmpty` gsc location in Part 15 to hold the League, and Blaine sits on `route-20`
   (his Gym is in the Seafoam Islands). Goldens: the 16 badges in order, the League in Part 15, Red in Part 28, the
   per-game wings, the Crystal-only list. 0 errors, no milestone warnings, item numbers unchanged.
+- **Journey anchors (Phase 18, added 2026-10-15):** the Story and Guide pages interleave milestones and areas in
+  one order (§13.13). Milestone list order and location order are both kept, but a milestone whose `locationId`
+  is placed in an **earlier** part (a revisit: Flash on Route 2 in Part 7, the Goldenrod Radio Tower in Part 12)
+  has no area of its part to sit next to. The optional `after: locationId` says which area of its part it
+  follows. Checks (errors, in `checkMilestones`): `after` only on a revisit milestone, and the location it names
+  is placed in the milestone's part in every one of its games. Without `after`, a revisit milestone follows the
+  previous step. `reports/<id>.md` has a "Journey" section per game for reviewing the result. Adding the field
+  changes no milestone number, and the data `schemaVersion` stays 1 (the field is optional).
 
 ---
 
@@ -1132,8 +1140,9 @@ export const appConfig: ApplicationConfig = {
 | `/:game/welcome` | `OnboardingPage` | Name the first profile for that game |
 | `/:game/guide` | `GuidePage` | Ordered location list grouped by part (and region) |
 | `/:game/guide/:locationId` | `LocationPage` | A side pane on desktop |
+| `/:game/story/:locationId` | `LocationPage` | Phase 18 (§13.13): the same page as a side pane of the Story; route data `section: 'story'` points its Back, previous/next and swipe at the Story |
 | `/:game/checklist` | `ChecklistPage` | Query params: `status`, `type`, `method`, `q`, `view`, `sort=national\|regional\|walkthrough` |
-| `/:game/story` | `StoryPage` | Phase 11 (§13.12); the nav only links it for version groups with `storyChecklist` in the registry |
+| `/:game/story` | `StoryPage` | Phase 11 (§13.12); the nav only links it for version groups with `storyChecklist` in the registry. Fragments `#part-N` and `#m-<milestoneId>` scroll to a part or a milestone (Phase 18) |
 | `/:game/pokemon/:slug` | `PokemonPage` | A bottom sheet on mobile when opened from lists |
 | `/:game/tools/catch` | `CatchToolPage` | Prefilled from query params `dex` and `level`; the catch rate on an encounter row links here. A context prefill was dropped: nothing links to a Safari state yet. |
 | `/:game/tools/ivs` | `IvToolPage` | Query param `dex`. Titled with the generation's label ("DV calculator" in Gen I). |
@@ -1441,6 +1450,48 @@ Both tools are generic screens driven by `GenerationMechanics` (§4.5). Only the
   `core/profiles/progress-offer.service.ts` (the offer, re-checked when accepted in case the part moved meanwhile);
   `features/story/story-model.ts` (pure) and `story.page.ts`; labels and counts in `core/domain/milestone-progress.ts`.
   The flag icon joined the icon subset.
+
+### 13.13 Journey: Story ↔ Guide (Phase 18)
+Requested 2026-10-15: the Story showed milestones and the Guide showed areas, with nothing saying which areas
+lie between two story steps. Both pages now show both, in one order (user choices: interleave both tabs, inline
+rows in the Guide, "opens" callouts for what's still needed, a Story detail pane).
+- **Model:** `core/domain/journey.ts` (framework-free; the pipeline uses it for the report and goldens).
+  `buildJourney(data, game)` gives each walkthrough part an ordered list of steps: `area` (a location),
+  `milestone` (with `revisitOf` when its location belongs to an earlier part) and `opens` (below).
+  - **Merge:** per part, milestones in list order and locations in `placement.order`. A milestone's anchor is
+    its location when that is placed in the part, else its `after` (§7.14). The areas up to and including the
+    anchor are emitted before it, so both orders survive (Part 10: Saffron City, Fighting Dojo, Silph Co., then
+    Sabrina). Areas left after the last milestone close the part.
+  - **Reachability at a step:** the unlocks held are the `grants` of the milestones before it (each unlock has
+    exactly one granting milestone, §7.14). An encounter is reachable when all its `requires` are held; an item
+    when every AND group has a held alternative and its `fromPart` (if any) has been reached.
+  - **`opens`:** after a milestone that grants unlocks, the areas already passed whose reachable Pokémon or items
+    grew, with what was added. `fromPart` items join the `opens` of the first milestone of that part at their
+    location (Giovanni: Viridian's TM27), or one at the start of the part.
+  - Static per game: built once per loaded data file; only the caught and taken counts follow the profile.
+- **Story page** (`/:game/story`):
+  - Rows: milestones (`MilestoneRow`; a revisit links "Back to Route 2"), **area cards** (`shared/components/area-card.ts`:
+    kind icon, name, caught/total and items taken/total of what is reachable **at that point**, a sprite strip
+    of those species, a "+N later" chip naming the locks), and **opens callouts** (`shared/components/unlock-callout.ts`,
+    collapsed: "Surf · 4 earlier areas have something you still need"; expanded, area links with the new
+    uncaught sprites and untaken item counts). A callout only lists areas whose new content isn't all caught
+    and taken, and disappears when none is left.
+  - Areas with neither Pokémon nor items in the game get no card; their milestones still link to them.
+  - Region headers for multi-region games, as on the guide page.
+  - Filters: "Hide done" (milestones) and "Hide finished areas" (everything reachable there caught and taken).
+    Part counts stay milestone-only.
+  - **Detail pane:** `/:game/story/:locationId` opens the location page beside the list from 1200 px, and
+    instead of it below, as the guide does. The two-pane CSS is shared with the guide page.
+  - **Deep links:** `#part-N` and `#m-<milestoneId>` expand the part, scroll to it and move focus there.
+- **Location page:** a `section` input (`'guide' | 'story'`, from route data) points Back, previous/next and
+  swipe at the section it was opened from. A **"When"** line in the header: "Part 5 · after *Defeat Brock* ·
+  before *Defeat Misty*", linking to the Story's `#m-` anchors.
+- **Guide page:** compact milestone rows (toggle, label, kind) between the location cards, in the journey order;
+  no `opens` callouts (the cards' lock badges cover it). A **"Show story"** chip, for games with milestones, is
+  the persisted setting `guideShowStory` (default on; also on the Settings page). Search matches milestone
+  labels too, "Hide completed" hides done milestones, "Only available now" applies by part, the category chips
+  leave milestones alone. Part counts stay Pokémon-only; the part header links to the Story part ("Story n/m").
+- No contract changes: no new numbers, no state schema bump (the setting has a repair default), no `PKG` change.
 
 ---
 
@@ -1816,6 +1867,29 @@ open decisions with the user first and then records them here, as Phase 10 did.
 | 16 | `bw` | Black, White (Gen V groundwork) | [phase-16-bw.md](docs/plans/phase-16-bw.md) |
 | 17 | `b2w2` | Black 2, White 2 | [phase-17-b2w2.md](docs/plans/phase-17-b2w2.md) |
 
+### Phase 18 — Story and Guide journey (added and designed 2026-10-15)
+Requested by the user: the Story and Guide tabs didn't say which areas lie between two story steps, so planning
+what to catch before the next gym meant switching tabs. Numbered 18 because 12–17 are the games, but it is
+built before Phase 12. Design in §13.13 and §7.14 (journey anchors). User choices: **interleave both tabs**,
+**inline milestone rows in the Guide** (hideable), **"opens" callouts listing only what's still needed**,
+**a Story detail pane on desktop**. Findings it designs around: 5 Red/Blue/Yellow and 26–28 Gold/Silver/Crystal
+milestones are revisits of an earlier part's location; story and location order disagree inside some parts;
+later unlocks open many earlier areas (Super Rod: 38 in Crystal). No contract changes.
+
+Stages:
+- [x] **A.** Record the design: §7.14, §11.3, §13.13, §19.1, this phase, the game plans; `PROGRESS.md`
+- [x] **B.** Data: `Milestone.after`, its checks, `core/domain/journey.ts` and spec, the report's Journey section,
+  goldens, the curated anchors for rby and gsc, rebuilt data (2026-10-15: two rby anchors, none needed in gsc)
+- [ ] **C.** Story page: journey rows, area card, opens callout, filters, region headers, detail pane and route,
+  the location page's `section` input, deep links
+- [ ] **D.** Guide page: inline milestone rows, the `guideShowStory` setting, the location page's "When" line,
+  the part header's Story link
+- [ ] Manual browser check (the user)
+- **Accept when:** the Story shows the areas between milestones with reachable-now counts; the Surf callout on
+  `/red/story` shrinks as its Pokémon are caught; Sabrina follows Silph Co.; Flash sits in Part 7 after Diglett's
+  Cave; the Story's detail pane and Back work at 360 px and 1440 px; the Guide's story rows tick in step with the
+  Story; and existing profiles, codes and links are unaffected.
+
 ## 17. Deployment to GitHub Pages (final phase)
 
 - **Base href:** the site URL is `https://<owner>.github.io/<repo>/`, so build with `ng build --base-href /<repo>/`. The value comes from one variable (`PAGES_BASE_HREF`) in the workflow. All asset and data URLs in the app are **relative** (`data/rby.json`, `sprites/…`), so nothing else changes. A custom domain later means adding `CNAME` and using `/`.
@@ -1891,7 +1965,7 @@ The app has no public API, so SemVer is read **from the user's side**: what user
 5. **Overrides:** statics (e.g. roaming beasts, Suicune in Crystal, Red Gyarados, Sudowoodo, Lugia/Ho-Oh), gifts and choices (starters, Togepi egg, Eevee, Tyrogue, Shuckle, Odd Egg…), trades, Game Corner prizes (shop parser with the Gen II section), evolution graph (with `requiresTrade` for trade and held-item-trade edges, friendship triggers for Crossbat, Espeon/Umbreon, babies), breeding rules (Day Care location, egg groups and gender ratios from Bulbapedia), unlocks (rods, Surf, Whirlpool, Headbutt, Rock Smash), event-only species (e.g. Celebi), and the Gen II type history.
 6. **Sprites and mechanics:** the `gen2-c` sprite set and file pattern. Add `core/mechanics/gen2.ts` (the Gen II capture formula with its documented quirks, DV rules, shiny odds of 1/8192 and 1/64 for eggs from a Shiny parent, and the Gen II stat formula), then set `mechanicsId: 'gen2'`. Add fixed-DV data for in-game trades and the guaranteed-Shiny Red Gyarados.
 7. **Golden assertions and fixtures** for a handful of Gen II pages.
-8. `npm run data:build -- --group gsc`, review `reports/gsc.md`, fix patches, and leave `public/data/gsc.json` for the user to commit.
+8. `npm run data:build -- --group gsc`, review `reports/gsc.md`, fix patches, and leave `public/data/gsc.json` for the user to commit. With story milestones (§7.14), also review the report's Journey section and give each revisit milestone (one whose location is placed in an earlier part) an `after` anchor where its default position is wrong.
 9. `npm run theme:games`. Flip the game to `available`.
 10. **No app code changes should be needed.** If one is, it means a vocabulary or feature flag is missing from the generic layer. Add it there, not as a game-specific branch.
 

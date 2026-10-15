@@ -38,6 +38,8 @@ order means moving that groundwork with them.
 - **Contracts:** codec ids are already fixed in the registry. Item and milestone numbers start at 1 in each
   group's own `item-numbers.json` / `milestone-numbers.json`, written by the first build. Nothing here changes
   the `PKG*` formats: `dexCount` grows to 386, 493 or 649 and the bitfields follow it.
+- **Story and Guide journey** (Phase 18, plan §13.13): a group's milestones are interleaved with its areas.
+  Review the report's Journey section and set `after` on revisit milestones (plan §7.14).
 - **What counts as obtainable** (plan §1, §9): wild encounters, non-trade evolutions, in-game NPC trades, gifts,
   prizes, fossils, statics and breeding. **Excluded:** trading with another player; transfers from other games
   (Pal Park, Poké Transfer, the Unova Link); extra devices and companion games (Pokéwalker, Dream Radar,

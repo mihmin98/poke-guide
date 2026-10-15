@@ -79,6 +79,18 @@ describe('checkMilestones', () => {
     );
   });
 
+  it('allows a journey anchor only on a revisit, and only to a location of its part', () => {
+    const d = data();
+    milestone(d, 'gym-brock').after = 'viridian-forest';
+    milestone(d, 'hm05-flash').after = 'route-2';
+    expect(messages(d)).toEqual(
+      expect.arrayContaining([
+        'Milestone "gym-brock": pewter-city is in part 3 in red, so it needs no "after"',
+        'Milestone "hm05-flash": "after" location route-2 is not in part 7 in yellow',
+      ]),
+    );
+  });
+
   it('requires badges on gyms only', () => {
     const d = data();
     delete milestone(d, 'gym-brock').badge;

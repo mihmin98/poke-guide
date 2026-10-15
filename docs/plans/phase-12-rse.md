@@ -144,6 +144,8 @@ Built against pret, as gen2 was.
 - [ ] `rse/overrides/milestones.ts`: gyms, Team Magma/Aqua, the weather trio, the Elite Four, the Battle Frontier
   (Emerald only, optional), key items.
 - [ ] `rse/milestone-numbers.json`, `storyChecklist: true` on `rse`, goldens.
+- [ ] Journey anchors (plan §7.14, §13.13): review the report's Journey section and give each revisit milestone an
+  `after` anchor where its default position is wrong.
 
 ## Stage I — validation, goldens, report, go live
 

@@ -6,6 +6,8 @@
  */
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { buildGameView } from '../../../../src/app/core/domain/game-view';
+import { buildJourney, type JourneyPart } from '../../../../src/app/core/domain/journey';
 import type { GameId, PokedexData, VersionGroupData } from '../../../../src/app/core/domain/models';
 import { parseItemNumbers } from '../../core/item-numbers';
 import { parseMilestoneNumbers } from '../../core/milestone-numbers';
@@ -499,6 +501,68 @@ describe('rby pokédex data (plan §7.12)', () => {
     for (const dex of data.species.map((s) => s.dex)) {
       const games = pokedex.entries[String(dex)]!.flatMap((e) => e.games);
       expect([...new Set(games)].sort()).toEqual(['blue', 'red', 'yellow']);
+    }
+  });
+});
+
+describe('rby data: the Story and Guide journey (plan §13.13)', () => {
+  const journeys = new Map(
+    data.games.map((game) => [game, buildJourney(buildGameView(data, game), game)]),
+  );
+  const steps = (game: GameId, part: number) =>
+    (journeys.get(game)!.find((p) => p.part === part)?.steps ?? []).map((s) =>
+      s.kind === 'area'
+        ? s.location.id
+        : s.kind === 'milestone'
+          ? `${s.milestone.id}${s.revisit ? '↩' : ''}`
+          : `opens(${s.areas.map((a) => a.location.id).join(',')})`,
+    );
+
+  it("takes Flash on Route 2 after Diglett's Cave in Part 7", () => {
+    for (const game of data.games)
+      expect(steps(game, 7)).toEqual([
+        'route-11',
+        'digletts-cave',
+        'hm05-flash↩',
+        'pewter-museum',
+        'route-9',
+        'route-10',
+      ]);
+  });
+
+  it("delivers Oak's Parcel after Viridian City", () => {
+    expect(steps('red', 2).slice(0, 3)).toEqual(['route-1', 'viridian-city', 'oaks-parcel↩']);
+  });
+
+  it('keeps Sabrina after Silph Co.', () => {
+    const part10 = steps('red', 10);
+    expect(part10.indexOf('gym-sabrina')).toBeGreaterThan(part10.indexOf('silph-co'));
+    expect(part10.indexOf('silph-co')).toBeGreaterThan(part10.indexOf('saffron-city'));
+  });
+
+  it('opens the earlier Surf items when Surf arrives', () => {
+    const part11 = steps('red', 11);
+    expect(part11[part11.indexOf('hm03-surf') + 1]).toBe(
+      'opens(vermilion-city,celadon-city,safari-zone)',
+    );
+  });
+
+  it('releases the Viridian Gym items with Giovanni', () => {
+    expect(steps('red', 14)).toEqual([
+      'power-plant',
+      'zapdos',
+      'gym-giovanni↩',
+      'opens(viridian-city)',
+    ]);
+  });
+
+  it('places every location and milestone of the game exactly once', () => {
+    for (const game of data.games) {
+      const all = journeys.get(game)!.flatMap((p: JourneyPart) => p.steps);
+      const areas = all.flatMap((s) => (s.kind === 'area' ? [s.location.id] : []));
+      const milestones = all.flatMap((s) => (s.kind === 'milestone' ? [s.milestone.id] : []));
+      expect(areas).toEqual(buildGameView(data, game).locations.map((l) => l.id));
+      expect(milestones).toEqual(buildGameView(data, game).milestones.map((m) => m.id));
     }
   });
 });

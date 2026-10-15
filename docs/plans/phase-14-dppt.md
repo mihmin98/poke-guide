@@ -141,6 +141,8 @@ disassembly covers it.
 - [ ] Milestones per game: gyms, Team Galactic, the lake trio, Spear Pillar, Platinum's Distortion World, the
   Elite Four, the Battle Zone (optional).
 - [ ] Numbers file, flag, goldens.
+- [ ] Journey anchors (plan §7.14, §13.13): review the report's Journey section and give each revisit milestone an
+  `after` anchor where its default position is wrong.
 
 ## Stage I — validation, goldens, report, go live
 

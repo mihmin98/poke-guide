@@ -205,6 +205,7 @@ export const versionGroupDataSchema = z.strictObject({
         kind: z.enum(['gym', 'battle', 'event', 'key-item', 'encounter', 'gift']),
         part: gameRecord(positive).refine((r) => Object.keys(r).length > 0, 'names no game'),
         locationId: z.string().min(1),
+        after: z.string().min(1).optional(),
         detail: z.string().min(1).optional(),
         badge: z.string().min(1).optional(),
         grants: z.array(z.string().min(1)).min(1).optional(),
@@ -418,6 +419,14 @@ export function checkMilestones(data: VersionGroupData): BuildIssue[] {
       }
       if (location && !location.placement[game])
         error(`${what}: location ${m.locationId} is not in ${game}`);
+      if (m.after !== undefined) {
+        // The journey anchor (plan §13.13) is only for a milestone away from its part's locations.
+        const anchor = locations.get(m.after);
+        if (location?.placement[game]?.part === part)
+          error(`${what}: ${m.locationId} is in part ${part} in ${game}, so it needs no "after"`);
+        else if (anchor?.placement[game]?.part !== part)
+          error(`${what}: "after" location ${m.after} is not in part ${part} in ${game}`);
+      }
       if (!(data.walkthroughs[game] ?? []).some((w) => w.part === part))
         error(`${what}: ${game} has no walkthrough part ${part}`);
       if (

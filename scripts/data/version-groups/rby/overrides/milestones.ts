@@ -3,6 +3,9 @@
  * part pages (`Walkthrough:Pokémon Red and Blue/Part N`, `Walkthrough:Pokémon Yellow/Part N`); the build
  * cross-checks them against those pages' badges and `{{Party}}` battles.
  *
+ * A milestone at a location from an earlier part (a revisit) takes `after`: the location of its own part it follows
+ * in the Story and Guide journey (plan §7.14, §13.13).
+ *
  * Ids are a contract: `milestone-numbers.json` maps them to the numbers profiles store. Never rename one;
  * retire its number below and add a new id instead.
  */
@@ -82,6 +85,7 @@ export const RBY_MILESTONES: readonly MilestoneDefinition[] = [
     kind: 'event',
     part: all(2),
     locationId: 'oaks-lab',
+    after: 'viridian-city',
     detail: "From Viridian City's Poké Mart; Professor Oak gives you the Pokédex",
   },
   { ...rival(2, 'route-22', 2, 'On Route 22'), optional: true },
@@ -178,6 +182,8 @@ export const RBY_MILESTONES: readonly MilestoneDefinition[] = [
     kind: 'key-item',
     part: all(7),
     locationId: 'route-2',
+    // Route 2's east side is reached through Diglett's Cave (the part's title order).
+    after: 'digletts-cave',
     detail: "From Professor Oak's aide, after catching 10 different species",
     optional: true,
   },

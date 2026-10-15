@@ -3,7 +3,9 @@
  * added or removed per location since the previous build, and the build's warnings and notes. Deterministic (no
  * timestamps), so the committed report only changes when the data does.
  */
-import type { VersionGroupData } from '../../../src/app/core/domain/models';
+import { buildGameView } from '../../../src/app/core/domain/game-view';
+import { buildJourney, type JourneyPart } from '../../../src/app/core/domain/journey';
+import type { GameId, VersionGroupData } from '../../../src/app/core/domain/models';
 import { findGame } from '../../../src/app/core/games/registry';
 import type { BuildIssue } from './assemble';
 import type { GameChecklist } from './validate';
@@ -35,6 +37,29 @@ function encounterKeys(data: VersionGroupData): Map<string, Set<string>> {
 }
 
 const gameName = (id: string) => findGame(id)?.name ?? id;
+
+/** One line per part: areas, **milestones** (with the area they go back to) and {what an unlock opens}. */
+function journeyLines(
+  data: VersionGroupData,
+  game: GameId,
+  journey: readonly JourneyPart[],
+): string[] {
+  const unlocks = new Map((data.unlocks[game] ?? []).map((u) => [u.id, u.label]));
+  return journey.map((part) => {
+    const steps = part.steps.map((step) => {
+      if (step.kind === 'area') return step.location.name;
+      if (step.kind === 'milestone') {
+        const back = step.revisit
+          ? ` (back to ${data.locations.find((l) => l.id === step.milestone.locationId)?.name})`
+          : '';
+        return `**${step.milestone.label}**${back}`;
+      }
+      const what = step.unlocks.map((id) => unlocks.get(id) ?? id).join(', ') || 'Later items';
+      return `{${what} opens: ${step.areas.map((a) => a.location.name).join(', ')}}`;
+    });
+    return `- Part ${part.part}: ${steps.join(' → ')}`;
+  });
+}
 
 export function renderReport({ data, previous, issues, checklists }: ReportInput): string {
   const lines: string[] = [`# ${data.versionGroupId} data report`, ''];
@@ -73,6 +98,22 @@ export function renderReport({ data, previous, issues, checklists }: ReportInput
         `| ${gameName(game)} | ${here.length} | ${here.length - optional} | ${optional} |`,
       );
     }
+  }
+
+  if (data.milestones) {
+    // The Story and Guide order (plan §13.13), for reviewing the `after` anchors; games with the same journey share
+    // a heading.
+    lines.push('', '## Journey', '');
+    const byText = new Map<string, GameId[]>();
+    for (const game of data.games) {
+      const text = journeyLines(data, game, buildJourney(buildGameView(data, game), game)).join(
+        '\n',
+      );
+      byText.set(text, [...(byText.get(text) ?? []), game]);
+    }
+    for (const [text, games] of byText)
+      lines.push(`### ${games.map(gameName).join(', ')}`, '', text, '');
+    lines.pop();
   }
 
   lines.push('', '## Unobtainable species', '');

@@ -11,6 +11,8 @@ import type {
   PokedexData,
   VersionGroupData,
 } from '../../../../src/app/core/domain/models';
+import { buildGameView } from '../../../../src/app/core/domain/game-view';
+import { buildJourney } from '../../../../src/app/core/domain/journey';
 import { parseItemNumbers } from '../../core/item-numbers';
 import { parseMilestoneNumbers } from '../../core/milestone-numbers';
 import { repoRoot, versionGroupDir } from '../../core/paths';
@@ -572,5 +574,35 @@ describe('gsc data: story milestones (plan §7.14)', () => {
     expect(byId('gym-falkner').no).toBe(6);
     expect(byId('champion').no).toBe(72);
     expect(byId('red').no).toBe(96);
+  });
+});
+
+describe('gsc data: the Story and Guide journey (plan §13.13)', () => {
+  const steps = (game: GameId, part: number) =>
+    (buildJourney(buildGameView(data, game), game).find((p) => p.part === part)?.steps ?? []).map(
+      (s) =>
+        s.kind === 'area'
+          ? s.location.id
+          : s.kind === 'milestone'
+            ? `${s.milestone.id}${s.revisit ? '↩' : ''}`
+            : 'opens',
+    );
+
+  it('starts Part 12 in the Goldenrod Radio Tower, as the walkthrough does', () => {
+    for (const game of data.games) {
+      const part12 = steps(game, 12);
+      expect(part12.slice(0, 2)).toEqual(['radio-tower-fake-director↩', 'opens']);
+      expect(part12).toContain('rescue-director↩');
+    }
+  });
+
+  it('goes back to Olivine for Jasmine after Cianwood, before Route 42', () => {
+    const part10 = steps('crystal', 10);
+    expect(part10.indexOf('gym-jasmine↩')).toBeGreaterThan(part10.indexOf('gym-chuck'));
+    expect(part10.indexOf('gym-jasmine↩')).toBeLessThan(part10.indexOf('route-42'));
+  });
+
+  it('wakes Snorlax before Route 11 in Part 23', () => {
+    expect(steps('gold', 23).slice(0, 2)).toEqual(['snorlax↩', 'route-11']);
   });
 });
