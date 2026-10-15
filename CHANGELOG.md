@@ -4,6 +4,8 @@ All notable changes to Poké Guide. The format follows [Keep a Changelog](https:
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-10-15
+
 ### Added
 
 - **Coming Soon games:** the Games page now lists the games still to come: Ruby, Sapphire and Emerald; FireRed and LeafGreen; Diamond, Pearl and Platinum; HeartGold and SoulSilver; Black and White; Black 2 and White 2. They can't be opened yet.
@@ -46,6 +48,7 @@ The first public release.
 
 Saved state schema 3, export codes `PKG1`–`PKG3` and data file schema 1. Every later 1.x release keeps reading all of them.
 
-[Unreleased]: https://github.com/mihmin98/poke-guide/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/mihmin98/poke-guide/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/mihmin98/poke-guide/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/mihmin98/poke-guide/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/mihmin98/poke-guide/releases/tag/v1.0.0
