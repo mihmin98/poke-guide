@@ -22,6 +22,7 @@ import { ProfileStore } from '../../core/profiles/profile.store';
 import { UndoSnackbarService } from '../../core/profiles/undo-snackbar.service';
 import { SettingsStore } from '../../core/settings/settings.store';
 import { itemProgress } from '../../core/domain/item-progress';
+import { milestoneContext } from '../../core/domain/journey';
 import { milestoneProgress } from '../../core/domain/milestone-progress';
 import { CatchToggle } from '../../shared/components/catch-toggle';
 import { ConditionChips } from '../../shared/components/condition-chips';
@@ -82,6 +83,23 @@ const ALL_SUB_AREAS = '__all__';
             Source: Bulbapedia ↗
           </a>
         </p>
+        @if (when(); as w) {
+          <!-- Styled as .meta: this component's styles are at their 4 kB budget. -->
+          <p class="meta when">
+            @if (w.previous; as previous) {
+              After
+              <a [routerLink]="['/', game(), 'story']" [fragment]="'m-' + previous.id">
+                {{ previous.label }}
+              </a>
+            }
+            @if (w.next; as next) {
+              {{ w.previous ? '· before' : 'Before' }}
+              <a [routerLink]="['/', game(), 'story']" [fragment]="'m-' + next.id">
+                {{ next.label }}
+              </a>
+            }
+          </p>
+        }
         @for (note of v.location.notes; track note) {
           <p class="note">{{ note }}</p>
         }
@@ -728,6 +746,15 @@ export class LocationPage {
   protected readonly data = computed(() => {
     const id = this.gameId();
     return untracked(() => this.gameData.forGame(id));
+  });
+
+  /**
+   * When you reach this location in the story (plan §13.13): the milestones just before and after it, for games
+   * with a story checklist.
+   */
+  protected readonly when = computed(() => {
+    const context = milestoneContext(this.data().journey(), this.locationId());
+    return context?.previous || context?.next ? context : undefined;
   });
 
   /** Resets to "All" when the route moves to another location. */

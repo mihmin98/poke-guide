@@ -10,6 +10,8 @@ export interface Settings {
   showEmptyLocations: boolean;
   /** Hides locations after the active profile's `progressPart`. */
   hideUnavailable: boolean;
+  /** Story milestones between the guide's location cards, for games that have them (plan §13.13). */
+  guideShowStory: boolean;
   spriteScale: 2 | 3;
   compactRows: boolean;
   checklistSort: 'national' | 'regional' | 'walkthrough';
@@ -31,6 +33,7 @@ export const DEFAULT_SETTINGS: Readonly<Settings> = {
   showCatchRates: true,
   showEmptyLocations: false,
   hideUnavailable: false,
+  guideShowStory: true,
   spriteScale: 2,
   compactRows: false,
   checklistSort: 'national',
@@ -72,6 +75,7 @@ export function sanitizeSettings(raw: unknown): Settings {
     showCatchRates: bool(s['showCatchRates'], d.showCatchRates),
     showEmptyLocations: bool(s['showEmptyLocations'], d.showEmptyLocations),
     hideUnavailable: bool(s['hideUnavailable'], d.hideUnavailable),
+    guideShowStory: bool(s['guideShowStory'], d.guideShowStory),
     spriteScale: pick(s['spriteScale'], [2, 3] as const, d.spriteScale),
     compactRows: bool(s['compactRows'], d.compactRows),
     checklistSort: pick(

@@ -18,6 +18,7 @@ import { findGame, regionName } from '../../core/games/registry';
 import { ProfileStore } from '../../core/profiles/profile.store';
 import { CurrentGameService } from '../../core/routing/current-game.service';
 import { SettingsStore } from '../../core/settings/settings.store';
+import { MilestoneRow } from '../../shared/components/milestone-row';
 import { ProgressRing } from '../../shared/components/progress-ring';
 import { Sprite } from '../../shared/components/sprite';
 import { scrollBehavior } from '../../shared/motion';
@@ -26,7 +27,15 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
 /** `/:game/guide` (plan §13.4): every location in walkthrough order, with progress and filters. */
 @Component({
   selector: 'app-guide-page',
-  imports: [NgTemplateOutlet, MatIconModule, RouterLink, RouterOutlet, ProgressRing, Sprite],
+  imports: [
+    NgTemplateOutlet,
+    MatIconModule,
+    RouterLink,
+    RouterOutlet,
+    MilestoneRow,
+    ProgressRing,
+    Sprite,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { '[attr.data-detail]': 'hasDetail()' },
   styleUrl: '../../shared/list-detail.scss',
@@ -79,6 +88,17 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
           >
             Only available now
           </button>
+          @if (hasStory()) {
+            <button
+              type="button"
+              class="chip"
+              [attr.aria-pressed]="showStory()"
+              title="Story milestones between the locations"
+              (click)="settings.set('guideShowStory', !showStory())"
+            >
+              Show story
+            </button>
+          }
         </div>
 
         @if (categories().length > 1) {
@@ -132,59 +152,73 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
 
           @if (!collapsed().has(part.part)) {
             <ul class="cards" [id]="'part-body-' + part.part">
-              @for (location of part.locations; track location.id) {
-                <li>
-                  <a
-                    class="card"
-                    [class.open]="location.id === activeLocationId()"
-                    [attr.aria-current]="location.id === activeLocationId() ? 'page' : null"
-                    [routerLink]="['/', game(), 'guide', location.id]"
-                  >
-                    <span class="card-head">
-                      <mat-icon class="kind" aria-hidden="true">{{ location.icon }}</mat-icon>
-                      <span class="name">{{ location.name }}</span>
-                      <span class="count" [class.done]="location.complete">
-                        {{ location.caught }}/{{ location.total }}
-                      </span>
-                      @if (location.items.total) {
-                        <span
-                          class="count items"
-                          [class.done]="location.items.taken === location.items.total"
-                          title="Items picked up"
-                        >
-                          <mat-icon aria-hidden="true">inventory_2</mat-icon>
-                          <span class="sr-only">Items</span>
-                          {{ location.items.taken }}/{{ location.items.total }}
+              @for (row of part.rows; track row.key) {
+                @if (row.kind === 'milestone') {
+                  <li class="milestone">
+                    <app-milestone-row
+                      [milestone]="row.milestone"
+                      [game]="gameId()"
+                      [location]="row.revisit"
+                      [revisit]="!!row.revisit"
+                      [done]="row.done"
+                      [compact]="true"
+                    />
+                  </li>
+                } @else {
+                  @let location = row.location;
+                  <li>
+                    <a
+                      class="card"
+                      [class.open]="location.id === activeLocationId()"
+                      [attr.aria-current]="location.id === activeLocationId() ? 'page' : null"
+                      [routerLink]="['/', game(), 'guide', location.id]"
+                    >
+                      <span class="card-head">
+                        <mat-icon class="kind" aria-hidden="true">{{ location.icon }}</mat-icon>
+                        <span class="name">{{ location.name }}</span>
+                        <span class="count" [class.done]="location.complete">
+                          {{ location.caught }}/{{ location.total }}
                         </span>
-                      }
-                    </span>
-
-                    @if (location.requirements.length) {
-                      <span class="reqs">
-                        @for (requirement of location.requirements; track requirement.id) {
-                          <span class="req" [class.locked]="requirement.locked">
-                            <mat-icon aria-hidden="true">lock</mat-icon>
-                            {{ requirement.label }}
+                        @if (location.items.total) {
+                          <span
+                            class="count items"
+                            [class.done]="location.items.taken === location.items.total"
+                            title="Items picked up"
+                          >
+                            <mat-icon aria-hidden="true">inventory_2</mat-icon>
+                            <span class="sr-only">Items</span>
+                            {{ location.items.taken }}/{{ location.items.total }}
                           </span>
                         }
                       </span>
-                    }
 
-                    <span class="strip">
-                      @for (species of location.species; track species.dex) {
-                        <app-sprite
-                          [dex]="species.dex"
-                          [game]="gameId()"
-                          [name]="species.name"
-                          [dimmed]="!species.caught"
-                          [size]="spriteSize()"
-                        />
-                      } @empty {
-                        <span class="none">No wild Pokémon here</span>
+                      @if (location.requirements.length) {
+                        <span class="reqs">
+                          @for (requirement of location.requirements; track requirement.id) {
+                            <span class="req" [class.locked]="requirement.locked">
+                              <mat-icon aria-hidden="true">lock</mat-icon>
+                              {{ requirement.label }}
+                            </span>
+                          }
+                        </span>
                       }
-                    </span>
-                  </a>
-                </li>
+
+                      <span class="strip">
+                        @for (species of location.species; track species.dex) {
+                          <app-sprite
+                            [dex]="species.dex"
+                            [game]="gameId()"
+                            [name]="species.name"
+                            [dimmed]="!species.caught"
+                            [size]="spriteSize()"
+                          />
+                        } @empty {
+                          <span class="none">No wild Pokémon here</span>
+                        }
+                      </span>
+                    </a>
+                  </li>
+                }
               }
             </ul>
           }
@@ -216,6 +250,26 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
         <span class="part-title">Part {{ part.part }} · {{ part.title }}</span>
         <span class="count">{{ part.caught }}/{{ part.total }}</span>
       </button>
+      @if (part.story.total) {
+        <a
+          class="story-link"
+          [routerLink]="['/', game(), 'story']"
+          [fragment]="'part-' + part.part"
+          [attr.aria-label]="
+            'Part ' +
+            part.part +
+            ' in the story: ' +
+            part.story.done +
+            ' of ' +
+            part.story.total +
+            ' done'
+          "
+          title="This part in the story"
+        >
+          <mat-icon aria-hidden="true">flag</mat-icon>
+          {{ part.story.done }}/{{ part.story.total }}
+        </a>
+      }
     </ng-template>
   `,
   styles: `
@@ -281,6 +335,26 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
       font-size: 16px;
       width: 16px;
       height: 16px;
+    }
+    /* Story milestones take a whole row of the card grid (plan §13.13). */
+    .cards > .milestone {
+      grid-column: 1 / -1;
+    }
+    .story-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      min-height: 48px;
+      padding: 0 4px;
+      font: var(--mat-sys-label-large);
+      font-variant-numeric: tabular-nums;
+      color: var(--mat-sys-primary);
+      text-decoration: none;
+    }
+    .story-link mat-icon {
+      font-size: 18px;
+      width: 18px;
+      height: 18px;
     }
     .cards {
       list-style: none;
@@ -389,6 +463,9 @@ export class GuidePage {
   protected readonly selectedCategories = signal<ReadonlySet<EncounterMethodCategory>>(new Set());
 
   protected readonly onlyAvailable = this.settings.select('hideUnavailable');
+  protected readonly showStory = this.settings.select('guideShowStory');
+  /** Only games with a story checklist get story rows and the chip. */
+  protected readonly hasStory = computed(() => (this.data().view()?.milestones.length ?? 0) > 0);
   protected readonly spriteSize = computed(() =>
     this.settings.settings().spriteScale === 3 ? 42 : 32,
   );
@@ -411,9 +488,11 @@ export class GuidePage {
     if (!view) return [];
     return buildGuide({
       view,
+      journey: this.data().journey(),
       game: this.gameId(),
       caught: this.profiles.caughtSet(),
       itemsTaken: this.profiles.itemsTakenIn(this.gameId()),
+      milestonesDone: this.profiles.milestonesDoneIn(this.gameId()),
       progressPart: this.progressPart(),
       filters: {
         search: this.search(),
@@ -421,6 +500,7 @@ export class GuidePage {
         onlyAvailable: this.onlyAvailable(),
         categories: this.selectedCategories(),
         showEmpty: this.settings.settings().showEmptyLocations,
+        showStory: this.showStory(),
       },
     });
   });

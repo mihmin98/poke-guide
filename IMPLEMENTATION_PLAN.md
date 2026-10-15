@@ -1882,8 +1882,8 @@ Stages:
   goldens, the curated anchors for rby and gsc, rebuilt data (2026-10-15: two rby anchors, none needed in gsc)
 - [x] **C.** Story page: journey rows, area card, opens callout, filters, region headers, detail pane and route,
   the location page's `section` input, deep links (2026-10-15)
-- [ ] **D.** Guide page: inline milestone rows, the `guideShowStory` setting, the location page's "When" line,
-  the part header's Story link
+- [x] **D.** Guide page: inline milestone rows, the `guideShowStory` setting, the location page's "When" line,
+  the part header's Story link (2026-10-15)
 - [ ] Manual browser check (the user)
 - **Accept when:** the Story shows the areas between milestones with reachable-now counts; the Surf callout on
   `/red/story` shrinks as its Pokémon are caught; Sabrina follows Silph Co.; Flash sits in Part 7 after Diglett's

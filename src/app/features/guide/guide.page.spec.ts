@@ -1,4 +1,4 @@
-import { signal } from '@angular/core';
+import { computed, signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { RouterTestingHarness } from '@angular/router/testing';
@@ -6,6 +6,7 @@ import { routerFeatures } from '../../app.config';
 import { routes } from '../../app.routes';
 import { GameDataService } from '../../core/data/game-data.service';
 import { buildGameView } from '../../core/domain/game-view';
+import { buildJourney } from '../../core/domain/journey';
 import {
   testData,
   testEncounter,
@@ -13,6 +14,7 @@ import {
   testSpecies,
 } from '../../core/domain/testing/test-data';
 import { ProfileStore } from '../../core/profiles/profile.store';
+import { SettingsStore } from '../../core/settings/settings.store';
 import { STATE_STORAGE } from '../../core/storage/storage.service';
 import { GuidePage } from './guide.page';
 
@@ -25,12 +27,25 @@ const data = testData({
       name: 'Route 1',
     }),
   ],
+  milestones: [
+    {
+      no: 3,
+      id: 'rival-1',
+      label: 'Rival battle 1',
+      kind: 'battle',
+      part: { red: 1 },
+      locationId: 'route-1',
+      detail: 'Not shown in the guide',
+    },
+  ],
 });
 
+const view = signal(buildGameView(data, 'red'));
 const stub = {
   isLoading: signal(false),
   error: signal(undefined),
-  view: signal(buildGameView(data, 'red')),
+  view,
+  journey: computed(() => buildJourney(view(), 'red')),
   checklist: signal([
     { dex: 16, obtainable: true, sources: [], exclusiveGroupIds: [] },
     { dex: 19, obtainable: true, sources: [], exclusiveGroupIds: [] },
@@ -129,5 +144,36 @@ describe('GuidePage (plan §13.4)', () => {
     hide.click();
     fixture.detectChanges();
     expect(el.querySelectorAll('.card').length).toBe(0);
+  });
+
+  it('shows compact story rows between the cards, a chip to hide them and a link to the story part', () => {
+    profiles.createProfile('Red run', 'red');
+    const { fixture, el } = render();
+    const items = [...el.querySelectorAll('.cards > li')];
+    expect(items.map((li) => (li.classList.contains('milestone') ? 'milestone' : 'card'))).toEqual([
+      'card',
+      'milestone',
+    ]);
+    const row = el.querySelector('app-milestone-row')!;
+    expect(row.querySelector('.label')?.textContent).toBe('Rival battle 1');
+    expect(row.querySelector('.more')).toBeNull();
+    const link = el.querySelector('.part-head .story-link')!;
+    expect(link.getAttribute('href')).toBe('/red/story#part-1');
+    expect(link.textContent).toContain('0/1');
+
+    // Ticking it here ticks it on the profile, as on the Story page.
+    row.querySelector<HTMLButtonElement>('app-milestone-toggle button')!.click();
+    fixture.detectChanges();
+    expect(profiles.activeProfile()?.milestonesDone).toEqual([3]);
+    expect(link.textContent).toContain('1/1');
+
+    const chip = [...el.querySelectorAll<HTMLButtonElement>('.chip')].find((b) =>
+      b.textContent?.includes('Show story'),
+    )!;
+    expect(chip.getAttribute('aria-pressed')).toBe('true');
+    chip.click();
+    fixture.detectChanges();
+    expect(el.querySelector('app-milestone-row')).toBeNull();
+    expect(TestBed.inject(SettingsStore).settings().guideShowStory).toBe(false);
   });
 });

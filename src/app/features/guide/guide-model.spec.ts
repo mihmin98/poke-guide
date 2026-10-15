@@ -1,5 +1,11 @@
 import { buildGameView } from '../../core/domain/game-view';
-import type { Encounter, LocationItem, VersionGroupData } from '../../core/domain/models';
+import { buildJourney } from '../../core/domain/journey';
+import type {
+  Encounter,
+  LocationItem,
+  Milestone,
+  VersionGroupData,
+} from '../../core/domain/models';
 import {
   testData,
   testEncounter,
@@ -15,6 +21,7 @@ const NO_FILTERS: GuideFilters = {
   onlyAvailable: false,
   categories: new Set(),
   showEmpty: false,
+  showStory: true,
 };
 
 function surf(dex: number): Encounter {
@@ -73,19 +80,23 @@ function data(): VersionGroupData {
   });
 }
 
-const view = () => buildGameView(data(), 'red');
+const view = (source = data()) => buildGameView(source, 'red');
 
 const guide = (
   filters: Partial<GuideFilters> = {},
   caught: number[] = [],
   progressPart?: number,
   itemsTaken: number[] = [],
+  source = data(),
+  milestonesDone: number[] = [],
 ) =>
   buildGuide({
-    view: view(),
+    view: view(source),
+    journey: buildJourney(view(source), 'red'),
     game: 'red',
     caught: new Set(caught),
     itemsTaken: new Set(itemsTaken),
+    milestonesDone: new Set(milestonesDone),
     ...(progressPart === undefined ? {} : { progressPart }),
     filters: { ...NO_FILTERS, ...filters },
   });
@@ -164,5 +175,68 @@ describe('guide model (plan §13.4)', () => {
   it('gives every location kind an icon', () => {
     expect(locationIcon('cave')).toBe('landscape');
     expect(locationIcon('town')).toBe('location_city');
+  });
+
+  describe('story milestones between the cards (plan §13.13)', () => {
+    const milestone = (no: number, part: number, locationId: string, label: string): Milestone => ({
+      no,
+      id: `m${no}`,
+      label,
+      kind: 'gym',
+      badge: 'Test',
+      part: { red: part },
+      locationId,
+    });
+    const withStory = (): VersionGroupData => ({
+      ...data(),
+      milestones: [
+        milestone(1, 1, 'route-1', 'Defeat Brock'),
+        milestone(2, 2, 'route-1', 'Go back to Route 1'),
+      ],
+    });
+    const rows = (parts: ReturnType<typeof guide>) =>
+      parts.map((p) =>
+        p.rows.map((r) => (r.kind === 'location' ? r.location.id : r.milestone.label)),
+      );
+
+    it('puts milestones after their location, a revisit with a link back', () => {
+      const parts = guide({}, [], undefined, [], withStory(), [1]);
+      expect(rows(parts)).toEqual([
+        ['route-1', 'Defeat Brock'],
+        ['Go back to Route 1', 'route-22'],
+      ]);
+      expect(parts[0]!.rows[1]).toMatchObject({ done: true, revisit: undefined });
+      expect(parts[1]!.rows[0]).toMatchObject({
+        done: false,
+        revisit: { id: 'route-1', name: 'route-1' },
+      });
+      // Part counts stay Pokémon-only; the story count covers every milestone of the part.
+      expect(parts[0]).toMatchObject({ caught: 0, total: 2, story: { done: 1, total: 1 } });
+    });
+
+    it('hides them with showStory off, and done ones with "Hide completed"', () => {
+      expect(rows(guide({ showStory: false }, [], undefined, [], withStory()))).toEqual([
+        ['route-1'],
+        ['route-22'],
+      ]);
+      const hidden = guide({ hideCompleted: true }, [], undefined, [], withStory(), [1]);
+      expect(rows(hidden)).toEqual([['route-1'], ['Go back to Route 1', 'route-22']]);
+      expect(hidden[0]!.story).toEqual({ done: 1, total: 1 });
+    });
+
+    it('searches milestone labels too, and keeps them under the category chips', () => {
+      expect(rows(guide({ search: 'brock' }, [], undefined, [], withStory()))).toEqual([
+        ['Defeat Brock'],
+      ]);
+      const categories = new Set<EncounterMethodCategory>(['water']);
+      expect(rows(guide({ categories }, [], undefined, [], withStory()))).toEqual([
+        ['Defeat Brock'],
+        ['Go back to Route 1', 'route-22'],
+      ]);
+    });
+
+    it('has no story count for a game without milestones', () => {
+      expect(guide()[0]!.story).toEqual({ done: 0, total: 0 });
+    });
   });
 });

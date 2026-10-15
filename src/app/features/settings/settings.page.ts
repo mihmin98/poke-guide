@@ -216,6 +216,11 @@ export class SettingsPage {
       'Only locations available now',
       "Hide locations past the walkthrough part you're on (set on the checklist).",
     ),
+    this.flag(
+      'guideShowStory',
+      'Story steps in the guide',
+      'Gyms, battles and events between the locations, for games with a story checklist.',
+    ),
   ];
 
   protected setSort(event: Event): void {

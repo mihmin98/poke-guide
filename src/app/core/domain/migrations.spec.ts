@@ -162,6 +162,12 @@ describe('sanitizing stored state', () => {
     expect(sanitizeSettings(undefined)).toEqual(DEFAULT_SETTINGS);
   });
 
+  it('shows story steps in the guide unless turned off, also for settings saved before Phase 18', () => {
+    expect(sanitizeSettings({ showRates: true }).guideShowStory).toBe(true);
+    expect(sanitizeSettings({ guideShowStory: false }).guideShowStory).toBe(false);
+    expect(sanitizeSettings({ guideShowStory: 'no' }).guideShowStory).toBe(true);
+  });
+
   it('repairs profiles and drops those without an id or game', () => {
     expect(
       sanitizeProfile(

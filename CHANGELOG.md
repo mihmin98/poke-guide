@@ -9,6 +9,8 @@ All notable changes to Poké Guide. The format follows [Keep a Changelog](https:
 - **Coming Soon games:** the Games page now lists the games still to come: Ruby, Sapphire and Emerald; FireRed and LeafGreen; Diamond, Pearl and Platinum; HeartGold and SoulSilver; Black and White; Black 2 and White 2. They can't be opened yet.
 - **The Story shows the road between milestones:** the areas you pass between two story steps, with the Pokémon and items you can get there by that point and what opens up later. After a milestone that unlocks something (Surf, a fishing rod, a key), a note lists the earlier areas worth going back to, as long as they still hold something you need. "Hide finished areas" keeps the list short.
 - **Story links:** on a wide screen, an area opens beside the Story, as in the Guide; on a phone, Back returns to the Story. A link can point straight at a part or a milestone (`/red/story#m-gym-misty`).
+- **Story steps in the Guide:** gyms, battles and events now sit between the Guide's locations, with the same tick box as on the Story page; "Show story" (also in Settings) hides them. Each part's header links to that part of the Story.
+- **When you get there:** a location page now says which story steps come just before and after it, linking to them in the Story.
 
 ### Changed
 

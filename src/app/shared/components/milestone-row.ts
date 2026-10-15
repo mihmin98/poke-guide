@@ -7,13 +7,14 @@ import { MilestoneToggle } from './milestone-toggle';
 
 /**
  * One story milestone (plan §13.12): its toggle, label, kind and detail, and links to where it happens and to
- * the Pokémon it involves. Used by the Story page and the location page's Story section.
+ * the Pokémon it involves. Used by the Story page, the location page's Story section and, compact, between the
+ * guide's location cards.
  */
 @Component({
   selector: 'app-milestone-row',
   imports: [MatIconModule, RouterLink, MilestoneToggle],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: { '[class.done]': 'done()' },
+  host: { '[class.done]': 'done()', '[class.compact]': 'compact()' },
   template: `
     <app-milestone-toggle [milestone]="milestone()" [game]="game()" />
     <span class="label">{{ milestone().label }}</span>
@@ -23,7 +24,13 @@ import { MilestoneToggle } from './milestone-toggle';
         <span class="badge">Optional</span>
       }
     </span>
-    @if (milestone().detail || location() || species()) {
+    @if (compact()) {
+      @if (revisit() && location(); as where) {
+        <p class="more">
+          <a [routerLink]="['/', game(), section(), where.id]">Back to {{ where.name }}</a>
+        </p>
+      }
+    } @else if (milestone().detail || location() || species()) {
       <p class="more">
         @if (milestone().detail; as detail) {
           <span>{{ detail }}</span>
@@ -59,6 +66,14 @@ import { MilestoneToggle } from './milestone-toggle';
     .label {
       grid-area: label;
       font: var(--mat-sys-body-large);
+    }
+    :host(.compact) {
+      padding-block: 0;
+      background: var(--mat-sys-surface-container-lowest);
+      border: 1px dashed var(--mat-sys-outline-variant);
+    }
+    :host(.compact) .label {
+      font: var(--mat-sys-body-medium);
     }
     :host(.done) .label {
       color: var(--mat-sys-on-surface-variant);
@@ -103,6 +118,8 @@ export class MilestoneRow {
   readonly section = input<'guide' | 'story'>('guide');
   readonly species = input<{ name: string; slug: string }>();
   readonly done = input(false);
+  /** The guide's one-line form (plan §13.13): no detail, Pokémon or location link except "Back to …". */
+  readonly compact = input(false);
 
   protected readonly kindLabel = computed(() => milestoneKindLabel(this.milestone().kind));
 }

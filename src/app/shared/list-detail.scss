@@ -41,9 +41,13 @@
 
 /*
  * Sticky headers carry their spacing as padding: a margin on a stuck element is transparent, so the rows
- * underneath show through above the header band.
+ * underneath show through above the header band. The collapse toggle fills the row, and a page may add a link
+ * after it (the Guide's Story link).
  */
 .part-head {
+  display: flex;
+  align-items: center;
+  gap: 4px;
   position: sticky;
   top: var(--stick-top, var(--app-toolbar-height, 64px));
   z-index: 1;
@@ -56,7 +60,8 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  width: 100%;
+  flex: 1;
+  min-width: 0;
   min-height: 48px;
   padding: 0;
   border: none;

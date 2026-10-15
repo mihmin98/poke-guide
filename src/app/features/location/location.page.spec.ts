@@ -1,10 +1,11 @@
-import { signal } from '@angular/core';
+import { computed, signal } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { Router, provideRouter } from '@angular/router';
 import { routerFeatures } from '../../app.config';
 import { routes } from '../../app.routes';
 import { GameDataService } from '../../core/data/game-data.service';
 import { buildGameView } from '../../core/domain/game-view';
+import { buildJourney } from '../../core/domain/journey';
 import type { LocationItem } from '../../core/domain/models';
 import {
   testData,
@@ -108,10 +109,12 @@ const data = testData({
   ],
 });
 
+const view = signal(buildGameView(data, 'red'));
 const stub = {
   isLoading: signal(false),
   error: signal(undefined),
-  view: signal(buildGameView(data, 'red')),
+  view,
+  journey: computed(() => buildJourney(view(), 'red')),
   checklist: signal([{ dex: 16, obtainable: true, sources: [], exclusiveGroupIds: [] }]),
 };
 
@@ -149,6 +152,18 @@ describe('LocationPage (plan §13.5)', () => {
       'https://bulbapedia.bulbagarden.net/w/index.php?title=route-2&oldid=1',
     );
     expect(el.querySelector('.prev-next a')?.getAttribute('href')).toBe('/red/guide/route-1');
+  });
+
+  it('says when you reach it in the story, linking to the milestones (plan §13.13)', () => {
+    const { el } = render();
+    const when = el.querySelector('.when')!;
+    expect(when.textContent?.replace(/\s+/g, ' ').trim()).toBe(
+      'After Deliver the parcel · before Receive Pidgey',
+    );
+    expect([...when.querySelectorAll('a')].map((a) => a.getAttribute('href'))).toEqual([
+      '/red/story#m-parcel',
+      '/red/story#m-pidgey-gift',
+    ]);
   });
 
   it('stays in the Story when opened from it (plan §13.13)', () => {

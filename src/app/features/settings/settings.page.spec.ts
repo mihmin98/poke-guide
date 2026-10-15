@@ -52,11 +52,13 @@ describe('SettingsPage (plan §11.4)', () => {
     toggle(el, 'Compact rows').click();
     toggle(el, 'Larger sprites').click();
     toggle(el, 'Locations with no Pokémon').click();
+    toggle(el, 'Story steps in the guide').click();
     await fixture.whenStable();
     expect(settings.settings()).toMatchObject({
       compactRows: true,
       spriteScale: 3,
       showEmptyLocations: true,
+      guideShowStory: false,
     });
     expect(toggle(el, 'Compact rows').getAttribute('aria-checked')).toBe('true');
   });

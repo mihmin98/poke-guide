@@ -1,10 +1,13 @@
 // Pure view model for the guide page (plan §13.4): no Angular, so it can be unit-tested on its own.
 import { encountersFor, type GameView } from '../../core/domain/game-view';
 import { itemProgress, type ItemProgress } from '../../core/domain/item-progress';
+import type { JourneyPart } from '../../core/domain/journey';
+import { milestoneProgress, type MilestoneProgress } from '../../core/domain/milestone-progress';
 import type {
   GameId,
   GameLocation,
   LocationKind,
+  Milestone,
   RegionId,
   Species,
 } from '../../core/domain/models';
@@ -68,13 +71,30 @@ export interface GuideLocation {
   items: ItemProgress;
 }
 
+/** A story milestone between the location cards (plan §13.13). */
+export interface GuideMilestone {
+  milestone: Milestone;
+  done: boolean;
+  /** Its location is from an earlier part; linked as "Back to …". */
+  revisit: { id: string; name: string } | undefined;
+}
+
+export type GuideRow =
+  | { kind: 'location'; key: string; location: GuideLocation }
+  | ({ kind: 'milestone'; key: string } & GuideMilestone);
+
 export interface GuidePart {
   part: number;
   title: string;
   region: RegionId | undefined;
+  /** Location cards and, with `showStory`, milestones, in journey order. */
+  rows: GuideRow[];
   locations: GuideLocation[];
+  /** Pokémon only (items and milestones never count). */
   caught: number;
   total: number;
+  /** Every milestone of the part, whatever the filters show; `total` 0 without a story checklist. */
+  story: MilestoneProgress;
 }
 
 export interface GuideFilters {
@@ -87,14 +107,20 @@ export interface GuideFilters {
   categories: ReadonlySet<EncounterMethodCategory>;
   /** Keep locations with no encounters at all (`showEmptyLocations`). */
   showEmpty: boolean;
+  /** Story milestones between the cards (`guideShowStory`, plan §13.13). */
+  showStory: boolean;
 }
 
 export interface GuideInput {
   view: GameView;
+  /** The walkthrough order of locations and milestones (`GameDataView.journey`). */
+  journey: readonly JourneyPart[];
   game: GameId;
   caught: ReadonlySet<number>;
   /** `LocationItem.no` values taken, already narrowed to this game's profile. */
   itemsTaken: ReadonlySet<number>;
+  /** `Milestone.no` values done, already narrowed to this game's profile. */
+  milestonesDone: ReadonlySet<number>;
   progressPart?: number;
   filters: GuideFilters;
 }
@@ -189,44 +215,57 @@ function matchesSearch(location: GuideLocation, search: string): boolean {
   );
 }
 
-function regionOf(
-  view: GameView,
-  fromWalkthrough: RegionId | undefined,
-  locations: readonly GuideLocation[],
-): RegionId | undefined {
-  if (fromWalkthrough) return fromWalkthrough;
-  const first = locations[0];
-  return first ? view.locationById.get(first.id)?.region : undefined;
-}
-
 /**
- * The guide's parts in walkthrough order, with their locations filtered. Parts that end up empty
- * are dropped; part counts describe the locations that are left.
+ * The guide's parts in walkthrough order, with their locations filtered and, with `showStory`, the story
+ * milestones between them (plan §13.13). Search also matches milestone labels; "Hide completed" hides done
+ * milestones; the category chips leave them alone. Parts that end up empty are dropped; part counts describe
+ * the locations that are left.
  */
 export function buildGuide(input: GuideInput): GuidePart[] {
-  const { view, filters, progressPart } = input;
-  const byPart = new Map<number, GuideLocation[]>();
+  const { view, journey, filters, progressPart, milestonesDone } = input;
+  const query = filters.search.trim().toLowerCase();
+  const parts: GuidePart[] = [];
 
-  for (const location of view.locations) {
-    const built = buildLocation(location, input);
-    if (!built) continue;
-    if (filters.hideCompleted && built.complete) continue;
-    if (filters.onlyAvailable && progressPart !== undefined && built.part > progressPart) continue;
-    if (!matchesSearch(built, filters.search)) continue;
-    const list = byPart.get(built.part);
-    if (list) list.push(built);
-    else byPart.set(built.part, [built]);
-  }
-
-  const titles = new Map(view.walkthrough.map((p) => [p.part, p]));
-  return [...byPart.entries()]
-    .sort((a, b) => a[0] - b[0])
-    .map(([part, locations]) => ({
-      part,
-      title: titles.get(part)?.title ?? `Part ${part}`,
-      region: regionOf(view, titles.get(part)?.region, locations),
+  for (const part of journey) {
+    if (filters.onlyAvailable && progressPart !== undefined && part.part > progressPart) continue;
+    const rows: GuideRow[] = [];
+    const locations: GuideLocation[] = [];
+    const milestones: Milestone[] = [];
+    for (const step of part.steps) {
+      if (step.kind === 'area') {
+        const built = buildLocation(step.location, input);
+        if (!built) continue;
+        if (filters.hideCompleted && built.complete) continue;
+        if (!matchesSearch(built, filters.search)) continue;
+        locations.push(built);
+        rows.push({ kind: 'location', key: `l-${built.id}`, location: built });
+      } else if (step.kind === 'milestone') {
+        const { milestone } = step;
+        milestones.push(milestone);
+        const done = milestonesDone.has(milestone.no);
+        if (!filters.showStory || (filters.hideCompleted && done)) continue;
+        if (query && !milestone.label.toLowerCase().includes(query)) continue;
+        const where = step.revisit ? view.locationById.get(milestone.locationId) : undefined;
+        rows.push({
+          kind: 'milestone',
+          key: `m-${milestone.no}`,
+          milestone,
+          done,
+          revisit: where && { id: where.id, name: where.name },
+        });
+      }
+    }
+    if (rows.length === 0) continue;
+    parts.push({
+      part: part.part,
+      title: part.title,
+      region: part.region,
+      rows,
       locations,
       caught: locations.reduce((sum, l) => sum + l.caught, 0),
       total: locations.reduce((sum, l) => sum + l.total, 0),
-    }));
+      story: milestoneProgress(milestones, milestonesDone),
+    });
+  }
+  return parts;
 }
