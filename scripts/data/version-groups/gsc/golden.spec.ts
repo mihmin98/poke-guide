@@ -577,6 +577,84 @@ describe('gsc data: story milestones (plan §7.14)', () => {
   });
 });
 
+describe('gsc data: story battle teams (plan §7.14, Phase 19)', () => {
+  const byId = (id: string) => data.milestones!.find((m) => m.id === id)!;
+  const levels = (id: string, game: GameId) =>
+    byId(id).teams![game]!.map((t) => t.pokemon.map((p) => `#${p.dex} Lv ${p.level}`));
+
+  it("has Falkner's team", () => {
+    expect(byId('gym-falkner').teams!.crystal).toEqual([
+      {
+        trainer: 'Falkner',
+        trainerClass: 'Leader',
+        prize: 900,
+        pokemon: [
+          {
+            dex: 16,
+            level: 7,
+            gender: 'male',
+            moves: [
+              { name: 'Tackle', type: 'normal' },
+              { name: 'Mud-Slap', type: 'ground' },
+            ],
+          },
+          {
+            dex: 17,
+            level: 9,
+            gender: 'male',
+            moves: [
+              { name: 'Tackle', type: 'normal' },
+              { name: 'Mud-Slap', type: 'ground' },
+              { name: 'Gust', type: 'flying' },
+            ],
+          },
+        ],
+      },
+    ]);
+  });
+
+  it('has Red at Mt. Silver, led by Pikachu at level 81', () => {
+    const [red] = byId('red').teams!.gold!;
+    expect(red).toMatchObject({ trainer: 'Red', trainerClass: 'PKMN Trainer', prize: 7700 });
+    expect(red!.pokemon[0]).toMatchObject({ dex: 25, level: 81 });
+  });
+
+  it('has Lance as the Champion, and the rival by starter from "???" on', () => {
+    for (const game of data.games) {
+      expect(byId('champion').teams![game]!.map((t) => t.trainer)).toEqual(['Lance']);
+      expect(byId('rival-1').teams![game]!.map((t) => [t.trainer, t.variant])).toEqual([
+        ['???', { kind: 'starter', dex: 152 }],
+        ['???', { kind: 'starter', dex: 155 }],
+        ['???', { kind: 'starter', dex: 158 }],
+      ]);
+      expect(byId('rival-2').teams![game]!.every((t) => t.trainer === 'Silver')).toBe(true);
+    }
+  });
+
+  it('matches the Radio Tower Executives in page order', () => {
+    expect(
+      [
+        'radio-tower-fake-director',
+        'radio-tower-4f-executive',
+        'radio-tower-5f-executive',
+        'radio-tower-studio-executive',
+      ].map((id) => byId(id).teams!.gold![0]!.prize),
+    ).toEqual([2160, 2592, 2304, 2520]);
+    expect(levels('radio-tower-4f-executive', 'gold')).toEqual([['#42 Lv 36']]);
+  });
+
+  it('gives every gym and battle a team except the battles without a party block', () => {
+    const without = (game: GameId) =>
+      data
+        .milestones!.filter((m) => m.part[game] !== undefined)
+        .filter((m) => (m.kind === 'gym' || m.kind === 'battle') && !m.teams?.[game])
+        .map((m) => m.id);
+    expect(without('gold')).toEqual(['route-24-rocket']);
+    expect(without('crystal')).toEqual(['wise-trio', 'route-24-rocket']);
+    expect(byId('eusine-cianwood').teams!.crystal![0]!.trainer).toBe('Eusine');
+  });
+});
+
 describe('gsc data: the Story and Guide journey (plan §13.13)', () => {
   const steps = (game: GameId, part: number) =>
     (buildJourney(buildGameView(data, game), game).find((p) => p.part === part)?.steps ?? []).map(

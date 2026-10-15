@@ -81,10 +81,8 @@ async function buildGroup(
 
   const itemNumbersFile = join(versionGroupDir(config.id), 'item-numbers.json');
   const milestoneNumbersFile = join(versionGroupDir(config.id), 'milestone-numbers.json');
-  const { data, pokedex, issues, itemNumbers, milestoneNumbers } = assembleVersionGroup(
-    config,
-    (title) => pages.get(title) ?? null,
-    {
+  const { data, pokedex, issues, itemNumbers, milestoneNumbers, unclaimedBattles } =
+    assembleVersionGroup(config, (title) => pages.get(title) ?? null, {
       builtAt: new Date().toISOString(),
       categoryMembers,
       itemNumbers: existsSync(itemNumbersFile)
@@ -93,8 +91,7 @@ async function buildGroup(
       milestoneNumbers: existsSync(milestoneNumbersFile)
         ? parseMilestoneNumbers(readFileSync(milestoneNumbersFile, 'utf8'))
         : null,
-    },
-  );
+    });
   const validation = validateVersionGroup(data, pokedex);
   issues.push(...validation.issues);
   printIssues(issues);
@@ -155,7 +152,13 @@ async function buildGroup(
   mkdirSync(dirname(reportFile), { recursive: true });
   writeFileSync(
     reportFile,
-    renderReport({ data, previous, issues, checklists: validation.checklists }),
+    renderReport({
+      data,
+      previous,
+      issues,
+      checklists: validation.checklists,
+      unclaimedBattles,
+    }),
   );
   console.log(`Wrote ${relative(repoRoot(), reportFile)}`);
   return true;

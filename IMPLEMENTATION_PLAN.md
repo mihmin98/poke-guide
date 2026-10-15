@@ -838,7 +838,8 @@ in app code).
     `{{badge|Rising}}`"; other mentions, like Part 5's badge table or the Route 23 guards, don't count) needs a `gym` milestone with `badge: X` in that part, and the reverse; a part's
     `{{Party}}` blocks shouldn't outnumber its `gym` and `battle` milestones. Party blocks sit inside other templates
     (a Gym box), and a run of blocks with the same location, prize and sprite (one per starter, or per rival Eevee
-    evolution in Yellow) is one battle.
+    evolution in Yellow) is one battle. (Phase 19 replaced this count with the "unclaimed party" warning of the battle
+    teams below.)
 - **Golden assertions (Red/Blue/Yellow):** each game has the 8 gyms with the 8 badges in order; the Elite Four and
   the Champion are in Part 16; Mewtwo is at Cerulean Cave in Part 17; Lapras is at Silph Co.; Yellow has the
   Jessie & James battles and Red/Blue don't.
@@ -876,8 +877,10 @@ in app code).
     `walkthroughPages` says which games a page covers). Held items aren't listed, even in Gen II.
   - **Matching:** the curated entry names its trainer, `trainer: 'Brock'` or alternatives such as
     `['???', 'Silver']` (the Gen II rival before you name him). Per game and part page, a milestone with `trainer`
-    claims the **first unclaimed run** of parties whose `name` matches, in page order; a run (consecutive parties
-    with the same name and location) is one battle's variants. Variants come from the `caption`:
+    claims the **first unclaimed battle** whose party `name` matches, in page order. A battle is one party, or a
+    run of consecutive parties with the same name and location that **each have a variant caption** (without that
+    condition, the Radio Tower's three consecutive Executives would merge into one battle). Variants come from the
+    `caption`:
     `{{PlayerChoice|0001|Bulbasaur}}` (the player's starter) or Yellow's `{{BlueEevee|Vaporeon}}` (with
     `evolved=no`). The input field `trainer` isn't written to the output.
   - **Checks:** errors for a `trainer` with no unclaimed match on its part page in one of its games, `trainer` on a
@@ -894,7 +897,12 @@ in app code).
     at the milestone's location.
   - No contract changes: milestone and item numbers, saved state and `PKG` codes are untouched, and the data
     `schemaVersion` stays 1 (the field is optional). Red/Blue and Gold/Silver share pages, so their teams are stored
-    once per game (about +50–70 KB raw per main data file).
+    once per game.
+  - **First build (2026-10-15):** 0 errors and no new warnings; every party is claimed. Teams for 23 of 24 battles
+    in Red/Blue, 27 of 28 in Yellow (not the Route 25 Jr. Trainer), 38 of 39 in Gold/Silver and 39 of 41 in Crystal
+    (not the Nugget Bridge Rocket or the Wise Trio). `rby.json` 320 → 400 KB raw (33.6 → 38.4 KB gzipped),
+    `gsc.json` 814 → 932 KB (68.8 → 74.7 KB gzipped). Item and milestone numbers unchanged. `{{PK}}{{MN}}` renders
+    as "PKMN", and a class that repeats the name is dropped (Proton is "Executive Executive" on the page).
 
 ---
 
@@ -1965,8 +1973,8 @@ matched to milestones by a curated `trainer` name in page order. No contract cha
 
 Stages (details in the plan):
 - [x] **A.** Docs: §7.14, §8, §13.12, §19.1, the game plans (2026-10-15)
-- [ ] **B.** Pipeline: model, `core/parties.ts`, `attachTeams`, `trainer` curation (rby, gsc), validation, report,
-  goldens, rebuilt data
+- [x] **B.** Pipeline: model, `core/parties.ts`, `attachTeams`, `trainer` curation (rby, gsc), validation, report,
+  goldens, rebuilt data (2026-10-15)
 - [ ] **C.** App: levels helpers, `MilestoneTeam`, the `MilestoneRow` disclosure and level tag, callers, specs
 - [ ] Manual browser check (the user)
 - **Accept when:** every battle milestone with a party block shows its team (with variants) in each of its games;

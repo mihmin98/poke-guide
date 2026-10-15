@@ -6,6 +6,9 @@
  * A milestone at a location from an earlier part (a revisit) takes `after`: the location of its own part it follows
  * in the Story and Guide journey (plan §7.14, §13.13).
  *
+ * A `gym` or `battle` milestone names its `trainer` as the part page's `{{Party}}` block does ("Blue", "Executive"),
+ * and the build attaches that party's team (plan §7.14, Phase 19). Battles with no party block on the page have none.
+ *
  * Ids are a contract: `milestone-numbers.json` maps them to the numbers profiles store. Never rename one;
  * retire its number below and add a new id instead.
  */
@@ -30,6 +33,7 @@ const gym = (
   id: `gym-${leader.toLowerCase().replace(/[^a-z]+/g, '-')}`,
   label: `Defeat ${leader}`,
   kind: 'gym',
+  trainer: leader,
   part: all(part),
   locationId,
   detail: `${badge} Badge · ${tm}`,
@@ -45,6 +49,7 @@ const rival = (
   id: `rival-${n}`,
   label: `Rival battle ${n}`,
   kind: 'battle',
+  trainer: 'Blue',
   part: all(part),
   locationId,
   detail,
@@ -54,6 +59,8 @@ const jessieJames = (id: string, locationId: string, part: number): MilestoneDef
   id: `jessie-james-${id}`,
   label: 'Battle Jessie and James',
   kind: 'battle',
+  // The page names the pair's party "Rocket".
+  trainer: 'Rocket',
   part: yellow(part),
   locationId,
 });
@@ -222,6 +229,7 @@ export const RBY_MILESTONES: readonly MilestoneDefinition[] = [
     id: 'giovanni-rocket-hideout',
     label: 'Defeat Giovanni in the Rocket Hideout',
     kind: 'battle',
+    trainer: 'Giovanni',
     part: all(9),
     locationId: 'team-rocket-hideout',
     detail: 'He leaves the Silph Scope behind',
@@ -271,6 +279,7 @@ export const RBY_MILESTONES: readonly MilestoneDefinition[] = [
     id: 'giovanni-silph-co',
     label: 'Defeat Giovanni at Silph Co.',
     kind: 'battle',
+    trainer: 'Giovanni',
     part: all(10),
     locationId: 'silph-co',
     detail: 'The president gives you the Master Ball',
@@ -279,6 +288,7 @@ export const RBY_MILESTONES: readonly MilestoneDefinition[] = [
     id: 'karate-master',
     label: 'Defeat the Karate Master',
     kind: 'battle',
+    trainer: 'Blackbelt',
     part: all(10),
     locationId: 'fighting-dojo',
     detail: 'Then choose Hitmonlee or Hitmonchan',
@@ -418,6 +428,7 @@ export const RBY_MILESTONES: readonly MilestoneDefinition[] = [
     id: `elite-four-${name.toLowerCase()}`,
     label: `Defeat ${name}`,
     kind: 'battle',
+    trainer: name,
     part: all(16),
     locationId: 'indigo-plateau',
     detail: 'Elite Four',
@@ -426,6 +437,7 @@ export const RBY_MILESTONES: readonly MilestoneDefinition[] = [
     id: 'champion',
     label: 'Defeat the Champion',
     kind: 'battle',
+    trainer: 'Blue',
     part: all(16),
     locationId: 'indigo-plateau',
     detail: 'Your rival; then enter the Hall of Fame',

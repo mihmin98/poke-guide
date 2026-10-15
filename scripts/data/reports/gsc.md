@@ -18,6 +18,14 @@
 | Pokémon Silver | 92 | 57 | 35 |
 | Pokémon Crystal | 97 | 59 | 38 |
 
+## Story battles
+
+| Game | Gym and battle milestones | With a team | Without a team | Unclaimed parties |
+|---|---|---|---|---|
+| Pokémon Gold | 39 | 38 | route-24-rocket | – |
+| Pokémon Silver | 39 | 38 | route-24-rocket | – |
+| Pokémon Crystal | 41 | 39 | wise-trio, route-24-rocket | – |
+
 ## Journey
 
 ### Pokémon Gold

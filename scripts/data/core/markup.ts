@@ -53,6 +53,11 @@ function renderTemplate(call: TemplateCall): string {
       return 'Pokémon';
     case 'scball':
       return 'Poké Ball';
+    case 'pk':
+      return 'PK';
+    case 'mn':
+      // {{PK}}{{MN}} Trainer: "PKMN Trainer".
+      return 'MN';
     case 'obp':
       // {{OBP|<title>|<disambiguation>|<text>}}: the text defaults to the title.
       return call.positional.length >= 3 ? arg(2) : arg(0);

@@ -18,6 +18,14 @@
 | Pokémon Blue | 52 | 34 | 18 |
 | Pokémon Yellow | 59 | 38 | 21 |
 
+## Story battles
+
+| Game | Gym and battle milestones | With a team | Without a team | Unclaimed parties |
+|---|---|---|---|---|
+| Pokémon Red | 24 | 23 | route-25-jr-trainer | – |
+| Pokémon Blue | 24 | 23 | route-25-jr-trainer | – |
+| Pokémon Yellow | 28 | 27 | route-25-jr-trainer | – |
+
 ## Journey
 
 ### Pokémon Red, Pokémon Blue

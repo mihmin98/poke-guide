@@ -2,7 +2,6 @@ import type { Milestone } from '../../../src/app/core/domain/models';
 import {
   awardedBadges,
   checkMilestonesAgainstWalkthrough,
-  countPartyBattles,
   type WalkthroughPartPage,
 } from './milestones';
 
@@ -42,26 +41,6 @@ describe('awardedBadges', () => {
   });
 });
 
-describe('countPartyBattles', () => {
-  it('finds Party blocks nested in other templates', () => {
-    expect(countPartyBattles(gymPage)).toBe(1);
-  });
-
-  it('counts runs of one battle (one block per starter) once', () => {
-    const rival = ['0001', '0004', '0007']
-      .map((n) => party('Spr RG Blue 1.png', '175', `| caption = {{PlayerChoice|${n}}}\n`))
-      .join('');
-    const jessieJames = party('Spr Y Jessie James.png', '420');
-    expect(countPartyBattles(rival)).toBe(1);
-    expect(countPartyBattles(rival + jessieJames)).toBe(2);
-    expect(countPartyBattles(rival + jessieJames + rival)).toBe(3);
-  });
-
-  it('ignores Party/end and other Party templates', () => {
-    expect(countPartyBattles('{{Party/end}} {{Party/Single|x}}')).toBe(0);
-  });
-});
-
 describe('checkMilestonesAgainstWalkthrough', () => {
   const page: WalkthroughPartPage = { game: 'red', part: 3, page: 'Part 3', wikitext: gymPage };
 
@@ -70,10 +49,9 @@ describe('checkMilestonesAgainstWalkthrough', () => {
     expect(checkMilestonesAgainstWalkthrough(milestones, [page])).toEqual([]);
   });
 
-  it('warns about an awarded badge with no gym, and about too few battles', () => {
+  it('warns about an awarded badge with no gym', () => {
     expect(checkMilestonesAgainstWalkthrough([], [page]).map((w) => w.message)).toEqual([
       'red Part 3 awards the Boulder Badge, but no gym milestone there has it',
-      'red Part 3 has 1 battle(s) with a {{Party}} block, but only 0 gym or battle milestone(s)',
     ]);
   });
 
@@ -92,6 +70,6 @@ describe('checkMilestonesAgainstWalkthrough', () => {
 
   it('only looks at milestones of the page game and part', () => {
     const elsewhere = [milestone('gym-brock', 'gym', { badge: 'Boulder', part: { blue: 3 } })];
-    expect(checkMilestonesAgainstWalkthrough(elsewhere, [page])).toHaveLength(2);
+    expect(checkMilestonesAgainstWalkthrough(elsewhere, [page])).toHaveLength(1);
   });
 });

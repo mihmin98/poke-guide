@@ -50,7 +50,8 @@ describe('validateVersionGroup', () => {
 
 describe('checkMilestones', () => {
   const data = () => load<VersionGroupData>('rby.json');
-  const messages = (d: VersionGroupData) => checkMilestones(d).map((i) => i.message);
+  const pokedex = load<PokedexData>('rby.pokedex.json');
+  const messages = (d: VersionGroupData) => checkMilestones(d, pokedex).map((i) => i.message);
   const milestone = (d: VersionGroupData, id: string) => {
     const found = d.milestones!.find((m) => m.id === id);
     if (!found) throw new Error(`No milestone ${id}`);
@@ -125,6 +126,30 @@ describe('checkMilestones', () => {
       ]),
     );
     expect(messages(d).some((m) => m.startsWith('blue unlock "ss-ticket"'))).toBe(false);
+  });
+
+  it('checks battle teams against the species, the moves and the milestone games', () => {
+    const d = data();
+    const brock = milestone(d, 'gym-brock');
+    const [geodude, onix] = brock.teams!.red![0]!.pokemon;
+    geodude!.moves[0] = { name: 'No Such Move', type: 'normal' };
+    geodude!.moves[1] = { name: 'Tackle', type: 'fire' };
+    onix!.dex = 999;
+    brock.teams!.gold = brock.teams!.red;
+    milestone(d, 'help-bill').teams = { red: brock.teams!.red! };
+    expect(messages(d)).toEqual([
+      'Milestone "gym-brock": red team move "No Such Move" is not in the Pokédex moves',
+      'Milestone "gym-brock": red team move "Tackle" is fire, not normal',
+      'Milestone "gym-brock": red team has #999, which is not in the species list',
+      'Milestone "gym-brock" has a team in gold, which it isn\'t in',
+      'Milestone "gym-brock": gold team move "No Such Move" is not in the Pokédex moves',
+      'Milestone "gym-brock": gold team move "Tackle" is fire, not normal',
+      'Milestone "gym-brock": gold team has #999, which is not in the species list',
+      'Milestone "help-bill": only gym and battle milestones have teams',
+      'Milestone "help-bill": red team move "No Such Move" is not in the Pokédex moves',
+      'Milestone "help-bill": red team move "Tackle" is fire, not normal',
+      'Milestone "help-bill": red team has #999, which is not in the species list',
+    ]);
   });
 
   it('applies a grant only in the games that have the unlock', () => {

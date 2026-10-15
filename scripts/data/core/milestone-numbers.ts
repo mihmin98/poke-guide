@@ -9,8 +9,17 @@
  */
 import type { Milestone } from '../../../src/app/core/domain/models';
 
-/** A curated milestone, before it has a number. */
-export type MilestoneDefinition = Omit<Milestone, 'no'>;
+/**
+ * A curated milestone, before it has a number. `trainer` is the `{{Party}}` name its team is matched by
+ * (`parties.ts`); alternatives cover a trainer whose name changes (the Gen II rival is "???" until you name him).
+ * The output has `teams` instead.
+ */
+export type MilestoneDefinition = Omit<Milestone, 'no' | 'teams'> & {
+  trainer?: string | readonly string[];
+};
+
+/** A curated milestone with its number, before `attachTeams` turns `trainer` into `teams`. */
+export type NumberedMilestone = MilestoneDefinition & { no: number };
 
 export interface MilestoneNumberEntry {
   no: number;
@@ -32,7 +41,7 @@ export interface RetiredMilestone {
 
 export interface MilestoneNumberResult {
   /** The definitions with their numbers, in list order. */
-  milestones: Milestone[];
+  milestones: NumberedMilestone[];
   registry: MilestoneNumberRegistry;
   errors: string[];
   notes: string[];
@@ -71,7 +80,7 @@ export function assignMilestoneNumbers(
 
   const retiredByNo = new Map(retired.map((r) => [r.no, r]));
   let added = 0;
-  const milestones = definitions.map((definition): Milestone => {
+  const milestones = definitions.map((definition): NumberedMilestone => {
     const known = byId.get(definition.id);
     if (known && retiredByNo.has(known.no))
       errors.push(`Milestone #${known.no} "${definition.id}" is retired but still in the list`);

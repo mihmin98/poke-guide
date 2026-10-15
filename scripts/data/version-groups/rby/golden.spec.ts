@@ -505,6 +505,74 @@ describe('rby pokédex data (plan §7.12)', () => {
   });
 });
 
+describe('rby data: story battle teams (plan §7.14, Phase 19)', () => {
+  const byId = (id: string) => data.milestones!.find((m) => m.id === id)!;
+  const summary = (id: string, game: GameId) =>
+    byId(id).teams![game]!.map((t) => ({
+      variant: t.variant,
+      pokemon: t.pokemon.map((p) => `#${p.dex} Lv ${p.level}`),
+    }));
+
+  it("has Brock's team with its moves and prize", () => {
+    expect(byId('gym-brock').teams!.red).toEqual([
+      {
+        trainer: 'Brock',
+        prize: 1386,
+        pokemon: [
+          {
+            dex: 74,
+            level: 12,
+            moves: [
+              { name: 'Tackle', type: 'normal' },
+              { name: 'Defense Curl', type: 'normal' },
+            ],
+          },
+          {
+            dex: 95,
+            level: 14,
+            moves: [
+              { name: 'Tackle', type: 'normal' },
+              { name: 'Screech', type: 'normal' },
+              { name: 'Bide', type: 'normal' },
+            ],
+          },
+        ],
+      },
+    ]);
+  });
+
+  it('gives the Red and Blue rival one team per starter, and the Yellow rival one Eevee', () => {
+    for (const game of ['red', 'blue'] as const)
+      expect(summary('rival-1', game)).toEqual([
+        { variant: { kind: 'starter', dex: 1 }, pokemon: ['#4 Lv 5'] },
+        { variant: { kind: 'starter', dex: 4 }, pokemon: ['#7 Lv 5'] },
+        { variant: { kind: 'starter', dex: 7 }, pokemon: ['#1 Lv 5'] },
+      ]);
+    expect(summary('rival-1', 'yellow')).toEqual([{ variant: undefined, pokemon: ['#133 Lv 5'] }]);
+    expect(byId('rival-5').teams!.yellow!.map((t) => t.variant)).toEqual([
+      { kind: 'rival-eevee', dex: 134, evolved: false },
+      { kind: 'rival-eevee', dex: 135, evolved: false },
+      { kind: 'rival-eevee', dex: 136, evolved: false },
+    ]);
+  });
+
+  it('has the Champion as the rival, and teams for every Jessie and James battle', () => {
+    for (const game of data.games)
+      expect(byId('champion').teams![game]!.every((t) => t.trainer === 'Blue')).toBe(true);
+    for (const m of data.milestones!.filter((m) => m.id.startsWith('jessie-james-')))
+      expect(m.teams!.yellow![0]!.trainer).toBe('Rocket');
+  });
+
+  it('gives every gym and battle a team except the Route 25 Jr. Trainer', () => {
+    for (const game of data.games) {
+      const without = data
+        .milestones!.filter((m) => m.part[game] !== undefined)
+        .filter((m) => (m.kind === 'gym' || m.kind === 'battle') && !m.teams?.[game]);
+      expect(without.map((m) => m.id)).toEqual(['route-25-jr-trainer']);
+    }
+  });
+});
+
 describe('rby data: the Story and Guide journey (plan §13.13)', () => {
   const journeys = new Map(
     data.games.map((game) => [game, buildJourney(buildGameView(data, game), game)]),

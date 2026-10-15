@@ -44,6 +44,7 @@ import {
 import { assignItemNumbers, type ItemNumberRegistry } from './item-numbers';
 import { assignMilestoneNumbers, type MilestoneNumberRegistry } from './milestone-numbers';
 import { checkMilestonesAgainstWalkthrough, type WalkthroughPartPage } from './milestones';
+import { attachTeams, type UnclaimedBattle } from './parties';
 import {
   applyItemOverrides,
   checkItemRequirements,
@@ -114,6 +115,8 @@ export interface AssembleResult {
   itemNumbers: ItemNumberRegistry;
   /** The milestone registry after this build; `null` when the version group has no milestones. */
   milestoneNumbers: MilestoneNumberRegistry | null;
+  /** Walkthrough `{{Party}}` battles no milestone claimed, for the report (plan §7.14). */
+  unclaimedBattles: UnclaimedBattle[];
 }
 
 // ---- page lists (the build fetches these in two rounds) ----
@@ -693,9 +696,17 @@ export function assembleVersionGroup(
     : null;
   for (const message of milestoneResult?.errors ?? []) issue('error', message);
   for (const message of milestoneResult?.notes ?? []) issue('note', message);
-  if (milestoneResult) {
+  // Battle teams (Phase 19) from the same pages' {{Party}} blocks, with the moves this build collected.
+  const teams = milestoneResult
+    ? attachTeams(milestoneResult.milestones, walkthroughPages, {
+        species,
+        moves: collected.moves,
+      })
+    : null;
+  if (teams) {
+    for (const found of teams.issues) issue(found.level, found.message, found.page);
     for (const { page, message } of checkMilestonesAgainstWalkthrough(
-      milestoneResult.milestones,
+      teams.milestones,
       walkthroughPages,
     ))
       issue('warning', message, page);
@@ -752,7 +763,7 @@ export function assembleVersionGroup(
         }
       : {}),
     locations,
-    ...(milestoneResult ? { milestones: milestoneResult.milestones } : {}),
+    ...(teams ? { milestones: teams.milestones } : {}),
     sources: byTitle(mainSources),
   };
   const pokedex: PokedexData = {
@@ -770,5 +781,6 @@ export function assembleVersionGroup(
     issues,
     itemNumbers: numbered.registry,
     milestoneNumbers: milestoneResult?.registry ?? null,
+    unclaimedBattles: teams?.unclaimed ?? [],
   };
 }

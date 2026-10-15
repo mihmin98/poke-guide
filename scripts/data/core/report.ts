@@ -8,6 +8,7 @@ import { buildJourney, type JourneyPart } from '../../../src/app/core/domain/jou
 import type { GameId, VersionGroupData } from '../../../src/app/core/domain/models';
 import { findGame } from '../../../src/app/core/games/registry';
 import type { BuildIssue } from './assemble';
+import type { UnclaimedBattle } from './parties';
 import type { GameChecklist } from './validate';
 
 export interface ReportInput {
@@ -16,6 +17,8 @@ export interface ReportInput {
   previous: VersionGroupData | null;
   issues: readonly BuildIssue[];
   checklists: readonly GameChecklist[];
+  /** Walkthrough `{{Party}}` battles no milestone claimed (plan §7.14, Phase 19). */
+  unclaimedBattles?: readonly UnclaimedBattle[];
 }
 
 function encounterKeys(data: VersionGroupData): Map<string, Set<string>> {
@@ -61,7 +64,13 @@ function journeyLines(
   });
 }
 
-export function renderReport({ data, previous, issues, checklists }: ReportInput): string {
+export function renderReport({
+  data,
+  previous,
+  issues,
+  checklists,
+  unclaimedBattles = [],
+}: ReportInput): string {
   const lines: string[] = [`# ${data.versionGroupId} data report`, ''];
   const names = new Map(data.species.map((s) => [s.dex, s.name]));
   const encounters = data.locations.flatMap((l) => l.subAreas.flatMap((a) => a.encounters)).length;
@@ -96,6 +105,30 @@ export function renderReport({ data, previous, issues, checklists }: ReportInput
       const optional = here.filter((m) => m.optional).length;
       lines.push(
         `| ${gameName(game)} | ${here.length} | ${here.length - optional} | ${optional} |`,
+      );
+    }
+  }
+
+  if (data.milestones) {
+    // Battle teams (Phase 19): the battles without a team should be the ones whose page has no {{Party}} block.
+    lines.push(
+      '',
+      '## Story battles',
+      '',
+      '| Game | Gym and battle milestones | With a team | Without a team | Unclaimed parties |',
+      '|---|---|---|---|---|',
+    );
+    for (const game of data.games) {
+      const battles = data.milestones.filter(
+        (m) => m.part[game] !== undefined && (m.kind === 'gym' || m.kind === 'battle'),
+      );
+      const without = battles.filter((m) => !m.teams?.[game]).map((m) => m.id);
+      const unclaimed = unclaimedBattles
+        .filter((b) => b.game === game)
+        .map((b) => `Part ${b.part} ${b.name} (${b.location})`);
+      lines.push(
+        `| ${gameName(game)} | ${battles.length} | ${battles.length - without.length} | ` +
+          `${without.join(', ') || '–'} | ${unclaimed.join(', ') || '–'} |`,
       );
     }
   }

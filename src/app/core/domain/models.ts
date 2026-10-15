@@ -272,6 +272,38 @@ export interface Milestone {
   dex?: number;
   /** Not needed to finish the story. */
   optional?: true;
+  /**
+   * `gym`/`battle`: the trainer's team per game, from the walkthrough's `{{Party}}` blocks (plan §7.14, Phase 19).
+   * One team, or one per variant (the rival's team by your starter).
+   */
+  teams?: Partial<Record<GameId, TrainerTeam[]>>;
+}
+
+/** A story battle's team (plan §7.14, Phase 19). */
+export interface TrainerTeam {
+  /** "Brock", "Blue", "Executive". */
+  trainer: string;
+  /** "Leader", "Elite Four"; left out when the page has none or it repeats the name. */
+  trainerClass?: string;
+  /** Prize money in Pokédollars. */
+  prize?: number;
+  /** Absent: the battle's only team. */
+  variant?: TeamVariant;
+  pokemon: TeamMember[];
+}
+
+export type TeamVariant =
+  /** The player chose the starter `dex`. */
+  | { kind: 'starter'; dex: number }
+  /** Yellow: the rival's Eevee becomes `dex`; `evolved: false` while it hasn't yet. */
+  | { kind: 'rival-eevee'; dex: number; evolved: boolean };
+
+export interface TeamMember {
+  dex: number;
+  level: number;
+  gender?: 'male' | 'female';
+  /** Names as in the version group's Pokédex move list; types from our move data. */
+  moves: { name: string; type: PokemonType }[];
 }
 
 export interface BreedingRules {

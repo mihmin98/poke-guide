@@ -38,6 +38,30 @@ const rate = z.discriminatedUnion('kind', [
   z.strictObject({ kind: z.literal('unknown'), text: z.string() }),
 ]);
 
+/** A story battle's team (plan §7.14, Phase 19). */
+const trainerTeam = z.strictObject({
+  trainer: z.string().min(1),
+  trainerClass: z.string().min(1).optional(),
+  prize: positive.optional(),
+  variant: z
+    .discriminatedUnion('kind', [
+      z.strictObject({ kind: z.literal('starter'), dex: positive }),
+      z.strictObject({ kind: z.literal('rival-eevee'), dex: positive, evolved: z.boolean() }),
+    ])
+    .optional(),
+  pokemon: z
+    .array(
+      z.strictObject({
+        dex: positive,
+        level: positive.max(100),
+        gender: z.enum(['male', 'female']).optional(),
+        moves: z.array(z.strictObject({ name: z.string().min(1), type: typeId })).max(4),
+      }),
+    )
+    .min(1)
+    .max(6),
+});
+
 const slot = z.strictObject({
   levels: levels.nullable(),
   rate,
@@ -211,6 +235,7 @@ export const versionGroupDataSchema = z.strictObject({
         grants: z.array(z.string().min(1)).min(1).optional(),
         dex: positive.optional(),
         optional: z.literal(true).optional(),
+        teams: gameRecord(z.array(trainerTeam).min(1)).optional(),
       }),
     )
     .optional(),
@@ -359,7 +384,7 @@ export function validateVersionGroup(
     if (edge.games) checkGames(`Evolution #${edge.from} → #${edge.to}`, edge.games);
   }
   for (const key of Object.keys(pokedex.learnsets)) checkDex('Learnset', Number(key));
-  if (data.milestones) issues.push(...checkMilestones(data));
+  if (data.milestones) issues.push(...checkMilestones(data, pokedex));
   const registryGroup = getVersionGroup(data.versionGroupId as VersionGroupId);
   if ((registryGroup.storyChecklist === true) !== (data.milestones?.length ?? 0) > 0)
     error(
@@ -395,11 +420,16 @@ export function validateVersionGroup(
  * post-game unlock), so the unlock list and the story list can't drift apart. A grant counts in the milestone's
  * games that have that unlock.
  */
-export function checkMilestones(data: VersionGroupData): BuildIssue[] {
+export function checkMilestones(
+  data: VersionGroupData,
+  pokedex: Pick<PokedexData, 'moves'>,
+): BuildIssue[] {
   const issues: BuildIssue[] = [];
   const error = (message: string) => issues.push({ level: 'error', message });
   const milestones = data.milestones ?? [];
   const locations = new Map(data.locations.map((l) => [l.id, l]));
+  const dexes = new Set(data.species.map((s) => s.dex));
+  const moveTypes = new Map(pokedex.moves.map((m) => [m.name, m.type]));
   const ids = new Set<string>();
   const numbers = new Set<number>();
   for (const m of milestones) {
@@ -435,6 +465,28 @@ export function checkMilestones(data: VersionGroupData): BuildIssue[] {
         !location.subAreas.some((a) => a.encounters.some((e) => e.dex === m.dex && e.games[game]))
       )
         error(`${what}: ${m.locationId} has no #${m.dex} encounter in ${game}`);
+    }
+    // Battle teams (Phase 19): only on battles, only in the milestone's games, with known species and moves.
+    if (m.teams && m.kind !== 'gym' && m.kind !== 'battle')
+      error(`${what}: only gym and battle milestones have teams`);
+    for (const [game, teams] of Object.entries(m.teams ?? {})) {
+      if (m.part[game as GameId] === undefined)
+        error(`${what} has a team in ${game}, which it isn't in`);
+      for (const team of teams ?? []) {
+        if (team.variant && !dexes.has(team.variant.dex))
+          error(`${what}: ${game} variant #${team.variant.dex} is not in the species list`);
+        for (const member of team.pokemon) {
+          if (!dexes.has(member.dex))
+            error(`${what}: ${game} team has #${member.dex}, which is not in the species list`);
+          for (const move of member.moves) {
+            const type = moveTypes.get(move.name);
+            if (type === undefined)
+              error(`${what}: ${game} team move "${move.name}" is not in the Pokédex moves`);
+            else if (type !== move.type)
+              error(`${what}: ${game} team move "${move.name}" is ${move.type}, not ${type}`);
+          }
+        }
+      }
     }
     // A grant applies in the games that have the unlock (Crystal's Ho-Oh unlock on the all-games Ho-Oh
     // milestone), but it must be an unlock of at least one of them.

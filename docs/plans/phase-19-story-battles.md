@@ -62,7 +62,8 @@ Measured over all 94 cached walkthrough pages (Red/Blue, Yellow, Gold/Silver, Cr
   our data (`moves[].type`), not from the page.
 - **Size:** about 300 members per group. Red/Blue and Gold/Silver share their pages, so their teams are stored twice
   (once per game). That's roughly +50–70 KB raw per main data file, much less gzipped. That's acceptable in the main
-  file, which the Story page loads anyway.
+  file, which the Story page loads anyway. (Measured in Stage B: +82 KB raw / +4.8 KB gzipped for rby, +122 KB /
+  +5.9 KB for gsc.)
 
 ## Design
 
@@ -104,8 +105,10 @@ teams?: Partial<Record<GameId, TrainerTeam[]>>;  // one team, or one per variant
     members. It reuses `findTemplates` / `parseTemplate` (`core/wikitext.ts`) and `stripMarkup` (`core/markup.ts`),
     plus the opening regex from `countPartyBattles`. A party ends at `{{Party/end}}`.
   - `attachTeams(milestones, walkthroughPages, movesByName)`, per game and part page: a milestone with `trainer`
-    claims the **first unclaimed run** of parties whose name matches, in page order. A run is consecutive parties
-    with the same name and location: the variants.
+    claims the **first unclaimed battle** whose party name matches, in page order. A battle is one party, or a run
+    of consecutive parties with the same name and location that each have a variant caption: the variants.
+    (Corrected in Stage B: without the caption condition, the Radio Tower's three consecutive Executives would
+    merge into one battle.)
   - **Errors:**
     - a `trainer` with no unclaimed match on its part page in one of its games;
     - `trainer` on a milestone whose kind isn't `gym` or `battle`;
@@ -187,7 +190,7 @@ teams?: Partial<Record<GameId, TrainerTeam[]>>;  // one team, or one per variant
 
 - [x] **A.** Docs: §7.14, §8, §13.12, §19.1 and the game plans' checklist line (this plan and the §16 entry
   already exist).
-- [ ] **B.** Pipeline:
+- [x] **B.** Pipeline (2026-10-15):
   - the model;
   - `parties.ts` with its spec (fixtures cut from the cached pages);
   - `attachTeams`;
