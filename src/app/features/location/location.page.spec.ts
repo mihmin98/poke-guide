@@ -151,6 +151,16 @@ describe('LocationPage (plan §13.5)', () => {
     expect(el.querySelector('.prev-next a')?.getAttribute('href')).toBe('/red/guide/route-1');
   });
 
+  it('stays in the Story when opened from it (plan §13.13)', () => {
+    const { fixture, el } = render();
+    fixture.componentRef.setInput('section', 'story');
+    fixture.detectChanges();
+    const back = el.querySelector('a.back')!;
+    expect(back.getAttribute('href')).toBe('/red/story');
+    expect(back.textContent).toContain('Story');
+    expect(el.querySelector('.prev-next a')?.getAttribute('href')).toBe('/red/story/route-1');
+  });
+
   it('renders an encounter row with types, levels, rate and catch rate', () => {
     const { el } = render();
     const row = el.querySelector('.row')!;

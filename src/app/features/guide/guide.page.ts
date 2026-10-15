@@ -29,6 +29,7 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
   imports: [NgTemplateOutlet, MatIconModule, RouterLink, RouterOutlet, ProgressRing, Sprite],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { '[attr.data-detail]': 'hasDetail()' },
+  styleUrl: '../../shared/list-detail.scss',
   template: `
     <div class="list-pane">
       <header class="head">
@@ -218,40 +219,10 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
     </ng-template>
   `,
   styles: `
-    :host {
-      display: block;
-    }
-    /*
-     * Two panes from 1200 px (plan §13.2). The pane sits below the sticky app toolbar, so it starts
-     * there and is that much shorter; inside it, part headers stick to the top of the pane itself.
-     */
+    /* The two-pane layout, part headers and the FAB are in shared/list-detail.scss (plan §13.2). */
     @media (min-width: 1200px) {
-      :host {
-        display: grid;
-        grid-template-columns: 360px minmax(0, 1fr);
-        gap: 24px;
-        align-items: start;
-      }
-      .list-pane {
-        position: sticky;
-        top: var(--app-toolbar-height, 64px);
-        height: calc(100dvh - var(--app-toolbar-height, 64px) - 16px);
-        overflow: auto;
-        overscroll-behavior: contain;
-        padding-right: 4px;
-        --stick-top: 0px;
-      }
       .cards {
         grid-template-columns: minmax(0, 1fr);
-      }
-      .fab {
-        display: none;
-      }
-    }
-    /* Below that a location takes over the screen; "back" returns to the list. */
-    @media (max-width: 1199.98px) {
-      :host([data-detail='true']) .list-pane {
-        display: none;
       }
     }
     .head {
@@ -292,36 +263,6 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
     }
     .part {
       margin-top: 16px;
-    }
-    /*
-     * Sticky headers carry their spacing as padding: a margin on a stuck element is transparent, so
-     * the cards underneath show through above the header band.
-     */
-    .part-head {
-      position: sticky;
-      top: var(--stick-top, var(--app-toolbar-height, 64px));
-      z-index: 1;
-      margin: 0 0 8px;
-      padding: 4px 0;
-      background: var(--mat-sys-surface);
-    }
-    .part-head button {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      width: 100%;
-      min-height: 48px;
-      padding: 0;
-      border: none;
-      background: none;
-      color: inherit;
-      font: var(--mat-sys-title-medium);
-      text-align: left;
-      cursor: pointer;
-    }
-    .part-title {
-      flex: 1;
-      min-width: 0;
     }
     .count {
       font: var(--mat-sys-label-large);
@@ -413,23 +354,6 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
     .none {
       font: var(--mat-sys-body-small);
       color: var(--mat-sys-on-surface-variant);
-    }
-    .fab {
-      position: fixed;
-      right: 16px;
-      bottom: calc(16px + env(safe-area-inset-bottom));
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      min-height: 48px;
-      padding: 0 16px;
-      border: none;
-      border-radius: 16px;
-      background: var(--mat-sys-primary-container);
-      color: var(--mat-sys-on-primary-container);
-      box-shadow: var(--mat-sys-level3);
-      font: var(--mat-sys-label-large);
-      cursor: pointer;
     }
   `,
 })

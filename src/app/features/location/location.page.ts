@@ -70,9 +70,9 @@ const ALL_SUB_AREAS = '__all__';
   template: `
     @if (view(); as v) {
       <header class="head">
-        <a class="back" [routerLink]="['/', game(), 'guide']">
+        <a class="back" [routerLink]="['/', game(), section()]">
           <mat-icon aria-hidden="true">arrow_back</mat-icon>
-          Guide
+          {{ section() === 'story' ? 'Story' : 'Guide' }}
         </a>
         <h1>{{ v.location.name }}</h1>
         <p class="meta">
@@ -400,13 +400,13 @@ const ALL_SUB_AREAS = '__all__';
 
       <nav class="prev-next" aria-label="Walkthrough order">
         @if (v.previous; as previous) {
-          <a matButton [routerLink]="['/', game(), 'guide', previous.id]">
+          <a matButton [routerLink]="['/', game(), section(), previous.id]">
             <mat-icon aria-hidden="true">chevron_left</mat-icon>
             {{ previous.name }}
           </a>
         }
         @if (v.next; as next) {
-          <a matButton class="next" [routerLink]="['/', game(), 'guide', next.id]">
+          <a matButton class="next" [routerLink]="['/', game(), section(), next.id]">
             {{ next.name }}
             <mat-icon aria-hidden="true">chevron_right</mat-icon>
           </a>
@@ -421,7 +421,7 @@ const ALL_SUB_AREAS = '__all__';
     } @else {
       <p class="status">
         This location is not in {{ gameName() }}.
-        <a [routerLink]="['/', game(), 'guide']">Back to the guide</a>
+        <a [routerLink]="['/', game(), section()]">Back to the {{ section() }}</a>
       </p>
     }
   `,
@@ -703,6 +703,11 @@ export class LocationPage {
   /** Route params, bound by `withComponentInputBinding`. */
   readonly game = input.required<string>();
   readonly locationId = input.required<string>();
+  /**
+   * The list the page was opened from (route data, plan §13.13): Back, previous/next and swipes stay in the
+   * Guide or the Story.
+   */
+  readonly section = input<'guide' | 'story'>('guide');
 
   constructor() {
     // Touch screens: swipe left for the next location in walkthrough order, right for the previous.
@@ -874,6 +879,6 @@ export class LocationPage {
   private goToNeighbour(direction: SwipeDirection): void {
     const view = this.view();
     const target = direction === 'left' ? view?.next : view?.previous;
-    if (target) void this.router.navigate(['/', this.game(), 'guide', target.id]);
+    if (target) void this.router.navigate(['/', this.game(), this.section(), target.id]);
   }
 }

@@ -1880,8 +1880,8 @@ Stages:
 - [x] **A.** Record the design: §7.14, §11.3, §13.13, §19.1, this phase, the game plans; `PROGRESS.md`
 - [x] **B.** Data: `Milestone.after`, its checks, `core/domain/journey.ts` and spec, the report's Journey section,
   goldens, the curated anchors for rby and gsc, rebuilt data (2026-10-15: two rby anchors, none needed in gsc)
-- [ ] **C.** Story page: journey rows, area card, opens callout, filters, region headers, detail pane and route,
-  the location page's `section` input, deep links
+- [x] **C.** Story page: journey rows, area card, opens callout, filters, region headers, detail pane and route,
+  the location page's `section` input, deep links (2026-10-15)
 - [ ] **D.** Guide page: inline milestone rows, the `guideShowStory` setting, the location page's "When" line,
   the part header's Story link
 - [ ] Manual browser check (the user)

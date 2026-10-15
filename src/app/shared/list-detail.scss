@@ -1,0 +1,91 @@
+// The list-and-detail layout shared by the Guide and Story pages (plan §13.2, §13.13): a walkthrough list with
+// sticky part headers and a "You are here" button, and a child route's location page beside it or instead of it.
+// Each page sets `data-detail` on its host when a location is open and wraps its parts in `.list-pane` and its
+// `<router-outlet>` in `.detail-pane`.
+
+:host {
+  display: block;
+}
+
+/*
+ * Two panes from 1200 px. The pane sits below the sticky app toolbar, so it starts there and is that much
+ * shorter; inside it, part headers stick to the top of the pane itself.
+ */
+@media (min-width: 1200px) {
+  :host {
+    display: grid;
+    grid-template-columns: 360px minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+  }
+  .list-pane {
+    position: sticky;
+    top: var(--app-toolbar-height, 64px);
+    height: calc(100dvh - var(--app-toolbar-height, 64px) - 16px);
+    overflow: auto;
+    overscroll-behavior: contain;
+    padding-right: 4px;
+    --stick-top: 0px;
+  }
+  .fab {
+    display: none;
+  }
+}
+
+/* Below that a location takes over the screen; "back" returns to the list. */
+@media (max-width: 1199.98px) {
+  :host([data-detail='true']) .list-pane {
+    display: none;
+  }
+}
+
+/*
+ * Sticky headers carry their spacing as padding: a margin on a stuck element is transparent, so the rows
+ * underneath show through above the header band.
+ */
+.part-head {
+  position: sticky;
+  top: var(--stick-top, var(--app-toolbar-height, 64px));
+  z-index: 1;
+  margin: 0 0 8px;
+  padding: 4px 0;
+  background: var(--mat-sys-surface);
+}
+
+.part-head button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-height: 48px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font: var(--mat-sys-title-medium);
+  text-align: left;
+  cursor: pointer;
+}
+
+.part-title {
+  flex: 1;
+  min-width: 0;
+}
+
+.fab {
+  position: fixed;
+  right: 16px;
+  bottom: calc(16px + env(safe-area-inset-bottom));
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 16px;
+  border: none;
+  border-radius: 16px;
+  background: var(--mat-sys-primary-container);
+  color: var(--mat-sys-on-primary-container);
+  box-shadow: var(--mat-sys-level3);
+  font: var(--mat-sys-label-large);
+  cursor: pointer;
+}

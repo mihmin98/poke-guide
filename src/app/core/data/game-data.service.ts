@@ -13,6 +13,7 @@ import {
   type GameView,
   type SubAreaEncounters,
 } from '../domain/game-view';
+import { buildJourney, type JourneyPart } from '../domain/journey';
 import type { GameId, PokedexData, VersionGroupData, VersionGroupId } from '../domain/models';
 import { buildChecklist, maxInOneSave, type ChecklistEntry } from '../domain/obtainability';
 import { getGame, versionGroupOf } from '../games/registry';
@@ -52,6 +53,11 @@ export class GameDataView {
   readonly unlocks = computed(() => this.view()?.unlocks ?? []);
   readonly walkthrough = computed(() => this.view()?.walkthrough ?? []);
   readonly groupsByDex = computed(() => this.view()?.groupsByDex ?? new Map());
+  /** Milestones and areas in one walkthrough order (plan §13.13), built once per loaded file. */
+  readonly journey = computed<readonly JourneyPart[]>(() => {
+    const view = this.view();
+    return view ? buildJourney(view, this.game.id) : [];
+  });
   /** Obtainability per species `1..nationalDexMax` (plan §9), computed once per loaded file. */
   readonly checklist: Signal<readonly ChecklistEntry[]>;
   readonly maxInOneSave: Signal<number | undefined>;

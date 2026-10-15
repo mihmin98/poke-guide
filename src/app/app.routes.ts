@@ -63,10 +63,20 @@ export const routes: Routes = [
           import('./features/checklist/checklist.page').then((m) => m.ChecklistPage),
       },
       {
-        // Story milestones (plan §13.12); the nav only links here for games whose data has them.
+        // Story milestones (plan §13.12); the nav only links here for games whose data has them. Like the
+        // guide, a location opens beside the list from 1200 px (plan §13.13).
         path: 'story',
         title: 'Story · Poké Guide',
         loadComponent: () => import('./features/story/story.page').then((m) => m.StoryPage),
+        children: [
+          {
+            path: ':locationId',
+            title: 'Location · Poké Guide',
+            data: { section: 'story' },
+            loadComponent: () =>
+              import('./features/location/location.page').then((m) => m.LocationPage),
+          },
+        ],
       },
       {
         // Generic tools driven by the version group's `mechanicsId` (plan §13.11).

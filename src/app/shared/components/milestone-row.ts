@@ -29,7 +29,9 @@ import { MilestoneToggle } from './milestone-toggle';
           <span>{{ detail }}</span>
         }
         @if (location(); as where) {
-          <a [routerLink]="['/', game(), 'guide', where.id]">{{ where.name }}</a>
+          <a [routerLink]="['/', game(), section(), where.id]">
+            {{ revisit() ? 'Back to ' + where.name : where.name }}
+          </a>
         }
         @if (species(); as pokemon) {
           <a [routerLink]="['/', game(), 'pokemon', pokemon.slug]">{{ pokemon.name }}</a>
@@ -95,6 +97,10 @@ export class MilestoneRow {
   readonly game = input.required<GameId>();
   /** Where it happens, linked; left out on that location's own page. */
   readonly location = input<{ id: string; name: string }>();
+  /** The location is from an earlier part: the link reads "Back to …" (plan §13.13). */
+  readonly revisit = input(false);
+  /** Where the location link opens: the Guide's or the Story's detail pane. */
+  readonly section = input<'guide' | 'story'>('guide');
   readonly species = input<{ name: string; slug: string }>();
   readonly done = input(false);
 
