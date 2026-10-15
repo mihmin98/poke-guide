@@ -14,7 +14,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { Router, RouterLink } from '@angular/router';
 import { firstValueFrom } from 'rxjs';
 import { GameDataService } from '../../core/data/game-data.service';
-import type { EncounterSlot, GameId, LocationItem, Milestone } from '../../core/domain/models';
+import type {
+  EncounterSlot,
+  GameId,
+  LevelSpec,
+  LocationItem,
+  Milestone,
+} from '../../core/domain/models';
 import { TIMES_OF_DAY, timeOfDayHours, timeOfDayLabel } from '../../core/games/conditions';
 import { findGame, regionName } from '../../core/games/registry';
 import { mechanicsForGame } from '../../core/mechanics';
@@ -23,6 +29,7 @@ import { UndoSnackbarService } from '../../core/profiles/undo-snackbar.service';
 import { SettingsStore } from '../../core/settings/settings.store';
 import { itemProgress } from '../../core/domain/item-progress';
 import { milestoneContext } from '../../core/domain/journey';
+import { encounterLevels } from '../../core/domain/milestone-levels';
 import { milestoneProgress } from '../../core/domain/milestone-progress';
 import { CatchToggle } from '../../shared/components/catch-toggle';
 import { ConditionChips } from '../../shared/components/condition-chips';
@@ -325,6 +332,7 @@ const ALL_SUB_AREAS = '__all__';
                   [milestone]="milestone"
                   [game]="gameId()"
                   [species]="speciesOf(milestone)"
+                  [levels]="levelsOf(milestone)"
                   [done]="milestonesDone().has(milestone.no)"
                 />
               </li>
@@ -827,6 +835,14 @@ export class LocationPage {
   protected readonly milestoneCount = computed(() =>
     milestoneProgress(this.milestones(), this.milestonesDone()),
   );
+
+  protected levelsOf(milestone: Milestone): LevelSpec | null {
+    return encounterLevels(
+      milestone,
+      this.gameId(),
+      this.data().view()?.locationById.get(milestone.locationId),
+    );
+  }
 
   protected speciesOf(milestone: Milestone): { name: string; slug: string } | undefined {
     const species =

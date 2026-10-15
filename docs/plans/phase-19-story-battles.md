@@ -157,6 +157,8 @@ teams?: Partial<Record<GameId, TrainerTeam[]>>;  // one team, or one per variant
   - Displayed with `shared/components/level-range.ts`.
 - **New `shared/components/milestone-team.ts`:**
   - Variant tabs (`role="tablist"`): "If you chose Bulbasaur", or "If his Eevee becomes Vaporeon" (Yellow).
+    (As built: a "You chose" / "His Eevee becomes" prompt with short tabs named after the species, the full
+    phrase as each tab's accessible name, so three tabs fit at 360 px.)
   - The preselected tab is the starter variant whose `dex` is in the active profile's caught set, when exactly one
     variant matches and the profile is for this game. Otherwise the first tab.
   - A trainer line: "Leader Brock · ₽1,386".
@@ -197,7 +199,7 @@ teams?: Partial<Record<GameId, TrainerTeam[]>>;  // one team, or one per variant
   - the `trainer` curation for rby and gsc;
   - validation, the report table and the goldens;
   - rebuilt data.
-- [ ] **C.** App:
+- [x] **C.** App (2026-10-15):
   - the levels helpers;
   - `MilestoneTeam`;
   - the `MilestoneRow` disclosure and level tag;

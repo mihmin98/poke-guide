@@ -235,6 +235,21 @@ describe('guide model (plan §13.4)', () => {
       ]);
     });
 
+    it("gives a static encounter's or gift's row its levels (Phase 19)", () => {
+      const source = withStory();
+      source.milestones![0] = {
+        ...source.milestones![0]!,
+        kind: 'encounter',
+        badge: undefined,
+        dex: 16,
+      };
+      const [first] = guide({}, [], undefined, [], source);
+      expect(first!.rows[1]).toMatchObject({ kind: 'milestone', levels: { min: 5, max: 5 } });
+      expect(guide({}, [], undefined, [], withStory())[0]!.rows[1]).toMatchObject({
+        levels: null,
+      });
+    });
+
     it('has no story count for a game without milestones', () => {
       expect(guide()[0]!.story).toEqual({ done: 0, total: 0 });
     });

@@ -1510,16 +1510,18 @@ Both tools are generic screens driven by `GenerationMechanics` (§4.5). Only the
 - **Team panel (Phase 19, planned 2026-10-15):** on full rows (the Story page, the location page's Story section),
   a milestone with teams in the game gets a **"Team · Lv 12–14"** disclosure button, collapsed by default. It
   expands `shared/components/milestone-team.ts`:
-  - variant tabs (`role="tablist"`): "If you chose Bulbasaur", or in Yellow "If his Eevee becomes Vaporeon". The
-    preselected tab is the starter variant whose `dex` the active profile has caught, when exactly one matches and
-    the profile is for this game; otherwise the first tab;
+  - variant tabs (`role="tablist"`, arrow keys, Home and End): a prompt and short tabs, "You chose: Bulbasaur ·
+    Charmander · Squirtle" (in Yellow "His Eevee becomes: Vaporeon · …"), each tab's accessible name the full "If
+    you chose Bulbasaur", so three tabs fit at 360 px. The preselected tab is the starter variant whose `dex` the
+    active profile has caught, when exactly one matches and the profile is for this game; otherwise the first tab;
   - a trainer line, "Leader Brock · ₽1,386";
   - per member: the sprite and name (linking to the Pokémon page), `TypeBadge` types from our species data,
     "Lv 14" and ♂/♀, and move chips tinted with the type colours.
   - Static encounters and gifts get a plain "Lv 30" tag instead, from their `dex` encounter at the location.
   - **Compact rows** (the Guide, §13.13) show only the level-range tag, with no panel.
-  - Levels are pure helpers (`teamLevels`, `encounterLevels`) in `core/domain`; the callers (`story-model.ts`,
-    `guide-model.ts`, the location page) pass the encounter levels in, shown with `shared/components/level-range.ts`.
+  - Levels are pure helpers in `core/domain/milestone-levels.ts` (`teamLevels`, `battleLevels`, `encounterLevels`,
+    `preferredVariant`, the labels); the callers (`story-model.ts`, `guide-model.ts`, the location page) pass the
+    encounter levels in, formatted with `formatLevels` (`shared/components/level-range.ts`). Built 2026-10-15.
 
 ### 13.13 Journey: Story ↔ Guide (Phase 18)
 Requested 2026-10-15: the Story showed milestones and the Guide showed areas, with nothing saying which areas
@@ -1975,7 +1977,8 @@ Stages (details in the plan):
 - [x] **A.** Docs: §7.14, §8, §13.12, §19.1, the game plans (2026-10-15)
 - [x] **B.** Pipeline: model, `core/parties.ts`, `attachTeams`, `trainer` curation (rby, gsc), validation, report,
   goldens, rebuilt data (2026-10-15)
-- [ ] **C.** App: levels helpers, `MilestoneTeam`, the `MilestoneRow` disclosure and level tag, callers, specs
+- [x] **C.** App: levels helpers, `MilestoneTeam`, the `MilestoneRow` disclosure and level tag, callers, specs
+  (2026-10-15)
 - [ ] Manual browser check (the user)
 - **Accept when:** every battle milestone with a party block shows its team (with variants) in each of its games;
   statics and gifts show their level; no walkthrough party is left unclaimed without a reason; existing profiles,

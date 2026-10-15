@@ -141,6 +141,7 @@ import { buildStory, type StoryPart } from './story-model';
                         [revisit]="row.revisit"
                         section="story"
                         [species]="row.species"
+                        [levels]="row.levels"
                         [done]="row.done"
                       />
                     </li>

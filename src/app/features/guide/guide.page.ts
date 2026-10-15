@@ -160,6 +160,7 @@ import { buildGuide, categoriesIn, categoryLabel, type GuidePart } from './guide
                       [game]="gameId()"
                       [location]="row.revisit"
                       [revisit]="!!row.revisit"
+                      [levels]="row.levels"
                       [done]="row.done"
                       [compact]="true"
                     />

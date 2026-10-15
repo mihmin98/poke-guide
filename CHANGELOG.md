@@ -11,6 +11,7 @@ All notable changes to Poké Guide. The format follows [Keep a Changelog](https:
 - **Story links:** on a wide screen, an area opens beside the Story, as in the Guide; on a phone, Back returns to the Story. A link can point straight at a part or a milestone (`/red/story#m-gym-misty`).
 - **Story steps in the Guide:** gyms, battles and events now sit between the Guide's locations, with the same tick box as on the Story page; "Show story" (also in Settings) hides them. Each part's header links to that part of the Story.
 - **When you get there:** a location page now says which story steps come just before and after it, linking to them in the Story.
+- **Story battle teams:** gyms, rival battles, Team Rocket bosses, the Elite Four and the Champion now show the trainer's team on the Story page and on location pages: each Pokémon's level, gender and moves, plus the prize money. Rival teams have a tab per starter (or, in Yellow, per evolution of his Eevee), opening on the starter you've marked caught. Legendary and other one-off encounters and gifts show their level, and the Guide's story steps show the level range.
 
 ### Changed
 

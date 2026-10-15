@@ -2,10 +2,12 @@
 import { encountersFor, type GameView } from '../../core/domain/game-view';
 import { itemProgress, type ItemProgress } from '../../core/domain/item-progress';
 import type { JourneyPart } from '../../core/domain/journey';
+import { encounterLevels } from '../../core/domain/milestone-levels';
 import { milestoneProgress, type MilestoneProgress } from '../../core/domain/milestone-progress';
 import type {
   GameId,
   GameLocation,
+  LevelSpec,
   LocationKind,
   Milestone,
   RegionId,
@@ -77,6 +79,8 @@ export interface GuideMilestone {
   done: boolean;
   /** Its location is from an earlier part; linked as "Back to …". */
   revisit: { id: string; name: string } | undefined;
+  /** A static encounter's or gift's levels (Phase 19). */
+  levels: LevelSpec | null;
 }
 
 export type GuideRow =
@@ -222,7 +226,7 @@ function matchesSearch(location: GuideLocation, search: string): boolean {
  * the locations that are left.
  */
 export function buildGuide(input: GuideInput): GuidePart[] {
-  const { view, journey, filters, progressPart, milestonesDone } = input;
+  const { view, journey, game, filters, progressPart, milestonesDone } = input;
   const query = filters.search.trim().toLowerCase();
   const parts: GuidePart[] = [];
 
@@ -252,6 +256,7 @@ export function buildGuide(input: GuideInput): GuidePart[] {
           milestone,
           done,
           revisit: where && { id: where.id, name: where.name },
+          levels: encounterLevels(milestone, game, view.locationById.get(milestone.locationId)),
         });
       }
     }

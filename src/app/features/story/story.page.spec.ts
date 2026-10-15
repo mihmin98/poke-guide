@@ -29,6 +29,18 @@ const milestones: Milestone[] = [
     locationId: 'pewter-city',
     detail: 'Boulder Badge · TM34 Bide',
     badge: 'Boulder',
+    teams: {
+      red: [
+        {
+          trainer: 'Brock',
+          prize: 1386,
+          pokemon: [
+            { dex: 74, level: 12, moves: [{ name: 'Tackle', type: 'normal' }] },
+            { dex: 95, level: 14, moves: [{ name: 'Bide', type: 'normal' }] },
+          ],
+        },
+      ],
+    },
   },
   {
     no: 40,
@@ -135,6 +147,16 @@ describe('StoryPage (plan §13.12)', () => {
     expect(rows[0]!.querySelector('a')?.getAttribute('href')).toBe('/red/story/pewter-city');
     expect([...rows[1]!.querySelectorAll('.badge')].map(text)).toEqual(['Encounter', 'Optional']);
     expect(rows[1]!.querySelector('a[href="/red/pokemon/snorlax"]')).not.toBeNull();
+  });
+
+  it("opens a battle's Team panel (Phase 19)", () => {
+    const { fixture, el } = render();
+    const button = el.querySelector<HTMLButtonElement>('.team-toggle')!;
+    expect(text(button)).toBe('expand_more Team · Lv 12–14');
+    button.click();
+    fixture.detectChanges();
+    expect(text(el.querySelector('app-milestone-team .trainer'))).toBe('Brock · ₽1,386');
+    expect(el.querySelectorAll('app-milestone-team .members > li')).toHaveLength(2);
   });
 
   it('shows the areas between milestones and what an unlock opens', () => {

@@ -1,24 +1,33 @@
-import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, input, signal } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
+import { battleLevels, teamsIn } from '../../core/domain/milestone-levels';
 import { milestoneKindLabel } from '../../core/domain/milestone-progress';
-import type { GameId, Milestone } from '../../core/domain/models';
+import type { GameId, LevelSpec, Milestone } from '../../core/domain/models';
+import { formatLevels } from './level-range';
+import { MilestoneTeam } from './milestone-team';
 import { MilestoneToggle } from './milestone-toggle';
+
+let nextId = 0;
 
 /**
  * One story milestone (plan §13.12): its toggle, label, kind and detail, and links to where it happens and to
  * the Pokémon it involves. Used by the Story page, the location page's Story section and, compact, between the
- * guide's location cards.
+ * guide's location cards. A battle with a team gets a collapsed "Team · Lv 12–14" panel (Phase 19); a static
+ * encounter or gift, and every compact row, shows only the level.
  */
 @Component({
   selector: 'app-milestone-row',
-  imports: [MatIconModule, RouterLink, MilestoneToggle],
+  imports: [MatIconModule, RouterLink, MilestoneTeam, MilestoneToggle],
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: { '[class.done]': 'done()', '[class.compact]': 'compact()' },
   template: `
     <app-milestone-toggle [milestone]="milestone()" [game]="game()" />
     <span class="label">{{ milestone().label }}</span>
     <span class="tags">
+      @if (levelTag(); as level) {
+        <span class="badge level">{{ level }}</span>
+      }
       <span class="badge">{{ kindLabel() }}</span>
       @if (milestone().optional) {
         <span class="badge">Optional</span>
@@ -44,6 +53,21 @@ import { MilestoneToggle } from './milestone-toggle';
           <a [routerLink]="['/', game(), 'pokemon', pokemon.slug]">{{ pokemon.name }}</a>
         }
       </p>
+    }
+    @if (!compact() && teams().length) {
+      <button
+        type="button"
+        class="team-toggle"
+        [attr.aria-expanded]="expanded()"
+        [attr.aria-controls]="teamId"
+        (click)="expanded.set(!expanded())"
+      >
+        <mat-icon aria-hidden="true">{{ expanded() ? 'expand_less' : 'expand_more' }}</mat-icon>
+        Team · {{ teamLevelText() }}
+      </button>
+      @if (expanded()) {
+        <app-milestone-team [id]="teamId" [teams]="teams()" [game]="game()" />
+      }
     }
   `,
   styles: `
@@ -104,6 +128,32 @@ import { MilestoneToggle } from './milestone-toggle';
     .more a {
       color: var(--mat-sys-primary);
     }
+    .level {
+      font-variant-numeric: tabular-nums;
+    }
+    .team-toggle {
+      grid-column: 2 / -1;
+      justify-self: start;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      min-height: 40px;
+      margin: -4px 0 4px -8px;
+      padding: 0 12px 0 4px;
+      border: none;
+      border-radius: 20px;
+      background: none;
+      color: var(--mat-sys-primary);
+      font: var(--mat-sys-label-large);
+      cursor: pointer;
+    }
+    .team-toggle:hover {
+      background: var(--mat-sys-surface-container-highest);
+    }
+    app-milestone-team {
+      grid-column: 2 / -1;
+      margin-bottom: 8px;
+    }
   `,
 })
 export class MilestoneRow {
@@ -121,5 +171,22 @@ export class MilestoneRow {
   /** The guide's one-line form (plan §13.13): no detail, Pokémon or location link except "Back to …". */
   readonly compact = input(false);
 
+  /** A static encounter's or gift's levels, from its encounter at the location (`encounterLevels`). */
+  readonly levels = input<LevelSpec | null>(null);
+
   protected readonly kindLabel = computed(() => milestoneKindLabel(this.milestone().kind));
+  protected readonly teams = computed(() => teamsIn(this.milestone(), this.game()));
+  protected readonly teamLevelText = computed(() =>
+    formatLevels(battleLevels(this.milestone(), this.game())),
+  );
+  /** Full rows show a battle's levels on its Team button instead. */
+  protected readonly levelTag = computed(() =>
+    this.teams().length
+      ? this.compact()
+        ? this.teamLevelText()
+        : ''
+      : formatLevels(this.levels()),
+  );
+  protected readonly expanded = signal(false);
+  protected readonly teamId = `milestone-row-team-${nextId++}`;
 }

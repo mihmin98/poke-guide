@@ -121,6 +121,24 @@ describe('buildStory (plan §13.12, §13.13)', () => {
     expect(rows[2]).toMatchObject({ location: { id: 'route-1' }, revisit: true });
   });
 
+  it("gives a static encounter's or gift's row its levels at the location (Phase 19)", () => {
+    const snorlax = testEncounter(143, ['red'], {
+      method: 'static',
+      games: { red: [{ levels: { min: 30, max: 30 }, rate: { kind: 'once' } }] },
+    });
+    const source: VersionGroupData = {
+      ...data,
+      locations: data.locations.map((l) =>
+        l.id === 'town'
+          ? { ...l, subAreas: [{ id: 'main', name: null, encounters: [snorlax] }] }
+          : l,
+      ),
+    };
+    const rows = story({}, source).flatMap((p) => p.rows);
+    expect(rows.find((r) => r.key === 'm2')).toMatchObject({ levels: { min: 30, max: 30 } });
+    expect(rows.find((r) => r.key === 'm1')).toMatchObject({ levels: null });
+  });
+
   it('lists only what an unlock opens that is still needed, and drops the callout when nothing is', () => {
     expect(story()[1]!.rows[3]).toEqual({
       kind: 'opens',

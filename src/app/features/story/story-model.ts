@@ -2,8 +2,15 @@
 import type { GameView } from '../../core/domain/game-view';
 import { itemProgress, type ItemProgress } from '../../core/domain/item-progress';
 import type { JourneyPart } from '../../core/domain/journey';
+import { encounterLevels } from '../../core/domain/milestone-levels';
 import { milestoneProgress, type MilestoneProgress } from '../../core/domain/milestone-progress';
-import type { GameId, LocationItem, Milestone, RegionId } from '../../core/domain/models';
+import type {
+  GameId,
+  LevelSpec,
+  LocationItem,
+  Milestone,
+  RegionId,
+} from '../../core/domain/models';
 import { locationIcon } from '../guide/guide-model';
 
 export interface StoryMilestoneRow {
@@ -15,6 +22,8 @@ export interface StoryMilestoneRow {
   /** The milestone takes you back to an area from an earlier part. */
   revisit: boolean;
   species: { name: string; slug: string } | undefined;
+  /** A static encounter's or gift's levels (Phase 19). */
+  levels: LevelSpec | null;
 }
 
 export interface StorySpecies {
@@ -85,7 +94,7 @@ export interface StoryInput {
  * open. Areas with neither Pokémon nor items get no row; parts the filters empty are left out.
  */
 export function buildStory(input: StoryInput): StoryPart[] {
-  const { view, journey, done, caught, itemsTaken, hideDone, hideFinished } = input;
+  const { view, journey, game, done, caught, itemsTaken, hideDone, hideFinished } = input;
   const unlockLabels = new Map(view.unlocks.map((u) => [u.id, u.label]));
   const speciesOf = (dex: number): StorySpecies => ({
     dex,
@@ -117,6 +126,7 @@ export function buildStory(input: StoryInput): StoryPart[] {
           location: location && { id: location.id, name: location.name },
           revisit: step.revisit,
           species: species && { name: species.name, slug: species.slug },
+          levels: encounterLevels(milestone, game, location),
         });
       } else if (step.kind === 'area') {
         const { location, reach } = step;
